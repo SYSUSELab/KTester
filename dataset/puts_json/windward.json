@@ -1,0 +1,668 @@
+{
+  "dataset": "windward",
+  "classes": {
+    "org.flmelody.core.AbstractRouterGroup": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.context.AbstractHttpWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "readJson": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "bindJson": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "redirect": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "html": {
+          "Javadoc": "{@inheritDoc}"
+        }
+      }
+    },
+    "org.flmelody.core.context.AbstractWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "getRequestParameter": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "getRequestParameters": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "getPathVariables": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "getRequestBody": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "windwardRequest": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "close": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "isClosed": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "writeJson": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "writeString": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "write": {
+          "Javadoc": "{@inheritDoc}"
+        }
+      }
+    },
+    "org.flmelody.core.context.EmptyWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.context.EnhancedWindwardContext": {
+      "Javadoc": "\n * @see org.flmelody.core.context.support.JsonWindwardContext\n * @see org.flmelody.core.context.support.ViewWindwardContext\n * @author esotericman\n ",
+      "methods": {
+        "doOnRequest": {
+          "Javadoc": "Check request before executing function."
+        },
+        "doOnResponse": {
+          "Javadoc": "* Cope with result of function.\n   *\n   * @param r Result of function\n   * @param <R> Result type"
+        }
+      }
+    },
+    "org.flmelody.core.context.HttpBasicWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "readJson": {
+          "Javadoc": "* Read request body into new object possibly\n   *\n   * @param type objects type\n   * @param <I> objects type\n   * @return object"
+        },
+        "bindJson": {
+          "Javadoc": "* Bind request body to specific class. and return instance of the class\n   *\n   * @param type objects type\n   * @param groups validate group\n   * @param <I> objects type\n   * @return object"
+        },
+        "redirect": {
+          "Javadoc": "* Redirect the client to a new address\n   *\n   * @param code http code of redirecting\n   * @param redirectUrl location for redirecting"
+        },
+        "html": {
+          "Javadoc": "* Response html directly\n   *\n   * @param viewUrl templates location\n   * @param model templates data\n   * @param <M> views model"
+        }
+      }
+    },
+    "org.flmelody.core.context.ResourceWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.context.SimpleWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.context.support.HttpKind": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.context.support.JsonWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.context.support.SseWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.context.support.ViewWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.context.WindwardContext": {
+      "Javadoc": "\n * Http context\n *\n * @author esotericman\n ",
+      "methods": {
+        "getRequestParameter": {
+          "Javadoc": "* Get parameter by name and type\n   *\n   * @param parameterName parameterName\n   * @param <P> class type\n   * @return parameter"
+        },
+        "getRequestParameters": {
+          "Javadoc": "* Get parameter as list\n   *\n   * @param parameterName parameterName\n   * @return parameters list"
+        },
+        "getPathVariables": {
+          "Javadoc": "* Get path variables\n   *\n   * @return path variables"
+        },
+        "getRequestBody": {
+          "Javadoc": "* Get request body\n   *\n   * @return request body"
+        },
+        "windwardRequest": {
+          "Javadoc": "* Get windwardRequest\n   *\n   * @return windwardRequest"
+        },
+        "close": {
+          "Javadoc": "Close context"
+        },
+        "isClosed": {
+          "Javadoc": "* Check if current context is already closed\n   *\n   * @return is closed"
+        },
+        "isCacheable": {
+          "Javadoc": "* Whether context can be cached\n   *\n   * @return cacheable flag"
+        },
+        "write": {
+          "Javadoc": "* Response data\n   *\n   * @param code response code\n   * @param contentType contentType\n   * @param data data\n   * @param <T> type"
+        },
+        "writeJson": {
+          "Javadoc": "* Response json\n   *\n   * @param code response code\n   * @param data data\n   * @param <T> type"
+        },
+        "writeString": {
+          "Javadoc": "* Response plain string\n   *\n   * @param code response code\n   * @param data strings"
+        }
+      }
+    },
+    "org.flmelody.core.DefaultNotFoundHandler": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.DefaultRequestReader": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.DefaultRouterGroup": {
+      "Javadoc": "\n * Default router group\n *\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.HandlerNotFoundException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.JsonDeserializeException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.JsonException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.JsonSerializeException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.NoRequestBodyException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.PluginMissException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.ResourceNotFoundException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.RouterMappingException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.ServerException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.ValidationException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.exception.WindwardException": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.ExceptionHandler": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.Filter": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.FunctionMetaInfo": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.Handler": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.HttpHeader": {
+      "Javadoc": "\n * Common http headers\n *\n * @author esotericman\n "
+    },
+    "org.flmelody.core.HttpServer": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.LoggingFilter": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.netty.handler.HttpResponseEncoder": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.netty.handler.HttpServerHandler": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.netty.handler.SocketTailHandler": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.netty.handler.WebSocketHandler": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.netty.NettyHttpServer": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.netty.NettyResponseWriter": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.Order": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "getOrder": {
+          "Javadoc": "* Priority of component, the lower the value, the higher the priority\n   *\n   * @return priority"
+        }
+      }
+    },
+    "org.flmelody.core.plugin.json.AutoJsonBinder": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.json.GsonPlugin": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "toJson": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "toObject": {
+          "Javadoc": "{@inheritDoc}"
+        }
+      }
+    },
+    "org.flmelody.core.plugin.json.JacksonPlugin": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "toJson": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "toObject": {
+          "Javadoc": "{@inheritDoc}"
+        }
+      }
+    },
+    "org.flmelody.core.plugin.json.JsonPlugin": {
+      "Javadoc": "\n * Base interface for serializing or deserializing json\n *\n * @author esotericman\n ",
+      "methods": {
+        "toJson": {
+          "Javadoc": "* Convert data into json string\n   *\n   * @param data data\n   * @param <I> type of data\n   * @return json string"
+        },
+        "toObject": {
+          "Javadoc": "* Convert json string into specific type\n   *\n   * @param data data\n   * @param <I> data type\n   * @param type type\n   * @param <O> type\n   * @return converted object"
+        }
+      }
+    },
+    "org.flmelody.core.plugin.Plugin": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.resolver.CompositePluginResolver": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.resolver.PluginResolver": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.resolver.ViewPluginResolver": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.resource.ResourcePlugin": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.resource.ResourcePluginProxy": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.resource.StaticResource": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.resource.StaticResourceBuilder": {
+      "Javadoc": " Builder for StaticResource "
+    },
+    "org.flmelody.core.plugin.view.AbstractViewPlugin": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.view.freemarker.FreemarkerView": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.view.groovy.GroovyView": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.view.thymeleaf.ThymeleafView": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.view.ViewEngineDetector": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.view.ViewPlugin": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "supportedExtension": {
+          "Javadoc": "* Whether the extension is supported\n   *\n   * @param extension resources extension\n   * @return whether extension is supported"
+        },
+        "render": {
+          "Javadoc": "* Render this template\n   *\n   * @param viewUrl templates url\n   * @param model templates data\n   * @return rendered result\n   * @throws Exception exception"
+        }
+      }
+    },
+    "org.flmelody.core.plugin.ws.ExtensionalWebSocketPlugin": {
+      "Javadoc": "\n * Holder of websockets codecs or parsers. This plugin is globally scoped. Note that currently at\n * least one codec and one message parser are included for this plugin to work.\n *\n * @see WebSocketCodec\n * @see WebSocketParser\n * @author esotericman\n "
+    },
+    "org.flmelody.core.plugin.ws.WebSocketPlugin": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.RequestReader": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "readJson": {
+          "Javadoc": "* Read request body into new object possibly\n   *\n   * @param body json string\n   * @param type objects type\n   * @param <I> objects type\n   * @return object"
+        },
+        "bindJson": {
+          "Javadoc": "* Bind request body to specific type. and return instance of the type\n   *\n   * @param body json string\n   * @param type objects type\n   * @param groups validate group\n   * @param <I> objects type\n   * @return object"
+        }
+      }
+    },
+    "org.flmelody.core.ResponseWriter": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "write": {
+          "Javadoc": "* Write response data\n   *\n   * @param code http code\n   * @param contentType contentType\n   * @param headers responses header\n   * @param data data\n   * @param <T> data type\n   * @param close close connection or not"
+        },
+        "writeAndClose": {
+          "Javadoc": "* Write response data\n   *\n   * @param code http code\n   * @param contentType contentType\n   * @param data data\n   * @param <T> data type"
+        },
+        "close": {
+          "Javadoc": "Close connection"
+        }
+      }
+    },
+    "org.flmelody.core.Router": {
+      "Javadoc": "\n * @author flmelody\n ",
+      "methods": {
+        "http": {
+          "Javadoc": "* Register function with specific method\n   *\n   * @param httpMethod method of http\n   * @param relativePath relative path\n   * @param function function to consume\n   * @return this"
+        },
+        "get": {
+          "Javadoc": "* Register function with get method\n   *\n   * @param relativePath relative path\n   * @param function function to consume\n   * @return this"
+        },
+        "put": {
+          "Javadoc": "* Register function with put method\n   *\n   * @param relativePath relative path\n   * @param function function to consume\n   * @return this"
+        },
+        "post": {
+          "Javadoc": "* Register function with post method\n   *\n   * @param relativePath relative path\n   * @param function function to consume\n   * @return this"
+        },
+        "delete": {
+          "Javadoc": "* Register function with delete method\n   *\n   * @param relativePath relative path\n   * @param function function to consume\n   * @return this"
+        },
+        "sse": {
+          "Javadoc": "* Register SSE (server send event)\n   *\n   * @param relativePath relative path\n   * @param function function to consume\n   * @return this"
+        },
+        "ws": {
+          "Javadoc": "* Register websocket function\n   *\n   * @param relativePath relative path\n   * @param consumer function to consume\n   * @return this\n   * @see org.flmelody.core.plugin.ws.ExtensionalWebSocketPlugin"
+        },
+        "resource": {
+          "Javadoc": "* Register resources path pattern\n   *\n   * @param pathPatterns resources path pattern\n   * @return this"
+        },
+        "resources": {
+          "Javadoc": "* Register resources path pattern for specific resource location\n   *\n   * @param staticResourceLocation resource location\n   * @param pathPatterns resources path pattern\n   * @return this"
+        }
+      }
+    },
+    "org.flmelody.core.RouterGroup": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "matchRouter": {
+          "Javadoc": "* Find out matched router function\n   *\n   * @param relativePath relativePath\n   * @param method method\n   * @return router function\n   * @param <R> router type"
+        },
+        "end": {
+          "Javadoc": "* Return this groups manager, so that we can bind more routers of root\n   *\n   * @return groups manager"
+        }
+      }
+    },
+    "org.flmelody.core.SseEjector": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.wind.AbstractWindManager": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.wind.DefaultWindManager": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.wind.event.Event": {
+      "Javadoc": "\n * Event root interface.\n *\n * @author esotericman\n "
+    },
+    "org.flmelody.core.wind.event.RouterBindEvent": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.wind.event.RouterBindEventBuilder": {
+      "Javadoc": " Builder for RouterBindEvent "
+    },
+    "org.flmelody.core.wind.listener.Listener": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "cope": {
+          "Javadoc": "* Cope event with windward.\n   *\n   * @param windward windward\n   * @param event event\n   * @return result"
+        }
+      }
+    },
+    "org.flmelody.core.wind.WindManager": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "join": {
+          "Javadoc": "* Register listener that wants to subscribe some events.\n   *\n   * @param listener listener"
+        },
+        "loadEvent": {
+          "Javadoc": "* Load event.\n   *\n   * @param event event"
+        },
+        "triggerEvent": {
+          "Javadoc": "Trigger events."
+        }
+      }
+    },
+    "org.flmelody.core.Windward": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "setup": {
+          "Javadoc": "* Prepare core engine of Windward\n   *\n   * @param port server port\n   * @param contextPath path of root\n   * @param templateRoot root for template files\n   * @param staticResourceLocation location of static resource\n   * @param filters request filters\n   * @return core engine of Windward"
+        },
+        "beforeStart": {
+          "Javadoc": "Prepare work before startup."
+        },
+        "run": {
+          "Javadoc": "* Run server\n   *\n   * @throws ServerException exception"
+        },
+        "group": {
+          "Javadoc": "* Define new router with specific relativePath\n   *\n   * @param relativePath relativePath\n   * @return routerGroup"
+        },
+        "resourceGroup": {
+          "Javadoc": "* New resource group\n   *\n   * @param relativePath root path\n   * @return routerGroup"
+        },
+        "registerFilter": {
+          "Javadoc": "* Register filter\n   *\n   * @param filters filter\n   * @return current windward"
+        },
+        "registerExceptionHandler": {
+          "Javadoc": "* Register exception handler\n   *\n   * @param exceptionHandlers exception handler\n   * @return current windward"
+        },
+        "registerListener": {
+          "Javadoc": "* Register listener\n   *\n   * @param listeners event listeners\n   * @return current windward"
+        },
+        "registerPlugin": {
+          "Javadoc": "* Register plugin or overwrite existed\n   *\n   * @param clazz plugin class\n   * @param plugin plugin\n   * @return current windward"
+        },
+        "publishEvent": {
+          "Javadoc": "* Publish event\n   *\n   * @param events events\n   * @return current windward"
+        },
+        "findRouter": {
+          "Javadoc": "* Find out registered function or resource by specific path\n   *\n   * @param relativePath relativePath\n   * @param method http methods name\n   * @param <I> routers metadata\n   * @return registered function"
+        },
+        "filters": {
+          "Javadoc": "* Get filters\n   *\n   * @return filters"
+        },
+        "exceptionHandlers": {
+          "Javadoc": "* Get exception handlers\n   *\n   * @return exception handlers"
+        },
+        "plugin": {
+          "Javadoc": "* Get plugin\n   *\n   * @param clazz class of plugin\n   * @param <T> plugin type\n   * @return plugin"
+        },
+        "plugins": {
+          "Javadoc": "* Get plugins by super or self\n   *\n   * @param clazz super or self class\n   * @param <T> class type\n   * @return plugins"
+        },
+        "http": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "get": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "put": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "post": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "delete": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "sse": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "ws": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "resource": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "resources": {
+          "Javadoc": "{@inheritDoc}"
+        }
+      }
+    },
+    "org.flmelody.core.WindwardRequest": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "getMethod": {
+          "Javadoc": "* Get request methods name\n   *\n   * @return methods name"
+        },
+        "getHeader": {
+          "Javadoc": "* Return request header\n   *\n   * @param name headers name\n   * @return headers values"
+        },
+        "getHeaders": {
+          "Javadoc": "* Return all request headers\n   *\n   * @return headers values"
+        },
+        "getUri": {
+          "Javadoc": "* Request uri\n   *\n   * @return request uri"
+        },
+        "getQuerystring": {
+          "Javadoc": "* Get request querystring\n   *\n   * @return querystring or empty"
+        },
+        "getPathVariables": {
+          "Javadoc": "* Get path variables\n   *\n   * @return path variables"
+        },
+        "getRequestBody": {
+          "Javadoc": "* Get request body\n   *\n   * @return request body or null"
+        },
+        "readJson": {
+          "Javadoc": "{@inheritDoc}"
+        },
+        "bindJson": {
+          "Javadoc": "{@inheritDoc}"
+        }
+      }
+    },
+    "org.flmelody.core.WindwardRequestBuilder": {
+      "Javadoc": " Builder for WindwardRequest "
+    },
+    "org.flmelody.core.WindwardResponse": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "write": {
+          "Javadoc": "* Write data into response\n   *\n   * @param code http code\n   * @param contentType response contentType\n   * @param headers responses headers\n   * @param data data\n   * @param <T> data type"
+        },
+        "close": {
+          "Javadoc": "Close connection"
+        }
+      }
+    },
+    "org.flmelody.core.WindwardResponseBuild": {
+      "Javadoc": " Builder for WindwardResponse "
+    },
+    "org.flmelody.core.ws.codec.WebSocketCodec": {
+      "Javadoc": "\n * Do not use this interface directly; you should always use its subclasses. If you must use it,\n * make sure it conforms to Netty's codec specification.\n *\n * @see WebSocketDecoder\n * @see WebSocketEncoder\n * @author esotericman\n "
+    },
+    "org.flmelody.core.ws.codec.WebSocketDecoder": {
+      "Javadoc": "\n * Inherit this class to implement custom decoding.\n *\n * @author esotericman\n "
+    },
+    "org.flmelody.core.ws.codec.WebSocketEncoder": {
+      "Javadoc": "\n * Inherit this class to implement custom coding.\n *\n * @author esotericman\n "
+    },
+    "org.flmelody.core.ws.WebSocketFireEvent": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.core.ws.WebSocketFireEventBuilder": {
+      "Javadoc": " "
+    },
+    "org.flmelody.core.ws.WebSocketParser": {
+      "Javadoc": "\n * Inherit this class to implement custom format message parsing.\n *\n * @author esotericman\n "
+    },
+    "org.flmelody.core.ws.WebSocketWindwardContext": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "writeBinaryData": {
+          "Javadoc": "* Send any data\n   *\n   * @param data any data or raw data\n   * @param <T> data type"
+        },
+        "processCheck": {
+          "Javadoc": "* Make sure context upgraded already which means {@link WebSocketEvent#ON_CONNECT} already done.\n   * In general, we only need to access context like below:\n   *\n   * <pre>{@code\n   *  switch (webSocketWindwardContext.getWebSocketEvent()) {\n   *   case ON_CONNECT:\n   *     webSocketWindwardContext.writeString(\"Hello World!\");\n   *     break;\n   *   case ON_MESSAGE:\n   *     Object webSocketData =\n   *         webSocketWindwardContext.getWebSocketData(); // webSocketFrame or just strings\n   *     webSocketWindwardContext.writeString(\"Oh?\");\n   *     break;\n   *   default:\n   * }\n   *\n   * }</pre>\n   *\n   * @return result"
+        }
+      }
+    },
+    "org.flmelody.support.EnhancedFunction": {
+      "Javadoc": "\n * Represents a function that accepts one argument and produces a result.\n *\n * <p>This is a <a href=\"package-summary.html\">functional interface</a> whose functional method is\n * {@link #apply(Object)}.\n *\n * @param <T> the type of the input to the function\n * @param <R> the type of the result of the function\n * @author esotericman\n "
+    },
+    "org.flmelody.support.FunctionDefinition": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.support.FunctionDefinitionBuilder": {
+      "Javadoc": " Builder for FunctionDefinition "
+    },
+    "org.flmelody.support.FunctionHelper": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "resolveFunction": {
+          "Javadoc": "* Parse functions generic type, and return function's definition.\n   *\n   * @param function a function\n   * @return generic type map"
+        }
+      }
+    },
+    "org.flmelody.util.AntPathMatcher": {
+      "Javadoc": "\n * Path matcher implementation for Ant-style path patterns. This implementation matches URLs using\n * the following rules:\n *\n * <p>'?' - matches one character '*' - matches zero or more characters '**' - matches zero or more\n * directories in a path.\n *\n * <p>The instances of this class can be configured via its {@link Builder} to: (1) Use a custom\n * path separator. The default is '/' character (2) Ignore character case during comparison. The\n * default is {@code false} (3) Match start. Determines whether the pattern at least matches as far\n * as the given base path goes, assuming that a full path may then match as well. The default is\n * {@code false}.\n *\n * <p>Specify whether to trim tokenized paths. The default is {@code false} The custom path\n * separator &amp; ignoring character case options were inspired by Spring's AntPathMatcher.\n *\n * @author original author\n * @see <a href=\"https://github.com/azagniotov/ant-style-path-matcher\">azagniotov</a>\n "
+    },
+    "org.flmelody.util.Builder": {
+      "Javadoc": " Builder for AntPathMatcher "
+    },
+    "org.flmelody.util.GsonUtil": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "toJson": {
+          "Javadoc": "* Convert data into json string\n   *\n   * @param data data\n   * @param <I> type of data\n   * @return json string"
+        },
+        "toObject": {
+          "Javadoc": "* Convert json string into specific class\n   *\n   * @param json json string\n   * @param clazz class\n   * @param <O> type of class\n   * @return converted object"
+        }
+      }
+    },
+    "org.flmelody.util.JacksonUtil": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "toJson": {
+          "Javadoc": "* Convert data into json string\n   *\n   * @param data data\n   * @param <I> type of data\n   * @return json string"
+        },
+        "toObject": {
+          "Javadoc": "* Convert json string into specific class\n   *\n   * @param json json string\n   * @param clazz class\n   * @param <O> type of class\n   * @return converted object"
+        }
+      }
+    },
+    "org.flmelody.util.UrlUtil": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.util.ValidationUtil": {
+      "Javadoc": "\n * @author esotericman\n ",
+      "methods": {
+        "validate": {
+          "Javadoc": "* Try to convert json content to target object\n   *\n   * @param jsonPlugin jsonPlugin\n   * @param content json\n   * @param type type of target class\n   * @param groups validator group\n   * @param <T> return type\n   * @return object that convert from json content"
+        }
+      }
+    },
+    "org.flmelody.core.DefaultRouterGroupTest": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.util.AntPathMatcherTest": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.util.JacksonUtilTest": {
+      "Javadoc": "\n * @author esotericman\n "
+    },
+    "org.flmelody.util.User": {
+      "Javadoc": ""
+    },
+    "org.flmelody.util.UrlUtilTest": {
+      "Javadoc": "\n * @author esotericman\n "
+    }
+  }
+}

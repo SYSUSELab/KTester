@@ -1,0 +1,891 @@
+{
+  "dataset": "commons-cli",
+  "classes": {
+    "org.apache.commons.cli.AlreadySelectedException": {
+      "Javadoc": "\n * Thrown when more than one option in an option group has been provided.\n ",
+      "methods": {
+        "getOption": {
+          "Javadoc": "* Gets the option that was added to the group and triggered the exception.\n     *\n     * @return the related option\n     * @since 1.2"
+        },
+        "getOptionGroup": {
+          "Javadoc": "* Gets the option group where another option has been selected.\n     *\n     * @return the related option group\n     * @since 1.2"
+        }
+      }
+    },
+    "org.apache.commons.cli.AmbiguousOptionException": {
+      "Javadoc": "\n * Exception thrown when an option can't be identified from a partial name.\n *\n * @since 1.3\n ",
+      "methods": {
+        "createMessage": {
+          "Javadoc": "* Build the exception message from the specified list of options.\n     *\n     * @param option\n     * @param matchingOptions\n     * @return"
+        },
+        "getMatchingOptions": {
+          "Javadoc": "* Gets the options matching the partial name.\n     *\n     * @return a collection of options matching the name"
+        }
+      }
+    },
+    "org.apache.commons.cli.BasicParser": {
+      "Javadoc": "\n * The class BasicParser provides a very simple implementation of the {@link Parser#flatten(Options,String[],boolean)\n * flatten} method.\n *\n * @deprecated since 1.3, use the {@link DefaultParser} instead\n ",
+      "methods": {
+        "flatten": {
+          "Javadoc": "* <p>\n     * A simple implementation of {@link Parser}'s abstract {@link Parser#flatten(Options, String[], boolean) flatten}\n     * method.\n     * </p>\n     *\n     * <p>\n     * <b>Note:</b> {@code options} and {@code stopAtNonOption} are not used in this {@code flatten} method.\n     * </p>\n     *\n     * @param options The command line {@link Options}\n     * @param arguments The command line arguments to be parsed\n     * @param stopAtNonOption Specifies whether to stop flattening when an non option is found.\n     * @return The {@code arguments} String array."
+        }
+      }
+    },
+    "org.apache.commons.cli.CommandLine": {
+      "Javadoc": "\n * Represents list of arguments parsed against a {@link Options} descriptor.\n * <p>\n * It allows querying of a boolean {@link #hasOption(String opt)}, in addition to retrieving the\n * {@link #getOptionValue(String opt)} for options requiring arguments.\n * </p>\n * <p>\n * Additionally, any left-over or unrecognized arguments, are available for further processing.\n * </p>\n ",
+      "methods": {
+        "addArg": {
+          "Javadoc": "* Adds left-over unrecognized option/argument.\n     *\n     * @param arg the unrecognized option/argument."
+        },
+        "addOption": {
+          "Javadoc": "* Adds an option to the command line. The values of the option are stored.\n     *\n     * @param opt the processed option."
+        },
+        "getArgList": {
+          "Javadoc": "* Gets any left-over non-recognized options and arguments\n     *\n     * @return remaining items passed in but not parsed as a {@code List}."
+        },
+        "getArgs": {
+          "Javadoc": "* Gets any left-over non-recognized options and arguments\n     *\n     * @return remaining items passed in but not parsed as an array."
+        },
+        "getOptionObject": {
+          "Javadoc": "* Gets the {@code Object} type of this {@code Option}.\n     *\n     * @param opt the name of the option.\n     * @return the type of this {@code Option}.\n     * @deprecated due to System.err message. Instead use getParsedOptionValue(String)"
+        },
+        "getOptionProperties": {
+          "Javadoc": "* Gets the map of values associated to the option. This is convenient for options specifying Java properties like\n     * <code>-Dparam1=value1\n     * -Dparam2=value2</code>. The first argument of the option is the key, and the 2nd argument is the value. If the option\n     * has only one argument ({@code -Dfoo}) it is considered as a boolean flag and the value is {@code \"true\"}.\n     *\n     * @param opt name of the option.\n     * @return The Properties mapped by the option, never {@code null} even if the option doesn't exists.\n     * @since 1.2"
+        },
+        "getOptions": {
+          "Javadoc": "* Gets an array of the processed {@link Option}s.\n     *\n     * @return an array of the processed {@link Option}s."
+        },
+        "getOptionValue": {
+          "Javadoc": "* Gets the first argument, if any, of an option.\n     *\n     * @param opt name of the option.\n     * @param defaultValue is a supplier for the default value to be returned if the option is not specified.\n     * @return Value of the argument if option is set, and has an argument, otherwise {@code defaultValue}.\n     * @since 1.7.0"
+        },
+        "getOptionValues": {
+          "Javadoc": "* Gets the array of values, if any, of an option.\n     *\n     * @param opt string name of the option.\n     * @return Values of the argument if option is set, and has an argument, otherwise null."
+        },
+        "getParsedOptionValue": {
+          "Javadoc": "* Gets a version of this {@code Option} converted to a particular type.\n     *\n     * @param opt the name of the option.\n     * @param defaultValue the default value to return if opt is not set.\n     * @param <T> The return type for the method.\n     * @return the value parsed into a particular object.\n     * @throws ParseException if there are problems turning the option value into the desired type\n     * @see PatternOptionBuilder\n     * @since 1.7.0"
+        },
+        "hasOption": {
+          "Javadoc": "* Tests to see if an option has been set.\n     *\n     * @param opt Short name of the option.\n     * @return true if set, false if not."
+        },
+        "iterator": {
+          "Javadoc": "* Returns an iterator over the Option members of CommandLine.\n     *\n     * @return an {@code Iterator} over the processed {@link Option} members of this {@link CommandLine}."
+        },
+        "processPropertiesFromValues": {
+          "Javadoc": "* Parses a list of values as properties.  All odd numbered values are property keys\n     * and even numbered values are property values.  If there are an odd number of values\n     * the last value is assumed to be a boolean with a value of \"true\".\n     * @param props the properties to update.\n     * @param values the list of values to parse."
+        },
+        "resolveOption": {
+          "Javadoc": "* Retrieves the option object given the long or short option as a String\n     *\n     * @param opt short or long name of the option, may be null.\n     * @return Canonicalized option."
+        }
+      }
+    },
+    "org.apache.commons.cli.Builder": {
+      "Javadoc": "\n     * A nested builder class to create {@code Option} instances using descriptive methods.\n     * <p>\n     * Example usage:\n     * </p>\n     *\n     * <pre>\n     * Option option = Option.builder(\"a\").required(true).longOpt(\"arg-name\").build();\n     * </pre>\n     *\n     * @since 1.3\n     ",
+      "methods": {
+        "argName": {
+          "Javadoc": "* Sets the display name for the argument value.\n         *\n         * @param argName the display name for the argument value.\n         * @return this builder, to allow method chaining"
+        },
+        "build": {
+          "Javadoc": "* Constructs an Option with the values declared by this {@link Builder}.\n         *\n         * @return the new {@link Option}\n         * @throws IllegalArgumentException if neither {@code opt} or {@code longOpt} has been set"
+        },
+        "converter": {
+          "Javadoc": "* Sets the converter for the option.\n         * <p>Note: see {@link TypeHandler} for serialization discussion.</p>\n         * @param converter the Converter to use.\n         * @return this builder, to allow method chaining.\n         * @since 1.7.0"
+        },
+        "desc": {
+          "Javadoc": "* Sets the description for this option.\n         *\n         * @param description the description of the option.\n         * @return this builder, to allow method chaining"
+        },
+        "hasArg": {
+          "Javadoc": "* Indicates if the Option has an argument or not.\n         *\n         * @param hasArg specifies whether the Option takes an argument or not\n         * @return this builder, to allow method chaining"
+        },
+        "hasArgs": {
+          "Javadoc": "* Indicates that the Option can have unlimited argument values.\n         *\n         * @return this builder, to allow method chaining"
+        },
+        "longOpt": {
+          "Javadoc": "* Sets the long name of the Option.\n         *\n         * @param longOpt the long name of the Option\n         * @return this builder, to allow method chaining"
+        },
+        "numberOfArgs": {
+          "Javadoc": "* Sets the number of argument values the Option can take.\n         *\n         * @param argCount the number of argument values\n         * @return this builder, to allow method chaining"
+        },
+        "option": {
+          "Javadoc": "* Sets the name of the Option.\n         *\n         * @param option the name of the Option\n         * @return this builder, to allow method chaining\n         * @throws IllegalArgumentException if there are any non valid Option characters in {@code opt}\n         * @since 1.5.0"
+        },
+        "optionalArg": {
+          "Javadoc": "* Sets whether the Option can have an optional argument.\n         *\n         * @param optionalArg specifies whether the Option can have an optional argument.\n         * @return this builder, to allow method chaining"
+        },
+        "required": {
+          "Javadoc": "* Sets whether the Option is mandatory.\n         *\n         * @param required specifies whether the Option is mandatory\n         * @return this builder, to allow method chaining"
+        },
+        "type": {
+          "Javadoc": "* Sets the type of the Option.\n         *\n         * @param type the type of the Option\n         * @return this builder, to allow method chaining"
+        },
+        "valueSeparator": {
+          "Javadoc": "* The Option will use {@code sep} as a means to separate argument values.\n         * <p>\n         * <b>Example:</b>\n         * </p>\n         *\n         * <pre>\n         * Option opt = Option.builder(\"D\").hasArgs().valueSeparator('=').build();\n         * Options options = new Options();\n         * options.addOption(opt);\n         * String[] args = {\"-Dkey=value\"};\n         * CommandLineParser parser = new DefaultParser();\n         * CommandLine line = parser.parse(options, args);\n         * String propertyName = line.getOptionValues(\"D\")[0]; // will be \"key\"\n         * String propertyValue = line.getOptionValues(\"D\")[1]; // will be \"value\"\n         * </pre>\n         *\n         * @param valueSeparator The value separator.\n         * @return this builder, to allow method chaining"
+        }
+      }
+    },
+    "org.apache.commons.cli.CommandLineParser": {
+      "Javadoc": "\n * A class that implements the {@code CommandLineParser} interface can parse a String array according to the\n * {@link Options} specified and return a {@link CommandLine}.\n ",
+      "methods": {
+        "parse": {
+          "Javadoc": "* Parses the arguments according to the specified options.\n     *\n     * @param options the specified Options\n     * @param arguments the command line arguments\n     * @param stopAtNonOption if {@code true} an unrecognized argument stops the parsing and the remaining arguments\n     *        are added to the {@link CommandLine}s args list. If {@code false} an unrecognized argument triggers a\n     *        ParseException.\n     *\n     * @return the list of atomic option and value tokens\n     * @throws ParseException if there are any problems encountered while parsing the command line tokens."
+        }
+      }
+    },
+    "org.apache.commons.cli.Converter": {
+      "Javadoc": "\n * The definition of the functional interface to call when doing a conversion. Like {@code Function<String,T>} but can throw an Exception.\n *\n * @param <T> The return type for the function.\n * @param <E> The kind of thrown exception or error.\n * @since 1.7.0\n ",
+      "methods": {
+        "apply": {
+          "Javadoc": "* Applies the conversion function to the String argument.\n     *\n     * @param str the String to convert\n     * @return the Object from the conversion.\n     * @throws E on error."
+        }
+      }
+    },
+    "org.apache.commons.cli.DefaultParser": {
+      "Javadoc": "\n * Default parser.\n *\n * @since 1.3\n ",
+      "methods": {
+        "builder": {
+          "Javadoc": "* Creates a new {@link Builder} to create an {@link DefaultParser} using descriptive\n     * methods.\n     *\n     * @return a new {@link Builder} instance\n     * @since 1.5.0"
+        },
+        "checkRequiredArgs": {
+          "Javadoc": "* Throws a {@link MissingArgumentException} if the current option didn't receive the number of arguments expected."
+        },
+        "checkRequiredOptions": {
+          "Javadoc": "* Throws a {@link MissingOptionException} if all of the required options are not present.\n     *\n     * @throws MissingOptionException if any of the required Options are not present."
+        },
+        "getLongPrefix": {
+          "Javadoc": "* Searches for a prefix that is the long name of an option (-Xmx512m)\n     *\n     * @param token"
+        },
+        "getMatchingLongOptions": {
+          "Javadoc": "* Gets a list of matching option strings for the given token, depending on the selected partial matching policy.\n     *\n     * @param token the token (may contain leading dashes)\n     * @return the list of matching option strings or an empty list if no matching option could be found"
+        },
+        "handleConcatenatedOptions": {
+          "Javadoc": "* Breaks {@code token} into its constituent parts using the following algorithm.\n     *\n     * <ul>\n     * <li>ignore the first character (\"<b>-</b>\")</li>\n     * <li>for each remaining character check if an {@link Option} exists with that id.</li>\n     * <li>if an {@link Option} does exist then add that character prepended with \"<b>-</b>\" to the list of processed\n     * tokens.</li>\n     * <li>if the {@link Option} can have an argument value and there are remaining characters in the token then add the\n     * remaining characters as a token to the list of processed tokens.</li>\n     * <li>if an {@link Option} does <b>NOT</b> exist <b>AND</b> {@code stopAtNonOption} <b>IS</b> set then add the\n     * special token \"<b>--</b>\" followed by the remaining characters and also the remaining tokens directly to the\n     * processed tokens list.</li>\n     * <li>if an {@link Option} does <b>NOT</b> exist <b>AND</b> {@code stopAtNonOption} <b>IS NOT</b> set then add\n     * that character prepended with \"<b>-</b>\".</li>\n     * </ul>\n     *\n     * @param token The current token to be <b>burst</b> at the first non-Option encountered.\n     * @throws ParseException if there are any problems encountered while parsing the command line token."
+        },
+        "handleLongOption": {
+          "Javadoc": "* Handles the following tokens:\n     *\n     * --L --L=V --L V --l\n     *\n     * @param token the command line token to handle"
+        },
+        "handleLongOptionWithEqual": {
+          "Javadoc": "* Handles the following tokens:\n     *\n     * --L=V -L=V --l=V -l=V\n     *\n     * @param token the command line token to handle"
+        },
+        "handleLongOptionWithoutEqual": {
+          "Javadoc": "* Handles the following tokens:\n     *\n     * --L -L --l -l\n     *\n     * @param token the command line token to handle"
+        },
+        "handleProperties": {
+          "Javadoc": "* Sets the values of Options using the values in {@code properties}.\n     *\n     * @param properties The value properties to be processed."
+        },
+        "handleShortAndLongOption": {
+          "Javadoc": "* Handles the following tokens:\n     *\n     * -S -SV -S V -S=V -S1S2 -S1S2 V -SV1=V2\n     *\n     * -L -LV -L V -L=V -l\n     *\n     * @param token the command line token to handle"
+        },
+        "handleToken": {
+          "Javadoc": "* Handles any command line token.\n     *\n     * @param token the command line token to handle\n     * @throws ParseException"
+        },
+        "handleUnknownToken": {
+          "Javadoc": "* Handles an unknown token. If the token starts with a dash an UnrecognizedOptionException is thrown. Otherwise the\n     * token is added to the arguments of the command line. If the stopAtNonOption flag is set, this stops the parsing and\n     * the remaining tokens are added as-is in the arguments of the command line.\n     *\n     * @param token the command line token to handle"
+        },
+        "isArgument": {
+          "Javadoc": "* Tests if the token is a valid argument.\n     *\n     * @param token"
+        },
+        "isJavaProperty": {
+          "Javadoc": "* Tests if the specified token is a Java-like property (-Dkey=value)."
+        },
+        "isLongOption": {
+          "Javadoc": "* Tests if the token looks like a long option.\n     *\n     * @param token"
+        },
+        "isNegativeNumber": {
+          "Javadoc": "* Tests if the token is a negative number.\n     *\n     * @param token"
+        },
+        "isOption": {
+          "Javadoc": "* Tests if the token looks like an option.\n     *\n     * @param token"
+        },
+        "isShortOption": {
+          "Javadoc": "* Tests if the token looks like a short option.\n     *\n     * @param token"
+        },
+        "parse": {
+          "Javadoc": "* Parses the arguments according to the specified options and properties.\n     *\n     * @param options the specified Options\n     * @param arguments the command line arguments\n     * @param properties command line option name-value pairs\n     * @param stopAtNonOption if {@code true} an unrecognized argument stops the parsing and the remaining arguments\n     *        are added to the {@link CommandLine}s args list. If {@code false} an unrecognized argument triggers a\n     *        ParseException.\n     *\n     * @return the list of atomic option and value tokens\n     * @throws ParseException if there are any problems encountered while parsing the command line tokens."
+        },
+        "stripLeadingAndTrailingQuotesDefaultOff": {
+          "Javadoc": "* Strips balanced leading and trailing quotes if the stripLeadingAndTrailingQuotes is set\n     * If stripLeadingAndTrailingQuotes is null, then do not strip\n     *\n     * @param token a string\n     * @return token with the quotes stripped (if set)"
+        },
+        "stripLeadingAndTrailingQuotesDefaultOn": {
+          "Javadoc": "* Strips balanced leading and trailing quotes if the stripLeadingAndTrailingQuotes is set\n     * If stripLeadingAndTrailingQuotes is null, then do not strip\n     *\n     * @param token a string\n     * @return token with the quotes stripped (if set)"
+        },
+        "updateRequiredOptions": {
+          "Javadoc": "* Removes the option or its group from the list of expected elements.\n     *\n     * @param option"
+        }
+      }
+    },
+    "org.apache.commons.cli.GnuParser": {
+      "Javadoc": "\n * The class GnuParser provides an implementation of the {@link Parser#flatten(Options, String[], boolean) flatten}\n * method.\n *\n * @deprecated since 1.3, use the {@link DefaultParser} instead\n ",
+      "methods": {
+        "flatten": {
+          "Javadoc": "* This flatten method does so using the following rules:\n     * <ol>\n     * <li>If an {@link Option} exists for the first character of the {@code arguments} entry <b>AND</b> an\n     * {@link Option} does not exist for the whole {@code argument} then add the first character as an option to the\n     * processed tokens list e.g. \"-D\" and add the rest of the entry to the also.</li>\n     * <li>Otherwise just add the token to the processed tokens list.</li>\n     * </ol>\n     *\n     * @param options The Options to parse the arguments by.\n     * @param arguments The arguments that have to be flattened.\n     * @param stopAtNonOption specifies whether to stop flattening when a non option has been encountered\n     * @return a String array of the flattened arguments"
+        }
+      }
+    },
+    "org.apache.commons.cli.HelpFormatter": {
+      "Javadoc": "\n * A formatter of help messages for command line options.\n *\n * <p>\n * Example:\n * </p>\n *\n * <pre>\n * Options options = new Options();\n * options.addOption(OptionBuilder.withLongOpt(\"file\").withDescription(\"The file to be processed\").hasArg().withArgName(\"FILE\").isRequired().create('f'));\n * options.addOption(OptionBuilder.withLongOpt(\"version\").withDescription(\"Print the version of the application\").create('v'));\n * options.addOption(OptionBuilder.withLongOpt(\"help\").create('h'));\n *\n * String header = \"Do something useful with an input file\\n\\n\";\n * String footer = \"\\nPlease report issues at https://example.com/issues\";\n *\n * HelpFormatter formatter = new HelpFormatter();\n * formatter.printHelp(\"myapp\", header, options, footer, true);\n * </pre>\n *\n * This produces the following output:\n *\n * <pre>\n * usage: myapp -f &lt;FILE&gt; [-h] [-v]\n * Do something useful with an input file\n *\n *  -f,--file &lt;FILE&gt;   The file to be processed\n *  -h,--help\n *  -v,--version       Print the version of the application\n *\n * Please report issues at https://example.com/issues\n * </pre>\n ",
+      "methods": {
+        "appendOption": {
+          "Javadoc": "* Appends the usage clause for an Option to a StringBuffer.\n     *\n     * @param buff the StringBuffer to append to\n     * @param option the Option to append\n     * @param required whether the Option is required or not"
+        },
+        "appendOptionGroup": {
+          "Javadoc": "* Appends the usage clause for an OptionGroup to a StringBuffer. The clause is wrapped in square brackets if the group\n     * is required. The display of the options is handled by appendOption\n     *\n     * @param buff the StringBuffer to append to\n     * @param group the group to append\n     * @see #appendOption(StringBuffer,Option,boolean)"
+        },
+        "createPadding": {
+          "Javadoc": "* Return a String of padding of length {@code len}.\n     *\n     * @param len The length of the String of padding to create.\n     *\n     * @return The String of padding"
+        },
+        "findWrapPos": {
+          "Javadoc": "* Finds the next text wrap position after {@code startPos} for the text in {@code text} with the column width\n     * {@code width}. The wrap point is the last position before startPos+width having a whitespace character (space,\n     * \\n, \\r). If there is no whitespace character before startPos+width, it will return startPos+width.\n     *\n     * @param text The text being searched for the wrap position\n     * @param width width of the wrapped text\n     * @param startPos position from which to start the lookup whitespace character\n     * @return position on which the text must be wrapped or -1 if the wrap position is at the end of the text"
+        },
+        "getArgName": {
+          "Javadoc": "* Gets the 'argName'.\n     *\n     * @return the 'argName'"
+        },
+        "getDescPadding": {
+          "Javadoc": "* Gets the 'descPadding'.\n     *\n     * @return the 'descPadding'"
+        },
+        "getLeftPadding": {
+          "Javadoc": "* Gets the 'leftPadding'.\n     *\n     * @return the 'leftPadding'"
+        },
+        "getLongOptPrefix": {
+          "Javadoc": "* Gets the 'longOptPrefix'.\n     *\n     * @return the 'longOptPrefix'"
+        },
+        "getLongOptSeparator": {
+          "Javadoc": "* Gets the separator displayed between a long option and its value.\n     *\n     * @return the separator\n     * @since 1.3"
+        },
+        "getNewLine": {
+          "Javadoc": "* Gets the 'newLine'.\n     *\n     * @return the 'newLine'"
+        },
+        "getOptionComparator": {
+          "Javadoc": "* Comparator used to sort the options when they output in help text. Defaults to case-insensitive alphabetical sorting\n     * by option key.\n     *\n     * @return the {@link Comparator} currently in use to sort the options\n     * @since 1.2"
+        },
+        "getOptPrefix": {
+          "Javadoc": "* Gets the 'optPrefix'.\n     *\n     * @return the 'optPrefix'"
+        },
+        "getSyntaxPrefix": {
+          "Javadoc": "* Gets the 'syntaxPrefix'.\n     *\n     * @return the 'syntaxPrefix'"
+        },
+        "getWidth": {
+          "Javadoc": "* Gets the 'width'.\n     *\n     * @return the 'width'"
+        },
+        "printHelp": {
+          "Javadoc": "* Print the help for {@code options} with the specified command line syntax. This method prints help information\n     * to System.out.\n     *\n     * @param cmdLineSyntax the syntax for this application\n     * @param header the banner to display at the beginning of the help\n     * @param options the Options instance\n     * @param footer the banner to display at the end of the help\n     * @param autoUsage whether to print an automatically generated usage statement"
+        },
+        "printOptions": {
+          "Javadoc": "* Print the help for the specified Options to the specified writer, using the specified width, left padding and\n     * description padding.\n     *\n     * @param pw The printWriter to write the help to\n     * @param width The number of characters to display per line\n     * @param options The command line Options\n     * @param leftPad the number of characters of padding to be prefixed to each line\n     * @param descPad the number of characters of padding to be prefixed to each description line"
+        },
+        "printUsage": {
+          "Javadoc": "* Prints the usage statement for the specified application.\n     *\n     * @param pw The PrintWriter to print the usage statement\n     * @param width The number of characters to display per line\n     * @param app The application name\n     * @param options The command line Options"
+        },
+        "printWrapped": {
+          "Javadoc": "* Prints the specified text to the specified PrintWriter.\n     *\n     * @param pw The printWriter to write the help to\n     * @param width The number of characters to display per line\n     * @param text The text to be written to the PrintWriter"
+        },
+        "renderOptions": {
+          "Javadoc": "* Renders the specified Options and return the rendered Options in a StringBuffer.\n     *\n     * @param sb The StringBuffer to place the rendered Options into.\n     * @param width The number of characters to display per line\n     * @param options The command line Options\n     * @param leftPad the number of characters of padding to be prefixed to each line\n     * @param descPad the number of characters of padding to be prefixed to each description line\n     *\n     * @return the StringBuffer with the rendered Options contents."
+        },
+        "renderWrappedText": {
+          "Javadoc": "* Renders the specified text and return the rendered Options in a StringBuffer.\n     *\n     * @param sb The StringBuffer to place the rendered text into.\n     * @param width The number of characters to display per line\n     * @param nextLineTabStop The position on the next line for the first tab.\n     * @param text The text to be rendered.\n     *\n     * @return the StringBuffer with the rendered Options contents."
+        },
+        "renderWrappedTextBlock": {
+          "Javadoc": "* Renders the specified text width a maximum width. This method differs from renderWrappedText by not removing leading\n     * spaces after a new line.\n     *\n     * @param sb The StringBuffer to place the rendered text into.\n     * @param width The number of characters to display per line\n     * @param nextLineTabStop The position on the next line for the first tab.\n     * @param text The text to be rendered."
+        },
+        "rtrim": {
+          "Javadoc": "* Removes the trailing whitespace from the specified String.\n     *\n     * @param s The String to remove the trailing padding from.\n     *\n     * @return The String of without the trailing padding"
+        },
+        "setArgName": {
+          "Javadoc": "* Sets the 'argName'.\n     *\n     * @param name the new value of 'argName'"
+        },
+        "setDescPadding": {
+          "Javadoc": "* Sets the 'descPadding'.\n     *\n     * @param padding the new value of 'descPadding'"
+        },
+        "setLeftPadding": {
+          "Javadoc": "* Sets the 'leftPadding'.\n     *\n     * @param padding the new value of 'leftPadding'"
+        },
+        "setLongOptPrefix": {
+          "Javadoc": "* Sets the 'longOptPrefix'.\n     *\n     * @param prefix the new value of 'longOptPrefix'"
+        },
+        "setLongOptSeparator": {
+          "Javadoc": "* Sets the separator displayed between a long option and its value. Ensure that the separator specified is supported by\n     * the parser used, typically ' ' or '='.\n     *\n     * @param longOptSeparator the separator, typically ' ' or '='.\n     * @since 1.3"
+        },
+        "setNewLine": {
+          "Javadoc": "* Sets the 'newLine'.\n     *\n     * @param newline the new value of 'newLine'"
+        },
+        "setOptionComparator": {
+          "Javadoc": "* Sets the comparator used to sort the options when they output in help text. Passing in a null comparator will keep the\n     * options in the order they were declared.\n     *\n     * @param comparator the {@link Comparator} to use for sorting the options\n     * @since 1.2"
+        },
+        "setOptPrefix": {
+          "Javadoc": "* Sets the 'optPrefix'.\n     *\n     * @param prefix the new value of 'optPrefix'"
+        },
+        "setSyntaxPrefix": {
+          "Javadoc": "* Sets the 'syntaxPrefix'.\n     *\n     * @param prefix the new value of 'syntaxPrefix'"
+        },
+        "setWidth": {
+          "Javadoc": "* Sets the 'width'.\n     *\n     * @param width the new value of 'width'"
+        }
+      }
+    },
+    "org.apache.commons.cli.OptionComparator": {
+      "Javadoc": "\n     * This class implements the {@code Comparator} interface for comparing Options.\n     ",
+      "methods": {
+        "compare": {
+          "Javadoc": "* Compares its two arguments for order. Returns a negative integer, zero, or a positive integer as the first argument\n         * is less than, equal to, or greater than the second.\n         *\n         * @param opt1 The first Option to be compared.\n         * @param opt2 The second Option to be compared.\n         * @return a negative integer, zero, or a positive integer as the first argument is less than, equal to, or greater than\n         *         the second."
+        }
+      }
+    },
+    "org.apache.commons.cli.MissingArgumentException": {
+      "Javadoc": "\n * Thrown when an option requiring an argument is not provided with an argument.\n ",
+      "methods": {
+        "getOption": {
+          "Javadoc": "* Gets the option requiring an argument that wasn't provided on the command line.\n     *\n     * @return the related option\n     * @since 1.2"
+        }
+      }
+    },
+    "org.apache.commons.cli.MissingOptionException": {
+      "Javadoc": "\n * Thrown when a required option has not been provided.\n ",
+      "methods": {
+        "createMessage": {
+          "Javadoc": "* Build the exception message from the specified list of options.\n     *\n     * @param missingOptions the list of missing options and groups\n     * @since 1.2"
+        },
+        "getMissingOptions": {
+          "Javadoc": "* Gets the list of options or option groups missing in the command line parsed.\n     *\n     * @return the missing options, consisting of String instances for simple options, and OptionGroup instances for\n     *         required option groups.\n     * @since 1.2"
+        }
+      }
+    },
+    "org.apache.commons.cli.Option": {
+      "Javadoc": "\n * Describes a single command-line option. It maintains information regarding the short-name of the option, the\n * long-name, if any exists, a flag indicating if an argument is required for this option, and a self-documenting\n * description of the option.\n * <p>\n * An Option is not created independently, but is created through an instance of {@link Options}. An Option is required\n * to have at least a short or a long-name.\n * </p>\n * <p>\n * <b>Note:</b> once an {@link Option} has been added to an instance of {@link Options}, its required flag cannot be\n * changed.\n * </p>\n *\n * @see org.apache.commons.cli.Options\n * @see org.apache.commons.cli.CommandLine\n ",
+      "methods": {
+        "builder": {
+          "Javadoc": "* Returns a {@link Builder} to create an {@link Option} using descriptive methods.\n     *\n     * @param option short representation of the option\n     * @return a new {@link Builder} instance\n     * @throws IllegalArgumentException if there are any non valid Option characters in {@code opt}\n     * @since 1.3"
+        },
+        "acceptsArg": {
+          "Javadoc": "* Tells if the option can accept more arguments.\n     *\n     * @return false if the maximum number of arguments is reached\n     * @since 1.3"
+        },
+        "add": {
+          "Javadoc": "* Add the value to this Option. If the number of arguments is greater than zero and there is enough space in the list\n     * then add the value. Otherwise, throw a runtime exception.\n     *\n     * @param value The value to be added to this Option\n     *\n     * @since 1.0.1"
+        },
+        "addValue": {
+          "Javadoc": "* This method is not intended to be used. It was a piece of internal API that was made public in 1.0. It currently\n     * throws an UnsupportedOperationException.\n     *\n     * @param value the value to add\n     * @return always throws an {@link UnsupportedOperationException}\n     * @throws UnsupportedOperationException always\n     * @deprecated Unused."
+        },
+        "addValueForProcessing": {
+          "Javadoc": "* Adds the specified value to this Option.\n     *\n     * @param value is a/the value of this Option"
+        },
+        "clearValues": {
+          "Javadoc": "* Clear the Option values. After a parse is complete, these are left with data in them and they need clearing if\n     * another parse is done.\n     *\n     * See: <a href=\"https://issues.apache.org/jira/browse/CLI-71\">CLI-71</a>"
+        },
+        "clone": {
+          "Javadoc": "* A rather odd clone method - due to incorrect code in 1.0 it is public and in 1.1 rather than throwing a\n     * CloneNotSupportedException it throws a RuntimeException so as to maintain backwards compat at the API level.\n     *\n     * After calling this method, it is very likely you will want to call clearValues().\n     *\n     * @return a clone of this Option instance\n     * @throws RuntimeException if a {@link CloneNotSupportedException} has been thrown by {@code super.clone()}"
+        },
+        "getArgName": {
+          "Javadoc": "* Gets the display name for the argument value.\n     *\n     * @return the display name for the argument value."
+        },
+        "getArgs": {
+          "Javadoc": "* Gets the number of argument values this Option can take.\n     *\n     * <p>\n     * A value equal to the constant {@link #UNINITIALIZED} (= -1) indicates the number of arguments has not been specified.\n     * A value equal to the constant {@link #UNLIMITED_VALUES} (= -2) indicates that this options takes an unlimited amount\n     * of values.\n     * </p>\n     *\n     * @return num the number of argument values\n     * @see #UNINITIALIZED\n     * @see #UNLIMITED_VALUES"
+        },
+        "getConverter": {
+          "Javadoc": "* Gets the value to type converter.\n     * @return the value to type converter\n     * @since 1.7.0"
+        },
+        "getDescription": {
+          "Javadoc": "* Gets the self-documenting description of this Option\n     *\n     * @return The string description of this option"
+        },
+        "getId": {
+          "Javadoc": "* Gets the id of this Option. This is only set when the Option shortOpt is a single character. This is used for\n     * switch statements.\n     *\n     * @return the id of this Option"
+        },
+        "getKey": {
+          "Javadoc": "* Gets the 'unique' Option identifier.\n     *\n     * @return the 'unique' Option identifier"
+        },
+        "getLongOpt": {
+          "Javadoc": "* Gets the long name of this Option.\n     *\n     * @return Long name of this option, or null, if there is no long name"
+        },
+        "getOpt": {
+          "Javadoc": "* Gets the name of this Option.\n     *\n     * It is this String which can be used with {@link CommandLine#hasOption(String opt)} and\n     * {@link CommandLine#getOptionValue(String opt)} to check for existence and argument.\n     *\n     * @return The name of this option"
+        },
+        "getType": {
+          "Javadoc": "* Gets the type of this Option.\n     *\n     * @return The type of this option"
+        },
+        "getValue": {
+          "Javadoc": "* Gets the value/first value of this Option or the {@code defaultValue} if there is no value.\n     *\n     * @param defaultValue The value to be returned if there is no value.\n     *\n     * @return the value/first value of this Option or the {@code defaultValue} if there are no values."
+        },
+        "getValues": {
+          "Javadoc": "* Gets the values of this Option as a String array or null if there are no values\n     *\n     * @return the values of this Option as a String array or null if there are no values"
+        },
+        "getValueSeparator": {
+          "Javadoc": "* Gets the value separator character.\n     *\n     * @return the value separator character."
+        },
+        "getValuesList": {
+          "Javadoc": "* Gets the values of this Option as a List or null if there are no values.\n     *\n     * @return the values of this Option as a List or null if there are no values"
+        },
+        "hasArg": {
+          "Javadoc": "* Query to see if this Option requires an argument\n     *\n     * @return boolean flag indicating if an argument is required"
+        },
+        "hasArgName": {
+          "Javadoc": "* Returns whether the display name for the argument value has been set.\n     *\n     * @return if the display name for the argument value has been set."
+        },
+        "hasArgs": {
+          "Javadoc": "* Query to see if this Option can take many values.\n     *\n     * @return boolean flag indicating if multiple values are allowed"
+        },
+        "hasLongOpt": {
+          "Javadoc": "* Query to see if this Option has a long name\n     *\n     * @return boolean flag indicating existence of a long name"
+        },
+        "hasNoValues": {
+          "Javadoc": "* Returns whether this Option has any values.\n     *\n     * @return whether this Option has any values."
+        },
+        "hasOptionalArg": {
+          "Javadoc": "* Returns whether this Option can have an optional argument.\n     *\n     * @return whether this Option can have an optional argument"
+        },
+        "hasValueSeparator": {
+          "Javadoc": "* Return whether this Option has specified a value separator.\n     *\n     * @return whether this Option has specified a value separator.\n     * @since 1.1"
+        },
+        "isRequired": {
+          "Javadoc": "* Query to see if this Option is mandatory\n     *\n     * @return boolean flag indicating whether this Option is mandatory"
+        },
+        "processValue": {
+          "Javadoc": "* Processes the value. If this Option has a value separator the value will have to be parsed into individual tokens.\n     * When n-1 tokens have been processed and there are more value separators in the value, parsing is ceased and the\n     * remaining characters are added as a single token.\n     *\n     * @param value The String to be processed.\n     *\n     * @since 1.0.1"
+        },
+        "requiresArg": {
+          "Javadoc": "* Tells if the option requires more arguments to be valid.\n     *\n     * @return false if the option doesn't require more arguments\n     * @since 1.3"
+        },
+        "setArgName": {
+          "Javadoc": "* Sets the display name for the argument value.\n     *\n     * @param argName the display name for the argument value."
+        },
+        "setArgs": {
+          "Javadoc": "* Sets the number of argument values this Option can take.\n     *\n     * @param num the number of argument values"
+        },
+        "setConverter": {
+          "Javadoc": "* Sets the value to type converter.\n     * @param converter The converter to convert the string value to the type.\n     * @since 1.7.0"
+        },
+        "setDescription": {
+          "Javadoc": "* Sets the self-documenting description of this Option\n     *\n     * @param description The description of this option\n     * @since 1.1"
+        },
+        "setLongOpt": {
+          "Javadoc": "* Sets the long name of this Option.\n     *\n     * @param longOpt the long name of this Option"
+        },
+        "setOptionalArg": {
+          "Javadoc": "* Sets whether this Option can have an optional argument.\n     *\n     * @param optionalArg specifies whether the Option can have an optional argument."
+        },
+        "setRequired": {
+          "Javadoc": "* Sets whether this Option is mandatory.\n     *\n     * @param required specifies whether this Option is mandatory"
+        },
+        "setType": {
+          "Javadoc": "* Sets the type of this Option.\n     * <p>\n     * <b>Note:</b> this method is kept for binary compatibility and the input type is supposed to be a {@link Class}\n     * object.\n     * </p>\n     *\n     * @param type the type of this Option\n     * @deprecated since 1.3, use {@link #setType(Class)} instead"
+        },
+        "setValueSeparator": {
+          "Javadoc": "* Sets the value separator. For example if the argument value was a Java property, the value separator would be '='.\n     *\n     * @param sep The value separator."
+        },
+        "toString": {
+          "Javadoc": "* Dump state, suitable for debugging.\n     *\n     * @return Stringified form of this object"
+        }
+      }
+    },
+    "org.apache.commons.cli.OptionBuilder": {
+      "Javadoc": "\n * OptionBuilder allows the user to create Options using descriptive methods.\n * <p>\n * Details on the Builder pattern can be found at\n * <a href=\"https://c2.com/cgi-bin/wiki?BuilderPattern\">https://c2.com/cgi-bin/wiki?BuilderPattern</a>.\n * <p>\n * This class is NOT thread safe. See <a href=\"https://issues.apache.org/jira/browse/CLI-209\">CLI-209</a>\n *\n * @since 1.0\n * @deprecated since 1.3, use {@link Option#builder(String)} instead\n ",
+      "methods": {
+        "create": {
+          "Javadoc": "* Creates an Option using the current settings and with the specified Option {@code char}.\n     *\n     * @param opt the {@code String} representation of the Option\n     * @return the Option instance\n     * @throws IllegalArgumentException if {@code opt} is not a valid character. See Option."
+        },
+        "hasArg": {
+          "Javadoc": "* The next Option created will require an argument value if {@code hasArg} is true.\n     *\n     * @param hasArg if true then the Option has an argument value\n     * @return the OptionBuilder instance"
+        },
+        "hasArgs": {
+          "Javadoc": "* The next Option created can have {@code num} argument values.\n     *\n     * @param num the number of args that the option can have\n     * @return the OptionBuilder instance"
+        },
+        "hasOptionalArg": {
+          "Javadoc": "* The next Option can have an optional argument.\n     *\n     * @return the OptionBuilder instance"
+        },
+        "hasOptionalArgs": {
+          "Javadoc": "* The next Option can have the specified number of optional arguments.\n     *\n     * @param numArgs - the maximum number of optional arguments the next Option created can have.\n     * @return the OptionBuilder instance"
+        },
+        "isRequired": {
+          "Javadoc": "* The next Option created will be required if {@code required} is true.\n     *\n     * @param newRequired if true then the Option is required\n     * @return the OptionBuilder instance"
+        },
+        "reset": {
+          "Javadoc": "* Resets the member variables to their default values."
+        },
+        "withArgName": {
+          "Javadoc": "* The next Option created will have the specified argument value name.\n     *\n     * @param name the name for the argument value\n     * @return the OptionBuilder instance"
+        },
+        "withDescription": {
+          "Javadoc": "* The next Option created will have the specified description\n     *\n     * @param newDescription a description of the Option's purpose\n     * @return the OptionBuilder instance"
+        },
+        "withLongOpt": {
+          "Javadoc": "* The next Option created will have the following long option value.\n     *\n     * @param newLongopt the long option value\n     * @return the OptionBuilder instance"
+        },
+        "withType": {
+          "Javadoc": "* The next Option created will have a value that will be an instance of {@code type}.\n     * <p>\n     * <b>Note:</b> this method is kept for binary compatibility and the input type is supposed to be a {@link Class}\n     * object.\n     *\n     * @param newType the type of the Options argument value\n     * @return the OptionBuilder instance\n     * @deprecated since 1.3, use {@link #withType(Class)} instead"
+        },
+        "withValueSeparator": {
+          "Javadoc": "* The next Option created uses {@code sep} as a means to separate argument values.\n     * <p>\n     * <b>Example:</b>\n     *\n     * <pre>\n     * Option opt = OptionBuilder.withValueSeparator('=').create('D');\n     *\n     * String args = \"-Dkey=value\";\n     * CommandLine line = parser.parse(args);\n     * String propertyName = opt.getValue(0); // will be \"key\"\n     * String propertyValue = opt.getValue(1); // will be \"value\"\n     * </pre>\n     *\n     * @param sep The value separator to be used for the argument values.\n     *\n     * @return the OptionBuilder instance"
+        }
+      }
+    },
+    "org.apache.commons.cli.OptionGroup": {
+      "Javadoc": "\n * A group of mutually exclusive options.\n ",
+      "methods": {
+        "addOption": {
+          "Javadoc": "* Add the specified {@code Option} to this group.\n     *\n     * @param option the option to add to this group\n     * @return this option group with the option added"
+        },
+        "getNames": {
+          "Javadoc": "* @return the names of the options in this group as a {@code Collection}"
+        },
+        "getOptions": {
+          "Javadoc": "* @return the options in this group as a {@code Collection}"
+        },
+        "getSelected": {
+          "Javadoc": "* @return the selected option name"
+        },
+        "isRequired": {
+          "Javadoc": "* Tests whether this option group is required.\n     *\n     * @return whether this option group is required"
+        },
+        "setRequired": {
+          "Javadoc": "* @param required specifies if this group is required"
+        },
+        "setSelected": {
+          "Javadoc": "* Sets the selected option of this group to {@code name}.\n     *\n     * @param option the option that is selected\n     * @throws AlreadySelectedException if an option from this group has already been selected."
+        },
+        "toString": {
+          "Javadoc": "* Returns the stringified version of this OptionGroup.\n     *\n     * @return the stringified representation of this group"
+        }
+      }
+    },
+    "org.apache.commons.cli.Options": {
+      "Javadoc": "\n * Main entry-point into the library.\n * <p>\n * Options represents a collection of {@link Option} objects, which describe the possible options for a command-line.\n * <p>\n * It may flexibly parse long and short options, with or without values. Additionally, it may parse only a portion of a\n * commandline, allowing for flexible multi-stage parsing.\n *\n * @see org.apache.commons.cli.CommandLine\n ",
+      "methods": {
+        "addOption": {
+          "Javadoc": "* Add an option that contains a short-name and a long-name.\n     *\n     * <p>\n     * It may be specified as requiring an argument.\n     * </p>\n     *\n     * @param opt Short single-character name of the option.\n     * @param longOpt Long multi-character name of the option.\n     * @param hasArg flag signalling if an argument is required after this option\n     * @param description Self-documenting description\n     * @return the resulting Options instance"
+        },
+        "addOptionGroup": {
+          "Javadoc": "* Add the specified option group.\n     *\n     * @param group the OptionGroup that is to be added\n     * @return the resulting Options instance"
+        },
+        "addOptions": {
+          "Javadoc": "* Adds options to this option.  If any Option in {@code options} already exists\n     * in this Options an IllegalArgumentException is thrown\n     *\n     * @param options the options to add.\n     * @return The resulting Options instance.\n     * @since 1.7.0"
+        },
+        "addRequiredOption": {
+          "Javadoc": "* Add an option that contains a short-name and a long-name.\n     *\n     * <p>\n     * The added option is set as required. It may be specified as requiring an argument. This method is a shortcut for:\n     * </p>\n     *\n     * <pre>\n     * <code>\n     * Options option = new Option(opt, longOpt, hasArg, description);\n     * option.setRequired(true);\n     * options.add(option);\n     * </code>\n     * </pre>\n     *\n     * @param opt Short single-character name of the option.\n     * @param longOpt Long multi-character name of the option.\n     * @param hasArg flag signalling if an argument is required after this option\n     * @param description Self-documenting description\n     * @return the resulting Options instance\n     * @since 1.4"
+        },
+        "getMatchingOptions": {
+          "Javadoc": "* Gets the options with a long name starting with the name specified.\n     *\n     * @param opt the partial name of the option\n     * @return the options matching the partial name specified, or an empty list if none matches\n     * @since 1.3"
+        },
+        "getOption": {
+          "Javadoc": "* Gets the {@link Option} matching the long or short name specified.\n     *\n     * <p>\n     * The leading hyphens in the name are ignored (up to 2).\n     * </p>\n     *\n     * @param opt short or long name of the {@link Option}\n     * @return the option represented by opt"
+        },
+        "getOptionGroup": {
+          "Javadoc": "* Gets the OptionGroup the {@code opt} belongs to.\n     *\n     * @param opt the option whose OptionGroup is being queried.\n     * @return the OptionGroup if {@code opt} is part of an OptionGroup, otherwise return null"
+        },
+        "getOptionGroups": {
+          "Javadoc": "* Gets the OptionGroups that are members of this Options instance.\n     *\n     * @return a Collection of OptionGroup instances."
+        },
+        "getOptions": {
+          "Javadoc": "* Gets a read-only list of options in this set\n     *\n     * @return read-only Collection of {@link Option} objects in this descriptor"
+        },
+        "getRequiredOptions": {
+          "Javadoc": "* Gets the required options.\n     *\n     * @return read-only List of required options"
+        },
+        "hasLongOption": {
+          "Javadoc": "* Returns whether the named {@link Option} is a member of this {@link Options}.\n     *\n     * @param opt long name of the {@link Option}\n     * @return true if the named {@link Option} is a member of this {@link Options}\n     * @since 1.3"
+        },
+        "hasOption": {
+          "Javadoc": "* Returns whether the named {@link Option} is a member of this {@link Options}.\n     *\n     * @param opt short or long name of the {@link Option}\n     * @return true if the named {@link Option} is a member of this {@link Options}"
+        },
+        "hasShortOption": {
+          "Javadoc": "* Returns whether the named {@link Option} is a member of this {@link Options}.\n     *\n     * @param opt short name of the {@link Option}\n     * @return true if the named {@link Option} is a member of this {@link Options}\n     * @since 1.3"
+        },
+        "helpOptions": {
+          "Javadoc": "* Returns the Options for use by the HelpFormatter.\n     *\n     * @return the List of Options"
+        },
+        "toString": {
+          "Javadoc": "* Dump state, suitable for debugging.\n     *\n     * @return Stringified form of this object"
+        }
+      }
+    },
+    "org.apache.commons.cli.OptionValidator": {
+      "Javadoc": "\n * Validates an Option string.\n *\n * @since 1.1\n ",
+      "methods": {
+        "isValidChar": {
+          "Javadoc": "* Returns whether the specified character is a valid character.\n     * A character is valid if any of the following conditions are true:\n     * <ul>\n     * <li>it is a letter</li>\n     * <li>it is a currency symbol (such as '$')</li>\n     * <li>it is a connecting punctuation character (such as '_')</li>\n     * <li>it is a digit</li>\n     * <li>it is a numeric letter (such as a Roman numeral character)</li>\n     * <li>it is a combining mark</li>\n     * <li>it is a non-spacing mark</li>\n     * <li>isIdentifierIgnorable returns true for the character</li>\n     * <li>it is a hyphen/dash ('-')</li>\n     * </ul>\n     * @param c the character to validate\n     * @return true if {@code c} is a valid character letter."
+        },
+        "isValidOpt": {
+          "Javadoc": "* Returns whether the specified character is a valid Option.\n     * A character is valid if any of the following conditions are true:\n     * <ul>\n     * <li>it is a letter</li>\n     * <li>it is a currency symbol (such as '$')</li>\n     * <li>it is a connecting punctuation character (such as '_')</li>\n     * <li>it is a digit</li>\n     * <li>it is a numeric letter (such as a Roman numeral character)</li>\n     * <li>it is a combining mark</li>\n     * <li>it is a non-spacing mark</li>\n     * <li>isIdentifierIgnorable returns true for the character</li>\n     * <li>it is a question mark or 'at' sign ('?' or '@')</li>\n     * </ul>\n     * @param c the option to validate\n     * @return true if {@code c} is a letter, '?' or '@', otherwise false."
+        },
+        "search": {
+          "Javadoc": "* Checks the char array for a matching char.\n     * @param chars the char array to search\n     * @param c the char to look for.\n     * @return {@code true} if {@code c} was in {@code ary}, {@code false} otherwise."
+        },
+        "validate": {
+          "Javadoc": "* Validates whether {@code opt} is a permissible Option shortOpt. The rules that specify if the {@code opt}\n     * is valid are:\n     *\n     * <ul>\n     * <li>a single character {@code opt} that is either ' '(special case), '?', '@' or a letter</li>\n     * <li>a multi character {@code opt} that only contains valid characters</li>\n     * </ul>\n     * </p><p>\n     * A character is valid if any of the following conditions are true:\n     * <ul>\n     * <li>it is a letter</li>\n     * <li>it is a currency symbol (such as '$')</li>\n     * <li>it is a connecting punctuation character (such as '_')</li>\n     * <li>it is a digit</li>\n     * <li>it is a numeric letter (such as a Roman numeral character)</li>\n     * <li>it is a combining mark</li>\n     * <li>it is a non-spacing mark</li>\n     * <li>isIdentifierIgnorable returns true for the character</li>\n     * <li>it is a hyphen/dash ('-')</li>\n     * </ul>\n     * </p><p>\n     * In case {@code opt} is {@code null} no further validation is performed.\n     *\n     * @param option The option string to validate, may be null\n     * @throws IllegalArgumentException if the Option is not valid."
+        }
+      }
+    },
+    "org.apache.commons.cli.ParseException": {
+      "Javadoc": "\n * Base for Exceptions thrown during parsing of a command-line.\n ",
+      "methods": {
+        "wrap": {
+          "Javadoc": "* Converts any exception except {@code UnsupportedOperationException} to a {@code ParseException}.\n     * if {@code e} is an instance of {@code ParseException} it is returned, otherwise a {@code ParseException} is\n     * created that wraps it.\n     * <p>\n     * Note: {@code UnsupportedOperationException} are not wrapped.  This is to solve a legacy expected exception problem and will be\n     * removed in the future.</p>\n     * @param e the exception to convert.\n     * @return the ParseException.\n     * @throws UnsupportedOperationException due to legacy expectations.  Will be removed in the future.\n     * @since 1.7.0"
+        }
+      }
+    },
+    "org.apache.commons.cli.Parser": {
+      "Javadoc": "\n * {@code Parser} creates {@link CommandLine}s.\n *\n * @deprecated since 1.3, the two-pass parsing with the flatten method is not enough flexible to handle complex cases\n ",
+      "methods": {
+        "checkRequiredOptions": {
+          "Javadoc": "* Throws a {@link MissingOptionException} if all of the required options are not present.\n     *\n     * @throws MissingOptionException if any of the required Options are not present."
+        },
+        "flatten": {
+          "Javadoc": "* Subclasses must implement this method to reduce the {@code arguments} that have been passed to the parse method.\n     *\n     * @param opts The Options to parse the arguments by.\n     * @param arguments The arguments that have to be flattened.\n     * @param stopAtNonOption specifies whether to stop flattening when a non option has been encountered\n     * @return a String array of the flattened arguments\n     * @throws ParseException if there are any problems encountered while parsing the command line tokens."
+        },
+        "getOptions": {
+          "Javadoc": "* Gets the options.\n     *\n     * @return the options."
+        },
+        "getRequiredOptions": {
+          "Javadoc": "* Gets the required options.\n     *\n     * @return the required options."
+        },
+        "parse": {
+          "Javadoc": "* Parse the arguments according to the specified options and properties.\n     *\n     * @param options the specified Options\n     * @param arguments the command line arguments\n     * @param properties command line option name-value pairs\n     * @param stopAtNonOption if {@code true} an unrecognized argument stops the parsing and the remaining arguments\n     *        are added to the {@link CommandLine}s args list. If {@code false} an unrecognized argument triggers a\n     *        ParseException.\n     *\n     * @return the list of atomic option and value tokens\n     *\n     * @throws ParseException if there are any problems encountered while parsing the command line tokens.\n     *\n     * @since 1.1"
+        },
+        "processArgs": {
+          "Javadoc": "* Process the argument values for the specified Option {@code opt} using the values retrieved from the specified\n     * iterator {@code iter}.\n     *\n     * @param opt The current Option\n     * @param iter The iterator over the flattened command line Options.\n     *\n     * @throws ParseException if an argument value is required and it is has not been found."
+        },
+        "processOption": {
+          "Javadoc": "* Process the Option specified by {@code arg} using the values retrieved from the specified iterator\n     * {@code iter}.\n     *\n     * @param arg The String value representing an Option\n     * @param iter The iterator over the flattened command line arguments.\n     *\n     * @throws ParseException if {@code arg} does not represent an Option"
+        },
+        "processProperties": {
+          "Javadoc": "* Sets the values of Options using the values in {@code properties}.\n     *\n     * @param properties The value properties to be processed.\n     * @throws ParseException if there are any problems encountered while processing the properties."
+        },
+        "setOptions": {
+          "Javadoc": "* Sets the options.\n     *\n     * @param options the options."
+        },
+        "updateRequiredOptions": {
+          "Javadoc": "* Removes the option or its group from the list of expected elements.\n     *\n     * @param opt"
+        }
+      }
+    },
+    "org.apache.commons.cli.PatternOptionBuilder": {
+      "Javadoc": "\n * Allows Options to be created from a single String. The pattern contains various single character flags and via an\n * optional punctuation character, their expected type.\n *\n * <table border=\"1\">\n * <caption>Overview of PatternOptionBuilder patterns</caption>\n * <tr>\n * <td>a</td>\n * <td>-a flag</td>\n * </tr>\n * <tr>\n * <td>b@</td>\n * <td>-b [class name]</td>\n * </tr>\n * <tr>\n * <td>c&gt;</td>\n * <td>-c [file name]</td>\n * </tr>\n * <tr>\n * <td>d+</td>\n * <td>-d [class name] (creates object via empty constructor)</td>\n * </tr>\n * <tr>\n * <td>e%</td>\n * <td>-e [number] (creates Double/Long instance depending on existing of a '.')</td>\n * </tr>\n * <tr>\n * <td>f/</td>\n * <td>-f [URL]</td>\n * </tr>\n * <tr>\n * <td>g:</td>\n * <td>-g [string]</td>\n * </tr>\n * </table>\n *\n * <p>\n * For example, the following allows command line flags of '-v -p string-value -f /dir/file'. The exclamation mark\n * precede a mandatory option.\n * </p>\n *\n * <pre>\n * Options options = PatternOptionBuilder.parsePattern(\"vp:!f/\");\n * </pre>\n *\n * <p>\n * TODO These need to break out to OptionType and also to be pluggable.\n * </p>\n ",
+      "methods": {
+        "getValueClass": {
+          "Javadoc": "* Retrieve the class that {@code ch} represents.\n     *\n     * @param ch the specified character\n     * @return The class that {@code ch} represents\n     * @deprecated use {@link #getValueType(char)}"
+        },
+        "getValueType": {
+          "Javadoc": "* Retrieve the class that {@code ch} represents.\n     *\n     * @param ch the specified character\n     * @return The class that {@code ch} represents\n     * @since 1.7.0"
+        },
+        "isValueCode": {
+          "Javadoc": "* Returns whether {@code ch} is a value code, i.e. whether it represents a class in a pattern.\n     *\n     * @param ch the specified character\n     * @return true if {@code ch} is a value code, otherwise false."
+        },
+        "parsePattern": {
+          "Javadoc": "* Returns the {@link Options} instance represented by {@code pattern}.\n     *\n     * @param pattern the pattern string\n     * @return The {@link Options} instance"
+        },
+        "registerTypes": {
+          "Javadoc": "* Registers custom {@code Converter}s with the {@code TypeHandler}.\n     * @since 1.7.0"
+        }
+      }
+    },
+    "org.apache.commons.cli.PosixParser": {
+      "Javadoc": "\n * The class PosixParser provides an implementation of the {@link Parser#flatten(Options,String[],boolean) flatten}\n * method.\n *\n * @deprecated since 1.3, use the {@link DefaultParser} instead\n ",
+      "methods": {
+        "burstToken": {
+          "Javadoc": "* Breaks {@code token} into its constituent parts using the following algorithm.\n     *\n     * <ul>\n     * <li>ignore the first character (\"<b>-</b>\")</li>\n     * <li>for each remaining character check if an {@link Option} exists with that id.</li>\n     * <li>if an {@link Option} does exist then add that character prepended with \"<b>-</b>\" to the list of processed\n     * tokens.</li>\n     * <li>if the {@link Option} can have an argument value and there are remaining characters in the token then add the\n     * remaining characters as a token to the list of processed tokens.</li>\n     * <li>if an {@link Option} does <b>NOT</b> exist <b>AND</b> {@code stopAtNonOption} <b>IS</b> set then add the\n     * special token \"<b>--</b>\" followed by the remaining characters and also the remaining tokens directly to the\n     * processed tokens list.</li>\n     * <li>if an {@link Option} does <b>NOT</b> exist <b>AND</b> {@code stopAtNonOption} <b>IS NOT</b> set then add\n     * that character prepended with \"<b>-</b>\".</li>\n     * </ul>\n     *\n     * @param token The current token to be <b>burst</b>\n     * @param stopAtNonOption Specifies whether to stop processing at the first non-Option encountered."
+        },
+        "flatten": {
+          "Javadoc": "* <p>\n     * An implementation of {@link Parser}'s abstract {@link Parser#flatten(Options,String[],boolean) flatten} method.\n     * </p>\n     *\n     * <p>\n     * The following are the rules used by this flatten method.\n     * </p>\n     * <ol>\n     * <li>if {@code stopAtNonOption} is <b>true</b> then do not burst anymore of {@code arguments} entries, just\n     * add each successive entry without further processing. Otherwise, ignore {@code stopAtNonOption}.</li>\n     * <li>if the current {@code arguments} entry is \"<b>--</b>\" just add the entry to the list of processed\n     * tokens</li>\n     * <li>if the current {@code arguments} entry is \"<b>-</b>\" just add the entry to the list of processed tokens</li>\n     * <li>if the current {@code arguments} entry is two characters in length and the first character is \"<b>-</b>\"\n     * then check if this is a valid {@link Option} id. If it is a valid id, then add the entry to the list of processed\n     * tokens and set the current {@link Option} member. If it is not a valid id and {@code stopAtNonOption} is true,\n     * then the remaining entries are copied to the list of processed tokens. Otherwise, the current entry is ignored.</li>\n     * <li>if the current {@code arguments} entry is more than two characters in length and the first character is\n     * \"<b>-</b>\" then we need to burst the entry to determine its constituents. For more information on the bursting\n     * algorithm see {@link PosixParser#burstToken(String, boolean) burstToken}.</li>\n     * <li>if the current {@code arguments} entry is not handled by any of the previous rules, then the entry is added\n     * to the list of processed tokens.</li>\n     * </ol>\n     *\n     * @param options The command line {@link Options}\n     * @param arguments The command line arguments to be parsed\n     * @param stopAtNonOption Specifies whether to stop flattening when an non option is found.\n     * @return The flattened {@code arguments} String array."
+        },
+        "gobble": {
+          "Javadoc": "* Adds the remaining tokens to the processed tokens list.\n     *\n     * @param iter An iterator over the remaining tokens"
+        },
+        "init": {
+          "Javadoc": "* Resets the members to their original state i.e. remove all of {@code tokens} entries and set\n     * {@code eatTheRest} to false."
+        },
+        "processNonOptionToken": {
+          "Javadoc": "* Add the special token \"<b>--</b>\" and the current {@code value} to the processed tokens list. Then add all the\n     * remaining {@code argument} values to the processed tokens list.\n     *\n     * @param value The current token"
+        },
+        "processOptionToken": {
+          "Javadoc": "* <p>\n     * If an {@link Option} exists for {@code token} then add the token to the processed list.\n     * </p>\n     *\n     * <p>\n     * If an {@link Option} does not exist and {@code stopAtNonOption} is set then add the remaining tokens to the\n     * processed tokens list directly.\n     * </p>\n     *\n     * @param token The current option token\n     * @param stopAtNonOption Specifies whether flattening should halt at the first non option."
+        }
+      }
+    },
+    "org.apache.commons.cli.TypeHandler": {
+      "Javadoc": "\n * TypeHandler will handle the pluggable conversion and verification of\n * Option types.  It handles the mapping of classes to bot converters and verifiers.\n * It provides the default conversion and verification methods when converters and verifiers\n * are not explicitly set.\n * <p>\n * If Options are serialized and deserialized their converters and verifiers will revert to the\n * defaults defined in this class.  To correctly de-serialize Options with custom converters and/or\n * verifiers, using the default serialization methods, this class should be properly configured with the custom\n * converters and verifiers for the specific class.\n * </p>\n ",
+      "methods": {
+        "createClass": {
+          "Javadoc": "* Returns the class whose name is {@code className}.\n     *\n     * @param className the class name\n     * @return The class if it is found\n     * @throws ParseException if the class could not be found\n     * @deprecated use {@link #createValue(String, Class)}"
+        },
+        "createDate": {
+          "Javadoc": "* Returns the date represented by {@code str}.\n     * <p>\n     * This method is not yet implemented and always throws an {@link UnsupportedOperationException}.\n     * </p>\n     *\n     * @param str the date string\n     * @return The date if {@code str} is a valid date string, otherwise return null.\n     * @deprecated use {@link #createValue(String, Class)}"
+        },
+        "createFile": {
+          "Javadoc": "* Returns the File represented by {@code str}.\n     *\n     * @param str the File location\n     * @return The file represented by {@code str}.\n     * @deprecated use {@link #createValue(String, Class)}"
+        },
+        "createFiles": {
+          "Javadoc": "* Creates the File[] represented by {@code str}.\n     *\n     * <p>\n     * This method is not yet implemented and always throws an {@link UnsupportedOperationException}.\n     * </p>\n     *\n     * @param str the paths to the files\n     * @return The File[] represented by {@code str}.\n     * @throws     UnsupportedOperationException always\n     * @deprecated with no replacement"
+        },
+        "createNumber": {
+          "Javadoc": "* Creates a number from a String. If a '.' is present, it creates a Double, otherwise a Long.\n     *\n     * @param str the value\n     * @return the number represented by {@code str}\n     * @throws ParseException if {@code str} is not a number"
+        },
+        "createObject": {
+          "Javadoc": "* Creates an Object from the class name and empty constructor.\n     *\n     * @param className the argument value\n     * @return the initialized object\n     * @throws ParseException if the class could not be found or the object could not be created\n     * @deprecated use {@link #createValue(String, Class)}"
+        },
+        "createURL": {
+          "Javadoc": "* Creates the URL represented by {@code str}.\n     *\n     * @param str the URL string\n     * @return The URL in {@code str} is well-formed\n     * @throws ParseException if the URL in {@code str} is not well-formed\n     * @deprecated use {@link #createValue(String, Class)}"
+        },
+        "createValue": {
+          "Javadoc": "* Creates the {@code Object} of type {@code obj} with the value of {@code str}.\n     *\n     * @param str the command line value\n     * @param obj the type of argument\n     * @return The instance of {@code obj} initialized with the value of {@code str}.\n     * @throws ParseException if the value creation for the given object type failed\n     * @deprecated use {@link #createValue(String, Class)}"
+        },
+        "getConverter": {
+          "Javadoc": "* Gets the converter for the the Class. Never null.\n     *\n     * @param clazz The Class to get the Converter for.\n     * @return the registered converter if any, {@link Converter#DEFAULT} otherwise.\n     * @since 1.7.0"
+        },
+        "noConverters": {
+          "Javadoc": "* Unregisters all Converters.\n     *\n     * @since 1.7.0"
+        },
+        "openFile": {
+          "Javadoc": "* Returns the opened FileInputStream represented by {@code str}.\n     *\n     * @param str the file location\n     * @return The file input stream represented by {@code str}.\n     * @throws ParseException if the file is not exist or not readable\n     * @deprecated use {@link #createValue(String, Class)}"
+        },
+        "register": {
+          "Javadoc": "* Registers a Converter for a Class. If @code converter} is null registration is cleared for {@code clazz}, and\n     * no converter will be used in processing.\n     *\n     * @param clazz the Class to register the Converter and Verifier to.\n     * @param converter The Converter to associate with Class.  May be null.\n     * @since 1.7.0"
+        },
+        "resetConverters": {
+          "Javadoc": "* Resets the registered Converters to the default state.\n     *\n     * @since 1.7.0"
+        }
+      }
+    },
+    "org.apache.commons.cli.UnrecognizedOptionException": {
+      "Javadoc": "\n * Thrown during parsing signaling an unrecognized option.\n ",
+      "methods": {
+        "getOption": {
+          "Javadoc": "* Gets the unrecognized option.\n     *\n     * @return the related option\n     * @since 1.2"
+        }
+      }
+    },
+    "org.apache.commons.cli.Util": {
+      "Javadoc": "\n * Contains useful helper methods for classes within this package.\n ",
+      "methods": {
+        "isEmpty": {
+          "Javadoc": "* Tests whether the given string is null or empty.\n     *\n     * @param str The string to test.\n     * @return Whether the given string is null or empty."
+        },
+        "stripLeadingAndTrailingQuotes": {
+          "Javadoc": "* Removes the leading and trailing quotes from {@code str}. E.g. if str is '\"one two\"', then 'one two' is returned.\n     *\n     * @param str The string from which the leading and trailing quotes should be removed.\n     * @return The string without the leading and trailing quotes."
+        },
+        "stripLeadingHyphens": {
+          "Javadoc": "* Removes the hyphens from the beginning of {@code str} and return the new String.\n     *\n     * @param str The string from which the hyphens should be removed.\n     * @return the new String."
+        }
+      }
+    },
+    "org.apache.commons.cli.AbstractParserTestCase": {
+      "Javadoc": "\n * Abstract test case testing common parser features.\n "
+    },
+    "org.apache.commons.cli.ApplicationTest": {
+      "Javadoc": "\n * This is a collection of tests that test real world applications command lines.\n *\n * <p>\n * The following applications are tested:\n * <ul>\n * <li>ls</li>\n * <li>Ant</li>\n * <li>Groovy</li>\n * <li>man</li>\n * </ul>\n * </p>\n ",
+      "methods": {
+        "testAnt": {
+          "Javadoc": "* Ant test"
+        },
+        "testMan": {
+          "Javadoc": "* author Slawek Zachcial"
+        },
+        "testNLT": {
+          "Javadoc": "* Real world test with long and short options."
+        }
+      }
+    },
+    "org.apache.commons.cli.ArgumentIsOptionTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.BasicParserTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.bug.BugCLI133Test": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.bug.BugCLI13Test": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.bug.BugCLI148Test": {
+      "Javadoc": "\n * https://issues.apache.org/jira/browse/CLI-148\n "
+    },
+    "org.apache.commons.cli.bug.BugCLI162Test": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.bug.BugCLI18Test": {
+      "Javadoc": "\n * https://issues.apache.org/jira/browse/CLI-18\n "
+    },
+    "org.apache.commons.cli.bug.BugCLI252Test": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.bug.BugCLI265Test": {
+      "Javadoc": "\n * Test for CLI-265.\n * <p>\n * The issue is that a short option with an optional value will use whatever comes next as value.\n "
+    },
+    "org.apache.commons.cli.bug.BugCLI266Test": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.bug.BugCLI312Test": {
+      "Javadoc": "\n * Demonstrates inconsistencies in parsing Java property-style options.\n "
+    },
+    "org.apache.commons.cli.bug.BugCLI325Test": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.bug.BugCLI71Test": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.bug.BugsTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.CommandLineTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.ConverterTests": {
+      "Javadoc": "\n * Tests for standard Converters.\n "
+    },
+    "org.apache.commons.cli.AClassWithoutADefaultConstructor": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.DefaultParserTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.DisablePartialMatchingTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.GnuParserTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.HelpFormatterTest": {
+      "Javadoc": "\n * Test case for the HelpFormatter class.\n "
+    },
+    "org.apache.commons.cli.OptionBuilderTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.OptionGroupTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.OptionsTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.OptionTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.DefaultOption": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.TestOption": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.OptionValidatorTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.PatternOptionBuilderTest": {
+      "Javadoc": "\n * Test case for the PatternOptionBuilder class.\n "
+    },
+    "org.apache.commons.cli.PosixParserTest": {
+      "Javadoc": "\n * Test case for the PosixParser.\n "
+    },
+    "org.apache.commons.cli.TypeHandlerTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.Instantiable": {
+      "Javadoc": " Used for Class and Object creation tests. "
+    },
+    "org.apache.commons.cli.NotInstantiable": {
+      "Javadoc": " Used for Class and Object negative creation tests "
+    },
+    "org.apache.commons.cli.UtilTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.ValuesTest": {
+      "Javadoc": ""
+    },
+    "org.apache.commons.cli.ValueTest": {
+      "Javadoc": ""
+    }
+  }
+}

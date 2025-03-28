@@ -1,0 +1,656 @@
+{
+  "dataset": "ruler",
+  "classes": {
+    "software.amazon.event.ruler.ACFinder": {
+      "Javadoc": "\n * Matches rules to events as does Finder, but in an array-consistent fashion, thus the AC prefix on the class name.\n ",
+      "methods": {
+        "matchRules": {
+          "Javadoc": "* Return any rules that match the fields in the event, but enforce array consistency, i.e. reject\n     *  matches where different matches come from the different elements in the same array in the event.\n     *\n     * @param event the Event structure containing the flattened event information\n     * @param machine the compiled state machine\n     * @return list of rule names that match. The list may be empty but never null."
+        }
+      }
+    },
+    "software.amazon.event.ruler.ACStep": {
+      "Javadoc": "\n * Represents a suggestion of a state/token combo from which there might be a transition, in an array-consistent fashion.\n "
+    },
+    "software.amazon.event.ruler.ACTask": {
+      "Javadoc": "\n * Represents the state of an Array-Consistent rule-finding project.\n "
+    },
+    "software.amazon.event.ruler.AnythingBut": {
+      "Javadoc": "\n * Represents denylist like rule: any value matches if it's *not* in the anything-but list.\n * It supports lists whose members must be all strings or all numbers.\n * Numbers are treated as strings created with ComparableNumber.generate.\n "
+    },
+    "software.amazon.event.ruler.AnythingButEqualsIgnoreCase": {
+      "Javadoc": "\n * Represents denylist like rule: any value matches if it's *not* in the anything-but/ignore-case list.\n * It supports lists whose members must be all strings.\n * Matching is case-insensitive\n "
+    },
+    "software.amazon.event.ruler.ArrayMembership": {
+      "Javadoc": "\n * Represents which JSON arrays within an Event structure a particular field appears within, and at which position.\n *  The arrays are identified using integers.\n ",
+      "methods": {
+        "checkArrayConsistency": {
+          "Javadoc": "* We are stepping through the NameState machine field by field, and have built up data on the array memberships\n     *  observed so far in this map. We need to compare this to the array-membership data of the field we're looking at\n     *  and see if they are consistent.  Either or both memberships might be empty, which simplifies things.\n     * Method returns null if the new field's membership is inconsistent with so-far membership.  If it is compatible,\n     *  returns the possibly-revised array membership of the matching task.\n     *\n     * @param fieldMembership Array membership of the field under consideration\n     * @param membershipSoFar Array membership observed so far in a rule-matching task\n     * @return null or the new matching-task membership so far"
+        }
+      }
+    },
+    "software.amazon.event.ruler.ByteMachine": {
+      "Javadoc": "\n * Represents a UTF8-byte-level state machine that matches a Ruler state machine's field values.\n * Each state is a map keyed by utf8 byte. getTransition(byte) yields a Target, which can contain either or\n *  both of the next ByteState, and the first of a chain of Matches, which indicate a match to some pattern.\n ",
+      "methods": {
+        "deleteMatchStepForWildcard": {
+          "Javadoc": "* Performs delete match step handling for certain wildcard cases.\n     *\n     * @param byteState The current ByteState.\n     * @param charIndex The index of the current character in characters.\n     * @param pattern The pattern we are deleting.\n     * @param characters The array of InputCharacters corresponding to the pattern's value.\n     * @param transition One of the transitions from byteState using the current byte.\n     * @param nextByteState The next ByteState led to by transition.\n     * @return Transition, or a replacement for transition if the original instance no longer exists in the machine."
+        },
+        "attemptAddShortcutTransitionMatch": {
+          "Javadoc": "* Evaluates if a provided transition is a shortcut transition with a match having a given match type and value. If\n     * so, adds match to transitionTo Set. Used to short-circuit traversal.\n     *\n     * Note: The adjustment mode can ensure the shortcut transition (if exists) is always at the tail of path. Refer to\n     * addEndOfMatch() function for details.\n     *\n     * @param transition Transition to evaluate.\n     * @param value Value desired in match's pattern.\n     * @param expectedMatchType Match type expected in match's pattern.\n     * @param transitionTo Set that match's next name state will be added to if desired match is found.\n     * @return True iff match was added to transitionTo Set."
+        },
+        "doMultipleTransitionsConvergeForInputByte": {
+          "Javadoc": "* Returns true if the current InputCharacter is the first InputByte of a Java character and there exists at least\n     * two transitions, one using the next InputCharacter, away from byteState leading down paths that eventually\n     * converge to a common state.\n     *\n     * @param byteState State where we look for at least two transitions that eventually converge to a common state.\n     * @param characters The array of InputCharacters.\n     * @param i The current index in the characters array.\n     * @return True if and only if multiple transitions eventually converge to a common state."
+        },
+        "getTransitionHavingNextByteState": {
+          "Javadoc": "* Gets the first transition originating from origin on character that has a next byte state of toFind.\n     *\n     * @param origin The origin transition that we will explore transitions from.\n     * @param toFind The state that we are looking for from origin's transitions.\n     * @param character The character to retrieve transitions from origin.\n     * @return Origin's first transition on character that has a next byte state of toFind, or null if not found."
+        },
+        "deleteMatches": {
+          "Javadoc": "* Deletes any matches that exist on the given pattern that are accessed from ByteTransition transition using\n     * character.\n     *\n     * @param character The character used to transition.\n     * @param transition The transition we are transitioning from to look for matches.\n     * @param pattern The pattern whose match we are attempting to delete."
+        },
+        "deleteMatch": {
+          "Javadoc": "* Deletes a match, if it exists, on the given pattern that is accessed from ByteState state using character to\n     * transition over SingleByteTransition trans.\n     *\n     * @param character The character used to transition.\n     * @param state The state we are transitioning from.\n     * @param pattern The pattern whose match we are attempting to delete.\n     * @param trans The transition to the match.\n     * @return The updated transition (may or may not be same object as trans) if the match was found. Null otherwise."
+        },
+        "addTransitionNextStateForWildcard": {
+          "Javadoc": "* Assuming a current wildcard character, a next character of byte b, a current state of A, a next state of B, and a\n     * next next state of C, this function produces the following state machine:\n     *\n     *          ____\n     *     *   | *  |\n     *  A ---> B <--\n     *\n     * When processing the next byte (b) of the current rule, which transitions to the next next state of C, the\n     * addTransitionNextState function will be invoked to transform the state machine to:\n     *\n     *           ____                         ____\n     *      *   | *  |                  *    | *  |\n     *   A ---> B <--               A -----> B <--\n     *        b |         =====>    | b    b |\n     *      C <--                    --> C <--\n     *\n     * A more naive implementation would skip B altogether, like:\n     *\n     *   ____\n     *  | * |  b\n     *  --> A ---> C\n     *\n     * But the naive implementation does not work in the case of multiple rules in one machine. Since the current state,\n     * A, may already have transitions for other rules, adding a self-referential * transition to A can lead to\n     * unintended matches using those existing rules. We must create a new state (B) that the wildcard byte transitions\n     * to so that we do not affect existing rules in the machine.\n     *\n     * @param state The current state.\n     * @param nextState The next state."
+        },
+        "putTransitionMatch": {
+          "Javadoc": "* Returns the cloned transition with the match set."
+        }
+      }
+    },
+    "software.amazon.event.ruler.EmptyByteTransition": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.ByteMap": {
+      "Javadoc": "\n * Maps byte values to ByteTransitions. Designed to perform well given the constraints that most ByteStates will have a\n * very small number of transitions, and that for support of wildcards and regexes, we need to efficiently represent the\n * condition where wide ranges of byte values (including *all* of them) will transition to a common next ByteState.\n ",
+      "methods": {
+        "updateTransition": {
+          "Javadoc": "*  Updates one ceiling=>transition mapping and leaves the map in a consistent state.\n     *  It's a two-step process. First of all, we go through the map and find the entry that contains the byte value.\n     *  Then we figure out whether the new byte value is at the bottom and/or the top of the entry (can be both if it's\n     *  a singleton mapping). If it's not at the bottom, we write a new entry representing the part of the entry less\n     *  than the byte value. Then we write a new entry for the byte value. Then if not at the top we write a new entry\n     *  representing the proportion greater than the byte value. Then we merge entries mapping to the same transition.\n     *  One effect is that you can remove the transition at position X by putting (X, null). An earlier implementation\n     *  expanded the map to a ByteMapExtent[256] array of singletons, did the update, then contracted it, but that drove\n     *  the compute/memory cost up so much that addRule and deleteRule were showing up in the profiler. Another earlier\n     *  implementation tried to do the merging at the same time as the entry wrangling and dissolved into an\n     *  incomprehensible pile of special-case code."
+        },
+        "mergeAdjacentInMapIfNeeded": {
+          "Javadoc": "* Merge adjacent entries with equal transitions in inputMap.\n     *\n     * @param inputMap The map on which we merge adjacent entries with equal transitions."
+        },
+        "getTransitionForAllBytes": {
+          "Javadoc": "* Get the transition that all bytes lead to. Could be compound if all bytes lead to more than one transition, or\n     * could be the empty transition if there are no transitions that all bytes lead to.\n     *\n     * @return The transition that all bytes lead to."
+        },
+        "getTransitions": {
+          "Javadoc": "* Get all transitions contained in this map, whether they are single or compound transitions.\n     *\n     * @return All transitions contained in this map."
+        },
+        "getCeilings": {
+          "Javadoc": "* Get the ceiling values contained in this map.\n     *\n     * @return Ceiling values."
+        },
+        "getSingleByteTransitions": {
+          "Javadoc": "* Get all transitions contained in this map, with the compound transitions expanded to singular form.\n     *\n     * @return All transitions contained in this map, with the compound transitions expanded to singular form."
+        }
+      }
+    },
+    "software.amazon.event.ruler.ByteMatch": {
+      "Javadoc": "\n * Represents a place in a ByteMachine where we have to do something in addition to just transitioning to another step.\n "
+    },
+    "software.amazon.event.ruler.ByteState": {
+      "Javadoc": "\n * Represents a state in a state machine and maps utf-8 bytes to transitions. One byte can have many transitions,\n * meaning this is an NFA state as opposed to a DFA state.\n ",
+      "methods": {
+        "hasNoTransitions": {
+          "Javadoc": "* Returns {@code true} if this state contains no transitions.\n     *\n     * @return {@code true} if this state contains no transitions"
+        },
+        "getTransition": {
+          "Javadoc": "* Returns the transition to which the given byte value is mapped, or {@code null} if this state contains no\n     * transitions for the given byte value.\n     *\n     * @param utf8byte the byte value whose associated transition is to be returned\n     * @return the transition to which the given byte value is mapped, or {@code null} if this state contains no\n     * transitions for the given byte value"
+        },
+        "putTransition": {
+          "Javadoc": "* Associates the given transition with the given byte value in this state. If the state previously contained any\n     * transitions for the byte value, the old transitions are replaced by the given transition.\n     *\n     * @param utf8byte   the byte value with which the given transition is to be associated\n     * @param transition the transition to be associated with the given byte value"
+        },
+        "putTransitionForAllBytes": {
+          "Javadoc": "* Associates the given transition with all possible byte values in this state. If the state previously contained\n     * any transitions for any of the byte values, the old transitions are replaced by the given transition.\n     *\n     * @param transition the transition to be associated with the given byte value"
+        },
+        "addTransition": {
+          "Javadoc": "* Associates the given transition with the given byte value in this state. If the state previously contained any\n     * transitions for the byte value, the given transition is added to these old transitions.\n     *\n     * @param utf8byte   the byte value with which the given transition is to be associated\n     * @param transition the transition to be associated with the given byte value"
+        },
+        "addTransitionForAllBytes": {
+          "Javadoc": "* Associates the given transition with all possible byte values in this state. If the state previously contained\n     * any transitions for any of the byte values, the given transition is added to these old transitions.\n     *\n     * @param transition the transition to be associated with all possible byte values"
+        },
+        "removeTransition": {
+          "Javadoc": "* Removes all transitions for the given byte value from this state.\n     *\n     * @param utf8byte the byte value whose transitions are to be removed from the state"
+        },
+        "removeTransitionForAllBytes": {
+          "Javadoc": "* Removes the given transition for all possible byte values from this state.\n     *\n     * @param transition the transition to be removed for all possible byte values"
+        },
+        "hasOnlySelfReferentialTransition": {
+          "Javadoc": "* Return true if this state has a self-referential transition and no others.\n     *\n     * @return True if this state has a self-referential transition and no others, false otherwise."
+        },
+        "getCeilings": {
+          "Javadoc": "* Gets all the ceiling values contained in the ByteMap.\n     *\n     * @return All the ceiling values contained in the ByteMap."
+        }
+      }
+    },
+    "software.amazon.event.ruler.ByteTransition": {
+      "Javadoc": "\n * Represents a transition (on a particular byte value) from a state to a state.\n ",
+      "methods": {
+        "getNextByteState": {
+          "Javadoc": "* Returns the state to transfer to.\n     *\n     * @return the state to transfer to, or {@code null} if this transition does not transfer to a state"
+        },
+        "setNextByteState": {
+          "Javadoc": "* Sets the next state. The method returns this or a new transition that contains the given next state if the\n     * next state is not {@code null}. Otherwise, the method returns {@code null} or a new transition that does not\n     * support transfer.\n     *\n     * @param nextState the next state\n     * @return this or a new transition that contains the given next state if the next state is not {@code null};\n     * otherwise, the method returns {@code null} or a new transition that does not support transfer"
+        },
+        "getTransition": {
+          "Javadoc": "* Get a subsequent transition from this transition for the given UTF-8 byte.\n     *\n     * @param utf8byte The byte to transition on\n     * @return The next transition given the byte, or {@code null} if there is not a next transition"
+        },
+        "getTransitions": {
+          "Javadoc": "* Get all the unique transitions (single or compound) reachable from this transition by any UTF-8 byte value.\n     *\n     * @return Set of all transitions reachable from this transition."
+        },
+        "getMatches": {
+          "Javadoc": "* Returns matches that are triggered if this transition is made. This is a convenience function that traverses the\n     * linked list of matches and returns all of them in a Set.\n     *\n     * @return matches that are triggered if this transition is made."
+        },
+        "getShortcuts": {
+          "Javadoc": "* Returns all shortcuts that are available if this transition is made.\n     *\n     * @return all shortcuts"
+        },
+        "expand": {
+          "Javadoc": "* Get all transitions represented by this transition (can be more than one if this is a compound transition).\n     *\n     * @return A set of all transitions represented by this transition."
+        },
+        "getTransitionForNextByteStates": {
+          "Javadoc": "* Get a transition that represents all of the next byte states for this transition.\n     *\n     * @return A transition that represents all of the next byte states for this transition."
+        },
+        "isShortcutTrans": {
+          "Javadoc": "* Tell if current transition is a shortcut transition or not.\n     *\n     * @return True if and only if this is a shortcut transition."
+        },
+        "isMatchTrans": {
+          "Javadoc": "* Tell if current transition is a match transition or not. Does not include shortcut transitions. Only includes\n     * transitions that are matches after processing the entire pattern value.\n     *\n     * @return True if and only if there is a match on this transition."
+        },
+        "isEmpty": {
+          "Javadoc": "* Tell if current transition is empty which means doesn't has match nor next state.\n     * @return boolean"
+        },
+        "hasIndeterminatePrefix": {
+          "Javadoc": "* Indicates if it is possible to traverse from the machine's start state to this transition using more than one\n     * possible prefix/character-sequence.\n     *\n     * @return True if prefix is indeterminate; false otherwise."
+        }
+      }
+    },
+    "software.amazon.event.ruler.CIDR": {
+      "Javadoc": "\n * Supports matching on IPv4 and IPv6 CIDR patterns, as compressed into a string range match.\n ",
+      "methods": {
+        "ipToString": {
+          "Javadoc": "* Converts an IP address literal (v4 or v6) into a hexadecimal string.\n     *  Throws an IllegalArgumentException if the alleged ip is not a valid IP address literal.\n     * @param ip String alleged to be an IPv4 or IPv6 address literal.\n     * @return Hexadecimal form of the address, 4 or 16 bytes."
+        },
+        "ipToStringIfPossible": {
+          "Javadoc": "* Converts a string to an IP address literal if this is possible.  If not\n     *  possible, returns the original string.\n     * @param ip String that might be an IP address literal\n     * @return Hexadecimal form of the input if it was an IP address literal."
+        },
+        "ipToRangeIfPossible": {
+          "Javadoc": "* Converts a string to an IP address literal to isCIDR format Range if this is possible.\n     * If not possible, returns null.\n     * @param ip String that might be an IP address literal\n     * @return Range with isCIDR as true"
+        }
+      }
+    },
+    "software.amazon.event.ruler.ComparableNumber": {
+      "Javadoc": "\n * Represents a number, turned into a comparable string\n *  Numbers are allowed in the range -50**9 .. +50**9, inclusive\n *  Comparisons are precise to 6 digits to the right of the decimal point\n *  They are all treated as floating point\n *  They are turned into strings by:\n *  1. Add 10**9 (so no negatives), then multiply by 10**6 to remove the decimal point\n *  2. Format to a 14 char string left padded with 0 because hex string converted from 5e9*1e6=10e15 has 14 characters.\n *  Note: We use Hex because of a) it can save 3 bytes memory per number than decimal b) it aligned IP address radix.\n *  If needed, we can consider to use 32 or 64 radix description to save more memory,e.g. the string length will be 10\n *  for 32 radix, and 9 for 64 radix.\n *\n *  Note:\n *  The number is parsed to be java double to support number with decimal fraction, the max range supported is from\n *  -5e9 to 5e9 with precision of 6 digits to the right of decimal point.\n *  There is well known issue that double number will lose the precision while calculation among double and other data\n *  types, the higher the number, the lower the accuracy that can be maintained.\n *  For example: 0.30d - 0.10d = 0.19999999999999998 instead of 0.2d, and if extend to 1e10, the test result shows only\n *  5 digits of precision from right of decimal point can be guaranteed with existing implementation.\n *  The current max number 5e9 is selected with a balance between keeping the committed 6 digits of precision from right\n *  of decimal point and the memory cost (each number is parsed into a 14 characters HEX string).\n *\n *  CAVEAT:\n *  When there is need to further enlarging the max number, PLEASE BE VERY CAREFUL TO RESERVE THE NUMBER PRECISION AND\n *  TAKEN THE MEMORY COST INTO CONSIDERATION, BigDecimal shall be used to ensure the precision of double calculation ...\n ",
+      "methods": {
+        "byteToHexChars": {
+          "Javadoc": "* converts a single byte to its two hexadecimal character representation\n     * @param value the byte we want to convert to hex string\n     * @return a 2 digit char array with the equivalent hex representation"
+        }
+      }
+    },
+    "software.amazon.event.ruler.CompositeByteTransition": {
+      "Javadoc": "\n * Represents a composite transition that has a next state and a match.\n "
+    },
+    "software.amazon.event.ruler.CompoundByteTransition": {
+      "Javadoc": "\n * An implementation of ByteTransition that represents having taken multiple ByteTransitions simultaneously. This is\n * useful for traversing an NFA, i.e. when a single byte could lead you down multiple different transitions.\n ",
+      "methods": {
+        "getNextByteState": {
+          "Javadoc": "* Returns the nextByteState from all byteTransitions with a preference to states that have determinate prefixes.\n     * These states are re-usable when adding rules to the machine.\n     *\n     * @return First byte state with a preference to re-usable states."
+        },
+        "expand": {
+          "Javadoc": "* Get all transitions represented by this compound transition.\n     *\n     * @return A set of all transitions represented by this transition."
+        },
+        "getMatches": {
+          "Javadoc": "* Get the matches given all of the transitions that have been simultaneously traversed. Excludes matches from\n     * shortcut transitions as these are not actual matches based on the characters seen so far during the current\n     * traversal.\n     *\n     * @return All matches from all of the simultaneously traversed transitions."
+        },
+        "getTransition": {
+          "Javadoc": "* Get the next transition for a UTF-8 byte given all of the transitions that have been simultaneously traversed.\n     *\n     * @param utf8byte The byte to transition on\n     * @return Null if there are no transitions, the actual transition if 1, or a CompoundByteTransition if 2+"
+        }
+      }
+    },
+    "software.amazon.event.ruler.Constants": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.Event": {
+      "Javadoc": "",
+      "methods": {
+        "flatten": {
+          "Javadoc": "* Flattens a parsed json for matching rules in the state machine.\n     * @param eventRoot root node for the parsed json\n     * @return flattened json event"
+        }
+      }
+    },
+    "software.amazon.event.ruler.Progress": {
+      "Javadoc": "\n     * represents the current state of an Event-constructor project\n     "
+    },
+    "software.amazon.event.ruler.Value": {
+      "Javadoc": "\n     * represents a field value during Event construction\n     "
+    },
+    "software.amazon.event.ruler.Field": {
+      "Javadoc": "\n * Represents the name and value of a data field in an event that Ruler will match.\n *\n * Both name and value are represented as strings.  Also provided for each field is information about its position\n *  in any arrays the event may contain. This is used to guard against a rule matching a set of fields which are in\n *  peer elements of an array, a situation which it turns out is perceived by users as a bug.\n "
+    },
+    "software.amazon.event.ruler.Finder": {
+      "Javadoc": "\n *  Uses a state machine created by software.amazon.event.ruler.Machine to process tokens\n *   representing key-value pairs in an event, and return any matching Rules.\n ",
+      "methods": {
+        "rulesForEvent": {
+          "Javadoc": "* Return any rules that match the fields in the event.\n     *\n     * @param event the fields are those from the JSON expression of the event, sorted by key.\n     * @param machine the compiled state machine\n     * @return list of rule names that match. The list may be empty but never null."
+        }
+      }
+    },
+    "software.amazon.event.ruler.GenericMachine": {
+      "Javadoc": "\n *  Represents a state machine used to match name/value patterns to rules.\n *  The machine is thread safe. The concurrency strategy is:\n *  Multi-thread access assumed, single-thread update enforced by synchronized on\n *  addRule/deleteRule.\n *  ConcurrentHashMap and ConcurrentSkipListSet are used so that writer and readers can be in tables\n *  simultaneously. So all changes the writer made could be synced to and viable by all readers (in other threads).\n *  Though it may  generate a half-built rule to rulesForEvent() e.g. when a long rule is adding and\n *  in the middle of adding, some event is coming to query machine, it won't generate side impact with rulesForEvent\n *  because each step of routing will check next State and transition map before moving forward.\n *\n *  T is a type representing a Rule name, it should be an immutable class.\n ",
+      "methods": {
+        "rulesForJSONEvent": {
+          "Javadoc": "* Return any rules that match the fields in the event in a way that is Array-Consistent (thus trailing \"AC\" on\n     *  names of implementing classes). Array-Consistent means that we reject matches where fields which are members\n     *  of different elements of the same JSON array in the event are matched.\n     * @param jsonEvent The JSON representation of the event\n     * @return list of rule names that match. The list may be empty but never null."
+        },
+        "rulesForEvent": {
+          "Javadoc": "* Return any rules that match the fields in the event.\n     *\n     * @param event the fields are those from the JSON expression of the event, sorted by key.\n     * @return list of rule names that match. The list may be empty but never null."
+        },
+        "getStartState": {
+          "Javadoc": "* The root state for the machine\n     *\n     * @return the root state, null if the machine has no rules in it"
+        },
+        "isFieldStepUsed": {
+          "Javadoc": "* Check to see whether a field step name is actually used in any rule.\n     *\n     * @param stepName the field step name to check\n     * @return true if the field is used in any rule, false otherwise"
+        },
+        "addRule": {
+          "Javadoc": "* Add a rule to the machine.  A rule is a set of names, each of which\n     * is associated with one or more values.\n     *\n     * @param name ARN of the rule\n     * @param json the JSON form of the rule"
+        },
+        "addPatternRule": {
+          "Javadoc": "* Add a rule to the machine. A rule is a set of names, each of which\n     * is associated with one or more value-patterns. These can be simple values (like \"1\", \"a\", \"true\")\n     * or more sophisticated (like {anything-but : \"1\", range: { ... } })\n     *\n     * @param name ARN of the rule4\n     * @param namevals names and values which make up the rule"
+        },
+        "deletePatternRule": {
+          "Javadoc": "* Delete rule from the machine.  The rule is a set of name/values.\n     * \"synchronized\" here is to ensure that only one thread is updating the machine at any point in time.\n     * This method relies on the caller not changing the arguments while it is exiting - but once it has completed,\n     *  this library has no dependence on those structures.\n     * As with addRule, multiple name/val patterns attached to a rule name may be removed all at once or\n     *  one by one.\n     * Machine will only remove a rule which both matches the name/vals and the provided rule name:\n     *  - if name/vals provided have not reached any rules, return;\n     *  - if name/vals provided have reached any rules, only rule which matched the input rule name will be removed.\n     *\n     * Note: this API will only probe rule which is able to be approached by input namevalues,\n     *  it doesn't remove all rules associated with rule name unless the input rule expression have covered all rules\n     *  associated with rule name. For example:\n     *  r1 {a, [1,2]} was added into machine, you could call deleteRule with r1 {a, [1]}, machine in this case will\n     *  delete r1 {a, [1]} only, so event like a=1 will not match r1 any more.\n     *  if caller calls deleteRule again with input r1 {a, [2]}, machine will remove another rule of r1.\n     *  The eventual result will be same as one time deleteRule call with r1 {a, [1,2]}.\n     *  So, caller is expected to save its rule expression if want to entirely remove the rule unless deliberately\n     *  want to remove partial rule from rule name.\n     *\n     * @param name ARN of the rule\n     * @param namevals names & values which make up the rule"
+        },
+        "deleteRule": {
+          "Javadoc": "* Delete a rule to the machine.  A rule is a set of names, each of which\n     * is associated with one or more values.\n     *\n     * @param name ARN of the rule\n     * @param json the JSON form of the rule"
+        },
+        "approximateObjectCount": {
+          "Javadoc": "* Gives roughly the number of objects within the machine. This is useful to identify large rule-machines\n     * that potentially require loads of memory. The method performs all of its calculation at runtime to avoid\n     * taking up memory and making the impact of large rule-machines worse. When calculating this value; we\n     * consider any transitions, states, byte-machines, and rules. There's are also a checks to ensure we're\n     * not stuck in endless loops (that's possible for wildcard matches) or taking a long time for numeric range\n     * matchers.\n     *\n     * NOTEs:\n     * 1. As this method is dependent on number of internal objects, as ruler evolves this will also\n     * give different results.\n     * 2. It will also give you different results based on the order in which you add or remove rules as in\n     * some-cases Ruler takes short-cuts for exact matches (see ShortcutTransition for more details).\n     * 3. This method isn't thread safe, and so is prefixed with approximate."
+        }
+      }
+    },
+    "software.amazon.event.ruler.input.ByteParser": {
+      "Javadoc": "\n * Transforms UTF-8 formatted bytes into InputCharacter\n *\n * @see InputCharacter\n *\n ",
+      "methods": {
+        "parse": {
+          "Javadoc": "* @param utf8byte byte that represent in UTF-8 encoding\n   * @return processed and parsed Input Character"
+        }
+      }
+    },
+    "software.amazon.event.ruler.input.DefaultParser": {
+      "Javadoc": "\n * Parses the value for a rule into InputCharacters that are used to add the rule to the Machine. Most characters from a\n * rule's value will be treated by their byte representation, but certain characters, such as for wildcards or regexes,\n * need to be represented differently so the Machine understands their special meaning.\n "
+    },
+    "software.amazon.event.ruler.input.EqualsIgnoreCaseParser": {
+      "Javadoc": "\n * A parser to be used specifically for equals-ignore-case rules.\n *\n * Note that there are actually characters whose upper-case/lower-case UTF-8 representations differ in number of bytes.\n * One example where length differs by 1: ⱥ, Ⱥ\n * One example where length differs by 4: ΰ, Ϋ́\n * To deal with differing byte lengths per Java character, we will parse each Java character into an InputMultiByteSet.\n "
+    },
+    "software.amazon.event.ruler.input.InputByte": {
+      "Javadoc": "\n * An InputCharacter that represents a single byte.\n "
+    },
+    "software.amazon.event.ruler.input.InputCharacter": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.InputMultiByteSet": {
+      "Javadoc": "\n * An InputCharacter that represents a set of MultiBytes.\n "
+    },
+    "software.amazon.event.ruler.input.InputWildcard": {
+      "Javadoc": "\n * An InputCharacter that represents a wildcard.\n "
+    },
+    "software.amazon.event.ruler.input.MatchTypeParser": {
+      "Javadoc": "",
+      "methods": {
+        "parse": {
+          "Javadoc": "* @param type Match type\n   * @param value string value to parse\n   * @return processed and parsed Input Character"
+        }
+      }
+    },
+    "software.amazon.event.ruler.input.MultiByte": {
+      "Javadoc": "\n * A grouping of multiple bytes. This can be used to represent a character that has a UTF-8 representation requiring\n * multiple bytes.\n "
+    },
+    "software.amazon.event.ruler.input.ParseException": {
+      "Javadoc": "\n * A RuntimeException that indicates an error parsing a rule's value.\n "
+    },
+    "software.amazon.event.ruler.input.StringValueParser": {
+      "Javadoc": "",
+      "methods": {
+        "parse": {
+          "Javadoc": "* @param value string value to parse\n   * @return processed and parsed Input Character"
+        }
+      }
+    },
+    "software.amazon.event.ruler.input.SuffixParser": {
+      "Javadoc": "\n * A parser to be used specifically for suffix rules.\n *\n * This undoes the `reverse()` from {@code software.amazon.event.ruler.Patterns} intentionally\n * to ensure we can correctly reverse utf-8 characters with 2+ bytes like '大' and '雨'.\n "
+    },
+    "software.amazon.event.ruler.input.WildcardParser": {
+      "Javadoc": "\n * A parser to be used specifically for wildcard rules.\n "
+    },
+    "software.amazon.event.ruler.IntIntMap": {
+      "Javadoc": "\n * A fast primitive int-int map implementation. Keys and values may only be positive.\n ",
+      "methods": {
+        "get": {
+          "Javadoc": "* Gets the value for {@code key}.\n     *\n     * @param key\n     *            the non-negative key\n     * @return the value present at {@code key}, or {@link #NO_VALUE} if none is present."
+        },
+        "put": {
+          "Javadoc": "* Puts {@code value} in {@code key}. {@code key} is restricted to positive integers to avoid an\n     * unresolvable collision with {@link #EMPTY_CELL}, while {@code value} is restricted to\n     * positive integers to avoid an unresolvable collision with {@link #NO_VALUE}.\n     *\n     * @param key\n     *            the non-negative key\n     * @param value\n     *            the non-negative value\n     * @return the value that was previously set for {@code key}, or {@link #NO_VALUE} if none was\n     *         present.\n     * @throws IllegalArgumentException\n     *             if {@code key} is negative"
+        },
+        "remove": {
+          "Javadoc": "* Removes {@code key}.\n     *\n     * @param key\n     *            the non-negative key\n     * @return the removed value, or {@link #NO_VALUE} if none was present.\n     * @throws IllegalArgumentException\n     *             if {@code key} is negative"
+        },
+        "size": {
+          "Javadoc": "* Returns the number of key-value mappings in this map.\n     *\n     * @return the number of key-value mappings in this map"
+        },
+        "shiftKeys": {
+          "Javadoc": "* Shifts entries with the same hash."
+        },
+        "phiMix": {
+          "Javadoc": "* Computes hashcode for {@code val}.\n     *\n     * @param val\n     * @return the hashcode for {@code val}"
+        }
+      }
+    },
+    "software.amazon.event.ruler.Entry": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.EntryIterator": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.JsonRuleCompiler": {
+      "Javadoc": "\n * Represents a updated compiler comparing to RuleCompiler class, it parses a rule described by a JSON string into\n * a list of Map which is composed of field Patterns, each Map represents one dedicated match branch in the rule.\n * By default, fields in the rule will be interpreted as \"And\" relationship implicitly and will result into one Map with\n * fields of Patterns, but once it comes across the \"$or\" relationship which is explicitly decorated by \"$or\" primitive\n * array, for each object in \"$or\" array, this Compiler will fork a new Map to include all fields of patterns in\n * that \"or\" branch, and when it goes over all branches in \"$or\" relationship, it will end up with the list of Map\n * and each Map represents a match branch composed of fields of patterns.\n * i.e.: a rule which describe the effect of (\"source\" AND (\"metricName\" OR (\"metricType AND \"namespace\") OR \"scope\"))\n * its JSON format String is:\n *   {\n *     \"source\": [ \"aws.cloudwatch\" ],\n *     \"$or\": [\n *       { \"metricName\": [ \"CPUUtilization\", \"ReadLatency\" ] },\n *       {\n *         \"metricType\": [ \"MetricType\" ] ,\n *         \"namespace\": [ \"AWS/EC2\", \"AWS/ES\" ]\n *       },\n *       { \"scope\": [ \"Service\" ] }\n *     ]\n *   }\n * It will be parsed to a list of match branches composed by a Map of fields patterns, e.g. for above rule, there will\n * result 3 match branches:\n * [\n *   {source=[\\\"aws.cloudwatch\\\"], metricName=[\\\"CPUUtilization\\\",\\\"ReadLatency\\\"]},\n *   {namespace=[\\\"AWS/EC2\\\", \\\"AWS/ES\\\"], metricType=[\\\"MetricType\\\"], source=[\\\"aws.cloudwatch\\\"]},\n *   {source=[\\\"aws.cloudwatch\\\"], scope=[\\\"Service\\\"]}\n * ]\n ",
+      "methods": {
+        "check": {
+          "Javadoc": "* Verify the syntax of a rule\n     * @param source rule, as a String\n     * @return null if the rule is valid, otherwise an error message"
+        },
+        "compile": {
+          "Javadoc": "* Compile a rule from its JSON form to a Map suitable for use by event.ruler.Ruler (elements are surrounded by quotes).\n     *\n     * @param source rule, as a String\n     * @return List of Sub rule which represented as Map\n     * @throws IOException if the rule isn't syntactically valid"
+        },
+        "parseIntoOrRelationship": {
+          "Javadoc": "* This function is to parse the \"$or\" relationship described as an array, each object in the array will be\n     * interpreted as \"$or\" relationship, for example:\n     * {\n     *     \"detail\": {\n     *         \"$or\" : [\n     *             {\"c-count\": [ { \"numeric\": [ \">\", 0, \"<=\", 5 ] } ]},\n     *             {\"d-count\": [ { \"numeric\": [ \"<\", 10 ] } ]},\n     *             {\"x-limit\": [ { \"numeric\": [ \"=\", 3.018e2 ] } ]}\n     *         ]\n     *     }\n     * }\n     * above rule will be interpreted as or effect: (\"detail.c-count\" || \"detail.d-count\" || detail.x-limit\"),\n     * The result will be described as the list of Map, each Map represents a sub rule composed of fields of patterns in\n     * that or condition path, for example:\n     * [\n     *   {detail.c-count=[38D7EA4C68000/38D7EA512CB40:true/false]},\n     *   {detail.d-count=[0000000000000/38D7EA55F1680:false/true]},\n     *   {detail.x-limit=[VP:38D7EB6C39A40]}\n     * ]\n     * This List will be added into Ruler with the same rule name to demonstrate the \"or\" effects inside Ruler state\n     * machine."
+        }
+      }
+    },
+    "software.amazon.event.ruler.Machine": {
+      "Javadoc": "\n *  Represents a state machine used to match name/value patterns to rules.\n *  The machine is thread safe. The concurrency strategy is:\n *  Multi-thread access assumed, single-thread update enforced by synchronized on\n *  addRule/deleteRule.\n *  ConcurrentHashMap and ConcurrentSkipListSet are used so that writer and readers can be in tables\n *  simultaneously. So all changes the writer made could be synced to and viable by all readers (in other threads).\n *  Though it may  generate a half-built rule to rulesForEvent() e.g. when a long rule is adding and\n *  in the middle of adding, some event is coming to query machine, it won't generate side impact with rulesForEvent\n *  because each step of routing will check next State and transition map before moving forward.\n "
+    },
+    "software.amazon.event.ruler.MachineComplexityEvaluator": {
+      "Javadoc": "\n * Evaluates the complexity of machines.\n ",
+      "methods": {
+        "evaluate": {
+          "Javadoc": "* Returns the maximum possible number of wildcard rule prefixes that could match a theoretical input value for a\n     * machine beginning with ByteState state. This value is equivalent to the maximum number of states a traversal\n     * could be present in simultaneously, counting only states that can lead to a wildcard match pattern. This function\n     * will recursively evaluate all other machines accessible via next NameStates, and will return the maximum observed\n     * from any machine. Caps out evaluation at maxComplexity to keep runtime under control. Otherwise, runtime for this\n     * machine would be O(MN^2), where N is the number of states accessible from ByteState state, and M is the total\n     * number of ByteMachines accessible via next NameStates.\n     *\n     * @param state Evaluates a machine beginning at this state.\n     * @return The lesser of maxComplexity and the maximum possible number of wildcard rule prefixes from any machines."
+        },
+        "getMatchesAccessibleFromEachTransition": {
+          "Javadoc": "* Generates a map of SingleByteTransition to all the matches accessible from the SingleByteTransition. The map\n     * includes all SingleByteTransitions accessible from ByteState state. This function is O(N), where N is the number\n     * of states accessible from ByteState state.\n     *\n     * @param state Starting state.\n     * @return A map of SingleByteTransition to all the matches accessible from the SingleByteTransition"
+        }
+      }
+    },
+    "software.amazon.event.ruler.NameMatcher": {
+      "Javadoc": "\n * Matches the Keys in the flattened event with the { [ \"exists\" : false ] } pattern.\n * and returns the next state if the <b>key does not exist</b> in the event.\n *\n * In the future, when we support multiple patterns, the matcher will return a set of\n * name states matched instead of a single name state.\n *\n * @param <R> generic state type\n ",
+      "methods": {
+        "isEmpty": {
+          "Javadoc": "* Returns {@code true} if this name matcher contains no patterns."
+        },
+        "addPattern": {
+          "Javadoc": "* Adds the given pattern to this name matcher and associate it with the existing or new match result.\n     *\n     * @param pattern        the pattern to be added\n     * @param resultSupplier the supplier of match results\n     * @return the match result with which the added pattern is associated"
+        },
+        "deletePattern": {
+          "Javadoc": "* Removes the given pattern from this name matcher.\n     *\n     * @param pattern the pattern to be deleted"
+        },
+        "findPattern": {
+          "Javadoc": "* Looks up for the given pattern.\n     *\n     * @param pattern the pattern to be looked up for\n     * @return the match result that is associated with the given pattern if the pattern exists; otherwise {@code null}"
+        },
+        "getNextState": {
+          "Javadoc": "* Gets the next state to transition to in case the NameMatcher matches the event."
+        }
+      }
+    },
+    "software.amazon.event.ruler.NameState": {
+      "Javadoc": "\n * Represents a state in the machine.\n *\n * The \"valueTransitions\" map is keyed by field name and yields a ByteMachine\n * that is used to match values.\n *\n * The \"keyTransitions\" map is keyed by field name and yields a NameMatcher\n * that is used to match keys for [ { exists: false } ].\n "
+    },
+    "software.amazon.event.ruler.Path": {
+      "Javadoc": "",
+      "methods": {
+        "name": {
+          "Javadoc": "* return the pathname as a .-separated string.\n     * This turns out to be a performance bottleneck so it's memoized and uses StringBuilder rather than StringJoiner.\n     * @return the pathname"
+        },
+        "extendedName": {
+          "Javadoc": "* return the pathname as a segmented-string with the indicated separator\n     * @param lastStep The next step, which we want to use but not to push on to the path\n     * @return the pathname"
+        }
+      }
+    },
+    "software.amazon.event.ruler.Patterns": {
+      "Javadoc": "\n * The Patterns deal pre-processing of rules for the eventual matching against events.\n * It has subclasses for different match types (like ValuePatterns, Ranges, AnythingBut, etc).\n * This class also acts as the factory for to build patterns which is useful if you have\n * key value pairs and would like to build your rules for them directly instead of using the fancy\n * JSON query language (and its compiler). Once you build rules, you can add them via `Machine.addRule()`.\n *\n * NOTE: The subclasses have additional builders that are only needed by JSON rule compilier and are\n * left out of here intentionally for now.\n "
+    },
+    "software.amazon.event.ruler.Range": {
+      "Javadoc": "\n * Represents a range of numeric values to match against.\n * \"Numeric\" means that the character repertoire is \"digits\"; initially, either 0-9 or 0-9a-f. In the current\n *  implementation, the number of digits in the top and bottom of the range is the same.\n ",
+      "methods": {
+        "digitSequence": {
+          "Javadoc": "* This is necessitated by the fact that we do range comparisons of numbers, fixed-length strings of digits, and\n     *  in the case where the numbers represent IP addresses, they are hex digits.  So we need to be able to say\n     *  \"for all digits between '3' and 'C'\". This is for that.\n     *\n     * @param first Start one digit higher than this, for example '4'\n     * @param last Stop one digit lower than this, for example 'B'\n     * @return The digit list, for example [ '4', '5', '6', '7', '8', '9', '9', 'A' ] (with 'B' for longDigitSequence)"
+        }
+      }
+    },
+    "software.amazon.event.ruler.RuleCompiler": {
+      "Javadoc": "\n * Compiles Rules, expressed in JSON, for use in Ruler.\n * There are two flavors of compilation:\n * 1. Compile a JSON-based Rule into Map of String to List of Patterns which can be used in rulesForEvent,\n *    and has a \"check\" variant that just checks rules for syntactic accuracy\n * 2. Starting in ListBasedRuleCompiler, does the same thing but expresses field names as List ofString\n *    rather than \".\"-separated strings for use in the Ruler class, which does not use state machines and\n *    needs to step into the event field by field.\n *\n * Is public so clients can call the check() method to syntax-check filters\n ",
+      "methods": {
+        "check": {
+          "Javadoc": "* Verify the syntax of a rule\n     * @param source rule, as an InputStream\n     * @return null if the rule is valid, otherwise an error message"
+        },
+        "compile": {
+          "Javadoc": "* Compile a rule from its JSON form to a Map suitable for use by events.ruler.Ruler (elements are surrounded by quotes).\n     *\n     * @param source rule, as an InputStream\n     * @return Map form of rule\n     * @throws IOException if the rule isn't syntactically valid"
+        }
+      }
+    },
+    "software.amazon.event.ruler.ListBasedRuleCompiler": {
+      "Javadoc": "\n     * This is a rule parser which will parse rule of JSON format into a map of string list to Patterns list structure\n     * which is suitable to be used by Ruler.matches.\n     * The only difference in output between ListBasedRuleCompiler.flattenRule and Filter.compile is type and format of\n     * Map.key.\n     * For example, if input rule is below JSON string:\n     * {\n     *     \"detail\" : {\n     *         \"state\" : [ \"initializing\" ]\n     *     }\n     * }\n     * The key of output MAP by ListBasedRuleCompiler.flattenRule will be a list like: [\"detail\",\"state\"].\n     * The key of output MAP by Filter.compile will be a String: \"detail.state\".\n     ",
+      "methods": {
+        "flattenRule": {
+          "Javadoc": "* Compile a rule from its JSON form to a Map suitable for use by events.ruler.Ruler\n         *\n         * @param source rule, as a String\n         * @return Map form of rule\n         * @throws IOException if the rule isn't syntactically valid"
+        }
+      }
+    },
+    "software.amazon.event.ruler.Ruler": {
+      "Javadoc": "\n * The core idea of Ruler is to match rules to events at a rate that's independent of the number of rules.  This is\n *  achieved by compiling the rules into an automaton, at some up-front cost for compilation and memory use. There\n *  are some users who are unable to persist the compiled automaton but still like the \"Event Pattern\" idiom and want\n *  to match events with those semantics.\n * The memory cost is proportional to the product of the number of possible values provided in the rule and can\n *  grow surprisingly large\n * This class matches a single rule to a single event without any precompilation, using brute-force techniques, but\n *  with no up-front compute or memory cost.\n ",
+      "methods": {
+        "matchesRule": {
+          "Javadoc": "* Return true if an event matches the provided rule. This is a thin wrapper around\n     * rule machine and `rulesForJSONEvent` method.\n     *\n     * @param event The event, in JSON form\n     * @param rule The rule, in JSON form\n     * @return true or false depending on whether the rule matches the event"
+        },
+        "matches": {
+          "Javadoc": "* Return true if an event matches the provided rule.\n     * <p>\n     * This method is deprecated. You should use `Ruler.match` instead in all but one cases:\n     * this method will return false for ` {\"detail\" : { \"state\": { \"state\": \"running\" } } }` with\n     * `{ \"detail\" : { \"state.state\": \"running\" } }` while `Ruler.matchesRule(...)` will return true. When this gap\n     * has been addressed, we will remove this method as it doesn't handle many of the new matchers\n     * and is not able to perform array consistency checks like rest of Ruler. This method also is\n     * slower.\n     *\n     * @param event The event, in JSON form\n     * @param rule The rule, in JSON form\n     * @return true or false depending on whether the rule matches the event"
+        }
+      }
+    },
+    "software.amazon.event.ruler.ShortcutTransition": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.SingleByteTransition": {
+      "Javadoc": "\n * This class represents a singular ByteTransition. This is in contrast to a compound ByteTransition that represents\n * having taken multiple distinct transitions simultaneously (i.e. for NFA traversal).\n ",
+      "methods": {
+        "getMatch": {
+          "Javadoc": "* Returns the match that is triggered if this transition is made.\n     *\n     * @return the match, or {@code null} if this transition does not support matching"
+        },
+        "setMatch": {
+          "Javadoc": "* Sets the match. The method returns this or a new transition that contains the given match if the match is not\n     * {@code null}. Otherwise, the method returns {@code null} or a new transition that does not\n     * support matching.\n     *\n     * @param match the match\n     * @return this or a new transition that contains the given match if the match is not {@code null}; otherwise,\n     * {@code null} or a new transition that does not support matching"
+        },
+        "getTransitionForAllBytes": {
+          "Javadoc": "* Get the transition that all bytes lead to. Could be compound if all bytes lead to more than one single\n     * transition, or could be the empty transition if there are no transitions that all bytes lead to.\n     *\n     * @return The transition that all bytes lead to."
+        },
+        "expand": {
+          "Javadoc": "* Get all transitions represented by this transition, which is simply this as this is a single byte transition.\n     *\n     * @return A set of all transitions represented by this transition."
+        }
+      }
+    },
+    "software.amazon.event.ruler.SingleStateNameMatcher": {
+      "Javadoc": "\n * Implements the { [ \"exists\" : false] } pattern by performing a binary search\n * of the key in the event keys.\n "
+    },
+    "software.amazon.event.ruler.Step": {
+      "Javadoc": "\n * Represents a suggestion of a state/token combo from which there might be a transition.  The event token\n *  indexed is always the key of a key/value combination\n "
+    },
+    "software.amazon.event.ruler.Task": {
+      "Javadoc": "\n * Represents the state of a rule-finding project.\n "
+    },
+    "software.amazon.event.ruler.ValuePatterns": {
+      "Javadoc": "\n * The ValuePatterns deal with matching a single value. The single value\n * is specified with the variable pattern.\n "
+    },
+    "software.amazon.event.ruler.ACMachineTest": {
+      "Javadoc": "\n * Unit testing a state machine is hard.  Tried hand-computing a few machines\n *  but kept getting them wrong, the software was right.  So this is really\n *  more of a smoke/integration test.  But the coverage is quite good.\n ",
+      "methods": {
+        "dynamicDeleteRules": {
+          "Javadoc": "*  Incrementally build Rule R1 by different namevalues, observing new state and rules created\n     *  Decrementally delete rule R1 by pointed namevalues, observing state and rules\n     *  which is not used have been removed."
+        },
+        "testMultipleThreadReadAddRule": {
+          "Javadoc": "* Setup thread pools with 310 threads inside, among them, 300 threads are calling rulesForJSONEvent(),\n     * 10 threads are adding rule. the test is designed to add rules and match rules operation handled in parallel,\n     * observe rulesForJSONEvent whether could work well while there is new rule keeping added dynamically in parallel.\n     * Keep same event call rulesForJSONEvent() in parallel, expect to see more and more rules will be matched\n     * aligned with more and more new rules added.\n     * In this test:\n     * We created 100 rules with 100 key/val pair (each rule use one key/val), we created one \"global\" event by using\n     * those 100 key/val pairs. this event should match out all those 100 rules since they are added.\n     * So if we keep using this event query machine while adding 100 rules in parallel, we should see the output of\n     * number of matched rules by rulesForJSONEvent keep increasing from 0 to 100, then stabilize returning 100 for\n     * all of following rulesForJSONEvent()."
+        }
+      }
+    },
+    "software.amazon.event.ruler.TestEvent": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.Rule": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.AddRuleRunnable": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.MatchRuleRunnable": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.DeleteRuleRunnable": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.ArrayMembershipTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.Benchmarks": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.Benchmarker": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.BigEventTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.ByteMachineTest": {
+      "Javadoc": "",
+      "methods": {
+        "testPatternPermutations": {
+          "Javadoc": "* Adds all given patterns to the machine according to all possible permutations. For a given permutation, as each\n     * pattern is added, the machine is exercised against the given match values, and we verify that each match value\n     * generates the expected number of matches. After adding the last pattern of a permutation and verifying the\n     * matches, we delete all patterns, verifying the expected number of matches after each pattern deletion, and\n     * verifying the machine is empty after the last pattern is deleted. Deletion can be done in one of two ways. For\n     * sufficiently large numbers of permutations, we simply choose a random permutation for the deletion. However, for\n     * smaller numbers of permutations, we perform deletion according to all permutations, i.e. for each addition\n     * permutation, we exercise all deletion permutations, which is (n!)^2 where n is the number of patterns.\n     *\n     * Any match specified by one PatternMatch will be evaluated against all patterns. So if you specify that one\n     * pattern has matched a certain value, you need to specify that same value for all other patterns that match it as\n     * well. Provide values that will not match any patterns in the noMatches array and this function will verify that\n     * they are never matched. If you provide a value in the noMatches array that is present in one of the PatternMatch\n     * objects, it will have no effect; i.e. the value will still be expected to match the pattern.\n     *\n     * @param noMatches Array of values that do not match any of the given patterns.\n     * @param patternMatches Array where each element contains a pattern and values that will match the pattern."
+        }
+      }
+    },
+    "software.amazon.event.ruler.Matches": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.Match": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.PatternMatch": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.ByteMapTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.ByteMatchTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.ByteStateTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.CIDRTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.ComparableNumberTest": {
+      "Javadoc": "",
+      "methods": {
+        "epocTimestampRangeTest": {
+          "Javadoc": "* refer to https://www.epochconverter.com/ for eligible timestamp\n     * data1:\n     * Epoch timestamp: 1628958408\n     * Date and time (GMT): Saturday, August 14, 2021 4:26:48 PM\n     * data2:\n     * Epoch timestamp: 1629044808\n     * Date and time (GMT): Sunday, August 15, 2021 4:26:48 PM"
+        }
+      }
+    },
+    "software.amazon.event.ruler.CompositeByteTransitionTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.CompoundByteTransitionTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.EventTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.GenericMachineTest": {
+      "Javadoc": "\n * Unit testing a state GenericMachine is hard.  Tried hand-computing a few GenericMachines\n *  but kept getting them wrong, the software was right.  So this is really\n *  more of a smoke/integration test.  But the coverage is quite good.\n "
+    },
+    "software.amazon.event.ruler.SimpleFilter": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.EqualsIgnoreCaseParserTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.InputByteTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.InputMultiByteSetTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.InputWildcardTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.MultiByteTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.ParseExceptionTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.ParserTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.SuffixParserTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.input.WildcardParserTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.IntIntMapTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.JsonRuleCompilerTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.MachineComplexityEvaluatorTest": {
+      "Javadoc": "\n * For each test, for illustrative purposes, I will provide one input string that results in the maximum number of\n * matching wildcard rule prefixes. Note there may be other input strings that achieve the same number of matching\n * wildcard rule prefixes. However, there are no input strings that result in a higher number of wildcard rule prefixes\n * (try to find one if you'd like).\n ",
+      "methods": {
+        "testEvaluateQuaminaExploder": {
+          "Javadoc": "* I'm not going to try to determine the maximum complexity input string. This is here just to demonstrate that this\n     * set of rules, which has proven problematic for Quamina in the past, is handled ok by Ruler."
+        },
+        "testEvaluateBeyondMaxComplexity": {
+          "Javadoc": "* This test verifies that complexity evaluation caps out at 100. This test also indirectly verifies, by having\n     * reasonable runtime, that a full traversal for the worst-case input is not performed. Otherwise, we'd be looking\n     * at runtime of O(n^2) where n=140,000."
+        }
+      }
+    },
+    "software.amazon.event.ruler.MachineTest": {
+      "Javadoc": "\n * Unit testing a state machine is hard.  Tried hand-computing a few machines\n *  but kept getting them wrong, the software was right.  So this is really\n *  more of a smoke/integration test.  But the coverage is quite good.\n ",
+      "methods": {
+        "dynamicDeleteRules": {
+          "Javadoc": "*  Incrementally build Rule R1 by different namevalues, observing new state and rules created\n     *  Decrementally delete rule R1 by pointed namevalues, observing state and rules\n     *  which is not used have been removed."
+        },
+        "testMultipleThreadReadAddRule": {
+          "Javadoc": "* Setup thread pools with 310 threads inside, among them, 300 threads are calling rulesForEvent(),\n     * 10 threads are adding rule. the test is designed to add rules and match rules operation handled in parallel,\n     * observe rulesForEvent whether could work well while there is new rule keeping added dynamically in parallel.\n     * Keep same event call rulesForEvent() in parallel, expect to see more and more rules will be matched\n     * aligned with more and more new rules added.\n     * In this test:\n     * We created 100 rules with 100 key/val pair (each rule use one key/val), we created one \"global\" event by using\n     * those 100 key/val pairs. this event should match out all those 100 rules since they are added.\n     * So if we keep using this event query machine while adding 100 rules in parallel, we should see the output of\n     * number of matched rules by rulesForEvent keep increasing from 0 to 100, then stabilize returning 100 for\n     * all of following rulesForEvent()."
+        }
+      }
+    },
+    "software.amazon.event.ruler.PathTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.PatternsTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.PermutationsGenerator": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.RuleCompilerTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.EventMatcherThreadPool": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.MachineRunner": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.RulerTest": {
+      "Javadoc": ""
+    },
+    "software.amazon.event.ruler.SingleStateNameMatcherTest": {
+      "Javadoc": ""
+    }
+  }
+}

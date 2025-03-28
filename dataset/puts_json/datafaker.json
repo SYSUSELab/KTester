@@ -1,0 +1,2865 @@
+{
+  "dataset": "datafaker",
+  "classes": {
+    "net.datafaker.annotations.FakeResolver": {
+      "Javadoc": ""
+    },
+    "net.datafaker.Faker": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.Format": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.Json": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.JsonBuilder": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.JsonFromCollectionBuilder": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.JsonForFakeCollection": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.Xml": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.XmlNode": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.EnIdNumber": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.EnZAIdNumber": {
+      "Javadoc": "",
+      "methods": {
+        "getValidSsn": {
+          "Javadoc": "* Generate a valid social security number on faker\n     *\n     * @param f the java-faker\n     * @return a valid social security number on faker"
+        },
+        "getInValidSsn": {
+          "Javadoc": "* Generate a invalid social security number on faker\n     *\n     * @param f the java-faker\n     * @return a invalid social security number on faker"
+        },
+        "getPattern": {
+          "Javadoc": "* Generate a fixed format numeric string\n     *\n     * @param faker the java-faker\n     * @return a fixed format numeric string"
+        },
+        "validSsn": {
+          "Javadoc": "* Judge whether a social security number is valid\n     *\n     * @param ssn social security number"
+        },
+        "parseDate": {
+          "Javadoc": "* Judge whether a numeric string of ssn can represent a legal date\n     *\n     * @param ssn social security number"
+        },
+        "calculateChecksum": {
+          "Javadoc": "* Calculate the Check Number in the last number of a ssn\n     *\n     * @param number a social security number not including the last number\n     * @return check number of this ssn"
+        },
+        "calculate": {
+          "Javadoc": "* Calculate the sum of each digit of the number\n     *\n     * @return sum of each digit of the number"
+        }
+      }
+    },
+    "net.datafaker.idnumbers.EsMXIdNumber": {
+      "Javadoc": "\n * Implementation based on the definition at\n * <a href=\"https://en.wikipedia.org/wiki/Unique_Population_Registry_Code\">https://en.wikipedia.org/wiki/Unique_Population_Registry_Code</a>\n ",
+      "methods": {
+        "get": {
+          "Javadoc": "* Get A valid MEX CURP.\n     *\n     * @param faker faker\n     * @return A valid MEX CURP."
+        },
+        "getWrong": {
+          "Javadoc": "* Get A invalid MEX CURP.\n     *\n     * @param faker faker\n     * @return A invalid MEX CURP."
+        },
+        "getBirthday": {
+          "Javadoc": "* Randomly gets a birthday.\n     *\n     * @param f A specific instance of Faker.\n     * @return A valid date."
+        },
+        "validDay": {
+          "Javadoc": "* Gets a valid day according to year and month.\n     *\n     * @param year  A specific year.\n     * @param month A specific month.\n     * @param f     A specific instance of Faker.\n     * @return A valid day."
+        },
+        "getChecksum": {
+          "Javadoc": "* Gets the Checksum.\n     *\n     * @param str input string\n     * @return Checksum."
+        }
+      }
+    },
+    "net.datafaker.idnumbers.IdNumbers": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.KoKrIdNumber": {
+      "Javadoc": "\n * Generate number of Resident Registration Number for Republic of Korea.\n * <p>\n * Implementation based on the description at\n * <a href=\"https://en.wikipedia.org/wiki/Resident_registration_number\">Wikipedia - Resident registration number</a>\n "
+    },
+    "net.datafaker.idnumbers.NricNumber": {
+      "Javadoc": "\n * Generate number of UIN/FIN for Singapore.\n * Algorithm is given from <a href=\"http://www.ngiam.net/NRIC/\">http://www.ngiam.net/NRIC/</a>\n "
+    },
+    "net.datafaker.idnumbers.NricType": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.PeselNumber": {
+      "Javadoc": "\n * Implementation based on the definition at\n * <a href=\"https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20210000510\">https://isap.sejm.gov.pl/isap.nsf/DocDetails.xsp?id=WDU20210000510</a> and the\n * description at <a href=\"https://en.wikipedia.org/wiki/PESEL\">https://en.wikipedia.org/wiki/PESEL</a>\n "
+    },
+    "net.datafaker.idnumbers.pt.br.DocumentFormatterUtil": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.pt.br.IdNumberGeneratorPtBrUtil": {
+      "Javadoc": "",
+      "methods": {
+        "cnpj": {
+          "Javadoc": "* <a href=\"https://en.wikipedia.org/wiki/CNPJ\">https://en.wikipedia.org/wiki/CNPJ</a>\n     *\n     * @param formatted a cnpj (un)formatted\n     * @param valid     a cnpj (in)valid"
+        },
+        "cpf": {
+          "Javadoc": "* <a href=\"https://en.wikipedia.org/wiki/CPF_number\">https://en.wikipedia.org/wiki/CPF_number</a>\n     *\n     * @param formatted a CPF (un)formatted\n     * @param valid     a CPF (in)valid"
+        },
+        "isCNPJValid": {
+          "Javadoc": "* Return true if the CNPJ is valid\n     * A valid CNPJ is unique and have a algorithm to validate it\n     * <p>\n     * CNPJ generator could generate a valid or invalid because, somentimes, we need to test a\n     * registration with invalid number"
+        },
+        "isCPFValid": {
+          "Javadoc": "* Return true if the CPF is valid\n     * A valid CPF is unique and have a algorithm to validate it\n     * <p>\n     * CPF generator could generate a valid or invalid because, somentimes, we need to test a\n     * registration with invalid number"
+        }
+      }
+    },
+    "net.datafaker.idnumbers.PtNifIdNumber": {
+      "Javadoc": "\n * Portuguese VAT identification number (NIF)\n * <p>\n * The number is 9 digits, with modulus 11 checksum digit.\n * There is fixed list of valid first digits to signify different types of NIF numbers\n * <p>\n * See <a href=\"https://pt.wikipedia.org/wiki/N%C3%BAmero_de_identifica%C3%A7%C3%A3o_fiscal\">Número de identificação fiscal</a>\n * and <a href=\"https://en.wikipedia.org/wiki/VAT_identification_number\">VAT identification number</a>\n "
+    },
+    "net.datafaker.idnumbers.SvSEIdNumber": {
+      "Javadoc": "\n * Implementation based on the definition at\n * <a href=\"https://www.skatteverket.se/privat/folkbokforing/personnummer.4.3810a01c150939e893f18c29.html\">https://www.skatteverket.se/privat/folkbokforing/personnummer.4.3810a01c150939e893f18c29.html</a>\n * and the description at\n * <a href=\"https://en.wikipedia.org/wiki/Personal_identity_number_\">https://en.wikipedia.org/wiki/Personal_identity_number_</a>(Sweden)\n "
+    },
+    "net.datafaker.idnumbers.ZhCnIdNumber": {
+      "Javadoc": "\n * This class is used for generating Zh_CN Id numbers.\n *\n * @author irakatz\n ",
+      "methods": {
+        "getValidSsn": {
+          "Javadoc": "* Generate a valid Zh_CN Id numbers\n     *\n     * @param faker a Faker instance for generating Zh_CN Id numbers\n     * @return a Zh_CN Id numbers string. or null if exception."
+        }
+      }
+    },
+    "net.datafaker.internal.helper.SingletonLocale": {
+      "Javadoc": "\n * This class allows to use {@link java.util.IdentityHashMap} for locales.\n * To do that it guarantees one instance of {@link SingletonLocale} per {@link Locale}.\n "
+    },
+    "net.datafaker.internal.helper.WordUtils": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AbstractProvider": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.Address": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "zipCode": {
+          "Javadoc": "* Returns a String representing a standard 5-digit zip code.\n     *\n     * @return a String representing a standard zip code"
+        },
+        "zipCodePlus4": {
+          "Javadoc": "* Returns a String representing a ZIP+4 code for greater geographic specificity.\n     * This is a 9-digit zip code, but the String itself is 10 characters including the hyphen.\n     *\n     * @return a String representing a ZIP+4 code"
+        },
+        "latitude": {
+          "Javadoc": "* @return Returns the latitude, a number between -90 to 90."
+        },
+        "longitude": {
+          "Javadoc": "* @return Returns the longitude, a number between -180 and 180"
+        },
+        "latLon": {
+          "Javadoc": "* @return Returns the lat/lon coordinates formatted as lat delimiter lon."
+        },
+        "lonLat": {
+          "Javadoc": "* @return Returns the lat/lon coordinates formatted as lon delimiter lat."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Ancient": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Animal": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.App": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Appliance": {
+      "Javadoc": "\n * @since 1.0.0\n "
+    },
+    "net.datafaker.providers.base.Artist": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Australia": {
+      "Javadoc": "\n * @since 1.2.0\n "
+    },
+    "net.datafaker.providers.base.Aviation": {
+      "Javadoc": "\n * Generates aviation related strings.\n *\n * @since 0.8.0\n ",
+      "methods": {
+        "aircraft": {
+          "Javadoc": "* @return some aircraft name/model/make e.g. \"An-2\"."
+        },
+        "airport": {
+          "Javadoc": "* Returns an airport ICAO code.\n     * See also: <a href=\"https://en.wikipedia.org/wiki/List_of_airports_by_ICAO_code:_A\">https://en.wikipedia.org/wiki/List_of_airports_by_ICAO_code:_A</a>"
+        },
+        "METAR": {
+          "Javadoc": "* Provides a METAR weather report.\n     * Have a look at <a href=\"https://en.wikipedia.org/wiki/METAR\">https://en.wikipedia.org/wiki/METAR</a>"
+        },
+        "flight": {
+          "Javadoc": "* Returns a flight number without specifying flight number format.\n     *\n     * @return A random flight number with IATA format in a String."
+        },
+        "airline": {
+          "Javadoc": "* Returns an airline name.\n     *\n     * @return A randomly selected airline name in a String."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Aws": {
+      "Javadoc": "\n * @since 1.3.0\n "
+    },
+    "net.datafaker.providers.base.Azure": {
+      "Javadoc": "\n * Generates data for Azure services. This is based on the Azure best practices of naming conventions:\n * <a href=\"https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming\">Naming conventions</a>\n * <a href=\"https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations\">Abbreviation examples</a>\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.base.Barcode": {
+      "Javadoc": "\n * @since 0.9.0\n "
+    },
+    "net.datafaker.providers.base.BaseFaker": {
+      "Javadoc": "\n * Provides utility methods for generating fake strings, such as names, phone\n * numbers, addresses. generate random strings with given patterns\n *\n * @author ren\n ",
+      "methods": {
+        "instance": {
+          "Javadoc": "* Constructs Faker instance with provided {@link Locale} and {@link Random}.\n     *\n     * @param locale - {@link Locale}\n     * @param random - {@link Random}\n     * @return {@link BaseFaker#BaseFaker(Locale, Random)}\n     * @deprecated Use the constructor with locale and random instead"
+        },
+        "numerify": {
+          "Javadoc": "* Returns a string with the '#' characters in the parameter replaced with random digits between 0-9 inclusive.\n     * <p>\n     * For example, the string \"ABC##EFG\" could be replaced with a string like \"ABC99EFG\".\n     *\n     * @param numberString Template for string generation\n     * @return Generated string"
+        },
+        "letterify": {
+          "Javadoc": "* Returns a string with the '?' characters in the parameter replaced with random alphabetic\n     * characters.\n     * <p>\n     * For example, the string \"12??34\" could be replaced with a string like \"12AB34\"."
+        },
+        "bothify": {
+          "Javadoc": "* Applies both a {@link #numerify(String)} and a {@link #letterify(String)}\n     * over the incoming string."
+        },
+        "regexify": {
+          "Javadoc": "* Generates a String that matches the given regular expression."
+        },
+        "examplify": {
+          "Javadoc": "* Generates a String by example. The output string will have the same pattern as the input string.\n     * <p>\n     * For example:\n     * \"AAA\" becomes \"KRA\"\n     * \"abc\" becomes \"uio\"\n     * \"948\" becomes \"345\"\n     * \"A19c\" becomes \"Z20d\"\n     *\n     * @param example The input string\n     * @return The output string based on the input pattern"
+        },
+        "templatify": {
+          "Javadoc": "* Returns a string with the characters in the keys of optionsMap parameter replaced with random option from values.\n     *\n     * <p>\n     * For example, the string \"ABC$$EFG\" could be replaced with a string like \"ABCtestтестEFG\"\n     * if passed for key '$' there is value new String[]{\"test\", \"тест\"} in optionsMap\n     *\n     * @param string     Template for string generation\n     * @param optionsMap Map with replacement rules\n     * @return Generated string"
+        },
+        "csv": {
+          "Javadoc": "* Returns a string with generated csv based number of lines and column expressions.\n     *\n     * <p>\n     * For example, it could generate\n     * \"Thad\" ### \"Crist\"\n     * \"Kathryne\" ### \"Wuckert\"\n     * \"Sybil\" ### \"Connelly\"\n     * <p>\n     * for expression {@code faker.expression(\"#{csv ' ### ','\"','false','3','name_column','#{Name.first_name}','last_name_column','#{Name.last_name}'}\");}\n     *\n     * @param separator         Delimiter to use\n     * @param quote             Quote to use\n     * @param withHeader        Print header or not\n     * @param limit             Number of lines\n     * @param columnExpressions Even number of expressions.\n     *                          The odd numbers args are used for columns names, and even for column values.\n     * @return Generated string"
+        },
+        "addPath": {
+          "Javadoc": "* Allows to add paths to files with custom data. Data should be in YAML format.\n     *\n     * @param locale the locale for which a path is going to be added.\n     * @param path   path to a file with YAML structure\n     * @throws IllegalArgumentException in case of invalid path"
+        },
+        "collection": {
+          "Javadoc": "* @return builder to build {@code FakeCollection}"
+        },
+        "stream": {
+          "Javadoc": "* @return builder to build {@code FakeStream}"
+        },
+        "expression": {
+          "Javadoc": "* Allows the evaluation of native YML expressions to allow you to build your\n     * own.\n     * <p>\n     * The following are valid expressions:\n     * <ul>\n     * <li>#{regexify '(a|b){2,3}'}</li>\n     * <li>#{regexify '\\\\.\\\\*\\\\?\\\\+'}</li>\n     * <li>#{bothify '????','false'}</li>\n     * <li>#{Name.first_name} #{Name.first_name} #{Name.last_name}</li>\n     * <li>#{number.number_between '1','10'}</li>\n     * </ul>\n     *\n     * @param expression (see examples above)\n     * @return the evaluated string expression\n     * @throws RuntimeException if unable to evaluate the expression"
+        }
+      }
+    },
+    "net.datafaker.providers.base.BaseProviders": {
+      "Javadoc": "\n * The interface to register providers for {@link BaseFaker}.\n "
+    },
+    "net.datafaker.providers.base.BloodType": {
+      "Javadoc": "\n * @since 1.4.0\n ",
+      "methods": {
+        "aboTypes": {
+          "Javadoc": "* This method returns a ABO blood type\n     *\n     * @return a string of ABO blood type"
+        },
+        "rhTypes": {
+          "Javadoc": "* This method returns an Rh blood type\n     *\n     * @return a string of Rh blood type"
+        },
+        "pTypes": {
+          "Javadoc": "* This method returns a P blood type\n     *\n     * @return a string of P blood type"
+        },
+        "bloodGroup": {
+          "Javadoc": "* Returns a blood group such as O−, O+, A-, A+, B-, B+, AB-, AB+\n     *\n     * @return a blood group such as O−, O+, A-, A+, B-, B+, AB-, AB+"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Book": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Bool": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Brand": {
+      "Javadoc": "\n * Generate random sport wearing brand, car brand or watch brand. Only generate brand by types of products.\n * If some brands already exists in another faker, you can integrate this faker in the Brand faker\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.base.Business": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Camera": {
+      "Javadoc": "\n * @since 1.4.0\n ",
+      "methods": {
+        "brand": {
+          "Javadoc": "* This method generates a random camera brand.\n     *\n     * @return a string of camera brand."
+        },
+        "model": {
+          "Javadoc": "* This method generates a random camera model.\n     *\n     * @return a string of camera model."
+        },
+        "brandWithModel": {
+          "Javadoc": "* This method generates a random camera brand with a model.\n     *\n     * @return a string of camera brand with a model."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Cannabis": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.base.Cat": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Chiquito": {
+      "Javadoc": "\n * @since 1.6.0\n "
+    },
+    "net.datafaker.providers.base.CNPJ": {
+      "Javadoc": "\n * The Brazil National Registry of Legal Entities number (CNPJ) is a company identification number that must be obtained from the Department of Federal Revenue prior to the start of any business activities.\n *\n * @see <a href=\"https://en.wikipedia.org/wiki/CNPJ\">CNPJ</a>\n * @since 1.1.0\n ",
+      "methods": {
+        "valid": {
+          "Javadoc": "* Return valid and formatted. Also, it generates a multi-branch CNPJ.\n     * <p>\n     * CNPJ numbers follow this format:\n     * {@code AA.AAA.AAA/BBBB-CC }\n     * Where A is the number of the company, B is the branch number and C are verification digits.\n     * If the parameter {@code multiBranch} is false, B will always be 0001.\n     * Otherwise, this number will vary between 0001 and 9999 .\n     *\n     * @param formatted   a CNPJ (un)formatted\n     * @param multiBranch CPNJ from a random company branch\n     * @return a valid CNPJ\n     * @see IdNumberGeneratorPtBrUtil#cnpj(BaseProviders, boolean, boolean, boolean)"
+        },
+        "invalid": {
+          "Javadoc": "* Return invalid and (un)formatted. Also, it generates a multi-branch CNPJ.\n     * <p>\n     * CNPJ numbers follow this format:\n     * {@code AA.AAA.AAA/BBBB-CC }\n     * Where A is the number of the company, B is the branch number and C are verification digits.\n     * If the parameter {@code multiBranch} is false, B will always be 0001.\n     * Otherwise, this number will vary between 0001 and 9999 .\n     *\n     * @return an invalid CNPJ\n     * @see IdNumberGeneratorPtBrUtil#cnpj(BaseProviders, boolean, boolean, boolean)"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Code": {
+      "Javadoc": "\n * Generates codes such as ISBN, gin, ean and others.\n * <p>\n * For ISBN Rules, see <a href=\"https://en.wikipedia.org/wiki/International_Standard_Book_Number\">https://en.wikipedia.org/wiki/International_Standard_Book_Number</a>.\n *\n * @since 0.8.0\n ",
+      "methods": {
+        "isbnGs1": {
+          "Javadoc": "* This can be overridden by specifying\n     * <code>\n     * code:\n     * isbn_gs1: \"some expression\"\n     * </code>\n     * in the appropriate yml file.\n     *\n     * @return a GS1 code for an ISBN13, currently is only 978 and 979"
+        },
+        "isbnGroup": {
+          "Javadoc": "* This can be overridden by specifying\n     * <code>\n     * code:\n     * isbn_group: \"some expression\"\n     * </code>\n     * in the appropriate yml file.\n     *\n     * @return an ISBN group number"
+        },
+        "isbnRegistrant": {
+          "Javadoc": "* This can be overridden by specifying\n     * <code>\n     * code:\n     * isbn_registrant: \"some expression\"\n     * </code>\n     * in the appropriate yml file.\n     *\n     * @return an ISBN registrant 'element' with separator"
+        },
+        "isbn10": {
+          "Javadoc": "* @param separator true if you want separators returned, false otherwise\n     * @return a valid ISBN10 number with or without separators (ex. 9604250590, 960-425-059-0)"
+        },
+        "isbn13": {
+          "Javadoc": "* @param separator true if you want separators returned, false otherwise\n     * @return a valid ISBN13 number with or without separators (ex. 9789604250590, 978-960-425-059-0)"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Coin": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "flip": {
+          "Javadoc": "* @return coin side e.g. \"Heads\", \"Tails\"."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Color": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Commerce": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "price": {
+          "Javadoc": "* Generate a random price between 0.00 and 100.00"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Community": {
+      "Javadoc": "\n * Community is an American television sitcom created by Dan Harmon.\n *\n * @since 1.6.0\n "
+    },
+    "net.datafaker.providers.base.Company": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "catchPhrase": {
+          "Javadoc": "* Generate a buzzword-laden catch phrase."
+        },
+        "bs": {
+          "Javadoc": "* When a straight answer won't do, BS to the rescue!"
+        },
+        "logo": {
+          "Javadoc": "* Generate a random company logo url in PNG format."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Compass": {
+      "Javadoc": "\n * @since 1.7.0\n ",
+      "methods": {
+        "compassPoint": {
+          "Javadoc": "* Specify point of direction. If not specified, point of direction will be randomly selected.\n     *\n     * @param compassPoint point of direction.\n     * @return itself with specified point of direction.\n     * @see CompassPoint"
+        },
+        "word": {
+          "Javadoc": "* Returns full-size name of direction according to the specified {@link CompassPoint} point of direction.\n     * <p>\n     * Specify point of direction using {@link Compass#compassPoint(CompassPoint)} method.\n     * <p>\n     * Typical call of this method: {@code compass().compassPoint(CompassPoint.CARDINAL).word();}\n     *\n     * @return the full-size direction word according to the specified {@link CompassPoint}. Otherwise, the point of direction will be selected randomly."
+        },
+        "abbreviation": {
+          "Javadoc": "* Returns abbreviation of direction according to the specified {@link CompassPoint} point of direction.\n     * <p>\n     * Specify point of direction using {@link Compass#compassPoint(CompassPoint)} method.\n     * <p>\n     * Typical call of this method: {@code compass().compassPoint(CompassPoint.CARDINAL).abbreviation();}\n     *\n     * @return the abbreviation of direction according to the specified {@link CompassPoint}. Otherwise, the point of direction will be selected randomly."
+        },
+        "azimuth": {
+          "Javadoc": "* Returns appropriate azimuth of direction according to the specified {@link CompassPoint} point of direction.\n     * <p>\n     * Specify point of direction using {@link Compass#compassPoint(CompassPoint)} method.\n     * <p>\n     * Typical call of this method: {@code compass().compassPoint(CompassPoint.CARDINAL).azimuth();}\n     *\n     * @return the appropriate azimuth of the direction according to the specified {@link CompassPoint}. Otherwise, the point of direction will be selected randomly."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Computer": {
+      "Javadoc": "\n * Generates different attributes related to computers, such as operating systems, types, platforms and brands.\n *\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.base.Construction": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.base.Cosmere": {
+      "Javadoc": "\n * The cosmere is a fictional shared universe where several of Brandon Sanderson's books take place.\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.base.Country": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.CPF": {
+      "Javadoc": "\n * The CPF number (Cadastro de Pessoas Físicas, [sepeˈɛfi]; Portuguese for \"Natural Persons Register\")\n * is the Brazilian individual taxpayer registry identification, since its creation in 1965. This\n * number is attributed by the Brazilian Federal Revenue to Brazilians and resident aliens who,\n * directly or indirectly, pay taxes in Brazil. It's an 11-digit number in the format 000.000.000-00.\n *\n * @see <a href=\"https://en.wikipedia.org/wiki/CPF_number\">CPF</a>\n * @since 0.8.0\n ",
+      "methods": {
+        "valid": {
+          "Javadoc": "* Return valid and formatted\n     *\n     * @param formatted a (un)formatted CPF\n     * @return a valid CPF\n     * @see IdNumberGeneratorPtBrUtil#cpf(BaseProviders, boolean, boolean)"
+        },
+        "invalid": {
+          "Javadoc": "* Return invalid and formatted\n     *\n     * @param formatted a (un)formatted CPF\n     * @return an invalid CPF\n     * @see IdNumberGeneratorPtBrUtil#cpf(BaseProviders, boolean, boolean)"
+        }
+      }
+    },
+    "net.datafaker.providers.base.CryptoCoin": {
+      "Javadoc": "\n * @since 1.3.0\n "
+    },
+    "net.datafaker.providers.base.CultureSeries": {
+      "Javadoc": "\n * The Culture series is a science fiction series written by Scottish author Iain M. Banks and released from 1987 through to 2012.\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.base.Currency": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.DateAndTime": {
+      "Javadoc": "\n * A generator of random dates.\n *\n * @author pmiklos\n * @since 0.8.0\n ",
+      "methods": {
+        "future": {
+          "Javadoc": "* Generates and converts to string representation\n     * a future date relative to the {@code referenceDate}.\n     *\n     * @param atMost        at most this amount of time ahead to the {@code referenceDate} exclusive.\n     * @param unit          the time unit.\n     * @param referenceDate the future date relative to this date.\n     * @param pattern       date time pattern to convert to string.\n     * @return a string representation of a future date relative to {@code referenceDate}."
+        },
+        "past": {
+          "Javadoc": "* Generates a string representation of a past date relative to the {@code referenceDate}.\n     *\n     * @param atMost        at most this amount of time past to the {@code referenceDate} exclusive.\n     * @param unit          the time unit.\n     * @param referenceDate the past date relative to this date.\n     * @param pattern       date time pattern to convert to string.\n     * @return a string representation of a past date relative to {@code referenceDate}."
+        },
+        "between": {
+          "Javadoc": "* Generates a string representation of a random date between two dates.\n     *\n     * @param from    the lower bound inclusive\n     * @param to      the upper bound exclusive\n     * @param pattern date time pattern to convert to string.\n     * @return a string representation of a random date between {@code from} and {@code to}.\n     * @throws IllegalArgumentException if the {@code to} date represents an earlier date than {@code from} date."
+        },
+        "birthday": {
+          "Javadoc": "* Generates and converts to string representation a random birthday between two ages from now.\n     *\n     * @param minAge  the minimal age\n     * @param maxAge  the maximal age\n     * @param pattern date time pattern to convert to string.\n     * @return a string representation of a random birthday between {@code minAge} and {@code maxAge} years ago from now.\n     * @throws IllegalArgumentException if the {@code maxAge} is lower than {@code minAge}."
+        },
+        "duration": {
+          "Javadoc": "* Generates a random Duration between min and max.\n     *\n     * @param min  the minimal value\n     * @param max  the maximum value\n     * @param unit the temporal unit (day or shorter than a day)\n     * @return a random Duration between {@code min} inclusive and {@code max} exclusive if {@code max} greater {@code min}.\n     * @throws IllegalArgumentException if the {@code unit} is invalid."
+        },
+        "period": {
+          "Javadoc": "* Generates a random Period between min and max.\n     *\n     * @param min the minimal value\n     * @param max the maximum value\n     * @return a random Period between {@code min} inclusive and {@code max} inclusive if {@code max} greater {@code min}.\n     * @throws IllegalArgumentException if the {@code min} is greater than {@code max}."
+        },
+        "str2durationUnit": {
+          "Javadoc": "* Utility method to convert string to ChronoUnit.\n     *\n     * @param unit the temporal unit (day or shorter than a day)\n     * @return converts unit to ChronoUnit.\n     * @throws IllegalArgumentException if the {@code unit} is invalid."
+        }
+      }
+    },
+    "net.datafaker.providers.base.DcComics": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.base.Demographic": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Device": {
+      "Javadoc": "\n * @since 1.4.0\n "
+    },
+    "net.datafaker.providers.base.Disease": {
+      "Javadoc": "\n * Generate random, different kinds of disease.\n *\n * @since 0.8.0\n ",
+      "methods": {
+        "internalDisease": {
+          "Javadoc": "* Generate random internal disease\n     *\n     * @return An internal disease"
+        },
+        "neurology": {
+          "Javadoc": "* Generate random neurology disease\n     *\n     * @return A neurology disease"
+        },
+        "surgery": {
+          "Javadoc": "* Generate random surgery disease\n     *\n     * @return A surgery disease"
+        },
+        "paediatrics": {
+          "Javadoc": "* Generate random paediattics disease\n     *\n     * @return A paediatrics disease"
+        },
+        "gynecologyAndObstetrics": {
+          "Javadoc": "* Generate random gynecology and obstetrics disease\n     *\n     * @return A gynecology and obstetrics disease"
+        },
+        "ophthalmologyAndOtorhinolaryngology": {
+          "Javadoc": "* Generate random ophthalmology and otorhinolaryngology disease\n     *\n     * @return A ophthalmology and otorhinolaryngology disease"
+        },
+        "dermatolory": {
+          "Javadoc": "* Generate random dermatology disease\n     *\n     * @return A dermatology disease\n     * @deprecated use {@link #dermatology()} instead."
+        },
+        "dermatology": {
+          "Javadoc": "* Generate random dermatology disease\n     *\n     * @return A dermatology disease\n     * @since 1.8.0"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Dog": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Domain": {
+      "Javadoc": "\n * A domain name generator.\n *\n * @since 0.9.0\n ",
+      "methods": {
+        "firstLevelDomain": {
+          "Javadoc": "* First level domain string. Such as example.com\n     *\n     * @param name the company name\n     * @return the"
+        },
+        "secondLevelDomain": {
+          "Javadoc": "* Second level domain string. Such as example.com.uk\n     *\n     * @param name the company name\n     * @return the second level domain with company name"
+        },
+        "fullDomain": {
+          "Javadoc": "* Full domain string. Such as <a href=\"www.example.com.uk\">www.example.com.uk</a>\n     *\n     * @param name the company name\n     * @return the full domain name"
+        },
+        "validDomain": {
+          "Javadoc": "* Return a random valid domain.\n     *\n     * @param name the company name\n     * @return A valid domain"
+        }
+      }
+    },
+    "net.datafaker.providers.base.DrivingLicense": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.base.Drone": {
+      "Javadoc": "\n * An unmanned aerial vehicle (UAV), commonly known as a drone, is an aircraft without any human pilot, crew, or passengers on board.\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.base.DungeonsAndDragons": {
+      "Javadoc": "\n * Dungeons and Dragons is a fantasy tabletop role-playing game originally designed by Gary Gygax and Dave Arneson.\n * <p>\n * This faker is dedicated to Bart van Kuik, a lifelong DnD player, and lifelong friend.\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.base.Educator": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.ElectricalComponents": {
+      "Javadoc": "\n * @since 1.4.0\n "
+    },
+    "net.datafaker.providers.base.Emoji": {
+      "Javadoc": "\n * Emojis picked from <a href=\"http://unicode.org/Public/emoji/1.0/emoji-data.txt\">Emoji 1.0</a>.\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.base.FakeDuration": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "getNumberBetween": {
+          "Javadoc": "* Returns a random long between 0 and max inclusive\n     *\n     * @param max: upper bound of number range\n     * @return a random long between 0 and max inclusive"
+        },
+        "atMostMinutes": {
+          "Javadoc": "* Returns a Duration object representing a random duration of minutes in the given range\n     *\n     * @param minutesMax: max number of minutes for Duration (inclusive)\n     * @return a Duration object representing a number of minutes in the given range"
+        },
+        "atMostHours": {
+          "Javadoc": "* Returns a Duration object representing a random duration of hours in the given range\n     *\n     * @param hoursMax: max number of hours for Duration (inclusive)\n     * @return a Duration object representing a number of hours in the given range"
+        },
+        "atMostDays": {
+          "Javadoc": "* Returns a Duration object representing a random duration of days in the given range\n     *\n     * @param daysMax: max number of days for Duration (inclusive)\n     * @return a Duration object representing a number of days in the given range"
+        },
+        "atMostSeconds": {
+          "Javadoc": "* Returns a Duration object representing a random duration of seconds in the given range\n     *\n     * @param secondsMax: max number of seconds for Duration (inclusive)\n     * @return a Duration object representing a number of seconds in the given range"
+        }
+      }
+    },
+    "net.datafaker.providers.base.FamousLastWords": {
+      "Javadoc": "\n * @since 1.5.0\n ",
+      "methods": {
+        "lastWords": {
+          "Javadoc": "* This method generates random famous last words.\n     *\n     * @return a string of last words."
+        }
+      }
+    },
+    "net.datafaker.providers.base.File": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Finance": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "bic": {
+          "Javadoc": "* Generates a random Business Identifier Code"
+        }
+      }
+    },
+    "net.datafaker.providers.base.FunnyName": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.GarmentSize": {
+      "Javadoc": "",
+      "methods": {
+        "size": {
+          "Javadoc": "* This method returns a garment size\n     *\n     * @return a string of garment size"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Gender": {
+      "Javadoc": "\n * This class is used to generate gender randomly.\n *\n * @since 0.8.0\n ",
+      "methods": {
+        "types": {
+          "Javadoc": "* This method returns a gender type\n     *\n     * @return a string of gender type"
+        },
+        "binaryTypes": {
+          "Javadoc": "* This method returns a binary gender type\n     *\n     * @return a string of binary gender type"
+        },
+        "shortBinaryTypes": {
+          "Javadoc": "* This method returns a short binary gender type\n     *\n     * @return a string of short binary gender type"
+        }
+      }
+    },
+    "net.datafaker.providers.base.GreekPhilosopher": {
+      "Javadoc": "\n * @since 1.5.0\n ",
+      "methods": {
+        "name": {
+          "Javadoc": "* This method generates a random greek philosopher's name.\n     *\n     * @return a string of greek philosopher's name."
+        },
+        "quote": {
+          "Javadoc": "* This method generates a random greek philosopher's quote.\n     *\n     * @return a string of greek philosopher's quote."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Hacker": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Hashing": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Hipster": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Hobby": {
+      "Javadoc": "\n * @since 1.3.0\n "
+    },
+    "net.datafaker.providers.base.Hololive": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.base.Horse": {
+      "Javadoc": "\n * @since 1.3.0\n "
+    },
+    "net.datafaker.providers.base.House": {
+      "Javadoc": "\n * @since 1.5.0\n ",
+      "methods": {
+        "furniture": {
+          "Javadoc": "* This method generates a random name of furniture.\n     *\n     * @return a string of furniture."
+        },
+        "room": {
+          "Javadoc": "* This method generates a random name of a room in a house.\n     *\n     * @return a string of room."
+        }
+      }
+    },
+    "net.datafaker.providers.base.IdNumber": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "validSvSeSsn": {
+          "Javadoc": "* Specified as #{IDNumber.valid_sv_se_ssn} in sv-SE.yml"
+        },
+        "validEnZaSsn": {
+          "Javadoc": "* Specified as #{IDNumber.valid_en_za_ssn} in en-ZA.yml"
+        },
+        "inValidEnZaSsn": {
+          "Javadoc": "* Specified as #{IDNumber.invalid_en_za_ssn} in en-ZA.yml"
+        },
+        "invalidSvSeSsn": {
+          "Javadoc": "* Specified as #{IDNumber.invalid_sv_se_ssn} in sv-SE.yml"
+        },
+        "validZhCNSsn": {
+          "Javadoc": "* Generate a valid Zh-CN id number.\n     *\n     * @return A Zh-CN id number"
+        },
+        "validEsMXSsn": {
+          "Javadoc": "* Specified as #{IDNumber.valid_es_mx_ssn} in es-MX.yml\n     *\n     * @return A valid MEX CURP."
+        },
+        "invalidEsMXSsn": {
+          "Javadoc": "* Specified as #{IDNumber.invalid_es_mx_ssn} in es-MX.yml\n     *\n     * @return A valid MEX CURP."
+        },
+        "peselNumber": {
+          "Javadoc": "* Generates a valid PESEL number for a person with given gender and birth date.\n     *\n     * @param birthDate Given birth date\n     * @param gender    Person's gender. Null value means {@link net.datafaker.idnumbers.PeselNumber.Gender#ANY}\n     * @return A valid PESEL number"
+        },
+        "validKoKrRrn": {
+          "Javadoc": "* Generates a valid RRN (Resident Registration Number) for a person of random binary gender and default random age\n     *\n     * @return A valid RRN\n     * @since 1.8.0"
+        }
+      }
+    },
+    "net.datafaker.providers.base.IndustrySegments": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.base.Internet": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "port": {
+          "Javadoc": "* Returns a port number between 0 and 65535\n     *\n     * @return a port number"
+        },
+        "macAddress": {
+          "Javadoc": "* @see Internet#macAddress(String)"
+        },
+        "ipV4Address": {
+          "Javadoc": "* returns an IPv4 address in dot separated octets.\n     *\n     * @return a correctly formatted IPv4 address."
+        },
+        "getIpV4Address": {
+          "Javadoc": "* returns an IPv4 address.\n     *\n     * @return an IPv4 address."
+        },
+        "privateIpV4Address": {
+          "Javadoc": "* @return a valid private IPV4 address in dot notation"
+        },
+        "getPrivateIpV4Address": {
+          "Javadoc": "* @return a private IPV4 address"
+        },
+        "publicIpV4Address": {
+          "Javadoc": "* @return a valid public IPV4 address in dot notation"
+        },
+        "getPublicIpV4Address": {
+          "Javadoc": "* @return a valid public IPV4 address"
+        },
+        "ipV4Cidr": {
+          "Javadoc": "* @return a valid IPV4 CIDR"
+        },
+        "ipV6Address": {
+          "Javadoc": "* <p>Returns an IPv6 address in hh:hh:hh:hh:hh:hh:hh:hh format.</p>\n     *\n     * @return a correctly formatted IPv6 address."
+        },
+        "getIpV6Address": {
+          "Javadoc": "* <p>Returns an IPv6 address in hh:hh:hh:hh:hh:hh:hh:hh format.</p>\n     *\n     * @return a IPV6 address."
+        },
+        "ipV6Cidr": {
+          "Javadoc": "* @return a valid IPV6 CIDR"
+        },
+        "slug": {
+          "Javadoc": "* @param wordsOrNull if null, then 2 {@link Lorem} words\n     * @param glueOrNull  if null, \"_\"\n     * @return a slug string combining wordsOrNull with glueOrNull (ex. x_y)"
+        },
+        "uuidv3": {
+          "Javadoc": "* Returns a UUID (type 3) as String.\n     * Use this method (instead of {@link #uuid() uuid}) if you are\n     * using a constant random seed and require the same output for different faker instances.     *\n     *\n     * @return a uuid as string."
+        },
+        "uuid": {
+          "Javadoc": "* Returns a UUID (type 4) as String.\n     * <p>\n     * This returns a repeatable version of a version 4 UUID, which is a bit against the idea of a version 4 UUID,\n     * but this is a faker library, not a UUID library.\n     *\n     * @return a v4 uuid as string."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Job": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Kpop": {
+      "Javadoc": "\n * K-pop, short for Korean popular music, is a genre of music originating in South Korea as part of South Korean culture.\n *\n * @since 1.3.0\n "
+    },
+    "net.datafaker.providers.base.Locality": {
+      "Javadoc": "\n * Generates random locales in different forms.\n *\n * @since 1.7.0\n ",
+      "methods": {
+        "allSupportedLocales": {
+          "Javadoc": "* Retrieves list of all locales supported by Datafaker\n     *\n     * @return a List of Strings with the name of the locale (eg. \"es\", \"es-MX\")"
+        },
+        "displayName": {
+          "Javadoc": "* Select a locale at random and returns display name of the locale\n     *\n     * @return locale in the form: \"English (United States) or English\""
+        },
+        "localeString": {
+          "Javadoc": "* @return Randomly selected locale (eg. \"es\", \"es-MX\").\n     * Locale is selected at random WITH replacement from all supported locales"
+        },
+        "localeStringWithRandom": {
+          "Javadoc": "* Select a locale at random with replacement\n     *\n     * @param random random number generator (can utilize seed for deterministic random selection)\n     * @return String of a randomly selected locale (eg. \"es\", \"es-MX\")"
+        },
+        "localeStringWithoutReplacement": {
+          "Javadoc": "* Select a locale at random without replacement. This can be used to rotate through all supported locales\n     *\n     * @param random random number generator (can utilize seed for deterministic random selection)\n     * @return String of a randomly selected locale (eg. \"es\", \"es-MX\")"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Lorem": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "sentence": {
+          "Javadoc": "* Create a sentence with a random number of words within the range (wordCount+1)..(wordCount+randomWordsToAdd).\n     * <p>\n     * Set {@code randomWordsToAdd} to 0 to generate sentences with a fixed number of words.\n     *\n     * @return a random sentence"
+        },
+        "paragraph": {
+          "Javadoc": "* Creates a paragraph with a range (sentenceCount)...(&lt;sentenceCount+3)"
+        },
+        "fixedString": {
+          "Javadoc": "* Create a string with a fixed size. Can be useful for testing\n     * validator based on length string for example\n     *\n     * @param numberOfLetters size of the expected String\n     * @return a string with a fixed size"
+        },
+        "maxLengthSentence": {
+          "Javadoc": "* Create a Lorem Ipsum sentence with fixed length.\n     *\n     * @param fixedLength size of the expected Lorem Ipsum sentence.\n     * @return a string with a fixed size.\n     * Return empty string if input size is 0 or negative."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Marketing": {
+      "Javadoc": "\n * Generates marketing buzzwords.\n *\n * @since 1.2.0\n "
+    },
+    "net.datafaker.providers.base.Matz": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Mbti": {
+      "Javadoc": "\n * Myers-Briggs Type Indicator\n *\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.base.Measurement": {
+      "Javadoc": "\n * @since 1.5.0\n ",
+      "methods": {
+        "height": {
+          "Javadoc": "* This method generates a random height measurement.\n     *\n     * @return a string of height measurement."
+        },
+        "length": {
+          "Javadoc": "* This method generates a random length measurement.\n     *\n     * @return a string of length measurement."
+        },
+        "volume": {
+          "Javadoc": "* This method generates a random volume measurement.\n     *\n     * @return a string of volume measurement."
+        },
+        "weight": {
+          "Javadoc": "* This method generates a random weight measurement.\n     *\n     * @return a string of weight measurement."
+        },
+        "metricHeight": {
+          "Javadoc": "* This method generates a random metric height measurement.\n     *\n     * @return a string of metric height measurement."
+        },
+        "metricLength": {
+          "Javadoc": "* This method generates a random metric length measurement.\n     *\n     * @return a string of metric length measurement."
+        },
+        "metricVolume": {
+          "Javadoc": "* This method generates a random metric volume measurement.\n     *\n     * @return a string of metric volume measurement."
+        },
+        "metricWeight": {
+          "Javadoc": "* This method generates a random metric weight measurement.\n     *\n     * @return a string of metric weight measurement."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Medical": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Military": {
+      "Javadoc": "\n * Military ranks.\n *\n * @since 1.2.0\n "
+    },
+    "net.datafaker.providers.base.Money": {
+      "Javadoc": "\n * Support for different kind of money currencies.\n *\n * @since 1.5.0\n ",
+      "methods": {
+        "currency": {
+          "Javadoc": "* This method returns a currency value in a more descriptive manner like \"United States dollar\", etc.\n     *\n     * @return detailed currency value."
+        },
+        "currencyCode": {
+          "Javadoc": "* Method returns a randomly generated currency value like EUR, USD, etc.\n     *\n     * @return currency code."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Mood": {
+      "Javadoc": "\n * @since 0.9.0\n "
+    },
+    "net.datafaker.providers.base.Mountain": {
+      "Javadoc": "\n * A generator for Mountain names and ranges.\n *\n * @since 1.1.0\n "
+    },
+    "net.datafaker.providers.base.Mountaineering": {
+      "Javadoc": "\n * Mountaineering, or alpinism, is the set of outdoor activities that involves ascending tall mountains.\n *\n * @since 1.4.0\n "
+    },
+    "net.datafaker.providers.base.Music": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Name": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "name": {
+          "Javadoc": "* A multipart name composed of an optional prefix, a firstname and a lastname\n     * or other possible variances based on locale.  Examples:\n     * <ul>\n     *     <li>James Jones Jr.</li>\n     *     <li>Julie Johnson</li>\n     * </ul>\n     *\n     * @return a random name with given and family names and an optional suffix."
+        },
+        "nameWithMiddle": {
+          "Javadoc": "* A multipart name composed of an optional prefix, a given and family name,\n     * another 'firstname' for the middle name and an optional suffix such as Jr.\n     * Examples:\n     * <ul>\n     *     <li>Mrs. Ella Geraldine Fitzgerald</li>\n     *     <li>Jason Tom Sawyer Jr.</li>\n     *     <li>Helen Jessica Troy</li>\n     * </ul>\n     *\n     * @return a random name with a middle name component with optional prefix and suffix"
+        },
+        "fullName": {
+          "Javadoc": "* Returns the same value as {@link #name()}\n     *\n     * @see Name#name()"
+        },
+        "firstName": {
+          "Javadoc": "* Returns a random 'given' name such as Aaliyah, Aaron, Abagail or Abbey\n     *\n     * @return a 'given' name such as Aaliyah, Aaron, Abagail or Abbey"
+        },
+        "lastName": {
+          "Javadoc": "* Returns a random last name such as Smith, Jones or Baldwin\n     *\n     * @return a random last name such as Smith, Jones or Baldwin"
+        },
+        "prefix": {
+          "Javadoc": "* Returns a name prefix such as Mr., Mrs., Ms., Miss, or Dr.\n     *\n     * @return a name prefix such as Mr., Mrs., Ms., Miss, or Dr."
+        },
+        "suffix": {
+          "Javadoc": "* Returns a name suffix such as Jr., Sr., I, II, III, IV, V, MD, DDS, PhD or DVM\n     *\n     * @return a name suffix such as Jr., Sr., I, II, III, IV, V, MD, DDS, PhD or DVM"
+        },
+        "title": {
+          "Javadoc": "* A three part title composed of a descriptor level and job.  Some examples are :\n     * <ul>\n     *   <li>(template) {descriptor} {level} {job}</li>\n     *   <li>Lead Solutions Specialist</li>\n     *   <li>National Marketing Manager</li>\n     *   <li>Central Response Liaison</li>\n     * </ul>\n     *\n     * @return a random three part job title"
+        },
+        "username": {
+          "Javadoc": "* A lowercase username composed of the first_name and last_name joined with a '.'. Some examples are:\n     * <ul>\n     *     <li>(template) {@link #firstName()}.{@link #lastName()}</li>\n     *     <li>jim.jones</li>\n     *     <li>jason.leigh</li>\n     *     <li>tracy.jordan</li>\n     * </ul>\n     *\n     * @return a random two part user name.\n     * @see Name#firstName()\n     * @see Name#lastName()"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Nation": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.NatoPhoneticAlphabet": {
+      "Javadoc": "\n * The NATO phonetic alphabet is the most widely used radiotelephone spelling alphabet.\n *\n * @since 1.2.0\n "
+    },
+    "net.datafaker.providers.base.Nigeria": {
+      "Javadoc": "\n * Nigeria, officially the Federal Republic of Nigeria, is a country in West Africa.\n *\n * @since 1.2.0\n "
+    },
+    "net.datafaker.providers.base.Number": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "randomDigit": {
+          "Javadoc": "* Returns a random number from 0-9 (both inclusive)"
+        },
+        "randomDigitNotZero": {
+          "Javadoc": "* Returns a random number from 1-9 (both inclusive)"
+        },
+        "positive": {
+          "Javadoc": "* Returns a positive number"
+        },
+        "negative": {
+          "Javadoc": "* Returns a negative number"
+        },
+        "numberBetween": {
+          "Javadoc": "* @param min the lower bound (include min)\n     * @param max the lower bound (not include max)\n     * @return a random number on faker.number() between min and max\n     * if min = max, return min"
+        },
+        "randomNumber": {
+          "Javadoc": "* Returns a random number"
+        },
+        "randomDouble": {
+          "Javadoc": "* Returns a random double\n     *\n     * @param maxNumberOfDecimals maximum number of places\n     * @param min                 minimum value\n     * @param max                 maximum value"
+        },
+        "decimalBetween": {
+          "Javadoc": "* @param min the lower bound (include min)\n     * @param max the lower bound (not include max)\n     * @return decimalBetween on faker.number() between min and max\n     * if min = max, return min"
+        }
+      }
+    },
+    "net.datafaker.providers.base.OlympicSport": {
+      "Javadoc": "\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.base.Options": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "option": {
+          "Javadoc": "* Returns a random element from Enum.\n     *\n     * @param enumeration The Enum to take a random element from.\n     * @return A randomly selected element from the enum."
+        },
+        "subset": {
+          "Javadoc": "* Returns a random unique subset of elements from an varargs.\n     *\n     * @param size    The size of subset to return.\n     * @param options The varargs to take a random element from.\n     * @return A randomly selected unique subset from the varargs.\n     * If size is negative then {@code IllegalArgumentException} will be thrown.\n     * If size is zero then an empty subset will be returned.\n     * If size is larger than a unique set from options then all options will be returned."
+        },
+        "nextElement": {
+          "Javadoc": "* Returns a random element from a list.\n     *\n     * @param list The list to take a random element from.\n     * @param <E>  The type of the elements in the list.\n     * @return A randomly selected element from the list."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Passport": {
+      "Javadoc": "\n * @since 0.9.0\n "
+    },
+    "net.datafaker.providers.base.PhoneNumber": {
+      "Javadoc": "\n * @since 0.8.0\n ",
+      "methods": {
+        "phoneNumber": {
+          "Javadoc": "* Generates locale specific phone number in national format.\n     *\n     * @return phone number"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Photography": {
+      "Javadoc": "\n * Provides photography related strings.\n *\n * @since 0.8.0\n ",
+      "methods": {
+        "term": {
+          "Javadoc": "* @return a photography term."
+        },
+        "brand": {
+          "Javadoc": "* @return a photography brand."
+        },
+        "camera": {
+          "Javadoc": "* @return a name of camera model/make."
+        },
+        "lens": {
+          "Javadoc": "* @return some lens description like 500mm/8."
+        },
+        "genre": {
+          "Javadoc": "* @return a photography genre."
+        },
+        "imageTag": {
+          "Javadoc": "* @return some string to tag an image."
+        },
+        "aperture": {
+          "Javadoc": "* @return some aperture description like f/1.4 ."
+        },
+        "shutter": {
+          "Javadoc": "* @return some shutter description like 1/25 ."
+        },
+        "iso": {
+          "Javadoc": "* @return some ISO value like 3200."
+        }
+      }
+    },
+    "net.datafaker.providers.base.ProgrammingLanguage": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.ProviderRegistration": {
+      "Javadoc": "",
+      "methods": {
+        "letterify": {
+          "Javadoc": "* Returns a string with the '?' characters in the parameter replaced with random alphabetic\n     * characters.\n     * <p>\n     * For example, the string \"12??34\" could be replaced with a string like \"12AB34\"."
+        },
+        "bothify": {
+          "Javadoc": "* Applies both a {@link #numerify(String)} and a {@link #letterify(String)}\n     * over the incoming string."
+        },
+        "regexify": {
+          "Javadoc": "* Generates a String that matches the given regular expression."
+        },
+        "examplify": {
+          "Javadoc": "* Generates a String by example. The output string will have the same pattern as the input string.\n     * <p>\n     * For example:\n     * \"AAA\" becomes \"KRA\"\n     * \"abc\" becomes \"uio\"\n     * \"948\" becomes \"345\"\n     * \"A19c\" becomes \"Z20d\"\n     *\n     * @param example The input string\n     * @return The output string based on the input pattern"
+        },
+        "templatify": {
+          "Javadoc": "* Returns a string with the characters in the keys of optionsMap parameter replaced with random option from values.\n     *\n     * <p>\n     * For example, the string \"ABC$$EFG\" could be replaced with a string like \"ABCtestтестEFG\"\n     * if passed for key '$' there is value new String[]{\"test\", \"тест\"} in optionsMap\n     *\n     * @param string     Template for string generation\n     * @param optionsMap Map with replacement rules\n     * @return Generated string"
+        },
+        "csv": {
+          "Javadoc": "* Returns a string with generated csv based number of lines and column expressions.\n     *\n     * <p>\n     * For example, it could generate\n     * \"Thad\" ### \"Crist\"\n     * \"Kathryne\" ### \"Wuckert\"\n     * \"Sybil\" ### \"Connelly\"\n     * <p>\n     * for expression {@code faker.expression(\"#{csv ' ### ','\"','false','3','name_column','#{Name.first_name}','last_name_column','#{Name.last_name}'}\");}\n     *\n     * @param separator         Delimiter to use\n     * @param quote             Quote to use\n     * @param withHeader        Print header or not\n     * @param limit             Number of lines\n     * @param columnExpressions Even number of expressions.\n     *                          The odd numbers args are used for columns names, and even for column values.\n     * @return Generated string"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Relationship": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Restaurant": {
+      "Javadoc": "\n * @since 1.2.0\n "
+    },
+    "net.datafaker.providers.base.Robin": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.RockBand": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Science": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Shakespeare": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Sip": {
+      "Javadoc": "\n * Faker class for generating Session Initiation Protocol (SIP) related data.\n *\n * @author TomerFi\n * @since 0.8.0\n ",
+      "methods": {
+        "method": {
+          "Javadoc": "* The various SIP methods are listed in <a href=\"https://en.wikipedia.org/wiki/Session_Initiation_Protocol\">https://en.wikipedia.org/wiki/Session_Initiation_Protocol</a>.\n     *\n     * @return a SIP method String, e.g. {@code INVITE}."
+        },
+        "contentType": {
+          "Javadoc": "* Content types are based on <a href=\"https://tools.ietf.org/html/rfc5621\">https://tools.ietf.org/html/rfc5621</a> and\n     * <a href=\"https://tools.ietf.org/html/rfc3261\">https://tools.ietf.org/html/rfc3261</a>.\n     *\n     * @return a SIP content-type declaration String, e.g. {@code application/sdp}"
+        },
+        "messagingPort": {
+          "Javadoc": "* Get a 4 digit random port for SIP messaging.\n     *\n     * @return a SIP messaging port int, e.g. 5060."
+        },
+        "rtpPort": {
+          "Javadoc": "* Get a 5 digit positive even port for rtp udp communication.\n     *\n     * @return an RTP UDP 5 digit port int, e.g. 40002."
+        },
+        "provisionalResponseCode": {
+          "Javadoc": "* Proviosional code, the various response codes are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a 3 digit SIP provision response code between 100 and 199 int, e.g. {@code 180}."
+        },
+        "successResponseCode": {
+          "Javadoc": "* Success code, the various response codes are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a 3 digit SIP success response code between 200 and 299 int, e.g. {@code 200}."
+        },
+        "redirectResponseCode": {
+          "Javadoc": "* Redirection code, the various response codes are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a 3 digit SIP redirection response code between 300 and 399 int, e.g. {@code 301}."
+        },
+        "clientErrorResponseCode": {
+          "Javadoc": "* Client error code, the various response codes are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a 3 digit SIP client error response code between 400 and 499 int, e.g. {@code 486}."
+        },
+        "serverErrorResponseCode": {
+          "Javadoc": "* Server error code, the various response codes are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a 3 digit SIP server error response code between 500 and 599 int, e.g. {@code 503}."
+        },
+        "globalErrorResponseCode": {
+          "Javadoc": "* Global error code, the various response codes are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a 3 digit SIP global error response code between 600 and 699 int, e.g. {@code 608}."
+        },
+        "provisionalResponsePhrase": {
+          "Javadoc": "* Proviosional phrase, the various response phrases are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a SIP provisional response phrase String, e.g. {@code Ringing}."
+        },
+        "successResponsePhrase": {
+          "Javadoc": "* Success phrase, the various response phrases are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a SIP success response phrase String, e.g. {@code OK}."
+        },
+        "redirectResponsePhrase": {
+          "Javadoc": "* Redirection phrase, the various response phrases are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a SIP redirection response phrase String, e.g. {@code Moved Permanently}."
+        },
+        "clientErrorResponsePhrase": {
+          "Javadoc": "* Client error phrase, the various response phrases are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a SIP client error response phrase String, e.g. {@code Busy Here}."
+        },
+        "serverErrorResponsePhrase": {
+          "Javadoc": "* Server error phrase, the various response phrases are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a SIP server error response phrase String, e.g. {@code Service Unavailable}."
+        },
+        "globalErrorResponsePhrase": {
+          "Javadoc": "* Server error phrase, the various response phrases are listed in\n     * <a href=\"https://en.wikipedia.org/wiki/List_of_SIP_response_codes\">https://en.wikipedia.org/wiki/List_of_SIP_response_codes</a>.\n     *\n     * @return a SIP global error response phrase String, e.g. {@code Rejected}."
+        },
+        "bodyString": {
+          "Javadoc": "* Body example of SDP type can be found in <a href=\"https://tools.ietf.org/html/rfc5621\">https://tools.ietf.org/html/rfc5621</a>.\n     *\n     * @return a fake SDP type SIP body String."
+        },
+        "bodyBytes": {
+          "Javadoc": "* Body example of SDP type can be found in <a href=\"https://tools.ietf.org/html/rfc5621\">https://tools.ietf.org/html/rfc5621</a>.\n     *\n     * @return a fake SDP type SIP body byte array."
+        },
+        "nameAddress": {
+          "Javadoc": "* Return a valid name address to use with {@code to/from} headers.\n     *\n     * @return a valid name address String, e.g. {@code <sip:fakeName@10.1.2.3:5060>}."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Size": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.SlackEmoji": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Space": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Stock": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Subscription": {
+      "Javadoc": "\n * @since 1.3.0\n "
+    },
+    "net.datafaker.providers.base.Superhero": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Team": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Text": {
+      "Javadoc": "\n * Generates random text in a flexible way.\n *\n * @since 1.7.0\n ",
+      "methods": {
+        "text": {
+          "Javadoc": "* @param minimumLength The minimum length (inclusive)\n     * @param maximumLength The maximum length (inclusive)\n     * @return A lowercase string between minimum and maximum length (inclusive)"
+        }
+      }
+    },
+    "net.datafaker.providers.base.TextRuleConfig": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.TextSymbolsBuilder": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.TextConfigPojo": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.Time": {
+      "Javadoc": "\n * @since 1.4.0\n ",
+      "methods": {
+        "future": {
+          "Javadoc": "* Generates and converts to string representation\n     * of a future time from now, with a minimum time.\n     *\n     * @param atMost  at most this amount of time ahead from now exclusive.\n     * @param minimum the minimum amount of time in the future from now.\n     * @param unit    the time unit.\n     * @param pattern time pattern to convert to string.\n     * @return a string representation of a future time from now, with a minimum time."
+        },
+        "past": {
+          "Javadoc": "* Generates and converts to string representation a past time from now, with a minimum time.\n     *\n     * @param atMost  at most this amount of time earlier from now exclusive.\n     * @param minimum the minimum amount of time in the past from now.\n     * @param unit    the time unit.\n     * @param pattern time pattern to convert to string.\n     * @return a string representation of a past time from now, with a minimum time."
+        },
+        "between": {
+          "Javadoc": "* Generates a string representation of a random time between two times.\n     *\n     * @param from    the lower bound inclusive\n     * @param to      the upper bound exclusive\n     * @param pattern time pattern to convert to string.\n     * @return a string representation of a random time between {@code from} and {@code to}.\n     * @throws IllegalArgumentException if the {@code to} time represents an earlier time than {@code from} time."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Twitter": {
+      "Javadoc": "\n * Creates fake Twitter messages.\n *\n * @since 0.9.0\n ",
+      "methods": {
+        "createdTime": {
+          "Javadoc": "* Used to fake a new Twitter Date.\n     *\n     * @param forward    to determined if the returned date is later (or before) the given date.\n     * @param base       the base date given as a start point.\n     * @param constrains used to constrain the returned date range.\n     * @return a new date later (or before) the base date with respect to the constraint (no later/earlier than the constrain)."
+        },
+        "twitterId": {
+          "Javadoc": "* Used to fake a new Twitter ID without collision using both current time and uuid as seeds.\n     *\n     * @param expectedLength the expected length of the twitter id. Should be greater or equals to 6 and\n     *                       less than or equals to 25.\n     * @return a new Twitter ID consists of purely numbers."
+        },
+        "text": {
+          "Javadoc": "* To fake a new text context for the Twitter.\n     *\n     * @param keywords          the keywords that you wish to appear in the text.\n     * @param sentenceMaxLength the text should be in range of the sentence max length.\n     * @param wordMaxLength     each word should be in range of the word max length.\n     * @return a new fake text for the Twitter."
+        },
+        "userName": {
+          "Javadoc": "* @return Return a user name using the twitter.user_name."
+        },
+        "userId": {
+          "Javadoc": "* @return Return a user id using the twitter.user_name."
+        },
+        "getLink": {
+          "Javadoc": "* return a fake link to a Twitter message. The extra length is expected to be larger than 4.\n     *\n     * @param username    the username will be used in the link.\n     * @param extraLength the expected length of the extra link part.\n     * @return return a fake link to a Twitter message."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Unique": {
+      "Javadoc": "\n * This class contains methods that ensure uniqueness across separate invocations.\n * <p>\n * This can be helpful for unit tests and automated tests where certain values need to be different.\n *\n * @since 1.6.0\n ",
+      "methods": {
+        "fetchFromYaml": {
+          "Javadoc": "* Returns a random value from the YAML files that is guaranteed to be unique for the given key and locale set on\n     * the current faker instance.\n     * <p>\n     * Since unique values are tracked by both the key and the locale, manually changing the locale could cause\n     * this method to return the same value for a given key if there is not a separate locale for the given key.\n     *\n     * @param key the key of the values to fetch from the YAML files\n     * @return a unique random value based on {@code key} and the current locale\n     * @throws NoSuchElementException if {@code key} does not correspond to a list of valid data types in the YAML\n     *                                files, or if all possible values found for {@code key} and current locale\n     *                                have been returned"
+        }
+      }
+    },
+    "net.datafaker.providers.base.University": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Vehicle": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Verb": {
+      "Javadoc": "\n * @since 1.5.0\n ",
+      "methods": {
+        "base": {
+          "Javadoc": "* This method generates the base form of a random verb.\n     *\n     * @return a string of base form of a verb."
+        },
+        "past": {
+          "Javadoc": "* This method generates a random verb in past tense.\n     *\n     * @return a string of verb in past tense."
+        },
+        "pastParticiple": {
+          "Javadoc": "* This method generates a random verb in past participle tense.\n     *\n     * @return a string of verb in past participle tense."
+        },
+        "simplePresent": {
+          "Javadoc": "* This method generates a random verb in simple present tense.\n     *\n     * @return a string of verb in simple present tense."
+        },
+        "ingForm": {
+          "Javadoc": "* This method generates a random verb in -ing form.\n     *\n     * @return a string of verb in -ing form."
+        }
+      }
+    },
+    "net.datafaker.providers.base.Weather": {
+      "Javadoc": "\n * A generator for weather data.\n *\n * @since 0.8.0\n ",
+      "methods": {
+        "description": {
+          "Javadoc": "* Generates a short weather description."
+        },
+        "temperatureCelsius": {
+          "Javadoc": "* Generates a random temperature celsius between two temperatures.\n     *\n     * @param minTemperature the minimal temperature\n     * @param maxTemperature the maximal temperature\n     * @return String that represents temperature in format 5°C"
+        },
+        "temperatureFahrenheit": {
+          "Javadoc": "* Generates a random temperature fahrenheit between two temperatures.\n     *\n     * @param minTemperature the minimal temperature\n     * @param maxTemperature the maximal temperature\n     * @return String that represents temperature in format 5°F"
+        }
+      }
+    },
+    "net.datafaker.providers.base.Yoda": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.base.Zodiac": {
+      "Javadoc": "",
+      "methods": {
+        "sign": {
+          "Javadoc": "* This method returns a Zodiac sign\n     *\n     * @return a string of Zodiac sign"
+        }
+      }
+    },
+    "net.datafaker.providers.entertainment.AquaTeenHungerForce": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Avatar": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Babylon5": {
+      "Javadoc": "\n * @since 0.9.0\n "
+    },
+    "net.datafaker.providers.entertainment.BackToTheFuture": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.BigBangTheory": {
+      "Javadoc": "\n * @since 1.5.0\n ",
+      "methods": {
+        "character": {
+          "Javadoc": "* This method generates a random Big Bang Theory's character's name.\n     *\n     * @return a string of Big Bang Theory's character's name."
+        },
+        "quote": {
+          "Javadoc": "* This method generates a random Big Bang Theory's character's quote.\n     *\n     * @return a string of Big Bang Theory's character's quote."
+        }
+      }
+    },
+    "net.datafaker.providers.entertainment.BojackHorseman": {
+      "Javadoc": "\n * Generate random parts in BojackHorseman.\n *\n * @author unknown and irakatz\n * @since 0.8.0\n ",
+      "methods": {
+        "characters": {
+          "Javadoc": "* Generate random character's name in BojackHorseman.\n     *\n     * @return Characters in BojackHorseman"
+        },
+        "quotes": {
+          "Javadoc": "* Generate random quotes in BojackHorseman.\n     *\n     * @return Quotes in BojackHorseman"
+        },
+        "tongueTwisters": {
+          "Javadoc": "* Generate random tongue twisters in BojackHorseman.\n     *\n     * @return Tongue twisters in BojackHorseman"
+        }
+      }
+    },
+    "net.datafaker.providers.entertainment.BossaNova": {
+      "Javadoc": "\n * Bossa nova is a style of samba developed in the late 1950s and early 1960s in Rio de Janeiro, Brazil.\n * It is mainly characterized by a \"different beat\" that altered the harmonies with the introduction of\n * unconventional chords and an innovative syncopation of traditional samba from a single rhythmic division.\n *\n * @since 1.0.0\n "
+    },
+    "net.datafaker.providers.entertainment.BreakingBad": {
+      "Javadoc": "\n * Breaking Bad is an American neo-Western crime drama television series.\n * <p>\n * Over the course of five seasons, Breaking Bad told a complex, character-driven story\n * of a man whose cancer diagnosis leads him to start cooking and selling meth to provide for his family.\n *\n * @since 1.0.0\n "
+    },
+    "net.datafaker.providers.entertainment.BrooklynNineNine": {
+      "Javadoc": "\n * Brooklyn Nine-Nine is an American police procedural comedy television series.\n *\n * @since 1.3.0\n "
+    },
+    "net.datafaker.providers.entertainment.Buffy": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.ChuckNorris": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.CowboyBebop": {
+      "Javadoc": "\n * Cowboy Bebop is a Japanese neo-noir science fiction anime television series, which originally ran from 1998 to 1999.\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Departed": {
+      "Javadoc": "\n * @since 1.5.0\n ",
+      "methods": {
+        "actor": {
+          "Javadoc": "* This method generates a random actor's name from The Departed.\n     *\n     * @return a string of actor's name from The Departed."
+        },
+        "character": {
+          "Javadoc": "* This method generates a random character's name from The Departed.\n     *\n     * @return a string of character's name from The Departed."
+        },
+        "quote": {
+          "Javadoc": "* This method generates a random quote from The Departed.\n     *\n     * @return a string of quote from The Departed."
+        }
+      }
+    },
+    "net.datafaker.providers.entertainment.DetectiveConan": {
+      "Javadoc": "\n * Case Closed, also known as Detective Conan, is a Japanese detective manga series written and illustrated by Gosho Aoyama.\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.entertainment.DoctorWho": {
+      "Javadoc": "\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Doraemon": {
+      "Javadoc": "\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.entertainment.DragonBall": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.DumbAndDumber": {
+      "Javadoc": "\n * @since 1.6.0\n "
+    },
+    "net.datafaker.providers.entertainment.Dune": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.EntertainmentFaker": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.EntertainmentProviders": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.FamilyGuy": {
+      "Javadoc": "\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.entertainment.FinalSpace": {
+      "Javadoc": "\n * Final Space is an adult animated space opera comedy drama television series.\n *\n * @since 1.6.0\n "
+    },
+    "net.datafaker.providers.entertainment.FreshPrinceOfBelAir": {
+      "Javadoc": "\n * The Fresh Prince of Bel-Air is an American television sitcom created by Andy and Susan Borowitz for NBC.\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.entertainment.Friends": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.FullmetalAlchemist": {
+      "Javadoc": "\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.entertainment.Futurama": {
+      "Javadoc": "\n * Futurama is an American animated science fiction sitcom created by Matt Groening for the Fox Broadcasting Company.\n * \n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.GameOfThrones": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Ghostbusters": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.entertainment.GratefulDead": {
+      "Javadoc": "\n * The Grateful Dead was an American rock band formed in 1965 in Palo Alto, California.\n * The band is known for its eclectic style, which fused elements of rock, folk, country, jazz, bluegrass, blues and rock.\n *\n * @since 1.4.0\n "
+    },
+    "net.datafaker.providers.entertainment.HarryPotter": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.HeyArnold": {
+      "Javadoc": "\n * Hey Arnold! is an American animated comedy television series created by Craig Bartlett.\n *\n * @since 1.4.0\n "
+    },
+    "net.datafaker.providers.entertainment.HitchhikersGuideToTheGalaxy": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Hobbit": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.HowIMetYourMother": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.HowToTrainYourDragon": {
+      "Javadoc": "\n * How to Train Your Dragon is a 2010 American computer-animated action fantasy film loosely based on the 2003 book of the same name by Cressida Cowell.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Kaamelott": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Lebowski": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.LordOfTheRings": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.MoneyHeist": {
+      "Javadoc": "\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.entertainment.Movie": {
+      "Javadoc": "\n * @since 1.5.0\n ",
+      "methods": {
+        "quote": {
+          "Javadoc": "* This method generates a random quote from a movie.\n     *\n     * @return a string of quote from a movie."
+        }
+      }
+    },
+    "net.datafaker.providers.entertainment.Naruto": {
+      "Javadoc": "\n * Naruto is a Japanese manga series written and illustrated by Masashi Kishimoto, that tells the story of Naruto Uzumaki.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.NewGirl": {
+      "Javadoc": "\n * New Girl is an American television sitcom created by Elizabeth Meriwether.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.OnePiece": {
+      "Javadoc": "\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.entertainment.OscarMovie": {
+      "Javadoc": "\n * The Academy Awards, popularly known as the Oscars, are awards for artistic and technical merit in the film industry.\n *\n * @author ak-maker\n * @since 1.4.0\n ",
+      "methods": {
+        "getYear": {
+          "Javadoc": "* @return year"
+        },
+        "getChoice": {
+          "Javadoc": "* @return choice"
+        },
+        "actor": {
+          "Javadoc": "* This method generates random actor\n     *\n     * @return random actor"
+        },
+        "movieName": {
+          "Javadoc": "* This method generates a random movie name\n     *\n     * @return random movieName"
+        },
+        "quote": {
+          "Javadoc": "* This method generates a random quote\n     *\n     * @return random quote"
+        },
+        "character": {
+          "Javadoc": "* This method generates a random character\n     *\n     * @return random character"
+        },
+        "releaseDate": {
+          "Javadoc": "* This method generates a random release date\n     *\n     * @return random releaseDate"
+        }
+      }
+    },
+    "net.datafaker.providers.entertainment.Pokemon": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.PrincessBride": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.ResidentEvil": {
+      "Javadoc": "\n * A class for generating random value of ResidentEvil series.\n *\n * @since 0.9.0\n ",
+      "methods": {
+        "character": {
+          "Javadoc": "* @return A random character string (like leon kennedy) of ResidentEvil series."
+        },
+        "biologicalAgent": {
+          "Javadoc": "* @return A random biologicalAgent string of ResidentEvil series. This string may contains special characters."
+        },
+        "equipment": {
+          "Javadoc": "* @return A random equipment string of ResidentEvil series, which includes weapons and other items."
+        },
+        "location": {
+          "Javadoc": "* @return A random location string of ResidentEvil series."
+        },
+        "creature": {
+          "Javadoc": "* @return A random creature string of ResidentEvil series."
+        }
+      }
+    },
+    "net.datafaker.providers.entertainment.RickAndMorty": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.RuPaulDragRace": {
+      "Javadoc": "\n * RuPaul's Drag Race is a reality competition series produced by World of Wonder for the Logo TV Network.\n *\n * @since 1.0.0\n "
+    },
+    "net.datafaker.providers.entertainment.Seinfeld": {
+      "Javadoc": "\n * Seinfeld is an American sitcom television series created by Larry David and Jerry Seinfeld.\n *\n * @since 1.4.0\n "
+    },
+    "net.datafaker.providers.entertainment.Show": {
+      "Javadoc": "\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.SiliconValley": {
+      "Javadoc": "\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Simpsons": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.entertainment.SouthPark": {
+      "Javadoc": "\n * South Park is an American animated television series created by Trey Parker and Matt Stone.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Spongebob": {
+      "Javadoc": "\n * SpongeBob SquarePants (or simply SpongeBob) is an American animated comedy television series created by marine science educator and animator Stephen Hillenburg for Nickelodeon.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Stargate": {
+      "Javadoc": "\n * Stargate is a military science fiction media franchise.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.StarTrek": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.StarWars": {
+      "Javadoc": "\n * @since 1.6.0\n "
+    },
+    "net.datafaker.providers.entertainment.StrangerThings": {
+      "Javadoc": "\n * Stranger Things is an American sci-fi television series created by the Duffer Brothers.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.StudioGhibli": {
+      "Javadoc": "\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.entertainment.Suits": {
+      "Javadoc": "\n * Suits is an American legal drama television series created and written by Aaron Korsh.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Supernatural": {
+      "Javadoc": "\n * Supernatural is an American dark fantasy drama television series created by Eric Kripke.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.SwordArtOnline": {
+      "Javadoc": "\n * Sword Art Online is a Japanese light novel series written by Reki Kawahara and illustrated by abec.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.TheExpanse": {
+      "Javadoc": "\n * The Expanse is an American science fiction television series developed by Mark Fergus and Hawk Ostby for the Syfy network.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.TheItCrowd": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.TheKingkillerChronicle": {
+      "Javadoc": "\n * The Kingkiller Chronicle is a fantasy trilogy by the American writer Patrick Rothfuss.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.TheRoom": {
+      "Javadoc": "\n * The Room is a 2003 American drama film written, produced, executive produced and directed by Tommy Wiseau.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.TheThickOfIt": {
+      "Javadoc": "\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.TheVentureBros": {
+      "Javadoc": "\n * The Venture Bros. is an American adult animated action comedy TV series.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Tron": {
+      "Javadoc": "\n * Tron is a 1982 American science fiction action-adventure film.\n *\n * @since 1.4.0\n "
+    },
+    "net.datafaker.providers.entertainment.TwinPeaks": {
+      "Javadoc": "\n * Twin Peaks is an American mystery serial drama television series created by Mark Frost and David Lynch.\n *\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.VForVendetta": {
+      "Javadoc": "\n * V for Vendetta is a 2005 dystopian political action film directed by James McTeigue from a screenplay by the Wachowskis.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.entertainment.Witcher": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.food.Beer": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.food.Coffee": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.food.Dessert": {
+      "Javadoc": "\n * @since 0.9.0\n ",
+      "methods": {
+        "variety": {
+          "Javadoc": "* @return dessert variety e.g. \"Cake\"."
+        },
+        "topping": {
+          "Javadoc": "* @return dessert topping e.g. \"Rainbow Sprinkles\"."
+        },
+        "flavor": {
+          "Javadoc": "* @return dessert flavor e.g. \"Vanilla\"."
+        }
+      }
+    },
+    "net.datafaker.providers.food.Food": {
+      "Javadoc": "\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.food.FoodFaker": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.food.FoodProviders": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.food.Tea": {
+      "Javadoc": "\n * @since 1.4.0\n ",
+      "methods": {
+        "variety": {
+          "Javadoc": "* This method generates a random tea variety.\n     *\n     * @return a string of tea variety."
+        },
+        "type": {
+          "Javadoc": "* This method generates a random tea type.\n     *\n     * @return a string of tea type."
+        }
+      }
+    },
+    "net.datafaker.providers.sport.Baseball": {
+      "Javadoc": "\n\n * Generate random components of baseball game, e.g. teams, coaches, positions and players.\n *\n * @since 1.7.0\n ",
+      "methods": {
+        "teams": {
+          "Javadoc": "* Generate random Baseball teams\n     *\n     * @return Baseball teams"
+        },
+        "coaches": {
+          "Javadoc": "* Generate random coaches in baseball game\n     *\n     * @return Baseball coaches"
+        },
+        "positions": {
+          "Javadoc": "* Generate random positions in baseball game\n     *\n     * @return Baseball positions"
+        },
+        "players": {
+          "Javadoc": "* Generate random baseball players\n     *\n     * @return Baseball players"
+        }
+      }
+    },
+    "net.datafaker.providers.sport.Basketball": {
+      "Javadoc": "\n * Generate random components of basketball game, e.g. teams, coaches, positions and players.\n *\n * @author unknown and irakatz\n * @since 0.8.0\n ",
+      "methods": {
+        "teams": {
+          "Javadoc": "* Generate random basketball teams\n     *\n     * @return Basketball teams"
+        },
+        "coaches": {
+          "Javadoc": "* Generate random coaches in basketball game\n     *\n     * @return Basketball coaches"
+        },
+        "positions": {
+          "Javadoc": "* Generate random positions in basketball game\n     *\n     * @return Basketball positions"
+        },
+        "players": {
+          "Javadoc": "* Generate random basketball players\n     *\n     * @return Basketball players"
+        }
+      }
+    },
+    "net.datafaker.providers.sport.Chess": {
+      "Javadoc": "\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.sport.Cricket": {
+      "Javadoc": "\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.sport.EnglandFootBall": {
+      "Javadoc": "\n * @since 0.9.0\n "
+    },
+    "net.datafaker.providers.sport.Football": {
+      "Javadoc": "\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.sport.Formula1": {
+      "Javadoc": "\n * @since 1.2.0\n "
+    },
+    "net.datafaker.providers.sport.SportFaker": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.SportProviders": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.Volleyball": {
+      "Javadoc": "\n * @since 1.3.0\n "
+    },
+    "net.datafaker.providers.videogame.Battlefield1": {
+      "Javadoc": "\n * Battlefield 1 is a first-person shooter game developed by DICE and published by Electronic Arts.\n *\n * @author coolestjj\n * @since 1.4.0\n ",
+      "methods": {
+        "classes": {
+          "Javadoc": "* @return a random unit class name as a string value"
+        },
+        "weapon": {
+          "Javadoc": "* @return a random weapon name as a string value"
+        },
+        "vehicle": {
+          "Javadoc": "* @return a random vehicle name as a string value"
+        },
+        "map": {
+          "Javadoc": "* @return a random map title as a string value"
+        },
+        "faction": {
+          "Javadoc": "* @return a random faction name as a string value"
+        }
+      }
+    },
+    "net.datafaker.providers.videogame.ClashOfClans": {
+      "Javadoc": "\n * Clash of Clans is a 2012 free-to-play mobile strategy video game developed and published by Finnish game developer Supercell.\n *\n * @since 1.6.0\n "
+    },
+    "net.datafaker.providers.videogame.Control": {
+      "Javadoc": "\n * Control is an action-adventure game developed by Remedy Entertainment and published by 505 Games.\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.videogame.DarkSouls": {
+      "Javadoc": "\n * Dark Souls is a series of action role-playing games created by Hidetaka Miyazaki of FromSoftware and published by Bandai Namco Entertainment.\n *\n * @author SickDawn\n * @since 1.5.0\n "
+    },
+    "net.datafaker.providers.videogame.EldenRing": {
+      "Javadoc": "\n * Elden Ring is a 2022 action role-playing game developed by FromSoftware and published by Bandai Namco Entertainment.\n *\n * @since 1.4.0\n "
+    },
+    "net.datafaker.providers.videogame.ElderScrolls": {
+      "Javadoc": "\n * The Elder Scrolls is a series of action role-playing video games primarily developed by Bethesda Game Studios and published by Bethesda Softworks.\n *\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.videogame.Esports": {
+      "Javadoc": "\n * Esports, short for electronic sports, is a form of competition using video games.\n *\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.videogame.Fallout": {
+      "Javadoc": "\n * Fallout: A Post Nuclear Role Playing Game is a 1997 role-playing video game developed and published by Interplay Productions.\n *\n * @since 1.6.0\n "
+    },
+    "net.datafaker.providers.videogame.HalfLife": {
+      "Javadoc": "\n * Half-Life is a series of first-person shooter games developed and published by Valve.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.videogame.Hearthstone": {
+      "Javadoc": "\n * Hearthstone is a free-to-play online digital collectible card game developed and published by Blizzard Entertainment.\n *\n * @since 0.9.0\n "
+    },
+    "net.datafaker.providers.videogame.HeroesOfTheStorm": {
+      "Javadoc": "\n * Heroes of the Storm is a crossover multiplayer online battle arena video game developed and published by Blizzard Entertainment.\n *\n * @since 1.7.0\n "
+    },
+    "net.datafaker.providers.videogame.LeagueOfLegends": {
+      "Javadoc": "\n * League of Legends is a 2009 multiplayer online battle arena video game developed and published by Riot Games.\n *\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.videogame.MarvelSnap": {
+      "Javadoc": "\n * Marvel Snap is a digital collectible card game developed by Second Dinner and published by Nuverse for Microsoft Windows, Android and iOS.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.videogame.MassEffect": {
+      "Javadoc": "\n * Mass Effect is a military science fiction media franchise.\n *\n * @since 1.6.0\n "
+    },
+    "net.datafaker.providers.videogame.Minecraft": {
+      "Javadoc": "\n * Minecraft is a sandbox game developed by Mojang Studios.\n *\n * @since 0.9.0\n "
+    },
+    "net.datafaker.providers.videogame.Myst": {
+      "Javadoc": "\n * Myst is a graphic adventure/puzzle video game designed by the Miller brothers, Robyn and Rand.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.videogame.Overwatch": {
+      "Javadoc": "\n * Overwatch is a free-to-play, team-based action game set in the optimistic future.\n *\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.videogame.SonicTheHedgehog": {
+      "Javadoc": "\n * Sonic the Hedgehog is a Japanese video game series and media franchise created by Sega.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.videogame.SoulKnight": {
+      "Javadoc": "\n * Soul Knight is a game made by ChillyRoom Inc.\n *\n * @author zhou mintao\n * @since 1.4.0\n ",
+      "methods": {
+        "characters": {
+          "Javadoc": "* @return a random value of characters"
+        },
+        "buffs": {
+          "Javadoc": "* @return a random value of buffs"
+        },
+        "statues": {
+          "Javadoc": "* @return a random value of statues"
+        },
+        "weapons": {
+          "Javadoc": "* @return a random value of weapons"
+        },
+        "bosses": {
+          "Javadoc": "* @return a random value of bosses"
+        },
+        "enemies": {
+          "Javadoc": "* @return a random value of enemies"
+        }
+      }
+    },
+    "net.datafaker.providers.videogame.StarCraft": {
+      "Javadoc": "\n * StarCraft is a 1998 military science fiction real-time strategy game developed and published by Blizzard Entertainment.\n *\n * @since 0.8.0\n "
+    },
+    "net.datafaker.providers.videogame.StreetFighter": {
+      "Javadoc": "\n * Street Fighter is a Japanese media franchise centered on a series of fighting video and arcade games developed and published by Capcom.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.videogame.SuperMario": {
+      "Javadoc": "\n * Super Mario is a platform game series created by Nintendo starring their mascot, Mario.\n *\n * @since 1.3.0\n "
+    },
+    "net.datafaker.providers.videogame.SuperSmashBros": {
+      "Javadoc": "\n * Super Smash Bros. is a crossover fighting game series published by Nintendo.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.videogame.Touhou": {
+      "Javadoc": "\n * The Touhou Project, also known simply as Touhou, is a bullet hell shoot 'em up video game series created by one-man independent Japanese doujin soft developer Team Shanghai Alice.\n *\n * @since 0.9.0\n "
+    },
+    "net.datafaker.providers.videogame.VideoGame": {
+      "Javadoc": "\n * Video games are electronic games that involve interaction with a user interface or input device.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.videogame.VideoGameFaker": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.VideoGameProviders": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.WarhammerFantasy": {
+      "Javadoc": "\n * Warhammer Fantasy is a tabletop miniature wargame with a medieval fantasy theme.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.videogame.WorldOfWarcraft": {
+      "Javadoc": "\n * World of Warcraft is a massively multiplayer online role-playing game released in 2004 by Blizzard Entertainment.\n *\n * @since 1.8.0\n "
+    },
+    "net.datafaker.providers.videogame.Zelda": {
+      "Javadoc": "\n * The Legend of Zelda is an action-adventure game franchise created by the Japanese game designers Shigeru Miyamoto and Takashi Tezuka.\n *\n * @since 0.8.0\n "
+    },
+    "net.datafaker.sequence.FakeCollection": {
+      "Javadoc": ""
+    },
+    "net.datafaker.sequence.Builder": {
+      "Javadoc": ""
+    },
+    "net.datafaker.sequence.FakeSequence": {
+      "Javadoc": ""
+    },
+    "net.datafaker.sequence.FakeStream": {
+      "Javadoc": ""
+    },
+    "net.datafaker.service.FakerContext": {
+      "Javadoc": "\n * Contains the changeable Faker's part which currently contains {@link Locale} and {@link RandomService}.\n ",
+      "methods": {
+        "normalizeLocale": {
+          "Javadoc": "* @return a proper {@link Locale} instance with language and country code set regardless of how\n     * it was instantiated.  new Locale(\"pt-br\") will be normalized to a locale constructed\n     * with new Locale(\"pt\",\"BR\")."
+        },
+        "localeChain": {
+          "Javadoc": "* Convert the specified locale into a chain of locales used for message resolution. For example:\n     * <p>\n     * {@link Locale#FRANCE} (fr_FR) to [ fr_FR, anotherTest, en ]\n     *\n     * @return a list of {@link Locale} instances"
+        }
+      }
+    },
+    "net.datafaker.service.FakerIDN": {
+      "Javadoc": "\n * Created by tshick on 10/30/16.\n ",
+      "methods": {
+        "toASCII": {
+          "Javadoc": "* {@link IDN#toASCII(String)} is too picky for our needs.  It was throwing exceptions for fa.yml and\n     * he.yml as they're Bidi languages and something was causing them to die.  This is kind of a brute force\n     * fix but it appears to fix the issue."
+        }
+      }
+    },
+    "net.datafaker.service.FakeValues": {
+      "Javadoc": "",
+      "methods": {
+        "language": {
+          "Javadoc": "* If you new up a locale with \"he\", it gets converted to \"iw\" which is old.\n     * This addresses that unfortunate condition."
+        }
+      }
+    },
+    "net.datafaker.service.FakeValuesGrouping": {
+      "Javadoc": ""
+    },
+    "net.datafaker.service.FakeValuesInterface": {
+      "Javadoc": ""
+    },
+    "net.datafaker.service.FakeValuesService": {
+      "Javadoc": "",
+      "methods": {
+        "addPath": {
+          "Javadoc": "* Allows adding paths to files with custom data. Data should be in YAML format.\n     *\n     * @param locale the locale for which a path is going to be added.\n     * @param path   path to a file with YAML structure\n     * @throws IllegalArgumentException in case of invalid path"
+        },
+        "addUrl": {
+          "Javadoc": "* Allows adding urls of files with custom data. Data should be in YAML format.\n     *\n     * @param locale  the locale for which an url is going to be added.\n     * @param url     url of a file with YAML structure\n     * @throws IllegalArgumentException in case of invalid url"
+        },
+        "fetch": {
+          "Javadoc": "* Fetch a random value from an array item specified by the key"
+        },
+        "fetchString": {
+          "Javadoc": "* Same as {@link #fetch(String, FakerContext)} except this casts the result into a String."
+        },
+        "safeFetch": {
+          "Javadoc": "* Safely fetches a key.\n     * <p>\n     * If the value is null, it will return an empty string.\n     * <p>\n     * If it is a list, it will assume it is a list of strings and select a random value from it.\n     * <p>\n     * If the retrieved value is an slash encoded regular expression such as {@code /[a-b]/} then\n     * the regex will be converted to a regexify expression and returned (ex. {@code #regexify '[a-b]'})\n     * <p>\n     * Otherwise it will just return the value as a string.\n     *\n     * @param key           the key to fetch from the YML structure.\n     * @param defaultIfNull the value to return if the fetched value is null\n     * @return see above"
+        },
+        "fetchObject": {
+          "Javadoc": "* Return the object selected by the key from yaml file.\n     *\n     * @param key key contains path to an object. Path segment is separated by\n     *            dot. E.g. name.first_name"
+        },
+        "numerify": {
+          "Javadoc": "* Returns a string with the '#' characters in the parameter replaced with random digits between 0-9 inclusive.\n     * <p>\n     * For example, the string \"ABC##EFG\" could be replaced with a string like \"ABC99EFG\"."
+        },
+        "bothify": {
+          "Javadoc": "* Applies both a {@link #numerify(String, FakerContext)} and a {@link #letterify(String, FakerContext, boolean)}\n     * over the incoming string."
+        },
+        "regexify": {
+          "Javadoc": "* Generates a String that matches the given regular expression."
+        },
+        "examplify": {
+          "Javadoc": "* Generates a String by example. The output string will have the same pattern as the input string."
+        },
+        "letterify": {
+          "Javadoc": "* Returns a string with the '?' characters in the parameter replaced with random alphabetic\n     * characters.\n     * <p>\n     * For example, the string \"12??34\" could be replaced with a string like \"12AB34\"."
+        },
+        "templatify": {
+          "Javadoc": "* Returns a string with the optionsMap.getKeys() characters in the parameter replaced with random alphabetic\n     * characters from corresponding optionsMap.values()"
+        },
+        "resolve": {
+          "Javadoc": "* Resolves a key to a method on an object or throws an exception with specified message.\n     * <p>\n     * #{hello} with result in a method call to current.hello();\n     * <p>\n     * #{Person.hello_someone} will result in a method call to person.helloSomeone();"
+        },
+        "expression": {
+          "Javadoc": "* Resolves an expression using the current faker."
+        },
+        "fileExpression": {
+          "Javadoc": "* Resolves an expression in file using the current faker."
+        },
+        "csv": {
+          "Javadoc": "* Generates csv based on input."
+        },
+        "json": {
+          "Javadoc": "* Generates json based on input."
+        },
+        "jsona": {
+          "Javadoc": "* Generates json based on input."
+        },
+        "resolveExpression": {
+          "Javadoc": "* Search Order\n     * <ul>\n     *  <li>Search for methods on the current object</li>\n     *  <li>local keys in Yaml File</li>\n     *  <li>Search for methods on faker child objects</li>\n     *   <li>Search for keys in yaml file by transforming object reference to yaml reference</li>\n     * </ul>\n     *\n     * @return null if unable to resolve"
+        },
+        "isSlashDelimitedRegex": {
+          "Javadoc": "* @param expression input expression\n     * @return true if s is non null and is a slash delimited regex (ex. {@code /[ab]/})"
+        },
+        "trimRegexSlashes": {
+          "Javadoc": "* Given a {@code slashDelimitedRegex} such as {@code /[ab]/}, removes the slashes and returns only {@code [ab]}\n     *\n     * @param slashDelimitedRegex a non null slash delimited regex (ex. {@code /[ab]/})\n     * @return the regex without the slashes (ex. {@code [ab]})"
+        },
+        "classNameToYamlName": {
+          "Javadoc": "* @return a yaml style name from the classname of the supplied object (PhoneNumber => phone_number)"
+        },
+        "javaNameToYamlName": {
+          "Javadoc": "* @return a yaml style name like 'phone_number' from a java style name like 'PhoneNumber'"
+        },
+        "resolveFromMethodOn": {
+          "Javadoc": "* Given a directive like 'firstName', attempts to resolve it to a method.  For example if obj is an instance of\n     * {@link Name} then this method would return {@link Name#firstName()}.  Returns null if the directive is nested\n     * (i.e. has a '.') or the method doesn't exist on the <em>obj</em> object."
+        },
+        "resolveFakerObjectAndMethod": {
+          "Javadoc": "* Accepts a {@link BaseFaker} instance and a name.firstName style 'key' which is resolved to the return value of:\n     * {@link BaseFaker#name()}'s {@link Name#firstName()} method.\n     *\n     * @throws RuntimeException if there's a problem invoking the method or it doesn't exist."
+        },
+        "accessor": {
+          "Javadoc": "* Find an accessor by name ignoring case."
+        },
+        "coerceArguments": {
+          "Javadoc": "* Coerce arguments in <em>args</em> into the appropriate types (if possible) for the parameter arguments\n     * to <em>accessor</em>.\n     *\n     * @return array of coerced values if successful, null otherwise"
+        }
+      }
+    },
+    "net.datafaker.service.MethodAndCoercedArgs": {
+      "Javadoc": "\n     * simple wrapper class around an accessor and a list of coerced arguments.\n     * this is useful as we get to find the method and coerce the arguments in one\n     * shot, returning both when successful.  This saves us from doing it more than once (coercing args).\n     "
+    },
+    "net.datafaker.service.files.EnFile": {
+      "Javadoc": ""
+    },
+    "net.datafaker.service.RandomService": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.CompositeField": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.CsvTransformer": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.CsvTransformerBuilder": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.Field": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.JavaObjectTransformer": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.JsonTransformer": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.JsonTransformerBuilder": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.Schema": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.SchemaBuilder": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.SimpleField": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.sql.AuxiliaryConstants": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.sql.SqlTransformer": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.sql.SqlTransformerBuilder": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.sql.TriFunction": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.Transformer": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.XmlTransformer": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.XmlTransformerBuilder": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.YamlTransformer": {
+      "Javadoc": ""
+    },
+    "net.datafaker.AbstractFakerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.annotations.dto.Person": {
+      "Javadoc": ""
+    },
+    "net.datafaker.annotations.FakeAnnotationTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.annotations.DefaultPerson": {
+      "Javadoc": ""
+    },
+    "net.datafaker.FakerConcurrencyModificationExceptionTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.FakerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.CsvTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.JsonTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.SqlTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.XmlTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.formats.YamlTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.EnZAIdNumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.EsMXIdNumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.KoKrIdNumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.PeselNumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.PtNifIdNumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.SwedishIdNumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.idnumbers.ZhCNIdNumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.integration.FakerIntegrationTest": {
+      "Javadoc": "\n * The purpose of these tests is to ensure that the Locales have been properly configured\n * and that methods return values. The unit tests should ensure what the values returned\n * are correct. These tests just ensure that the methods can be invoked.\n "
+    },
+    "net.datafaker.integration.SkippedMethods": {
+      "Javadoc": ""
+    },
+    "net.datafaker.integration.FakerRepeatabilityIntegrationTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.integration.Issue194SlashFormatRegexTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.integration.MostSpecificLocaleTest": {
+      "Javadoc": "\n * The purpose of these tests is to ensure that the Locales have been properly configured\n * and that methods return values. The unit tests should ensure what the values returned\n * are correct. These tests just ensure that the methods can be invoked.\n "
+    },
+    "net.datafaker.integration.UkLocalDirectivesTest": {
+      "Javadoc": "\n * The purpose of these tests is to ensure that the Locales have been properly configured\n * and that methods return values. The unit tests should ensure what the values returned\n * are correct. These tests just ensure that the methods can be invoked.\n ",
+      "methods": {
+        "resolvesDirectivesOnlyInYmlFile": {
+          "Javadoc": "* uk is interesting in that it has feminine and masculine prefixes for street names.  the feminine\n     * and masculine prefixes are NOT methods on Address though as they only make sense for this locale (and possibly\n     * others).  This test shows we can resolve within the yml file without reaching out to any of the {@link BaseFaker}\n     * child objects."
+        }
+      }
+    },
+    "net.datafaker.internal.helper.WordUtilsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AbstractBasicProviderTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AddressTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AncientTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AnimalTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ApplianceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AppTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ArtistTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AustraliaTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AviationTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AwsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.AzureTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.BarcodeTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.BaseFakerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.TestSpec": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.BloodTypeTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.BookTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.BoolTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.BrandTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.BusinessTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CameraTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CannabisTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CatTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ChiquitoTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CNPJTest": {
+      "Javadoc": "",
+      "methods": {
+        "isValidCNPJ": {
+          "Javadoc": "* A valid CNPJ is either a real number or a generated valid number."
+        },
+        "isInvalidCNPJ": {
+          "Javadoc": "* A invalid CNPJ is that does not meet the requirements of the algorithm"
+        },
+        "formattedCNPJ": {
+          "Javadoc": "* CNPJ has a main format. This test validate if the number is on the correct format\n     * Eg: 11.111.111/0001-11"
+        }
+      }
+    },
+    "net.datafaker.providers.base.CodeTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CoinTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ColorTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CommerceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CommunityTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CompanyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CompassTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ComputerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ConstructionTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CosmereTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CountryTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CPFTest": {
+      "Javadoc": "",
+      "methods": {
+        "isValidCPF": {
+          "Javadoc": "* A valid CPF is either a real number or a generated valid number."
+        },
+        "isInvalidCPF": {
+          "Javadoc": "* A invalid CPF is that dos not meet the requirements of the algorithm"
+        },
+        "formattedCPF": {
+          "Javadoc": "* CPF has a main format. This test validate if the number is on the correct format\n     * Eg: 111.111.111-11"
+        }
+      }
+    },
+    "net.datafaker.providers.base.CryptoCoinTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CultureSeriesTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CurrencyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.CustomFakerTest": {
+      "Javadoc": "\n * This is a demo of how to create a custom faker and register a custom faker in it.\n "
+    },
+    "net.datafaker.providers.base.MyCustomFaker": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.Insect": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.InsectFromFile": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DateAndTimeTest": {
+      "Javadoc": "\n * @author pmiklos\n "
+    },
+    "net.datafaker.providers.base.DcComicsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DemographicTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DeviceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DiseaseTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DogTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DomainTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DrivingLicenseTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DroneTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DungeonsAndDragonsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.DurationTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.EducatorTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ElectricalComponentsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.EmojiTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.FamousLastWordsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.FileTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.FinanceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.FunnyNameTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.GarmentSizeTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.GenderTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.GreekPhilosopherTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.HackerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.HashingTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.HipsterTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.HobbyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.HololiveTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.HorseTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.HouseTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.IdNumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.IndustrySegmentsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.InternetPasswordTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.InternetTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.JobTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.KpopTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.LocalityExample": {
+      "Javadoc": "",
+      "methods": {
+        "main": {
+          "Javadoc": "* Example to illustrate use of Locality to randomly select\n     * locales (language and geographical/political/cultural region) when using Faker\n     *\n     * @param args Command-line arguments"
+        }
+      }
+    },
+    "net.datafaker.providers.base.LocalityTest": {
+      "Javadoc": "",
+      "methods": {
+        "init": {
+          "Javadoc": "* Initialize tests by instantiating a Locality object and list of all supported locales"
+        },
+        "testAllSupportedLocales": {
+          "Javadoc": "* Test to check that list of all locales support is loaded"
+        },
+        "testLocaleStringRandom": {
+          "Javadoc": "* Test to check Locality's localeStringWithRandom method is using the random number generator\n     * passed as an argument. This is checked with a Random object that has a fixed seed and\n     * should have deterministic results."
+        },
+        "testLocaleStringWithRandom": {
+          "Javadoc": "* Test to check Locality's localeStringWithRandom method. It verifies that the randomly selected\n     * locale is within the set of all supported locales"
+        },
+        "testLocaleStringWithoutReplacement": {
+          "Javadoc": "* Test to check Locality's localeStringWithoutReplacement method.\n     * It randomly selects n locales where n is the number of locales.\n     * It ensures that all the locales supported are represented once."
+        }
+      }
+    },
+    "net.datafaker.providers.base.LoremTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MarketingTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MatzTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MbtiTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MeasurementTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MedicalTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MilitaryTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MoneyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MoodTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MountaineeringTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MountainTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.MusicTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.NameTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.NationTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.NatoPhoneticAlphabetTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.NigeriaTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.NumberTest": {
+      "Javadoc": "",
+      "methods": {
+        "randomDoubleRandomizationQuality": {
+          "Javadoc": "* Given a number of min/max ranges\n     * for each min/max range, call {@link net.datafaker.providers.base.Number#randomDouble(int, int, int)} with min/max 'n' times\n     * calculate the uniqueness for that given min/max range.\n     * For all 'uniqueness' values\n     * verify the percentage of 'uniqueness' ratios over 80% is 90%.\n     * <p>\n     * This isn't perfect but it ensures a pretty good degree of uniqueness in the random number generation."
+        },
+        "numberBetweenIntIntRandomizationQuality": {
+          "Javadoc": "* Given a number of min/max ranges\n     * for each min/max range, call numberBetween with min/max 'n' times\n     * calculate the uniqueness for that given min/max range.\n     * For all 'uniqueness' values\n     * verify the percentage of 'uniqueness' ratios over 80% is 90%.\n     * <p>\n     * This isn't perfect but it ensures a pretty good degree of uniqueness in the random number generation."
+        },
+        "numberBetweenLongLongRandomizationQuality": {
+          "Javadoc": "* Given a number of min/max ranges\n     * for each min/max range, call {@link net.datafaker.providers.base.Number#numberBetween(long, long)}  with min/max 'n' times\n     * calculate the uniqueness for that given min/max range.\n     * For all 'uniqueness' values\n     * verify the percentage of 'uniqueness' ratios over 80% is 90%.\n     * <p>\n     * This isn't perfect but it ensures a pretty good degree of uniqueness in the random number generation."
+        },
+        "randomizationQualityTest": {
+          "Javadoc": "* Over the series of numbers identified from RANDOMIZATION_QUALITY_RANGE_START to\n     * RANDOMIZATION_QUALITY_RANGE_END, create a min/max range of -value/value and\n     * with of those min/max values, call <em>percentUniqueRunner</em>.\n     * <p>\n     * Collect the number of calls to <em>percentUniqueRunner</em> that were\n     * above the threshold and finally return that number divided by the total number of calls to\n     * <em>percentUniqueRunner</em>.\n     *\n     * @return percent of percentUniqueRunner's results greater than the threshold"
+        },
+        "uniquePercentageOfResults": {
+          "Javadoc": "* Given a number of iterations, calls <em>callable</em> 'iterations' times and collects the results,\n     * then calculates the number of results that were unique and returns the percentage that where unique."
+        },
+        "calculateNumbersToGet": {
+          "Javadoc": "* given a range, what is the number of values to get within that range for the randomization quality tests."
+        }
+      }
+    },
+    "net.datafaker.providers.base.OlympicSportTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.OptionsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.PassportTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.PhoneNumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.PhoneNumberValidityFinderTest": {
+      "Javadoc": "\n * These tests use System.out.printlns because the error rate is quite high.\n "
+    },
+    "net.datafaker.providers.base.PhotographyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ProgrammingLanguageTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.RandomFakerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.RelationshipTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.RestaurantTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.RobinTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.RockBandTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ScienceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.ShakespeareTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.SipTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.SizeTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.SlackEmojiTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.SpaceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.StockTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.SubscriptionTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.SuperheroTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.TeamTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.TextTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.TimeTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.TwitterTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.UniqueTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.UniversityTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.VehicleTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.VerbTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.WeatherTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.base.YodaTest": {
+      "Javadoc": "\n * @author Luka Obradovic (luka@vast.com)\n "
+    },
+    "net.datafaker.providers.base.ZodiacTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.AquaTeenHungerForceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.AvatarTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.Babylon5Test": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.BackToTheFutureTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.BigBangTheoryTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.BojackHorsemanTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.BossaNovaTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.BreakingBadTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.BrooklynNineNineTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.BuffyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.ChuckNorrisTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.CowboyBebopTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.DepartedTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.DetectiveConanTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.DoctorWhoTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.DoraemonTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.DragonBallTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.DumbAndDumberTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.DuneTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.EntertainmentFakerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.EntertainmentTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.FamilyGuyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.FinalSpaceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.FreshPrinceOfBelAirTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.FriendsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.FullmetalAlchemistTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.FuturamaTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.GameOfThronesTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.GhostbustersTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.GratefulDeadTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.HarryPotterTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.HeyArnoldTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.HitchhikersGuideToTheGalaxyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.HobbitTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.HowIMetYourMotherTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.HowToTrainYourDragonTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.KaamelottTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.LebowskiTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.LordOfTheRingsTest": {
+      "Javadoc": "\n * @author Luka Obradovic (luka@vast.com)\n "
+    },
+    "net.datafaker.providers.entertainment.MoneyHeistTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.MovieTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.NarutoTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.NewGirlTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.OnePieceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.OscarMovieTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.PokemonTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.PrincessBrideTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.ResidentEvilTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.RickAndMortyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.RuPaulDragRaceTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.SeinfeldTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.SiliconValleyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.SimpsonsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.SouthParkTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.SpongebobTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.StargateTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.StarTrekTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.StarWarsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.StrangerThingsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.StudioGhibliTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.SuitsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.SupernaturalTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.SwordArtOnlineTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.TheExpanseTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.TheItCrowdTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.TheKingkillerChronicleTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.TheRoomTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.TheThickOfItTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.TheVentureBrosTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.TronTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.TwinPeaksTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.VForVendettaTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.entertainment.WitcherTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.foods.BeerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.foods.CoffeeTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.foods.DessertTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.foods.FoodFakerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.foods.FoodTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.foods.HebrewFoodTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.foods.TeaTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.BaseballTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.BasketballTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.ChessTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.CricketTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.EnglandFootBallTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.FootballTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.Formula1Test": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.SportFakerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.sport.VolleyballTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.Battlefield1Test": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.ClashOfClansTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.ControlTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.DarkSoulsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.EldenRingTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.ElderScrollsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.EsportsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.FalloutTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.HalfLifeTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.HearthstoneTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.HeroesOfTheStormTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.LeagueOfLegendsTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.MarvelSnapTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.MassEffectTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.MinecraftTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.MystTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.OverwatchTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.SonicTheHedgehogTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.SoulKnightTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.StarCraftTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.StreetFighterTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.SuperMarioTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.SuperSmashBrosTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.TouhouTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.VideoGameFakerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.VideoGameTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.WarhammerFantasyTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.WorldOfWarcraftTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.providers.videogame.ZeldaTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.script.ProviderGenerator": {
+      "Javadoc": ""
+    },
+    "net.datafaker.script.ProvidersDocsGenerator": {
+      "Javadoc": "",
+      "methods": {
+        "extractCommentFromJavadoc": {
+          "Javadoc": "* The implementation assumes that the JavaDoc with the '@since' tag\n     * will always be at the very beginning of a class.\n     *\n     * @param filePath              Path to the Faker(provider) to be searched\n     * @return Entire first JavaDoc in the class"
+        },
+        "constructHeaderInProvidersFile": {
+          "Javadoc": "* Writes header and table header to new 'providers.md'"
+        },
+        "extractProvidersPerVersion": {
+          "Javadoc": "* Searching through all providers {@link subTypes}, getting since tag, and building\n     * {@link TreeMap} with count of each since tag (version).\n     * @return {@link TreeMap} with count of providers per each version"
+        }
+      }
+    },
+    "net.datafaker.sequence.Data": {
+      "Javadoc": ""
+    },
+    "net.datafaker.sequence.BloodPressure": {
+      "Javadoc": ""
+    },
+    "net.datafaker.sequence.Glucose": {
+      "Javadoc": ""
+    },
+    "net.datafaker.sequence.Temperature": {
+      "Javadoc": ""
+    },
+    "net.datafaker.sequence.FakeCollectionTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.sequence.FakeStreamTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.service.FakerIDNTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.service.FakeValuesGroupingTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.service.FakeValuesServiceTest": {
+      "Javadoc": "",
+      "methods": {
+        "expressionWithValidFakerObjectValidMethodInvalidArgs": {
+          "Javadoc": "* Two things are important here:\n     * 1) the message in the exception should be USEFUL\n     * 2) a {@link RuntimeException} should be thrown.\n     * <p>\n     * if the message changes, it's ok to update the test provided\n     * the two conditions above are still true."
+        },
+        "expressionCompletelyUnresolvable": {
+          "Javadoc": "* Two things are important here:\n     * 1) the message in the exception should be USEFUL\n     * 2) a {@link RuntimeException} should be thrown.\n     * <p>\n     * if the message changes, it's ok to update the test provided\n     * the two conditions above are still true."
+        }
+      }
+    },
+    "net.datafaker.service.DummyService": {
+      "Javadoc": ""
+    },
+    "net.datafaker.service.FakeValuesTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.service.files.EnFileTest": {
+      "Javadoc": "",
+      "methods": {
+        "fileNameConvention": {
+          "Javadoc": "* To adhere to conventions, please use lowercase names only."
+        }
+      }
+    },
+    "net.datafaker.service.RandomServiceTest": {
+      "Javadoc": "\n * @author pmiklos\n "
+    },
+    "net.datafaker.transformations.JavaObjectTransformerTest": {
+      "Javadoc": ""
+    },
+    "net.datafaker.transformations.Person": {
+      "Javadoc": ""
+    }
+  }
+}

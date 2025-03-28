@@ -27,6 +27,11 @@ class WorkSpacePreparation:
         compile_cmd = ['mvn', 'compiler:compile']
         script = cd_cmd + ['&&'] + dependency_cmd + ['&&'] + compile_cmd
         result = subprocess.run(script, shell=True)
+        # prepare classpath file for compiling test class
+        libs_dic = f"{project_path}/libs"
+        lib_list = [f"libs/{li}" for li in os.listdir(libs_dic)]
+        libs ="target/classes;"+ ';'.join(lib_list)
+        utils.write_text(f"{project_path}/dependencies.txt", libs)
         return
     
     def clean_workspace(self,ds_info:dict):

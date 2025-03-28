@@ -1,0 +1,464 @@
+{
+  "dataset": "batch-processing-gateway",
+  "classes": {
+    "com.apple.spark.core.ApplicationSubmissionHelperTest_LLM": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.DeleteSubmissionResponse": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.GetDriverInfoResponse": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.GetMySubmissionsResponse": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.GetSubmissionStatusResponse": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.HealthcheckResponse": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.SubmissionStatus": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.SubmissionSummary": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.SubmitApplicationRequest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.SubmitApplicationResponse": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.UploadS3Response": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.AppConfig": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.SparkCluster": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.SparkImage": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.QueueConfig": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.QueueTokenConfig": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.DBStorage": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.BPGApplication": {
+      "Javadoc": "",
+      "methods": {
+        "sendQueueInfoMetrics": {
+          "Javadoc": "* Go through clusters and send out metrics, so we could show which queues are on which clusters.\n   *\n   * @param configuration App configuration\n   * @param periodicMetrics Metric instances"
+        }
+      }
+    },
+    "com.apple.spark.BuildInfo": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.clients.sparkhistory.GetJobEnvironmentResponse": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.ApplicationMonitor": {
+      "Javadoc": "\n * Application monitor is a separate component that runs on the side to keep the DB informed of all\n * the latest job status, and monitor the running jobs (currently killing long-running jobs).\n ",
+      "methods": {
+        "start": {
+          "Javadoc": "* For the given Spark cluster, start a runningApplicationMonitor, and then register a CRD\n   * informer to keep track of all CRD updates. The updates are put into the\n   * applicationUpdateEventQueue for processing later.\n   *\n   * @param sparkCluster Spark cluster\n   * @param timer timer to set up runningApplicationMonitor"
+        },
+        "onUpdateImpl_logApplication": {
+          "Javadoc": "* Update DB with a new resource object, including job status, metadata and applicationId. Using\n   * the submissionId hashset to reduce unnecessary updates.\n   *\n   * @param sparkCluster Spark cluster\n   * @param prevCRDState the old resource object\n   * @param currCRDState the new resource object"
+        }
+      }
+    },
+    "com.apple.spark.core.ApplicationSubmissionHelper": {
+      "Javadoc": "",
+      "methods": {
+        "getProxyUser": {
+          "Javadoc": "* When a job is submitted via Airflow, the username can be a system account. In that case, return\n   * the DAG username as a proxy user. This will help some logging or metrics to have better\n   * granularity.\n   *\n   * @param user the username that can potentially be an Airflow system account\n   * @param dagUser the username specified in DAG\n   * @return the DAG username if user is a system account"
+        },
+        "looksLikeFilePath": {
+          "Javadoc": "examine a request body and see if the request body looks like a file path"
+        },
+        "getYuniKornSchedulerConfig": {
+          "Javadoc": "* By default all Spark jobs go to the YuniKorn queue root.spark to be gang scheduled\n   *\n   * @param queue the name of the queue\n   * @return BatchSchedulerConfiguration"
+        }
+      }
+    },
+    "com.apple.spark.core.ApplicationUpdateEvent": {
+      "Javadoc": " The event generated whenever there's CRD update from an application. "
+    },
+    "com.apple.spark.core.BatchSchedulerConstants": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.BPGStatsdConfig": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.ConfigValue": {
+      "Javadoc": "",
+      "methods": {
+        "tryGetEncodedSecretValue": {
+          "Javadoc": "*\n   * This method tries to get secret value from an encoded string.\n   * Following are examples for encoded string:\n   * plaintext:value123 - get plaintext value like value123\n   * localhost:env:my_env_variable_name - get value from environment variable my_env_variable_name\n   * k8s:secret:namespace1:secret1:key1 - read secret secret1 in current kubernetes cluster and namespace namespace1, and get value for key1\n   *\n   * If the value is not in recognized encoding, this method will return the value directly.\n   * @param value\n   * @return"
+        }
+      }
+    },
+    "com.apple.spark.core.Constants": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.DBConnection": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.InvalidSubmissionIdException": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.KubernetesHelper": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.LogDao": {
+      "Javadoc": "",
+      "methods": {
+        "verifyDBName": {
+          "Javadoc": "* Verify a DB name to ensure the characters are legit: ASCII: [0-9,a-z,A-Z$_] (basic Latin\n   * letters, digits 0-9, dollar, underscore) This is necessary for SQL queries.\n   *\n   * @param dbName"
+        }
+      }
+    },
+    "com.apple.spark.core.NamespaceAndName": {
+      "Javadoc": "*\n * This class will uniquely identify a spark application name under a namespace.\n "
+    },
+    "com.apple.spark.core.QueueTokenVerifier": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.RestStreamingOutput": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.RestSubmissionsStreamingOutput": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.RunningApplicationMonitor": {
+      "Javadoc": "\n * Running application monitor is a component that monitors all the running applications on a Spark\n * cluster. This class needs to be thread safe.\n ",
+      "methods": {
+        "onUpdate": {
+          "Javadoc": "* Notify the monitor instance about an application CRD update. The monitor instance relies on\n   * this function to keep its hashmap updated.\n   *\n   * @param prevCRDState the previous CRD state\n   * @param currCRDState the current CRD state"
+        },
+        "deleteLongRunningApplications": {
+          "Javadoc": "Kill all the apps that have been running for too long."
+        },
+        "killApplication": {
+          "Javadoc": "* Kill an application by deleting the driver pod.\n   *\n   * @param namespace the namespace of the app\n   * @param appName the name of the app (typically submission ID)"
+        }
+      }
+    },
+    "com.apple.spark.core.RunningAppInfo": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.SparkApplicationResourceHelper": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.SparkClusterHelper": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.SparkConstants": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.SparkSpecHelper": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.ThrowableExceptionMapper": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.health.BPGHealthCheck": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.Affinity": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.ApplicationState": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.BatchSchedulerConfiguration": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.ConfigMapVolumeSource": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.Dependencies": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.DriverInfo": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.DriverSpec": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.DynamicAllocation": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.EnvVar": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.EnvVarSource": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.ExecutorSpec": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.HostPathVolumeSource": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.IngressTLS": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.MonitoringSpec": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.NodeAffinity": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.NodeSelectorRequirement": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.NodeSelectorTerm": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.ObjectFieldSelector": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.PreferredSchedulingTerm": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.PrometheusSpec": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.RequiredDuringSchedulingIgnoredDuringExecutionTerm": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.RestartPolicy": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.SecurityContext": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.SparkApplication": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.SparkApplicationResourceList": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.SparkApplicationSpec": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.Builder": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.SparkApplicationStatus": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.SparkPodSpec": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.SparkUIConfiguration": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.Volume": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.VolumeMount": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.rest.AdminRest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.rest.ApplicationGetLogRest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.rest.ApplicationSubmissionRest": {
+      "Javadoc": "",
+      "methods": {
+        "removeEnvFromSpec": {
+          "Javadoc": "* Remove env variables from spec to avoid leaking sensitive information\n   *\n   * @param sparkApplicationSpec full application spec (will be modified)\n   * @return modified application spec"
+        },
+        "validateSubmissionRequest": {
+          "Javadoc": "* Ensure the submission request satisfies certain requirements. If executor spec is present in\n   * request, the number of executors shouldn't exceed the limit. If executor spec is present as\n   * `spark.executor.instances` param in Spark conf, the number of executors shouldn't exceed the\n   * limit.\n   *\n   * @param request submission request\n   * @param queueName name of the queue"
+        }
+      }
+    },
+    "com.apple.spark.rest.AwsConstants": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.rest.CloudStorageRest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.rest.GetSubmissionStatusResponseCacheValue": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.rest.HealthcheckRest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.rest.RestBase": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.security.User": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.security.UserNameAuthFilter": {
+      "Javadoc": "\n * This auth filter accepts a header that contains the user, and uses that for basic authentication.\n * This provides more flexibility of how to pass in the user name.\n "
+    },
+    "com.apple.spark.security.Builder": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.security.UserNameBasicAuthenticator": {
+      "Javadoc": "\n * An authenticator that takes in a list of allowed users, and a list of blocked users, and ensure\n * the user is legitimate.\n ",
+      "methods": {
+        "authenticate": {
+          "Javadoc": "Ensure the user is not in blocked users list, and in allowed users list (can be wildcard)"
+        }
+      }
+    },
+    "com.apple.spark.security.UserUnauthorizedHandler": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.tools.DeleteApplications": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.tools.LoadTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.tools.TestApplicationInfo": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.tools.QueueTokenGenerator": {
+      "Javadoc": "*\n * This tool generates a queue token with given arguments.\n * Argument example for this program: -secret secret1 -subject queueToken1 -queue queue1\n "
+    },
+    "com.apple.spark.tools.SparkClusterTest": {
+      "Javadoc": "*\n * This tool is to check a given Spark Cluster\n "
+    },
+    "com.apple.spark.util.ConfigUtil": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.CounterMetricContainer": {
+      "Javadoc": "\n * This class contains multiple counter metric instances with different name/tags. New metric\n * instance will be created when needed.\n "
+    },
+    "com.apple.spark.util.CustomSerDe": {
+      "Javadoc": "",
+      "methods": {
+        "submitRequestToNonSensitiveJson": {
+          "Javadoc": "* Given an application submission request, serialize it to a JSON string with sensitive\n   * information removed/masked\n   *\n   * @param submitRequest\n   * @return a serialized JSON string\n   * @throws JsonProcessingException"
+        },
+        "sparkSpecToNonSensitiveJson": {
+          "Javadoc": "* Given a Spark application spec, serialize it to a JSON string with sensitive information\n   * removed/masked\n   *\n   * @param sparkSpec\n   * @return a serialized JSON string\n   * @throws JsonProcessingException"
+        }
+      }
+    },
+    "com.apple.spark.util.DateTimeUtils": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.EndAwareInputStream": {
+      "Javadoc": " This class wraps an InputStream and executes extra action when InputStream reads to the end. "
+    },
+    "com.apple.spark.util.CallableWithIOException": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.RunnableWithIOException": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.ExceptionUtils": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.GaugeMetricContainer": {
+      "Javadoc": "\n * This class contains multiple gauge metric instances with different name/tags. New metric instance\n * will be created when needed.\n "
+    },
+    "com.apple.spark.util.HttpUtils": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.JwtUtils": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.KubernetesClusterAndNamespace": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.MetricId": {
+      "Javadoc": "*\n * This class stores name and a list of tag values for metrics, which could uniquely identify a metric instance.\n "
+    },
+    "com.apple.spark.util.TimerMetricContainer": {
+      "Javadoc": "\n * This class contains multiple timers metric instances with different name/tags. New metric\n * instance will be created when needed.\n "
+    },
+    "com.apple.spark.util.VersionInfo": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.api.SubmissionSummaryTest_LLM": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.ApplicationSubmissionHelperTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.ConfigValueTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.DBConnectionTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.KubernetesHelperTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.LogDaoTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.QueueTokenVerifierTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.RunningApplicationMonitorTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.SparkClusterHelperTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.core.SparkSpecHelperTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.GatewayConfigTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.operator.SparkPodSpecTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.tools.QueueTokenGeneratorTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.ConfigUtilTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.CounterMetricContainerTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.CustomSerDeTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.DateTimeUtilsTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.EndAwareInputStreamTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.ExceptionUtilsTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.JwtUtilsTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.KubernetesClusterAndNamespaceTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.MetricIdTest": {
+      "Javadoc": ""
+    },
+    "com.apple.spark.util.TimerMetricContainerTest": {
+      "Javadoc": ""
+    }
+  }
+}

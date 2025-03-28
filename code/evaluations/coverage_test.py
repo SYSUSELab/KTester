@@ -23,26 +23,39 @@ class ProjrctTestRunner:
 
 
     def run_project_test(self, compile_test=True):
+        # TODO: improve this parameter
         project_name = self.project_info["project-name"]
-        if compile_test:
-            print(f"Compiling test classes in: {project_name}")
-            compile_cmd = ['mvn', 'compiler:testCompile']
-            script = self.cd_cmd + compile_cmd
-            subprocess.run(script, shell=True)
+        # if compile_test:
+        #     print(f"Compiling test classes in: {project_name}")
+        #     compile_cmd = ['mvn', 'compiler:testCompile']
+        #     script = self.cd_cmd + compile_cmd
+        #     subprocess.run(script, shell=True)
 
         print(f"Running tests for project: {project_name}")
         test_objects = self.project_info["focused-methods"]
-        cov_scores = {}
-        failed_tests = []
+        failed_tests = {}
         for tobject in test_objects:
-            testclass = tobject["test-class"]
-            method_name = tobject["method-name"]
+            test_class = tobject["test-class"]
+            test_path = tobject["test-path"]
             testid = tobject["id"]
-            f1 = self.run_singal_unit_test(testclass)
-            f2 = self.generate_report_single(testid)
-            if not (f1 and f2):
-                failed_tests.append(testid)
+            if not self.compile_test(test_path):
+                failed_tests[testid] = "compile error"
+                continue
+            if not self.run_singal_unit_test(test_class):
+                failed_tests[testid] = "execution error"
+                continue
+            if not self.generate_report_single(testid):
+                failed_tests[testid] = "report error"
         return failed_tests
+
+    def compile_test(self, class_path):
+        compile_cmd = ["javac","-cp","@dependencies.txt","-d","target/test-classes",class_path]
+        script = self.cd_cmd + compile_cmd
+        result = subprocess.run(script, capture_output=True, text=True, shell=True)
+        if result.returncode!= 0:
+            print(f"error occured in compile test class, info:\n{result.stderr}")
+            return False
+        return True
 
     def run_singal_unit_test(self, testclass):
         print(f"Running single unit test, testclass: {testclass}")
@@ -58,7 +71,6 @@ class ProjrctTestRunner:
 
     def generate_report_single(self, testid):
         # generate report
-        project_name = self.project_info["project-name"]
         jacoco_cli = f"{self.dependency_fd}/jacococli.jar"
         html_report = f"{self.report_path}/jacoco-report-html/{testid}/"
         csv_report = f"{self.report_path}/jacoco-report-csv/{testid}.csv"
@@ -106,28 +118,30 @@ class CoverageExtractor:
         return coverage_score
 
     # {"<class_name>#{method_name}":{"inst_cov":"","bran_cov":""}}
-    def extract_coverage_project(self, failed_tests:list):
+    def extract_coverage_project(self, failed_tests:dict):
         focused_methods = self.project_info["focused-methods"]
         coverage = {}
         for test in focused_methods:
             testid = test["id"]
             method = test["method-name"]
             if testid in failed_tests:
+                error_info = failed_tests[testid]
                 coverage[f"{test['class']}#{method}"] = {
-                    "inst_cov": "<error>", "bran_cov": "<error>"}
+                    "inst_cov": error_info, "bran_cov": error_info}
             else:
                 package = test["package"]
                 classname = test["class"].split(".")[-1]
                 cov_score = self.extract_single_coverage(testid, package, classname, method)
+                data_id = f"{test['class']}#{method}"
                 if cov_score: 
-                    coverage[f"{test["class"]}#{method}"] = cov_score
+                    coverage[data_id] = cov_score
                 else: 
-                    coverage[f"{test["class"]}#{method}"] = {
+                    coverage[data_id] = {
                     "inst_cov": "<missing>", "bran_cov": "<misding>"}
         return coverage
 
 
-def test_coverage(datset_dir, jacoco_dir, report_path):
+def test_coverage(datset_dir, dependency_dir, report_path):
     dataset_info = utils.load_json(f"{datset_dir}/dataset_info.json")
     if not os.path.exists(report_path):
         os.mkdir(report_path)
@@ -135,7 +149,7 @@ def test_coverage(datset_dir, jacoco_dir, report_path):
         project_path = f"{datset_dir}/{info['project-url']}"
         info["project-url"] = project_path
         # run converage test & generate report
-        runner = ProjrctTestRunner(info, jacoco_dir, report_path)
+        runner = ProjrctTestRunner(info, dependency_dir, report_path)
         failed_tests = runner.run_project_test()
         # extract coverage
         extractor = CoverageExtractor(info, report_path)
@@ -147,20 +161,17 @@ def test_coverage(datset_dir, jacoco_dir, report_path):
 
 
 if __name__ == "__main__":
-    import settings as ST
-    dataset_dir = f"{ST.ROOT_PATH}/{ST.DATASET_PATH}"
-    jacoco_dir = f"{ST.ROOT_PATH}/{ST.DEPENDENCY_PATH}"
-    report_path = f"{ST.ROOT_PATH}/{ST.REPORT_PATH}"
-    test_coverage(dataset_dir, jacoco_dir, report_path)
+    # import settings as ST
+    # dataset_dir = f"{ST.ROOT_PATH}/{ST.DATASET_PATH}"
+    # jacoco_dir = f"{ST.ROOT_PATH}/{ST.DEPENDENCY_PATH}"
+    # report_path = f"{ST.ROOT_PATH}/{ST.REPORT_PATH}"
 
-    # project_path = "D:/Study/Test-coverage-tool/Jacoco"
-    # test_runner = ProjrctTestRunner(project_path)
-    # class_path = "org.jacoco.examples"
-    # class_name = "QrConfig"
-    # method_name = "toHints(BarcodeFormat)"
-    # testclass = "org.jacoco.examples.MethodHandleUtilTest"
-    # test_response = test_runner.run_singal_unit_test(testclass)
-    # # print(test_response)
-    # cov_score = test_runner.extract_coverage(class_path, class_name, method_name)
-    # print(cov_score)
-
+    project_path = "../dataset/puts/commons-csv"
+    test_runner = ProjrctTestRunner(project_path)
+    class_path = "org.jacoco.examples"
+    class_name = "QrConfig"
+    method_name = "toHints(BarcodeFormat)"
+    testclass = "org.jacoco.examples.MethodHandleUtilTest"
+    test_response = test_runner.run_singal_unit_test(testclass)
+    print(test_response)
+    pass
