@@ -55,7 +55,7 @@ class CodeSearcher:
             raise ValueError(f"Class `{class_name}` not found in code info")
         
         context = {}
-        constructor_info = ""
+        constructor_info = []
         # get the constructor info
         for constructor in class_info["constructors"]:
             ptext = []
@@ -68,8 +68,9 @@ class CodeSearcher:
                     ptext.append(f"{ptype} {pname} ") #: {pinfo['javadoc']}")
                 else:
                     ptext.append(f"{ptype} {pname}")
-            constructor_info += f"params: {'\n'.join(ptext)}\nbody:\n```java\n" + constructor["body"] + "\n```"
-        context[f"constructors for class `{class_name}`"] = f"{constructor_info}"
+            constructor_info.append(f"params: {'\n'.join(ptext)}\nbody:\n```java\n" + constructor["body"] + "\n```")
+        if len(constructor_info) > 0:
+            context[f"constructors for class `{class_name}`"] = f"{constructor_info}"
         # get existing test class
         test_url = class_url.replace("main","test").replace(".java", "Test.java")
         test_class = self._get_test_classes(test_url)
@@ -88,7 +89,7 @@ class CodeSearcher:
         content in usage context:
         - External variables (unimplemented) and methods called in the focus method
         - Code context for calling focus methods (unimplemented)
-        - Parameter & Return Value (unimplemented) in the focus method, expecially classes defined in the project
+        - Parameter & Return Value in the focus method, expecially classes defined in the project
         - API documents (optional)
         - Code summary (optional) (unimplemented)
         '''
@@ -117,15 +118,18 @@ class CodeSearcher:
                 ptext.append(f"{ptype} {pname} ") #: {pinfo['javadoc']}")
             else:
                 ptext.append(f"{ptype} {pname}")
-        if len(ptext) > 0:
-            context["parameters"] = '\n'.join(ptext)
+        if len(ptext) > 0: context["parameters"] = '\n'.join(ptext)
+        # return type in focus method
+        return_type:str = method_info["return_type"]
+        if return_type!="void" and not return_type.startswith("java"):
+            context["return type"] = return_type
         # calling methods in focus method
         cmtexts = []
         for cmethod in method_info["call_methods"]:
             method_name = cmethod["signature"]
             return_type = cmethod["return_type"]
             cmtexts.append(f"method: {method_name}, return: {return_type}")
-        context["calling methods"] = '\n'.join(cmtexts)
+        if len(cmtexts) > 0: context["calling methods"] = '\n'.join(cmtexts)
         # add more context here
         return context
 

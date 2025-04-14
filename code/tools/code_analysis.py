@@ -1,19 +1,30 @@
-from queue import Queue
+import re
 import tree_sitter_java as ts_java
+from queue import Queue
 from tree_sitter import Language, Parser
 
 class ASTParser:
+    source_code: str
     parser: Parser
     tree = None
     lines:list
 
-    def __init__(self, source_code):
+    def __init__(self):
         self.parser = Parser(Language(ts_java.language()))
+        return
+
+    # def __init__(self, source_code):
+    #     self.parser = Parser(Language(ts_java.language()))
+    #     self.parse(source_code)
+    #     return
+    
+    def parse(self, source_code):
+        self.source_code = source_code
         self.lines = source_code.splitlines()
         byte_code = source_code.encode('utf8')
         self.tree = self.parser.parse(byte_code, encoding='utf8')
         return
-    
+
     def _traverse_get(self, type):
         node_list = []
         bfs_queue = Queue()
@@ -42,25 +53,19 @@ class ASTParser:
         return functions
     
     def _get_imports(self):
-        imports = []
-        import_nodes = self._traverse_get('import_declaration')
-        for node in import_nodes:
-            # get import line
-            start_line = node.start_point[0]
-            imports.append(self.lines[start_line])
-        return imports
+        return re.findall(r'import .*;', self.source_code, re.MULTILINE)
 
 
     def get_additional_imports(self, existing_imports):
         imports = self._get_imports()
         additional_imports = []
         for imp in imports:
-            if imp.strip() not in existing_imports:
+            if imp not in existing_imports:
                 additional_imports.append(imp)
         return additional_imports
 
 
-    def get_test_cases(self):
+    def get_test_cases(self) -> list:
         test_cases = []
         functions = self._get_functions()
         for func in functions:
@@ -72,6 +77,7 @@ class ASTParser:
 #test
 if __name__ == '__main__':
     source_code = '''
+    package infostructure;
     import java.io.IOException;
     public class MyClass {
         @Test
@@ -89,6 +95,6 @@ if __name__ == '__main__':
         }
     }
     '''
-    ast = ASTParser(source_code)
-    print(ast.get_test_cases())
-    print(ast.get_additional_imports(set()))
+    # ast = ASTParser(source_code)
+    # print(ast.get_test_cases())
+    # print(ast.get_additional_imports(set()))

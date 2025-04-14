@@ -1,19 +1,32 @@
-# File path settings
-ROOT_PATH = "Path/to/Unit-Test-Generation/code" # absolute path
-DEPENDENCY_PATH = "./dependencies"
-DATASET_PATH = "../dataset/projects"
-CODE_INFO_PATH = "../dataset/project_index/json"
-# "<project>" will be replaced by the project name in the execution process
-PROMPT_PATH = "../evaluation/<project>/context+prompts" 
-TESTCLASSS_PATH = "../evaluation/<project>/test_classes"
-REPORT_PATH = "../evaluation/<project>/reports"
-# LLM settings
-MODEL = "deepseek-v3-0324"
-API_ACCOUNTS = [
-    {   
-        "base_url":"",
-        "api_key":"xxx",
-    }
-]
-# prompt selection
-PROMPT_LIST = ['cov']
+class FileStructure:
+    """
+    File structure settings
+    """
+    ROOT_PATH = "Path/to/Unit-Test-Generation/code" # absolute path
+    DEPENDENCY_PATH = "./dependencies"
+    DATASET_PATH = "../dataset/projects"
+    CODE_INFO_PATH = "../dataset/project_index"
+    # "<project>" will be replaced by the project name in the execution process
+    PROMPT_PATH = "../evaluation/<project>/context+prompts"
+    TESTCLASSS_PATH = "../evaluation/<project>/test_classes"
+    REPORT_PATH = "../evaluation/<project>/reports"
+
+class LLMSettings:
+    """
+    LLM settings
+    """
+    MODEL = "deepseek-v3-0324"
+    API_ACCOUNTS = [
+        {   
+            "base_url":"",
+            "api_key":"xxx",
+        }
+    ]
+
+class TaskSettings:
+    """
+    Task settings
+    """
+    # prompt selection
+    PROMPT_LIST = ['cov'] # ['cov', 'io', 'plan']
+    COMPILE_TEST = True

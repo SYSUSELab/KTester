@@ -3,6 +3,7 @@ import csv
 import json
 import pickle
 import shutil
+import logging
 # import xml.etree.ElementTree as ET
 # from lxml import etree
 
@@ -94,3 +95,17 @@ def copy_file(source_file, target_path, ignore_error=False):
         print(e)
         if ignore_error: return
         else: raise RuntimeError("Error occurred while copying the file.")
+
+class StreamToLogger:
+    """将标准输出/错误重定向到 logging"""
+    def __init__(self, logger, log_level=logging.INFO):
+        self.logger = logger
+        self.log_level = log_level
+        self.linebuf = ""
+
+    def write(self, buf):
+        for line in buf.rstrip().splitlines():
+            self.logger.log(self.log_level, line.rstrip())
+
+    def flush(self):
+        pass  # 兼容文件接口

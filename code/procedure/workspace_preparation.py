@@ -1,4 +1,5 @@
 import os
+import shutil
 import subprocess
 import tools.io_utils as utils
 
@@ -47,7 +48,11 @@ class WorkSpacePreparation:
         clean_cmd = ['mvn', 'clean']
         script = cd_cmd + ['&&'] + clean_cmd
         result = subprocess.run(script, shell=True)
-        # todo: add delete reports in result folder
+        # remove test classes
+        test_original = f"{project_path}/src/test-original"
+        test_dir = f"{project_path}/src/test/java/"
+        if os.path.exists(test_original) and os.path.exists(test_dir):
+            shutil.rmtree(test_dir)
         return
 
 def prepare_workspace(dataset_abs:str):

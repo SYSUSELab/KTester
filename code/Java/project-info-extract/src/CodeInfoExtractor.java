@@ -3,6 +3,7 @@ import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.ConstructorDeclaration;
 import com.github.javaparser.ast.body.FieldDeclaration;
 import com.github.javaparser.ast.body.MethodDeclaration;
+import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.JavaParserTypeSolver;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.JarTypeSolver;
@@ -23,14 +24,52 @@ import infostructure.*;
 
 public class CodeInfoExtractor extends JavaExtractor {
     Gson gson;
-    List<String> imports;
+    // List<String> imports;
+    String full_class_name;
     Dictionary<String, String> depend_type;
 
     CodeInfoExtractor() {
         super();
         this.gson = new Gson();
-        this.imports = new ArrayList<String>();
-        // this.depend_type = new Hashtable<String, String>();
+        // this.imports = new ArrayList<String>();
+    }
+
+    private JsonObject extractMethodInfo(MethodDeclaration method) {
+        String signature = method.getDeclarationAsString(true, false, false);
+        // String body = method.getDeclarationAsString() + "\n" + method.getBody().get().toString();
+        List<VariableInfo> parameters = new ArrayList<VariableInfo>();
+        method.getParameters().forEach(param -> {
+            String paramName = param.getNameAsString();
+            String paramType = resolveType(param.getType());
+            VariableInfo param_info = new VariableInfo(paramName, paramType);
+            parameters.add(param_info);
+        });
+        // get method call
+        List<MethodCallExpr> methodCalls = method.findAll(MethodCallExpr.class);
+        Set<CallMethodInfo> method_call_list = new HashSet<CallMethodInfo>();
+        for (MethodCallExpr methodCall : methodCalls) {
+            CallMethodInfo method_call_info = resolveQualifiedName(methodCall);
+            if (!method_call_info.getSignature().startsWith(full_class_name)) {
+                method_call_list.add(method_call_info);
+            }
+        }
+        // get external fields
+        Set<VariableInfo> external_fields = new HashSet<VariableInfo>();
+        method.findAll(FieldAccessExpr.class).forEach(fieldAccess -> {
+            String fieldName = fieldAccess.getNameAsString();
+            String fieldType = resolveType(fieldAccess, fieldName);
+            VariableInfo field_info = new VariableInfo(fieldName, fieldType);
+            external_fields.add(field_info);
+        });
+        // get return type
+        String return_type = resolveType(method.getType());
+        JsonObject method_info = this.gson.toJsonTree(
+                new MethodInfo(signature, parameters, method_call_list.toArray(new CallMethodInfo[0]), external_fields.toArray(new VariableInfo[0]), return_type)
+            ).getAsJsonObject();
+        String methoddoc = extractJavadoc(method);
+        if (methoddoc != null)
+            method_info.addProperty("javadoc", methoddoc);
+        return method_info;
     }
 
     private JsonObject extractClassInfo(ClassOrInterfaceDeclaration class_dec) {
@@ -42,7 +81,6 @@ public class CodeInfoExtractor extends JavaExtractor {
             String fieldName = field.getVariable(0).getNameAsString();
             String fieldType = resolveType(field.getElementType());
             VariableInfo field_info = new VariableInfo(fieldName, fieldType);
-            // classInfo.addProperty(fieldName, fieldType);
             field_list.add(this.gson.toJsonTree(field_info));
         }
         classInfo.add("fields", field_list);
@@ -74,29 +112,7 @@ public class CodeInfoExtractor extends JavaExtractor {
         JsonObject method_list = new JsonObject();
         for (MethodDeclaration method : method_nodes) {
             String method_name = method.getNameAsString();
-            String signature = method.getDeclarationAsString(true, false, false);
-            // String body = method.getDeclarationAsString() + "\n" +
-            // method.getBody().get().toString();
-            List<VariableInfo> parameters = new ArrayList<VariableInfo>();
-            method.getParameters().forEach(param -> {
-                String paramName = param.getNameAsString();
-                String paramType = resolveType(param.getType());
-                VariableInfo param_info = new VariableInfo(paramName, paramType);
-                parameters.add(param_info);
-            });
-
-            // get method call
-            List<MethodCallExpr> methodCalls = method.findAll(MethodCallExpr.class);
-            Set<CallMethodInfo> method_call_list = new HashSet<CallMethodInfo>();
-            for (MethodCallExpr methodCall : methodCalls) {
-                CallMethodInfo method_call_info = resolveQualifiedName(methodCall);
-                method_call_list.add(method_call_info);
-            }
-            JsonObject method_info = this.gson.toJsonTree(new MethodInfo(signature, parameters, method_call_list.toArray(new CallMethodInfo[0])))
-                    .getAsJsonObject();
-            String methoddoc = extractJavadoc(method);
-            if (methoddoc != null)
-                method_info.addProperty("javadoc", methoddoc);
+            JsonObject method_info = extractMethodInfo(method);
             if (method_list.has(method_name)) {
                 method_list.get(method_name).getAsJsonArray().add(this.gson.toJsonTree(method_info));
             } else {
@@ -117,14 +133,14 @@ public class CodeInfoExtractor extends JavaExtractor {
         // get class information
         JsonObject codeInfo = new JsonObject();
         String package_name = cu.getPackageDeclaration().map(pd -> pd.getNameAsString() + ".").orElse("");
-        // get imports
+        // // get imports
         // imports = getImports(cu);
         // for (String imp : imports) {
         // // depend_type.put(imp, imp);
         // }
         for (ClassOrInterfaceDeclaration classDecl : cu.findAll(ClassOrInterfaceDeclaration.class)) {
             String simple_name = classDecl.getNameAsString();
-            String full_class_name = classDecl.getFullyQualifiedName().map(fn -> fn)
+            full_class_name = classDecl.getFullyQualifiedName().map(fn -> fn)
                     .orElse(package_name + "." + simple_name);
             // depend_type.put(simple_name, full_class_name);
             JsonObject class_info = extractClassInfo(classDecl);
@@ -170,22 +186,19 @@ public class CodeInfoExtractor extends JavaExtractor {
                 });
         // get information from test files
         JsonObject test_json = new JsonObject();
-        
         if (Files.exists(test_dir)) {
             JavaParserTypeSolver test_solver = new JavaParserTypeSolver(test_dir);
             addTypeSolver(test_solver);
             Files.walk(test_dir)
                 .filter(Files::isRegularFile)
                 .filter(JavaExtractor::isJavaFile).forEach(file -> {
-                    if (isJavaFile(file)) {
-                        try {
-                            JsonObject classInfo = extractCodeInfo(file);
-                            if (classInfo != null) {
-                                classInfo.entrySet().forEach(entry -> test_json.add(entry.getKey(), entry.getValue()));
-                            }
-                        } catch (IOException e) {
-                            System.out.println("Error: " + e.getMessage());
+                    try {
+                        JsonObject classInfo = extractCodeInfo(file);
+                        if (classInfo != null) {
+                            classInfo.entrySet().forEach(entry -> test_json.add(entry.getKey(), entry.getValue()));
                         }
+                    } catch (IOException e) {
+                        System.out.println("Error: " + e.getMessage());
                     }
                 });
         }

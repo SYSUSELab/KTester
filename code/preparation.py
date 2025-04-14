@@ -1,3 +1,4 @@
+import sys
 import jpype
 import logging
 import argparse
@@ -10,6 +11,7 @@ import procedure.workspace_preparation as WSP
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-L','--log_level', type=str, default='info', help='log level: info, debug, warning, error, critical')
+    parser.add_argument('-F','--log_file', help="storage file of output info", default=None)
     parser.add_argument('-W', '--workspace', action='store_true', help='prepare workspace: True/False')
     parser.add_argument('-D', '--dataset', action='store_true', help='prepare dataset_info.json: True/False')
     parser.add_argument('-P', '--project_index', action='store_true', help='prepare project index: True/False')
@@ -33,17 +35,17 @@ def set_file_structure():
     testclass_path = FS.TESTCLASSS_PATH
     report_path = FS.REPORT_PATH
     for pj_name, pj_info in dataset_info.items():
-        project_prompt = prompt_path.replace("<project>", pj_name) 
-        gen_folder = testclass_path.replace("<project>", pj_name)
+        project_prompt = prompt_path.replace("<project>", pj_name)
+        gen_folder = testclass_path.replace("<project>", pj_name)+'/'
         report_folder = report_path.replace("<project>", pj_name)
-        report_csv = f"{report_folder}/jacoco-report-csv"
+        report_csv = f"{report_folder}/jacoco-report-csv/"
         utils.check_path(gen_folder)
         utils.check_path(report_csv)
+        
         for test_info in pj_info["focused-methods"]:
             id = test_info["id"]
-            prompt_folder = f"{project_prompt}/{id}"
-            report_html = f"{report_folder}/{id}"
-            # check path
+            prompt_folder = f"{project_prompt}/{id}/"
+            report_html = f"{report_folder}/jacoco-report-html/{id}/"
             utils.check_path(prompt_folder)
             utils.check_path(report_html)
     pass
@@ -74,7 +76,17 @@ def run(args):
 
 if __name__ == '__main__':
     args = get_args()
-    logging.basicConfig(level=args.log_level, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    if args.log_file:
+        logging.basicConfig(
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            level=args.log_level,
+            filename=args.log_file)
+        sys.stdout = utils.StreamToLogger(logging.getLogger("STDOUT"), logging.INFO)
+        sys.stderr = utils.StreamToLogger(logging.getLogger("STDERR"), logging.ERROR)
+    else:
+        logging.basicConfig(
+            level=args.log_level, 
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     jpype.startJVM(jpype.getDefaultJVMPath(), '-Xmx4g', "-Djava.class.path=./Java/project-info-extract.jar")
     run(args)
     jpype.shutdownJVM()

@@ -44,7 +44,7 @@ public class DatasetPreparation {
     private static String[] getClassInfo(CompilationUnit cu, String class_name, String method_name) {        
         
         List<String> imports = extractor.getImports(cu);
-        String packageName = cu.getPackageDeclaration().map(pd -> pd.toString()).orElse("");
+        String packageName = cu.getPackageDeclaration().map(pd -> pd.toString().trim()).orElse("");
         for (ClassOrInterfaceDeclaration class_dec: cu.findAll(ClassOrInterfaceDeclaration.class)) {
             if (class_dec.getNameAsString().equals(class_name)) {
                 // get class info: package, import, class_name, fields, method_sig
@@ -53,8 +53,10 @@ public class DatasetPreparation {
                 String declaration = class_dec.toString().split("\\{")[0].trim();
                 List<String> fields = new ArrayList<>();
                 for( FieldDeclaration field : class_dec.getFields() ) {
-                    while(field.removeJavaDocComment()){;}
-                    fields.add(field.toString()); 
+                    if (!field.isPrivate()){
+                        while(field.removeJavaDocComment()){;}
+                        fields.add(field.toString()); 
+                    }
                 }
                 List<String> method_sigs = new ArrayList<>();
                 for(ConstructorDeclaration constructor : class_dec.getConstructors()) {
@@ -67,15 +69,19 @@ public class DatasetPreparation {
                 }
                 for (MethodDeclaration method : class_dec.getMethods()){
                     String decl = method.getDeclarationAsString(true, true, false);
-                    method_sigs.add(decl);
-                    if (decl.contains(method_name)) {
-                        if (method.isPrivate()){
-                            System.out.println("error: private method " + method_name + " is not allowed.");
+                    if (method.isPrivate()){
+                        if (decl.contains(method_name)) {
+                            System.out.println("error: private method " + method_name + "in class " + class_name +" is not allowed.");
+                            return null;
                         }
-                        method_body = method.getDeclarationAsString() + method.getBody().map(mb -> mb.toString()).orElse(""); 
+                    } else {
+                        method_sigs.add(decl);
+                        if (decl.contains(method_name)) {
+                            method_body = method.getDeclarationAsString() + method.getBody().map(mb -> mb.toString()).orElse("");
+                        }
                     }
                 }
-                String class_info = packageName
+                String class_info = packageName + "\n"
                     + String.join("\n", imports)+ "\n" 
                     + declaration + " {\n    " 
                     + String.join("\n    ", fields) + "\n    " 
@@ -120,17 +126,18 @@ public class DatasetPreparation {
         methodInfo.addProperty("test-path", testPath);
 
         // get function body
-        // get class info: package,import, class_name, fields, method_sig
+        // get class info: package, import, class_name, fields, method_sig
         String simple = msplit[mlength-2];
         try {
             Path class_path = Paths.get(dataset_dir + "/" + project_url + "/" + sourcePath);
             CompilationUnit cu = extractor.parseJavaFile(class_path);
             String[] info = getClassInfo(cu, simple, method_name);
+            if(info==null) return null;
             methodInfo.addProperty("focused-method", info[0]);
             methodInfo.addProperty("class-info", info[1]);
         } catch (Exception e) {
             System.out.println("Error while parsing file: "+e.getMessage());
-            methodInfo.addProperty("focused-methods", "");
+            methodInfo.addProperty("focused-method", "");
             methodInfo.addProperty("class-info", "");        }
         return methodInfo;
     }
@@ -155,10 +162,11 @@ public class DatasetPreparation {
             for (Map.Entry<String, JsonElement> entry : methodsObj.entrySet()) {
                 String methodNameToIdx = entry.getKey();
                 JsonObject methodInfo = getMethodInfo(projectUrl, methodNameToIdx);
+                if (methodInfo == null) continue;
                 focused_methods.add(methodInfo);
             }
             
-            projectInfo.add("focused_methods", focused_methods);
+            projectInfo.add("focused-methods", focused_methods);
             datasetInfo.add(projectName, projectInfo);
         }
 

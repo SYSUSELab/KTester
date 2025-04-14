@@ -44,7 +44,7 @@ def generate_init_prompts(file_structure, dataset_info:dict):
         logger.info(f"Construct init prompts for project {pj_name}...")
         project_url = pj_info["project-url"]
         project_path = f"{dataset_dir}/{project_url}"
-        project_info = f"{code_info_path}/{pj_name}.json"
+        project_info = f"{code_info_path}/json/{pj_name}.json"
         searcher = CodeSearcher(project_path, project_info)
         for test_info in pj_info["focused-methods"]:
             id = test_info["id"]
@@ -83,7 +83,7 @@ def generate_test_case_prompts(file_structure, task_setting, dataset_info:dict):
         logger.info(f"Construct test case prompts for project {pj_name}...")
         project_url = pj_info["project-url"]
         project_path = f"{dataset_dir}/{project_url}"
-        project_info = f"{code_info_path}/{pj_name}.json"
+        project_info = f"{code_info_path}/json/{pj_name}.json"
         searcher = CodeSearcher(project_path, project_info)
         for test_info in pj_info["focused-methods"]:
             id = test_info["id"]

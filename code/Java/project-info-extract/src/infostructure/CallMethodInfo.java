@@ -13,6 +13,10 @@ public class CallMethodInfo {
         this.return_type = rtn;
     }
 
+    public String getSignature() {
+        return signature;
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;

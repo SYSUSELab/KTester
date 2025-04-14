@@ -1,4 +1,5 @@
 import os
+import re
 import time
 import logging
 import argparse
@@ -12,8 +13,8 @@ from tools.code_analysis import ASTParser
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-L','--log_level', type=str, default='info', help='log level: info, debug, warning, error, critical')
+    parser.add_argument('-F','--log_file', help="storage file of output info", default=None)
     parser.add_argument('-P', '--prepare', action='store_true', help='prepare workspace: True/False')
-    # parser.add_argument('--operation',type=str, default='precision', help='evaluation operation: ?')
 
     args = parser.parse_args()
     log_level = {
@@ -44,34 +45,10 @@ def generate_testclass_framework(dataset_info: dict):
             prompt = utils.load_text(f"{project_prompt}/{id}/init_prompt.md")
             code = llm_caller.get_response(prompt)
             class_name = test_info["test-class"].split('.')[-1]
+            check_class_name(code, class_name)
             save_path = f"{gen_folder}/{class_name}.java"
             utils.write_text(save_path, code)
     return
-
-
-def insert_test_case(init_class:str, insert_code:str):
-    init_class = init_class.strip()
-    insert_code = insert_code.lstrip()
-    lines = init_class.splitlines()
-    insert_ast = ASTParser(insert_code)
-    # insert import lines
-    last_import_idx = -1
-    for i, line in enumerate(lines):
-        if line.strip().startswith('import '):
-            last_import_idx = i
-    existing_imports = set()
-    for line in lines[:last_import_idx+1]:
-        if line.strip().startswith('import '):
-            existing_imports.add(line.strip())
-    additional_imports = insert_ast.get_additional_imports(existing_imports)
-    if len(additional_imports) > 0:
-        lines = lines[:last_import_idx+1] + additional_imports + lines[last_import_idx+1:]
-    # insert test case
-    add_test_case = insert_ast.get_test_cases()
-    lines = lines[:-1] + add_test_case + [lines[-1]]
-    added_class = '\n'.join(lines)
-    return added_class
-
 
 def generate_testcase(dataset_info: dict):
     prompt_path = FS.PROMPT_PATH
@@ -97,6 +74,32 @@ def generate_testcase(dataset_info: dict):
             utils.write_text(save_path, code)
     return
 
+def check_class_name(init_class:str, tcname:str):
+    class_name = re.findall(r'class (\w*)(<.*>)?( extends [\w]+)?', init_class)[0][0]
+    if class_name != tcname:
+        init_class = init_class.replace(class_name, tcname)
+    return
+
+def insert_test_case(init_class:str, insert_code:str):
+    init_class = init_class.strip()
+    insert_code = insert_code.lstrip()
+    insert_ast = ASTParser().parse(insert_code)
+    lines = init_class.splitlines()
+    # insert import lines
+    last_import_idx = -1
+    for i, line in enumerate(lines):
+        if line.strip().startswith('import '):
+            last_import_idx = i
+    existing_imports = set(re.findall(r'import .*;', init_class, re.MULTILINE))
+    additional_imports = insert_ast.get_additional_imports(existing_imports)
+    if len(additional_imports) > 0:
+        lines = lines[:last_import_idx+1] + additional_imports + lines[last_import_idx+1:]
+    # insert test case
+    add_test_case = insert_ast.get_test_cases()
+    lines = lines[:-1] + add_test_case + [lines[-1]]
+    added_class = '\n'.join(lines)
+    return added_class
+
 
 # todo: a complete procedure for singal case in dataset
 def run():
@@ -114,7 +117,9 @@ def run():
     '''
     dataset_path = FS.DATASET_PATH
     dataset_info = utils.load_json(f"{dataset_path}/dataset_info.json")
+    logger = logging.getLogger(__name__)
     
+    logger.info("Running: Generate unit test...")
     start_time = time.time()
     GP.generate_init_prompts(FS, dataset_info)
     GP.generate_test_case_prompts(FS, TS, dataset_info)
@@ -122,11 +127,19 @@ def run():
     generate_testcase(dataset_info)
     end_time = time.time()
     elapsed_time = end_time - start_time
-    print(f"Elapsed time: {elapsed_time:.2f} seconds")
+    logger.info(f"Elapsed time: {elapsed_time:.2f} seconds")
     return
 
 
 if __name__ == '__main__':
     args = get_args()
-    logging.basicConfig(level=args.log_level, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    if args.log_file:
+        logging.basicConfig(
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            level=args.log_level,
+            filename=args.log_file)
+    else:
+        logging.basicConfig(
+            level=args.log_level, 
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     run()

@@ -5,6 +5,7 @@ import logging
 from bs4 import BeautifulSoup
 
 import tools.io_utils as utils
+from tools.code_analysis import ASTParser
 
 
 class ProjrctTestRunner:
@@ -26,7 +27,6 @@ class ProjrctTestRunner:
         project_name = self.project_info["project-name"]
         project_url = self.project_info["project-url"]
         test_objects = self.project_info["focused-methods"]
-        failed_tests = {}
         self.test_result = {}
 
         self.logger.info(f"Running tests for project: {project_name}")
@@ -34,18 +34,20 @@ class ProjrctTestRunner:
             test_class = tobject["test-class"]
             test_path = tobject["test-path"]
             testid = tobject["id"]
+            method = tobject["method-name"]
             class_path = f"{self.testclass_path}/{test_path.split('/')[-1]}"
             utils.copy_file(class_path, f"{project_url}/{test_path}")
+            data_id = f"{tobject['class']}#{method}"
+            self.test_result[data_id] = {}
             if compile and not self.compile_test(test_path):
-                failed_tests[testid] = "compile error"
+                self.test_result[data_id]["error_type"] = "compile error"
                 continue
-            if not self.run_singal_unit_test(testid, test_class):
-                failed_tests[testid] = "execution error"
+            if not self.run_singal_unit_test(data_id, test_class):
+                self.test_result[data_id]["error_type"] = "execution error"
                 continue
-            # todo: add test pass rate
             if not self.generate_report_single(testid):
-                failed_tests[testid] = "report error"
-        return failed_tests, self.test_result
+                self.test_result[data_id]["error_type"] = "report error"
+        return self.test_result
 
     def compile_test(self, class_path):
         compile_cmd = ["javac","-cp","@dependencies.txt","-d","target/test-classes",class_path]
@@ -62,7 +64,7 @@ class ProjrctTestRunner:
         passed = int(re.findall(r"([0-9]+) tests successful", test_info)[0])
         return (cases, passed)
 
-    def run_singal_unit_test(self, testid, testclass):
+    def run_singal_unit_test(self, data_id, testclass):
         self.logger.info(f"Running single unit test, testclass: {testclass}")
         test_dependencies = f"libs/*;target/test-classes;target/classes;{self.dependency_fd}/*"
         java_agent = f"-javaagent:{self.dependency_fd}/jacocoagent.jar=destfile=target/jacoco.exec"
@@ -73,13 +75,15 @@ class ProjrctTestRunner:
         if result.returncode == 2:
             self.logger.info(f"test execution info: {test_info}")
             test_cases, passed_cases = self.get_pass_rate(test_info)
-            self.test_result[testid] = {"test_cases": test_cases, "passed_cases": passed_cases}
+            self.test_result[data_id]["test_cases"] = test_cases
+            self.test_result[data_id]["passed_cases"] = passed_cases
             return True
         elif test_info.find("Test run finished")!=-1:
-            self.logger.warning("return code: ", result.returncode)
+            self.logger.warning(f"return code: {result.returncode}")
             self.logger.warning(f"test case failed in {testclass}, info:\n{result.stderr}\n{test_info}")
             test_cases, passed_cases = self.get_pass_rate(test_info)
-            self.test_result[testid] = {"test_cases": test_cases, "passed_cases": passed_cases}
+            self.test_result[data_id]["test_cases"] = test_cases
+            self.test_result[data_id]["passed_cases"] = passed_cases
             return True
         else:
             self.logger.error(f"error occured in execute test class {testclass}, info:\n{result.stderr}\n{test_info}")
@@ -90,11 +94,10 @@ class ProjrctTestRunner:
         jacoco_cli = f"{self.dependency_fd}/jacococli.jar"
         html_report = f"{self.report_path}/jacoco-report-html/{testid}/"
         csv_report = f"{self.report_path}/jacoco-report-csv/{testid}.csv"
-        # report_cmd = ['java', '-jar', jacoco_cli, "report", "target/jacoco.exec", "--classfiles", "target/classes", "--html", html_report, "--csv", csv_report]
         report_cmd = ['java', '-jar', jacoco_cli, "report", "target/jacoco.exec", '--classfiles', 'target/classes', '--sourcefiles', 'src/main/java', "--html", html_report, "--csv", csv_report]
         script = self.cd_cmd + report_cmd
-        result = subprocess.run(script, capture_output=True, text=True, shell=True)
 
+        result = subprocess.run(script, capture_output=True, text=True, shell=True)
         if result.returncode!= 0:
             self.logger.error(f"error occured in generate report, info:\n{result.stderr}")
             return False
@@ -102,13 +105,21 @@ class ProjrctTestRunner:
 
 
 class CoverageExtractor:
-
     project_info: dict
+    report_path: str
+    astparser: ASTParser
+    error_type = {
+        "compile error": 1,
+        "execution error": 2,
+        "report error": 3,
+    }
 
     def __init__(self, project_info, rpt_path):
         self.project_info = project_info
         self.report_path = rpt_path.replace("<project>",project_info["project-name"])
+        self.astparser = ASTParser()
         self.logger = logging.getLogger(__name__)
+        
 
     def extract_single_coverage(self, testid, package, classname, method):
         # extract coverage
@@ -127,43 +138,52 @@ class CoverageExtractor:
                 method_name = tds[0].span.string
             except AttributeError:
                 method_name = tds[0].a.string
-            # encode(byte[], int, int, BaseNCodec.Context)
-            method = " ".join(method_parts).replace("(", "( ")
+            method_name = method_name.replace("(", "( ")
             method_parts = [ part.split(".")[-1] if "." in part else part
                 for part in method_name.split()
             ]
-            method = " ".join(method_parts).replace("( ", "(")
+            method_name = " ".join(method_parts).replace("( ", "(")
             if method_name != method: continue
             instruction_cov = float(tds[2].string.replace("%", ""))/100
             branch_cov = float(tds[4].string.replace("%", ""))/100
             coverage_score = {"inst_cov": instruction_cov, "bran_cov": branch_cov}
             break
-        # return coverage results
         return coverage_score
 
-    def extract_coverage_project(self, failed_tests:dict, test_result:dict):
+    def generate_project_summary(self, test_result:dict):
         """
         result format:
         {   
             "<class_name>#{method_name}": {
                 "error_type": <error type>
+                "test_cases": number,
+                "passed_cases": number,
             },
             "<class_name>#{method_name}": {
-                "test_cases": number, 
+                "test_cases": number,
                 "passed_cases": number,
                 "inst_cov": <instruction coverage>,
                 "bran_cov": <branch coverage>
-            }
+            },
+            "compile_pass_rate": compiled/total,
+            "execution_pass_rate": successed/total,
+            "average_instruction_coverage": <average instruction coverage>,
+            "average_branch_coverage": <average branch coverage>
         }
         """
+        project_path = self.project_info["project-url"]
         focused_methods = self.project_info["focused-methods"]
         summary = test_result.copy()
         for test in focused_methods:
             testid = test["id"]
             method = test["method-name"]
-            if testid in failed_tests:
-                error_info = failed_tests[testid]
-                summary[f"{test['class']}#{method}"] = { "error_type": error_info}
+            data_id = f"{test['class']}#{method}"
+            if "error_type" in summary[data_id]:
+                if "test_cases" not in summary[data_id]:
+                    class_path = project_path + '/' + test["test-path"]
+                    self.astparser.parse(utils.load_text(class_path))
+                    test_cases = len(self.astparser.get_test_cases())
+                    summary[data_id].update({"test_cases": test_cases, "passed_cases": 0})
             else:
                 package = test["package"]
                 classname = test["class"].split(".")[-1]
@@ -173,7 +193,39 @@ class CoverageExtractor:
                     summary[data_id].update(cov_score)
                 else: 
                     summary[data_id].update({"inst_cov": "<missing>", "bran_cov": "<missing>"})
+        self.count_general_metrics(summary)
         return summary
+
+    def count_general_metrics(self, summary:dict):
+        case_num = 0
+        compile_num = 0
+        pass_num = 0
+        cov_num = 0
+        inst_cov = 0.0
+        bran_cov = 0.0
+        for _, item in summary.items():
+            test_cases = item.get("test_cases", 0)
+            passed_cases = item.get("passed_cases", 0)
+            case_num += test_cases
+            if "error_type" in item:
+                error_type = self.error_type[item["error_type"]]
+                if error_type > 1:
+                    compile_num += test_cases
+                if error_type > 2:
+                    pass_num += passed_cases
+            else:
+                compile_num += test_cases
+                pass_num += test_cases
+                cov_num += 1
+                inst_cov += item["inst_cov"]
+                bran_cov += item["bran_cov"]
+        summary.update({
+            "compile_pass_rate": compile_num/case_num if case_num > 0 else 0,
+            "execution_pass_rate": pass_num/case_num if case_num > 0 else 0,
+            "average_instruction_coverage": inst_cov/cov_num if cov_num > 0 else 0.0,
+            "average_branch_coverage": bran_cov/cov_num if cov_num > 0 else 0.0
+        })
+        return
 
 
 def test_coverage(fstruct, task_setting, dataset_info: dict):
@@ -183,17 +235,19 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
     report_path = f"{root_path}/{fstruct.REPORT_PATH}"
     dependency_dir = f"{root_path}/{fstruct.DEPENDENCY_PATH}"
     compile_test = task_setting.COMPILE_TEST
+    logger = logging.getLogger(__name__)
 
     for pj_name, info in dataset_info.items():
         project_path = f"{dataset_dir}/{info['project-url']}"
         info["project-url"] = project_path
         # run converage test & generate report
         runner = ProjrctTestRunner(info, dependency_dir, testclass_path, report_path)
-        failed_tests, test_result = runner.run_project_test(compile_test)
+        test_result = runner.run_project_test(compile_test)
+        print(test_result)
         # extract coverage
         extractor = CoverageExtractor(info, report_path)
-        coverage_data = extractor.extract_coverage_project(failed_tests, test_result)
-        print(f"report data:\n{coverage_data}")
+        coverage_data = extractor.generate_project_summary(test_result)
+        logger.info(f"report data:\n{coverage_data}")
         coverage_file = f"{report_path}/summary.json".replace("<project>", pj_name)
         utils.write_json(coverage_file, coverage_data)
     return

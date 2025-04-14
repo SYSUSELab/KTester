@@ -8,19 +8,19 @@ from settings import FileStructure as FS, TaskSettings as TS
 
 def get_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--log_level', type=str, default='info', help='log level: info, debug, warning, error, critical')
-    # evaluation mode
-    parser.add_argument('--operation',type=str, default='precision', help='evaluation operation: coverage')
+    parser.add_argument('-L','--log_level', type=str, default='info', help='log level: info, debug, warning, error, critical')
+    parser.add_argument('-F','--log_file', help="storage file of output info", default=None)
+    parser.add_argument('-O','--operation',type=str, default='precision', help='evaluation operation: coverage')
 
     args = parser.parse_args()
-    # log_level = {
-    # 'info': logging.INFO,
-    # 'debug': logging.DEBUG,
-    # 'warning': logging.WARNING,
-    # 'error': logging.ERROR,
-    # 'critical': logging.CRITICAL
-    # }
-    # args.log_level = log_level[args.log_level]
+    log_level = {
+    'info': logging.INFO,
+    'debug': logging.DEBUG,
+    'warning': logging.WARNING,
+    'error': logging.ERROR,
+    'critical': logging.CRITICAL
+    }
+    args.log_level = log_level[args.log_level]
     return args
 
 '''
@@ -38,6 +38,14 @@ def run(operation):
 
 if __name__ == "__main__":
     args = get_args()
-    logging.basicConfig(level=args.log_level, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    if args.log_file:
+        logging.basicConfig(
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+            level=args.log_level,
+            filename=args.log_file)
+    else:
+        logging.basicConfig(
+            level=args.log_level, 
+            format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
     run(args.operation)
     
