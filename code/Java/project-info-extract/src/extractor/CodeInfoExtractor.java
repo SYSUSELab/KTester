@@ -232,13 +232,14 @@ public class CodeInfoExtractor extends JavaParserExtractor {
         return enum_info;
     }
 
-    public JsonObject extractCodeInfo(Path javaFile) throws IOException {
+    public JsonObject extractCodeInfo(Path javaFile, Path base_path) throws IOException {
         CompilationUnit cu = parseJavaFile(javaFile);
         if (cu == null)
             return null;
         // get class information
         JsonObject codeInfo = new JsonObject();
         String package_name = cu.getPackageDeclaration().map(pd -> pd.getNameAsString()).orElse("");
+        String relative_path = base_path.relativize(javaFile).toString();
         // // get imports
         // imports = getImports(cu);
         // for (String imp : imports) {
@@ -250,7 +251,8 @@ public class CodeInfoExtractor extends JavaParserExtractor {
                     .orElse(package_name + "." + simple_name);
             // depend_type.put(simple_name, full_class_name);
             JsonObject class_info = extractClassInfo(classDecl);
-            class_info.addProperty("is_interface", classDecl.isInterface());
+            // class_info.addProperty("is_interface", classDecl.isInterface());
+            class_info.addProperty("file", relative_path);
             String javadoc = extractJavadoc(classDecl);
             if (javadoc != null)
                 class_info.addProperty("javadoc", javadoc);
@@ -262,6 +264,7 @@ public class CodeInfoExtractor extends JavaParserExtractor {
                     .orElse(package_name + "." + simple_name);
             // depend_type.put(simple_name, full_class_name);
             JsonObject enum_info = extractEnumInfo(enum_decl);
+            enum_info.addProperty("file", relative_path);
             String javadoc = extractJavadoc(enum_decl);
             if (javadoc != null)
                 enum_info.addProperty("javadoc", javadoc);
@@ -290,7 +293,7 @@ public class CodeInfoExtractor extends JavaParserExtractor {
                 .filter(Files::isRegularFile)
                 .filter(JavaParserExtractor::isJavaFile).forEach(file -> {
                     try {
-                        JsonObject classInfo = extractCodeInfo(file);
+                        JsonObject classInfo = extractCodeInfo(file, source_dir);
                         if (classInfo != null) {
                             classInfo.entrySet()
                                     .forEach(entry -> source_json.add(entry.getKey(), entry.getValue()));
@@ -308,7 +311,7 @@ public class CodeInfoExtractor extends JavaParserExtractor {
                 .filter(Files::isRegularFile)
                 .filter(JavaParserExtractor::isJavaFile).forEach(file -> {
                     try {
-                        JsonObject classInfo = extractCodeInfo(file);
+                        JsonObject classInfo = extractCodeInfo(file, test_dir);
                         if (classInfo != null) {
                             classInfo.entrySet().forEach(entry -> test_json.add(entry.getKey(), entry.getValue()));
                         }

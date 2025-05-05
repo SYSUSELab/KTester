@@ -1,138 +1,205 @@
+import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
+import org.apache.lucene.document.SortedDocValuesField;
+import org.apache.lucene.document.StoredField;
 import org.apache.lucene.document.StringField;
-import org.apache.lucene.document.TextField;
 import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
 import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
+import org.apache.lucene.util.BytesRef;
 
-import java.io.File;
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonElement;
+import com.google.gson.JsonObject;
+
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.security.InvalidParameterException;
+import java.util.Map;
 
 /**
  * Index Builder class - used to add documents and build Lucene index
  */
 public class IndexBuilder {
+    private final Path code_info_path;
     private final Path index_path;
-    private final StandardAnalyzer analyzer;
+    private Analyzer analyzer;
     private Directory directory;
     private IndexWriter index_writer;
 
     public static void main(String[] args) {
         int arg_len = args.length;
-        if (arg_len < 1) {
-            throw new IllegalArgumentException("missing argument: project root");
+        if (arg_len < 3) {
+            throw new IllegalArgumentException("Arguments for IndexBuilder:<mode> <project path> <index path>");
         }
-        if (arg_len < 2) {
-            throw new IllegalArgumentException("missing argument: index path");
-        }
-        System.out.println("Hello, World!");
-        Path project_root = Paths.get(args[0]);
-        Path index_path = Paths.get(args[1]);
-        if (!Files.isDirectory(project_root)){
-            throw new InvalidParameterException("project root should be a directory!");
+        String mode = args[0];
+        Path code_path = Paths.get(args[1]);
+        Path index_path = Paths.get(args[2]);
+        if (!Files.isDirectory(code_path)){
+            throw new IllegalArgumentException("project root should be a directory!");
         }
         if (!Files.exists(index_path)) {
             try {
                 Files.createDirectories(index_path); 
-            }
-            catch (IOException e) {
+            } catch (IOException e) {
                 System.out.println("Failed to create output directory: " + index_path);
                 System.out.println(e.getMessage());
                 System.exit(1);
             }
         }
-        IndexBuilder builder = new IndexBuilder(index_path);
+        if (mode.equals("single")) {
+            IndexBuilder builder = new IndexBuilder(code_path, index_path);
+            builder.startSingle();
+        } else if (mode.equals("group")) {
+            IndexBuilder builder = new IndexBuilder(code_path, index_path);
+            builder.startGroup();
+        } else {
+            throw new IllegalArgumentException("Usage for mode: single or group" + mode);
+        }
     }
 
     /**
      * initializes the index builder
      * @param indexPath Path to store the index
      */
-    public IndexBuilder(Path index_path) {
+    public IndexBuilder(Path project_root, Path index_path) {
         this.index_path = index_path;
-        this.analyzer = new StandardAnalyzer();
-        // this.directory = FSDirectory.open(index_path);
-        IndexWriterConfig config = new IndexWriterConfig(analyzer);
-        config.setOpenMode(OpenMode.CREATE_OR_APPEND);
-        // this.index_writer = new IndexWriter(directory, config);
+        this.code_info_path = project_root;
+    }
+
+    /**
+     * Parse the source code info from json file
+     */
+    protected void ParseSourceCodeInfo(Path file_path){
+        JsonObject code_info;
+        try{
+            code_info = loadJson(file_path).getAsJsonObject();
+        } catch (Exception e) {
+            System.out.println("Failed to load json file: " + code_info_path);
+            System.out.println(e.getMessage());
+            return;
+        }
+        JsonObject source_info = code_info.getAsJsonObject("source");
+        for (Map.Entry<String, JsonElement> class_entry : source_info.entrySet()) {
+            String class_fqn = class_entry.getKey();
+            JsonObject class_info = class_entry.getValue().getAsJsonObject();
+            String file = class_info.get("file").getAsString();
+            JsonObject methods = class_info.get("methods").getAsJsonObject();
+
+            for (Map.Entry<String, JsonElement> method_entry : methods.entrySet()) {
+                JsonObject method_info = method_entry.getValue().getAsJsonObject();
+                String method_sig = method_info.get("signature").getAsString();
+                int start = method_info.get("start_line").getAsInt();
+                int end = method_info.get("end_line").getAsInt();
+                JsonArray call_func = method_info.get("calls").getAsJsonArray();
+                JsonArray call_field = method_info.get("fields").getAsJsonArray();
+                String[] call_func_str = new String[call_func.size()];
+                String[] call_field_str = new String[call_field.size()];
+                for (int i = 0; i < call_func.size(); i++) {
+                    call_func_str[i] = call_func.get(i).getAsString();
+                }
+                for (int i = 0; i < call_field.size(); i++) {
+                    call_field_str[i] = call_field.get(i).getAsString();
+                }
+                addDocument(class_fqn, method_sig, file, start, end, call_func_str, call_field_str);
+            }
+        }
+        return;
     }
 
     /**
      * Add text document to index
-     * @param id Unique identifier for the document
-     * @param title Document title
-     * @param content Document content
-     * @throws IOException If an error occurs while adding the document
+     * document format:
+     * @param class_fqn: class fully qualified name
+     * @param func_sig function signature
+     * @param file file path of source code
+     * @param start position of the function
+     * @param end position of the function
+     * @param call_func call function
+     * @param call_field call field
      */
-    public void addDocument(String id, String title, String content) throws IOException {
+    protected void addDocument(String class_fqn, String func_sig, String file, int start, int end, String[] call_func, String[] call_field) {
         Document document = new Document();
         
         // Add non-tokenized field (for exact match)
-        document.add(new StringField("id", id, Field.Store.YES));
-        
-        // Add tokenized field (for full-text search)
-        document.add(new TextField("title", title, Field.Store.YES));
-        document.add(new TextField("content", content, Field.Store.YES));
-        
-        index_writer.addDocument(document);
+        document.add(new StoredField("class_fqn", class_fqn));
+        document.add(new StoredField("signature", func_sig));
+        document.add(new StoredField("file", file));
+        document.add(new StoredField("start", start));
+        document.add(new StoredField("end", end));
+        for(String func : call_func){
+            document.add(new StringField("cfuncs", func, Field.Store.YES));
+            document.add(new SortedDocValuesField("cfunc_dv", new BytesRef(func)));
+        }
+        for(String field : call_field){
+            document.add(new StringField("cfields", field, Field.Store.YES));
+            document.add(new SortedDocValuesField("cfield_dv", new BytesRef(field)));
+        }
+
+        try {
+            index_writer.addDocument(document);
+        } catch (IOException e) {
+            System.out.println("Failed to add document: " + file + "#" + func_sig);
+            System.out.println(e.getMessage());
+        }
+        return;
     }
-    
+
     /**
-     * Add file to index
-     * @param id Unique identifier for the document
-     * @param title Document title
-     * @param file File to be indexed
-     * @throws IOException If an error occurs while adding the file
-     */
-    public void addFile(String id, String title, File file) throws IOException {
-        Document document = new Document();
-        
-        document.add(new StringField("id", id, Field.Store.YES));
-        document.add(new TextField("title", title, Field.Store.YES));
-        document.add(new TextField("filename", file.getName(), Field.Store.YES));
-        document.add(new TextField("filepath", file.getCanonicalPath(), Field.Store.YES));
-        
-        // Add file content
-        document.add(new TextField("content", new FileReader(file)));
-        
-        index_writer.addDocument(document);
-    }
-    
-    /**
-     * Commit changes and close the index writer
-     * @throws IOException If an error occurs during commit
-     */
-    public void commit() throws IOException {
-        index_writer.commit();
-    }
-    
-    /**
-     * Close the index writer and directory
-     * @throws IOException If an error occurs during closing
+     * Commit changes and close the index writer and directory
+     * @throws IOException If an error occurs during commit or closing
      */
     public void close() throws IOException {
         if (index_writer != null) {
+            index_writer.commit();
             index_writer.close();
         }
         if (directory != null) {
             directory.close();
         }
     }
+
+    public void startSingle() {
+        this.analyzer = new StandardAnalyzer();
+        IndexWriterConfig config = new IndexWriterConfig(analyzer);
+        config.setOpenMode(OpenMode.CREATE);
+        try {
+            this.directory = FSDirectory.open(index_path);
+            this.index_writer = new IndexWriter(directory, config);
+            ParseSourceCodeInfo(code_info_path);
+            close();
+        } catch (IOException e) {
+            System.out.println("Failed to open directory: " + index_path);
+            System.out.println(e.getMessage());
+            System.exit(1);
+        }
+    }
+
+    public void startGroup() {
+        throw new UnsupportedOperationException("Not implemented");
+    }
     
     /**
      * Get the number of indexed documents
-     * @return Number of documents in the index
      */
     public int getDocumentCount() {
         return index_writer.getDocStats().numDocs;
+    }
+
+    /**
+     * load data from json file
+     */
+    protected JsonElement loadJson(Path filePath) throws IOException, FileNotFoundException {
+        FileReader reader = new FileReader(filePath.toFile());
+        JsonElement result = new Gson().fromJson(reader, JsonElement.class);
+        return result;
     }
 }
