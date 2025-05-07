@@ -143,6 +143,7 @@ public class CodeInfoExtractor extends JavaParserExtractor {
         List<ConstructorDeclaration> constructors = class_dec.getConstructors();
         JsonArray constructor_list = new JsonArray();
         for (ConstructorDeclaration constructor : constructors) {
+            if (constructor.getAnnotationByClass(Deprecated.class)!=null) continue;
             JsonObject constructor_info = extractConstuctorInfo(constructor);
             constructor_list.add(constructor_info);
         }
@@ -152,6 +153,7 @@ public class CodeInfoExtractor extends JavaParserExtractor {
         List<FieldDeclaration> fields = class_dec.getFields();
         JsonArray field_list = new JsonArray();
         for (FieldDeclaration field : fields) {
+            if (field.getAnnotationByClass(Deprecated.class)!=null) continue;
             String fieldName = field.getVariable(0).getNameAsString();
             String fieldType = resolveType(field.getElementType());
             int position[] = getPosition(field);
@@ -165,6 +167,7 @@ public class CodeInfoExtractor extends JavaParserExtractor {
         List<MethodDeclaration> method_nodes = class_dec.getMethods();
         JsonObject method_list = new JsonObject();
         for (MethodDeclaration method : method_nodes) {
+            if (method.getAnnotationByClass(Deprecated.class)!=null) continue;
             String method_name = method.getNameAsString();
             JsonObject method_info = extractMethodInfo(method);
             if (method_list.has(method_name)) {
@@ -246,6 +249,7 @@ public class CodeInfoExtractor extends JavaParserExtractor {
         // // depend_type.put(imp, imp);
         // }
         for (ClassOrInterfaceDeclaration classDecl : cu.findAll(ClassOrInterfaceDeclaration.class)) {
+            if (classDecl.getAnnotationByClass(Deprecated.class)!=null) continue;
             String simple_name = classDecl.getNameAsString();
             full_class_name = classDecl.getFullyQualifiedName().map(fn -> fn)
                     .orElse(package_name + "." + simple_name);
@@ -259,6 +263,7 @@ public class CodeInfoExtractor extends JavaParserExtractor {
             codeInfo.add(full_class_name, class_info);
         }
         for(EnumDeclaration enum_decl: cu.findAll(EnumDeclaration.class)){
+            if (enum_decl.getAnnotationByClass(Deprecated.class)!=null) continue;
             String simple_name = enum_decl.getNameAsString();
             full_class_name = enum_decl.getFullyQualifiedName().map(fn -> fn)
                     .orElse(package_name + "." + simple_name);

@@ -62,7 +62,7 @@ class LLMCaller:
         try:
             output = self.generation(prompt)
             response = self.handle_output(output)
-                return [response, output]
+            return [response, output]
         except Exception as e:
             # self.logger.error(f"Error: {e}")
             return ["",""]
