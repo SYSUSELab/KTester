@@ -89,7 +89,7 @@ def generate_testcase(dataset_info: dict):
                 logger.debug("get response")
                 init_class = insert_test_case(init_class, code)
                 logger.debug("insert test case")
-            utils.write_text(save_path, code)
+            utils.write_text(save_path, init_class)
             if save_res:
                 response_path = f"{project_response}/{id}/{prompt_name}_response.md"
                 utils.write_text(response_path, response)

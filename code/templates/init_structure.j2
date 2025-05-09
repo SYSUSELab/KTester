@@ -1,18 +1,16 @@
-You are a professional Java developer. I will provide you with a Java class with its context and a test class template. Your task is to generate a test class framework for this class based on the template. You don't need to generate test cases, just complete the functions in the template.
+You are tasked with creating a framework for a test class in Java. Now analyze the following information carefully:
 
-Please analyze the following information and help me complete the test class template:
+1. The method that needs to be tested and its parameters.
+2. The constructor of the target class and its parameters.
+3. Any dependencies or external resources used by the target class.
 
-1. The target class and its constructor parameters
-2. Field declarations and their types
-3. Dependencies and external resources used by the class
+Based on this analysis, complete the test class template in the provided structure:
 
-Requirements:
-1. Complete the setupBeforeAll(), setupBeforeEach(), teardownAfterEach(), and teardownAfterAll() methods
-2. Initialize necessary fields and dependencies
-3. Handle any required cleanup
-4. Ensure the generated code has no syntax errors
-
-Please provide the completed test class template with proper field declarations and setup/teardown methods.
+1. Initialize necessary fields and dependencies within setupBeforeAll() and setupBeforeEach().
+2. Handle any required cleanup in teardownAfterEach() and teardownAfterAll().
+3. Make sure not to invoke any private methods or fields of the target class and dependent class.
+4. Refer to the "given" phase in the existing test class for guidance.
+5. Add necessary import statements and ensure there are no syntax errors in the generated code.
 
 @input{focused method and target class}
 Here is the code of focal method, `{{method_name}}`, with the focal class `{{ class_name }}`:
@@ -27,6 +25,7 @@ Here is the code of focal method, `{{method_name}}`, with the focal class `{{ cl
 {{ value }}
 {% endfor %}
 {% endif %}
+
 @input{test class template}
 ```java
 package {{ package_name }};

@@ -45,14 +45,15 @@ def generate_init_prompts(file_structure, dataset_info:dict):
         project_url = pj_info["project-url"]
         project_path = f"{dataset_dir}/{project_url}"
         project_info = f"{code_info_path}/json/{pj_name}.json"
-        searcher = CodeSearcher(project_path, project_info)
+        project_index = f"{code_info_path}/lucene/{pj_name}"
+        searcher = CodeSearcher(project_path, project_info, project_index)
         for test_info in pj_info["focused-methods"]:
             id = test_info["id"]
             prompt_dir = f"{prompt_path}/{id}".replace("<project>", pj_name)
             if not os.path.exists(prompt_dir):
                 os.makedirs(prompt_dir)
             # get context
-            construct_context = searcher.collect_construct_context(test_info["class"], test_info["source-path"])
+            construct_context = searcher.collect_construct_context(test_info["class"], test_info["method-name"], test_info["source-path"])
             contxet_file = f"{prompt_dir}/init_context.json"
             utils.write_json(contxet_file, construct_context)
             # generate prompt

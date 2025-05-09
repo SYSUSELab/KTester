@@ -1,19 +1,44 @@
-from copy import deepcopy
 import os
 import re
+import json
+import jpype
 import logging
-from turtle import position
 
 import tools.io_utils as utils
-from code_analysis import SnippetReader
+
+
+class SnippetReader:
+    project_path: str
+    cache = {}
+    def __init__(self, pj_path):
+        self.project_path = pj_path
+        pass
+
+    def read_lines(self, file_path, start_line, end_line):
+        if start_line < 0 or start_line is None: start_line = 0
+        if end_line < start_line: end_line = start_line + 1
+        if self.cache.get(file_path) is None:
+            content:str = utils.load_text(f"{self.project_path}/{file_path}")
+            lines = content.splitlines()
+            end_line = min(end_line, len(lines)-1)
+            self.cache[file_path] = lines
+            return lines[start_line:end_line]
+        else:
+            lines = self.cache[file_path]
+            end_line = min(end_line, len(lines)-1)
+            return lines[start_line:end_line]
+
+
 
 class CodeSearcher:
     project_path: str
+    index_path: str
     code_info: dict
     snippet_reader: SnippetReader
 
-    def __init__(self, project_path: str, code_info_path: str):
+    def __init__(self, project_path: str, code_info_path: str, index_path:str):
         self.project_path = project_path
+        self.index_path = index_path
         self.logger = logging.getLogger(__name__)
         self.logger.info(f"Loading code info from {code_info_path}")
         self.code_info = utils.load_json(code_info_path)
@@ -65,6 +90,44 @@ class CodeSearcher:
                 full_context[key] = value
         return full_context
 
+
+    class DependentClassInfo:
+        """
+        "class_fqn": {
+            "APIdoc": "xxxxx",
+            "dep_field": ["decalaration"],
+            "dep_func": ["apidoc + sig + body(?)"]
+            "rel_func": ["apidoc(?) + sig + annotation + body(?)"]
+        }
+        """
+        class_dict = {}
+        def __init__(self): pass
+        def update_info(self, class_name, key, value):
+            if class_name not in self.class_dict:
+                self.class_dict[class_name] = {key:value}
+            elif key not in self.class_dict[class_name]:
+                self.class_dict[class_name][key] = value
+            elif isinstance(self.class_dict[class_name][key],set):
+                self.class_dict[class_name][key].add(value)
+            else:
+                self.class_dict[class_name].update({key:value})
+
+        def __str__(self):
+            class_info = []
+            for class_name, info in self.class_dict.items():
+                pcontext = f"class `{class_name}`:\n\t"
+                if "javadoc" in info:
+                    pcontext += f"class document: " + info['javadoc']+ "\n\t"
+                if "dep_field" in info:
+                    pcontext += f"dependent fields:\n\t\t" + '\n\t\t'.join(info['dep_field']) + "\n\t"
+                if "dep_func" in info:
+                    pcontext += f"dependent functions:\n\t\t" + '\n\t\t'.join(info['dep_func']) + "\n\t"
+                if "rel_func" in info:
+                    pcontext += f"related functions:\n\t" + '\n\t\t'.join(info['rel_func'])
+                class_info.append(pcontext)
+            return '\n'.join(class_info)
+
+
     # todo: compress overlong context
     def collect_construct_context(self, class_name, method_name:str, class_url):
         '''
@@ -112,7 +175,7 @@ class CodeSearcher:
             if pinfo is not None:
                 pclass[ptype] = pinfo
         for param, pinfo in pclass.items():
-            pcontext = "class `{param}`:\n"
+            pcontext = f"class `{param}`:\n"
             if "javadoc" in pinfo:
                 pcontext += f"api document : {pinfo['javadoc']}\n"
             pcontext += f"constructor:\n```java\n"
@@ -152,16 +215,12 @@ class CodeSearcher:
             raise ValueError(f"Method `{method_name}` not found in class `{class_name}`")
         # collect the context
         context = {}
-        depclass = {}
-        def update_depclass(class_name, key, value):
-            if class_name not in depclass:
-                depclass[class_name] = {key:value}
-            elif key not in depclass[class_name]:
-                depclass[class_name][key] = value
-            elif  isinstance(depclass[class_name][key],set):
-                depclass[class_name][key].append(value)
-            else:
-                depclass[class_name].update({key:value})
+        depclass = self.DependentClassInfo()
+        query_list = [{
+            "sig": class_name + "." + method_info["signature"].split(" "),
+            "function": method_info["call_methods"],
+            "field": method_info["external_fields"],
+        }]
         
         # api documents
         if "javadoc" in class_info:
@@ -169,12 +228,11 @@ class CodeSearcher:
         if "javadoc" in method_info:
             context[f"api document of method {method_name}"] = method_info["javadoc"]
         # parameters in focus method
-        ptext = []
         for param in method_info["parameters"]:
             ptype = param["type"]
             pinfo = self._get_class_info(ptype)
             if pinfo is not None:
-                update_depclass(ptype, {"APIdoc":pinfo["javadoc"]})
+                depclass.update_info(ptype, "APIdoc", pinfo["javadoc"])
             pass
         # return type in focus method
         return_type:str = method_info["return_type"]
@@ -187,19 +245,55 @@ class CodeSearcher:
             method_name = method_sig.split(".")[-1]
             cinfo = self._get_class_info(class_name)
             if cinfo is not None:
-                update_depclass(class_name, {"APIdoc":cinfo["javadoc"]})
+                depclass.update_info(class_name, "APIdoc", cinfo["javadoc"])
                 minfo = self._get_method_info(cinfo, method_name)
                 if minfo is not None:
-                    update_depclass(class_name, {"dep_func":minfo["javadoc"]+minfo["signature"]})
-
-            if len(class_name) == 0: continue
-            class_name = class_name[0]
-            return_type = cmethod["return_type"]
-            # any other infomation?
-            cmtexts.append(f"method: {method_name}, return: {return_type}")
-        if len(cmtexts) > 0: context["calling methods"] = '\n'.join(cmtexts)
+                    api_doc = minfo.get("javadoc")
+                    return_type = minfo["return_type"]
+                    cmtext = f"method `{method_name}` returns `{return_type}`"
+                    if api_doc is not None: cmtext += f", api document: {api_doc}"
+                    depclass.update_info(class_name, "dep_func", [cmtext])
+                    query_list.append({
+                        "sig": '.'.join(method_sig),
+                        "function": minfo["call_methods"],
+                        "field": minfo["external_fields"],
+                    })
+        # external field in focus method
+        for field in method_info["external_fields"]:
+            fqn = field["name"]
+            ftype = field["type"]
+            class_name = '.'.join(fqn.split(".")[:-1])
+            if self._get_class_info(class_name) is not None:
+                depclass.update_info(class_name, "dep_field", f"{ftype} {fqn};")
+        # related functions
+        sim_funcs = self.search_similar_function(query_list)
+        for func in sim_funcs:
+            class_fqn = func["class_fqn"]
+            method_sig = func["method_sig"]
+            caller = func["related_func"]
+            cinfo = self._get_class_info(class_fqn)
+            minfo = self._get_method_info(cinfo, method_sig)
+            api_doc = minfo.get("javadoc")
+            return_type = minfo["return_type"]
+            cmtext = f"method `{method_name}` returns `{return_type}`"
+            cmtext += f", related with `{"`, `".join(caller)}`"
+            if api_doc is not None: cmtext += f", api document: {api_doc}"
+            depclass.update_info(class_fqn, "rel_func", [cmtext])
         # add more context here
         return context
+
+    def search_similar_function(self, query:list) -> list[dict]:
+        """
+        Search the similar function in the Java project and extract the context.
+        Args:
+            target_function: Function to search for.
+        Returns:
+            A list containing similar function information. Each element is a dictionary containing file path, line number, and context.
+        """
+        CodeSearcher = jpype.JClass("CodeSearcher")
+        result_str = CodeSearcher.main([self.project_path, self.index_path, query])
+        results = json.loads(result_str)
+        return results
 
     # def search_class_usage(self, target_class: str) -> List[Dict]:
     #     """
@@ -212,16 +306,16 @@ class CodeSearcher:
     #     results = []
     #     return results
 
-    def search_method_usage(self, target_method: str) -> list[dict]:
-        """
-        Search the usage of the specified method name in the Java project and extract the context.
-        Args:
-            target_method: Method to search for.
-        Returns:
-            A list containing method usage information. Each element is a dictionary containing file path, line number, and context.
-        """
-        results = []
-        return results
+    # def search_method_usage(self, target_method: str) -> list[dict]:
+    #     """
+    #     Search the usage of the specified method name in the Java project and extract the context.
+    #     Args:
+    #         target_method: Method to search for.
+    #     Returns:
+    #         A list containing method usage information. Each element is a dictionary containing file path, line number, and context.
+    #     """
+    #     results = []
+    #     return results
 
 
 if __name__ == "__main__":
