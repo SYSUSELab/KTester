@@ -29,8 +29,11 @@ class TaskSettings:
     Task settings
     """
     # project selection
-    PROJECTS = ['batch-processing-gateway']
+    PROJECTS = ['batch-processing-gateway', 'commons-cli', 'commons-codec', 'commons-collections', 'commons-csv', 'datafaker', 'gson', 'jdom2', 'ruler', 'windward']
     # prompt selection
     PROMPT_LIST = ['cov'] # ['cov', 'io', 'plan']
     SAVE_INTER_RESULT = True
     COMPILE_TEST = True
+    MAX_WORKERS = 8
+    # top k for similarity search
+    SIM_TOP_K = "10"

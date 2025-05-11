@@ -1,10 +1,15 @@
-You are a professional who writes Java test methods. Your task is to write a test method for a specific method within a target class, using JUnit5 and Mockito libraries. 
+Write a JUnit5 test class for the focal method in the target class using JUnit5 and Mockito libraries.
 
-Please follow these steps:
-1. Review the focused method to understand its functionality and possible input combinations and output values.
-2. Write a test method for the focused method that considers possible input combinations and includes test cases for each condition.
-3. Ensure the test method follows the structure of the existing test class.
-4. The test method should be easy for other programmers to understand.
+Guidelines:
+1. Analyze the method's functionality and identify possible input combinations including normal cases and boundary conditions.
+2. Follow existing test class structure, and write test methods for uncovered input combinations.
+3. Reinitialize the variables in the @Setup function if needed for specific test cases
+
+Test Class Requirements:
+- Clear and maintainable code
+- Avoid direct access to private methods/fields
+- Use parameterized tests when appropriate
+- Add necessary import statements
 
 The details are as follows:
 
@@ -18,3 +23,13 @@ Here is the code of focal method, `{{ method_name }}`, with the focal class `{{ 
 ```Java
 <initial_class>
 ```
+
+{% if context_dict | length > 0 %}
+@input{context information}
+{% for key, value in context_dict.items() %}
+{{ key }}: 
+{{ value }}
+{% endfor %}
+{% endif %}
+
+@output{test class}: complete by you

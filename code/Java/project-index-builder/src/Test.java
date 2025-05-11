@@ -9,9 +9,9 @@ public class Test{
         }
 
         // // test IndexBuilder
-        // String mode = "single";
-        // String code_path = "../../../dataset/project_index/json/batch-processing-gateway.json";
-        // String index_path = "../../../dataset/project_index/lucene/batch-processing-gateway";
+        // String mode = "group";
+        // String code_path = "../../../dataset/project_index/json";
+        // String index_path = "../../../dataset/project_index/lucene";
         // String[] arguments = new String[] {mode, code_path, index_path};
         // IndexBuilder.main(arguments);
 

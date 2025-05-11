@@ -33,20 +33,24 @@ class PromptGenerator:
         return prompts
 
 
-def generate_init_prompts(file_structure, dataset_info:dict):
+def generate_init_prompts(file_structure, task_setting, dataset_info:dict):
     dataset_dir = file_structure.DATASET_PATH
     code_info_path = file_structure.CODE_INFO_PATH
     prompt_path = file_structure.PROMPT_PATH
+    projects = task_setting.PROJECTS
+    top_k = task_setting.SIM_TOP_K
+    select = True if len(projects)>0 else False
     generator = PromptGenerator('./templates', [])
     logger = logging.getLogger(__name__)
 
     for pj_name, pj_info in dataset_info.items():
+        if select and pj_name not in projects: continue
         logger.info(f"Construct init prompts for project {pj_name}...")
         project_url = pj_info["project-url"]
         project_path = f"{dataset_dir}/{project_url}"
         project_info = f"{code_info_path}/json/{pj_name}.json"
         project_index = f"{code_info_path}/lucene/{pj_name}"
-        searcher = CodeSearcher(project_path, project_info, project_index)
+        searcher = CodeSearcher(project_path, project_info, project_index, top_k)
         for test_info in pj_info["focused-methods"]:
             id = test_info["id"]
             prompt_dir = f"{prompt_path}/{id}".replace("<project>", pj_name)
@@ -59,7 +63,7 @@ def generate_init_prompts(file_structure, dataset_info:dict):
             # generate prompt
             test_class_name =  test_info["test-class"].split('.')[-1]
             content = {
-                "method_name": test_info["focused-method"],
+                "method_name": test_info["method-name"],
                 "class_name": test_info["class"].split('.')[-1],
                 "class_code": test_info["class-code"],
                 "package_name": test_info["package"],
@@ -78,15 +82,20 @@ def generate_test_case_prompts(file_structure, task_setting, dataset_info:dict):
     code_info_path = file_structure.CODE_INFO_PATH
     prompt_path = file_structure.PROMPT_PATH
     gen_prompt_list = task_setting.PROMPT_LIST
+    projects = task_setting.PROJECTS
+    top_k = task_setting.SIM_TOP_K
+    select = True if len(projects)>0 else False
     generator = PromptGenerator('./templates', gen_prompt_list)
     logger = logging.getLogger(__name__)
     
     for pj_name, pj_info in dataset_info.items():
+        if select and pj_name not in projects: continue
         logger.info(f"Construct test case prompts for project {pj_name}...")
         project_url = pj_info["project-url"]
         project_path = f"{dataset_dir}/{project_url}"
         project_info = f"{code_info_path}/json/{pj_name}.json"
-        searcher = CodeSearcher(project_path, project_info)
+        project_index = f"{code_info_path}/lucene/{pj_name}"
+        searcher = CodeSearcher(project_path, project_info, project_index, top_k)
         for test_info in pj_info["focused-methods"]:
             id = test_info["id"]
             prompt_dir = f"{prompt_path}/{id}".replace("<project>", pj_name)
@@ -96,7 +105,7 @@ def generate_test_case_prompts(file_structure, task_setting, dataset_info:dict):
             utils.write_json(contxet_file, usage_context)
             # generate prompt
             content = {
-                "method_name": test_info["focused-method"],
+                "method_name": test_info["method-name"],
                 "class_name": test_info["class"].split('.')[-1],
                 "class_code": test_info["class-code"],
                 "context_dict": usage_context,

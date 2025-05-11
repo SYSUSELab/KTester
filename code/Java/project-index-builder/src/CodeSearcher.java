@@ -78,6 +78,10 @@ public class CodeSearcher {
         }
         return "";
     }
+
+    public CodeSearcher() {
+        this.index_path = null;
+    }
     
     /**
      * Initialize the search engine
@@ -94,7 +98,7 @@ public class CodeSearcher {
         this.func_dv = MultiDocValues.getSortedSetValues(index_reader, "cfunc_dv");
         this.field_dv = MultiDocValues.getSortedSetValues(index_reader, "cfield_dv");
         setResultSet();
-        System.out.println("number of doc: "+this.index_reader.numDocs());
+        // System.out.println("number of doc: "+this.index_reader.numDocs());
     }
 
     private void setResultSet(){
@@ -281,9 +285,7 @@ public class CodeSearcher {
         String[] qfunc = query.function;
         String[] qfield = query.field;
         long[] qcOrds = getOrds(index_searcher.getIndexReader(), "cfunc_dv", qfunc);
-        System.out.println("finish function ord, length: "+qcOrds.length);
         long[] qfOrds = getOrds(index_searcher.getIndexReader(), "cfield_dv", qfield);
-        System.out.println("finish field ord, length: "+qfOrds.length);
 
         // 构造两个 JaccardSimilarityQuery
         Query simCalls  = new JaccardSimilarityQuery("cfunc_dv",  qcOrds, qfunc.length, w_c);
@@ -295,7 +297,6 @@ public class CodeSearcher {
             .build();
 
         TopDocs results = index_searcher.search(combined, top_k);
-        System.out.println("finish search");
         for (ScoreDoc sd : results.scoreDocs) {
             Document doc = index_searcher.storedFields().document(sd.doc);
             ResultFormat result = new ResultFormat(doc.get("class_fqn"), 
@@ -314,6 +315,7 @@ public class CodeSearcher {
         // 将结果集转换为JsonArray 并只保留分数最高的 k 个结果
         System.out.println(this.results.size()+" results found.");
         List<ResultFormat> topResults = new ArrayList<>(this.results);
+        topResults.removeIf(result -> result.score == 1);
         topResults = topResults.subList(0, Math.min(topResults.size(), this.top_k));
         JsonArray result_list = new Gson().toJsonTree(topResults).getAsJsonArray();
         return result_list;

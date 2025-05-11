@@ -1,0 +1,37 @@
+You are a professional software tester. Write a **JUnit 5** test class using **Mockito** library for a focal method in a target class.
+
+**Instructions:**
+
+1. Understand the focal method's behavior.
+2. Identify all exception-throwing scenarios, and design test cases to cover them.
+3. Follow the structure of the existing test class, and write test methods for uncovered exception scenarios.
+4. Reinitialize variables in a `@BeforeEach` method if necessary.
+
+**Requirements:**
+
+- Use descriptive test method names and meaningful comments.
+- Do not access private methods or fields of target class and dependent class directly.
+- Include all necessary imports; ensure the code is syntactically correct.
+
+The details are as follows:
+
+@input{focused method and target class}
+Here is the code of focal method, `{{method_name}}`, with the focal class `{{ class_name }}`:
+```Java
+{{ class_code }}
+```
+
+@input{existing test class}
+```Java
+<initial_class>
+```
+
+{% if context_dict | length > 0 %}
+@input{context information}
+{% for key, value in context_dict.items() %}
+{{ key }}: 
+{{ value }}
+{% endfor %}
+{% endif %}
+
+@output{test class}: complete by you

@@ -32,10 +32,12 @@ def set_file_structure():
     dataset_dir = f"{FS.DATASET_PATH}/dataset_info.json"
     dataset_info = utils.load_json(dataset_dir)
     prompt_path = FS.PROMPT_PATH
+    response_path = FS.RESPONSE_PATH
     testclass_path = FS.TESTCLASSS_PATH
     report_path = FS.REPORT_PATH
     for pj_name, pj_info in dataset_info.items():
         project_prompt = prompt_path.replace("<project>", pj_name)
+        project_response = response_path.replace("<project>", pj_name)
         gen_folder = testclass_path.replace("<project>", pj_name)+'/'
         report_folder = report_path.replace("<project>", pj_name)
         report_csv = f"{report_folder}/jacoco-report-csv/"
@@ -45,8 +47,10 @@ def set_file_structure():
         for test_info in pj_info["focused-methods"]:
             id = test_info["id"]
             prompt_folder = f"{project_prompt}/{id}/"
+            response_folder = f"{project_response}/{id}/"
             report_html = f"{report_folder}/jacoco-report-html/{id}/"
             utils.check_path(prompt_folder)
+            utils.check_path(response_folder)
             utils.check_path(report_html)
     pass
 
@@ -59,7 +63,7 @@ def run(args):
 
     if args.workspace:
         logger.info("Preparing workspace...")
-        WSP.prepare_workspace(dataset_abs)
+        # WSP.prepare_workspace(dataset_abs)
         set_file_structure()
     if args.dataset:
         logger.info("Preparing dataset_info.json ...")
@@ -67,8 +71,8 @@ def run(args):
         DatasetProcessor.main([dataset_abs])
     if args.project_index:
         logger.info("Constructing project index ...")
-        ProjectPreprocessor = jpype.JClass("PreProcessor")
-        ProjectPreprocessor.main([dataset_abs, f"{code_info_path}/json"])
+        # ProjectPreprocessor = jpype.JClass("PreProcessor")
+        # ProjectPreprocessor.main([dataset_abs, f"{code_info_path}/json"])
         IndexBuilder = jpype.JClass("IndexBuilder")
         IndexBuilder.main(["group", f"{code_info_path}/json", f"{code_info_path}/lucene"])
     

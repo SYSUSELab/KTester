@@ -33,12 +33,14 @@ class SnippetReader:
 class CodeSearcher:
     project_path: str
     index_path: str
+    top_k: str
     code_info: dict
     snippet_reader: SnippetReader
 
-    def __init__(self, project_path: str, code_info_path: str, index_path:str):
+    def __init__(self, project_path: str, code_info_path: str, index_path:str, top_k):
         self.project_path = project_path
         self.index_path = index_path
+        self.top_k = top_k
         self.logger = logging.getLogger(__name__)
         self.logger.info(f"Loading code info from {code_info_path}")
         self.code_info = utils.load_json(code_info_path)
@@ -66,7 +68,7 @@ class CodeSearcher:
         '''
         method_info = next(
             (m_info for method, m_infos in class_info["methods"].items()
-             if method_name.startswith(method)
+             if method_name.find(method) != -1
              for m_info in m_infos if m_info["signature"].endswith(method_name)),
             None
         )
@@ -75,7 +77,7 @@ class CodeSearcher:
     def _extract_snippet(self, context:dict):
         full_context = {}
         for key, value in context.items():
-            finds = re.findall(r"(<position:\[(.*)\]>)", value, re.DOTALL)
+            finds = re.findall(r"(<position:\[([^>]*)\]>)", value, re.DOTALL)
             if len(finds) > 0:
                 for find in finds:
                     pivot = find[0]
@@ -102,15 +104,19 @@ class CodeSearcher:
         """
         class_dict = {}
         def __init__(self): pass
-        def update_info(self, class_name, key, value):
+        def update_str(self, class_name, key, value):
             if class_name not in self.class_dict:
                 self.class_dict[class_name] = {key:value}
-            elif key not in self.class_dict[class_name]:
-                self.class_dict[class_name][key] = value
-            elif isinstance(self.class_dict[class_name][key],set):
-                self.class_dict[class_name][key].add(value)
             else:
-                self.class_dict[class_name].update({key:value})
+                self.class_dict[class_name][key] = value
+
+        def update_list(self, class_name, key, value):
+            if class_name not in self.class_dict:
+                self.class_dict[class_name] = {key:set([value])}
+            elif key not in self.class_dict[class_name]:
+                self.class_dict[class_name][key] = set([value])
+            else:
+                self.class_dict[class_name][key].add(value)
 
         def __str__(self):
             class_info = []
@@ -121,9 +127,9 @@ class CodeSearcher:
                 if "dep_field" in info:
                     pcontext += f"dependent fields:\n\t\t" + '\n\t\t'.join(info['dep_field']) + "\n\t"
                 if "dep_func" in info:
-                    pcontext += f"dependent functions:\n\t\t" + '\n\t\t'.join(info['dep_func']) + "\n\t"
+                    pcontext += f"dependent functions:\n\t\t" + ';\n\t\t'.join(info['dep_func']) + ";\n\t"
                 if "rel_func" in info:
-                    pcontext += f"related functions:\n\t" + '\n\t\t'.join(info['rel_func'])
+                    pcontext += f"related functions:\n\t\t" + ';\n\t\t'.join(info['rel_func']) +";"
                 class_info.append(pcontext)
             return '\n'.join(class_info)
 
@@ -145,7 +151,7 @@ class CodeSearcher:
             raise ValueError(f"Method `{method_name}` not found in class `{class_name}`")
 
         self.snippet_reader = SnippetReader(self.project_path)
-        source_path = class_info["file"]
+        source_path = "/src/main/java/"+class_info["file"]
         context = {}
         pclass = {}
         # get api document
@@ -162,8 +168,10 @@ class CodeSearcher:
                 if pinfo is not None:
                     pclass[ptype] = pinfo
                     ptext.append(f"{ptype} {pname} ")
-            body_pos = [source_path,constructor["start_line"],constructor["end_line"]]
-            constructor_info.append(f"params: {'\n'.join(ptext)}\nbody:\n```java\n<position:{body_pos}>\n```")
+            start_line = constructor["start_line"]
+            end_line = constructor["end_line"]
+            body_pos = f"<position:[{source_path}, {start_line}, {end_line}]>"
+            constructor_info.append(f"params: {'\n'.join(ptext)}\nbody:\n```java\n{body_pos}\n```")
         if len(constructor_info) > 0:
             context[f"constructors for class `{class_name}`"] = '\n'.join(constructor_info)
         # parameter in constructor & focus method
@@ -180,8 +188,10 @@ class CodeSearcher:
                 pcontext += f"api document : {pinfo['javadoc']}\n"
             pcontext += f"constructor:\n```java\n"
             for constructor in pinfo["constructors"]:
-                body_pos = [pinfo["file"],constructor["start_line"],constructor["end_line"]]
-                pcontext += f"<position:{body_pos}>\n"
+                file_path = "src/main/java/" + pinfo["file"].replace("\\","/")
+                start_line = constructor["start_line"]
+                end_line = constructor["end_line"]
+                pcontext += f"<position:[{file_path}, {start_line}, {end_line}]>\n"
             pcontext += f"```"
             parameter_info.append(pcontext)
         if len(parameter_info) > 0:
@@ -217,9 +227,9 @@ class CodeSearcher:
         context = {}
         depclass = self.DependentClassInfo()
         query_list = [{
-            "sig": class_name + "." + method_info["signature"].split(" "),
-            "function": method_info["call_methods"],
-            "field": method_info["external_fields"],
+            "sig": class_name + "." + method_info["signature"].split(" ")[-1],
+            "function": [cm["signature"] for cm in method_info["call_methods"]],
+            "field": [cf["name"] for cf in method_info["external_fields"]],
         }]
         
         # api documents
@@ -232,7 +242,8 @@ class CodeSearcher:
             ptype = param["type"]
             pinfo = self._get_class_info(ptype)
             if pinfo is not None:
-                depclass.update_info(ptype, "APIdoc", pinfo["javadoc"])
+                if "javadoc" in pinfo:
+                    depclass.update_str(ptype, "APIdoc", pinfo["javadoc"])
             pass
         # return type in focus method
         return_type:str = method_info["return_type"]
@@ -242,21 +253,22 @@ class CodeSearcher:
         for cmethod in method_info["call_methods"]:
             method_sig = cmethod["signature"].split(".")
             class_name = '.'.join(method_sig[:-1])
-            method_name = method_sig.split(".")[-1]
+            method_name = method_sig[-1]
             cinfo = self._get_class_info(class_name)
             if cinfo is not None:
-                depclass.update_info(class_name, "APIdoc", cinfo["javadoc"])
+                if "javadoc" in cinfo:
+                    depclass.update_str(class_name, "APIdoc", cinfo["javadoc"])
                 minfo = self._get_method_info(cinfo, method_name)
                 if minfo is not None:
                     api_doc = minfo.get("javadoc")
                     return_type = minfo["return_type"]
                     cmtext = f"method `{method_name}` returns `{return_type}`"
                     if api_doc is not None: cmtext += f", api document: {api_doc}"
-                    depclass.update_info(class_name, "dep_func", [cmtext])
+                    depclass.update_list(class_name, "dep_func", cmtext)
                     query_list.append({
                         "sig": '.'.join(method_sig),
-                        "function": minfo["call_methods"],
-                        "field": minfo["external_fields"],
+                        "function": [cm["signature"] for cm in minfo["call_methods"]],
+                        "field":[cf["name"] for cf in minfo["external_fields"]],
                     })
         # external field in focus method
         for field in method_info["external_fields"]:
@@ -264,21 +276,22 @@ class CodeSearcher:
             ftype = field["type"]
             class_name = '.'.join(fqn.split(".")[:-1])
             if self._get_class_info(class_name) is not None:
-                depclass.update_info(class_name, "dep_field", f"{ftype} {fqn};")
+                depclass.update_list(class_name, "dep_field", f"{ftype} {fqn};")
         # related functions
         sim_funcs = self.search_similar_function(query_list)
+        self.logger.debug(f"length of search result: {len(sim_funcs)}")
         for func in sim_funcs:
             class_fqn = func["class_fqn"]
-            method_sig = func["method_sig"]
+            method_sig = func["signature"]
             caller = func["related_func"]
             cinfo = self._get_class_info(class_fqn)
             minfo = self._get_method_info(cinfo, method_sig)
             api_doc = minfo.get("javadoc")
             return_type = minfo["return_type"]
-            cmtext = f"method `{method_name}` returns `{return_type}`"
-            cmtext += f", related with `{"`, `".join(caller)}`"
+            cmtext = f"method `{method_sig}` returns `{return_type}`, related with `{"`, `".join(caller)}`"
             if api_doc is not None: cmtext += f", api document: {api_doc}"
-            depclass.update_info(class_fqn, "rel_func", [cmtext])
+            depclass.update_list(class_fqn, "rel_func", cmtext)
+        context["dependent classes"] = str(depclass)
         # add more context here
         return context
 
@@ -291,7 +304,7 @@ class CodeSearcher:
             A list containing similar function information. Each element is a dictionary containing file path, line number, and context.
         """
         CodeSearcher = jpype.JClass("CodeSearcher")
-        result_str = CodeSearcher.main([self.project_path, self.index_path, query])
+        result_str = str(CodeSearcher.main([self.project_path, self.index_path, str(query), self.top_k]))
         results = json.loads(result_str)
         return results
 

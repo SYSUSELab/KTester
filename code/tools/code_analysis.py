@@ -3,8 +3,6 @@ import tree_sitter_java as ts_java
 from queue import Queue
 from tree_sitter import Language, Parser
 
-import io_utils
-
 class ASTParser:
     source_code: str
     parser: Parser

@@ -1,16 +1,17 @@
 import os
-import re
 import sys
 import time
 import jpype
 import logging
 import argparse
+import concurrent.futures
+from threading import Lock
 
 import tools.io_utils as utils
-import procedure.generate_prompt as GP
+import procedure.generate_prompt as GenPrompt
+import procedure.post_process as Post
 from settings import FileStructure as FS, TaskSettings as TS
 from tools.llm_api import LLMCaller
-from tools.code_analysis import ASTParser
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -35,10 +36,26 @@ def generate_testclass_framework(dataset_info: dict):
     gen_path = FS.TESTCLASSS_PATH
     projects = TS.PROJECTS
     save_res = TS.SAVE_INTER_RESULT
+    mworkers = TS.MAX_WORKERS
     select = True if len(projects)>0 else False
-    llm_caller = LLMCaller()
     logger = logging.getLogger(__name__)
+    file_lock = Lock() # ensure thread-safe file writing
+    llm_callers = [LLMCaller() for _ in range(mworkers)]
 
+    def process_init_response(llm_caller:LLMCaller, test_info, project_prompt, project_response, gen_folder):
+        id = test_info["id"]
+        prompt = utils.load_text(f"{project_prompt}/{id}/init_prompt.md")
+        code, response = llm_caller.get_response(prompt)
+        class_name = test_info["test-class"].split('.')[-1]
+        Post.check_class_name(code, class_name)
+        test_class_path = f"{gen_folder}/{class_name}.java"
+        with file_lock:
+            utils.write_text(test_class_path, code)
+            if save_res:
+                res_path = f"{project_response}/{id}/init_response.md"
+                utils.write_text(res_path, response)
+        return id
+    
     for pj_name, pj_info in dataset_info.items():
         if select and pj_name not in projects: continue
         logger.info(f"Generating test class framework for project {pj_name}...")
@@ -47,17 +64,29 @@ def generate_testclass_framework(dataset_info: dict):
         gen_folder = gen_path.replace("<project>", pj_name)
         if not os.path.exists(gen_folder):
             os.makedirs(gen_folder)
-        for test_info in pj_info["focused-methods"]:
-            id = test_info["id"]
-            prompt = utils.load_text(f"{project_prompt}/{id}/init_prompt.md")
-            code, response = llm_caller.get_response(prompt)
-            class_name = test_info["test-class"].split('.')[-1]
-            check_class_name(code, class_name)
-            test_class_path = f"{gen_folder}/{class_name}.java"
-            utils.write_text(test_class_path, code)
-            if save_res:
-                response_path = f"{project_response}/{id}/init_response.md"
-                utils.write_text(response_path, response)
+        logger.debug(f"max workers: {mworkers}")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=mworkers) as executor:
+            futures = []
+            api_count = 0
+            for test_info in pj_info["focused-methods"]:
+                future = executor.submit(
+                    process_init_response, 
+                    llm_callers[api_count],
+                    test_info, 
+                    project_prompt, 
+                    project_response, 
+                    gen_folder
+                )
+                futures.append(future)
+                api_count = (api_count+1) % mworkers
+            # wait for all tasks complete
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    id = future.result()
+                    logger.info(f"Completed test class framework generation for {id}")
+                except Exception as e:
+                    logger.error(f"Error processing test framework for {id}: {e}")
+
     return
 
 def generate_testcase(dataset_info: dict):
@@ -67,9 +96,31 @@ def generate_testcase(dataset_info: dict):
     prompt_list = TS.PROMPT_LIST
     projects = TS.PROJECTS
     save_res = TS.SAVE_INTER_RESULT
+    mworkers = TS.MAX_WORKERS
     select = True if len(projects)>0 else False
-    llm_caller = LLMCaller()
     logger = logging.getLogger(__name__)
+    file_lock = Lock()
+    llm_callers = [LLMCaller() for _ in range(mworkers)]
+
+    def process_case_response(llm_caller:LLMCaller, test_info, project_prompt, project_response, gen_folder):
+        class_name = test_info["test-class"].split('.')[-1]
+        id = test_info["id"]
+        save_path = f"{gen_folder}/{class_name}.java"
+        init_class = utils.load_text(save_path)
+        for prompt_name in prompt_list:
+            prompt = utils.load_text(f"{project_prompt}/{id}/{prompt_name}_prompt.md")
+            prompt = prompt.replace('<initial_class>', init_class)
+            code, response = llm_caller.get_response(prompt)
+            logger.debug("finish get response")
+            init_class = Post.insert_test_case(init_class, code)
+            logger.debug("finish insert test case")
+            if save_res:
+                response_path = f"{project_response}/{id}/{prompt_name}_response.md"
+                with file_lock:
+                    utils.write_text(response_path, response)
+        with file_lock:
+            utils.write_text(save_path, init_class)
+        return id
 
     for pj_name, pj_info in dataset_info.items():
         if select and pj_name not in projects: continue
@@ -77,53 +128,33 @@ def generate_testcase(dataset_info: dict):
         project_prompt = prompt_path.replace("<project>", pj_name)
         project_response = response_path.replace("<project>", pj_name)
         gen_folder = gen_path.replace("<project>", pj_name)
-        for test_info in pj_info["focused-methods"]:
-            class_name = test_info["test-class"].split('.')[-1]
-            id = test_info["id"]
-            save_path = f"{gen_folder}/{class_name}.java"
-            init_class = utils.load_text(f"{gen_folder}/{class_name}.java")
-            for prompt_name in prompt_list:
-                prompt = utils.load_text(f"{project_prompt}/{id}/{prompt_name}_prompt.md")
-                prompt = prompt.replace('<initial_class>', init_class)
-                code, response = llm_caller.get_response(prompt)
-                logger.debug("get response")
-                init_class = insert_test_case(init_class, code)
-                logger.debug("insert test case")
-            utils.write_text(save_path, init_class)
-            if save_res:
-                response_path = f"{project_response}/{id}/{prompt_name}_response.md"
-                utils.write_text(response_path, response)
+        logger.debug(f"max workers: {mworkers}")
+        with concurrent.futures.ThreadPoolExecutor(max_workers=mworkers) as executor:
+            futures = []
+            api_count = 0
+            for test_info in pj_info["focused-methods"]:
+                future = executor.submit(
+                    process_case_response, 
+                    llm_callers[api_count],
+                    test_info, 
+                    project_prompt, 
+                    project_response, 
+                    gen_folder
+                )
+                futures.append(future)
+                api_count = (api_count+1) % mworkers
+            # wait for all tasks complete
+            for future in concurrent.futures.as_completed(futures):
+                try:
+                    id = future.result()
+                    logger.info(f"Completed test case generation for {id}")
+                except Exception as e:
+                    logger.error(f"Error processing test framework for {id}: {e}")
+                    
     return
 
-def check_class_name(init_class:str, tcname:str):
-    class_name = re.findall(r'class (\w*)(<.*>)?( extends [\w]+)?', init_class)[0][0]
-    if class_name != tcname:
-        init_class = init_class.replace(class_name, tcname)
-    return
 
-def insert_test_case(init_class:str, insert_code:str):
-    init_class = init_class.strip()
-    insert_code = insert_code.lstrip()
-    insert_ast = ASTParser()
-    insert_ast.parse(insert_code)
-    lines = init_class.splitlines()
-    # insert import lines
-    last_import_idx = -1
-    for i, line in enumerate(lines):
-        if line.strip().startswith('import '):
-            last_import_idx = i
-    existing_imports = set(re.findall(r'import .*;', init_class, re.MULTILINE))
-    additional_imports = insert_ast.get_additional_imports(existing_imports)
-    if len(additional_imports) > 0:
-        lines = lines[:last_import_idx+1] + additional_imports + lines[last_import_idx+1:]
-    # insert test case
-    add_test_case = insert_ast.get_test_cases()
-    lines = lines[:-1] + add_test_case + [lines[-1]]
-    added_class = '\n'.join(lines)
-    return added_class
-
-
-# todo: a complete procedure for singal case in dataset
+# TODO: a complete procedure for singal case in dataset
 def run():
     '''
     procedure:
@@ -140,16 +171,27 @@ def run():
     dataset_path = FS.DATASET_PATH
     dataset_info = utils.load_json(f"{dataset_path}/dataset_info.json")
     logger = logging.getLogger(__name__)
-    
-    logger.info("Running: Generate unit test...")
     start_time = time.time()
-    GP.generate_init_prompts(FS, dataset_info)
-    GP.generate_test_case_prompts(FS, TS, dataset_info)
+
+    prompt_gen_start = time.time()
+    GenPrompt.generate_init_prompts(FS, TS, dataset_info)
+    GenPrompt.generate_test_case_prompts(FS, TS, dataset_info)
+    prompt_gen_end = time.time()
+    logger.info(f"time for generate prompts: {prompt_gen_end - prompt_gen_start:.2f} seconds")
+
+    framework_start = time.time()
     generate_testclass_framework(dataset_info)
+    framework_end = time.time()
+    logger.info(f"time for generate test class framework: {framework_end - framework_start:.2f} seconds")
+
+    testcase_start = time.time()
     generate_testcase(dataset_info)
+    testcase_end = time.time()
+    logger.info(f"time for generate test cases: {testcase_end - testcase_start:.2f} seconds")
+    
     end_time = time.time()
     elapsed_time = end_time - start_time
-    logger.info(f"Elapsed time: {elapsed_time:.2f} seconds")
+    logger.info(f"total elapsed time: {elapsed_time:.2f} seconds")
     return
 
 
@@ -166,6 +208,6 @@ if __name__ == '__main__':
         logging.basicConfig(
             level=args.log_level, 
             format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-    jpype.startJVM(jpype.getDefaultJVMPath(), '-Xmx4g', "-Djava.class.path=./Java/project-index-builder.jar")
+    jpype.startJVM(jpype.getDefaultJVMPath(), '-Xmx4g', "-Djava.class.path=./Java/project-info-extract.jar;./Java/project-index-builder.jar")
     run()
     jpype.shutdownJVM()

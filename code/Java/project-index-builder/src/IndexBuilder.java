@@ -17,9 +17,11 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -43,15 +45,7 @@ public class IndexBuilder {
         String mode = args[0];
         Path code_path = Paths.get(args[1]);
         Path index_path = Paths.get(args[2]);
-        if (!Files.exists(index_path)) {
-            try {
-                Files.createDirectories(index_path); 
-            } catch (IOException e) {
-                System.out.println("Failed to create output directory: " + index_path);
-                System.out.println(e.getMessage());
-                System.exit(1);
-            }
-        }
+
         if (mode.equals("single")) {
             IndexBuilder builder = new IndexBuilder(code_path, index_path);
             builder.startSingle(code_path, index_path);
@@ -174,12 +168,13 @@ public class IndexBuilder {
         IndexWriterConfig config = new IndexWriterConfig(analyzer);
         config.setOpenMode(OpenMode.CREATE);
         try {
+            if (!Files.exists(index_path)) Files.createDirectories(index);
             this.directory = FSDirectory.open(index);
             this.index_writer = new IndexWriter(directory, config);
             ParseSourceCodeInfo(code);
             close();
         } catch (IOException e) {
-            System.out.println("Failed to open directory: " + index);
+            System.out.println("Failed while start index: " + index);
             System.out.println(e.getMessage());
         }
         return;
@@ -188,8 +183,10 @@ public class IndexBuilder {
     public void startGroup() {
         try {
             Files.list(code_info_path).forEach(file_path -> {
-                if (file_path.endsWith(".json")) {
-                    String project_name = file_path.getFileName().toString().split("\\.")[0];
+                String file_name = file_path.getFileName().toString();
+                if (file_name.endsWith(".json")) {
+                    String project_name = file_name.split("\\.")[0];
+                    System.out.println("Processing file: " + file_path.toString() + ", project: " + project_name);
                     startSingle(file_path, index_path.resolve(project_name));
                 }
             });
@@ -209,7 +206,7 @@ public class IndexBuilder {
      * load data from json file
      */
     protected JsonElement loadJson(Path filePath) throws IOException, FileNotFoundException {
-        FileReader reader = new FileReader(filePath.toFile());
+        InputStreamReader reader = new InputStreamReader(new FileInputStream(filePath.toFile()), "UTF-8");
         JsonElement result = new Gson().fromJson(reader, JsonElement.class);
         return result;
     }
