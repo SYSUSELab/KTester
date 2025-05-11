@@ -23,6 +23,10 @@ import extractor.JavaParserExtractor;
 
 import com.google.gson.JsonElement;
 
+/**
+ * DatasetPreparation
+ * @deprecated use DatasetPrepare instead
+ */
 @Deprecated
 public class DatasetPreparation {
     static Map<String, Integer> idSet = new HashMap<String, Integer>();

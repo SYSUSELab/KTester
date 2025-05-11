@@ -72,7 +72,7 @@ class ASTParser:
         for func in functions:
             flag = True
             for annotation in exclude_annotations:
-                if func.find(annotation) != -1:
+                if func.find(annotation) > -1:
                     flag = False
             if flag:
                 test_cases.append(func)

@@ -82,10 +82,9 @@ public class DatasetPrepare {
                                                     .collect(Collectors.toList());
             // get method body
             CtMethod<?> fcMethod = extractor.getCtMethod(fcClass, method_name, arguments);
-            // CtMethod<?> fcMethod = fcClass.getMethod(method_name, argTypes.toArray(new CtTypeReference[0]));
             if (fcMethod != null) {
                 if (fcMethod.isPrivate()){
-                    System.out.println("error: private method " + method_name + "in class " + class_fqn +" is not allowed.");
+                    System.out.println("error: private method " + method_name + " in class " + class_fqn +" is not allowed.");
                     return null;
                 }
                 extractor.removeComment(fcMethod);
@@ -119,7 +118,7 @@ public class DatasetPrepare {
                     if (decType.equals(fcClass.getReference())) {
                         accessedFields.add(fref.getSimpleName());
                     } else if (nestedRefs.contains(decType)) {
-                        inner_class.add(fcClass.getNestedType(decType.getQualifiedName()).prettyprint());
+                        inner_class.add(fcClass.getNestedType(decType.getSimpleName()).prettyprint());
                     }
                 }
             }

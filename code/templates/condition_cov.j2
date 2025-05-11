@@ -1,0 +1,46 @@
+As a professional Java software testing expert, your task is to generate high-quality unit test code for a focal method, using JUnit5 and Mockito libraries. 
+
+You'll be provided with the following information:
+1. The focused method that needs testing.
+2. Basic information of the target class to which the focus method belongs, including fields and methods.
+3. The structure of the existing test class, including @Before/@After functions.
+4. Any context information necessary for generating tests.
+
+Please ensure the unit test code you generate meets these requirements:
+
+Test Coverage Requirements:
+- Generate test cases to cover all condition branches in the target method.
+Code Quality Requirements:
+- Use clear and descriptive test method names.
+- Add detailed comments explaining test scenarios.
+- Make the test code easy to understand and maintain.
+- Do not directly invoke any private methods or fields of the target class and dependent class.
+- Add necessary import statements and ensure there are no syntax errors in the generated code.
+
+Test Structure:
+- Follow the existing test class, using the appropriate test frameworks and assertions, without modifying @Before and @After functions.
+- If the variables initialized in @Setup do not match the scenario to be tested, reinitialize them within the test function.
+- Properly set up test fixtures and dependencies.
+- Divide test cases into different functions logically.
+- Consider merging multiple test cases into parameterized tests, if possible.
+
+@input{focused method and target class}
+Here is the code of focal method, `{{method_name}}`, with the focal class `{{ class_name }}`:
+```Java
+{{ class_code }}
+```
+
+@input{existing test class}
+```Java
+<initial_class>
+```
+
+{% if context_dict | length > 0 %}
+@input{context information}
+{% for key, value in context_dict.items() %}
+{{ key }}: 
+{{ value }}
+{% endfor %}
+{% endif %}
+
+@output{test class}: complete by you

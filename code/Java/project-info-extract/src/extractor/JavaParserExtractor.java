@@ -13,7 +13,9 @@ import com.github.javaparser.ast.expr.Expression;
 import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
+import com.github.javaparser.ast.expr.ObjectCreationExpr;
 import com.github.javaparser.resolution.TypeSolver;
+import com.github.javaparser.resolution.declarations.ResolvedConstructorDeclaration;
 import com.github.javaparser.resolution.declarations.ResolvedMethodDeclaration;
 import com.github.javaparser.resolution.declarations.ResolvedValueDeclaration;
 import com.github.javaparser.resolution.types.ResolvedType;
@@ -113,30 +115,33 @@ public class JavaParserExtractor {
         return null;
     }
 
-    protected CallMethodInfo resolveQualifiedName(MethodCallExpr method_call) {
-        String qualified_name = method_call.getNameAsString();;
+    protected CallMethodInfo resolveQualifiedName(ObjectCreationExpr object_crt) {
+        String qualified_sig = object_crt.getTypeAsString();
         List <VariableInfo> args = new ArrayList<VariableInfo>();
-        String return_type = "unresolved";
-        ResolvedMethodDeclaration rsv_method = null;
-        NodeList<Expression> arguments = method_call.getArguments();
+        String return_type = qualified_sig;
+        ResolvedConstructorDeclaration rsv_const = null;
+        NodeList<Expression> arguments = object_crt.getArguments();
         int arg_count = arguments.size();
         try {
-            rsv_method = method_call.resolve();
-            qualified_name = rsv_method.getQualifiedSignature();
-            return_type = rsv_method.getReturnType().describe();
-            int rsv_arg_count = rsv_method.getNumberOfParams();
+            rsv_const = object_crt.resolve();
+            String qualified_name = rsv_const.declaringType().getQualifiedName();
+            String method_sig = rsv_const.getSignature();
+            return_type = rsv_const.declaringType().getQualifiedName();
+            int rsv_arg_count = rsv_const.getNumberOfParams();
             for (int i = 0; i < arg_count; i++) {
                 String arg_type;
                 if (i >= rsv_arg_count) {
-                    arg_type = rsv_method.getParam(rsv_arg_count-1).describeType();
+                    arg_type = rsv_const.getParam(rsv_arg_count-1).describeType().replace("...", "");
                 }
                 else{
-                    arg_type = rsv_method.getParam(i).describeType();
+                    arg_type = rsv_const.getParam(i).describeType();
                 }
+                method_sig = method_sig.replaceAll("([0-9a-zA-Z]+\\.)+", "");
                 String arg_name = arguments.get(i).toString();
                 VariableInfo arg_info = new VariableInfo(arg_name, arg_type);
                 args.add(arg_info);
             }
+            qualified_sig = qualified_name + "." + method_sig;
         } catch (Exception e) {
             for (int i = 0; i < arg_count; i++) {
                 String arg_type = "unresolved";
@@ -146,7 +151,47 @@ public class JavaParserExtractor {
             }
             System.out.println("Error: " + e.getMessage());
         }
-        CallMethodInfo method_call_info = new CallMethodInfo(qualified_name, args, return_type);
+        CallMethodInfo method_call_info = new CallMethodInfo(qualified_sig, args, return_type);
+        return method_call_info;
+    }
+
+    protected CallMethodInfo resolveQualifiedName(MethodCallExpr method_call) {
+        String qualified_sig = method_call.getNameAsString();
+        List <VariableInfo> args = new ArrayList<VariableInfo>();
+        String return_type = "unresolved";
+        ResolvedMethodDeclaration rsv_method = null;
+        NodeList<Expression> arguments = method_call.getArguments();
+        int arg_count = arguments.size();
+        try {
+            rsv_method = method_call.resolve();
+            String qualified_name = rsv_method.declaringType().getQualifiedName();
+            String method_sig = rsv_method.getSignature();
+            return_type = rsv_method.getReturnType().describe();
+            int rsv_arg_count = rsv_method.getNumberOfParams();
+            for (int i = 0; i < arg_count; i++) {
+                String arg_type;
+                if (i >= rsv_arg_count) {
+                    arg_type = rsv_method.getParam(rsv_arg_count-1).describeType().replace("...", "");
+                }
+                else{
+                    arg_type = rsv_method.getParam(i).describeType();
+                }
+                method_sig = method_sig.replaceAll("([0-9a-zA-Z]+\\.)+", "");
+                String arg_name = arguments.get(i).toString();
+                VariableInfo arg_info = new VariableInfo(arg_name, arg_type);
+                args.add(arg_info);
+            }
+            qualified_sig = qualified_name + "." + method_sig;
+        } catch (Exception e) {
+            for (int i = 0; i < arg_count; i++) {
+                String arg_type = "unresolved";
+                String arg_name = arguments.get(i).toString();
+                VariableInfo arg_info = new VariableInfo(arg_name, arg_type); 
+                args.add(arg_info);
+            }
+            System.out.println("Error: " + e.getMessage());
+        }
+        CallMethodInfo method_call_info = new CallMethodInfo(qualified_sig, args, return_type);
         return method_call_info;
     }
 
@@ -220,7 +265,7 @@ public class JavaParserExtractor {
     protected int[] getPosition(Node node) {
         int start_line = node.getBegin().map(pos->pos.line-1).orElse(-1);
         int end_line = node.getEnd().map(pos->pos.line).orElse(-1);
-        if (start_line >= 0 || end_line == -1) {
+        if (start_line >= 0 && end_line == -1) {
             end_line = start_line + 1;
         }
         return new int[]{start_line, end_line};

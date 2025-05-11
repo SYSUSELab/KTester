@@ -15,11 +15,11 @@ def get_args():
 
     args = parser.parse_args()
     log_level = {
-    'info': logging.INFO,
-    'debug': logging.DEBUG,
-    'warning': logging.WARNING,
-    'error': logging.ERROR,
-    'critical': logging.CRITICAL
+        'info': logging.INFO,
+        'debug': logging.DEBUG,
+        'warning': logging.WARNING,
+        'error': logging.ERROR,
+        'critical': logging.CRITICAL
     }
     args.log_level = log_level[args.log_level]
     return args

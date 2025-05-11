@@ -1,6 +1,7 @@
 code/settings.py
 code/java/spoon-control-flow
 dataset/projects
+dataset/project_index/lucene
 evaluation/
 myscript.bat
 note.md

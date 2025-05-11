@@ -11,6 +11,13 @@ import java.nio.file.Paths;
 
 public class PreProcessor {
     public static void main(String[] args) throws IOException{
+        int arg_len = args.length;
+        if (arg_len < 1) {
+            throw new IllegalArgumentException("missing argument: dataset root");
+        }
+        if (arg_len < 2) {
+            throw new IllegalArgumentException("missing argument: output dictory");
+        }
         Path dataset_root = Paths.get(args[0]);
         Path output_dir = Paths.get(args[1]);
         if (!Files.exists(output_dir)) {
@@ -22,7 +29,6 @@ public class PreProcessor {
                 System.out.println(e.getMessage());
                 System.exit(1);
             }
-            Files.createDirectories(output_dir);
         }
         // process each project in dataset_root
         Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();

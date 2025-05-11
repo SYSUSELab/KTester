@@ -9,6 +9,7 @@ import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
+import com.github.javaparser.ast.expr.ObjectCreationExpr;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.JavaParserTypeSolver;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.JarTypeSolver;
 import com.google.gson.Gson;
@@ -63,9 +64,6 @@ public class CodeInfoExtractor extends JavaParserExtractor {
         // get external fields
         Set<VariableInfo> external_fields = new HashSet<VariableInfo>();
         constructor.findAll(FieldAccessExpr.class).forEach(fieldAccess -> {
-            // String fieldName = fieldAccess.getNameAsString();
-            // String fieldType = resolveType(fieldAccess, fieldName);
-            // VariableInfo field_info = new VariableInfo(fieldName, fieldType);
             VariableInfo field_info = resolveQualifiedName(fieldAccess);
             external_fields.add(field_info);
         });
@@ -100,16 +98,20 @@ public class CodeInfoExtractor extends JavaParserExtractor {
         Set<CallMethodInfo> method_call_list = new HashSet<CallMethodInfo>();
         for (MethodCallExpr methodCall : methodCalls) {
             CallMethodInfo method_call_info = resolveQualifiedName(methodCall);
-            if (!method_call_info.getSignature().startsWith(full_class_name)) {
+            // if (!method_call_info.getSignature().startsWith(full_class_name)) {
                 method_call_list.add(method_call_info);
-            }
+            // }
+        }
+        List<ObjectCreationExpr> object_creations = method.findAll(ObjectCreationExpr.class);
+        for (ObjectCreationExpr objectCreation : object_creations) {
+            CallMethodInfo method_call_info = resolveQualifiedName(objectCreation);
+            // if (!method_call_info.getSignature().startsWith(full_class_name)) {
+                method_call_list.add(method_call_info);
+            // }
         }
         // get external fields
         Set<VariableInfo> external_fields = new HashSet<VariableInfo>();
         method.findAll(FieldAccessExpr.class).forEach(fieldAccess -> {
-            // String fieldName = fieldAccess.getNameAsString();
-            // String fieldType = resolveType(fieldAccess, fieldName);
-            // VariableInfo field_info = new VariableInfo(fieldName, fieldType);
             VariableInfo field_info = resolveQualifiedName(fieldAccess);
             external_fields.add(field_info);
         });
@@ -135,21 +137,37 @@ public class CodeInfoExtractor extends JavaParserExtractor {
     }
 
     private JsonObject extractClassInfo(ClassOrInterfaceDeclaration class_dec) {
-        JsonObject classInfo = new JsonObject();
+        JsonObject class_info = new JsonObject();
 
         // get constructor information
         List<ConstructorDeclaration> constructors = class_dec.getConstructors();
         JsonArray constructor_list = new JsonArray();
         for (ConstructorDeclaration constructor : constructors) {
+            if (constructor.getAnnotationByClass(Deprecated.class).isPresent()) continue;
             JsonObject constructor_info = extractConstuctorInfo(constructor);
             constructor_list.add(constructor_info);
         }
-        classInfo.add("constructors", constructor_list);
+        class_info.add("constructors", constructor_list);
+
+        // get field information
+        List<FieldDeclaration> fields = class_dec.getFields();
+        JsonArray field_list = new JsonArray();
+        for (FieldDeclaration field : fields) {
+            if (field.getAnnotationByClass(Deprecated.class).isPresent()) continue;
+            String fieldName = field.getVariable(0).getNameAsString();
+            String fieldType = resolveType(field.getElementType());
+            int position[] = getPosition(field);
+            FieldInfo field_info = new FieldInfo(fieldName, fieldType, position);
+            field_info.equals(field_info);
+            field_list.add(this.gson.toJsonTree(field_info));
+        }
+        class_info.add("fields", field_list);
 
         // get method information
         List<MethodDeclaration> method_nodes = class_dec.getMethods();
         JsonObject method_list = new JsonObject();
         for (MethodDeclaration method : method_nodes) {
+            if (method.getAnnotationByClass(Deprecated.class).isPresent()) continue;
             String method_name = method.getNameAsString();
             JsonObject method_info = extractMethodInfo(method);
             if (method_list.has(method_name)) {
@@ -160,9 +178,9 @@ public class CodeInfoExtractor extends JavaParserExtractor {
                 method_list.add(method_name, method_info_list);
             }
         }
-        classInfo.add("methods", method_list);
+        class_info.add("methods", method_list);
 
-        return classInfo;
+        return class_info;
     }
 
     public JsonObject extractEnumInfo(EnumDeclaration enum_decl) {
@@ -217,36 +235,41 @@ public class CodeInfoExtractor extends JavaParserExtractor {
         return enum_info;
     }
 
-    public JsonObject extractCodeInfo(Path javaFile) throws IOException {
+    public JsonObject extractCodeInfo(Path javaFile, Path base_path) throws IOException {
         CompilationUnit cu = parseJavaFile(javaFile);
         if (cu == null)
             return null;
         // get class information
         JsonObject codeInfo = new JsonObject();
-        String package_name = cu.getPackageDeclaration().map(pd -> pd.getNameAsString() + ".").orElse("");
+        String package_name = cu.getPackageDeclaration().map(pd -> pd.getNameAsString()).orElse("");
+        String relative_path = base_path.relativize(javaFile).toString();
         // // get imports
         // imports = getImports(cu);
         // for (String imp : imports) {
         // // depend_type.put(imp, imp);
         // }
         for (ClassOrInterfaceDeclaration classDecl : cu.findAll(ClassOrInterfaceDeclaration.class)) {
+            if (classDecl.getAnnotationByClass(Deprecated.class).isPresent()) continue;
             String simple_name = classDecl.getNameAsString();
             full_class_name = classDecl.getFullyQualifiedName().map(fn -> fn)
                     .orElse(package_name + "." + simple_name);
             // depend_type.put(simple_name, full_class_name);
             JsonObject class_info = extractClassInfo(classDecl);
-            class_info.addProperty("is_interface", classDecl.isInterface());
+            // class_info.addProperty("is_interface", classDecl.isInterface());
+            class_info.addProperty("file", relative_path);
             String javadoc = extractJavadoc(classDecl);
             if (javadoc != null)
                 class_info.addProperty("javadoc", javadoc);
             codeInfo.add(full_class_name, class_info);
         }
         for(EnumDeclaration enum_decl: cu.findAll(EnumDeclaration.class)){
+            if (enum_decl.getAnnotationByClass(Deprecated.class).isPresent()) continue;
             String simple_name = enum_decl.getNameAsString();
             full_class_name = enum_decl.getFullyQualifiedName().map(fn -> fn)
                     .orElse(package_name + "." + simple_name);
             // depend_type.put(simple_name, full_class_name);
             JsonObject enum_info = extractEnumInfo(enum_decl);
+            enum_info.addProperty("file", relative_path);
             String javadoc = extractJavadoc(enum_decl);
             if (javadoc != null)
                 enum_info.addProperty("javadoc", javadoc);
@@ -274,16 +297,14 @@ public class CodeInfoExtractor extends JavaParserExtractor {
         Files.walk(source_dir)
                 .filter(Files::isRegularFile)
                 .filter(JavaParserExtractor::isJavaFile).forEach(file -> {
-                    if (isJavaFile(file)) {
-                        try {
-                            JsonObject classInfo = extractCodeInfo(file);
-                            if (classInfo != null) {
-                                classInfo.entrySet()
-                                        .forEach(entry -> source_json.add(entry.getKey(), entry.getValue()));
-                            }
-                        } catch (IOException e) {
-                            System.out.println("Error: " + e.getMessage());
+                    try {
+                        JsonObject classInfo = extractCodeInfo(file, source_dir);
+                        if (classInfo != null) {
+                            classInfo.entrySet()
+                                    .forEach(entry -> source_json.add(entry.getKey(), entry.getValue()));
                         }
+                    } catch (IOException e) {
+                        System.out.println("Error: " + e.getMessage());
                     }
                 });
         // get information from test files
@@ -295,7 +316,7 @@ public class CodeInfoExtractor extends JavaParserExtractor {
                 .filter(Files::isRegularFile)
                 .filter(JavaParserExtractor::isJavaFile).forEach(file -> {
                     try {
-                        JsonObject classInfo = extractCodeInfo(file);
+                        JsonObject classInfo = extractCodeInfo(file, test_dir);
                         if (classInfo != null) {
                             classInfo.entrySet().forEach(entry -> test_json.add(entry.getKey(), entry.getValue()));
                         }

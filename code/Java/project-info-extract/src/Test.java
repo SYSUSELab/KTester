@@ -10,10 +10,10 @@ public class Test {
         // // DatasetPreparation.main(arg);
         // DatasetPrepare.main(arg);
 
-        String source_dir = "../../../dataset/projects";
-        String output_dir = "../../../dataset/project_index/json";
-        String[] arg = new String[] { source_dir, output_dir };
-        PreProcessor.main(arg);
+        // String source_dir = "../../../dataset/projects";
+        // String output_dir = "../../../dataset/project_index/json";
+        // String[] arg = new String[] { source_dir, output_dir };
+        // PreProcessor.main(arg);
 
         // CFGBuilder cfgBuilder = new CFGBuilder();
         // cfgBuilder.buildCFG();
