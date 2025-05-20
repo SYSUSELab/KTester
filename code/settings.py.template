@@ -30,9 +30,12 @@ class TaskSettings:
     Task settings
     """
     # project selection
+    # for projects and cases list, use empty list [] to select all
     PROJECTS = ['batch-processing-gateway', 'commons-cli', 'commons-codec', 'commons-collections', 'commons-csv', 'datafaker', 'gson', 'jdom2', 'ruler', 'windward']
+    # test class selection, list of id in dataset, e.g. ["SparkPodSpec_copyFrom"]
+    CASES_LIST = []
     # prompt selection
-    PROMPT_LIST = ['cov'] # ['cov', 'io', 'plan']
+    PROMPT_LIST = ['condition','io','exception']
     SAVE_INTER_RESULT = True
     COMPILE_TEST = True
     MAX_WORKERS = 8

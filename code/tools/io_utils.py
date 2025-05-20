@@ -94,7 +94,7 @@ def copy_file(source_file, target_path, ignore_error=False):
     except Exception as e:
         print(e)
         if ignore_error: return
-        else: raise RuntimeError(f"Error occurred while copying the file {source_file} to {target_path}")
+        else: raise FileNotFoundError(f"Error occurred while copying the file {source_file} to {target_path}")
 
 class StreamToLogger:
     """

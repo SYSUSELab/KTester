@@ -66,14 +66,14 @@ public class JaccardSimilarityQuery extends Query {
         public ScorerSupplier scorerSupplier(LeafReaderContext context) throws IOException {
             SortedSetDocValues dv = context.reader().getSortedSetDocValues(dvField);
             if (dv == null)
-                return null; // 如果某个 segment 根本没这个 field，跳过
+                return null; // Skip if a segment does not have this field
             return new JaccardScorerSupplier(this, dv, queryOrds, querySize, weight);
         }
 
         @Override
         public Scorer scorer(LeafReaderContext ctx) throws IOException {
             SortedSetDocValues dv = ctx.reader().getSortedSetDocValues(dvField);
-            if (dv == null) return null;         // 如果某个 segment 根本没这个 field，跳过
+            if (dv == null) return null; // Skip if a segment does not have this field
             return new JaccardScorer(this, dv, queryOrds, querySize, weight);
         }
 

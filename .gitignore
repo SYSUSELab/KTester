@@ -1,9 +1,12 @@
+# for this repo
 code/settings.py
 code/java/spoon-control-flow
+code/evaluations/check_empty_class.py
 dataset/projects
 dataset/project_index/lucene
 evaluation/
 myscript.bat
+run.py
 note.md
 
 # IDE

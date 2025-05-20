@@ -25,12 +25,13 @@ def get_args():
     args.log_level = log_level[args.log_level]
     return args
 
-'''
-procedure:
-1. run test & generate report
-2. extract: pass rate, coverage, .....
-'''
+
 def run(operation):
+    '''
+    procedure:
+    1. run test & generate report
+    2. extract: pass rate, coverage, .....
+    '''
     dataset_path = FS.DATASET_PATH
     dataset_info = utils.load_json(f"{dataset_path}/dataset_info.json")
 
@@ -38,6 +39,10 @@ def run(operation):
         test_coverage(FS, TS, dataset_info)
     if operation == 'baseline':
         exract_baseline_coverage(FS, dataset_info)
+    if operation == 'check':
+        from evaluations.check_empty_class import check_empty_class
+        check_empty_class(FS, dataset_info)
+    return
 
 
 if __name__ == "__main__":

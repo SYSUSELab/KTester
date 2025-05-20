@@ -182,22 +182,22 @@ public class TestClassEditor {
      * add new test methods to exist class
      */
     private void addNewTestMethods(ClassOrInterfaceDeclaration existClassDecl,                             ClassOrInterfaceDeclaration addClassDecl) {
-        // 获取现有类中的方法名称集合，用于检查重复
+        // Get the method names in the existing class for checking duplicates
         Set<String> existingMethodNames = getMethodNames(existClassDecl);
-        // 遍历需要添加的类中的所有方法
+        // Iterate over all methods in the class to be added
         for (MethodDeclaration method : addClassDecl.getMethods()) {
             String methodName = method.getNameAsString();
-            // // 判断方法是不是测试方法
+            // // Check if the method is a test method
             // if (method.getAnnotationByName("Test").isEmpty()) {
             //     continue;
             // }
-            // 如果方法不存在于现有类中，则添加
+            // If the method does not exist in the existing class, add it
             if (!existingMethodNames.contains(methodName)) {
-                // 克隆方法以避免修改原始AST
+                // Clone the method to avoid modifying the original AST
                 MethodDeclaration clonedMethod = method.clone();
                 existClassDecl.addMember(clonedMethod);
             } else {
-                // 比较方法体的长度，如果需要添加的方法体更长，则替换
+                // Compare the length of the method body, and replace if the method body to be added is longer
                 MethodDeclaration existingMethod = getMethodByName(existClassDecl, methodName);
                 if (existingMethod != null && method.getBody().isPresent()){
                     int exist_length = existingMethod.getBody().isPresent() ? existingMethod.getBody().get().toString().length() : 0;

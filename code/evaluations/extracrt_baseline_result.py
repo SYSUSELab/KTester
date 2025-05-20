@@ -77,7 +77,7 @@ def extract_coverage_HITS(result_folder, dataset_info, dataset_meta, save_path):
         name_to_idx = meta_info["method_name_to_idx"]
         project_result = f"{result_folder}/{pj_name}/methods"
         project_coverage = {}
-        for tinfo in pj_info["focused-methods"]:
+        for tinfo in pj_info["focal-methods"]:
             method_name = tinfo["method-name"]
             target_class = tinfo["class"]
             msig = target_class + "." + method_name

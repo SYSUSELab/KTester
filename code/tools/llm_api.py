@@ -1,9 +1,8 @@
 import re
+import json
 import logging
-from openai import OpenAI
+from openai import NOT_GIVEN, OpenAI
 from tenacity import retry, wait_random_exponential, stop_after_attempt
-
-from settings import LLMSettings as ST
 
 class LLMCaller:
     account_num = 0
@@ -14,6 +13,7 @@ class LLMCaller:
     base_message = []
     
     def __init__(self) -> None:
+        from settings import LLMSettings as ST
         self.model = ST.MODEL
         self.accounts = ST.API_ACCOUNTS
         self.account_num = len(ST.API_ACCOUNTS)
@@ -32,16 +32,18 @@ class LLMCaller:
         self.cur_account_num = (self.cur_account_num+1)%self.account_num
         account = self.accounts[self.cur_account_num]
         self.gpt = OpenAI(api_key=account["api_key"],base_url=account["base_url"])
-        # self.logger.info(f"Change api_key successfully.")
+        self.logger.info(f"Change api_key successfully.")
         return
 
     @retry(wait=wait_random_exponential(min=1, max=30), stop=stop_after_attempt(3))
-    def generation(self, prompt:str) -> str:
+    def _generation(self, prompt:str, 
+                rps_format:dict=NOT_GIVEN) -> str:
         messages = self.base_message.copy()
         messages.append({"role": "user", "content": prompt})
         response = self.gpt.chat.completions.create(
             model=self.model,
             messages=messages,
+            response_format = rps_format,
             # add more parameters
         )
         if response.choices[0].message.content:
@@ -50,27 +52,73 @@ class LLMCaller:
             self.change_account()
             raise ValueError("Empty response from API")
         
-    def handle_output(self, output:str) -> str:
+    def _filter_code(self, output:str) -> str:
         # extract java code from output
         java_pattern = r"```(?:[jJ]ava)?\n+([\s\S]*?)\n```"
+        code = ""
         matches = re.findall(java_pattern, output, re.DOTALL)
-        # select the longest one in matches
-        code = max(matches, key=len) if len(matches)>0 else ""
+        if len(matches) == 0:
+            # if no code found, fix incomplete code
+            incomplete_pattern = r"```(?:[jJ]ava)?\n+([\s\S]*?)$"
+            icp_matches = re.findall(incomplete_pattern, output, re.DOTALL)
+            if len(icp_matches) > 0:
+                icp_code:str = icp_matches[0]
+                # remove last @Test function
+                last_test_pos = icp_code.rfind("@Test")
+                code = icp_code[:last_test_pos] if last_test_pos != -1 else icp_code
+                # check if code has unmatched braces
+                open_braces = code.count('{')
+                close_braces = code.count('}')
+                if open_braces > close_braces:
+                    code = code + "}" * (open_braces - close_braces)
+        else:
+            # select the longest one in matches
+            code = max(matches, key=len)
         return code
     
-    def get_response(self, prompt:str) -> list:
+    # get response surrounded by ```java````
+    def get_response_code(self, prompt:str) -> list:
         try:
-            output = self.generation(prompt)
-            response = self.handle_output(output)
-            return [response, output]
+            response = self._generation(prompt)
+            code = self._filter_code(response)
+            return [code, response]
         except Exception as e:
-            self.logger.error(f"Error occured while calling llm api: {e}")
+            self.logger.error(f"Error occured while get code from llm api: {e}")
             return ["",""]
-        
+
+    # split json object from response
+    def _handle_json_response(self, response):
+        # self.logger.debug(f"Response: {response}")
+        json_str = re.sub(r' //.*', '', response)
+        json_pattern = r"```(?:[jJ]son)?\n+([\s\S]*?)\n```"
+        matches = re.findall(json_pattern, json_str, re.DOTALL)
+        if len(matches)>0:
+            json_str = max(matches, key=len)
+        obj = json.loads(json_str)
+        self.logger.debug(f"Json object: {obj}")
+        return obj
+    
+    # get response in json format
+    def get_response_json(self, prompt:str):
+        json_data = None
+        response = ""
+        try:
+            response_format = { 'type': 'json_object' }
+            response = self._generation(prompt, response_format)
+            json_data = self._handle_json_response(response)    
+        except Exception as e:
+            self.logger.error(f"Error occured while get json object from llm api: {e}")
+        return [json_data, response]
+
+
 # test
 if __name__ == '__main__':
+    import sys
+    import os
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     llm = LLMCaller()
     s = """
     """
-    matches = llm.handle_output(s)
-    print(matches)
+    # match = llm.handle_json_response(s)
+    # match = llm.filter_code(s)
+    # print(match)

@@ -200,13 +200,12 @@ public class CodeSearcher {
     }
 
     /**
-     * 将一组 term（String）映射到全局 DocValues ordinals。
-     * 优化版本：使用HashMap缓存已查询过的term，减少重复查询
+     * this method is used to get the ordinals of a term in a field
      *
-     * @param reader  已打开的 IndexReader
-     * @param dvField DocValues 字段名（如 "calls_dv"）
-     * @param terms   查询 term 集合
-     * @return 升序排列的 ordinals 数组
+     * @param reader 
+     * @param dvField DocValues field name, e.g. "calls_dv"
+     * @param terms   The collection of terms of query
+     * @return ordinals orded by asc
      */
     private java.util.Map<String, Long> funcOrdCache = new java.util.HashMap<>();
     private java.util.Map<String, Long> fieldOrdCache = new java.util.HashMap<>();
@@ -226,12 +225,10 @@ public class CodeSearcher {
             return new long[0];
         }
         
-        // 2) 使用缓存并批量处理terms
         List<Long> ordList = new ArrayList<>(terms.length);
-        BytesRef bytesRef = new BytesRef(); // 重用BytesRef对象
+        BytesRef bytesRef = new BytesRef();
         
         for (String term : terms) {
-            // 先检查缓存
             Long cachedOrd = cache.get(term);
             if (cachedOrd != null) {
                 if (cachedOrd >= 0) {
@@ -241,7 +238,7 @@ public class CodeSearcher {
             }
             
             try {
-                // 设置BytesRef内容而不是每次创建新对象
+                // avoid creating a new BytesRef each time
                 bytesRef.bytes = term.getBytes();
                 bytesRef.offset = 0;
                 bytesRef.length = bytesRef.bytes.length;
@@ -253,19 +250,16 @@ public class CodeSearcher {
                     ordList.add(ord);
                 }
             } catch (IOException e) {
-                cache.put(term, -1L); // 缓存失败结果
+                cache.put(term, -1L);
                 continue;
             }
         }
         
-        // 3) 转成 primitive long[] - 使用更高效的方式
         long[] ords = new long[ordList.size()];
         int i = 0;
         for (Long ord : ordList) {
             ords[i++] = ord;
         }
-        
-        // 4) 排序，确保后续评分逻辑里可按升序合并
         java.util.Arrays.sort(ords);
         return ords;
     }
@@ -274,23 +268,16 @@ public class CodeSearcher {
     //     this.results.add(result);
     // }
 
-    /**
-     * 执行搜索查询 - 优化版本
-     * 1. 提前检查查询条件是否有效
-     * 2. 减少不必要的日志输出
-     * 3. 批量获取文档
-     */
     public void search(QueryFormat query) throws IOException {
-        // 拿到 q 的 calls/fields 在各自 dv field 里的 ordinals
+        // get the ords of q's calls/fields in their dv fields
         String[] qfunc = query.function;
         String[] qfield = query.field;
         long[] qcOrds = getOrds(index_searcher.getIndexReader(), "cfunc_dv", qfunc);
         long[] qfOrds = getOrds(index_searcher.getIndexReader(), "cfield_dv", qfield);
 
-        // 构造两个 JaccardSimilarityQuery
+        // construct Query
         Query simCalls  = new JaccardSimilarityQuery("cfunc_dv",  qcOrds, qfunc.length, w_c);
         Query simFields = new JaccardSimilarityQuery("cfield_dv", qfOrds, qfield.length, w_f);
-        // 合并成一个 BooleanQuery，让 Lucene 一次倒排遍历就把两者分值累加
         BooleanQuery combined = new BooleanQuery.Builder()
             .add(simCalls, BooleanClause.Occur.SHOULD)
             .add(simFields, BooleanClause.Occur.SHOULD)
@@ -312,7 +299,7 @@ public class CodeSearcher {
     }
 
     public JsonArray getResultList() {
-        // 将结果集转换为JsonArray 并只保留分数最高的 k 个结果
+        // transform the result set to JsonArray and only keep the top k results
         System.out.println(this.results.size()+" results found.");
         List<ResultFormat> topResults = new ArrayList<>(this.results);
         topResults.removeIf(result -> result.score == 1);

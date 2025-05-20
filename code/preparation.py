@@ -47,7 +47,7 @@ def set_file_structure():
         utils.check_path(f"{gen_folder}temp/")
         utils.check_path(report_csv)
         
-        for test_info in pj_info["focused-methods"]:
+        for test_info in pj_info["focal-methods"]:
             id = test_info["id"]
             prompt_folder = f"{project_prompt}/{id}/"
             fix_folder = f"{project_fix}/{id}/"

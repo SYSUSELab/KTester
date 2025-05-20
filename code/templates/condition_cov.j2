@@ -1,7 +1,7 @@
 As a professional Java software testing expert, your task is to generate high-quality unit test code for a focal method, using JUnit5 and Mockito libraries. 
 
 You'll be provided with the following information:
-1. The focused method that needs testing.
+1. The focal method that needs testing.
 2. Basic information of the target class to which the focus method belongs, including fields and methods.
 3. The structure of the existing test class, including @Before/@After functions.
 4. Any context information necessary for generating tests.
@@ -14,7 +14,7 @@ Code Quality Requirements:
 - Use clear and descriptive test method names.
 - Add detailed comments explaining test scenarios.
 - Make the test code easy to understand and maintain.
-- Do not directly invoke any private methods or fields of the target class and dependent class.
+- Do not directly invoke any private methods or fields of the target class and dependent class. **If the focal method is private, try to use reflection to access it.**
 - Add necessary import statements and ensure there are no syntax errors in the generated code.
 
 Test Structure:

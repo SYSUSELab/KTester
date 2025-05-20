@@ -189,7 +189,7 @@ public class DatasetPreparation {
                 focused_methods.add(methodInfo);
             }
             
-            projectInfo.add("focused-methods", focused_methods);
+            projectInfo.add("focal-methods", focused_methods);
             datasetInfo.add(projectName, projectInfo);
         }
 

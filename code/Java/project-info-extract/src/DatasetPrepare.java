@@ -45,8 +45,11 @@ public class DatasetPrepare {
             String dataset_dir = args[0];
             String meta_file = dataset_dir + "/dataset_meta.json";
             String output_file = dataset_dir + "/dataset_info.json";
+            long start = System.currentTimeMillis();
             prepare.prepareDataset(dataset_dir, meta_file, output_file);
+            long end = System.currentTimeMillis();
             System.out.println("Dataset preparation completed successfully.");
+            System.out.println("Time Cost:" + (end - start) + "ms");
         } catch (IOException e) {
             System.err.println("Error preparing dataset: " + e.getMessage());
             e.printStackTrace();
@@ -245,7 +248,7 @@ public class DatasetPrepare {
                 focused_methods.add(methodInfo);
             }
             
-            projectInfo.add("focused-methods", focused_methods);
+            projectInfo.add("focal-methods", focused_methods);
             datasetInfo.add(projectName, projectInfo);
         }
 

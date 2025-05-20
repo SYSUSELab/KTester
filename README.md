@@ -8,6 +8,10 @@ Environment for our experiments:
 - Maven: Apache Maven 3.9.9 
 
 ## Running
+0. set JVM language to English:
+```sh
+setx _JAVA_OPTIONS "-Duser.language=en -Duser.country=US -Dfile.encoding=UTF-8"
+```
 1. rename `code/settings.py.template` to `code/settings.py` and compelete settings.
 2. run the following commands:
 ```sh

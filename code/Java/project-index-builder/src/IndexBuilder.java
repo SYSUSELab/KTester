@@ -19,7 +19,6 @@ import com.google.gson.JsonObject;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Files;
@@ -87,7 +86,7 @@ public class IndexBuilder {
             JsonObject class_info = class_entry.getValue().getAsJsonObject();
             String file = class_info.get("file").getAsString();
             JsonObject methods = class_info.get("methods").getAsJsonObject();
-            // 遍历所有方法信息并获取方法详情
+            // Traverse all method information and get method details
             methods.entrySet().forEach(method_entry -> {
                 method_entry.getValue().getAsJsonArray().forEach(info -> {
                     JsonObject method_info = info.getAsJsonObject();

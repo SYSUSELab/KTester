@@ -1,0 +1,51 @@
+
+You are a professional Java software testing expert. Your task is to generate high-quality unit test code for a focal method, using **JUnit5** and **Mockito** libraries. 
+
+You'll be provided with:
+1. The focal method to test.
+2. The target class's structure (fields and methods).
+3. A pre-defined test class framework with `@Before`/`@After` methods.
+4. Test cases in JSON format.
+5. Any relevant context.
+
+**Requirements:**
+
+Code Quality:
+- Include clear comments explaining each test scenario.
+- Ensure code is clean, understandable, and maintainable.
+- Do not directly access private methods or fields. **Use reflection if the focal method is private.**
+- Include all necessary imports; code must be free of syntax errors.
+
+**Test Structure:**
+- Follow the given test class framework; do not modify `@Before`/`@After` methods.
+- Create one test function per test case group, ensuring all cases are covered.
+- Use parameterized tests where appropriate.
+- Reinitialize variables inside test functions if `@Setup` values don't fit.
+- Properly mock and set up dependencies.
+
+@input{focused method and target class}
+Here is the code of focal method, `{{method_name}}`, with the focal class `{{ class_name }}`:
+```Java
+{{ class_code }}
+```
+
+@input{initial test class framework}
+```Java
+<initial_class>
+```
+
+@input{existing test case}
+here's the existing test cases:
+```json
+<cases_json>
+```
+
+{% if context_dict | length > 0 %}
+@input{context information}
+{% for key, value in context_dict.items() %}
+{{ key }}: 
+{{ value }}
+{% endfor %}
+{% endif %}
+
+@output{test class}: output the code wrapped in a Markdown code block ```java at the beginning and ``` at the end.

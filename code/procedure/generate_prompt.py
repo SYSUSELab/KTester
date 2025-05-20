@@ -23,7 +23,7 @@ def generate_init_prompts(file_structure, task_setting, dataset_info:dict):
         project_info = f"{code_info_path}/json/{pj_name}.json"
         project_index = f"{code_info_path}/lucene/{pj_name}"
         searcher = CodeSearcher(project_path, project_info, project_index, top_k)
-        for test_info in pj_info["focused-methods"]:
+        for test_info in pj_info["focal-methods"]:
             id = test_info["id"]
             prompt_dir = f"{prompt_path}/{id}".replace("<project>", pj_name)
             if not os.path.exists(prompt_dir):
@@ -53,13 +53,13 @@ def generate_test_case_prompts(file_structure, task_setting, dataset_info:dict):
     dataset_dir = file_structure.DATASET_PATH
     code_info_path = file_structure.CODE_INFO_PATH
     prompt_path = file_structure.PROMPT_PATH
-    gen_prompt_list = task_setting.PROMPT_LIST
+    prompt_list:list = task_setting.PROMPT_LIST
     projects = task_setting.PROJECTS
     top_k = task_setting.SIM_TOP_K
     select = True if len(projects)>0 else False
-    generator = PromptGenerator('./templates', gen_prompt_list)
     logger = logging.getLogger(__name__)
-    
+    generator = PromptGenerator('./templates', prompt_list)
+
     for pj_name, pj_info in dataset_info.items():
         if select and pj_name not in projects: continue
         logger.info(f"Construct test case prompts for project {pj_name}...")
@@ -68,7 +68,7 @@ def generate_test_case_prompts(file_structure, task_setting, dataset_info:dict):
         project_info = f"{code_info_path}/json/{pj_name}.json"
         project_index = f"{code_info_path}/lucene/{pj_name}"
         searcher = CodeSearcher(project_path, project_info, project_index, top_k)
-        for test_info in pj_info["focused-methods"]:
+        for test_info in pj_info["focal-methods"]:
             id = test_info["id"]
             prompt_dir = f"{prompt_path}/{id}".replace("<project>", pj_name)
             # get context

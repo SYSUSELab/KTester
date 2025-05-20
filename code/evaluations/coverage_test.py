@@ -26,7 +26,7 @@ class ProjrctTestRunner:
     def run_project_test(self, compile=True):
         project_name = self.project_info["project-name"]
         project_url = self.project_info["project-url"]
-        test_objects = self.project_info["focused-methods"]
+        test_objects = self.project_info["focal-methods"]
         self.test_result = {}
 
         self.logger.info(f"Running tests for project: {project_name}")
@@ -36,9 +36,16 @@ class ProjrctTestRunner:
             testid = tobject["id"]
             method = tobject["method-name"]
             class_path = f"{self.testclass_path}/{test_path.split('/')[-1]}"
-            utils.copy_file(class_path, f"{project_url}/{test_path}")
             data_id = f"{tobject['class']}#{method}"
             self.test_result[data_id] = {}
+            try:
+                utils.copy_file(class_path, f"{project_url}/{test_path}")
+            except FileNotFoundError:
+                self.test_result[data_id]["error_type"] = "compile error"
+                self.test_result[data_id]["test_cases"] = 0
+                self.test_result[data_id]["passed_cases"] = 0
+                self.test_result[data_id]["note"] = "test class not found"
+                continue
             if compile and not self.compile_test(test_path):
                 self.test_result[data_id]["error_type"] = "compile error"
                 continue
@@ -196,7 +203,7 @@ class CoverageExtractor:
         }
         """
         project_path = self.project_info["project-url"]
-        focused_methods = self.project_info["focused-methods"]
+        focused_methods = self.project_info["focal-methods"]
         summary = test_result.copy()
         for test in focused_methods:
             testid = test["id"]

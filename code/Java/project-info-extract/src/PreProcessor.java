@@ -10,7 +10,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class PreProcessor {
-    public static void main(String[] args) throws IOException{
+    public static void main(String[] args) throws IOException {
         int arg_len = args.length;
         if (arg_len < 1) {
             throw new IllegalArgumentException("missing argument: dataset root");
@@ -23,8 +23,7 @@ public class PreProcessor {
         if (!Files.exists(output_dir)) {
             try {
                 Files.createDirectories(output_dir); 
-            }
-            catch (IOException e) {
+            } catch (IOException e) {
                 System.out.println("Failed to create output directory: " + output_dir);
                 System.out.println(e.getMessage());
                 System.exit(1);
@@ -32,6 +31,7 @@ public class PreProcessor {
         }
         // process each project in dataset_root
         Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+        long start = System.currentTimeMillis();
         Files.list(dataset_root).filter(Files::isDirectory).forEach(project_dir -> {
             String project_name = project_dir.getFileName().toString();
             System.out.println("process project: " + project_name);
@@ -44,6 +44,8 @@ public class PreProcessor {
                 System.out.println("Error: "+e.getMessage());
             }
         });
+        long end = System.currentTimeMillis();
+        System.out.println("Time Cost:" + (end - start) + "ms");
     }
 
     private static JsonObject processProject(String projectName, Path sourceDir){

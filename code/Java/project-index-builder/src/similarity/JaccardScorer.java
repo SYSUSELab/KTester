@@ -34,42 +34,35 @@ public class JaccardScorer extends Scorer {
         if (!dv.advanceExact(doc))
             return 0f;
 
-        // 优化：如果queryOrds为空，直接返回0分
+        // if queryOrds is empty, return 0
         if (queryOrds.length == 0) 
             return 0f;
         
-        // 优化：使用更高效的方式计算交集
         int docCount = 0, intersection = 0;
-        
-        
-        // 预先分配足够大小的数组，避免动态扩容
-        // 使用docValueCount() 获取当前文档的doc values数量
+        // allocate arrays with initial capacity
         int valueCount = dv.docValueCount();
-        long[] docOrds = new long[valueCount]; // 初始容量，如果不够会自动扩容
+        long[] docOrds = new long[valueCount];
         int docOrdsSize = 0;
         long ord;
-        // 第一次遍历：收集文档的所有ordinals
+        // collect all ordinals of the document
         for(int i = 0; i < valueCount; i++) {
             ord = dv.nextOrd();
             docCount++;
             docOrds[docOrdsSize++] = ord;
         }
-        
-        // 如果文档没有任何term，直接返回0分
+        // if the document has no term, return 0
         if (docCount == 0)
             return 0f;
-        
-        // 优化：如果文档的term数量远大于查询的term数量，使用查询的term去查找
-        if (queryOrds.length < docCount / 10) { // 阈值可以根据实际情况调整
+        // if the document has more than 10 times of query terms, use query terms to find
+        if (queryOrds.length < docCount / 10) {
             for (long queryOrd : queryOrds) {
-                // 使用二分查找在文档ordinals中查找查询ordinal
+                // search for queryOrd in docOrds by binary search
                 int pos = Arrays.binarySearch(docOrds, 0, docOrdsSize, queryOrd);
                 if (pos >= 0) {
                     intersection++;
                 }
             }
         } else {
-            // 否则，使用文档的term去查找
             for (long docOrd : docOrds) {
                 if (Arrays.binarySearch(queryOrds, docOrd) >= 0) {
                     intersection++;
@@ -110,7 +103,7 @@ public class JaccardScorer extends Scorer {
     }
 
     public ScoreMode scoreMode() {
-        // 我们不依赖其他 score，只输出自定义分值
+        // just output our custom score
         return ScoreMode.COMPLETE;
     }
 
