@@ -55,9 +55,25 @@ class LLMCaller:
     def _filter_code(self, output:str) -> str:
         # extract java code from output
         java_pattern = r"```(?:[jJ]ava)?\n+([\s\S]*?)\n```"
+        code = ""
         matches = re.findall(java_pattern, output, re.DOTALL)
-        # select the longest one in matches
-        code = max(matches, key=len) if len(matches)>0 else ""
+        if len(matches) == 0:
+            # if no code found, fix incomplete code
+            incomplete_pattern = r"```(?:[jJ]ava)?\n+([\s\S]*?)$"
+            icp_matches = re.findall(incomplete_pattern, output, re.DOTALL)
+            if len(icp_matches) > 0:
+                icp_code:str = icp_matches[0]
+                # remove last @Test function
+                last_test_pos = icp_code.rfind("@Test")
+                code = icp_code[:last_test_pos] if last_test_pos != -1 else icp_code
+                # check if code has unmatched braces
+                open_braces = code.count('{')
+                close_braces = code.count('}')
+                if open_braces > close_braces:
+                    code = code + "}" * (open_braces - close_braces)
+        else:
+            # select the longest one in matches
+            code = max(matches, key=len)
         return code
     
     # get response surrounded by ```java````
@@ -73,7 +89,7 @@ class LLMCaller:
     # split json object from response
     def _handle_json_response(self, response):
         # self.logger.debug(f"Response: {response}")
-        json_str = re.sub(r'//.*', '', response)
+        json_str = re.sub(r' //.*', '', response)
         json_pattern = r"```(?:[jJ]son)?\n+([\s\S]*?)\n```"
         matches = re.findall(json_pattern, json_str, re.DOTALL)
         if len(matches)>0:
@@ -103,5 +119,6 @@ if __name__ == '__main__':
     llm = LLMCaller()
     s = """
     """
-    matches = llm.handle_json_response(s)
-    print(matches)
+    # match = llm.handle_json_response(s)
+    # match = llm.filter_code(s)
+    # print(match)
