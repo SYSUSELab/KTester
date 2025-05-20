@@ -36,6 +36,8 @@ class TaskSettings:
     CASES_LIST = []
     # prompt selection
     PROMPT_LIST = ['condition','io','exception']
+    # if True, generate test cases first, then generate test functions; otherwise, generate test functions directly
+    CASE_THEN_CODE = True
     SAVE_INTER_RESULT = True
     COMPILE_TEST = True
     MAX_WORKERS = 8
