@@ -204,11 +204,11 @@ public class DatasetPrepare {
         try {
             String[] class_code = getClassCode(class_name, firstPart[mlength - 1], arguments);
             if(class_code==null) return null;
-            methodInfo.addProperty("focused-method", class_code[0]);
+            methodInfo.addProperty("focal-method", class_code[0]);
             methodInfo.addProperty("class-code", class_code[1]);;
         } catch (Exception e) {
             System.out.println("Error while get class code: "+e.getMessage());
-            methodInfo.addProperty("focused-method", "");
+            methodInfo.addProperty("focal-method", "");
             methodInfo.addProperty("class-code", "");
             e.printStackTrace();
         }
@@ -235,9 +235,9 @@ public class DatasetPrepare {
             String projectUrl = mdata.get("put_path").getAsString().replace("/root/experiments/puts/", "");
             projectInfo.addProperty("project-name", projectName);
             projectInfo.addProperty("project-url", projectUrl);
-            // get focused methods
+            // get focal methods
             setProjectAnalyzer(dataset_dir + "/" + projectUrl);
-            JsonArray focused_methods = new JsonArray();
+            JsonArray focal_methods = new JsonArray();
             idSet.clear();
             
             JsonObject methodsObj = mdata.getAsJsonObject("method_name_to_idx");
@@ -245,10 +245,10 @@ public class DatasetPrepare {
                 String methodNameToIdx = entry.getKey();
                 JsonObject methodInfo = getMethodInfo(projectUrl, methodNameToIdx);
                 if (methodInfo == null) continue;
-                focused_methods.add(methodInfo);
+                focal_methods.add(methodInfo);
             }
             
-            projectInfo.add("focal-methods", focused_methods);
+            projectInfo.add("focal-methods", focal_methods);
             datasetInfo.add(projectName, projectInfo);
         }
 

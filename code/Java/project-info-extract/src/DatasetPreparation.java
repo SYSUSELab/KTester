@@ -156,11 +156,11 @@ public class DatasetPreparation {
             CompilationUnit cu = extractor.parseJavaFile(class_path);
             String[] info = getClassCode(cu, class_name, method_name);
             if(info==null) return null;
-            methodInfo.addProperty("focused-method", info[0]);
+            methodInfo.addProperty("focal-method", info[0]);
             methodInfo.addProperty("class-info", info[1]);
         } catch (Exception e) {
             System.out.println("Error while parsing file: "+e.getMessage());
-            methodInfo.addProperty("focused-method", "");
+            methodInfo.addProperty("focal-method", "");
             methodInfo.addProperty("class-info", "");        }
         return methodInfo;
     }
@@ -176,8 +176,8 @@ public class DatasetPreparation {
             String projectUrl = mdata.get("put_path").getAsString().replace("/root/experiments/puts/", "");
             projectInfo.addProperty("project-name", projectName);
             projectInfo.addProperty("project-url", projectUrl);
-            // get focused methods
-            JsonArray focused_methods = new JsonArray();
+            // get focal methods
+            JsonArray focal_methods = new JsonArray();
             idSet.clear();
             classSet.clear();
             
@@ -186,10 +186,10 @@ public class DatasetPreparation {
                 String methodNameToIdx = entry.getKey();
                 JsonObject methodInfo = getMethodInfo(projectUrl, methodNameToIdx);
                 if (methodInfo == null) continue;
-                focused_methods.add(methodInfo);
+                focal_methods.add(methodInfo);
             }
             
-            projectInfo.add("focal-methods", focused_methods);
+            projectInfo.add("focal-methods", focal_methods);
             datasetInfo.add(projectName, projectInfo);
         }
 

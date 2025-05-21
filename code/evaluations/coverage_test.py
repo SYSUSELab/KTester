@@ -203,9 +203,9 @@ class CoverageExtractor:
         }
         """
         project_path = self.project_info["project-url"]
-        focused_methods = self.project_info["focal-methods"]
+        focal_methods = self.project_info["focal-methods"]
         summary = test_result.copy()
-        for test in focused_methods:
+        for test in focal_methods:
             testid = test["id"]
             method = test["method-name"]
             data_id = f"{test['class']}#{method}"

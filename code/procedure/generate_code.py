@@ -157,10 +157,13 @@ format of output cases:
     }
 ]
 '''
-def merge_testcases(exist_cases:list, new_cases:list):
-    if new_cases is None or len(new_cases)==0: return exist_cases
+def merge_testcases(exist_cases:list, json_res):
+    if json_res is None: return exist_cases
+    if isinstance(json_res, list): new_cases = json_res
+    else: new_cases = [json_res]
+
     for new_group in new_cases:
-        group_name = new_group.get("group")
+        group_name = new_group.get("group", "unnamed")
         if group_name is None: continue
         exist_group = None
         for eg in exist_cases:
@@ -168,7 +171,8 @@ def merge_testcases(exist_cases:list, new_cases:list):
                 exist_group = eg
                 break
         
-        if exist_group is None:
+        group_cases = new_group.get("cases", [])
+        if exist_group is None and len(group_cases)>0:
             exist_cases.append(new_group)
         else:
             for new_case in new_group.get("cases",[]):
