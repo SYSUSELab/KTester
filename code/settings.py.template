@@ -40,7 +40,8 @@ class TaskSettings:
     CASE_THEN_CODE = True
     SAVE_INTER_RESULT = True
     COMPILE_TEST = True
-    MAX_WORKERS = 8
+    MAX_WORKERS = 8 # LLM API concurrency 
+    FIX_TRIES = 3 # Maximum retries for fixing test cases
     # top k for similarity search
     SIM_TOP_K = "10"
 

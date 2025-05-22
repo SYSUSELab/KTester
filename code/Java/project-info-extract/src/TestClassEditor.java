@@ -47,7 +47,7 @@ public class TestClassEditor {
             }
 
             ClassOrInterfaceDeclaration addClassDecl = getClassDeclaration(addCU);
-            if(addCU.getTypes().isEmpty()){ // try to parse incomplete code 
+            if(addCU==null || addCU.getTypes().isEmpty()){ // try to parse incomplete code 
                 System.err.println("can't parse add code as class");
                 return exist_class;
                 // addCU = dealInCompeleteCode(add_class);
@@ -115,7 +115,7 @@ public class TestClassEditor {
      * get class declaration
      */
     private ClassOrInterfaceDeclaration getClassDeclaration(CompilationUnit cu) {
-        if (cu.getTypes().isEmpty()) {
+        if (cu==null || cu.getTypes().isEmpty()) {
             return null;
         }
         return cu.getTypes().stream()
