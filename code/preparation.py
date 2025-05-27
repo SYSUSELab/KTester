@@ -1,3 +1,4 @@
+import os
 import sys
 import jpype
 import logging
@@ -61,7 +62,7 @@ def set_file_structure():
 
 def run(args):
     logger = logging.getLogger(__name__)
-    root_path = FS.ROOT_PATH
+    root_path = os.getcwd().replace("\\", "/")
     dataset_path = FS.DATASET_PATH
     code_info_path = FS.CODE_INFO_PATH
     dataset_abs = f"{root_path}/{dataset_path}"

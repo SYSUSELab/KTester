@@ -79,7 +79,7 @@ class ProjrctTestRunner:
         script = self.cd_cmd + test_cmd
         result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8", errors='ignore')
         test_info = result.stdout
-        if result.returncode == 2 or result.returncode == 0:
+        if result.returncode == 0:
             self.logger.info(f"test execution info: {test_info}")
             test_cases, passed_cases = self.get_pass_rate(test_info)
             self.test_result[data_id]["test_cases"] = test_cases
@@ -91,6 +91,7 @@ class ProjrctTestRunner:
             test_cases, passed_cases = self.get_pass_rate(test_info)
             self.test_result[data_id]["test_cases"] = test_cases
             self.test_result[data_id]["passed_cases"] = passed_cases
+            if test_cases == 0: return False
             return True
         else:
             self.logger.error(f"error occured in execute test class {testclass}, info:\n{result.stderr}\n{test_info}")
@@ -104,7 +105,7 @@ class ProjrctTestRunner:
         report_cmd = ['java', '-jar', jacoco_cli, "report", "target/jacoco.exec", '--classfiles', 'target/classes', '--sourcefiles', 'src/main/java', "--html", html_report, "--csv", csv_report]
         script = self.cd_cmd + report_cmd
 
-        result = subprocess.run(script, capture_output=True, text=True, shell=True)
+        result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8", errors='ignore')
         if result.returncode!= 0:
             self.logger.error(f"error occured in generate report, info:\n{result.stderr}")
             return False
@@ -142,7 +143,8 @@ class CoverageExtractor:
         return True
 
     def check_method_name(self, method_name, target):
-        target = re.sub(r"<[^>]*>", "", target, flags=re.DOTALL)
+        while len(re.findall(r"<[^<>]*>", target, flags=re.DOTALL))>0:
+            target = re.sub(r"<[^<>]*>", "", target, flags=re.DOTALL)
         method_parts = method_name.replace("(", "( ").replace(")", " )").split()
         target_parts = target.replace("(", "( ").replace(")", " )").split()
         if len(method_parts) != len(target_parts):
@@ -153,7 +155,7 @@ class CoverageExtractor:
             if item_m == "Object" or item_m == "Object,": continue
             if "." in item_m: item_m = item_m.split(".")[-1]
             if "." in item_t: item_t = item_t.split(".")[-1]
-            elif item_m != item_t:
+            elif not item_t.startswith(item_m):
                 return False
         return True
 
@@ -261,7 +263,7 @@ class CoverageExtractor:
 
 
 def test_coverage(fstruct, task_setting, dataset_info: dict):
-    root_path = fstruct.ROOT_PATH
+    root_path = os.getcwd().replace("\\", "/")
     dataset_dir = f"{root_path}/{fstruct.DATASET_PATH}"
     testclass_path = f"{root_path}/{fstruct.TESTCLASSS_PATH}"
     report_path = f"{root_path}/{fstruct.REPORT_PATH}"

@@ -9,7 +9,7 @@ class FileStructure:
     BASELINE_PATH = "../evaluation/baseline"
     # "<project>" will be replaced by the project name in the execution process
     PROMPT_PATH = "../evaluation/<project>/context+prompts"
-    FIX_PATH = "../evaluation/repair_singal/<project>/fix"
+    FIX_PATH = "../evaluation/<project>/fix"
     RESPONSE_PATH = "../evaluation/<project>/responses"
     TESTCLASSS_PATH = "../evaluation/<project>/test_classes"
     REPORT_PATH = "../evaluation/<project>/reports"
@@ -18,7 +18,7 @@ class LLMSettings:
     """
     LLM settings
     """
-    MODEL = "deepseek-v3-0324"
+    MODEL = "gpt-4o-mini"
     API_ACCOUNTS = [
         {   
             "base_url":"",
@@ -33,7 +33,7 @@ class TaskSettings:
     # project selection
     # for projects and cases list, use empty list [] to select all
     PROJECTS = ['batch-processing-gateway', 'commons-cli', 'commons-codec', 'commons-collections', 'commons-csv', 'datafaker', 'gson', 'jdom2', 'ruler', 'windward']
-    # test class selection, list of id in dataset, e.g. ["SparkPodSpec_copyFrom"]
+    # test class selection, list of id in dataset, e.g. ["SparkPodSpec_copyFrom"]. use empty list [] to select all
     CASES_LIST = []
     # prompt selection
     PROMPT_LIST = ['condition','io','exception']
@@ -43,12 +43,12 @@ class TaskSettings:
     COMPILE_TEST = True
     MAX_WORKERS = 8 # LLM API concurrency 
     FIX_TRIES = 3 # Maximum retries for fixing test cases
-    # top k for similarity search
-    SIM_TOP_K = "10"
+    SIM_TOP_K = "10" # top k for similarity search
 
-class BecnchMark:
+class BaseLine:
     """
-    Benchmark results
+    BaseLine results
     """
+    BASELINES = ["ChatUniTest"] # ["HITS", "ChatUniTest"]
     BASELINE_PATH = "../evaluation/baseline"
     HITS_RESULTS = ""

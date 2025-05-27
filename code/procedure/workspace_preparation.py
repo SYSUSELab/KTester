@@ -69,7 +69,8 @@ def prepare_workspace(dataset_abs:str):
 # test
 if __name__ == '__main__':
     # import settings as ST
-    # prepare = WorkSpacePreparation(f"{ST.ROOT_PATH}/{ST.DATASET_PATH}")
+    # root_path = os.getcwd().replace("\\", "/")
+    # prepare = WorkSpacePreparation(f"{root_path}/{ST.DATASET_PATH}")
     # dataset_dir = f"{ST.DATASET_PATH}/dataset_info.json"
     # ds_info = utils.load_json(dataset_dir)
     # prepare.prepare_work_space(ds_info)

@@ -6,7 +6,7 @@ import argparse
 import tools.io_utils as utils
 from evaluations.coverage_test import test_coverage
 from evaluations.extracrt_baseline_result import exract_baseline_coverage
-from settings import FileStructure as FS, TaskSettings as TS
+from settings import FileStructure as FS, TaskSettings as TS, BaseLine as BL
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -38,7 +38,7 @@ def run(operation):
     if operation == 'coverage':
         test_coverage(FS, TS, dataset_info)
     if operation == 'baseline':
-        exract_baseline_coverage(FS, dataset_info)
+        exract_baseline_coverage(FS, TS, BL, dataset_info)
     if operation == 'check':
         from evaluations.check_empty_class import check_empty_class
         check_empty_class(FS, dataset_info)

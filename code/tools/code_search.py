@@ -1,5 +1,6 @@
 import os
 import re
+import copy
 import json
 import jpype
 import logging
@@ -78,6 +79,7 @@ class CodeSearcher:
         for key, value in context.items():
             finds = re.findall(r"(<position:\[([^>]*)\]>)", value, re.DOTALL)
             if len(finds) > 0:
+                new_value = copy.copy(value)
                 for find in finds:
                     pivot = find[0]
                     position = find[1].split(", ")
@@ -85,8 +87,8 @@ class CodeSearcher:
                     start_line = int(position[1])
                     end_line = int(position[2])
                     snippet = self.snippet_reader.read_lines(file_path, start_line, end_line)
-                    value.replace(pivot, f"{'\n'.join(snippet)}")
-                full_context[key] = value
+                    new_value = new_value.replace(pivot, f"{'\n'.join(snippet)}")
+                full_context[key] = new_value
             else:
                 full_context[key] = value
         return full_context
@@ -152,7 +154,7 @@ class CodeSearcher:
             raise ValueError(f"Method `{method_name}` not found in class `{class_name}`")
 
         self.snippet_reader = SnippetReader(self.project_path)
-        source_path = "/src/main/java/"+class_info["file"]
+        source_path = "/src/main/java/"+class_info["file"].replace("\\","/")
         context = {}
         pclass = {}
         # get api document
@@ -201,6 +203,9 @@ class CodeSearcher:
         test_url = class_url.replace("main","test").replace(".java", "Test.java")
         test_class = self._get_test_classes(test_url)
         if test_class is not None:
+            lines = test_class.splitlines()
+            if len(lines) > 150:
+                test_class = '\n'.join(lines[:100]) + "\n......\n" + '\n'.join(lines[-50:])
             context["existing test class"] = f"```java\n{test_class}\n```"
         # more context can be added here
         context = self._extract_snippet(context)
@@ -333,12 +338,17 @@ class CodeSearcher:
 
 
 if __name__ == "__main__":
-    project_path = "../dataset/puts/commons-csv"
-    method_name = "nextToken"
-    searcher = CodeSearcher(project_path)
+    import sys 
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    project_path = "dataset/projects/commons-csv"
+    code_info_path = "dataset/project_index/json/commons-csv.json"
+    index_path = "./dataset/project_index//lucene/commons-csv"
+    top_k = 10
+    method_name = "nextToken(Token)"
+    searcher = CodeSearcher(project_path,code_info_path,index_path,top_k)
     # results = searcher.search_method_usage(method_name)
-    class_name = "CSVFormat" #"Lexer"
+    class_name = "org.apache.commons.csv.Lexer" 
     # results = searcher.search_class_usage(class_name)
     class_url = "src/main/java/org/apache/commons/csv/CSVFormat.java"
-    results = searcher.collect_construct_context(class_name, class_url)
+    results = searcher.collect_construct_context(class_name, method_name, class_url)
     print(results)

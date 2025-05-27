@@ -40,9 +40,9 @@ class CodeRepairer:
         self.testclass_path = tc_path
         self.temp_path = f"{self.testclass_path}/temp/"
         self.llm_caller = LLMCaller()
-        self.prompt_gen = PromptGenerator('./templates', [])
+        # self.class_editor = jpype.JClass("TestClassEditor")
+        # self.prompt_gen = PromptGenerator('./templates', [])
         self.logger = logging.getLogger(__name__)
-        self.class_editor = jpype.JClass("TestClassEditor")
 
 
     def compile_test(self, class_path):
@@ -64,9 +64,11 @@ class CodeRepairer:
         llm_fixes = []
         split_str = test_class.replace("/", "\\")
         errors = feedback.split(f"{split_str}:")
+        print("errors: ",errors)
         for error in errors:
-            if str(error).find("error:")==-1: continue
-            splits = error.split(":error: ")
+            if str(error).find(": error: ")==-1: continue
+            splits = error.split(": error: ")
+            print("splits: ",splits)
             try:
                 line = int(splits[0]) - 1
                 msg = splits[1]
@@ -138,20 +140,24 @@ class CodeRepairer:
         count = 0
         fixed_code = io_utils.load_text(class_path)
         context = io_utils.load_json(context_path)
-        while not cflag and count<self.max_tries:
-            temp = f"{self.temp_path}/{class_name}".replace(".java", f"_{count}.java")
-            io_utils.write_text(temp, fixed_code)
-            self.logger.info(f"try to repair test class {class_path}...")
-            prompt = f"{prompt_path}_{count}.md"
-            response = f"{response_path}_{count}.md"
-            fixed_code = self.repair_by_LLM(fixed_code, feedback, prompt, response, context)
-            io_utils.write_text(target_path, fixed_code)
-            cflag, feedback = self.compile_test(test_path)
-            count += 1
+        # while not cflag and count<self.max_tries:
+        #     temp = f"{self.temp_path}/{class_name}".replace(".java", f"_{count}.java")
+        #     io_utils.write_text(temp, fixed_code)
+        #     self.logger.info(f"try to repair test class {class_path}...")
+        #     prompt = f"{prompt_path}_{count}.md"
+        #     response = f"{response_path}_{count}.md"
+        #     fixed_code = self.repair_by_LLM(fixed_code, feedback, prompt, response, context)
+        #     io_utils.write_text(target_path, fixed_code)
+        #     cflag, feedback = self.compile_test(test_path)
+        #     count += 1
         
-        if not cflag:
+        # while cflag==False:
+        if cflag==False:
             error_infos = self.parse_feedback(feedback, test_path)[-1]
             fixed_code = self.clean_error_cases(error_infos, fixed_code)
+            # io_utils.write_text(target_path, fixed_code)
+            # cflag, feedback = self.compile_test(test_path)
+            count += 1
         if count > 0:
             io_utils.write_text(class_path, fixed_code)
         return
@@ -190,3 +196,12 @@ def verify_test_classes(file_structure, task_setting, dataset_info):
             case_response_path = f"{project_fix}/{tid}/repair_response"
             code_repair.check_test_class(ts_info, case_prompt_path, case_response_path, context_path)
     return
+
+if __name__ == "__main__":
+    import os
+    import sys 
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+    s = '''
+    '''
+    code_repair = CodeRepairer("", "", 1)
+    pass
