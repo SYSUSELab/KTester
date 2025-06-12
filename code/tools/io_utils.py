@@ -109,6 +109,7 @@ def copy_file(source_file, target_path, ignore_error=False):
         if ignore_error: return
         else: raise FileNotFoundError(f"Error occurred while copying the file {source_file} to {target_path}")
 
+
 class StreamToLogger:
     """
     represents a file-like stream object that redirects writes to a logger instance.

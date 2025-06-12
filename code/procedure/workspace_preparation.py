@@ -26,9 +26,9 @@ class WorkSpacePreparation:
             os.rename(f"{project_path}/src/test", f"{project_path}/src/test-original")
             os.mkdir(f"{project_path}/src/test")
         cd_cmd = ['cd', project_path]
-        # dependency_cmd = ['mvn', 'dependency:copy-dependencies', '-DoutputDirectory=libs']
+        dependency_cmd = ['mvn', 'dependency:copy-dependencies', '-DoutputDirectory=libs']
         compile_cmd = ['mvn', 'compiler:compile']
-        script = cd_cmd + ['&&'] + compile_cmd # cd_cmd + ['&&'] + dependency_cmd + ['&&'] + compile_cmd
+        script =  cd_cmd + ['&&'] + dependency_cmd + ['&&'] + compile_cmd
         result = subprocess.run(script, shell=True)
         # prepare classpath file for compiling test class
         libs_dic = f"{project_path}/libs"

@@ -8,7 +8,7 @@ import tools.io_utils as utils
 from tools.code_analysis import ASTParser
 
 
-class ProjrctTestRunner:
+class ProjectTestRunner:
     project_info: dict
     cd_cmd: list
     testclass_path: str
@@ -278,7 +278,7 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
         project_path = f"{dataset_dir}/{info['project-url']}"
         info["project-url"] = project_path
         # run converage test & generate report
-        runner = ProjrctTestRunner(info, dependency_dir, testclass_path, report_path)
+        runner = ProjectTestRunner(info, dependency_dir, testclass_path, report_path)
         test_result = runner.run_project_test(compile_test)
         logger.info(test_result)
         # extract coverage
@@ -293,7 +293,7 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
 if __name__ == "__main__":
 
     project_path = "../dataset/puts/commons-csv"
-    test_runner = ProjrctTestRunner(project_path)
+    test_runner = ProjectTestRunner(project_path)
     class_path = "org.jacoco.examples"
     class_name = "QrConfig"
     method_name = "toHints(BarcodeFormat)"
