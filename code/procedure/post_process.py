@@ -54,7 +54,7 @@ class CodeRepairer:
         self.llm_caller = LLMCaller()
         self.prompt_gen = PromptGenerator('./templates', [])
         self.parser = ASTParser()
-        self.class_editor = jpype.JClass("editcode.TestClassUpdator") # check
+        self.class_editor = jpype.JClass("editcode.TestClassUpdator")
         self.logger = logging.getLogger(__name__)
 
 
@@ -71,9 +71,10 @@ class CodeRepairer:
     class RuleError(Enum):
         UNRESLOVE_SYMBOL = 1
         UNREPORTED_EXCEPTION = 2
-        OTHER = 3
+        PRIVATE_ACCESS = 3
+        OTHER = 4
 
-    def parse_feedback(self, feedback:str, test_class:str):
+    def parse_feedback(self, feedback:str, test_class:str, method_name:str):
         '''
         Parse the compilation feedback to get the error line number and error message.
         '''
@@ -91,6 +92,8 @@ class CodeRepairer:
                     rule_fixes.append([line, msg, self.RuleError.UNRESLOVE_SYMBOL])
                 elif msg.find("unreported exception") > -1:
                     rule_fixes.append([line, msg, self.RuleError.UNREPORTED_EXCEPTION])
+                elif msg.find("private access")>-1 and msg.find(method_name)>-1:
+                    rule_fixes.append([line, msg, self.RuleError.PRIVATE_ACCESS])
                 llm_fixes.append([line, msg])
             except:
                 continue
@@ -182,6 +185,7 @@ class CodeRepairer:
         class_path = f"{self.testclass_path}/{class_name}"
         target_path = f"{self.url}/{test_path}"
         io_utils.copy_file(class_path, target_path)
+
         cflag, feedback = self.compile_test(test_path)
         count = 0
         fixed_code = io_utils.load_text(class_path)

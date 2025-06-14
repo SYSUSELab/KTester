@@ -2,7 +2,6 @@ class FileStructure:
     """
     File structure settings
     """
-    ROOT_PATH = "Path/to/Unit-Test-Generation/code" # absolute path
     DEPENDENCY_PATH = "./dependencies"
     DATASET_PATH = "../dataset/projects"
     CODE_INFO_PATH = "../dataset/project_index"
