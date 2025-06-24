@@ -70,8 +70,8 @@ def run(args):
 
     if args.workspace:
         logger.info("Preparing workspace...")
-        # WSP.prepare_workspace(dataset_abs)
-        logger.info("Setting file structure...")
+        WSP.prepare_workspace(dataset_abs)
+        # logger.info("Setting file structure...")
         set_file_structure()
     # if args.dataset:
     #     logger.info("Preparing dataset_info.json ...")

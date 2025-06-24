@@ -63,13 +63,16 @@ class ProjectTestRunner(JavaRunner):
             if not self.generate_report_single(html_report, csv_report):
                 self.test_result[data_id]["error_type"] = "report error"
                 continue
+            self.delete_jacoco_exec()
             if len(passed_test)>0:
-                if not self.run_selected_mehods(test_class, passed_test): continue
+                passed_test = [f"{test_class}#{method}" for method in passed_test]
+                if not self.run_selected_mehods(passed_test): continue
                 correct_html_report = f"{self.report_path}/jacoco-report-html/{testid}_correct/"
                 correct_csv_report = f"{self.report_path}/jacoco-report-csv/{testid}_correct.csv"
                 self.generate_report_single(correct_html_report, correct_csv_report)
+                self.delete_jacoco_exec()
             else:
-                self.test_result[data_id].update({"correct_inst_cov": 0.0, "correct_bran_cov": 0.0})       
+                self.test_result[data_id].update({"correct_inst_cov": 0.0, "correct_bran_cov": 0.0})
         return self.test_result
 
     def deal_execution_feedback(self, data_id, feedback):
@@ -210,6 +213,7 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
     select = True if len(projects)>0 else False
     logger = logging.getLogger(__name__)
 
+    logger.info(f"Start coverage test ...")
     for pj_name, info in dataset_info.items():
         if select and pj_name not in projects: continue
         project_path = f"{dataset_dir}/{info['project-url']}"
@@ -226,7 +230,7 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
         utils.write_json(coverage_file, coverage_data)
     return
 
-# test
+
 if __name__ == "__main__":
 
     project_path = "../dataset/puts/commons-csv"

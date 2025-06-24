@@ -50,24 +50,25 @@ class JavaRunner:
             return (True, result.stdout)
         elif result.returncode != -1:
             test_info = f"{result.stderr}\n{result.stdout}"
-            self.logger.warning(f"test case failed in {testclass}, info:\n{test_info}")
-            return (True, test_info)
+            self.logger.info(f"test case failed in {testclass}, info:\n{test_info}")
+            flag = True if len(re.findall(r"([0-9]+) tests started", test_info))>0 else False
+            return (flag, test_info)
         else:
             test_info = f"{result.stderr}\n{result.stdout}"
             self.logger.error(f"error occured in execute test class {testclass}, info:\n{test_info}")
             return (False, test_info)
 
-    def run_selected_mehods(self, test_class, methods:list[str]):
+    def run_selected_mehods(self, methods:list[str]):
         test_dependencies = f"libs/*;target/test-classes;target/classes;{self.dependency_fd}/*"
         java_agent = f"-javaagent:{self.dependency_fd}/jacocoagent.jar=destfile=target/jacoco.exec"
         test_cmd = ['java', '-cp', test_dependencies, java_agent, 'org.junit.platform.console.ConsoleLauncher', '--disable-banner', '--disable-ansi-colors']
         for method in methods:
-            test_cmd += ['--select-method', f"{test_class}#{method}"]
+            test_cmd += ['--select-method', method]
         script = self.cd_cmd + test_cmd
         result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8", errors='ignore')
         if result.returncode == -1: 
             test_info = f"{result.stderr}\n{result.stdout}"
-            self.logger.error(f"error occured in execute test class {test_class}, info:\n{test_info}")
+            self.logger.error(f"error occured in execute:{' '.join(script)}\n info:\n{test_info}")
             return False
         return True
     
@@ -84,6 +85,12 @@ class JavaRunner:
             self.logger.error(f"error occured in generate report, info:\n{result.stderr}")
             return False
         return True
+
+    def delete_jacoco_exec(self):
+        jacoco_path = f"{self.cd_cmd[1]}/target/jacoco.exec"
+        if os.path.exists(jacoco_path):
+            os.remove(jacoco_path)
+        return
 
 
 class CoverageExtractor:

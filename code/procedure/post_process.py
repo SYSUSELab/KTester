@@ -13,13 +13,13 @@ from tools.execute_test import JavaRunner
 from tools.prompt_generator import PromptGenerator
 
 
-def check_class_name(init_class:str, tcname:str, pcname:str):
+def check_class_name(init_class:str, tcname:str, pcname:str=None):
     class_name = re.findall(r'class ([\w$]*)(<.*>)?( extends [\w]+)?', init_class)[0][0]
     new_class = copy.copy(init_class)
     if class_name != tcname:
         new_class = new_class.replace(class_name, tcname)
     package_name = re.findall(r'package\s+([\w\.]+);', init_class)[0]
-    if package_name != pcname:
+    if pcname and package_name != pcname:
         new_class = new_class.replace(package_name, pcname)
     return new_class
 
@@ -72,15 +72,18 @@ class CodeRepairer(JavaRunner):
         self.logger = logging.getLogger(__name__)
 
     def compile_and_execute(self, class_path, test_class):
+        passrate = -1.0
         cflag, cfeedback = self.compile_test(class_path)
         if not cflag:
-            return (VerifyResult.COMPILE_ERROR, cfeedback, -1.0)
+            return (VerifyResult.COMPILE_ERROR, cfeedback, passrate)
         eflag, efeedback = self.run_singal_unit_test(test_class, coverage=False)
-        passrate = 0.0
         if eflag:
-            cases = int(re.findall(r"([0-9]+) tests started", efeedback)[0])
-            passed = int(re.findall(r"([0-9]+) tests successful", efeedback)[0])
-            passrate = passed / cases if cases > 0 else -1.0
+            try:
+                cases = int(re.findall(r"([0-9]+) tests started", efeedback)[0])
+                passed = int(re.findall(r"([0-9]+) tests successful", efeedback)[0])
+                passrate = passed / cases if cases > 0 else -1.0
+            except:
+                pass
         if not eflag or passrate<0.9:
             return (VerifyResult.EXECUTE_ERROR, efeedback, passrate)
 

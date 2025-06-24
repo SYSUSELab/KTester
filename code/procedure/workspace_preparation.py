@@ -30,6 +30,13 @@ class WorkSpacePreparation:
         compile_cmd = ['mvn', 'compiler:compile']
         script =  cd_cmd + ['&&'] + dependency_cmd + ['&&'] + compile_cmd
         result = subprocess.run(script, shell=True)
+        if result.returncode != 0:
+            install_cmd = ['mvn', 'clean', 'install']
+            script = cd_cmd + ['&&'] + install_cmd + ['&&'] + dependency_cmd
+            result = subprocess.run(script, shell=True)
+            if result.returncode != 0:
+                print(f"Error: Failed to build project {project_path}.")
+                return
         # prepare classpath file for compiling test class
         libs_dic = f"{project_path}/libs"
         lib_list = [f"libs/{li}" for li in os.listdir(libs_dic)]

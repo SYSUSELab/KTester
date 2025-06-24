@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 
 import tools.io_utils as io_utils
 from procedure.post_process import check_class_name
-from evaluations.coverage_test import ProjectTestRunner, CoverageExtractor
+from evaluations.coverage_test import ProjectTestRunner, CoverageCalculator
 
 
 def check_method_name(method_name, target):
@@ -149,7 +149,7 @@ def extract_coverage_ChatUniTest(result_folder, dataset_info, fstruct, task_sett
         test_result = runner.run_project_test(compile_test)
         logger.info(test_result)
         # extract coverage
-        extractor = CoverageExtractor(info, report_path)
+        extractor = CoverageCalculator(info, report_path)
         coverage_data = extractor.generate_project_summary(test_result)
         logger.info(f"report data:\n{coverage_data}")
         coverage_file = f"{report_path}/summary.json".replace("<project>", pj_name)
@@ -160,17 +160,6 @@ def extract_coverage_ChatUniTest(result_folder, dataset_info, fstruct, task_sett
 class HITSRunner(ProjectTestRunner):
     def __init__(self, project_info, dependency_dir, testclass_path, report_path):
         super().__init__(project_info, dependency_dir, testclass_path, report_path)
-        self.check_report_path()
-    
-    def check_report_path(self):
-        io_utils.check_path(self.report_path)
-        test_objects = self.project_info["focal-methods"]
-        report_csv = f"{self.report_path}/jacoco-report-csv/"
-        io_utils.check_path(report_csv)
-        for tobject in test_objects:
-            testid = tobject["id"]
-            report_html = f"{self.report_path}/jacoco-report-html/{testid}/"
-            io_utils.check_path(report_html)
 
     def check_testclass_name(self):
         # 遍历 testclass_path下的所有文件
@@ -203,8 +192,11 @@ class HITSRunner(ProjectTestRunner):
         
         # copy test classes to the project directory
         test_dir = f"{project_url}/src/test/java/"
+        compiled_classes = f"{project_url}/target/test-classes/"
         if os.path.exists(test_dir):
             shutil.rmtree(test_dir, ignore_errors=False)
+        if os.path.exists(compiled_classes):
+            shutil.rmtree(compiled_classes, ignore_errors=False)
         io_utils.copy_dir(self.testclass_path, test_dir)
         self.logger.info(f"Running tests for project: {project_name}")
 
@@ -237,19 +229,38 @@ class HITSRunner(ProjectTestRunner):
                 self.test_result[data_id]["test_cases"] = len(matched_files)
                 self.test_result[data_id]["passed_cases"] = 0
                 continue
-            if not self.run_test_group(package, testid, data_id):
+            eflag, test_info = self.run_test_group(package, testid, data_id)
+            if eflag:
+                cases = int(re.findall(r"([0-9]+) tests started", test_info)[0])
+                passed = int(re.findall(r"([0-9]+) tests successful", test_info)[0])
+                self.test_result[data_id]["test_cases"] = cases
+                self.test_result[data_id]["passed_cases"] = passed
+                passed_cases = self.parse_passed_cases(package, test_info)
+            else:
                 self.test_result[data_id]["error_type"] = "execution error"
                 self.test_result[data_id]["test_cases"] = len(matched_files)
                 continue
-            if not self.generate_report_single(testid):
+            html_report = f"{self.report_path}/jacoco-report-html/{testid}/"
+            csv_report = f"{self.report_path}/jacoco-report-csv/{testid}.csv"
+            if not self.generate_report_single(html_report, csv_report):
                 self.test_result[data_id]["error_type"] = "report error"
+                continue
+            self.delete_jacoco_exec()
+            if len(passed_cases) > 0:
+                if not self.run_selected_mehods(passed_cases): continue
+                correct_html_report = f"{self.report_path}/jacoco-report-html/{testid}_correct/"
+                correct_csv_report = f"{self.report_path}/jacoco-report-csv/{testid}_correct.csv"
+                self.generate_report_single(correct_html_report, correct_csv_report)
+                self.delete_jacoco_exec()
+            else:
+                self.test_result[data_id].update({"correct_inst_cov": 0.0, "correct_bran_cov": 0.0})
         return self.test_result
     
     def compile_test_group(self, class_path):
         sucess = []
         for file in class_path:
-            if super().compile_test(file):
-                sucess.append(file)
+            cflag, _ = self.compile_test(file)
+            if cflag: sucess.append(file)
         return sucess
 
     def run_test_group(self, package, testid, data_id):
@@ -266,21 +277,33 @@ class HITSRunner(ProjectTestRunner):
         test_info = result.stdout
         if result.returncode == 0:
             self.logger.info(f"test execution info: {test_info}")
-            test_cases, passed_cases = self.get_pass_rate(test_info)
-            self.test_result[data_id]["test_cases"] = test_cases
-            self.test_result[data_id]["passed_cases"] = passed_cases
-            return True
+            return (True, test_info)
         elif test_info.find("Test run finished")!=-1:
+            test_info = f"{result.stderr}\n{result.stdout}"
             self.logger.warning(f"return code: {result.returncode}")
-            self.logger.warning(f"test case failed in {testid}, info:\n{result.stderr}\n{test_info}")
-            test_cases, passed_cases = self.get_pass_rate(test_info)
-            self.test_result[data_id]["test_cases"] = test_cases
-            self.test_result[data_id]["passed_cases"] = passed_cases
-            if test_cases == 0: return False
-            return True
+            self.logger.warning(f"test case failed in {testid}, info:\n{test_info}")
+            flag = True if len(re.findall(r"([0-9]+) tests started", test_info))>0 else False
+            return (flag, test_info)
         else:
-            self.logger.error(f"error occured in execute test class {testid}, info:\n{result.stderr}\n{test_info}")
-            return False
+            test_info = f"{result.stderr}\n{result.stdout}"
+            self.logger.error(f"error occured in execute test class {testid}, info:\n{test_info}")
+            return (False, test_info)
+
+    def parse_passed_cases(self, package, test_info):
+        result = []
+        current_class = None
+        for line in test_info.splitlines():
+            line = line.strip()
+            class_match = re.findall(r"([\w$]+_Test(?:_slice\d+)?)(?:\s*\u2714)?", line)
+            if len(class_match)>0:
+                current_class = f"{package}.{class_match[0]}"
+                continue
+            method_match = re.findall(r"([\w$]+)\(\)\s*\u2714$", line)
+            if len(method_match)>0:
+                method_name = method_match[0]
+                result.append(f"{current_class}#{method_name}")
+        return result
+
 
 def run_HITS_coverage(fstruct, task_setting, result_folder, dataset_info):
     root_path = os.getcwd().replace("\\", "/")
@@ -292,6 +315,7 @@ def run_HITS_coverage(fstruct, task_setting, result_folder, dataset_info):
     projects = task_setting.PROJECTS
     select = True if len(projects)>0 else False
     logger = logging.getLogger(__name__)
+    set_file_structure(report_path, dataset_info) # check
 
     for pj_name, info in dataset_info.items():
         if select and pj_name not in projects: continue
@@ -303,7 +327,7 @@ def run_HITS_coverage(fstruct, task_setting, result_folder, dataset_info):
         test_result = runner.run_project_test(compile_test)
         logger.info(test_result)
         # extract coverage
-        extractor = CoverageExtractor(info, report_path)
+        extractor = CoverageCalculator(info, report_path)
         coverage_data = extractor.generate_project_summary(test_result)
         logger.info(f"report data:\n{coverage_data}")
         coverage_file = f"{report_path}/summary.json".replace("<project>", pj_name)
@@ -322,11 +346,11 @@ def exract_baseline_coverage(file_structure, task_setting, benchmark, dataset_in
         logger.info("Extracting HITS coverage...")
         # dataset_meta = io_utils.load_json(f"{dataset_path}/dataset_meta.json")
         # HITS_result = "../../../paper-repetition/HITS-rep/playground_check_official"
-        # HITS_save = f"{baseline_path}/HITS"
+        # HITS_save = f"{baseline_path}/HITS/gpt3.5"
         # extract_coverage_HITS(HITS_result, dataset_info, dataset_meta, HITS_save)
 
         # run HITS coverage test
-        HITS_result = f"{baseline_path}/HITS"
+        HITS_result = f"{baseline_path}/HITS/gpt4o"
         run_HITS_coverage(file_structure, task_setting, HITS_result, dataset_info)
     
     # extract ChatUniTest coverage
