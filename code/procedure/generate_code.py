@@ -215,6 +215,7 @@ def generate_case_then_code(file_structure, task_setting, dataset_info: dict):
         # generate test cases in json format
         cases_json = []
         for prompt_name in prompt_list:
+            if prompt_name == "gencode": continue
             prompt = io_utils.load_text(f"{prompt_folder}/{prompt_name}_prompt.md")
             prompt.replace('<cases_json>', str(cases_json))
             case_data, response = llm_caller.get_response_json(prompt)

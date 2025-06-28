@@ -65,11 +65,14 @@ class JavaRunner:
         for method in methods:
             test_cmd += ['--select-method', method]
         script = self.cd_cmd + test_cmd
+        self.logger.info(f"Running selected methods: {methods}")
         result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8", errors='ignore')
         if result.returncode == -1: 
             test_info = f"{result.stderr}\n{result.stdout}"
             self.logger.error(f"error occured in execute:{' '.join(script)}\n info:\n{test_info}")
             return False
+        else:
+            self.logger.info(f"test execution info: {result.stdout}")
         return True
     
     def generate_report_single(self, html_report, csv_report=None):

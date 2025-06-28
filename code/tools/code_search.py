@@ -233,8 +233,10 @@ class CodeSearcher:
         # collect the context
         context = {}
         depclass = self.DependentClassInfo()
+        method_sig = method_info["signature"]
+        return_type = method_info["return_type"].split('.')[-1] + " "
         query_list = [{
-            "sig": class_name + "." + method_info["signature"].split(" ")[-1],
+            "sig": class_name + "." + method_sig[method_sig.index(return_type)+len(return_type):],
             "function": [cm["signature"] for cm in method_info["call_methods"]],
             "field": [cf["name"] for cf in method_info["external_fields"]],
         }]

@@ -116,7 +116,6 @@ def set_file_structure(report_path, dataset_info):
 
 def extract_coverage_ChatUniTest(result_folder, dataset_info, fstruct, task_setting):
     root_path = os.getcwd().replace("\\", "/")
-    dataset_dir = f"{root_path}/{fstruct.DATASET_PATH}"
     testclass_path = f"{result_folder}/<project>/test_classes/"
     report_path = f"{root_path}/{result_folder}/<project>/reports/"
     dependency_dir = f"{root_path}/{fstruct.DEPENDENCY_PATH}"
@@ -125,35 +124,25 @@ def extract_coverage_ChatUniTest(result_folder, dataset_info, fstruct, task_sett
     select = True if len(projects)>0 else False
     logger = logging.getLogger(__name__)
     set_file_structure(report_path, dataset_info)
-
-    # for root, dirs, files in os.walk(result_folder):
-    #     for file in files:
-    #         if file.endswith(".java"):
-    #             file_path = os.path.join(root, file)
-    #             new_file_name = re.sub(r"_[0-9]+_[0-9]+", "", file)
-    #             new_file_path = os.path.join(root, new_file_name)
-    #             if new_file_name == file: continue
-    #             logger.info(f"renaming {file_path} to {new_file_path}")
-    #             try:
-    #                 os.rename(file_path, new_file_path)
-    #             except FileExistsError:
-    #                 logger.warning(f"file {new_file_path} already exists")
-    #                 continue
+    total_result = {}
+    calculator: CoverageCalculator
 
     for pj_name, info in dataset_info.items():
         if select and pj_name not in projects: continue
-        project_path = f"{dataset_dir}/{info['project-url']}"
-        info["project-url"] = project_path
         # run converage test & generate report
         runner = ProjectTestRunner(info, dependency_dir, testclass_path, report_path)
         test_result = runner.run_project_test(compile_test)
         logger.info(test_result)
         # extract coverage
-        extractor = CoverageCalculator(info, report_path)
-        coverage_data = extractor.generate_project_summary(test_result)
+        calculator = CoverageCalculator(info, report_path)
+        coverage_data = calculator.generate_project_summary(test_result)
+        total_result.update(coverage_data)
         logger.info(f"report data:\n{coverage_data}")
         coverage_file = f"{report_path}/summary.json".replace("<project>", pj_name)
         io_utils.write_json(coverage_file, coverage_data)
+
+    total_file = report_path.split("<project>")[0] + "summary.json"
+    calculator.calculate_total_result(total_result, total_file)
     return
 
 
@@ -162,7 +151,7 @@ class HITSRunner(ProjectTestRunner):
         super().__init__(project_info, dependency_dir, testclass_path, report_path)
 
     def check_testclass_name(self):
-        # 遍历 testclass_path下的所有文件
+        # 遍历 testclass_path下的所有文�?
         dir_list = queue.Queue()
         dir_list.put(self.testclass_path)
         while not dir_list.empty():
@@ -247,10 +236,17 @@ class HITSRunner(ProjectTestRunner):
                 continue
             self.delete_jacoco_exec()
             if len(passed_cases) > 0:
-                if not self.run_selected_mehods(passed_cases): continue
-                correct_html_report = f"{self.report_path}/jacoco-report-html/{testid}_correct/"
-                correct_csv_report = f"{self.report_path}/jacoco-report-csv/{testid}_correct.csv"
-                self.generate_report_single(correct_html_report, correct_csv_report)
+                passed_cases_groups = []
+                flag = False
+                for i in range(0, len(passed_cases), 30):
+                    end = min(i+30, len(passed_cases))
+                    passed_cases_groups.append(passed_cases[i:end])
+                for group in passed_cases_groups:
+                    if self.run_selected_mehods(group): flag = True
+                if flag == True:
+                    correct_html_report = f"{self.report_path}/jacoco-report-html/{testid}_correct/"
+                    correct_csv_report = f"{self.report_path}/jacoco-report-csv/{testid}_correct.csv"
+                    self.generate_report_single(correct_html_report, correct_csv_report)
                 self.delete_jacoco_exec()
             else:
                 self.test_result[data_id].update({"correct_inst_cov": 0.0, "correct_bran_cov": 0.0})
@@ -307,7 +303,6 @@ class HITSRunner(ProjectTestRunner):
 
 def run_HITS_coverage(fstruct, task_setting, result_folder, dataset_info):
     root_path = os.getcwd().replace("\\", "/")
-    dataset_dir = f"{root_path}/{fstruct.DATASET_PATH}"
     testclass_path = f"{result_folder}/<project>/test-classes/"
     report_path = f"{root_path}/{result_folder}/<project>/reports/"
     dependency_dir = f"{root_path}/{fstruct.DEPENDENCY_PATH}"
@@ -315,23 +310,26 @@ def run_HITS_coverage(fstruct, task_setting, result_folder, dataset_info):
     projects = task_setting.PROJECTS
     select = True if len(projects)>0 else False
     logger = logging.getLogger(__name__)
-    set_file_structure(report_path, dataset_info) # check
+    set_file_structure(report_path, dataset_info)
+    total_result = {}
+    calculator: CoverageCalculator
 
     for pj_name, info in dataset_info.items():
         if select and pj_name not in projects: continue
-        project_path = f"{dataset_dir}/{info['project-url']}"
-        info["project-url"] = project_path
-        # run converage test & generate report
         runner = HITSRunner(info, dependency_dir, testclass_path, report_path)
         runner.check_testclass_name()
         test_result = runner.run_project_test(compile_test)
         logger.info(test_result)
         # extract coverage
-        extractor = CoverageCalculator(info, report_path)
-        coverage_data = extractor.generate_project_summary(test_result)
+        calculator = CoverageCalculator(info, report_path)
+        coverage_data = calculator.generate_project_summary(test_result)
+        total_result.update(coverage_data)
         logger.info(f"report data:\n{coverage_data}")
         coverage_file = f"{report_path}/summary.json".replace("<project>", pj_name)
         io_utils.write_json(coverage_file, coverage_data)
+
+    total_file = report_path.split("<project>")[0] + "summary.json"
+    calculator.calculate_total_result(total_result, total_file)
     return
 
 
@@ -340,6 +338,12 @@ def exract_baseline_coverage(file_structure, task_setting, benchmark, dataset_in
     baseline_path = benchmark.BASELINE_PATH
     selected_baselines = benchmark.BASELINES
     logger = logging.getLogger(__name__)
+
+    root_path = os.getcwd().replace("\\", "/")
+    dataset_dir = f"{root_path}/{dataset_path}"
+    for _, info in dataset_info.items():
+        project_path = f"{dataset_dir}/{info['project-url']}"
+        info["project-url"] = project_path
 
     # extract HITS coverage
     if "HITS" in selected_baselines:
@@ -358,4 +362,10 @@ def exract_baseline_coverage(file_structure, task_setting, benchmark, dataset_in
         logger.info("Extracting ChatUniTest coverage...")
         chatunitest_result = f"{baseline_path}/ChatUniTest"
         extract_coverage_ChatUniTest(chatunitest_result, dataset_info, file_structure, task_setting)
+
+    # extract ChatTester coverage
+    if "ChatTester" in selected_baselines:
+        logger.info("Extracting ChatTester coverage...")
+        chattester_result = f"{baseline_path}/ChatTester"
+        extract_coverage_ChatUniTest(chattester_result, dataset_info, file_structure, task_setting)
     return

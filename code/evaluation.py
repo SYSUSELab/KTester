@@ -40,8 +40,10 @@ def run(operation):
     if operation == 'baseline':
         exract_baseline_coverage(FS, TS, BL, dataset_info)
     if operation == 'check':
-        from evaluations.check_empty_class import check_empty_class
+        from evaluations.check_empty_class import check_empty_class, compare_baseline
         check_empty_class(FS, dataset_info)
+        # hits_result = "../evaluation/baseline/HITS/gpt4o"
+        # compare_baseline(FS, dataset_info, hits_result)
     return
 
 

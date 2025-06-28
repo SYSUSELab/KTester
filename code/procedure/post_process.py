@@ -72,7 +72,7 @@ class CodeRepairer(JavaRunner):
         self.logger = logging.getLogger(__name__)
 
     def compile_and_execute(self, class_path, test_class):
-        passrate = -1.0
+        passrate = -2.0
         cflag, cfeedback = self.compile_test(class_path)
         if not cflag:
             return (VerifyResult.COMPILE_ERROR, cfeedback, passrate)
@@ -85,6 +85,7 @@ class CodeRepairer(JavaRunner):
             except:
                 pass
         if not eflag or passrate<0.9:
+            passrate = -1.0
             return (VerifyResult.EXECUTE_ERROR, efeedback, passrate)
 
         return (VerifyResult.PASS, "", passrate)
@@ -243,7 +244,8 @@ class CodeRepairer(JavaRunner):
             temp = f"{self.temp_path}/{class_name}".replace(".java", f"_{count}.java")
             io_utils.write_text(temp, fixed_code)
             # get the test class with max passrate
-            max_index = passrates.index(max(passrates))
+            max_value = max(passrates)
+            max_index = passrates.index(max_value) if max_value>=0 else len(passrates)-1
             if max_index < count:
                 index_file = f"{self.temp_path}/{class_name}".replace(".java", f"_{max_index}.java")
                 fixed_code = io_utils.load_text(index_file)

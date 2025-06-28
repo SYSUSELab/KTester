@@ -66,18 +66,18 @@ def run():
     # prompt_gen_end = time.time()
     # logger.info(f"time for generate prompts: {prompt_gen_end - prompt_gen_start:.2f} seconds")
 
-    # framework_start = time.time()
-    # GenCode.generate_testclass_framework(FS, TS, dataset_info)
-    # framework_end = time.time()
-    # logger.info(f"time for generate test class framework: {framework_end - framework_start:.2f} seconds")
+    framework_start = time.time()
+    GenCode.generate_testclass_framework(FS, TS, dataset_info)
+    framework_end = time.time()
+    logger.info(f"time for generate test class framework: {framework_end - framework_start:.2f} seconds")
 
-    # testcase_start = time.time()
-    # if case_then_code:
-    #     GenCode.generate_case_then_code(FS, TS, dataset_info)
-    # else:
-    #     GenCode.generate_testcase_code(FS, TS, dataset_info)
-    # testcase_end = time.time()
-    # logger.info(f"time for generate test cases: {testcase_end - testcase_start:.2f} seconds")
+    testcase_start = time.time()
+    if case_then_code:
+        GenCode.generate_case_then_code(FS, TS, dataset_info)
+    else:
+        GenCode.generate_testcase_code(FS, TS, dataset_info)
+    testcase_end = time.time()
+    logger.info(f"time for generate test cases: {testcase_end - testcase_start:.2f} seconds")
 
     post_start = time.time()
     Post.verify_test_classes(FS, TS, dataset_info)

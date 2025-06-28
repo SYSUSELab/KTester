@@ -201,6 +201,19 @@ class CoverageCalculator(CoverageExtractor):
         })
         return
 
+    def calculate_total_result(self, new_result:dict, result_file):
+        exist_result = {}
+        if os.path.exists(result_file):
+            exist_result = utils.load_json(result_file)
+        exist_result.update(new_result)
+        metrics = ["compile_pass_rate", "execution_pass_rate", 
+                  "average_instruction_coverage", "average_branch_coverage",
+                  "average_correct_instruction_coverage", "average_correct_branch_coverage"]
+        for metric in metrics:
+            exist_result.pop(metric, None)
+        self.count_general_metrics(exist_result)
+        utils.write_json(result_file, exist_result)
+
 
 def test_coverage(fstruct, task_setting, dataset_info: dict):
     root_path = os.getcwd().replace("\\", "/")
@@ -212,6 +225,8 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
     projects = task_setting.PROJECTS
     select = True if len(projects)>0 else False
     logger = logging.getLogger(__name__)
+    total_result = {}
+    calculator: CoverageCalculator
 
     logger.info(f"Start coverage test ...")
     for pj_name, info in dataset_info.items():
@@ -225,9 +240,13 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
         # extract coverage
         calculator = CoverageCalculator(info, report_path)
         coverage_data = calculator.generate_project_summary(test_result)
+        total_result.update(coverage_data)
         logger.info(f"report data:\n{coverage_data}")
         coverage_file = f"{report_path}/summary.json".replace("<project>", pj_name)
         utils.write_json(coverage_file, coverage_data)
+
+    total_file = report_path.split("<project>")[0] + "summary.json"
+    calculator.calculate_total_result(total_result, total_file)
     return
 
 
