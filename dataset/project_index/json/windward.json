@@ -2,6 +2,7 @@
   "project": "windward",
   "source": {
     "org.flmelody.core.AbstractRouterGroup": {
+      "is_abstract": true,
       "constructors": [
         {
           "start_line": 59,
@@ -105,6 +106,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected void setGroupPath(String)",
             "parameters": [
               {
@@ -126,6 +128,7 @@
               }
             ],
             "return_type": "M",
+            "access_type": "PUBLIC",
             "signature": "public M end()",
             "parameters": []
           }
@@ -161,6 +164,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> get(String, Supplier<R>)",
             "parameters": [
               {
@@ -203,6 +207,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> get(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -245,6 +250,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> get(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -289,6 +295,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> put(String, Supplier<R>)",
             "parameters": [
               {
@@ -331,6 +338,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> put(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -373,6 +381,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> put(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -417,6 +426,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> post(String, Supplier<R>)",
             "parameters": [
               {
@@ -459,6 +469,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> post(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -501,6 +512,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> post(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -545,6 +557,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> delete(String, Supplier<R>)",
             "parameters": [
               {
@@ -587,6 +600,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> delete(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -629,6 +643,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> delete(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -673,6 +688,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> sse(String, EnhancedFunction<SseWindwardContext, SseEjector>)",
             "parameters": [
               {
@@ -726,6 +742,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> ws(String, Consumer<WebSocketWindwardContext>)",
             "parameters": [
               {
@@ -822,6 +839,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> resources(String, String...)",
             "parameters": [
               {
@@ -870,6 +888,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> http(HttpMethod, String, Supplier<R>)",
             "parameters": [
               {
@@ -920,6 +939,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> http(HttpMethod, String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -970,6 +990,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.RouterGroup<M>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<M> http(HttpMethod, String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -1277,6 +1298,7 @@
               }
             ],
             "return_type": "R",
+            "access_type": "PUBLIC",
             "signature": "public R matchRouter(String, String)",
             "parameters": [
               {
@@ -1481,6 +1503,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void registerRouter(String, String, I, Class<? extends WindwardContext>)",
             "parameters": [
               {
@@ -1589,6 +1612,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Map<java.lang.String, java.lang.Object>",
+            "access_type": "PRIVATE",
             "signature": "private Map<String, Object> checkPlaceholder(String)",
             "parameters": [
               {
@@ -1603,6 +1627,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.AbstractHttpWindwardContext": {
+      "is_abstract": true,
       "constructors": [
         {
           "start_line": 36,
@@ -1656,6 +1681,7 @@
               }
             ],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I readJson(Class<I>)",
             "parameters": [
               {
@@ -1696,6 +1722,7 @@
               }
             ],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I readJson(Type)",
             "parameters": [
               {
@@ -1742,6 +1769,7 @@
               }
             ],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I bindJson(Class<I>, Class<?>...)",
             "parameters": [
               {
@@ -1790,6 +1818,7 @@
               }
             ],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I bindJson(Type, Class<?>...)",
             "parameters": [
               {
@@ -1836,6 +1865,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void redirect(String)",
             "parameters": [
               {
@@ -1929,6 +1959,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void redirect(int, String)",
             "parameters": [
               {
@@ -2133,6 +2164,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void html(String, M)",
             "parameters": [
               {
@@ -2152,6 +2184,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.AbstractWindwardContext": {
+      "is_abstract": true,
       "constructors": [
         {
           "start_line": 33,
@@ -2244,6 +2277,7 @@
               }
             ],
             "return_type": "P",
+            "access_type": "PUBLIC",
             "signature": "public P getRequestParameter(String)",
             "parameters": [
               {
@@ -2282,6 +2316,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public List<String> getRequestParameters(String)",
             "parameters": [
               {
@@ -2310,6 +2345,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.lang.Object>",
+            "access_type": "PUBLIC",
             "signature": "public Map<String, Object> getPathVariables()",
             "parameters": [],
             "javadoc": " {@inheritDoc} "
@@ -2333,6 +2369,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getRequestBody()",
             "parameters": [],
             "javadoc": " {@inheritDoc} "
@@ -2350,6 +2387,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardRequest",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequest windwardRequest()",
             "parameters": [],
             "javadoc": " {@inheritDoc} "
@@ -2381,6 +2419,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void close()",
             "parameters": [],
             "javadoc": " {@inheritDoc} "
@@ -2398,6 +2437,7 @@
               }
             ],
             "return_type": "java.lang.Boolean",
+            "access_type": "PUBLIC",
             "signature": "public Boolean isClosed()",
             "parameters": [],
             "javadoc": " {@inheritDoc} "
@@ -2435,6 +2475,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void writeJson(T)",
             "parameters": [
               {
@@ -2478,6 +2519,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void writeJson(int, T)",
             "parameters": [
               {
@@ -2524,6 +2566,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void writeString(String)",
             "parameters": [
               {
@@ -2567,6 +2610,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void writeString(int, String)",
             "parameters": [
               {
@@ -2617,6 +2661,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(String, T)",
             "parameters": [
               {
@@ -2660,6 +2705,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, String, T)",
             "parameters": [
               {
@@ -2683,6 +2729,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.EmptyWindwardContext": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -2699,6 +2746,7 @@
             ],
             "external_fields": [],
             "return_type": "P",
+            "access_type": "PUBLIC",
             "signature": "public P getRequestParameter(String)",
             "parameters": [
               {
@@ -2721,6 +2769,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public List<String> getRequestParameters(String)",
             "parameters": [
               {
@@ -2743,6 +2792,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Map<java.lang.String, java.lang.Object>",
+            "access_type": "PUBLIC",
             "signature": "public Map<String, Object> getPathVariables()",
             "parameters": []
           }
@@ -2760,6 +2810,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getRequestBody()",
             "parameters": []
           }
@@ -2777,6 +2828,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.WindwardRequest",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequest windwardRequest()",
             "parameters": []
           }
@@ -2794,6 +2846,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void close()",
             "parameters": []
           }
@@ -2810,6 +2863,7 @@
               }
             ],
             "return_type": "java.lang.Boolean",
+            "access_type": "PUBLIC",
             "signature": "public Boolean isClosed()",
             "parameters": []
           }
@@ -2827,6 +2881,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, String, T)",
             "parameters": [
               {
@@ -2857,6 +2912,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void writeJson(int, T)",
             "parameters": [
               {
@@ -2883,6 +2939,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void writeString(int, String)",
             "parameters": [
               {
@@ -2901,6 +2958,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.EnhancedWindwardContext": {
+      "is_abstract": true,
       "constructors": [
         {
           "start_line": 29,
@@ -2955,6 +3013,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public final void execute(EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -2971,6 +3030,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected abstract void doOnRequest()",
             "parameters": [],
             "javadoc": " Check request before executing function. "
@@ -2983,6 +3043,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected abstract void doOnResponse(R)",
             "parameters": [
               {
@@ -2998,6 +3059,7 @@
       "javadoc": "\n * @see org.flmelody.core.context.support.JsonWindwardContext\n * @see org.flmelody.core.context.support.ViewWindwardContext\n * @author esotericman\n "
     },
     "org.flmelody.core.context.HttpBasicWindwardContext": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -3008,6 +3070,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "NONE",
             "signature": " abstract I readJson(Class<I>)",
             "parameters": [
               {
@@ -3023,6 +3086,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "NONE",
             "signature": " abstract I readJson(Type)",
             "parameters": [
               {
@@ -3040,6 +3104,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "NONE",
             "signature": " abstract I bindJson(Class<I>, Class<?>...)",
             "parameters": [
               {
@@ -3059,6 +3124,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "NONE",
             "signature": " abstract I bindJson(Type, Class<?>...)",
             "parameters": [
               {
@@ -3080,6 +3146,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void redirect(String)",
             "parameters": [
               {
@@ -3095,6 +3162,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void redirect(int, String)",
             "parameters": [
               {
@@ -3116,6 +3184,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void html(String, M)",
             "parameters": [
               {
@@ -3135,6 +3204,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.ResourceWindwardContext": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 11,
@@ -3184,6 +3254,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getMatchedPath()",
             "parameters": []
           }
@@ -3193,6 +3264,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.SimpleWindwardContext": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 25,
@@ -3218,6 +3290,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.support.HttpKind": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -3225,6 +3298,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.support.JsonWindwardContext": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 29,
@@ -3307,6 +3381,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void doOnRequest()",
             "parameters": []
           }
@@ -3329,6 +3404,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void doOnResponse(R)",
             "parameters": [
               {
@@ -3343,6 +3419,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.support.SseWindwardContext": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 26,
@@ -3371,6 +3448,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected void doOnRequest()",
             "parameters": []
           }
@@ -3382,6 +3460,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected void doOnResponse(R)",
             "parameters": [
               {
@@ -3396,6 +3475,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.support.ViewWindwardContext": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 27,
@@ -3424,6 +3504,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void doOnRequest()",
             "parameters": []
           }
@@ -3470,6 +3551,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void doOnResponse(R)",
             "parameters": [
               {
@@ -3484,6 +3566,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.context.WindwardContext": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -3494,6 +3577,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "P",
+            "access_type": "NONE",
             "signature": " abstract P getRequestParameter(String)",
             "parameters": [
               {
@@ -3511,6 +3595,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "NONE",
             "signature": " abstract List<String> getRequestParameters(String)",
             "parameters": [
               {
@@ -3528,6 +3613,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.util.Map<java.lang.String, java.lang.Object>",
+            "access_type": "NONE",
             "signature": " abstract Map<String, Object> getPathVariables()",
             "parameters": [],
             "javadoc": "\n   * Get path variables\n   *\n   * @return path variables\n   "
@@ -3540,6 +3626,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " abstract String getRequestBody()",
             "parameters": [],
             "javadoc": "\n   * Get request body\n   *\n   * @return request body\n   "
@@ -3552,6 +3639,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "org.flmelody.core.WindwardRequest",
+            "access_type": "NONE",
             "signature": " abstract WindwardRequest windwardRequest()",
             "parameters": [],
             "javadoc": "\n   * Get windwardRequest\n   *\n   * @return windwardRequest\n   "
@@ -3564,6 +3652,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void close()",
             "parameters": [],
             "javadoc": " Close context "
@@ -3576,6 +3665,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.lang.Boolean",
+            "access_type": "NONE",
             "signature": " abstract Boolean isClosed()",
             "parameters": [],
             "javadoc": "\n   * Check if current context is already closed\n   *\n   * @return is closed\n   "
@@ -3593,6 +3683,7 @@
               }
             ],
             "return_type": "java.lang.Boolean",
+            "access_type": "NONE",
             "signature": " Boolean isCacheable()",
             "parameters": [],
             "javadoc": "\n   * Whether context can be cached\n   *\n   * @return cacheable flag\n   "
@@ -3634,6 +3725,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void write(String, T)",
             "parameters": [
               {
@@ -3653,6 +3745,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void write(int, String, T)",
             "parameters": [
               {
@@ -3703,6 +3796,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void writeJson(T)",
             "parameters": [
               {
@@ -3718,6 +3812,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void writeJson(int, T)",
             "parameters": [
               {
@@ -3764,6 +3859,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void writeString(String)",
             "parameters": [
               {
@@ -3779,6 +3875,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void writeString(int, String)",
             "parameters": [
               {
@@ -3798,6 +3895,7 @@
       "javadoc": "\n * Http context\n *\n * @author esotericman\n "
     },
     "org.flmelody.core.DefaultNotFoundHandler": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -3838,6 +3936,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void handle(WindwardContext)",
             "parameters": [
               {
@@ -3870,6 +3969,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean supported(Exception)",
             "parameters": [
               {
@@ -3891,6 +3991,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int getOrder()",
             "parameters": []
           }
@@ -3900,6 +4001,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.DefaultRequestReader": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -3935,6 +4037,7 @@
             ],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I readJson(String, Class<I>)",
             "parameters": [
               {
@@ -3978,6 +4081,7 @@
             ],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I readJson(String, Type)",
             "parameters": [
               {
@@ -4041,6 +4145,7 @@
             ],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I bindJson(String, Class<I>, Class<?>...)",
             "parameters": [
               {
@@ -4106,6 +4211,7 @@
             ],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I bindJson(String, Type, Class<?>...)",
             "parameters": [
               {
@@ -4128,6 +4234,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.DefaultRouterGroup": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 24,
@@ -4200,6 +4307,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isResourceGroup()",
             "parameters": []
           }
@@ -4209,6 +4317,7 @@
       "javadoc": "\n * Default router group\n *\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.HandlerNotFoundException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 23,
@@ -4230,6 +4339,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.JsonDeserializeException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 22,
@@ -4264,6 +4374,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.JsonException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 23,
@@ -4298,6 +4409,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.JsonSerializeException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 23,
@@ -4332,6 +4444,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.NoRequestBodyException": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -4339,6 +4452,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.PluginMissException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 22,
@@ -4373,6 +4487,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.ResourceNotFoundException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 22,
@@ -4394,6 +4509,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.RouterMappingException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 23,
@@ -4415,6 +4531,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.ServerException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 23,
@@ -4436,6 +4553,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.ValidationException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 23,
@@ -4457,6 +4575,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.exception.WindwardException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 22,
@@ -4491,6 +4610,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.ExceptionHandler": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -4501,6 +4621,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void handle(WindwardContext)",
             "parameters": [
               {
@@ -4517,6 +4638,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " abstract boolean supported(Exception)",
             "parameters": [
               {
@@ -4531,6 +4653,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.Filter": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -4541,6 +4664,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void filter(WindwardContext)",
             "parameters": [
               {
@@ -4555,6 +4679,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.FunctionMetaInfo": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 37,
@@ -4719,6 +4844,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getPath()",
             "parameters": []
           }
@@ -4735,6 +4861,7 @@
               }
             ],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I getFunction()",
             "parameters": []
           }
@@ -4751,6 +4878,7 @@
               }
             ],
             "return_type": "java.lang.Class<? extends org.flmelody.core.context.WindwardContext>",
+            "access_type": "PUBLIC",
             "signature": "public Class<? extends WindwardContext> getContext()",
             "parameters": []
           }
@@ -4767,6 +4895,7 @@
               }
             ],
             "return_type": "java.lang.Class<? extends org.flmelody.core.context.WindwardContext>",
+            "access_type": "PUBLIC",
             "signature": "public Class<? extends WindwardContext> getParameterType()",
             "parameters": []
           }
@@ -4783,6 +4912,7 @@
               }
             ],
             "return_type": "java.lang.Class<?>",
+            "access_type": "PUBLIC",
             "signature": "public Class<?> getResultType()",
             "parameters": []
           }
@@ -4799,6 +4929,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.lang.Object>",
+            "access_type": "PUBLIC",
             "signature": "public Map<String, Object> getPathVariables()",
             "parameters": []
           }
@@ -4815,6 +4946,7 @@
               }
             ],
             "return_type": "org.flmelody.support.FunctionDefinition",
+            "access_type": "PUBLIC",
             "signature": "public FunctionDefinition getFunctionDefinition()",
             "parameters": []
           }
@@ -4824,6 +4956,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.Handler": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -4831,6 +4964,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.HttpHeader": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -5259,6 +5393,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.HttpServer": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -5269,6 +5404,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void run()",
             "parameters": []
           }
@@ -5390,6 +5526,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int value()",
             "parameters": []
           }
@@ -5406,6 +5543,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String reasonPhrase()",
             "parameters": []
           }
@@ -5415,6 +5553,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.LoggingFilter": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -5467,6 +5606,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void filter(WindwardContext)",
             "parameters": [
               {
@@ -5695,6 +5835,7 @@
               }
             ],
             "return_type": "org.flmelody.core.MediaType",
+            "access_type": "PUBLIC",
             "signature": "public static MediaType detectMediaType(String)",
             "parameters": [
               {
@@ -5709,6 +5850,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.netty.handler.HttpResponseEncoder": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -5784,6 +5926,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected void encode(ChannelHandlerContext, FullHttpResponse, List<Object>)",
             "parameters": [
               {
@@ -5806,6 +5949,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.netty.handler.HttpServerHandler": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -6069,6 +6213,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected void channelRead0(ChannelHandlerContext, Object)",
             "parameters": [
               {
@@ -6157,6 +6302,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void userEventTriggered(ChannelHandlerContext, Object)",
             "parameters": [
               {
@@ -6240,6 +6386,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void exceptionCaught(ChannelHandlerContext, Throwable)",
             "parameters": [
               {
@@ -6351,6 +6498,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void extractHandlers(ChannelHandlerContext, String)",
             "parameters": [
               {
@@ -6471,6 +6619,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.util.List<java.lang.String>>",
+            "access_type": "PRIVATE",
             "signature": "private Map<String, List<String>> prepareHeaders(HttpHeaders)",
             "parameters": [
               {
@@ -6820,6 +6969,7 @@
               }
             ],
             "return_type": "org.flmelody.core.context.WindwardContext",
+            "access_type": "PRIVATE",
             "signature": "private WindwardContext initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
             "parameters": [
               {
@@ -6936,6 +7086,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void handle(FunctionMetaInfo<?>, WindwardContext)",
             "parameters": [
               {
@@ -7088,6 +7239,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void execute(FunctionMetaInfo<?>, WindwardContext)",
             "parameters": [
               {
@@ -7158,6 +7310,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean handleException(WindwardContext, Exception)",
             "parameters": [
               {
@@ -7242,6 +7395,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean isWebsocketUpgrade(HttpHeaders)",
             "parameters": [
               {
@@ -7256,6 +7410,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.netty.handler.SocketTailHandler": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -7369,6 +7524,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void userEventTriggered(ChannelHandlerContext, Object)",
             "parameters": [
               {
@@ -7435,6 +7591,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void exceptionCaught(ChannelHandlerContext, Throwable)",
             "parameters": [
               {
@@ -7453,6 +7610,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.netty.handler.WebSocketHandler": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -7569,6 +7727,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void channelRead(ChannelHandlerContext, Object)",
             "parameters": [
               {
@@ -7587,6 +7746,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.netty.NettyHttpServer": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 44,
@@ -7832,6 +7992,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void run()",
             "parameters": []
           }
@@ -7841,6 +8002,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.netty.NettyResponseWriter": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 46,
@@ -7919,6 +8081,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, T)",
             "parameters": [
               {
@@ -7965,6 +8128,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, String, T)",
             "parameters": [
               {
@@ -8019,6 +8183,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, String, Map<String, Object>, T)",
             "parameters": [
               {
@@ -8077,6 +8242,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, String, T, boolean)",
             "parameters": [
               {
@@ -8353,6 +8519,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, String, Map<String, Object>, T, boolean)",
             "parameters": [
               {
@@ -8413,6 +8580,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void writeAndClose(int, String, T)",
             "parameters": [
               {
@@ -8481,6 +8649,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void close()",
             "parameters": []
           }
@@ -8490,6 +8659,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.Order": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -8524,6 +8694,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " int getOrder()",
             "parameters": [],
             "javadoc": "\n   * Priority of component, the lower the value, the higher the priority\n   *\n   * @return priority\n   "
@@ -8534,6 +8705,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.json.AutoJsonBinder": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -8554,6 +8726,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.json.GsonPlugin": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -8627,6 +8800,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toJson(I)",
             "parameters": [
               {
@@ -8674,6 +8848,7 @@
               }
             ],
             "return_type": "O",
+            "access_type": "PUBLIC",
             "signature": "public O toObject(String, Class<O>)",
             "parameters": [
               {
@@ -8733,6 +8908,7 @@
               }
             ],
             "return_type": "O",
+            "access_type": "PUBLIC",
             "signature": "public O toObject(I, Type)",
             "parameters": [
               {
@@ -8752,6 +8928,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.json.JacksonPlugin": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -8815,6 +8992,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toJson(I)",
             "parameters": [
               {
@@ -8862,6 +9040,7 @@
               }
             ],
             "return_type": "O",
+            "access_type": "PUBLIC",
             "signature": "public O toObject(String, Class<O>)",
             "parameters": [
               {
@@ -8931,6 +9110,7 @@
               }
             ],
             "return_type": "O",
+            "access_type": "PUBLIC",
             "signature": "public O toObject(I, Type)",
             "parameters": [
               {
@@ -8950,6 +9130,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.json.JsonPlugin": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -8960,6 +9141,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " abstract String toJson(I)",
             "parameters": [
               {
@@ -8977,6 +9159,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "O",
+            "access_type": "NONE",
             "signature": " abstract O toObject(String, Class<O>)",
             "parameters": [
               {
@@ -8996,6 +9179,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "O",
+            "access_type": "NONE",
             "signature": " abstract O toObject(I, Type)",
             "parameters": [
               {
@@ -9015,6 +9199,7 @@
       "javadoc": "\n * Base interface for serializing or deserializing json\n *\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.Plugin": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -9120,6 +9305,7 @@
               }
             ],
             "return_type": "org.flmelody.core.plugin.PluginSlot",
+            "access_type": "PUBLIC",
             "signature": "public static PluginSlot slot(Class<? extends Plugin>)",
             "parameters": [
               {
@@ -9134,6 +9320,7 @@
       "javadoc": "\n * Predefine plugin slot.\n *\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.resolver.CompositePluginResolver": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 29,
@@ -9190,6 +9377,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void resolve(Windward, Plugin)",
             "parameters": [
               {
@@ -9226,6 +9414,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void registerResolver(PluginResolver)",
             "parameters": [
               {
@@ -9240,6 +9429,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.resolver.PluginResolver": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -9250,6 +9440,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void resolve(Windward, Plugin)",
             "parameters": [
               {
@@ -9268,6 +9459,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.resolver.ViewPluginResolver": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -9294,6 +9486,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void resolve(Windward, Plugin)",
             "parameters": [
               {
@@ -9312,6 +9505,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -9507,6 +9701,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void accept(WindwardContext)",
             "parameters": [
               {
@@ -9681,6 +9876,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PROTECTED",
             "signature": "protected String findResource(String, StaticResource)",
             "parameters": [
               {
@@ -9721,6 +9917,7 @@
               }
             ],
             "return_type": "org.flmelody.core.plugin.resource.ResourcePlugin",
+            "access_type": "PUBLIC",
             "signature": "public final ResourcePlugin mappingResource(String, String...)",
             "parameters": [
               {
@@ -9739,6 +9936,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 35,
@@ -9815,6 +10013,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void appendPages(String...)",
             "parameters": [
               {
@@ -9991,6 +10190,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PROTECTED",
             "signature": "protected String findResource(String, StaticResource)",
             "parameters": [
               {
@@ -10009,6 +10209,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.resource.ResourcePlugin": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -10019,6 +10220,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "org.flmelody.core.plugin.resource.ResourcePlugin",
+            "access_type": "NONE",
             "signature": " abstract ResourcePlugin mappingResource(String, String...)",
             "parameters": [
               {
@@ -10037,6 +10239,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.resource.ResourcePluginProxy": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 29,
@@ -10080,6 +10283,7 @@
               }
             ],
             "return_type": "org.flmelody.core.plugin.resource.ResourcePluginProxy",
+            "access_type": "PUBLIC",
             "signature": "public static ResourcePluginProxy current()",
             "parameters": []
           }
@@ -10135,6 +10339,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void accept(WindwardContext)",
             "parameters": [
               {
@@ -10149,6 +10354,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.resource.StaticResource": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 24,
@@ -10191,6 +10397,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder",
+            "access_type": "PUBLIC",
             "signature": "public static StaticResourceBuilder newBuilder()",
             "parameters": []
           },
@@ -10211,6 +10418,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder",
+            "access_type": "PUBLIC",
             "signature": "public static StaticResourceBuilder newBuilder(StaticResource)",
             "parameters": [
               {
@@ -10232,6 +10440,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getFileUri()",
             "parameters": []
           }
@@ -10241,6 +10450,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 42,
@@ -10286,6 +10496,7 @@
               }
             ],
             "return_type": "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder",
+            "access_type": "PUBLIC",
             "signature": "public StaticResourceBuilder fileUri(String)",
             "parameters": [
               {
@@ -10307,6 +10518,7 @@
               }
             ],
             "return_type": "org.flmelody.core.plugin.resource.StaticResource",
+            "access_type": "PUBLIC",
             "signature": "public StaticResource build()",
             "parameters": []
           }
@@ -10316,6 +10528,7 @@
       "javadoc": " Builder for StaticResource "
     },
     "org.flmelody.core.plugin.view.AbstractViewPlugin": {
+      "is_abstract": true,
       "constructors": [
         {
           "start_line": 30,
@@ -10379,6 +10592,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setTemplateLocationPrefix(String)",
             "parameters": [
               {
@@ -10411,6 +10625,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean supportedExtension(String)",
             "parameters": [
               {
@@ -10461,6 +10676,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public final String resolveView(String, Map<String, Object>)",
             "parameters": [
               {
@@ -10479,6 +10695,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.view.freemarker.FreemarkerView": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 35,
@@ -10568,6 +10785,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String render(String, Map<String, Object>)",
             "parameters": [
               {
@@ -10586,6 +10804,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.view.groovy.GroovyView": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 31,
@@ -10701,6 +10920,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String render(String, Map<String, Object>)",
             "parameters": [
               {
@@ -10719,6 +10939,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.view.thymeleaf.ThymeleafView": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 44,
@@ -10835,6 +11056,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String render(String, Map<String, Object>)",
             "parameters": [
               {
@@ -10853,6 +11075,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.view.ViewEngineDetector": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -10885,6 +11108,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.view.ViewPlugin": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -10895,6 +11119,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " abstract boolean supportedExtension(String)",
             "parameters": [
               {
@@ -10912,6 +11137,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " abstract String render(String, Map<String, Object>)",
             "parameters": [
               {
@@ -10931,6 +11157,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.ws.ExtensionalWebSocketPlugin": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 41,
@@ -11107,6 +11334,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isMatch(String)",
             "parameters": [
               {
@@ -11128,6 +11356,7 @@
               }
             ],
             "return_type": "java.util.List<org.flmelody.core.ws.codec.WebSocketCodec>",
+            "access_type": "PUBLIC",
             "signature": "public List<WebSocketCodec> getWebSocketCodecs()",
             "parameters": []
           }
@@ -11144,6 +11373,7 @@
               }
             ],
             "return_type": "java.util.List<org.flmelody.core.ws.WebSocketParser<?>>",
+            "access_type": "PUBLIC",
             "signature": "public List<WebSocketParser<?>> getWebSocketParsers()",
             "parameters": []
           }
@@ -11153,6 +11383,7 @@
       "javadoc": "\n * Holder of websockets codecs or parsers. This plugin is globally scoped. Note that currently at\n * least one codec and one message parser are included for this plugin to work.\n *\n * @see WebSocketCodec\n * @see WebSocketParser\n * @author esotericman\n "
     },
     "org.flmelody.core.plugin.ws.WebSocketPlugin": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -11160,6 +11391,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.RequestReader": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -11170,6 +11402,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "NONE",
             "signature": " abstract I readJson(String, Class<I>)",
             "parameters": [
               {
@@ -11189,6 +11422,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "NONE",
             "signature": " abstract I readJson(String, Type)",
             "parameters": [
               {
@@ -11210,6 +11444,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "NONE",
             "signature": " abstract I bindJson(String, Class<I>, Class<?>...)",
             "parameters": [
               {
@@ -11233,6 +11468,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
+            "access_type": "NONE",
             "signature": " abstract I bindJson(String, Type, Class<?>...)",
             "parameters": [
               {
@@ -11256,6 +11492,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.ResponseWriter": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -11266,6 +11503,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void write(int, T)",
             "parameters": [
               {
@@ -11285,6 +11523,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void write(int, String, T)",
             "parameters": [
               {
@@ -11308,6 +11547,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void write(int, String, Map<String, Object>, T)",
             "parameters": [
               {
@@ -11335,6 +11575,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void write(int, String, T, boolean)",
             "parameters": [
               {
@@ -11362,6 +11603,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void write(int, String, Map<String, Object>, T, boolean)",
             "parameters": [
               {
@@ -11395,6 +11637,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void writeAndClose(int, String, T)",
             "parameters": [
               {
@@ -11420,6 +11663,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void close()",
             "parameters": [],
             "javadoc": " Close connection "
@@ -11430,6 +11674,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.Router": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -11440,6 +11685,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T http(HttpMethod, String, Supplier<R>)",
             "parameters": [
               {
@@ -11463,6 +11709,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T http(HttpMethod, String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -11486,6 +11733,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T http(HttpMethod, String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -11511,6 +11759,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T get(String, Supplier<R>)",
             "parameters": [
               {
@@ -11530,6 +11779,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T get(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -11549,6 +11799,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T get(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -11570,6 +11821,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T put(String, Supplier<R>)",
             "parameters": [
               {
@@ -11589,6 +11841,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T put(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -11608,6 +11861,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T put(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -11629,6 +11883,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T post(String, Supplier<R>)",
             "parameters": [
               {
@@ -11648,6 +11903,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T post(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -11667,6 +11923,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T post(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -11688,6 +11945,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T delete(String, Supplier<R>)",
             "parameters": [
               {
@@ -11707,6 +11965,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T delete(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -11726,6 +11985,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T delete(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -11747,6 +12007,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T sse(String, EnhancedFunction<SseWindwardContext, SseEjector>)",
             "parameters": [
               {
@@ -11768,6 +12029,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T ws(String, Consumer<WebSocketWindwardContext>)",
             "parameters": [
               {
@@ -11789,6 +12051,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " T resource(String...)",
             "parameters": [
               {
@@ -11806,6 +12069,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T resources(String, String...)",
             "parameters": [
               {
@@ -11825,6 +12089,7 @@
       "javadoc": "\n * @author flmelody\n "
     },
     "org.flmelody.core.RouterGroup": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -11835,6 +12100,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "R",
+            "access_type": "NONE",
             "signature": " abstract R matchRouter(String, String)",
             "parameters": [
               {
@@ -11856,6 +12122,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "M",
+            "access_type": "NONE",
             "signature": " abstract M end()",
             "parameters": [],
             "javadoc": "\n   * Return this groups manager, so that we can bind more routers of root\n   *\n   * @return groups manager\n   "
@@ -11866,6 +12133,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.SseEjector": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -11873,6 +12141,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.wind.AbstractWindManager": {
+      "is_abstract": true,
       "constructors": [
         {
           "start_line": 32,
@@ -11937,6 +12206,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void join(Listener)",
             "parameters": [
               {
@@ -11969,6 +12239,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void loadEvent(Event)",
             "parameters": [
               {
@@ -12013,6 +12284,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void triggerEvent()",
             "parameters": []
           }
@@ -12022,6 +12294,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.wind.DefaultWindManager": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 24,
@@ -12043,6 +12316,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.wind.event.Event": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -12050,6 +12324,7 @@
       "javadoc": "\n * Event root interface.\n *\n * @author esotericman\n "
     },
     "org.flmelody.core.wind.event.RouterBindEvent": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 26,
@@ -12104,6 +12379,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder",
+            "access_type": "PUBLIC",
             "signature": "public static RouterBindEventBuilder builder()",
             "parameters": []
           }
@@ -12120,6 +12396,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getRequestUrl()",
             "parameters": []
           }
@@ -12136,6 +12413,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getClassname()",
             "parameters": []
           }
@@ -12152,6 +12430,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getMethod()",
             "parameters": []
           }
@@ -12161,6 +12440,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 48,
@@ -12206,6 +12486,7 @@
               }
             ],
             "return_type": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder",
+            "access_type": "PUBLIC",
             "signature": "public RouterBindEventBuilder requestUrl(String)",
             "parameters": [
               {
@@ -12231,6 +12512,7 @@
               }
             ],
             "return_type": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder",
+            "access_type": "PUBLIC",
             "signature": "public RouterBindEventBuilder classname(String)",
             "parameters": [
               {
@@ -12256,6 +12538,7 @@
               }
             ],
             "return_type": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder",
+            "access_type": "PUBLIC",
             "signature": "public RouterBindEventBuilder method(String)",
             "parameters": [
               {
@@ -12296,6 +12579,7 @@
               }
             ],
             "return_type": "org.flmelody.core.wind.event.RouterBindEvent",
+            "access_type": "PUBLIC",
             "signature": "public RouterBindEvent build()",
             "parameters": []
           }
@@ -12305,6 +12589,7 @@
       "javadoc": " Builder for RouterBindEvent "
     },
     "org.flmelody.core.wind.listener.Listener": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -12315,6 +12600,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " abstract boolean cope(Windward, Event)",
             "parameters": [
               {
@@ -12334,6 +12620,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.wind.WindManager": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -12344,6 +12631,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void join(Listener)",
             "parameters": [
               {
@@ -12361,6 +12649,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void loadEvent(Event)",
             "parameters": [
               {
@@ -12378,6 +12667,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void triggerEvent()",
             "parameters": [],
             "javadoc": " Trigger events. "
@@ -12388,6 +12678,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.Windward": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 77,
@@ -12520,6 +12811,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public static Windward setup()",
             "parameters": []
           },
@@ -12553,6 +12845,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public static Windward setup(int, Filter...)",
             "parameters": [
               {
@@ -12599,6 +12892,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public static Windward setup(int, String, Filter...)",
             "parameters": [
               {
@@ -12722,6 +13016,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public static Windward setup(int, String, String, String, Filter...)",
             "parameters": [
               {
@@ -12810,6 +13105,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PRIVATE",
             "signature": "private static Windward prepareDefault(Windward)",
             "parameters": [
               {
@@ -12837,6 +13133,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void beforeStart()",
             "parameters": [],
             "javadoc": " Prepare work before startup. "
@@ -12865,6 +13162,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void run()",
             "parameters": [],
             "javadoc": "\n   * Run server\n   *\n   * @throws ServerException exception\n   "
@@ -12925,6 +13223,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<org.flmelody.core.Windward>",
+            "access_type": "PUBLIC",
             "signature": "public RouterGroup<Windward> group(String)",
             "parameters": [
               {
@@ -12994,6 +13293,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<org.flmelody.core.Windward>",
+            "access_type": "PRIVATE",
             "signature": "private RouterGroup<Windward> resourceGroup(String)",
             "parameters": [
               {
@@ -13041,6 +13341,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward registerFilter(Filter...)",
             "parameters": [
               {
@@ -13108,6 +13409,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward registerExceptionHandler(ExceptionHandler...)",
             "parameters": [
               {
@@ -13141,6 +13443,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward registerListener(Listener...)",
             "parameters": [
               {
@@ -13178,6 +13481,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward registerPlugin(PluginSlot, Plugin)",
             "parameters": [
               {
@@ -13263,6 +13567,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PRIVATE",
             "signature": "private Windward registerPlugin(Class<? extends Plugin>, Plugin)",
             "parameters": [
               {
@@ -13300,6 +13605,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward publishEvent(Event...)",
             "parameters": [
               {
@@ -13341,6 +13647,7 @@
               }
             ],
             "return_type": "org.flmelody.core.FunctionMetaInfo<I>",
+            "access_type": "PUBLIC",
             "signature": "public static FunctionMetaInfo<I> findRouter(String, String)",
             "parameters": [
               {
@@ -13378,6 +13685,7 @@
               }
             ],
             "return_type": "java.util.List<org.flmelody.core.Filter>",
+            "access_type": "PUBLIC",
             "signature": "public static List<Filter> filters()",
             "parameters": [],
             "javadoc": "\n   * Get filters\n   *\n   * @return filters\n   "
@@ -13406,6 +13714,7 @@
               }
             ],
             "return_type": "java.util.List<org.flmelody.core.ExceptionHandler>",
+            "access_type": "PUBLIC",
             "signature": "public static List<ExceptionHandler> exceptionHandlers()",
             "parameters": [],
             "javadoc": "\n   * Get exception handlers\n   *\n   * @return exception handlers\n   "
@@ -13473,6 +13782,7 @@
               }
             ],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public static T plugin(Class<T>)",
             "parameters": [
               {
@@ -13556,6 +13866,7 @@
               }
             ],
             "return_type": "java.util.List<T>",
+            "access_type": "PUBLIC",
             "signature": "public static List<T> plugins(Class<T>)",
             "parameters": [
               {
@@ -13578,6 +13889,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getContextPath()",
             "parameters": []
           }
@@ -13594,6 +13906,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getTemplateRoot()",
             "parameters": []
           }
@@ -13610,6 +13923,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getStaticResourceLocation()",
             "parameters": []
           }
@@ -13621,6 +13935,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward then()",
             "parameters": []
           }
@@ -13666,6 +13981,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward http(HttpMethod, String, Supplier<R>)",
             "parameters": [
               {
@@ -13723,6 +14039,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward http(HttpMethod, String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -13780,6 +14097,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward http(HttpMethod, String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -13835,6 +14153,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward get(String, Supplier<R>)",
             "parameters": [
               {
@@ -13884,6 +14203,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward get(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -13933,6 +14253,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward get(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -13984,6 +14305,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward put(String, Supplier<R>)",
             "parameters": [
               {
@@ -14033,6 +14355,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward put(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -14082,6 +14405,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward put(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -14133,6 +14457,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward post(String, Supplier<R>)",
             "parameters": [
               {
@@ -14182,6 +14507,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward post(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -14231,6 +14557,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward post(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -14282,6 +14609,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward delete(String, Supplier<R>)",
             "parameters": [
               {
@@ -14331,6 +14659,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward delete(String, Consumer<SimpleWindwardContext>)",
             "parameters": [
               {
@@ -14380,6 +14709,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward delete(String, EnhancedFunction<C, ?>)",
             "parameters": [
               {
@@ -14431,6 +14761,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward sse(String, EnhancedFunction<SseWindwardContext, SseEjector>)",
             "parameters": [
               {
@@ -14482,6 +14813,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward ws(String, Consumer<WebSocketWindwardContext>)",
             "parameters": [
               {
@@ -14523,6 +14855,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward resource(String...)",
             "parameters": [
               {
@@ -14570,6 +14903,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
+            "access_type": "PUBLIC",
             "signature": "public Windward resources(String, String...)",
             "parameters": [
               {
@@ -14589,6 +14923,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.WindwardRequest": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 42,
@@ -14673,6 +15008,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder",
+            "access_type": "PUBLIC",
             "signature": "public static WindwardRequestBuilder newBuild()",
             "parameters": []
           }
@@ -14689,6 +15025,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getMethod()",
             "parameters": [],
             "javadoc": "\n   * Get request methods name\n   *\n   * @return methods name\n   "
@@ -14732,6 +15069,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public List<String> getHeader(String)",
             "parameters": [
               {
@@ -14754,6 +15092,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.util.List<java.lang.String>>",
+            "access_type": "PUBLIC",
             "signature": "public Map<String, List<String>> getHeaders()",
             "parameters": [],
             "javadoc": "\n   * Return all request headers\n   *\n   * @return headers values\n   "
@@ -14771,6 +15110,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getUri()",
             "parameters": [],
             "javadoc": "\n   * Request uri\n   *\n   * @return request uri\n   "
@@ -14788,6 +15128,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.util.List<java.lang.String>>",
+            "access_type": "PUBLIC",
             "signature": "public Map<String, List<String>> getQuerystring()",
             "parameters": [],
             "javadoc": "\n   * Get request querystring\n   *\n   * @return querystring or empty\n   "
@@ -14805,6 +15146,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.lang.Object>",
+            "access_type": "PUBLIC",
             "signature": "public Map<String, Object> getPathVariables()",
             "parameters": [],
             "javadoc": "\n   * Get path variables\n   *\n   * @return path variables\n   "
@@ -14822,6 +15164,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getRequestBody()",
             "parameters": [],
             "javadoc": "\n   * Get request body\n   *\n   * @return request body or null\n   "
@@ -14854,6 +15197,7 @@
               }
             ],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I readJson(String, Class<I>)",
             "parameters": [
               {
@@ -14893,6 +15237,7 @@
               }
             ],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I readJson(String, Type)",
             "parameters": [
               {
@@ -14938,6 +15283,7 @@
               }
             ],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I bindJson(String, Class<I>, Class<?>...)",
             "parameters": [
               {
@@ -14985,6 +15331,7 @@
               }
             ],
             "return_type": "I",
+            "access_type": "PUBLIC",
             "signature": "public I bindJson(String, Type, Class<?>...)",
             "parameters": [
               {
@@ -15008,6 +15355,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.WindwardRequest.WindwardRequestBuilder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 139,
@@ -15053,6 +15401,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequestBuilder method(String)",
             "parameters": [
               {
@@ -15078,6 +15427,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequestBuilder uri(String)",
             "parameters": [
               {
@@ -15103,6 +15453,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequestBuilder keepAlive(Boolean)",
             "parameters": [
               {
@@ -15139,6 +15490,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequestBuilder headers(Map<String, List<String>>)",
             "parameters": [
               {
@@ -15175,6 +15527,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequestBuilder querystring(Map<String, List<String>>)",
             "parameters": [
               {
@@ -15211,6 +15564,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequestBuilder pathVariables(Map<String, Object>)",
             "parameters": [
               {
@@ -15236,6 +15590,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequestBuilder requestBody(String)",
             "parameters": [
               {
@@ -15257,6 +15612,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardRequest",
+            "access_type": "PUBLIC",
             "signature": "public WindwardRequest build()",
             "parameters": []
           }
@@ -15266,6 +15622,7 @@
       "javadoc": " Builder for WindwardRequest "
     },
     "org.flmelody.core.WindwardResponse": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 71,
@@ -15312,6 +15669,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, T)",
             "parameters": [
               {
@@ -15355,6 +15713,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, String, T)",
             "parameters": [
               {
@@ -15406,6 +15765,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, String, Map<String, Object>, T)",
             "parameters": [
               {
@@ -15446,6 +15806,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void close()",
             "parameters": [],
             "javadoc": " Close connection "
@@ -15474,6 +15835,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.WindwardResponse.WindwardResponseBuild",
+            "access_type": "PUBLIC",
             "signature": "public static WindwardResponseBuild newBuilder()",
             "parameters": []
           }
@@ -15483,6 +15845,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.WindwardResponse.WindwardResponseBuild": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 77,
@@ -15528,6 +15891,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardResponse.WindwardResponseBuild",
+            "access_type": "PUBLIC",
             "signature": "public WindwardResponseBuild responseWriter(ResponseWriter)",
             "parameters": [
               {
@@ -15549,6 +15913,7 @@
               }
             ],
             "return_type": "org.flmelody.core.WindwardResponse",
+            "access_type": "PUBLIC",
             "signature": "public WindwardResponse build()",
             "parameters": []
           }
@@ -15558,6 +15923,7 @@
       "javadoc": " Builder for WindwardResponse "
     },
     "org.flmelody.core.ws.codec.WebSocketCodec": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -15565,6 +15931,7 @@
       "javadoc": "\n * Do not use this interface directly; you should always use its subclasses. If you must use it,\n * make sure it conforms to Netty's codec specification.\n *\n * @see WebSocketDecoder\n * @see WebSocketEncoder\n * @author esotericman\n "
     },
     "org.flmelody.core.ws.codec.WebSocketDecoder": {
+      "is_abstract": true,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -15572,6 +15939,7 @@
       "javadoc": "\n * Inherit this class to implement custom decoding.\n *\n * @author esotericman\n "
     },
     "org.flmelody.core.ws.codec.WebSocketEncoder": {
+      "is_abstract": true,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -15608,6 +15976,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.ws.WebSocketFireEvent": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 34,
@@ -15645,6 +16014,7 @@
               }
             ],
             "return_type": "org.flmelody.core.ws.WebSocketEvent",
+            "access_type": "PUBLIC",
             "signature": "public WebSocketEvent getEvent()",
             "parameters": []
           }
@@ -15661,6 +16031,7 @@
               }
             ],
             "return_type": "java.lang.Object",
+            "access_type": "PUBLIC",
             "signature": "public Object getData()",
             "parameters": []
           }
@@ -15688,6 +16059,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder",
+            "access_type": "PUBLIC",
             "signature": "public static WebSocketFireEventBuilder builder()",
             "parameters": []
           }
@@ -15697,6 +16069,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 44,
@@ -15738,6 +16111,7 @@
               }
             ],
             "return_type": "org.flmelody.core.ws.WebSocketFireEvent",
+            "access_type": "PUBLIC",
             "signature": "public WebSocketFireEvent build()",
             "parameters": []
           }
@@ -15762,6 +16136,7 @@
               }
             ],
             "return_type": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WebSocketFireEventBuilder reset()",
             "parameters": []
           }
@@ -15782,6 +16157,7 @@
               }
             ],
             "return_type": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WebSocketFireEventBuilder event(WebSocketEvent)",
             "parameters": [
               {
@@ -15807,6 +16183,7 @@
               }
             ],
             "return_type": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder",
+            "access_type": "PUBLIC",
             "signature": "public WebSocketFireEventBuilder data(Object)",
             "parameters": [
               {
@@ -15821,6 +16198,7 @@
       "javadoc": " "
     },
     "org.flmelody.core.ws.WebSocketParser": {
+      "is_abstract": true,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -15828,6 +16206,7 @@
       "javadoc": "\n * Inherit this class to implement custom format message parsing.\n *\n * @author esotericman\n "
     },
     "org.flmelody.core.ws.WebSocketWindwardContext": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 36,
@@ -15898,6 +16277,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setWebSocketEvent(WebSocketEvent)",
             "parameters": [
               {
@@ -15919,6 +16299,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setWebSocketData(Object)",
             "parameters": [
               {
@@ -15940,6 +16321,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setHttpResponse(boolean)",
             "parameters": [
               {
@@ -15961,6 +16343,7 @@
               }
             ],
             "return_type": "org.flmelody.core.ws.WebSocketEvent",
+            "access_type": "PUBLIC",
             "signature": "public WebSocketEvent getWebSocketEvent()",
             "parameters": []
           }
@@ -15977,6 +16360,7 @@
               }
             ],
             "return_type": "java.lang.Object",
+            "access_type": "PUBLIC",
             "signature": "public Object getWebSocketData()",
             "parameters": []
           }
@@ -15993,6 +16377,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isUpgradedContext()",
             "parameters": []
           }
@@ -16032,6 +16417,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void upgradeContext()",
             "parameters": []
           }
@@ -16067,6 +16453,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void write(int, String, T)",
             "parameters": [
               {
@@ -16137,6 +16524,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void writeBinaryData(T)",
             "parameters": [
               {
@@ -16183,6 +16571,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean processCheck()",
             "parameters": [],
             "javadoc": "\n   * Make sure context upgraded already which means {@link WebSocketEvent#ON_CONNECT} already done.\n   * In general, we only need to access context like below:\n   *\n   * <pre>{@code\n   *  switch (webSocketWindwardContext.getWebSocketEvent()) {\n   *   case ON_CONNECT:\n   *     webSocketWindwardContext.writeString(\"Hello World!\");\n   *     break;\n   *   case ON_MESSAGE:\n   *     Object webSocketData =\n   *         webSocketWindwardContext.getWebSocketData(); // webSocketFrame or just strings\n   *     webSocketWindwardContext.writeString(\"Oh?\");\n   *     break;\n   *   default:\n   * }\n   *\n   * }</pre>\n   *\n   * @return result\n   "
@@ -16200,6 +16589,7 @@
               }
             ],
             "return_type": "java.lang.Boolean",
+            "access_type": "PUBLIC",
             "signature": "public Boolean isCacheable()",
             "parameters": []
           }
@@ -16209,6 +16599,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.support.EnhancedFunction": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {},
@@ -16216,6 +16607,7 @@
       "javadoc": "\n * Represents a function that accepts one argument and produces a result.\n *\n * <p>This is a <a href=\"package-summary.html\">functional interface</a> whose functional method is\n * {@link #apply(Object)}.\n *\n * @param <T> the type of the input to the function\n * @param <R> the type of the result of the function\n * @author esotericman\n "
     },
     "org.flmelody.support.FunctionDefinition": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 32,
@@ -16271,6 +16663,7 @@
               }
             ],
             "return_type": "org.flmelody.support.FunctionDefinition",
+            "access_type": "PUBLIC",
             "signature": "public static FunctionDefinition empty()",
             "parameters": []
           }
@@ -16298,6 +16691,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder",
+            "access_type": "PUBLIC",
             "signature": "public static FunctionDefinitionBuilder builder()",
             "parameters": []
           }
@@ -16314,6 +16708,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getClassname()",
             "parameters": []
           }
@@ -16330,6 +16725,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getMethod()",
             "parameters": []
           }
@@ -16357,6 +16753,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.Class<?>>",
+            "access_type": "PUBLIC",
             "signature": "public List<Class<?>> getParameterTypes()",
             "parameters": []
           }
@@ -16373,6 +16770,7 @@
               }
             ],
             "return_type": "java.lang.Class<?>",
+            "access_type": "PUBLIC",
             "signature": "public Class<?> getReturnType()",
             "parameters": []
           }
@@ -16382,6 +16780,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 63,
@@ -16427,6 +16826,7 @@
               }
             ],
             "return_type": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder",
+            "access_type": "PUBLIC",
             "signature": "public FunctionDefinitionBuilder classname(String)",
             "parameters": [
               {
@@ -16452,6 +16852,7 @@
               }
             ],
             "return_type": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder",
+            "access_type": "PUBLIC",
             "signature": "public FunctionDefinitionBuilder method(String)",
             "parameters": [
               {
@@ -16488,6 +16889,7 @@
               }
             ],
             "return_type": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder",
+            "access_type": "PUBLIC",
             "signature": "public FunctionDefinitionBuilder parameterType(Class<?>)",
             "parameters": [
               {
@@ -16513,6 +16915,7 @@
               }
             ],
             "return_type": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder",
+            "access_type": "PUBLIC",
             "signature": "public FunctionDefinitionBuilder returnType(Class<?>)",
             "parameters": [
               {
@@ -16534,6 +16937,7 @@
               }
             ],
             "return_type": "org.flmelody.support.FunctionDefinition",
+            "access_type": "PUBLIC",
             "signature": "public FunctionDefinition build()",
             "parameters": []
           }
@@ -16543,6 +16947,7 @@
       "javadoc": " Builder for FunctionDefinition "
     },
     "org.flmelody.support.FunctionHelper": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 28,
@@ -16573,6 +16978,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.support.FunctionDefinition",
+            "access_type": "PUBLIC",
             "signature": "public static FunctionDefinition resolveFunction(F)",
             "parameters": [
               {
@@ -16636,6 +17042,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.support.FunctionDefinition",
+            "access_type": "PRIVATE",
             "signature": "private static FunctionDefinition findFunctionSmartly(F)",
             "parameters": [
               {
@@ -16738,6 +17145,7 @@
               }
             ],
             "return_type": "org.flmelody.support.FunctionDefinition",
+            "access_type": "PRIVATE",
             "signature": "private static FunctionDefinition findRegularFunction(F)",
             "parameters": [
               {
@@ -16911,6 +17319,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.support.FunctionDefinition",
+            "access_type": "PRIVATE",
             "signature": "private static FunctionDefinition findLambdaFunction(F)",
             "parameters": [
               {
@@ -16938,6 +17347,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.invoke.SerializedLambda",
+            "access_type": "PRIVATE",
             "signature": "private static SerializedLambda getSerializedLambda(F)",
             "parameters": [
               {
@@ -17004,6 +17414,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.invoke.SerializedLambda",
+            "access_type": "PRIVATE",
             "signature": "private static SerializedLambda writeReplace(F)",
             "parameters": [
               {
@@ -17018,6 +17429,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.util.AntPathMatcher": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 33,
@@ -17220,6 +17632,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isMatch(String, String)",
             "parameters": [
               {
@@ -17285,6 +17698,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean doubleAsteriskMatch(String, String)",
             "parameters": [
               {
@@ -17311,6 +17725,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.util.AntPathMatcher.Builder",
+            "access_type": "PUBLIC",
             "signature": "public static AntPathMatcher.Builder newBuild()",
             "parameters": []
           }
@@ -17352,6 +17767,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PRIVATE",
             "signature": "private int skipBlanks(String)",
             "parameters": [
               {
@@ -17377,6 +17793,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean compareChar(char, char)",
             "parameters": [
               {
@@ -17395,6 +17812,7 @@
       "javadoc": "\n * Path matcher implementation for Ant-style path patterns. This implementation matches URLs using\n * the following rules:\n *\n * <p>'?' - matches one character '*' - matches zero or more characters '**' - matches zero or more\n * directories in a path.\n *\n * <p>The instances of this class can be configured via its {@link Builder} to: (1) Use a custom\n * path separator. The default is '/' character (2) Ignore character case during comparison. The\n * default is {@code false} (3) Match start. Determines whether the pattern at least matches as far\n * as the given base path goes, assuming that a full path may then match as well. The default is\n * {@code false}.\n *\n * <p>Specify whether to trim tokenized paths. The default is {@code false} The custom path\n * separator &amp; ignoring character case options were inspired by Spring's AntPathMatcher.\n *\n * @author original author\n * @see <a href=\"https://github.com/azagniotov/ant-style-path-matcher\">azagniotov</a>\n "
     },
     "org.flmelody.util.AntPathMatcher.Builder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 122,
@@ -17444,6 +17862,7 @@
               }
             ],
             "return_type": "org.flmelody.util.AntPathMatcher.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder withPathSeparator(char)",
             "parameters": [
               {
@@ -17465,6 +17884,7 @@
               }
             ],
             "return_type": "org.flmelody.util.AntPathMatcher.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder withIgnoreCase()",
             "parameters": []
           }
@@ -17481,6 +17901,7 @@
               }
             ],
             "return_type": "org.flmelody.util.AntPathMatcher.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder withMatchStart()",
             "parameters": []
           }
@@ -17497,6 +17918,7 @@
               }
             ],
             "return_type": "org.flmelody.util.AntPathMatcher.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder withTrimTokens()",
             "parameters": []
           }
@@ -17548,6 +17970,7 @@
               }
             ],
             "return_type": "org.flmelody.util.AntPathMatcher",
+            "access_type": "PUBLIC",
             "signature": "public AntPathMatcher build()",
             "parameters": []
           }
@@ -17557,6 +17980,7 @@
       "javadoc": " Builder for AntPathMatcher "
     },
     "org.flmelody.util.GsonUtil": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 33,
@@ -17609,6 +18033,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String toJson(I)",
             "parameters": [
               {
@@ -17656,6 +18081,7 @@
               }
             ],
             "return_type": "O",
+            "access_type": "PUBLIC",
             "signature": "public static O toObject(String, Class<O>)",
             "parameters": [
               {
@@ -17675,6 +18101,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.util.JacksonUtil": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 35,
@@ -17727,6 +18154,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String toJson(I)",
             "parameters": [
               {
@@ -17774,6 +18202,7 @@
               }
             ],
             "return_type": "O",
+            "access_type": "PUBLIC",
             "signature": "public static O toObject(String, Class<O>)",
             "parameters": [
               {
@@ -17815,6 +18244,7 @@
               }
             ],
             "return_type": "java.util.HashMap<java.lang.String, java.lang.Object>",
+            "access_type": "PUBLIC",
             "signature": "public static HashMap<String, Object> toMap(I)",
             "parameters": [
               {
@@ -17829,6 +18259,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.util.UrlUtil": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 24,
@@ -17934,6 +18365,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String buildUrl(String...)",
             "parameters": [
               {
@@ -17948,6 +18380,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.util.ValidationUtil": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 36,
@@ -18003,6 +18436,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public static T validate(JsonPlugin, String, Class<T>, Class<?>...)",
             "parameters": [
               {
@@ -18059,6 +18493,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public static T validate(JsonPlugin, String, Type, Class<?>...)",
             "parameters": [
               {
@@ -18157,6 +18592,7 @@
               }
             ],
             "return_type": "T",
+            "access_type": "PRIVATE",
             "signature": "private static T validate(T, Class<?>...)",
             "parameters": [
               {
@@ -18177,6 +18613,7 @@
   },
   "test": {
     "org.flmelody.core.DefaultRouterGroupTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -18269,6 +18706,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void getTest()",
             "parameters": []
           }
@@ -18362,6 +18800,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void postTest()",
             "parameters": []
           }
@@ -18371,6 +18810,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.util.AntPathMatcherTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -18446,6 +18886,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void routerTest()",
             "parameters": []
           }
@@ -18455,6 +18896,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.util.JacksonUtilTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -18488,6 +18930,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -18559,6 +19002,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void toJsonTest()",
             "parameters": []
           }
@@ -18625,6 +19069,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void toJsonTestException()",
             "parameters": []
           }
@@ -18700,6 +19145,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void toObjectTest()",
             "parameters": []
           }
@@ -18770,6 +19216,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void toObjectTestException()",
             "parameters": []
           }
@@ -18779,6 +19226,7 @@
       "javadoc": "\n * @author esotericman\n "
     },
     "org.flmelody.util.JacksonUtilTest.User": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -18798,6 +19246,7 @@
       "file": "org\\flmelody\\util\\JacksonUtilTest.java"
     },
     "org.flmelody.util.UrlUtilTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -18841,6 +19290,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void buildUrlTest()",
             "parameters": []
           }

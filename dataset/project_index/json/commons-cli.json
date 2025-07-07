@@ -2,6 +2,7 @@
   "project": "commons-cli",
   "source": {
     "org.apache.commons.cli.AlreadySelectedException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 42,
@@ -110,6 +111,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option",
+            "access_type": "PUBLIC",
             "signature": "public Option getOption()",
             "parameters": [],
             "javadoc": "\n     * Gets the option that was added to the group and triggered the exception.\n     *\n     * @return the related option\n     * @since 1.2\n     "
@@ -127,6 +129,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.OptionGroup",
+            "access_type": "PUBLIC",
             "signature": "public OptionGroup getOptionGroup()",
             "parameters": [],
             "javadoc": "\n     * Gets the option group where another option has been selected.\n     *\n     * @return the related option group\n     * @since 1.2\n     "
@@ -137,6 +140,7 @@
       "javadoc": "\n * Thrown when more than one option in an option group has been provided.\n "
     },
     "org.apache.commons.cli.AmbiguousOptionException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 68,
@@ -225,6 +229,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PRIVATE",
             "signature": "private static String createMessage(String, Collection<String>)",
             "parameters": [
               {
@@ -251,6 +256,7 @@
               }
             ],
             "return_type": "java.util.Collection<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public Collection<String> getMatchingOptions()",
             "parameters": [],
             "javadoc": "\n     * Gets the options matching the partial name.\n     *\n     * @return a collection of options matching the name\n     "
@@ -261,6 +267,7 @@
       "javadoc": "\n * Exception thrown when an option can't be identified from a partial name.\n *\n * @since 1.3\n "
     },
     "org.apache.commons.cli.CommandLine": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 99,
@@ -316,6 +323,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected void addArg(String)",
             "parameters": [
               {
@@ -349,6 +357,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected void addOption(Option)",
             "parameters": [
               {
@@ -371,6 +380,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public List<String> getArgList()",
             "parameters": [],
             "javadoc": "\n     * Gets any left-over non-recognized options and arguments\n     *\n     * @return remaining items passed in but not parsed as a {@code List}.\n     "
@@ -403,6 +413,7 @@
               }
             ],
             "return_type": "java.lang.String[]",
+            "access_type": "PUBLIC",
             "signature": "public String[] getArgs()",
             "parameters": [],
             "javadoc": "\n     * Gets any left-over non-recognized options and arguments\n     *\n     * @return remaining items passed in but not parsed as an array.\n     "
@@ -455,6 +466,7 @@
               }
             ],
             "return_type": "java.util.Properties",
+            "access_type": "PUBLIC",
             "signature": "public Properties getOptionProperties(Option)",
             "parameters": [
               {
@@ -520,6 +532,7 @@
               }
             ],
             "return_type": "java.util.Properties",
+            "access_type": "PUBLIC",
             "signature": "public Properties getOptionProperties(String)",
             "parameters": [
               {
@@ -557,6 +570,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option[]",
+            "access_type": "PUBLIC",
             "signature": "public Option[] getOptions()",
             "parameters": [],
             "javadoc": "\n     * Gets an array of the processed {@link Option}s.\n     *\n     * @return an array of the processed {@link Option}s.\n     "
@@ -590,6 +604,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptionValue(char)",
             "parameters": [
               {
@@ -630,6 +645,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptionValue(char, String)",
             "parameters": [
               {
@@ -674,6 +690,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptionValue(char, Supplier<String>)",
             "parameters": [
               {
@@ -704,6 +721,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptionValue(Option)",
             "parameters": [
               {
@@ -734,6 +752,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptionValue(Option, String)",
             "parameters": [
               {
@@ -769,6 +788,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptionValue(Option, Supplier<String>)",
             "parameters": [
               {
@@ -809,6 +829,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptionValue(String)",
             "parameters": [
               {
@@ -849,6 +870,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptionValue(String, String)",
             "parameters": [
               {
@@ -893,6 +915,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptionValue(String, Supplier<String>)",
             "parameters": [
               {
@@ -935,6 +958,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String[]",
+            "access_type": "PUBLIC",
             "signature": "public String[] getOptionValues(char)",
             "parameters": [
               {
@@ -1005,6 +1029,7 @@
               }
             ],
             "return_type": "java.lang.String[]",
+            "access_type": "PUBLIC",
             "signature": "public String[] getOptionValues(Option)",
             "parameters": [
               {
@@ -1041,6 +1066,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String[]",
+            "access_type": "PUBLIC",
             "signature": "public String[] getOptionValues(String)",
             "parameters": [
               {
@@ -1079,6 +1105,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public T getParsedOptionValue(char)",
             "parameters": [
               {
@@ -1119,6 +1146,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public T getParsedOptionValue(char, Supplier<T>)",
             "parameters": [
               {
@@ -1163,6 +1191,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public T getParsedOptionValue(char, T)",
             "parameters": [
               {
@@ -1197,6 +1226,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public T getParsedOptionValue(Option)",
             "parameters": [
               {
@@ -1253,6 +1283,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public T getParsedOptionValue(Option, Supplier<T>)",
             "parameters": [
               {
@@ -1287,6 +1318,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public T getParsedOptionValue(Option, T)",
             "parameters": [
               {
@@ -1327,6 +1359,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public T getParsedOptionValue(String)",
             "parameters": [
               {
@@ -1367,6 +1400,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public T getParsedOptionValue(String, Supplier<T>)",
             "parameters": [
               {
@@ -1411,6 +1445,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public T getParsedOptionValue(String, T)",
             "parameters": [
               {
@@ -1453,6 +1488,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasOption(char)",
             "parameters": [
               {
@@ -1484,6 +1520,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasOption(Option)",
             "parameters": [
               {
@@ -1520,6 +1557,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasOption(String)",
             "parameters": [
               {
@@ -1548,6 +1586,7 @@
               }
             ],
             "return_type": "java.util.Iterator<org.apache.commons.cli.Option>",
+            "access_type": "PUBLIC",
             "signature": "public Iterator<Option> iterator()",
             "parameters": [],
             "javadoc": "\n     * Returns an iterator over the Option members of CommandLine.\n     *\n     * @return an {@code Iterator} over the processed {@link Option} members of this {@link CommandLine}.\n     "
@@ -1590,6 +1629,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void processPropertiesFromValues(Properties, List<String>)",
             "parameters": [
               {
@@ -1647,6 +1687,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option",
+            "access_type": "PRIVATE",
             "signature": "private Option resolveOption(String)",
             "parameters": [
               {
@@ -1662,6 +1703,7 @@
       "javadoc": "\n * Represents list of arguments parsed against a {@link Options} descriptor.\n * <p>\n * It allows querying of a boolean {@link #hasOption(String opt)}, in addition to retrieving the\n * {@link #getOptionValue(String opt)} for options requiring arguments.\n * </p>\n * <p>\n * Additionally, any left-over or unrecognized arguments, are available for further processing.\n * </p>\n "
     },
     "org.apache.commons.cli.CommandLine.Builder": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -1695,6 +1737,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.CommandLine.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder addArg(String)",
             "parameters": [
               {
@@ -1728,6 +1771,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.CommandLine.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder addOption(Option)",
             "parameters": [
               {
@@ -1750,6 +1794,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.CommandLine",
+            "access_type": "PUBLIC",
             "signature": "public CommandLine build()",
             "parameters": [],
             "javadoc": "\n         * Returns the new instance.\n         *\n         * @return the new instance.\n         "
@@ -1760,6 +1805,7 @@
       "javadoc": "\n     * A nested builder class to create {@code CommandLine} instance using descriptive methods.\n     *\n     * @since 1.4\n     "
     },
     "org.apache.commons.cli.CommandLineParser": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -1770,6 +1816,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.CommandLine",
+            "access_type": "NONE",
             "signature": " abstract CommandLine parse(Options, String[])",
             "parameters": [
               {
@@ -1789,6 +1836,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.CommandLine",
+            "access_type": "NONE",
             "signature": " abstract CommandLine parse(Options, String[], boolean)",
             "parameters": [
               {
@@ -1812,6 +1860,7 @@
       "javadoc": "\n * A class that implements the {@code CommandLineParser} interface can parse a String array according to the\n * {@link Options} specified and return a {@link CommandLine}.\n "
     },
     "org.apache.commons.cli.Converter": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -1871,6 +1920,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " abstract T apply(String)",
             "parameters": [
               {
@@ -1886,6 +1936,7 @@
       "javadoc": "\n * The definition of the functional interface to call when doing a conversion. Like {@code Function<String,T>} but can throw an Exception.\n *\n * @param <T> The return type for the function.\n * @param <E> The kind of thrown exception or error.\n * @since 1.7.0\n "
     },
     "org.apache.commons.cli.DefaultParser": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 181,
@@ -2026,6 +2077,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.DefaultParser.Builder",
+            "access_type": "PUBLIC",
             "signature": "public static Builder builder()",
             "parameters": [],
             "javadoc": "\n     * Creates a new {@link Builder} to create an {@link DefaultParser} using descriptive\n     * methods.\n     *\n     * @return a new {@link Builder} instance\n     * @since 1.5.0\n     "
@@ -2084,6 +2136,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void checkRequiredArgs()",
             "parameters": [],
             "javadoc": "\n     * Throws a {@link MissingArgumentException} if the current option didn't receive the number of arguments expected.\n     "
@@ -2117,6 +2170,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected void checkRequiredOptions()",
             "parameters": [],
             "javadoc": "\n     * Throws a {@link MissingOptionException} if all of the required options are not present.\n     *\n     * @throws MissingOptionException if any of the required Options are not present.\n     "
@@ -2174,6 +2228,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PRIVATE",
             "signature": "private String getLongPrefix(String)",
             "parameters": [
               {
@@ -2256,6 +2311,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "PRIVATE",
             "signature": "private List<String> getMatchingLongOptions(String)",
             "parameters": [
               {
@@ -2382,6 +2438,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PROTECTED",
             "signature": "protected void handleConcatenatedOptions(String)",
             "parameters": [
               {
@@ -2430,6 +2487,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void handleLongOption(String)",
             "parameters": [
               {
@@ -2604,6 +2662,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void handleLongOptionWithEqual(String)",
             "parameters": [
               {
@@ -2715,6 +2774,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void handleLongOptionWithoutEqual(String)",
             "parameters": [
               {
@@ -2777,6 +2837,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void handleOption(Option)",
             "parameters": [
               {
@@ -2940,6 +3001,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void handleProperties(Properties)",
             "parameters": [
               {
@@ -3146,6 +3208,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void handleShortAndLongOption(String)",
             "parameters": [
               {
@@ -3276,6 +3339,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void handleToken(String)",
             "parameters": [
               {
@@ -3346,6 +3410,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void handleUnknownToken(String)",
             "parameters": [
               {
@@ -3384,6 +3449,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean isArgument(String)",
             "parameters": [
               {
@@ -3445,6 +3511,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean isJavaProperty(String)",
             "parameters": [
               {
@@ -3527,6 +3594,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean isLongOption(String)",
             "parameters": [
               {
@@ -3555,6 +3623,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean isNegativeNumber(String)",
             "parameters": [
               {
@@ -3593,6 +3662,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean isOption(String)",
             "parameters": [
               {
@@ -3700,6 +3770,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean isShortOption(String)",
             "parameters": [
               {
@@ -3736,6 +3807,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.CommandLine",
+            "access_type": "PUBLIC",
             "signature": "public CommandLine parse(Options, String[])",
             "parameters": [
               {
@@ -3777,6 +3849,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.CommandLine",
+            "access_type": "PUBLIC",
             "signature": "public CommandLine parse(Options, String[], boolean)",
             "parameters": [
               {
@@ -3822,6 +3895,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.CommandLine",
+            "access_type": "PUBLIC",
             "signature": "public CommandLine parse(Options, String[], Properties)",
             "parameters": [
               {
@@ -3936,6 +4010,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.CommandLine",
+            "access_type": "PUBLIC",
             "signature": "public CommandLine parse(Options, String[], Properties, boolean)",
             "parameters": [
               {
@@ -3981,6 +4056,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PRIVATE",
             "signature": "private String stripLeadingAndTrailingQuotesDefaultOff(String)",
             "parameters": [
               {
@@ -4014,6 +4090,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PRIVATE",
             "signature": "private String stripLeadingAndTrailingQuotesDefaultOn(String)",
             "parameters": [
               {
@@ -4086,6 +4163,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void updateRequiredOptions(Option)",
             "parameters": [
               {
@@ -4101,6 +4179,7 @@
       "javadoc": "\n * Default parser.\n *\n * @since 1.3\n "
     },
     "org.apache.commons.cli.DefaultParser.Builder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 59,
@@ -4158,6 +4237,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.DefaultParser",
+            "access_type": "PUBLIC",
             "signature": "public DefaultParser build()",
             "parameters": [],
             "javadoc": "\n         * Builds an DefaultParser with the values declared by this {@link Builder}.\n         *\n         * @return the new {@link DefaultParser}\n         * @since 1.5.0\n         "
@@ -4175,6 +4255,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.DefaultParser.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder setAllowPartialMatching(boolean)",
             "parameters": [
               {
@@ -4197,6 +4278,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.DefaultParser.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder setStripLeadingAndTrailingQuotes(Boolean)",
             "parameters": [
               {
@@ -4212,6 +4294,7 @@
       "javadoc": "\n     * A nested builder class to create {@code DefaultParser} instances\n     * using descriptive methods.\n     *\n     * Example usage:\n     * <pre>\n     * DefaultParser parser = Option.builder()\n     *     .setAllowPartialMatching(false)\n     *     .setStripLeadingAndTrailingQuotes(false)\n     *     .build();\n     * </pre>\n     *\n     * @since 1.5.0\n     "
     },
     "org.apache.commons.cli.HelpFormatter": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -4329,6 +4412,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void appendOption(StringBuffer, Option, boolean)",
             "parameters": [
               {
@@ -4437,6 +4521,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void appendOptionGroup(StringBuffer, OptionGroup)",
             "parameters": [
               {
@@ -4483,6 +4568,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PROTECTED",
             "signature": "protected String createPadding(int)",
             "parameters": [
               {
@@ -4530,6 +4616,7 @@
             ],
             "external_fields": [],
             "return_type": "int",
+            "access_type": "PROTECTED",
             "signature": "protected int findWrapPos(String, int, int)",
             "parameters": [
               {
@@ -4560,6 +4647,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getArgName()",
             "parameters": [],
             "javadoc": "\n     * Gets the 'argName'.\n     *\n     * @return the 'argName'\n     "
@@ -4577,6 +4665,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int getDescPadding()",
             "parameters": [],
             "javadoc": "\n     * Gets the 'descPadding'.\n     *\n     * @return the 'descPadding'\n     "
@@ -4594,6 +4683,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int getLeftPadding()",
             "parameters": [],
             "javadoc": "\n     * Gets the 'leftPadding'.\n     *\n     * @return the 'leftPadding'\n     "
@@ -4611,6 +4701,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getLongOptPrefix()",
             "parameters": [],
             "javadoc": "\n     * Gets the 'longOptPrefix'.\n     *\n     * @return the 'longOptPrefix'\n     "
@@ -4628,6 +4719,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getLongOptSeparator()",
             "parameters": [],
             "javadoc": "\n     * Gets the separator displayed between a long option and its value.\n     *\n     * @return the separator\n     * @since 1.3\n     "
@@ -4645,6 +4737,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getNewLine()",
             "parameters": [],
             "javadoc": "\n     * Gets the 'newLine'.\n     *\n     * @return the 'newLine'\n     "
@@ -4662,6 +4755,7 @@
               }
             ],
             "return_type": "java.util.Comparator<org.apache.commons.cli.Option>",
+            "access_type": "PUBLIC",
             "signature": "public Comparator<Option> getOptionComparator()",
             "parameters": [],
             "javadoc": "\n     * Comparator used to sort the options when they output in help text. Defaults to case-insensitive alphabetical sorting\n     * by option key.\n     *\n     * @return the {@link Comparator} currently in use to sort the options\n     * @since 1.2\n     "
@@ -4679,6 +4773,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOptPrefix()",
             "parameters": [],
             "javadoc": "\n     * Gets the 'optPrefix'.\n     *\n     * @return the 'optPrefix'\n     "
@@ -4696,6 +4791,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getSyntaxPrefix()",
             "parameters": [],
             "javadoc": "\n     * Gets the 'syntaxPrefix'.\n     *\n     * @return the 'syntaxPrefix'\n     "
@@ -4713,6 +4809,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int getWidth()",
             "parameters": [],
             "javadoc": "\n     * Gets the 'width'.\n     *\n     * @return the 'width'\n     "
@@ -4756,6 +4853,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printHelp(int, String, String, Options, String)",
             "parameters": [
               {
@@ -4860,6 +4958,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printHelp(int, String, String, Options, String, boolean)",
             "parameters": [
               {
@@ -4938,6 +5037,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printHelp(PrintWriter, int, String, String, Options, int, int, String)",
             "parameters": [
               {
@@ -5081,6 +5181,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printHelp(PrintWriter, int, String, String, Options, int, int, String, boolean)",
             "parameters": [
               {
@@ -5164,6 +5265,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printHelp(String, Options)",
             "parameters": [
               {
@@ -5219,6 +5321,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printHelp(String, Options, boolean)",
             "parameters": [
               {
@@ -5269,6 +5372,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printHelp(String, String, Options, String)",
             "parameters": [
               {
@@ -5332,6 +5436,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printHelp(String, String, Options, String, boolean)",
             "parameters": [
               {
@@ -5412,6 +5517,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printOptions(PrintWriter, int, Options, int, int)",
             "parameters": [
               {
@@ -5488,6 +5594,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printUsage(PrintWriter, int, String)",
             "parameters": [
               {
@@ -5695,6 +5802,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printUsage(PrintWriter, int, String, Options)",
             "parameters": [
               {
@@ -5777,6 +5885,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printWrapped(PrintWriter, int, int, String)",
             "parameters": [
               {
@@ -5827,6 +5936,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void printWrapped(PrintWriter, int, String)",
             "parameters": [
               {
@@ -6088,6 +6198,7 @@
               }
             ],
             "return_type": "java.lang.StringBuffer",
+            "access_type": "PROTECTED",
             "signature": "protected StringBuffer renderOptions(StringBuffer, int, Options, int, int)",
             "parameters": [
               {
@@ -6209,6 +6320,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.StringBuffer",
+            "access_type": "PROTECTED",
             "signature": "protected StringBuffer renderWrappedText(StringBuffer, int, int, String)",
             "parameters": [
               {
@@ -6301,6 +6413,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.Appendable",
+            "access_type": "PRIVATE",
             "signature": "private Appendable renderWrappedTextBlock(StringBuffer, int, int, String)",
             "parameters": [
               {
@@ -6375,6 +6488,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PROTECTED",
             "signature": "protected String rtrim(String)",
             "parameters": [
               {
@@ -6397,6 +6511,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setArgName(String)",
             "parameters": [
               {
@@ -6419,6 +6534,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setDescPadding(int)",
             "parameters": [
               {
@@ -6441,6 +6557,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setLeftPadding(int)",
             "parameters": [
               {
@@ -6463,6 +6580,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setLongOptPrefix(String)",
             "parameters": [
               {
@@ -6485,6 +6603,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setLongOptSeparator(String)",
             "parameters": [
               {
@@ -6507,6 +6626,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setNewLine(String)",
             "parameters": [
               {
@@ -6529,6 +6649,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setOptionComparator(Comparator<Option>)",
             "parameters": [
               {
@@ -6551,6 +6672,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setOptPrefix(String)",
             "parameters": [
               {
@@ -6573,6 +6695,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setSyntaxPrefix(String)",
             "parameters": [
               {
@@ -6595,6 +6718,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setWidth(int)",
             "parameters": [
               {
@@ -6610,6 +6734,7 @@
       "javadoc": "\n * A formatter of help messages for command line options.\n *\n * <p>\n * Example:\n * </p>\n *\n * <pre>\n * Options options = new Options();\n * options.addOption(OptionBuilder.withLongOpt(\"file\").withDescription(\"The file to be processed\").hasArg().withArgName(\"FILE\").isRequired().create('f'));\n * options.addOption(OptionBuilder.withLongOpt(\"version\").withDescription(\"Print the version of the application\").create('v'));\n * options.addOption(OptionBuilder.withLongOpt(\"help\").create('h'));\n *\n * String header = \"Do something useful with an input file\\n\\n\";\n * String footer = \"\\nPlease report issues at https://example.com/issues\";\n *\n * HelpFormatter formatter = new HelpFormatter();\n * formatter.printHelp(\"myapp\", header, options, footer, true);\n * </pre>\n *\n * This produces the following output:\n *\n * <pre>\n * usage: myapp -f &lt;FILE&gt; [-h] [-v]\n * Do something useful with an input file\n *\n *  -f,--file &lt;FILE&gt;   The file to be processed\n *  -h,--help\n *  -v,--version       Print the version of the application\n *\n * Please report issues at https://example.com/issues\n * </pre>\n "
     },
     "org.apache.commons.cli.HelpFormatter.OptionComparator": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -6643,6 +6768,7 @@
             ],
             "external_fields": [],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int compare(Option, Option)",
             "parameters": [
               {
@@ -6662,6 +6788,7 @@
       "javadoc": "\n     * This class implements the {@code Comparator} interface for comparing Options.\n     "
     },
     "org.apache.commons.cli.MissingArgumentException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 37,
@@ -6730,6 +6857,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option",
+            "access_type": "PUBLIC",
             "signature": "public Option getOption()",
             "parameters": [],
             "javadoc": "\n     * Gets the option requiring an argument that wasn't provided on the command line.\n     *\n     * @return the related option\n     * @since 1.2\n     "
@@ -6740,6 +6868,7 @@
       "javadoc": "\n * Thrown when an option requiring an argument is not provided with an argument.\n "
     },
     "org.apache.commons.cli.MissingOptionException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 60,
@@ -6853,6 +6982,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PRIVATE",
             "signature": "private static String createMessage(List<?>)",
             "parameters": [
               {
@@ -6875,6 +7005,7 @@
               }
             ],
             "return_type": "java.util.List",
+            "access_type": "PUBLIC",
             "signature": "public List getMissingOptions()",
             "parameters": [],
             "javadoc": "\n     * Gets the list of options or option groups missing in the command line parsed.\n     *\n     * @return the missing options, consisting of String instances for simple options, and OptionGroup instances for\n     *         required option groups.\n     * @since 1.2\n     "
@@ -6885,6 +7016,7 @@
       "javadoc": "\n * Thrown when a required option has not been provided.\n "
     },
     "org.apache.commons.cli.Option": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 364,
@@ -7176,6 +7308,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public static Builder builder()",
             "parameters": [],
             "javadoc": "\n     * Returns a {@link Builder} to create an {@link Option} using descriptive methods.\n     *\n     * @return a new {@link Builder} instance\n     * @since 1.3\n     "
@@ -7197,6 +7330,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public static Builder builder(String)",
             "parameters": [
               {
@@ -7244,6 +7378,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean acceptsArg()",
             "parameters": [],
             "javadoc": "\n     * Tells if the option can accept more arguments.\n     *\n     * @return false if the maximum number of arguments is reached\n     * @since 1.3\n     "
@@ -7287,6 +7422,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void add(String)",
             "parameters": [
               {
@@ -7334,6 +7470,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void addValueForProcessing(String)",
             "parameters": [
               {
@@ -7362,6 +7499,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void clearValues()",
             "parameters": [],
             "javadoc": "\n     * Clear the Option values. After a parse is complete, these are left with data in them and they need clearing if\n     * another parse is done.\n     *\n     * See: <a href=\"https://issues.apache.org/jira/browse/CLI-71\">CLI-71</a>\n     "
@@ -7414,6 +7552,7 @@
               }
             ],
             "return_type": "java.lang.Object",
+            "access_type": "PUBLIC",
             "signature": "public Object clone()",
             "parameters": [],
             "javadoc": "\n     * A rather odd clone method - due to incorrect code in 1.0 it is public and in 1.1 rather than throwing a\n     * CloneNotSupportedException it throws a RuntimeException so as to maintain backwards compat at the API level.\n     *\n     * After calling this method, it is very likely you will want to call clearValues().\n     *\n     * @return a clone of this Option instance\n     * @throws RuntimeException if a {@link CloneNotSupportedException} has been thrown by {@code super.clone()}\n     "
@@ -7450,6 +7589,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -7471,6 +7611,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getArgName()",
             "parameters": [],
             "javadoc": "\n     * Gets the display name for the argument value.\n     *\n     * @return the display name for the argument value.\n     "
@@ -7488,6 +7629,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int getArgs()",
             "parameters": [],
             "javadoc": "\n     * Gets the number of argument values this Option can take.\n     *\n     * <p>\n     * A value equal to the constant {@link #UNINITIALIZED} (= -1) indicates the number of arguments has not been specified.\n     * A value equal to the constant {@link #UNLIMITED_VALUES} (= -2) indicates that this options takes an unlimited amount\n     * of values.\n     * </p>\n     *\n     * @return num the number of argument values\n     * @see #UNINITIALIZED\n     * @see #UNLIMITED_VALUES\n     "
@@ -7520,6 +7662,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Converter<?, ?>",
+            "access_type": "PUBLIC",
             "signature": "public Converter<?, ?> getConverter()",
             "parameters": [],
             "javadoc": "\n     * Gets the value to type converter.\n     * @return the value to type converter\n     * @since 1.7.0\n     "
@@ -7537,6 +7680,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getDescription()",
             "parameters": [],
             "javadoc": "\n     * Gets the self-documenting description of this Option\n     *\n     * @return The string description of this option\n     "
@@ -7565,6 +7709,7 @@
             ],
             "external_fields": [],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int getId()",
             "parameters": [],
             "javadoc": "\n     * Gets the id of this Option. This is only set when the Option shortOpt is a single character. This is used for\n     * switch statements.\n     *\n     * @return the id of this Option\n     "
@@ -7586,6 +7731,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " String getKey()",
             "parameters": [],
             "javadoc": "\n     * Gets the 'unique' Option identifier.\n     *\n     * @return the 'unique' Option identifier\n     "
@@ -7603,6 +7749,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getLongOpt()",
             "parameters": [],
             "javadoc": "\n     * Gets the long name of this Option.\n     *\n     * @return Long name of this option, or null, if there is no long name\n     "
@@ -7620,6 +7767,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOpt()",
             "parameters": [],
             "javadoc": "\n     * Gets the name of this Option.\n     *\n     * It is this String which can be used with {@link CommandLine#hasOption(String opt)} and\n     * {@link CommandLine#getOptionValue(String opt)} to check for existence and argument.\n     *\n     * @return The name of this option\n     "
@@ -7637,6 +7785,7 @@
               }
             ],
             "return_type": "java.lang.Object",
+            "access_type": "PUBLIC",
             "signature": "public Object getType()",
             "parameters": [],
             "javadoc": "\n     * Gets the type of this Option.\n     *\n     * @return The type of this option\n     "
@@ -7670,6 +7819,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getValue()",
             "parameters": [],
             "javadoc": "\n     * Gets the specified value of this Option or {@code null} if there is no value.\n     *\n     * @return the value/first value of this Option or {@code null} if there is no value.\n     "
@@ -7701,6 +7851,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getValue(int)",
             "parameters": [
               {
@@ -7722,6 +7873,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getValue(String)",
             "parameters": [
               {
@@ -7764,6 +7916,7 @@
               }
             ],
             "return_type": "java.lang.String[]",
+            "access_type": "PUBLIC",
             "signature": "public String[] getValues()",
             "parameters": [],
             "javadoc": "\n     * Gets the values of this Option as a String array or null if there are no values\n     *\n     * @return the values of this Option as a String array or null if there are no values\n     "
@@ -7781,6 +7934,7 @@
               }
             ],
             "return_type": "char",
+            "access_type": "PUBLIC",
             "signature": "public char getValueSeparator()",
             "parameters": [],
             "javadoc": "\n     * Gets the value separator character.\n     *\n     * @return the value separator character.\n     "
@@ -7798,6 +7952,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public List<String> getValuesList()",
             "parameters": [],
             "javadoc": "\n     * Gets the values of this Option as a List or null if there are no values.\n     *\n     * @return the values of this Option as a List or null if there are no values\n     "
@@ -7819,6 +7974,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasArg()",
             "parameters": [],
             "javadoc": "\n     * Query to see if this Option requires an argument\n     *\n     * @return boolean flag indicating if an argument is required\n     "
@@ -7842,6 +7998,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasArgName()",
             "parameters": [],
             "javadoc": "\n     * Returns whether the display name for the argument value has been set.\n     *\n     * @return if the display name for the argument value has been set.\n     "
@@ -7863,6 +8020,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasArgs()",
             "parameters": [],
             "javadoc": "\n     * Query to see if this Option can take many values.\n     *\n     * @return boolean flag indicating if multiple values are allowed\n     "
@@ -7899,6 +8057,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -7915,6 +8074,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasLongOpt()",
             "parameters": [],
             "javadoc": "\n     * Query to see if this Option has a long name\n     *\n     * @return boolean flag indicating existence of a long name\n     "
@@ -7938,6 +8098,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean hasNoValues()",
             "parameters": [],
             "javadoc": "\n     * Returns whether this Option has any values.\n     *\n     * @return whether this Option has any values.\n     "
@@ -7955,6 +8116,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasOptionalArg()",
             "parameters": [],
             "javadoc": "\n     * Returns whether this Option can have an optional argument.\n     *\n     * @return whether this Option can have an optional argument\n     "
@@ -7972,6 +8134,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasValueSeparator()",
             "parameters": [],
             "javadoc": "\n     * Return whether this Option has specified a value separator.\n     *\n     * @return whether this Option has specified a value separator.\n     * @since 1.1\n     "
@@ -7989,6 +8152,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isRequired()",
             "parameters": [],
             "javadoc": "\n     * Query to see if this Option is mandatory\n     *\n     * @return boolean flag indicating whether this Option is mandatory\n     "
@@ -8070,6 +8234,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void processValue(String)",
             "parameters": [
               {
@@ -8115,6 +8280,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean requiresArg()",
             "parameters": [],
             "javadoc": "\n     * Tells if the option requires more arguments to be valid.\n     *\n     * @return false if the option doesn't require more arguments\n     * @since 1.3\n     "
@@ -8132,6 +8298,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setArgName(String)",
             "parameters": [
               {
@@ -8154,6 +8321,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setArgs(int)",
             "parameters": [
               {
@@ -8176,6 +8344,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setConverter(Converter<?, ?>)",
             "parameters": [
               {
@@ -8198,6 +8367,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setDescription(String)",
             "parameters": [
               {
@@ -8220,6 +8390,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setLongOpt(String)",
             "parameters": [
               {
@@ -8242,6 +8413,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setOptionalArg(boolean)",
             "parameters": [
               {
@@ -8264,6 +8436,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setRequired(boolean)",
             "parameters": [
               {
@@ -8286,6 +8459,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setType(Class<?>)",
             "parameters": [
               {
@@ -8308,6 +8482,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setValueSeparator(char)",
             "parameters": [
               {
@@ -8383,6 +8558,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": [],
             "javadoc": "\n     * Dump state, suitable for debugging.\n     *\n     * @return Stringified form of this object\n     "
@@ -8393,6 +8569,7 @@
       "javadoc": "\n * Describes a single command-line option. It maintains information regarding the short-name of the option, the\n * long-name, if any exists, a flag indicating if an argument is required for this option, and a self-documenting\n * description of the option.\n * <p>\n * An Option is not created independently, but is created through an instance of {@link Options}. An Option is required\n * to have at least a short or a long-name.\n * </p>\n * <p>\n * <b>Note:</b> once an {@link Option} has been added to an instance of {@link Options}, its required flag cannot be\n * changed.\n * </p>\n *\n * @see org.apache.commons.cli.Options\n * @see org.apache.commons.cli.CommandLine\n "
     },
     "org.apache.commons.cli.Option.Builder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 94,
@@ -8484,6 +8661,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder argName(String)",
             "parameters": [
               {
@@ -8531,6 +8709,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option",
+            "access_type": "PUBLIC",
             "signature": "public Option build()",
             "parameters": [],
             "javadoc": "\n         * Constructs an Option with the values declared by this {@link Builder}.\n         *\n         * @return the new {@link Option}\n         * @throws IllegalArgumentException if neither {@code opt} or {@code longOpt} has been set\n         "
@@ -8548,6 +8727,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder converter(Converter<?, ?>)",
             "parameters": [
               {
@@ -8570,6 +8750,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder desc(String)",
             "parameters": [
               {
@@ -8598,6 +8779,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder hasArg()",
             "parameters": [],
             "javadoc": "\n         * Indicates that the Option will require an argument.\n         *\n         * @return this builder, to allow method chaining\n         "
@@ -8617,6 +8799,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder hasArg(boolean)",
             "parameters": [
               {
@@ -8643,6 +8826,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder hasArgs()",
             "parameters": [],
             "javadoc": "\n         * Indicates that the Option can have unlimited argument values.\n         *\n         * @return this builder, to allow method chaining\n         "
@@ -8660,6 +8844,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder longOpt(String)",
             "parameters": [
               {
@@ -8682,6 +8867,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder numberOfArgs(int)",
             "parameters": [
               {
@@ -8715,6 +8901,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder option(String)",
             "parameters": [
               {
@@ -8745,6 +8932,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder optionalArg(boolean)",
             "parameters": [
               {
@@ -8773,6 +8961,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder required()",
             "parameters": [],
             "javadoc": "\n         * Marks this Option as required.\n         *\n         * @return this builder, to allow method chaining\n         "
@@ -8788,6 +8977,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder required(boolean)",
             "parameters": [
               {
@@ -8810,6 +9000,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder type(Class<?>)",
             "parameters": [
               {
@@ -8838,6 +9029,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder valueSeparator()",
             "parameters": [],
             "javadoc": "\n         * The Option will use '=' as a means to separate argument value.\n         *\n         * @return this builder, to allow method chaining\n         "
@@ -8853,6 +9045,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option.Builder",
+            "access_type": "PUBLIC",
             "signature": "public Builder valueSeparator(char)",
             "parameters": [
               {
@@ -8868,6 +9061,7 @@
       "javadoc": "\n     * A nested builder class to create {@code Option} instances using descriptive methods.\n     * <p>\n     * Example usage:\n     * </p>\n     *\n     * <pre>\n     * Option option = Option.builder(\"a\").required(true).longOpt(\"arg-name\").build();\n     * </pre>\n     *\n     * @since 1.3\n     "
     },
     "org.apache.commons.cli.OptionGroup": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -8928,6 +9122,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.OptionGroup",
+            "access_type": "PUBLIC",
             "signature": "public OptionGroup addOption(Option)",
             "parameters": [
               {
@@ -8956,6 +9151,7 @@
               }
             ],
             "return_type": "java.util.Collection<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public Collection<String> getNames()",
             "parameters": [],
             "javadoc": "\n     * @return the names of the options in this group as a {@code Collection}\n     "
@@ -8979,6 +9175,7 @@
               }
             ],
             "return_type": "java.util.Collection<org.apache.commons.cli.Option>",
+            "access_type": "PUBLIC",
             "signature": "public Collection<Option> getOptions()",
             "parameters": [],
             "javadoc": "\n     * @return the options in this group as a {@code Collection}\n     "
@@ -8996,6 +9193,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getSelected()",
             "parameters": [],
             "javadoc": "\n     * @return the selected option name\n     "
@@ -9013,6 +9211,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isRequired()",
             "parameters": [],
             "javadoc": "\n     * Tests whether this option group is required.\n     *\n     * @return whether this option group is required\n     "
@@ -9030,6 +9229,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setRequired(boolean)",
             "parameters": [
               {
@@ -9082,6 +9282,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setSelected(Option)",
             "parameters": [
               {
@@ -9155,6 +9356,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": [],
             "javadoc": "\n     * Returns the stringified version of this OptionGroup.\n     *\n     * @return the stringified representation of this group\n     "
@@ -9165,6 +9367,7 @@
       "javadoc": "\n * A group of mutually exclusive options.\n "
     },
     "org.apache.commons.cli.Options": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -9294,6 +9497,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PUBLIC",
             "signature": "public Options addOption(Option)",
             "parameters": [
               {
@@ -9332,6 +9536,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PUBLIC",
             "signature": "public Options addOption(String, boolean, String)",
             "parameters": [
               {
@@ -9378,6 +9583,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PUBLIC",
             "signature": "public Options addOption(String, String)",
             "parameters": [
               {
@@ -9430,6 +9636,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PUBLIC",
             "signature": "public Options addOption(String, String, boolean, String)",
             "parameters": [
               {
@@ -9528,6 +9735,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PUBLIC",
             "signature": "public Options addOptionGroup(OptionGroup)",
             "parameters": [
               {
@@ -9601,6 +9809,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PUBLIC",
             "signature": "public Options addOptions(Options)",
             "parameters": [
               {
@@ -9661,6 +9870,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PUBLIC",
             "signature": "public Options addRequiredOption(String, String, boolean, String)",
             "parameters": [
               {
@@ -9756,6 +9966,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public List<String> getMatchingOptions(String)",
             "parameters": [
               {
@@ -9803,6 +10014,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Option",
+            "access_type": "PUBLIC",
             "signature": "public Option getOption(String)",
             "parameters": [
               {
@@ -9841,6 +10053,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.OptionGroup",
+            "access_type": "PUBLIC",
             "signature": "public OptionGroup getOptionGroup(Option)",
             "parameters": [
               {
@@ -9879,6 +10092,7 @@
               }
             ],
             "return_type": "java.util.Collection<org.apache.commons.cli.OptionGroup>",
+            "access_type": "NONE",
             "signature": " Collection<OptionGroup> getOptionGroups()",
             "parameters": [],
             "javadoc": "\n     * Gets the OptionGroups that are members of this Options instance.\n     *\n     * @return a Collection of OptionGroup instances.\n     "
@@ -9907,6 +10121,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Collection<org.apache.commons.cli.Option>",
+            "access_type": "PUBLIC",
             "signature": "public Collection<Option> getOptions()",
             "parameters": [],
             "javadoc": "\n     * Gets a read-only list of options in this set\n     *\n     * @return read-only Collection of {@link Option} objects in this descriptor\n     "
@@ -9935,6 +10150,7 @@
               }
             ],
             "return_type": "java.util.List<?>",
+            "access_type": "PUBLIC",
             "signature": "public List<?> getRequiredOptions()",
             "parameters": [],
             "javadoc": "\n     * Gets the required options.\n     *\n     * @return read-only List of required options\n     "
@@ -9973,6 +10189,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasLongOption(String)",
             "parameters": [
               {
@@ -10020,6 +10237,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasOption(String)",
             "parameters": [
               {
@@ -10063,6 +10281,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasShortOption(String)",
             "parameters": [
               {
@@ -10101,6 +10320,7 @@
               }
             ],
             "return_type": "java.util.List<org.apache.commons.cli.Option>",
+            "access_type": "NONE",
             "signature": " List<Option> helpOptions()",
             "parameters": [],
             "javadoc": "\n     * Returns the Options for use by the HelpFormatter.\n     *\n     * @return the List of Options\n     "
@@ -10158,6 +10378,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": [],
             "javadoc": "\n     * Dump state, suitable for debugging.\n     *\n     * @return Stringified form of this object\n     "
@@ -10168,6 +10389,7 @@
       "javadoc": "\n * Main entry-point into the library.\n * <p>\n * Options represents a collection of {@link Option} objects, which describe the possible options for a command-line.\n * <p>\n * It may flexibly parse long and short options, with or without values. Additionally, it may parse only a portion of a\n * commandline, allowing for flexible multi-stage parsing.\n *\n * @see org.apache.commons.cli.CommandLine\n "
     },
     "org.apache.commons.cli.OptionValidator": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -10221,6 +10443,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean isValidChar(char)",
             "parameters": [
               {
@@ -10268,6 +10491,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean isValidOpt(char)",
             "parameters": [
               {
@@ -10285,6 +10509,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean search(char[], char)",
             "parameters": [
               {
@@ -10352,6 +10577,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " static String validate(String)",
             "parameters": [
               {
@@ -10367,6 +10593,7 @@
       "javadoc": "\n * Validates an Option string.\n *\n * @since 1.1\n "
     },
     "org.apache.commons.cli.ParseException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 56,
@@ -10424,6 +10651,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.ParseException",
+            "access_type": "PUBLIC",
             "signature": "public static ParseException wrap(Throwable)",
             "parameters": [
               {
@@ -10439,6 +10667,7 @@
       "javadoc": "\n * Base for Exceptions thrown during parsing of a command-line.\n "
     },
     "org.apache.commons.cli.PatternOptionBuilder": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -10547,6 +10776,7 @@
               }
             ],
             "return_type": "java.lang.Class<?>",
+            "access_type": "PUBLIC",
             "signature": "public static Class<?> getValueType(char)",
             "parameters": [
               {
@@ -10564,6 +10794,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public static boolean isValueCode(char)",
             "parameters": [
               {
@@ -10712,6 +10943,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PUBLIC",
             "signature": "public static Options parsePattern(String)",
             "parameters": [
               {
@@ -10753,6 +10985,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public static void registerTypes()",
             "parameters": [],
             "javadoc": "\n     * Registers custom {@code Converter}s with the {@code TypeHandler}.\n     * @since 1.7.0\n     "
@@ -10763,6 +10996,7 @@
       "javadoc": "\n * Allows Options to be created from a single String. The pattern contains various single character flags and via an\n * optional punctuation character, their expected type.\n *\n * <table border=\"1\">\n * <caption>Overview of PatternOptionBuilder patterns</caption>\n * <tr>\n * <td>a</td>\n * <td>-a flag</td>\n * </tr>\n * <tr>\n * <td>b@</td>\n * <td>-b [class name]</td>\n * </tr>\n * <tr>\n * <td>c&gt;</td>\n * <td>-c [file name]</td>\n * </tr>\n * <tr>\n * <td>d+</td>\n * <td>-d [class name] (creates object via empty constructor)</td>\n * </tr>\n * <tr>\n * <td>e%</td>\n * <td>-e [number] (creates Double/Long instance depending on existing of a '.')</td>\n * </tr>\n * <tr>\n * <td>f/</td>\n * <td>-f [URL]</td>\n * </tr>\n * <tr>\n * <td>g:</td>\n * <td>-g [string]</td>\n * </tr>\n * </table>\n *\n * <p>\n * For example, the following allows command line flags of '-v -p string-value -f /dir/file'. The exclamation mark\n * precede a mandatory option.\n * </p>\n *\n * <pre>\n * Options options = PatternOptionBuilder.parsePattern(\"vp:!f/\");\n * </pre>\n *\n * <p>\n * TODO These need to break out to OptionType and also to be pluggable.\n * </p>\n "
     },
     "org.apache.commons.cli.TypeHandler": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -10817,6 +11051,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "PUBLIC",
             "signature": "public static T createValue(String, Class<T>)",
             "parameters": [
               {
@@ -10858,6 +11093,7 @@
               }
             ],
             "return_type": "org.apache.commons.cli.Converter<?, ?>",
+            "access_type": "PUBLIC",
             "signature": "public static Converter<?, ?> getConverter(Class<?>)",
             "parameters": [
               {
@@ -10886,6 +11122,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public static void noConverters()",
             "parameters": [],
             "javadoc": "\n     * Unregisters all Converters.\n     *\n     * @since 1.7.0\n     "
@@ -10928,6 +11165,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public static void register(Class<?>, Converter<?, ?>)",
             "parameters": [
               {
@@ -11060,6 +11298,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public static void resetConverters()",
             "parameters": [],
             "javadoc": "\n     * Resets the registered Converters to the default state.\n     *\n     * @since 1.7.0\n     "
@@ -11070,6 +11309,7 @@
       "javadoc": "\n * TypeHandler will handle the pluggable conversion and verification of\n * Option types.  It handles the mapping of classes to bot converters and verifiers.\n * It provides the default conversion and verification methods when converters and verifiers\n * are not explicitly set.\n * <p>\n * If Options are serialized and deserialized their converters and verifiers will revert to the\n * defaults defined in this class.  To correctly de-serialize Options with custom converters and/or\n * verifiers, using the default serialization methods, this class should be properly configured with the custom\n * converters and verifiers for the specific class.\n * </p>\n "
     },
     "org.apache.commons.cli.UnrecognizedOptionException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 37,
@@ -11136,6 +11376,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getOption()",
             "parameters": [],
             "javadoc": "\n     * Gets the unrecognized option.\n     *\n     * @return the related option\n     * @since 1.2\n     "
@@ -11146,6 +11387,7 @@
       "javadoc": "\n * Thrown during parsing signaling an unrecognized option.\n "
     },
     "org.apache.commons.cli.Util": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -11169,6 +11411,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean isEmpty(String)",
             "parameters": [
               {
@@ -11246,6 +11489,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " static String stripLeadingAndTrailingQuotes(String)",
             "parameters": [
               {
@@ -11294,6 +11538,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " static String stripLeadingHyphens(String)",
             "parameters": [
               {
@@ -11311,6 +11556,7 @@
   },
   "test": {
     "org.apache.commons.cli.AbstractParserTestCase": {
+      "is_abstract": true,
       "constructors": [],
       "fields": [
         {
@@ -11381,6 +11627,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.CommandLine",
+            "access_type": "PRIVATE",
             "signature": "private CommandLine parse(CommandLineParser, Options, String[], Properties)",
             "parameters": [
               {
@@ -11442,6 +11689,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -11492,6 +11740,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousArgParsing()",
             "parameters": []
           }
@@ -11607,6 +11856,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousLongWithoutEqualSingleDash()",
             "parameters": []
           }
@@ -11737,6 +11987,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousLongWithoutEqualSingleDash2()",
             "parameters": []
           }
@@ -11859,6 +12110,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption1()",
             "parameters": []
           }
@@ -11981,6 +12233,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption2()",
             "parameters": []
           }
@@ -12108,6 +12361,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption3()",
             "parameters": []
           }
@@ -12235,6 +12489,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption4()",
             "parameters": []
           }
@@ -12294,6 +12549,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testArgumentStartingWithHyphen()",
             "parameters": []
           }
@@ -12391,6 +12647,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBursting()",
             "parameters": []
           }
@@ -12492,6 +12749,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testDoubleDash1()",
             "parameters": []
           }
@@ -12601,6 +12859,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testDoubleDash2()",
             "parameters": []
           }
@@ -12664,6 +12923,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionQuoteHandling()",
             "parameters": []
           }
@@ -12727,6 +12987,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionWithEqualsQuoteHandling()",
             "parameters": []
           }
@@ -12822,6 +13083,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithEqualDoubleDash()",
             "parameters": []
           }
@@ -12917,6 +13179,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithEqualSingleDash()",
             "parameters": []
           }
@@ -13012,6 +13275,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithoutEqualDoubleDash()",
             "parameters": []
           }
@@ -13107,6 +13371,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithoutEqualSingleDash()",
             "parameters": []
           }
@@ -13202,6 +13467,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithUnexpectedArgument1()",
             "parameters": []
           }
@@ -13297,6 +13563,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithUnexpectedArgument2()",
             "parameters": []
           }
@@ -13374,6 +13641,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMissingArg()",
             "parameters": []
           }
@@ -13451,6 +13719,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMissingArgWithBursting()",
             "parameters": []
           }
@@ -13601,6 +13870,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMissingRequiredGroup()",
             "parameters": []
           }
@@ -13757,6 +14027,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMissingRequiredOption()",
             "parameters": []
           }
@@ -13913,6 +14184,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMissingRequiredOptions()",
             "parameters": []
           }
@@ -14057,6 +14329,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMultiple()",
             "parameters": []
           }
@@ -14201,6 +14474,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMultipleWithLong()",
             "parameters": []
           }
@@ -14260,6 +14534,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNegativeArgument()",
             "parameters": []
           }
@@ -14337,6 +14612,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNegativeOption()",
             "parameters": []
           }
@@ -14479,6 +14755,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionalArgsOptionBuilder()",
             "parameters": []
           }
@@ -14636,6 +14913,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionalArgsOptionDotBuilder()",
             "parameters": []
           }
@@ -14796,6 +15074,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionAndRequiredOption()",
             "parameters": []
           }
@@ -14890,6 +15169,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionGroup()",
             "parameters": []
           }
@@ -15009,6 +15289,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionGroupLong()",
             "parameters": []
           }
@@ -15123,6 +15404,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPartialLongOptionSingleDash()",
             "parameters": []
           }
@@ -15266,6 +15548,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertiesOption1()",
             "parameters": []
           }
@@ -15404,6 +15687,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertiesOption2()",
             "parameters": []
           }
@@ -15562,6 +15846,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertyOptionFlags()",
             "parameters": []
           }
@@ -15694,6 +15979,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertyOptionGroup()",
             "parameters": []
           }
@@ -15836,6 +16122,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertyOptionMultipleValues()",
             "parameters": []
           }
@@ -15944,6 +16231,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertyOptionRequired()",
             "parameters": []
           }
@@ -16096,6 +16384,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertyOptionSingularValue()",
             "parameters": []
           }
@@ -16169,6 +16458,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertyOptionUnexpected()",
             "parameters": []
           }
@@ -16321,6 +16611,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertyOverrideValues()",
             "parameters": []
           }
@@ -16392,6 +16683,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testReuseOptionsTwice()",
             "parameters": []
           }
@@ -16455,6 +16747,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionConcatenatedQuoteHandling()",
             "parameters": []
           }
@@ -16518,6 +16811,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionQuoteHandling()",
             "parameters": []
           }
@@ -16613,6 +16907,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortWithEqual()",
             "parameters": []
           }
@@ -16708,6 +17003,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortWithoutEqual()",
             "parameters": []
           }
@@ -16803,6 +17099,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortWithUnexpectedArgument()",
             "parameters": []
           }
@@ -16900,6 +17197,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSimpleLong()",
             "parameters": []
           }
@@ -16997,6 +17295,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSimpleShort()",
             "parameters": []
           }
@@ -17104,6 +17403,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSingleDash()",
             "parameters": []
           }
@@ -17210,6 +17510,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopAtExpectedArg()",
             "parameters": []
           }
@@ -17301,6 +17602,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopAtNonOptionLong()",
             "parameters": []
           }
@@ -17392,6 +17694,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopAtNonOptionShort()",
             "parameters": []
           }
@@ -17483,6 +17786,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopAtUnexpectedArg()",
             "parameters": []
           }
@@ -17598,6 +17902,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopBursting()",
             "parameters": []
           }
@@ -17742,6 +18047,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopBursting2()",
             "parameters": []
           }
@@ -17827,6 +18133,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption1()",
             "parameters": []
           }
@@ -17912,6 +18219,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption2()",
             "parameters": []
           }
@@ -18026,6 +18334,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption3()",
             "parameters": []
           }
@@ -18140,6 +18449,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption4()",
             "parameters": []
           }
@@ -18257,6 +18567,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnlimitedArgs()",
             "parameters": []
           }
@@ -18321,6 +18632,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnrecognizedOption()",
             "parameters": []
           }
@@ -18385,6 +18697,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnrecognizedOptionWithBursting()",
             "parameters": []
           }
@@ -18559,6 +18872,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testWithRequiredOption()",
             "parameters": []
           }
@@ -18568,6 +18882,7 @@
       "javadoc": "\n * Abstract test case testing common parser features.\n "
     },
     "org.apache.commons.cli.ApplicationTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -18715,6 +19030,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAnt()",
             "parameters": [],
             "javadoc": "\n     * Ant test\n     "
@@ -18870,6 +19186,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGroovy()",
             "parameters": []
           }
@@ -19040,6 +19357,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLs()",
             "parameters": []
           }
@@ -19174,6 +19492,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMan()",
             "parameters": [],
             "javadoc": "\n     * author Slawek Zachcial\n     "
@@ -19332,6 +19651,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNLT()",
             "parameters": [],
             "javadoc": "\n     * Real world test with long and short options.\n     "
@@ -19342,6 +19662,7 @@
       "javadoc": "\n * This is a collection of tests that test real world applications command lines.\n *\n * <p>\n * The following applications are tested:\n * <ul>\n * <li>ls</li>\n * <li>Ant</li>\n * <li>Groovy</li>\n * <li>man</li>\n * </ul>\n * </p>\n "
     },
     "org.apache.commons.cli.ArgumentIsOptionTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -19403,6 +19724,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -19503,6 +19825,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOption()",
             "parameters": []
           }
@@ -19599,6 +19922,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionAndOptionWithArgument()",
             "parameters": []
           }
@@ -19709,6 +20033,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionWithArgument()",
             "parameters": []
           }
@@ -19717,6 +20042,7 @@
       "file": "org\\apache\\commons\\cli\\ArgumentIsOptionTest.java"
     },
     "org.apache.commons.cli.BasicParserTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -19743,6 +20069,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -19754,6 +20081,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousLongWithoutEqualSingleDash()",
             "parameters": []
           }
@@ -19765,6 +20093,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousLongWithoutEqualSingleDash2()",
             "parameters": []
           }
@@ -19776,6 +20105,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption1()",
             "parameters": []
           }
@@ -19787,6 +20117,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption2()",
             "parameters": []
           }
@@ -19798,6 +20129,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption3()",
             "parameters": []
           }
@@ -19809,6 +20141,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption4()",
             "parameters": []
           }
@@ -19820,6 +20153,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBursting()",
             "parameters": []
           }
@@ -19831,6 +20165,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testDoubleDash2()",
             "parameters": []
           }
@@ -19842,6 +20177,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionWithEqualsQuoteHandling()",
             "parameters": []
           }
@@ -19853,6 +20189,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithEqualDoubleDash()",
             "parameters": []
           }
@@ -19864,6 +20201,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithEqualSingleDash()",
             "parameters": []
           }
@@ -19875,6 +20213,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithoutEqualSingleDash()",
             "parameters": []
           }
@@ -19886,6 +20225,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMissingArgWithBursting()",
             "parameters": []
           }
@@ -19897,6 +20237,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNegativeOption()",
             "parameters": []
           }
@@ -19908,6 +20249,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPartialLongOptionSingleDash()",
             "parameters": []
           }
@@ -19919,6 +20261,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertiesOption1()",
             "parameters": []
           }
@@ -19930,6 +20273,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertiesOption2()",
             "parameters": []
           }
@@ -19941,6 +20285,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionConcatenatedQuoteHandling()",
             "parameters": []
           }
@@ -19952,6 +20297,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortWithEqual()",
             "parameters": []
           }
@@ -19963,6 +20309,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortWithoutEqual()",
             "parameters": []
           }
@@ -19974,6 +20321,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopBursting()",
             "parameters": []
           }
@@ -19985,6 +20333,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopBursting2()",
             "parameters": []
           }
@@ -19996,6 +20345,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption1()",
             "parameters": []
           }
@@ -20007,6 +20357,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption2()",
             "parameters": []
           }
@@ -20018,6 +20369,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption3()",
             "parameters": []
           }
@@ -20029,6 +20381,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption4()",
             "parameters": []
           }
@@ -20040,6 +20393,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnrecognizedOptionWithBursting()",
             "parameters": []
           }
@@ -20048,6 +20402,7 @@
       "file": "org\\apache\\commons\\cli\\BasicParserTest.java"
     },
     "org.apache.commons.cli.bug.BugCLI133Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -20127,6 +20482,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOrder()",
             "parameters": []
           }
@@ -20135,6 +20491,7 @@
       "file": "org\\apache\\commons\\cli\\bug\\BugCLI133Test.java"
     },
     "org.apache.commons.cli.bug.BugCLI13Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -20289,6 +20646,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testCLI13()",
             "parameters": []
           }
@@ -20297,6 +20655,7 @@
       "file": "org\\apache\\commons\\cli\\bug\\BugCLI13Test.java"
     },
     "org.apache.commons.cli.bug.BugCLI148Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -20350,6 +20709,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -20410,6 +20770,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testWorkaround1()",
             "parameters": []
           }
@@ -20470,6 +20831,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testWorkaround2()",
             "parameters": []
           }
@@ -20479,6 +20841,7 @@
       "javadoc": "\n * https://issues.apache.org/jira/browse/CLI-148\n "
     },
     "org.apache.commons.cli.bug.BugCLI162Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -20732,6 +21095,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -20859,6 +21223,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testInfiniteLoop()",
             "parameters": []
           }
@@ -20992,6 +21357,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongLineChunking()",
             "parameters": []
           }
@@ -21125,6 +21491,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongLineChunkingIndentIgnored()",
             "parameters": []
           }
@@ -21487,6 +21854,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintHelpLongLines()",
             "parameters": []
           }
@@ -21495,6 +21863,7 @@
       "file": "org\\apache\\commons\\cli\\bug\\BugCLI162Test.java"
     },
     "org.apache.commons.cli.bug.BugCLI18Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -21605,6 +21974,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testCLI18()",
             "parameters": []
           }
@@ -21614,6 +21984,7 @@
       "javadoc": "\n * https://issues.apache.org/jira/browse/CLI-18\n "
     },
     "org.apache.commons.cli.bug.BugCLI252Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -21660,6 +22031,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PRIVATE",
             "signature": "private Options getOptions()",
             "parameters": []
           }
@@ -21710,6 +22082,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiquousOptionName()",
             "parameters": []
           }
@@ -21746,6 +22119,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testExactOptionNameMatch()",
             "parameters": []
           }
@@ -21754,6 +22128,7 @@
       "file": "org\\apache\\commons\\cli\\bug\\BugCLI252Test.java"
     },
     "org.apache.commons.cli.bug.BugCLI265Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -21867,6 +22242,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -21952,6 +22328,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShouldParseConcatenatedShortOptions()",
             "parameters": []
           }
@@ -22035,6 +22412,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShouldParseShortOptionWithoutValue()",
             "parameters": []
           }
@@ -22114,6 +22492,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShouldParseShortOptionWithValue()",
             "parameters": []
           }
@@ -22123,6 +22502,7 @@
       "javadoc": "\n * Test for CLI-265.\n * <p>\n * The issue is that a short option with an optional value will use whatever comes next as value.\n "
     },
     "org.apache.commons.cli.bug.BugCLI266Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -22222,6 +22602,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void buildOptionsGroup(Options)",
             "parameters": [
               {
@@ -22319,6 +22700,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Options",
+            "access_type": "PRIVATE",
             "signature": "private Options getOptions()",
             "parameters": []
           }
@@ -22409,6 +22791,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionComparatorDefaultOrder()",
             "parameters": []
           }
@@ -22465,6 +22848,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionComparatorInsertedOrder()",
             "parameters": []
           }
@@ -22473,6 +22857,7 @@
       "file": "org\\apache\\commons\\cli\\bug\\BugCLI266Test.java"
     },
     "org.apache.commons.cli.bug.BugCLI312Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -22602,6 +22987,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNoOptionValues()",
             "parameters": []
           }
@@ -22786,6 +23172,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertyStyleOption_withGetOptionProperties()",
             "parameters": []
           }
@@ -22980,6 +23367,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPropertyStyleOption_withGetOptions()",
             "parameters": []
           }
@@ -22989,6 +23377,7 @@
       "javadoc": "\n * Demonstrates inconsistencies in parsing Java property-style options.\n "
     },
     "org.apache.commons.cli.bug.BugCLI325Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -23113,6 +23502,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void Cli325()",
             "parameters": []
           }
@@ -23121,6 +23511,7 @@
       "file": "org\\apache\\commons\\cli\\bug\\BugCLI325Test.java"
     },
     "org.apache.commons.cli.bug.BugCLI71Test": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -23206,6 +23597,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -23265,6 +23657,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBasic()",
             "parameters": []
           }
@@ -23358,6 +23751,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetsDefaultIfOptional()",
             "parameters": []
           }
@@ -23431,6 +23825,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLackOfError()",
             "parameters": []
           }
@@ -23490,6 +23885,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMistakenArgument()",
             "parameters": []
           }
@@ -23498,6 +23894,7 @@
       "file": "org\\apache\\commons\\cli\\bug\\BugCLI71Test.java"
     },
     "org.apache.commons.cli.bug.BugsTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -23592,6 +23989,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test11456()",
             "parameters": []
           }
@@ -23673,6 +24071,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test11457()",
             "parameters": []
           }
@@ -23808,6 +24207,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test11458()",
             "parameters": []
           }
@@ -23900,6 +24300,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test11680()",
             "parameters": []
           }
@@ -24036,6 +24437,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test12210()",
             "parameters": []
           }
@@ -24127,6 +24529,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test13425()",
             "parameters": []
           }
@@ -24257,6 +24660,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test13666()",
             "parameters": []
           }
@@ -24390,6 +24794,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test13935()",
             "parameters": []
           }
@@ -24481,6 +24886,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test14786()",
             "parameters": []
           }
@@ -24615,6 +25021,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test15046()",
             "parameters": []
           }
@@ -24700,6 +25107,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test15648()",
             "parameters": []
           }
@@ -24837,6 +25245,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void test31148()",
             "parameters": []
           }
@@ -24845,6 +25254,7 @@
       "file": "org\\apache\\commons\\cli\\bug\\BugsTest.java"
     },
     "org.apache.commons.cli.CommandLineTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -24945,6 +25355,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilder()",
             "parameters": []
           }
@@ -25036,6 +25447,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderNullArgs()",
             "parameters": []
           }
@@ -25122,6 +25534,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderNullOption()",
             "parameters": []
           }
@@ -25275,6 +25688,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetOptionProperties()",
             "parameters": []
           }
@@ -25428,6 +25842,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetOptionPropertiesWithOption()",
             "parameters": []
           }
@@ -25503,6 +25918,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetOptions()",
             "parameters": []
           }
@@ -25603,6 +26019,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetParsedOptionValue()",
             "parameters": []
           }
@@ -25802,6 +26219,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetParsedOptionValueUsingDefault()",
             "parameters": []
           }
@@ -25907,6 +26325,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetParsedOptionValueWithChar()",
             "parameters": []
           }
@@ -26012,6 +26431,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetParsedOptionValueWithOption()",
             "parameters": []
           }
@@ -26118,6 +26538,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNullOption()",
             "parameters": []
           }
@@ -26126,6 +26547,7 @@
       "file": "org\\apache\\commons\\cli\\CommandLineTest.java"
     },
     "org.apache.commons.cli.ConverterTests": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -26191,6 +26613,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.stream.Stream<org.junit.jupiter.params.provider.Arguments>",
+            "access_type": "PRIVATE",
             "signature": "private static Stream<Arguments> numberTestParameters()",
             "parameters": []
           }
@@ -26299,6 +26722,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void classTests()",
             "parameters": []
           }
@@ -26364,6 +26788,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void dateTests()",
             "parameters": []
           }
@@ -26441,6 +26866,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void fileTests()",
             "parameters": []
           }
@@ -26496,6 +26922,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void numberTests(String, Number)",
             "parameters": [
               {
@@ -26603,6 +27030,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void objectTests()",
             "parameters": []
           }
@@ -26668,6 +27096,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void urlTests()",
             "parameters": []
           }
@@ -26677,6 +27106,7 @@
       "javadoc": "\n * Tests for standard Converters.\n "
     },
     "org.apache.commons.cli.ConverterTests.AClassWithoutADefaultConstructor": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 40,
@@ -26697,6 +27127,7 @@
       "file": "org\\apache\\commons\\cli\\ConverterTests.java"
     },
     "org.apache.commons.cli.DefaultParserTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -26723,6 +27154,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -26789,6 +27221,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilder()",
             "parameters": []
           }
@@ -26872,6 +27305,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionQuoteHandlingWithoutStrip()",
             "parameters": []
           }
@@ -26955,6 +27389,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionQuoteHandlingWithStrip()",
             "parameters": []
           }
@@ -27018,6 +27453,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionWithEqualsQuoteHandling()",
             "parameters": []
           }
@@ -27101,6 +27537,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionWithEqualsQuoteHandlingWithoutStrip()",
             "parameters": []
           }
@@ -27184,6 +27621,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionWithEqualsQuoteHandlingWithStrip()",
             "parameters": []
           }
@@ -27247,6 +27685,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionConcatenatedQuoteHandling()",
             "parameters": []
           }
@@ -27330,6 +27769,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionQuoteHandlingWithoutStrip()",
             "parameters": []
           }
@@ -27413,6 +27853,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionQuoteHandlingWithStrip()",
             "parameters": []
           }
@@ -27421,6 +27862,7 @@
       "file": "org\\apache\\commons\\cli\\DefaultParserTest.java"
     },
     "org.apache.commons.cli.DisablePartialMatchingTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -27517,6 +27959,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testDisablePartialMatching()",
             "parameters": []
           }
@@ -27623,6 +28066,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRegularPartialMatching()",
             "parameters": []
           }
@@ -27631,6 +28075,7 @@
       "file": "org\\apache\\commons\\cli\\DisablePartialMatchingTest.java"
     },
     "org.apache.commons.cli.GnuParserTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -27657,6 +28102,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -27668,6 +28114,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousLongWithoutEqualSingleDash()",
             "parameters": []
           }
@@ -27679,6 +28126,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousLongWithoutEqualSingleDash2()",
             "parameters": []
           }
@@ -27690,6 +28138,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption1()",
             "parameters": []
           }
@@ -27701,6 +28150,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption2()",
             "parameters": []
           }
@@ -27712,6 +28162,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption3()",
             "parameters": []
           }
@@ -27723,6 +28174,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption4()",
             "parameters": []
           }
@@ -27734,6 +28186,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBursting()",
             "parameters": []
           }
@@ -27745,6 +28198,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testDoubleDash2()",
             "parameters": []
           }
@@ -27756,6 +28210,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithoutEqualSingleDash()",
             "parameters": []
           }
@@ -27767,6 +28222,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithUnexpectedArgument1()",
             "parameters": []
           }
@@ -27778,6 +28234,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithUnexpectedArgument2()",
             "parameters": []
           }
@@ -27789,6 +28246,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMissingArgWithBursting()",
             "parameters": []
           }
@@ -27800,6 +28258,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNegativeOption()",
             "parameters": []
           }
@@ -27811,6 +28270,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPartialLongOptionSingleDash()",
             "parameters": []
           }
@@ -27822,6 +28282,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortWithUnexpectedArgument()",
             "parameters": []
           }
@@ -27833,6 +28294,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopBursting()",
             "parameters": []
           }
@@ -27844,6 +28306,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStopBursting2()",
             "parameters": []
           }
@@ -27855,6 +28318,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption1()",
             "parameters": []
           }
@@ -27866,6 +28330,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption2()",
             "parameters": []
           }
@@ -27877,6 +28342,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption3()",
             "parameters": []
           }
@@ -27888,6 +28354,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption4()",
             "parameters": []
           }
@@ -27899,6 +28366,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnrecognizedOptionWithBursting()",
             "parameters": []
           }
@@ -27907,6 +28375,7 @@
       "file": "org\\apache\\commons\\cli\\GnuParserTest.java"
     },
     "org.apache.commons.cli.HelpFormatterTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -28068,6 +28537,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAccessors()",
             "parameters": []
           }
@@ -28183,6 +28653,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAutomaticUsage()",
             "parameters": []
           }
@@ -28316,6 +28787,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testDefaultArgName()",
             "parameters": []
           }
@@ -28369,6 +28841,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testFindWrapPos()",
             "parameters": []
           }
@@ -28472,6 +28945,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testHeaderStartingWithLineSeparator()",
             "parameters": []
           }
@@ -28673,6 +29147,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testHelpWithLongOptSeparator()",
             "parameters": []
           }
@@ -28776,6 +29251,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testIndentedHeaderAndFooter()",
             "parameters": []
           }
@@ -28911,6 +29387,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionWithoutShortFormat()",
             "parameters": []
           }
@@ -29096,6 +29573,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionWithoutShortFormat2()",
             "parameters": []
           }
@@ -29218,6 +29696,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintHelpNewlineFooter()",
             "parameters": []
           }
@@ -29340,6 +29819,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintHelpNewlineHeader()",
             "parameters": []
           }
@@ -29386,6 +29866,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintHelpWithEmptySyntax()",
             "parameters": []
           }
@@ -29509,6 +29990,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintOptionGroupUsage()",
             "parameters": []
           }
@@ -29655,6 +30137,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintOptions()",
             "parameters": []
           }
@@ -29786,6 +30269,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintOptionWithEmptyArgNameUsage()",
             "parameters": []
           }
@@ -29919,6 +30403,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintRequiredOptionGroupUsage()",
             "parameters": []
           }
@@ -30051,6 +30536,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintSortedUsage()",
             "parameters": []
           }
@@ -30168,6 +30654,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintSortedUsageWithNullComparator()",
             "parameters": []
           }
@@ -30275,6 +30762,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testPrintUsage()",
             "parameters": []
           }
@@ -30347,6 +30835,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRenderWrappedTextMultiLine()",
             "parameters": []
           }
@@ -30419,6 +30908,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRenderWrappedTextMultiLinePadded()",
             "parameters": []
           }
@@ -30491,6 +30981,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRenderWrappedTextSingleLine()",
             "parameters": []
           }
@@ -30563,6 +31054,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRenderWrappedTextSingleLinePadded()",
             "parameters": []
           }
@@ -30635,6 +31127,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRenderWrappedTextSingleLinePadded2()",
             "parameters": []
           }
@@ -30707,6 +31200,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRenderWrappedTextWordCut()",
             "parameters": []
           }
@@ -30758,6 +31252,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRtrim()",
             "parameters": []
           }
@@ -30934,6 +31429,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUsageWithLongOptSeparator()",
             "parameters": []
           }
@@ -30943,6 +31439,7 @@
       "javadoc": "\n * Test case for the HelpFormatter class.\n "
     },
     "org.apache.commons.cli.OptionBuilderTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -31013,6 +31510,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBaseOptionCharOpt()",
             "parameters": []
           }
@@ -31084,6 +31582,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBaseOptionStringOpt()",
             "parameters": []
           }
@@ -31150,6 +31649,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderIsResettedAlways()",
             "parameters": []
           }
@@ -31276,6 +31776,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testCompleteOption()",
             "parameters": []
           }
@@ -31318,6 +31819,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testCreateIncompleteOption()",
             "parameters": []
           }
@@ -31370,6 +31872,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testIllegalOptions()",
             "parameters": []
           }
@@ -31431,6 +31934,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testOptionArgNumbers()",
             "parameters": []
           }
@@ -31492,6 +31996,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSpecialOptChars()",
             "parameters": []
           }
@@ -31628,6 +32133,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testTwoCompleteOptions()",
             "parameters": []
           }
@@ -31636,6 +32142,7 @@
       "file": "org\\apache\\commons\\cli\\OptionBuilderTest.java"
     },
     "org.apache.commons.cli.OptionGroupTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -31739,6 +32246,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -31834,6 +32342,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetNames()",
             "parameters": []
           }
@@ -31921,6 +32430,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNoOptionsExtraArgs()",
             "parameters": []
           }
@@ -32004,6 +32514,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSingleLongOption()",
             "parameters": []
           }
@@ -32087,6 +32598,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSingleOption()",
             "parameters": []
           }
@@ -32170,6 +32682,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSingleOptionFromGroup()",
             "parameters": []
           }
@@ -32248,6 +32761,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testToString()",
             "parameters": []
           }
@@ -32345,6 +32859,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testTwoLongOptionsFromGroup()",
             "parameters": []
           }
@@ -32428,6 +32943,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testTwoOptionsFromDifferentGroup()",
             "parameters": []
           }
@@ -32525,6 +33041,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testTwoOptionsFromGroup()",
             "parameters": []
           }
@@ -32613,6 +33130,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testTwoOptionsFromGroupWithProperties()",
             "parameters": []
           }
@@ -32696,6 +33214,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testTwoValidLongOptions()",
             "parameters": []
           }
@@ -32779,6 +33298,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testTwoValidOptions()",
             "parameters": []
           }
@@ -32838,6 +33358,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testValidLongOnlyOptions()",
             "parameters": []
           }
@@ -32846,6 +33367,7 @@
       "file": "org\\apache\\commons\\cli\\OptionGroupTest.java"
     },
     "org.apache.commons.cli.OptionsTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -32946,6 +33468,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAddConflictingOptions()",
             "parameters": []
           }
@@ -33136,6 +33659,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAddNonConflictingOptions()",
             "parameters": []
           }
@@ -33256,6 +33780,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAddOptions()",
             "parameters": []
           }
@@ -33347,6 +33872,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAddOptions2X()",
             "parameters": []
           }
@@ -33419,6 +33945,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testDuplicateLong()",
             "parameters": []
           }
@@ -33487,6 +34014,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testDuplicateSimple()",
             "parameters": []
           }
@@ -33573,6 +34101,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetMatchingOpts()",
             "parameters": []
           }
@@ -33659,6 +34188,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetOptionsGroups()",
             "parameters": []
           }
@@ -33755,6 +34285,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testHelpOptions()",
             "parameters": []
           }
@@ -33814,6 +34345,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLong()",
             "parameters": []
           }
@@ -33904,6 +34436,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMissingOptionException()",
             "parameters": []
           }
@@ -33994,6 +34527,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMissingOptionsException()",
             "parameters": []
           }
@@ -34049,6 +34583,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSimple()",
             "parameters": []
           }
@@ -34136,6 +34671,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testToString()",
             "parameters": []
           }
@@ -34144,6 +34680,7 @@
       "file": "org\\apache\\commons\\cli\\OptionsTest.java"
     },
     "org.apache.commons.cli.OptionTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -34214,6 +34751,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void checkOption(Option, String, String, String, int, String, boolean, boolean, char, Class<?>)",
             "parameters": [
               {
@@ -34322,6 +34860,7 @@
             ],
             "external_fields": [],
             "return_type": "org.apache.commons.cli.Option",
+            "access_type": "PRIVATE",
             "signature": "private Option roundTrip(Option)",
             "parameters": [
               {
@@ -34373,6 +34912,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderInsufficientParams1()",
             "parameters": []
           }
@@ -34424,6 +34964,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderInsufficientParams2()",
             "parameters": []
           }
@@ -34465,6 +35006,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderInvalidOptionName1()",
             "parameters": []
           }
@@ -34506,6 +35048,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderInvalidOptionName2()",
             "parameters": []
           }
@@ -34542,6 +35085,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderInvalidOptionName3()",
             "parameters": []
           }
@@ -34578,6 +35122,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderInvalidOptionName4()",
             "parameters": []
           }
@@ -34761,6 +35306,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testBuilderMethods()",
             "parameters": []
           }
@@ -34830,6 +35376,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testClear()",
             "parameters": []
           }
@@ -34953,6 +35500,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testClone()",
             "parameters": []
           }
@@ -35053,6 +35601,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testGetValue()",
             "parameters": []
           }
@@ -35114,6 +35663,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testHasArgName()",
             "parameters": []
           }
@@ -35184,6 +35734,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testHasArgs()",
             "parameters": []
           }
@@ -35245,6 +35796,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testHashCode()",
             "parameters": []
           }
@@ -35348,6 +35900,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSerialization()",
             "parameters": []
           }
@@ -35407,6 +35960,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSubclass()",
             "parameters": []
           }
@@ -35415,6 +35969,7 @@
       "file": "org\\apache\\commons\\cli\\OptionTest.java"
     },
     "org.apache.commons.cli.OptionTest.DefaultOption": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 42,
@@ -35476,6 +36031,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String getValue()",
             "parameters": []
           }
@@ -35484,6 +36040,7 @@
       "file": "org\\apache\\commons\\cli\\OptionTest.java"
     },
     "org.apache.commons.cli.OptionTest.TestOption": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 56,
@@ -35534,6 +36091,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean addValue(String)",
             "parameters": [
               {
@@ -35547,6 +36105,7 @@
       "file": "org\\apache\\commons\\cli\\OptionTest.java"
     },
     "org.apache.commons.cli.OptionValidatorTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -35723,6 +36282,7 @@
               }
             ],
             "return_type": "java.util.stream.Stream<org.junit.jupiter.params.provider.Arguments>",
+            "access_type": "PRIVATE",
             "signature": "private static Stream<Arguments> optionParameters()",
             "parameters": []
           }
@@ -35889,6 +36449,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public static void setup()",
             "parameters": []
           }
@@ -35948,6 +36509,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testExclusivity()",
             "parameters": []
           }
@@ -35998,6 +36560,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void validateTest(String, boolean, String)",
             "parameters": [
               {
@@ -36019,6 +36582,7 @@
       "file": "org\\apache\\commons\\cli\\OptionValidatorTest.java"
     },
     "org.apache.commons.cli.PatternOptionBuilderTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -36035,6 +36599,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public static void setup()",
             "parameters": []
           }
@@ -36118,6 +36683,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testClassPattern()",
             "parameters": []
           }
@@ -36160,6 +36726,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testEmptyPattern()",
             "parameters": []
           }
@@ -36239,6 +36806,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testExistingFilePattern()",
             "parameters": []
           }
@@ -36304,6 +36872,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testExistingFilePatternFileNotExist()",
             "parameters": []
           }
@@ -36412,6 +36981,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNumberPattern()",
             "parameters": []
           }
@@ -36495,6 +37065,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testObjectPattern()",
             "parameters": []
           }
@@ -36590,6 +37161,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRequiredOption()",
             "parameters": []
           }
@@ -36792,6 +37364,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testSimplePattern()",
             "parameters": []
           }
@@ -36877,6 +37450,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUntypedPattern()",
             "parameters": []
           }
@@ -36970,6 +37544,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testURLPattern()",
             "parameters": []
           }
@@ -36979,6 +37554,7 @@
       "javadoc": "\n * Test case for the PatternOptionBuilder class.\n "
     },
     "org.apache.commons.cli.PosixParserTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -37005,6 +37581,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -37016,6 +37593,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousLongWithoutEqualSingleDash()",
             "parameters": []
           }
@@ -37027,6 +37605,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousLongWithoutEqualSingleDash2()",
             "parameters": []
           }
@@ -37038,6 +37617,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testAmbiguousPartialLongOption4()",
             "parameters": []
           }
@@ -37049,6 +37629,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testDoubleDash2()",
             "parameters": []
           }
@@ -37060,6 +37641,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithEqualSingleDash()",
             "parameters": []
           }
@@ -37071,6 +37653,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithoutEqualSingleDash()",
             "parameters": []
           }
@@ -37082,6 +37665,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithUnexpectedArgument1()",
             "parameters": []
           }
@@ -37093,6 +37677,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNegativeOption()",
             "parameters": []
           }
@@ -37104,6 +37689,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortWithEqual()",
             "parameters": []
           }
@@ -37115,6 +37701,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testUnambiguousPartialLongOption4()",
             "parameters": []
           }
@@ -37124,6 +37711,7 @@
       "javadoc": "\n * Test case for the PosixParser.\n "
     },
     "org.apache.commons.cli.TypeHandlerTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -37390,6 +37978,7 @@
               }
             ],
             "return_type": "java.util.stream.Stream<org.junit.jupiter.params.provider.Arguments>",
+            "access_type": "PRIVATE",
             "signature": "private static Stream<Arguments> createValueTestParameters()",
             "parameters": []
           }
@@ -37454,6 +38043,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void createValueTests(String, Class<?>, Object)",
             "parameters": [
               {
@@ -37508,6 +38098,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testCreateValueExistingFile()",
             "parameters": []
           }
@@ -37563,6 +38154,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testNoConverters()",
             "parameters": []
           }
@@ -37594,6 +38186,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testnstantiableEquals()",
             "parameters": []
           }
@@ -37653,6 +38246,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testRegister()",
             "parameters": []
           }
@@ -37717,6 +38311,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testResetConverters()",
             "parameters": []
           }
@@ -37725,6 +38320,7 @@
       "file": "org\\apache\\commons\\cli\\TypeHandlerTest.java"
     },
     "org.apache.commons.cli.TypeHandlerTest.Instantiable": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -37735,6 +38331,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -37751,6 +38348,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -37760,6 +38358,7 @@
       "javadoc": " Used for Class and Object creation tests. "
     },
     "org.apache.commons.cli.TypeHandlerTest.NotInstantiable": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 58,
@@ -37776,6 +38375,7 @@
       "javadoc": " Used for Class and Object negative creation tests "
     },
     "org.apache.commons.cli.UtilTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -37811,6 +38411,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStripLeadingAndTrailingQuotes()",
             "parameters": []
           }
@@ -37857,6 +38458,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testStripLeadingHyphens()",
             "parameters": []
           }
@@ -37865,6 +38467,7 @@
       "file": "org\\apache\\commons\\cli\\UtilTest.java"
     },
     "org.apache.commons.cli.ValuesTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -38027,6 +38630,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -38112,6 +38716,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testCharSeparator()",
             "parameters": []
           }
@@ -38177,6 +38782,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testComplexValues()",
             "parameters": []
           }
@@ -38217,6 +38823,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testExtraArgs()",
             "parameters": []
           }
@@ -38282,6 +38889,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testMultipleArgValues()",
             "parameters": []
           }
@@ -38343,6 +38951,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortArgs()",
             "parameters": []
           }
@@ -38422,6 +39031,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortArgsWithValue()",
             "parameters": []
           }
@@ -38487,6 +39097,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testTwoArgValues()",
             "parameters": []
           }
@@ -38495,6 +39106,7 @@
       "file": "org\\apache\\commons\\cli\\ValuesTest.java"
     },
     "org.apache.commons.cli.ValueTest": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -38642,6 +39254,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void setUp()",
             "parameters": []
           }
@@ -38699,6 +39312,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongNoArg()",
             "parameters": []
           }
@@ -38770,6 +39384,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongNoArgWithOption()",
             "parameters": []
           }
@@ -38850,6 +39465,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionalArgValue()",
             "parameters": []
           }
@@ -38949,6 +39565,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionalArgValues()",
             "parameters": []
           }
@@ -39058,6 +39675,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionalArgValuesWithOption()",
             "parameters": []
           }
@@ -39148,6 +39766,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionalArgValueWithOption()",
             "parameters": []
           }
@@ -39247,6 +39866,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionalNArgValues()",
             "parameters": []
           }
@@ -39356,6 +39976,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionalNArgValuesWithOption()",
             "parameters": []
           }
@@ -39432,6 +40053,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionalNoValue()",
             "parameters": []
           }
@@ -39518,6 +40140,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongOptionalNoValueWithOption()",
             "parameters": []
           }
@@ -39589,6 +40212,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithArg()",
             "parameters": []
           }
@@ -39674,6 +40298,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testLongWithArgWithOption()",
             "parameters": []
           }
@@ -39731,6 +40356,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortNoArg()",
             "parameters": []
           }
@@ -39802,6 +40428,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortNoArgWithOption()",
             "parameters": []
           }
@@ -39878,6 +40505,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionalArgNoValue()",
             "parameters": []
           }
@@ -39964,6 +40592,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionalArgNoValueWithOption()",
             "parameters": []
           }
@@ -40044,6 +40673,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionalArgValue()",
             "parameters": []
           }
@@ -40143,6 +40773,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionalArgValues()",
             "parameters": []
           }
@@ -40252,6 +40883,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionalArgValuesWithOption()",
             "parameters": []
           }
@@ -40342,6 +40974,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionalArgValueWithOption()",
             "parameters": []
           }
@@ -40441,6 +41074,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionalNArgValues()",
             "parameters": []
           }
@@ -40550,6 +41184,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortOptionalNArgValuesWithOption()",
             "parameters": []
           }
@@ -40621,6 +41256,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortWithArg()",
             "parameters": []
           }
@@ -40706,6 +41342,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void testShortWithArgWithOption()",
             "parameters": []
           }

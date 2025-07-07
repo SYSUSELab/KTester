@@ -1,7 +1,14 @@
 package extractor;
+
+import java.io.IOException;
+import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+
+import infostructure.CallMethodInfo;
+import infostructure.VariableInfo;
 import com.github.javaparser.JavaParser;
 import com.github.javaparser.ast.CompilationUnit;
-import com.github.javaparser.ast.type.Type;
 import com.github.javaparser.ast.ImportDeclaration;
 import com.github.javaparser.ast.Node;
 import com.github.javaparser.ast.NodeList;
@@ -14,6 +21,7 @@ import com.github.javaparser.ast.expr.FieldAccessExpr;
 import com.github.javaparser.ast.expr.MethodCallExpr;
 import com.github.javaparser.ast.expr.NameExpr;
 import com.github.javaparser.ast.expr.ObjectCreationExpr;
+import com.github.javaparser.ast.type.Type;
 import com.github.javaparser.resolution.TypeSolver;
 import com.github.javaparser.resolution.declarations.ResolvedConstructorDeclaration;
 import com.github.javaparser.resolution.declarations.ResolvedMethodDeclaration;
@@ -22,14 +30,6 @@ import com.github.javaparser.resolution.types.ResolvedType;
 import com.github.javaparser.symbolsolver.JavaSymbolSolver;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.CombinedTypeSolver;
 import com.github.javaparser.symbolsolver.resolution.typesolvers.ReflectionTypeSolver;
-
-import infostructure.CallMethodInfo;
-import infostructure.VariableInfo;
-
-import java.io.IOException;
-import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.List;
 
 public class JavaParserExtractor {
     Path datasetRoot;
@@ -96,6 +96,7 @@ public class JavaParserExtractor {
     protected String extractJavadoc(Node node) {
         final String javadoc;
         if (node instanceof ClassOrInterfaceDeclaration) {
+            // get javadoc
             ClassOrInterfaceDeclaration classDecl = (ClassOrInterfaceDeclaration) node;
             javadoc = classDecl.getJavadocComment().map(text -> text.getContent()).orElse(null);
             return javadoc;

@@ -2,6 +2,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
+import codegraph.ControlFlowGraphBuilder;
 import extractor.CodeInfoExtractor;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class PreProcessor {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         int arg_len = args.length;
         if (arg_len < 1) {
             throw new IllegalArgumentException("missing argument: dataset root");
@@ -30,36 +31,46 @@ public class PreProcessor {
             }
         }
         // process each project in dataset_root
-        Gson gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+        PreProcessor preProcessor = new PreProcessor(output_dir);
+        try {
+            preProcessor.processProject(dataset_root);
+        } catch (IOException e) {
+            System.out.println("Error: "+e.getMessage());
+        }
+    }
+
+    Gson gson;
+    Path output_dir;
+
+    public PreProcessor(Path output_dir) {
+        gson = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
+        this.output_dir = output_dir;
+    }
+
+    public void processProject(Path dataset_root) throws IOException{
         long start = System.currentTimeMillis();
         Files.list(dataset_root).filter(Files::isDirectory).forEach(project_dir -> {
             String project_name = project_dir.getFileName().toString();
+            Path projectDir = project_dir;
+            if (project_name.equals("gson")) 
+                projectDir = project_dir.resolve("gson");
+            Path jsonPath = output_dir.resolve("json/" + project_name + ".json");
+            Path cfg_path = output_dir.resolve("codegraph/" + project_name + "_controlflow.json");
             System.out.println("process project: " + project_name);
-            JsonObject datasetJson = processProject(project_name, project_dir);
-            String json = gson.toJson(datasetJson);
-            
-            try{
-                Files.writeString(output_dir.resolve(project_name + ".json"), json);
-            } catch (IOException e) {
-                System.out.println("Error: "+e.getMessage());
-            }
+            extractProjectStructure(project_name, projectDir, jsonPath);
+            buildControlflowFlowGraph(projectDir, cfg_path);
         });
         long end = System.currentTimeMillis();
         System.out.println("Time Cost:" + (end - start) + "ms");
     }
 
-    private static JsonObject processProject(String projectName, Path sourceDir){
+    private void extractProjectStructure(String projectName, Path projectDir, Path json_path){
         JsonObject projectJson = new JsonObject();
         projectJson.addProperty("project", projectName);
 
-        Path source_folder = sourceDir.resolve("src/main/java");
-        Path test_folder = sourceDir.resolve("src/test-original/java");
-        Path jar_folder = sourceDir.resolve("libs");
-        if (projectName.equals("gson")){
-            source_folder = sourceDir.resolve("gson/src/main/java/");
-            test_folder = sourceDir.resolve("gson/src/test-original/java");
-            jar_folder = sourceDir.resolve("gson/libs");
-        }
+        Path source_folder = projectDir.resolve("src/main/java");
+        Path test_folder = projectDir.resolve("src/test-original/java");
+        Path jar_folder = projectDir.resolve("libs");
 
         CodeInfoExtractor codeInfoExtractor = new CodeInfoExtractor();
         try{
@@ -70,7 +81,18 @@ public class PreProcessor {
         } catch (IOException e) {
             System.out.println("Error: " + e.getMessage());
         }
+        String json = gson.toJson(projectJson);
+        try{
+            Files.writeString(json_path, json);
+        } catch (IOException e) {
+            System.out.println("Error: "+e.getMessage());
+        }
+        return;
+    }
 
-        return projectJson;
+    private void buildControlflowFlowGraph(Path project_dir, Path cfg_path){
+        String source_path = project_dir.resolve("src/main/java").toString();
+        JsonObject graph_data = new JsonObject();
+        ControlFlowGraphBuilder cfgBuilder = new ControlFlowGraphBuilder(source_path);
     }
 }

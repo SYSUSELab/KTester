@@ -2,6 +2,7 @@
 code/settings.py
 code/test.py
 code/java/spoon-control-flow
+code/java/sootup
 code/evaluations/check_empty_class.py
 dataset/projects
 dataset/project_index/lucene

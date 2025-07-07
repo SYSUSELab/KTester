@@ -2,6 +2,7 @@
   "project": "ruler",
   "source": {
     "software.amazon.event.ruler.ACFinder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 10,
@@ -46,6 +47,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.Object>",
+            "access_type": "NONE",
             "signature": " static List<Object> matchRules(Event, GenericMachine<?>)",
             "parameters": [
               {
@@ -110,6 +112,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.Object>",
+            "access_type": "PRIVATE",
             "signature": "private static List<Object> find(ACTask)",
             "parameters": [
               {
@@ -236,6 +239,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void tryStep(ACTask, ACStep)",
             "parameters": [
               {
@@ -303,6 +307,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void tryMustNotExistMatch(NameState, ACTask, int, ArrayMembership)",
             "parameters": [
               {
@@ -391,6 +396,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void moveFrom(NameState, int, ACTask, ArrayMembership)",
             "parameters": [
               {
@@ -452,6 +458,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void addNameState(NameState, ACTask, int, ArrayMembership)",
             "parameters": [
               {
@@ -478,6 +485,7 @@
       "javadoc": "\n * Matches rules to events as does Finder, but in an array-consistent fashion, thus the AC prefix on the class name.\n "
     },
     "software.amazon.event.ruler.ACStep": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 10,
@@ -539,6 +547,7 @@
       "javadoc": "\n * Represents a suggestion of a state/token combo from which there might be a transition, in an array-consistent fashion.\n "
     },
     "software.amazon.event.ruler.ACTask": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 21,
@@ -622,6 +631,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "NONE",
             "signature": " NameState startState()",
             "parameters": []
           }
@@ -649,6 +659,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.Object>",
+            "access_type": "NONE",
             "signature": " List<Object> getMatchedRules()",
             "parameters": []
           }
@@ -681,6 +692,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void collectRules(NameState)",
             "parameters": [
               {
@@ -695,6 +707,7 @@
       "javadoc": "\n * Represents the state of an Array-Consistent rule-finding project.\n "
     },
     "software.amazon.event.ruler.AnythingBut": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 18,
@@ -775,6 +788,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.AnythingBut",
+            "access_type": "NONE",
             "signature": " static AnythingBut anythingButMatch(Set<String>, boolean)",
             "parameters": [
               {
@@ -800,6 +814,7 @@
               }
             ],
             "return_type": "java.util.Set<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public Set<String> getValues()",
             "parameters": []
           }
@@ -816,6 +831,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isNumeric()",
             "parameters": []
           }
@@ -866,6 +882,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -902,6 +919,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -928,6 +946,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -937,6 +956,7 @@
       "javadoc": "\n * Represents denylist like rule: any value matches if it's *not* in the anything-but list.\n * It supports lists whose members must be all strings or all numbers.\n * Numbers are treated as strings created with ComparableNumber.generate.\n "
     },
     "software.amazon.event.ruler.AnythingButEqualsIgnoreCase": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 15,
@@ -993,6 +1013,7 @@
               }
             ],
             "return_type": "java.util.Set<java.lang.String>",
+            "access_type": "PUBLIC",
             "signature": "public Set<String> getValues()",
             "parameters": []
           }
@@ -1039,6 +1060,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -1071,6 +1093,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -1093,6 +1116,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -1102,6 +1126,7 @@
       "javadoc": "\n * Represents denylist like rule: any value matches if it's *not* in the anything-but/ignore-case list.\n * It supports lists whose members must be all strings.\n * Matching is case-insensitive\n "
     },
     "software.amazon.event.ruler.ArrayMembership": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 11,
@@ -1192,6 +1217,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void putMembership(int, int)",
             "parameters": [
               {
@@ -1228,6 +1254,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void deleteMembership(int)",
             "parameters": [
               {
@@ -1260,6 +1287,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " int getMembership(int)",
             "parameters": [
               {
@@ -1287,6 +1315,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isEmpty()",
             "parameters": []
           }
@@ -1309,6 +1338,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PRIVATE",
             "signature": "private int size()",
             "parameters": []
           }
@@ -1381,6 +1411,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -1456,6 +1487,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ArrayMembership",
+            "access_type": "NONE",
             "signature": " static ArrayMembership checkArrayConsistency(ArrayMembership, ArrayMembership)",
             "parameters": [
               {
@@ -1475,6 +1507,7 @@
       "javadoc": "\n * Represents which JSON arrays within an Event structure a particular field appears within, and at which position.\n *  The arrays are identified using integers.\n "
     },
     "software.amazon.event.ruler.ByteMachine": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -1635,6 +1668,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.NameState>",
+            "access_type": "NONE",
             "signature": " Set<NameState> transitionOn(String)",
             "parameters": [
               {
@@ -1688,6 +1722,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isEmpty()",
             "parameters": []
           }
@@ -1814,6 +1849,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void deletePattern(Patterns)",
             "parameters": [
               {
@@ -1886,6 +1922,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void deleteExistencePattern(Patterns)",
             "parameters": [
               {
@@ -1969,6 +2006,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void deleteAnythingButPattern(AnythingBut)",
             "parameters": [
               {
@@ -2052,6 +2090,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void deleteAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
             "parameters": [
               {
@@ -2143,6 +2182,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void deleteMatchPattern(ValuePatterns)",
             "parameters": [
               {
@@ -2300,6 +2340,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
             "parameters": [
               {
@@ -2456,6 +2497,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PRIVATE",
             "signature": "private SingleByteTransition deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
             "parameters": [
               {
@@ -2650,6 +2692,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void deleteRangePattern(Range)",
             "parameters": [
               {
@@ -2753,6 +2796,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void checkAndDeleteStateAlongTraversedPath(ArrayDeque<AbstractMap.SimpleImmutableEntry<Byte, ByteTransition>>)",
             "parameters": [
               {
@@ -3032,6 +3076,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void doTransitionOn(String, Set<NameState>, boolean)",
             "parameters": [
               {
@@ -3137,6 +3182,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void addExistenceMatch(Set<NameState>)",
             "parameters": [
               {
@@ -3229,6 +3275,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void addSuffixMatch(byte[], Set<NameState>, Set<NameState>)",
             "parameters": [
               {
@@ -3304,6 +3351,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set<NameState>)",
             "parameters": [
               {
@@ -3448,6 +3496,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "NONE",
             "signature": " NameState addPattern(Patterns)",
             "parameters": [
               {
@@ -3488,6 +3537,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState addExistencePattern(Patterns)",
             "parameters": [
               {
@@ -3528,6 +3578,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState addAnythingButPattern(AnythingBut)",
             "parameters": [
               {
@@ -3568,6 +3619,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState addAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
             "parameters": [
               {
@@ -3699,6 +3751,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState addMatchValue(Patterns, String, NameState)",
             "parameters": [
               {
@@ -3762,6 +3815,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean canReuseNextByteState(ByteState, ByteState, InputCharacter[], int)",
             "parameters": [
               {
@@ -3897,6 +3951,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
             "parameters": [
               {
@@ -3943,6 +3998,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean isNextCharacterFirstByteOfMultiByte(InputCharacter[], int)",
             "parameters": [
               {
@@ -4014,6 +4070,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PRIVATE",
             "signature": "private String extractNextJavaCharacterFromInputCharacters(InputCharacter[], int)",
             "parameters": [
               {
@@ -4176,6 +4233,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "NONE",
             "signature": " NameState findPattern(Patterns)",
             "parameters": [
               {
@@ -4276,6 +4334,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState findAnythingButPattern(AnythingBut)",
             "parameters": [
               {
@@ -4376,6 +4435,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState findAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
             "parameters": [
               {
@@ -4436,6 +4496,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState findMatchPattern(ValuePatterns)",
             "parameters": [
               {
@@ -4548,6 +4609,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState findMatchPattern(InputCharacter[], Patterns)",
             "parameters": [
               {
@@ -4672,6 +4734,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState findRangePattern(Range)",
             "parameters": [
               {
@@ -4785,6 +4848,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState addRangePattern(Range)",
             "parameters": [
               {
@@ -4951,6 +5015,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PRIVATE",
             "signature": "private ByteTransition extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
             "parameters": [
               {
@@ -5071,6 +5136,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteState",
+            "access_type": "PRIVATE",
             "signature": "private ByteState findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
             "parameters": [
               {
@@ -5206,6 +5272,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteState",
+            "access_type": "PRIVATE",
             "signature": "private ByteState findOrMakeNextByteState(ByteState, ByteState, InputCharacter[], int, Patterns)",
             "parameters": [
               {
@@ -5258,6 +5325,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PRIVATE",
             "signature": "private ByteTransition findNextByteStateForRangePattern(ByteTransition, byte)",
             "parameters": [
               {
@@ -5302,6 +5370,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState addMatchPattern(ValuePatterns)",
             "parameters": [
               {
@@ -5664,6 +5733,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
             "parameters": [
               {
@@ -5746,6 +5816,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState insertMatchForRangePattern(byte, ByteState, NameState, Patterns)",
             "parameters": [
               {
@@ -5938,6 +6009,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
             "parameters": [
               {
@@ -5999,6 +6071,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PRIVATE",
             "signature": "private static SingleByteTransition getTransitionHavingNextByteState(SingleByteTransition, SingleByteTransition, InputCharacter)",
             "parameters": [
               {
@@ -6139,6 +6212,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void addMatchReferences(ByteMatch)",
             "parameters": [
               {
@@ -6194,6 +6268,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PRIVATE",
             "signature": "private NameState findMatchForRangePattern(byte, ByteTransition, Patterns)",
             "parameters": [
               {
@@ -6265,6 +6340,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void deleteMatches(InputCharacter, ByteTransition, Patterns)",
             "parameters": [
               {
@@ -6343,6 +6419,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PRIVATE",
             "signature": "private SingleByteTransition deleteMatch(InputCharacter, ByteState, Patterns, SingleByteTransition)",
             "parameters": [
               {
@@ -6487,6 +6564,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void updateMatchReferences(ByteMatch)",
             "parameters": [
               {
@@ -6519,6 +6597,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PRIVATE",
             "signature": "private static ByteTransition getTransition(ByteTransition, byte)",
             "parameters": [
               {
@@ -6629,6 +6708,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PRIVATE",
             "signature": "private static ByteTransition getTransition(SingleByteTransition, InputCharacter)",
             "parameters": [
               {
@@ -6725,6 +6805,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PRIVATE",
             "signature": "private static ByteTransition getTransitionForMultiBytes(SingleByteTransition, Set<MultiByte>)",
             "parameters": [
               {
@@ -6842,6 +6923,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void addTransitionNextState(ByteState, InputCharacter, InputCharacter[], int, ByteState, Patterns, ByteState)",
             "parameters": [
               {
@@ -6903,6 +6985,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void addTransitionNextStateForWildcard(ByteState, ByteState)",
             "parameters": [
               {
@@ -6981,6 +7064,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void putTransitionNextState(ByteState, InputCharacter, SingleByteTransition, ByteState)",
             "parameters": [
               {
@@ -7066,6 +7150,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PRIVATE",
             "signature": "private static SingleByteTransition putTransitionMatch(ByteState, InputCharacter, SingleByteTransition, ByteMatch)",
             "parameters": [
               {
@@ -7183,6 +7268,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void removeTransition(ByteState, InputCharacter, SingleByteTransition)",
             "parameters": [
               {
@@ -7240,6 +7326,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void removeTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
             "parameters": [
               {
@@ -7340,6 +7427,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
             "parameters": [
               {
@@ -7456,6 +7544,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void addTransition(ByteState, InputCharacter, SingleByteTransition)",
             "parameters": [
               {
@@ -7525,6 +7614,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void addTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
             "parameters": [
               {
@@ -7565,6 +7655,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteMatch",
+            "access_type": "PRIVATE",
             "signature": "private static ByteMatch findMatch(Set<ByteMatch>, Patterns)",
             "parameters": [
               {
@@ -7596,6 +7687,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean isByte(InputCharacter)",
             "parameters": [
               {
@@ -7623,6 +7715,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean isWildcard(InputCharacter)",
             "parameters": [
               {
@@ -7650,6 +7743,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean isMultiByteSet(InputCharacter)",
             "parameters": [
               {
@@ -7686,6 +7780,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int evaluateComplexity(MachineComplexityEvaluator)",
             "parameters": [
               {
@@ -7752,6 +7847,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void gatherObjects(Set<Object>)",
             "parameters": [
               {
@@ -7789,6 +7885,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -7798,6 +7895,7 @@
       "javadoc": "\n * Represents a UTF8-byte-level state machine that matches a Ruler state machine's field values.\n * Each state is a map keyed by utf8 byte. getTransition(byte) yields a Target, which can contain either or\n *  both of the next ByteState, and the first of a chain of Matches, which indicate a match to some pattern.\n "
     },
     "software.amazon.event.ruler.ByteMachine.EmptyByteTransition": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -7815,6 +7913,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteState",
+            "access_type": "PUBLIC",
             "signature": "public ByteState getNextByteState()",
             "parameters": []
           }
@@ -7826,6 +7925,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public SingleByteTransition setNextByteState(ByteState)",
             "parameters": [
               {
@@ -7842,6 +7942,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition getTransition(byte)",
             "parameters": [
               {
@@ -7858,6 +7959,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition getTransitionForAllBytes()",
             "parameters": []
           }
@@ -7875,6 +7977,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ByteTransition> getTransitions()",
             "parameters": []
           }
@@ -7886,6 +7989,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteMatch",
+            "access_type": "PUBLIC",
             "signature": "public ByteMatch getMatch()",
             "parameters": []
           }
@@ -7903,6 +8007,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ShortcutTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ShortcutTransition> getShortcuts()",
             "parameters": []
           }
@@ -7914,6 +8019,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public SingleByteTransition setMatch(ByteMatch)",
             "parameters": [
               {
@@ -7941,6 +8047,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void gatherObjects(Set<Object>)",
             "parameters": [
               {
@@ -7954,6 +8061,7 @@
       "file": "software\\amazon\\event\\ruler\\ByteMachine.java"
     },
     "software.amazon.event.ruler.ByteMap": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 26,
@@ -8019,6 +8127,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void putTransition(byte, SingleByteTransition)",
             "parameters": [
               {
@@ -8064,6 +8173,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void putTransitionForAllBytes(SingleByteTransition)",
             "parameters": [
               {
@@ -8104,6 +8214,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void addTransition(byte, SingleByteTransition)",
             "parameters": [
               {
@@ -8205,6 +8316,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void addTransitionForAllBytes(SingleByteTransition)",
             "parameters": [
               {
@@ -8245,6 +8357,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void removeTransition(byte, SingleByteTransition)",
             "parameters": [
               {
@@ -8346,6 +8459,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void removeTransitionForAllBytes(SingleByteTransition)",
             "parameters": [
               {
@@ -8528,6 +8642,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void updateTransition(byte, SingleByteTransition, Operation)",
             "parameters": [
               {
@@ -8619,6 +8734,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void mergeAdjacentInMapIfNeeded(NavigableMap<Integer, ByteTransition>)",
             "parameters": [
               {
@@ -8642,6 +8758,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isEmpty()",
             "parameters": []
           }
@@ -8664,6 +8781,7 @@
             ],
             "external_fields": [],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " int numberOfTransitions()",
             "parameters": []
           }
@@ -8691,6 +8809,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean hasTransition(ByteTransition)",
             "parameters": [
               {
@@ -8728,6 +8847,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "NONE",
             "signature": " ByteTransition getTransition(byte)",
             "parameters": [
               {
@@ -8823,6 +8943,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "NONE",
             "signature": " ByteTransition getTransitionForAllBytes()",
             "parameters": [],
             "javadoc": "\n     * Get the transition that all bytes lead to. Could be compound if all bytes lead to more than one transition, or\n     * could be the empty transition if there are no transitions that all bytes lead to.\n     *\n     * @return The transition that all bytes lead to.\n     "
@@ -8871,6 +8992,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteTransition>",
+            "access_type": "NONE",
             "signature": " Set<ByteTransition> getTransitions()",
             "parameters": [],
             "javadoc": "\n     * Get all transitions contained in this map, whether they are single or compound transitions.\n     *\n     * @return All transitions contained in this map.\n     "
@@ -8894,6 +9016,7 @@
               }
             ],
             "return_type": "java.util.Set<java.lang.Integer>",
+            "access_type": "NONE",
             "signature": " Set<Integer> getCeilings()",
             "parameters": [],
             "javadoc": "\n     * Get the ceiling values contained in this map.\n     *\n     * @return Ceiling values.\n     "
@@ -8942,6 +9065,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.SingleByteTransition>",
+            "access_type": "PRIVATE",
             "signature": "private Set<SingleByteTransition> getSingleByteTransitions()",
             "parameters": [],
             "javadoc": "\n     * Get all transitions contained in this map, with the compound transitions expanded to singular form.\n     *\n     * @return All transitions contained in this map, with the compound transitions expanded to singular form.\n     "
@@ -8965,6 +9089,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.SingleByteTransition>",
+            "access_type": "PRIVATE",
             "signature": "private static Set<SingleByteTransition> expand(ByteTransition)",
             "parameters": [
               {
@@ -8986,6 +9111,7 @@
               }
             ],
             "return_type": "java.util.NavigableMap<java.lang.Integer, software.amazon.event.ruler.ByteTransition>",
+            "access_type": "NONE",
             "signature": " NavigableMap<Integer, ByteTransition> getMap()",
             "parameters": []
           }
@@ -9128,6 +9254,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -9160,6 +9287,7 @@
       "file": "software\\amazon\\event\\ruler\\ByteMap.java"
     },
     "software.amazon.event.ruler.ByteMatch": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 13,
@@ -9210,6 +9338,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteState",
+            "access_type": "PUBLIC",
             "signature": "public ByteState getNextByteState()",
             "parameters": []
           }
@@ -9236,6 +9365,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public SingleByteTransition setNextByteState(ByteState)",
             "parameters": [
               {
@@ -9252,6 +9382,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition getTransition(byte)",
             "parameters": [
               {
@@ -9268,6 +9399,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition getTransitionForAllBytes()",
             "parameters": []
           }
@@ -9285,6 +9417,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ByteTransition> getTransitions()",
             "parameters": []
           }
@@ -9296,6 +9429,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteMatch",
+            "access_type": "NONE",
             "signature": " ByteMatch getMatch()",
             "parameters": []
           }
@@ -9307,6 +9441,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public SingleByteTransition setMatch(ByteMatch)",
             "parameters": [
               {
@@ -9329,6 +9464,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ShortcutTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ShortcutTransition> getShortcuts()",
             "parameters": []
           }
@@ -9345,6 +9481,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "NONE",
             "signature": " Patterns getPattern()",
             "parameters": []
           }
@@ -9361,6 +9498,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "NONE",
             "signature": " NameState getNextNameState()",
             "parameters": []
           }
@@ -9372,6 +9510,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isMatchTrans()",
             "parameters": []
           }
@@ -9419,6 +9558,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void gatherObjects(Set<Object>)",
             "parameters": [
               {
@@ -9455,6 +9595,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -9464,6 +9605,7 @@
       "javadoc": "\n * Represents a place in a ByteMachine where we have to do something in addition to just transitioning to another step.\n "
     },
     "software.amazon.event.ruler.ByteState": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -9487,6 +9629,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteState",
+            "access_type": "NONE",
             "signature": " ByteState getNextByteState()",
             "parameters": []
           }
@@ -9498,6 +9641,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public SingleByteTransition setNextByteState(ByteState)",
             "parameters": [
               {
@@ -9514,6 +9658,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteMatch",
+            "access_type": "NONE",
             "signature": " ByteMatch getMatch()",
             "parameters": []
           }
@@ -9540,6 +9685,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public SingleByteTransition setMatch(ByteMatch)",
             "parameters": [
               {
@@ -9562,6 +9708,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ShortcutTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ShortcutTransition> getShortcuts()",
             "parameters": []
           }
@@ -9584,6 +9731,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean hasNoTransitions()",
             "parameters": [],
             "javadoc": "\n     * Returns {@code true} if this state contains no transitions.\n     *\n     * @return {@code true} if this state contains no transitions\n     "
@@ -9612,6 +9760,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "NONE",
             "signature": " ByteTransition getTransition(byte)",
             "parameters": [
               {
@@ -9640,6 +9789,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "NONE",
             "signature": " ByteTransition getTransitionForAllBytes()",
             "parameters": []
           }
@@ -9662,6 +9812,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteTransition>",
+            "access_type": "NONE",
             "signature": " Set<ByteTransition> getTransitions()",
             "parameters": []
           }
@@ -9693,6 +9844,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void putTransition(byte, SingleByteTransition)",
             "parameters": [
               {
@@ -9730,6 +9882,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void putTransitionForAllBytes(SingleByteTransition)",
             "parameters": [
               {
@@ -9767,6 +9920,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void addTransition(byte, SingleByteTransition)",
             "parameters": [
               {
@@ -9804,6 +9958,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void addTransitionForAllBytes(SingleByteTransition)",
             "parameters": [
               {
@@ -9841,6 +9996,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void removeTransition(byte, SingleByteTransition)",
             "parameters": [
               {
@@ -9878,6 +10034,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void removeTransitionForAllBytes(SingleByteTransition)",
             "parameters": [
               {
@@ -9900,6 +10057,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean hasIndeterminatePrefix()",
             "parameters": []
           }
@@ -9916,6 +10074,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void setIndeterminatePrefix(boolean)",
             "parameters": [
               {
@@ -9953,6 +10112,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean hasOnlySelfReferentialTransition()",
             "parameters": [],
             "javadoc": "\n     * Return true if this state has a self-referential transition and no others.\n     *\n     * @return True if this state has a self-referential transition and no others, false otherwise.\n     "
@@ -9976,6 +10136,7 @@
               }
             ],
             "return_type": "java.util.Set<java.lang.Integer>",
+            "access_type": "NONE",
             "signature": " Set<Integer> getCeilings()",
             "parameters": [],
             "javadoc": "\n     * Gets all the ceiling values contained in the ByteMap.\n     *\n     * @return All the ceiling values contained in the ByteMap.\n     "
@@ -9993,6 +10154,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -10002,6 +10164,7 @@
       "javadoc": "\n * Represents a state in a state machine and maps utf-8 bytes to transitions. One byte can have many transitions,\n * meaning this is an NFA state as opposed to a DFA state.\n "
     },
     "software.amazon.event.ruler.ByteTransition": {
+      "is_abstract": true,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -10012,6 +10175,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteState",
+            "access_type": "NONE",
             "signature": " abstract ByteState getNextByteState()",
             "parameters": [],
             "javadoc": "\n     * Returns the state to transfer to.\n     *\n     * @return the state to transfer to, or {@code null} if this transition does not transfer to a state\n     "
@@ -10024,6 +10188,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "NONE",
             "signature": " abstract SingleByteTransition setNextByteState(ByteState)",
             "parameters": [
               {
@@ -10041,6 +10206,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "NONE",
             "signature": " abstract ByteTransition getTransition(byte)",
             "parameters": [
               {
@@ -10058,6 +10224,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteTransition>",
+            "access_type": "NONE",
             "signature": " abstract Set<ByteTransition> getTransitions()",
             "parameters": [],
             "javadoc": "\n     * Get all the unique transitions (single or compound) reachable from this transition by any UTF-8 byte value.\n     *\n     * @return Set of all transitions reachable from this transition.\n     "
@@ -10070,6 +10237,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteMatch>",
+            "access_type": "NONE",
             "signature": " abstract Set<ByteMatch> getMatches()",
             "parameters": [],
             "javadoc": "\n     * Returns matches that are triggered if this transition is made. This is a convenience function that traverses the\n     * linked list of matches and returns all of them in a Set.\n     *\n     * @return matches that are triggered if this transition is made.\n     "
@@ -10082,6 +10250,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ShortcutTransition>",
+            "access_type": "NONE",
             "signature": " abstract Set<ShortcutTransition> getShortcuts()",
             "parameters": [],
             "javadoc": "\n     * Returns all shortcuts that are available if this transition is made.\n     *\n     * @return all shortcuts\n     "
@@ -10094,6 +10263,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.SingleByteTransition>",
+            "access_type": "NONE",
             "signature": " abstract Set<SingleByteTransition> expand()",
             "parameters": [],
             "javadoc": "\n     * Get all transitions represented by this transition (can be more than one if this is a compound transition).\n     *\n     * @return A set of all transitions represented by this transition.\n     "
@@ -10106,6 +10276,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "NONE",
             "signature": " abstract ByteTransition getTransitionForNextByteStates()",
             "parameters": [],
             "javadoc": "\n     * Get a transition that represents all of the next byte states for this transition.\n     *\n     * @return A transition that represents all of the next byte states for this transition.\n     "
@@ -10118,6 +10289,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isShortcutTrans()",
             "parameters": [],
             "javadoc": "\n     * Tell if current transition is a shortcut transition or not.\n     *\n     * @return True if and only if this is a shortcut transition.\n     "
@@ -10130,6 +10302,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isMatchTrans()",
             "parameters": [],
             "javadoc": "\n     * Tell if current transition is a match transition or not. Does not include shortcut transitions. Only includes\n     * transitions that are matches after processing the entire pattern value.\n     *\n     * @return True if and only if there is a match on this transition.\n     "
@@ -10158,6 +10331,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isEmpty()",
             "parameters": [],
             "javadoc": "\n     * Tell if current transition is empty which means doesn't has match nor next state.\n     * @return boolean\n     "
@@ -10170,6 +10344,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean hasIndeterminatePrefix()",
             "parameters": [],
             "javadoc": "\n     * Indicates if it is possible to traverse from the machine's start state to this transition using more than one\n     * possible prefix/character-sequence.\n     *\n     * @return True if prefix is indeterminate; false otherwise.\n     "
@@ -10233,6 +10408,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void gatherObjects(Set<Object>)",
             "parameters": [
               {
@@ -10255,6 +10431,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition clone()",
             "parameters": []
           }
@@ -10264,6 +10441,7 @@
       "javadoc": "\n * Represents a transition (on a particular byte value) from a state to a state.\n "
     },
     "software.amazon.event.ruler.CIDR": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 15,
@@ -10315,6 +10493,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean isIPv4OrIPv6(String)",
             "parameters": [
               {
@@ -10372,6 +10551,7 @@
               }
             ],
             "return_type": "byte[]",
+            "access_type": "PRIVATE",
             "signature": "private static byte[] ipToBytes(String)",
             "parameters": [
               {
@@ -10428,6 +10608,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " static String ipToString(String)",
             "parameters": [
               {
@@ -10466,6 +10647,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " static String ipToStringIfPossible(String)",
             "parameters": [
               {
@@ -10558,6 +10740,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Range",
+            "access_type": "NONE",
             "signature": " static Range ipToRangeIfPossible(String)",
             "parameters": [
               {
@@ -10584,6 +10767,7 @@
               }
             ],
             "return_type": "byte[]",
+            "access_type": "PRIVATE",
             "signature": "private static byte[] toHexDigits(byte[])",
             "parameters": [
               {
@@ -10696,6 +10880,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Range",
+            "access_type": "PUBLIC",
             "signature": "public static Range cidr(String)",
             "parameters": [
               {
@@ -10721,6 +10906,7 @@
               }
             ],
             "return_type": "byte[]",
+            "access_type": "PRIVATE",
             "signature": "private static byte[] computeTopBytes(byte[], int)",
             "parameters": [
               {
@@ -10752,6 +10938,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void barf(String)",
             "parameters": [
               {
@@ -10766,6 +10953,7 @@
       "javadoc": "\n * Supports matching on IPv4 and IPv6 CIDR patterns, as compressed into a string range match.\n "
     },
     "software.amazon.event.ruler.ComparableNumber": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 43,
@@ -10852,6 +11040,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " static String generate(double)",
             "parameters": [
               {
@@ -10896,6 +11085,7 @@
               }
             ],
             "return_type": "char[]",
+            "access_type": "NONE",
             "signature": " static char[] byteToHexChars(byte)",
             "parameters": [
               {
@@ -10944,6 +11134,7 @@
               }
             ],
             "return_type": "byte[]",
+            "access_type": "PRIVATE",
             "signature": "private static byte[] longToByteBuffer(long)",
             "parameters": [
               {
@@ -10996,6 +11187,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " static String toHexStringSkippingFirstByte(long)",
             "parameters": [
               {
@@ -11010,6 +11202,7 @@
       "javadoc": "\n * Represents a number, turned into a comparable string\n *  Numbers are allowed in the range -50**9 .. +50**9, inclusive\n *  Comparisons are precise to 6 digits to the right of the decimal point\n *  They are all treated as floating point\n *  They are turned into strings by:\n *  1. Add 10**9 (so no negatives), then multiply by 10**6 to remove the decimal point\n *  2. Format to a 14 char string left padded with 0 because hex string converted from 5e9*1e6=10e15 has 14 characters.\n *  Note: We use Hex because of a) it can save 3 bytes memory per number than decimal b) it aligned IP address radix.\n *  If needed, we can consider to use 32 or 64 radix description to save more memory,e.g. the string length will be 10\n *  for 32 radix, and 9 for 64 radix.\n *\n *  Note:\n *  The number is parsed to be java double to support number with decimal fraction, the max range supported is from\n *  -5e9 to 5e9 with precision of 6 digits to the right of decimal point.\n *  There is well known issue that double number will lose the precision while calculation among double and other data\n *  types, the higher the number, the lower the accuracy that can be maintained.\n *  For example: 0.30d - 0.10d = 0.19999999999999998 instead of 0.2d, and if extend to 1e10, the test result shows only\n *  5 digits of precision from right of decimal point can be guaranteed with existing implementation.\n *  The current max number 5e9 is selected with a balance between keeping the committed 6 digits of precision from right\n *  of decimal point and the memory cost (each number is parsed into a 14 characters HEX string).\n *\n *  CAVEAT:\n *  When there is need to further enlarging the max number, PLEASE BE VERY CAREFUL TO RESERVE THE NUMBER PRECISION AND\n *  TAKEN THE MEMORY COST INTO CONSIDERATION, BigDecimal shall be used to ensure the precision of double calculation ...\n "
     },
     "software.amazon.event.ruler.CompositeByteTransition": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 27,
@@ -11066,6 +11259,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteState",
+            "access_type": "PUBLIC",
             "signature": "public ByteState getNextByteState()",
             "parameters": []
           }
@@ -11086,6 +11280,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public SingleByteTransition setNextByteState(ByteState)",
             "parameters": [
               {
@@ -11102,6 +11297,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition getTransition(byte)",
             "parameters": [
               {
@@ -11118,6 +11314,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition getTransitionForAllBytes()",
             "parameters": []
           }
@@ -11134,6 +11331,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ByteTransition> getTransitions()",
             "parameters": []
           }
@@ -11150,6 +11348,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteMatch",
+            "access_type": "NONE",
             "signature": " ByteMatch getMatch()",
             "parameters": []
           }
@@ -11170,6 +11369,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public SingleByteTransition setMatch(ByteMatch)",
             "parameters": [
               {
@@ -11192,6 +11392,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ShortcutTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ShortcutTransition> getShortcuts()",
             "parameters": []
           }
@@ -11214,6 +11415,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean hasIndeterminatePrefix()",
             "parameters": []
           }
@@ -11225,6 +11427,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isMatchTrans()",
             "parameters": []
           }
@@ -11234,6 +11437,7 @@
       "javadoc": "\n * Represents a composite transition that has a next state and a match.\n "
     },
     "software.amazon.event.ruler.CompoundByteTransition": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 35,
@@ -11387,6 +11591,7 @@
             ],
             "external_fields": [],
             "return_type": "T",
+            "access_type": "NONE",
             "signature": " static T coalesce(Set<SingleByteTransition>)",
             "parameters": [
               {
@@ -11424,6 +11629,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteState",
+            "access_type": "NONE",
             "signature": " ByteState getNextByteState()",
             "parameters": [],
             "javadoc": "\n     * Returns the nextByteState from all byteTransitions with a preference to states that have determinate prefixes.\n     * These states are re-usable when adding rules to the machine.\n     *\n     * @return First byte state with a preference to re-usable states.\n     "
@@ -11436,6 +11642,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public SingleByteTransition setNextByteState(ByteState)",
             "parameters": [
               {
@@ -11457,6 +11664,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.SingleByteTransition>",
+            "access_type": "NONE",
             "signature": " Set<SingleByteTransition> expand()",
             "parameters": [],
             "javadoc": "\n     * Get all transitions represented by this compound transition.\n     *\n     * @return A set of all transitions represented by this transition.\n     "
@@ -11474,6 +11682,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "NONE",
             "signature": " ByteTransition getTransitionForNextByteStates()",
             "parameters": []
           }
@@ -11511,6 +11720,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteMatch>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ByteMatch> getMatches()",
             "parameters": [],
             "javadoc": "\n     * Get the matches given all of the transitions that have been simultaneously traversed. Excludes matches from\n     * shortcut transitions as these are not actual matches based on the characters seen so far during the current\n     * traversal.\n     *\n     * @return All matches from all of the simultaneously traversed transitions.\n     "
@@ -11528,6 +11738,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.ShortcutTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ShortcutTransition> getShortcuts()",
             "parameters": []
           }
@@ -11595,6 +11806,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition getTransition(byte)",
             "parameters": [
               {
@@ -11693,6 +11905,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ByteTransition> getTransitions()",
             "parameters": []
           }
@@ -11729,6 +11942,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -11761,6 +11975,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -11783,6 +11998,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -11792,6 +12008,7 @@
       "javadoc": "\n * An implementation of ByteTransition that represents having taken multiple ByteTransitions simultaneously. This is\n * useful for traversing an NFA, i.e. when a single byte could lead you down multiple different transitions.\n "
     },
     "software.amazon.event.ruler.Constants": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 8,
@@ -11934,6 +12151,7 @@
       "file": "software\\amazon\\event\\ruler\\Constants.java"
     },
     "software.amazon.event.ruler.Event": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 89,
@@ -12228,6 +12446,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void traverseObject(JsonParser, TreeMap<String, List<Value>>, Progress)",
             "parameters": [
               {
@@ -12366,6 +12585,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void traverseArray(JsonParser, TreeMap<String, List<Value>>, Progress)",
             "parameters": [
               {
@@ -12426,6 +12646,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "NONE",
             "signature": " static List<String> flatten(String)",
             "parameters": [
               {
@@ -12462,6 +12683,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "NONE",
             "signature": " static List<String> flatten(JsonNode)",
             "parameters": [
               {
@@ -12588,6 +12810,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "PRIVATE",
             "signature": "private static List<String> doFlatten(JsonNode)",
             "parameters": [
               {
@@ -12762,6 +12985,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void loadObject(JsonNode, Map<String, List<Value>>, Progress)",
             "parameters": [
               {
@@ -12926,6 +13150,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void flattenObject(JsonNode, Map<String, List<String>>, Stack<String>)",
             "parameters": [
               {
@@ -13097,6 +13322,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void loadArray(JsonNode, Map<String, List<Value>>, Progress)",
             "parameters": [
               {
@@ -13236,6 +13462,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void flattenArray(JsonNode, Map<String, List<String>>, Stack<String>)",
             "parameters": [
               {
@@ -13318,6 +13545,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void addField(Map<String, List<Value>>, Progress, String)",
             "parameters": [
               {
@@ -13382,6 +13610,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " static void recordNameVal(Map<String, List<String>>, Stack<String>, String)",
             "parameters": [
               {
@@ -13432,6 +13661,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " static String pathName(Stack<String>)",
             "parameters": [
               {
@@ -13489,6 +13719,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void ignoreCurrentStep(JsonParser)",
             "parameters": [
               {
@@ -13511,6 +13742,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void advanceToClosingToken(JsonParser, JsonToken, JsonToken)",
             "parameters": [
               {
@@ -13532,6 +13764,7 @@
       "file": "software\\amazon\\event\\ruler\\Event.java"
     },
     "software.amazon.event.ruler.Event.Progress": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 65,
@@ -13578,6 +13811,7 @@
       "javadoc": "\n     * represents the current state of an Event-constructor project\n     "
     },
     "software.amazon.event.ruler.Event.Value": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 76,
@@ -13625,6 +13859,7 @@
       "javadoc": "\n     * represents a field value during Event construction\n     "
     },
     "software.amazon.event.ruler.Field": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 14,
@@ -13686,6 +13921,7 @@
       "javadoc": "\n * Represents the name and value of a data field in an event that Ruler will match.\n *\n * Both name and value are represented as strings.  Also provided for each field is information about its position\n *  in any arrays the event may contain. This is used to guard against a rule matching a set of fields which are in\n *  peer elements of an array, a situation which it turns out is perceived by users as a bug.\n "
     },
     "software.amazon.event.ruler.Finder": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 32,
@@ -13730,6 +13966,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.Object>",
+            "access_type": "NONE",
             "signature": " static List<Object> rulesForEvent(String[], GenericMachine<?>)",
             "parameters": [
               {
@@ -13774,6 +14011,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.Object>",
+            "access_type": "NONE",
             "signature": " static List<Object> rulesForEvent(List<String>, GenericMachine<?>)",
             "parameters": [
               {
@@ -13844,6 +14082,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.Object>",
+            "access_type": "PRIVATE",
             "signature": "private static List<Object> find(Task)",
             "parameters": [
               {
@@ -13922,6 +14161,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void moveFrom(NameState, int, Task)",
             "parameters": [
               {
@@ -13966,6 +14206,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void tryStep(Task)",
             "parameters": [
               {
@@ -14048,6 +14289,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void tryValueMatching(Task, Step)",
             "parameters": [
               {
@@ -14107,6 +14349,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void tryNameMatching(NameState, Task, int)",
             "parameters": [
               {
@@ -14160,6 +14403,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void addNameState(NameState, Task, int)",
             "parameters": [
               {
@@ -14182,6 +14426,7 @@
       "javadoc": "\n *  Uses a state machine created by software.amazon.event.ruler.Machine to process tokens\n *   representing key-value pairs in an event, and return any matching Rules.\n "
     },
     "software.amazon.event.ruler.GenericMachine": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 51,
@@ -14249,6 +14494,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<T>",
+            "access_type": "PUBLIC",
             "signature": "public List<T> rulesForJSONEvent(String)",
             "parameters": [
               {
@@ -14293,6 +14539,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<T>",
+            "access_type": "PUBLIC",
             "signature": "public List<T> rulesForJSONEvent(JsonNode)",
             "parameters": [
               {
@@ -14324,6 +14571,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<T>",
+            "access_type": "PUBLIC",
             "signature": "public List<T> rulesForEvent(List<String>)",
             "parameters": [
               {
@@ -14354,6 +14602,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<T>",
+            "access_type": "PUBLIC",
             "signature": "public List<T> rulesForEvent(String[])",
             "parameters": [
               {
@@ -14376,6 +14625,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "NONE",
             "signature": " final NameState getStartState()",
             "parameters": [],
             "javadoc": "\n     * The root state for the machine\n     *\n     * @return the root state, null if the machine has no rules in it\n     "
@@ -14444,6 +14694,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isFieldStepUsed(String)",
             "parameters": [
               {
@@ -14540,6 +14791,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void addRule(T, Map<String, List<String>>)",
             "parameters": [
               {
@@ -14604,6 +14856,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void addRule(T, String)",
             "parameters": [
               {
@@ -14668,6 +14921,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void addRule(T, Reader)",
             "parameters": [
               {
@@ -14732,6 +14986,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void addRule(T, InputStream)",
             "parameters": [
               {
@@ -14796,6 +15051,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void addRule(T, byte[])",
             "parameters": [
               {
@@ -14982,6 +15238,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void addPatternRule(T, Map<String, List<Patterns>>)",
             "parameters": [
               {
@@ -15099,6 +15356,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void deletePatternRule(T, Map<String, List<Patterns>>)",
             "parameters": [
               {
@@ -15199,6 +15457,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void deleteRule(T, Map<String, List<String>>)",
             "parameters": [
               {
@@ -15262,6 +15521,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void deleteRule(T, String)",
             "parameters": [
               {
@@ -15326,6 +15586,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void deleteRule(T, Reader)",
             "parameters": [
               {
@@ -15390,6 +15651,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void deleteRule(T, InputStream)",
             "parameters": [
               {
@@ -15569,6 +15831,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
             "parameters": [
               {
@@ -15691,6 +15954,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean checkAndDeleteNameState(NameState, NameState, String, Patterns)",
             "parameters": [
               {
@@ -15907,6 +16171,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
             "parameters": [
               {
@@ -15969,6 +16234,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean hasValuePatterns(List<Patterns>)",
             "parameters": [
               {
@@ -16001,6 +16267,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean hasKeyPatterns(List<Patterns>)",
             "parameters": [
               {
@@ -16028,6 +16295,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean isNamePattern(Patterns)",
             "parameters": [
               {
@@ -16055,6 +16323,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void addIntoUsedFields(List<String>)",
             "parameters": [
               {
@@ -16082,6 +16351,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void checkAndDeleteUsedFields(List<String>)",
             "parameters": [
               {
@@ -16118,6 +16388,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isEmpty()",
             "parameters": []
           }
@@ -16135,6 +16406,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.NameMatcher<R>",
+            "access_type": "PRIVATE",
             "signature": "private NameMatcher<R> createNameMatcher()",
             "parameters": []
           }
@@ -16176,6 +16448,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void recordFieldStep(String)",
             "parameters": [
               {
@@ -16222,6 +16495,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void eraseFieldStep(String)",
             "parameters": [
               {
@@ -16254,6 +16528,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int evaluateComplexity(MachineComplexityEvaluator)",
             "parameters": [
               {
@@ -16296,6 +16571,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int approximateObjectCount()",
             "parameters": [],
             "javadoc": "\n     * Gives roughly the number of objects within the machine. This is useful to identify large rule-machines\n     * that potentially require loads of memory. The method performs all of its calculation at runtime to avoid\n     * taking up memory and making the impact of large rule-machines worse. When calculating this value; we\n     * consider any transitions, states, byte-machines, and rules. There's are also a checks to ensure we're\n     * not stuck in endless loops (that's possible for wildcard matches) or taking a long time for numeric range\n     * matchers.\n     *\n     * NOTEs:\n     * 1. As this method is dependent on number of internal objects, as ruler evolves this will also\n     * give different results.\n     * 2. It will also give you different results based on the order in which you add or remove rules as in\n     * some-cases Ruler takes short-cuts for exact matches (see ShortcutTransition for more details).\n     * 3. This method isn't thread safe, and so is prefixed with approximate.\n     "
@@ -16317,6 +16593,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -16326,6 +16603,7 @@
       "javadoc": "\n *  Represents a state machine used to match name/value patterns to rules.\n *  The machine is thread safe. The concurrency strategy is:\n *  Multi-thread access assumed, single-thread update enforced by synchronized on\n *  addRule/deleteRule.\n *  ConcurrentHashMap and ConcurrentSkipListSet are used so that writer and readers can be in tables\n *  simultaneously. So all changes the writer made could be synced to and viable by all readers (in other threads).\n *  Though it may  generate a half-built rule to rulesForEvent() e.g. when a long rule is adding and\n *  in the middle of adding, some event is coming to query machine, it won't generate side impact with rulesForEvent\n *  because each step of routing will check next State and transition map before moving forward.\n *\n *  T is a type representing a Rule name, it should be an immutable class.\n "
     },
     "software.amazon.event.ruler.input.ByteParser": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -16336,6 +16614,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.input.InputCharacter",
+            "access_type": "NONE",
             "signature": " abstract InputCharacter parse(byte)",
             "parameters": [
               {
@@ -16351,6 +16630,7 @@
       "javadoc": "\n * Transforms UTF-8 formatted bytes into InputCharacter\n *\n * @see InputCharacter\n *\n "
     },
     "software.amazon.event.ruler.input.DefaultParser": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 42,
@@ -16542,6 +16822,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.input.DefaultParser",
+            "access_type": "PUBLIC",
             "signature": "public static DefaultParser getParser()",
             "parameters": []
           }
@@ -16645,6 +16926,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.input.InputCharacter[]",
+            "access_type": "PUBLIC",
             "signature": "public InputCharacter[] parse(MatchType, String)",
             "parameters": [
               {
@@ -16674,6 +16956,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.input.InputCharacter",
+            "access_type": "PUBLIC",
             "signature": "public InputCharacter parse(byte)",
             "parameters": [
               {
@@ -16688,6 +16971,7 @@
       "javadoc": "\n * Parses the value for a rule into InputCharacters that are used to add the rule to the Machine. Most characters from a\n * rule's value will be treated by their byte representation, but certain characters, such as for wildcards or regexes,\n * need to be represented differently so the Machine understands their special meaning.\n "
     },
     "software.amazon.event.ruler.input.EqualsIgnoreCaseParser": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 17,
@@ -16802,6 +17086,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.input.InputCharacter[]",
+            "access_type": "PUBLIC",
             "signature": "public InputCharacter[] parse(String)",
             "parameters": [
               {
@@ -16816,6 +17101,7 @@
       "javadoc": "\n * A parser to be used specifically for equals-ignore-case rules.\n *\n * Note that there are actually characters whose upper-case/lower-case UTF-8 representations differ in number of bytes.\n * One example where length differs by 1: ⱥ, Ⱥ\n * One example where length differs by 4: ΰ, Ϋ́\n * To deal with differing byte lengths per Java character, we will parse each Java character into an InputMultiByteSet.\n "
     },
     "software.amazon.event.ruler.input.InputByte": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 13,
@@ -16852,6 +17138,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.input.InputByte",
+            "access_type": "PUBLIC",
             "signature": "public static InputByte cast(InputCharacter)",
             "parameters": [
               {
@@ -16873,6 +17160,7 @@
               }
             ],
             "return_type": "byte",
+            "access_type": "PUBLIC",
             "signature": "public byte getByte()",
             "parameters": []
           }
@@ -16889,6 +17177,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.input.InputCharacterType",
+            "access_type": "PUBLIC",
             "signature": "public InputCharacterType getType()",
             "parameters": []
           }
@@ -16911,6 +17200,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -16948,6 +17238,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -16984,6 +17275,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -16993,6 +17285,7 @@
       "javadoc": "\n * An InputCharacter that represents a single byte.\n "
     },
     "software.amazon.event.ruler.input.InputCharacter": {
+      "is_abstract": true,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -17003,6 +17296,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.input.InputCharacterType",
+            "access_type": "PUBLIC",
             "signature": "public abstract InputCharacterType getType()",
             "parameters": []
           }
@@ -17035,6 +17329,7 @@
       "javadoc": "\n * The different types of InputCharacters, created from a rule, that will be used to add the rule to a ByteMachine.\n "
     },
     "software.amazon.event.ruler.input.InputMultiByteSet": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 15,
@@ -17082,6 +17377,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.input.InputMultiByteSet",
+            "access_type": "PUBLIC",
             "signature": "public static InputMultiByteSet cast(InputCharacter)",
             "parameters": [
               {
@@ -17103,6 +17399,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.input.MultiByte>",
+            "access_type": "PUBLIC",
             "signature": "public Set<MultiByte> getMultiBytes()",
             "parameters": []
           }
@@ -17119,6 +17416,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.input.InputCharacterType",
+            "access_type": "PUBLIC",
             "signature": "public InputCharacterType getType()",
             "parameters": []
           }
@@ -17151,6 +17449,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -17183,6 +17482,7 @@
             ],
             "external_fields": [],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -17205,6 +17505,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -17214,6 +17515,7 @@
       "javadoc": "\n * An InputCharacter that represents a set of MultiBytes.\n "
     },
     "software.amazon.event.ruler.input.InputWildcard": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 9,
@@ -17238,6 +17540,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.input.InputCharacterType",
+            "access_type": "PUBLIC",
             "signature": "public InputCharacterType getType()",
             "parameters": []
           }
@@ -17255,6 +17558,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -17277,6 +17581,7 @@
             ],
             "external_fields": [],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -17288,6 +17593,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -17297,6 +17603,7 @@
       "javadoc": "\n * An InputCharacter that represents a wildcard.\n "
     },
     "software.amazon.event.ruler.input.MatchTypeParser": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -17307,6 +17614,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.input.InputCharacter[]",
+            "access_type": "NONE",
             "signature": " abstract InputCharacter[] parse(MatchType, String)",
             "parameters": [
               {
@@ -17325,6 +17633,7 @@
       "file": "software\\amazon\\event\\ruler\\input\\MatchTypeParser.java"
     },
     "software.amazon.event.ruler.input.MultiByte": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 21,
@@ -17419,6 +17728,7 @@
               }
             ],
             "return_type": "byte[]",
+            "access_type": "PUBLIC",
             "signature": "public byte[] getBytes()",
             "parameters": []
           }
@@ -17450,6 +17760,7 @@
               }
             ],
             "return_type": "byte",
+            "access_type": "PUBLIC",
             "signature": "public byte singular()",
             "parameters": []
           }
@@ -17481,6 +17792,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean is(byte...)",
             "parameters": [
               {
@@ -17514,6 +17826,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isNumeric()",
             "parameters": []
           }
@@ -17540,6 +17853,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isLessThan(MultiByte)",
             "parameters": [
               {
@@ -17569,6 +17883,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private boolean isLessThan(MultiByte, boolean)",
             "parameters": [
               {
@@ -17604,6 +17919,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isLessThanOrEqualTo(MultiByte)",
             "parameters": [
               {
@@ -17631,6 +17947,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isGreaterThan(MultiByte)",
             "parameters": [
               {
@@ -17658,6 +17975,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isGreaterThanOrEqualTo(MultiByte)",
             "parameters": [
               {
@@ -17699,6 +18017,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -17731,6 +18050,7 @@
             ],
             "external_fields": [],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -17758,6 +18078,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -17767,6 +18088,7 @@
       "javadoc": "\n * A grouping of multiple bytes. This can be used to represent a character that has a UTF-8 representation requiring\n * multiple bytes.\n "
     },
     "software.amazon.event.ruler.input.ParseException": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 7,
@@ -17788,6 +18110,7 @@
       "javadoc": "\n * A RuntimeException that indicates an error parsing a rule's value.\n "
     },
     "software.amazon.event.ruler.input.StringValueParser": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -17798,6 +18121,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.input.InputCharacter[]",
+            "access_type": "NONE",
             "signature": " abstract InputCharacter[] parse(String)",
             "parameters": [
               {
@@ -17812,6 +18136,7 @@
       "file": "software\\amazon\\event\\ruler\\input\\StringValueParser.java"
     },
     "software.amazon.event.ruler.input.SuffixParser": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 12,
@@ -17881,6 +18206,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.input.InputCharacter[]",
+            "access_type": "PUBLIC",
             "signature": "public InputCharacter[] parse(String)",
             "parameters": [
               {
@@ -17895,6 +18221,7 @@
       "javadoc": "\n * A parser to be used specifically for suffix rules.\n *\n * This undoes the `reverse()` from {@code software.amazon.event.ruler.Patterns} intentionally\n * to ensure we can correctly reverse utf-8 characters with 2+ bytes like '大' and '雨'.\n "
     },
     "software.amazon.event.ruler.input.WildcardParser": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 14,
@@ -17997,6 +18324,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.input.InputCharacter[]",
+            "access_type": "PUBLIC",
             "signature": "public InputCharacter[] parse(String)",
             "parameters": [
               {
@@ -18011,6 +18339,7 @@
       "javadoc": "\n * A parser to be used specifically for wildcard rules.\n "
     },
     "software.amazon.event.ruler.IntIntMap": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 53,
@@ -18193,6 +18522,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " int get(int)",
             "parameters": [
               {
@@ -18280,6 +18610,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " int put(int, int)",
             "parameters": [
               {
@@ -18353,6 +18684,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " int remove(int)",
             "parameters": [
               {
@@ -18375,6 +18707,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " int size()",
             "parameters": [],
             "javadoc": "\n     * Returns the number of key-value mappings in this map.\n     *\n     * @return the number of key-value mappings in this map\n     "
@@ -18392,6 +18725,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isEmpty()",
             "parameters": []
           }
@@ -18407,13 +18741,14 @@
                 "return_type": "software.amazon.event.ruler.IntIntMap.EntryIterator"
               },
               {
-                "signature": "software.amazon.event.ruler.IntIntMap.Anonymous-609a482d-a92b-46f6-ade2-8a91a1d2d56e.Anonymous-609a482d-a92b-46f6-ade2-8a91a1d2d56e()",
+                "signature": "software.amazon.event.ruler.IntIntMap.Anonymous-3a2a0d30-32ac-400f-b33d-505c9c4c2958.Anonymous-3a2a0d30-32ac-400f-b33d-505c9c4c2958()",
                 "arguments": [],
-                "return_type": "software.amazon.event.ruler.IntIntMap.Anonymous-609a482d-a92b-46f6-ade2-8a91a1d2d56e"
+                "return_type": "software.amazon.event.ruler.IntIntMap.Anonymous-3a2a0d30-32ac-400f-b33d-505c9c4c2958"
               }
             ],
             "external_fields": [],
             "return_type": "java.lang.Iterable<software.amazon.event.ruler.IntIntMap.Entry>",
+            "access_type": "PUBLIC",
             "signature": "public Iterable<Entry> entries()",
             "parameters": []
           }
@@ -18446,6 +18781,7 @@
               }
             ],
             "return_type": "java.lang.Object",
+            "access_type": "PUBLIC",
             "signature": "public Object clone()",
             "parameters": []
           }
@@ -18485,6 +18821,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void shiftKeys(int)",
             "parameters": [
               {
@@ -18560,6 +18897,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private void rehash(int)",
             "parameters": [
               {
@@ -18596,6 +18934,7 @@
               }
             ],
             "return_type": "long[]",
+            "access_type": "PRIVATE",
             "signature": "private static long[] makeTable(int)",
             "parameters": [
               {
@@ -18628,6 +18967,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PRIVATE",
             "signature": "private int getStartIndex(int)",
             "parameters": [
               {
@@ -18649,6 +18989,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PRIVATE",
             "signature": "private int getNextIndex(int)",
             "parameters": [
               {
@@ -18670,6 +19011,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PRIVATE",
             "signature": "private static int phiMix(int)",
             "parameters": [
               {
@@ -18685,6 +19027,7 @@
       "javadoc": "\n * A fast primitive int-int map implementation. Keys and values may only be positive.\n "
     },
     "software.amazon.event.ruler.IntIntMap.Entry": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 300,
@@ -18740,6 +19083,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int getKey()",
             "parameters": []
           }
@@ -18756,6 +19100,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int getValue()",
             "parameters": []
           }
@@ -18764,6 +19109,7 @@
       "file": "software\\amazon\\event\\ruler\\IntIntMap.java"
     },
     "software.amazon.event.ruler.IntIntMap.EntryIterator": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -18796,6 +19142,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean hasNext()",
             "parameters": []
           }
@@ -18854,6 +19201,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.IntIntMap.Entry",
+            "access_type": "PUBLIC",
             "signature": "public Entry next()",
             "parameters": []
           }
@@ -18882,6 +19230,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PRIVATE",
             "signature": "private int findNextIndex(int)",
             "parameters": [
               {
@@ -18895,6 +19244,7 @@
       "file": "software\\amazon\\event\\ruler\\IntIntMap.java"
     },
     "software.amazon.event.ruler.JsonRuleCompiler": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 50,
@@ -18952,6 +19302,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String check(Reader)",
             "parameters": [
               {
@@ -18998,6 +19349,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String check(String)",
             "parameters": [
               {
@@ -19043,6 +19395,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String check(byte[])",
             "parameters": [
               {
@@ -19088,6 +19441,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String check(InputStream)",
             "parameters": [
               {
@@ -19130,6 +19484,7 @@
               }
             ],
             "return_type": "java.util.List<java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>>",
+            "access_type": "PUBLIC",
             "signature": "public static List<Map<String, List<Patterns>>> compile(Reader)",
             "parameters": [
               {
@@ -19171,6 +19526,7 @@
               }
             ],
             "return_type": "java.util.List<java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>>",
+            "access_type": "PUBLIC",
             "signature": "public static List<Map<String, List<Patterns>>> compile(String)",
             "parameters": [
               {
@@ -19211,6 +19567,7 @@
               }
             ],
             "return_type": "java.util.List<java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>>",
+            "access_type": "PUBLIC",
             "signature": "public static List<Map<String, List<Patterns>>> compile(byte[])",
             "parameters": [
               {
@@ -19251,6 +19608,7 @@
               }
             ],
             "return_type": "java.util.List<java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>>",
+            "access_type": "PUBLIC",
             "signature": "public static List<Map<String, List<Patterns>>> compile(InputStream)",
             "parameters": [
               {
@@ -19329,6 +19687,7 @@
               }
             ],
             "return_type": "java.util.List<java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>>",
+            "access_type": "PRIVATE",
             "signature": "private static List<Map<String, List<Patterns>>> doCompile(JsonParser)",
             "parameters": [
               {
@@ -19502,6 +19861,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void parseObject(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
             "parameters": [
               {
@@ -19701,6 +20061,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void parseObjectInsideOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
             "parameters": [
               {
@@ -19833,6 +20194,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void parseIntoOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
             "parameters": [
               {
@@ -19903,6 +20265,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List",
+            "access_type": "PRIVATE",
             "signature": "private static List deepCopyRules(List<Map<String, List<Patterns>>>)",
             "parameters": [
               {
@@ -20071,6 +20434,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)",
             "parameters": [
               {
@@ -20367,6 +20731,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processMatchExpression(JsonParser)",
             "parameters": [
               {
@@ -20474,6 +20839,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processAnythingButListMatchExpression(JsonParser)",
             "parameters": [
               {
@@ -20554,6 +20920,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processAnythingButEqualsIgnoreCaseListMatchExpression(JsonParser)",
             "parameters": [
               {
@@ -20647,6 +21014,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processAnythingButMatchExpression(JsonParser, JsonToken)",
             "parameters": [
               {
@@ -20717,6 +21085,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processAnythingButEqualsIgnoreCaseMatchExpression(JsonParser, JsonToken)",
             "parameters": [
               {
@@ -20898,6 +21267,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processNumericMatchExpression(JsonParser)",
             "parameters": [
               {
@@ -20998,6 +21368,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns completeNumericRange(JsonParser, JsonToken, double, boolean)",
             "parameters": [
               {
@@ -21069,6 +21440,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processExistsExpression(JsonParser)",
             "parameters": [
               {
@@ -21100,6 +21472,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void tooManyElements(JsonParser)",
             "parameters": [
               {
@@ -21140,6 +21513,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void barf(JsonParser, String)",
             "parameters": [
               {
@@ -21158,6 +21532,7 @@
       "javadoc": "\n * Represents a updated compiler comparing to RuleCompiler class, it parses a rule described by a JSON string into\n * a list of Map which is composed of field Patterns, each Map represents one dedicated match branch in the rule.\n * By default, fields in the rule will be interpreted as \"And\" relationship implicitly and will result into one Map with\n * fields of Patterns, but once it comes across the \"$or\" relationship which is explicitly decorated by \"$or\" primitive\n * array, for each object in \"$or\" array, this Compiler will fork a new Map to include all fields of patterns in\n * that \"or\" branch, and when it goes over all branches in \"$or\" relationship, it will end up with the list of Map\n * and each Map represents a match branch composed of fields of patterns.\n * i.e.: a rule which describe the effect of (\"source\" AND (\"metricName\" OR (\"metricType AND \"namespace\") OR \"scope\"))\n * its JSON format String is:\n *   {\n *     \"source\": [ \"aws.cloudwatch\" ],\n *     \"$or\": [\n *       { \"metricName\": [ \"CPUUtilization\", \"ReadLatency\" ] },\n *       {\n *         \"metricType\": [ \"MetricType\" ] ,\n *         \"namespace\": [ \"AWS/EC2\", \"AWS/ES\" ]\n *       },\n *       { \"scope\": [ \"Service\" ] }\n *     ]\n *   }\n * It will be parsed to a list of match branches composed by a Map of fields patterns, e.g. for above rule, there will\n * result 3 match branches:\n * [\n *   {source=[\\\"aws.cloudwatch\\\"], metricName=[\\\"CPUUtilization\\\",\\\"ReadLatency\\\"]},\n *   {namespace=[\\\"AWS/EC2\\\", \\\"AWS/ES\\\"], metricType=[\\\"MetricType\\\"], source=[\\\"aws.cloudwatch\\\"]},\n *   {source=[\\\"aws.cloudwatch\\\"], scope=[\\\"Service\\\"]}\n * ]\n "
     },
     "software.amazon.event.ruler.Machine": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 15,
@@ -21174,6 +21549,7 @@
       "javadoc": "\n *  Represents a state machine used to match name/value patterns to rules.\n *  The machine is thread safe. The concurrency strategy is:\n *  Multi-thread access assumed, single-thread update enforced by synchronized on\n *  addRule/deleteRule.\n *  ConcurrentHashMap and ConcurrentSkipListSet are used so that writer and readers can be in tables\n *  simultaneously. So all changes the writer made could be synced to and viable by all readers (in other threads).\n *  Though it may  generate a half-built rule to rulesForEvent() e.g. when a long rule is adding and\n *  in the middle of adding, some event is coming to query machine, it won't generate side impact with rulesForEvent\n *  because each step of routing will check next State and transition map before moving forward.\n "
     },
     "software.amazon.event.ruler.MachineComplexityEvaluator": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 22,
@@ -21215,6 +21591,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " int getMaxComplexity()",
             "parameters": []
           }
@@ -21396,6 +21773,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " int evaluate(ByteState)",
             "parameters": [
               {
@@ -21538,6 +21916,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Map<software.amazon.event.ruler.SingleByteTransition, java.util.Set<software.amazon.event.ruler.ByteMatch>>",
+            "access_type": "PRIVATE",
             "signature": "private Map<SingleByteTransition, Set<ByteMatch>> getMatchesAccessibleFromEachTransition(ByteState)",
             "parameters": [
               {
@@ -21586,6 +21965,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.Patterns>",
+            "access_type": "PRIVATE",
             "signature": "private static Set<Patterns> getWildcardPatterns(Set<ByteMatch>)",
             "parameters": [
               {
@@ -21674,6 +22054,7 @@
       "javadoc": "\n * The types of value matches that Ruler supports\n "
     },
     "software.amazon.event.ruler.NameMatcher": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -21684,6 +22065,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " abstract boolean isEmpty()",
             "parameters": [],
             "javadoc": "\n     * Returns {@code true} if this name matcher contains no patterns.\n     "
@@ -21696,6 +22078,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "R",
+            "access_type": "NONE",
             "signature": " abstract R addPattern(Patterns, Supplier<? extends R>)",
             "parameters": [
               {
@@ -21717,6 +22100,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " abstract void deletePattern(Patterns)",
             "parameters": [
               {
@@ -21734,6 +22118,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "R",
+            "access_type": "NONE",
             "signature": " abstract R findPattern(Patterns)",
             "parameters": [
               {
@@ -21751,6 +22136,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "R",
+            "access_type": "NONE",
             "signature": " abstract R getNextState()",
             "parameters": [],
             "javadoc": "\n     * Gets the next state to transition to in case the NameMatcher matches the event.\n     "
@@ -21761,6 +22147,7 @@
       "javadoc": "\n * Matches the Keys in the flattened event with the { [ \"exists\" : false ] } pattern.\n * and returns the next state if the <b>key does not exist</b> in the event.\n *\n * In the future, when we support multiple patterns, the matcher will return a set of\n * name states matched instead of a single name state.\n *\n * @param <R> generic state type\n "
     },
     "software.amazon.event.ruler.NameState": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -21806,6 +22193,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteMachine",
+            "access_type": "NONE",
             "signature": " ByteMachine getTransitionOn(String)",
             "parameters": [
               {
@@ -21827,6 +22215,7 @@
               }
             ],
             "return_type": "java.util.Set<java.lang.Object>",
+            "access_type": "NONE",
             "signature": " Set<Object> getRules()",
             "parameters": []
           }
@@ -21854,6 +22243,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean hasRule(Object)",
             "parameters": [
               {
@@ -21886,6 +22276,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void deleteRule(Object)",
             "parameters": [
               {
@@ -21918,6 +22309,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void removeTransition(String)",
             "parameters": [
               {
@@ -21950,6 +22342,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void removeKeyTransition(String)",
             "parameters": [
               {
@@ -21990,6 +22383,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isEmpty()",
             "parameters": []
           }
@@ -22017,6 +22411,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void addRule(Object)",
             "parameters": [
               {
@@ -22053,6 +22448,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void addTransition(String, ByteMachine)",
             "parameters": [
               {
@@ -22093,6 +22489,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void addKeyTransition(String, NameMatcher<NameState>)",
             "parameters": [
               {
@@ -22129,6 +22526,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameMatcher<software.amazon.event.ruler.NameState>",
+            "access_type": "NONE",
             "signature": " NameMatcher<NameState> getKeyTransitionOn(String)",
             "parameters": [
               {
@@ -22156,6 +22554,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean hasKeyTransitions()",
             "parameters": []
           }
@@ -22242,6 +22641,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.NameState>",
+            "access_type": "NONE",
             "signature": " Set<NameState> getNameTransitions(String[])",
             "parameters": [
               {
@@ -22353,6 +22753,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.NameState>",
+            "access_type": "NONE",
             "signature": " Set<NameState> getNameTransitions(Event, ArrayMembership)",
             "parameters": [
               {
@@ -22413,6 +22814,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int evaluateComplexity(MachineComplexityEvaluator)",
             "parameters": [
               {
@@ -22513,6 +22915,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void gatherObjects(Set<Object>)",
             "parameters": [
               {
@@ -22542,6 +22945,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -22551,6 +22955,7 @@
       "javadoc": "\n * Represents a state in the machine.\n *\n * The \"valueTransitions\" map is keyed by field name and yields a ByteMachine\n * that is used to match values.\n *\n * The \"keyTransitions\" map is keyed by field name and yields a NameMatcher\n * that is used to match keys for [ { exists: false } ].\n "
     },
     "software.amazon.event.ruler.Path": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -22600,6 +23005,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void push(String)",
             "parameters": [
               {
@@ -22631,6 +23037,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " String pop()",
             "parameters": []
           }
@@ -22695,6 +23102,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " String name()",
             "parameters": [],
             "javadoc": "\n     * return the pathname as a .-separated string.\n     * This turns out to be a performance bottleneck so it's memoized and uses StringBuilder rather than StringJoiner.\n     * @return the pathname\n     "
@@ -22723,6 +23131,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "NONE",
             "signature": " String extendedName(String)",
             "parameters": [
               {
@@ -22737,6 +23146,7 @@
       "file": "software\\amazon\\event\\ruler\\Path.java"
     },
     "software.amazon.event.ruler.Patterns": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 27,
@@ -22784,6 +23194,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.MatchType",
+            "access_type": "PUBLIC",
             "signature": "public MatchType type()",
             "parameters": []
           }
@@ -22815,6 +23226,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ValuePatterns",
+            "access_type": "PUBLIC",
             "signature": "public static ValuePatterns exactMatch(String)",
             "parameters": [
               {
@@ -22851,6 +23263,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ValuePatterns",
+            "access_type": "PUBLIC",
             "signature": "public static ValuePatterns prefixMatch(String)",
             "parameters": [
               {
@@ -22907,6 +23320,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ValuePatterns",
+            "access_type": "PUBLIC",
             "signature": "public static ValuePatterns suffixMatch(String)",
             "parameters": [
               {
@@ -22948,6 +23362,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.AnythingBut",
+            "access_type": "PUBLIC",
             "signature": "public static AnythingBut anythingButMatch(String)",
             "parameters": [
               {
@@ -22997,6 +23412,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.AnythingBut",
+            "access_type": "PUBLIC",
             "signature": "public static AnythingBut anythingButMatch(double)",
             "parameters": [
               {
@@ -23026,6 +23442,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.AnythingBut",
+            "access_type": "PUBLIC",
             "signature": "public static AnythingBut anythingButMatch(Set<String>)",
             "parameters": [
               {
@@ -23063,6 +23480,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase",
+            "access_type": "PUBLIC",
             "signature": "public static AnythingButEqualsIgnoreCase anythingButIgnoreCaseMatch(String)",
             "parameters": [
               {
@@ -23088,6 +23506,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase",
+            "access_type": "PUBLIC",
             "signature": "public static AnythingButEqualsIgnoreCase anythingButIgnoreCaseMatch(Set<String>)",
             "parameters": [
               {
@@ -23154,6 +23573,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.AnythingBut",
+            "access_type": "PUBLIC",
             "signature": "public static AnythingBut anythingButNumberMatch(Set<Double>)",
             "parameters": [
               {
@@ -23190,6 +23610,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ValuePatterns",
+            "access_type": "PUBLIC",
             "signature": "public static ValuePatterns anythingButPrefix(String)",
             "parameters": [
               {
@@ -23246,6 +23667,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ValuePatterns",
+            "access_type": "PUBLIC",
             "signature": "public static ValuePatterns anythingButSuffix(String)",
             "parameters": [
               {
@@ -23292,6 +23714,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ValuePatterns",
+            "access_type": "PUBLIC",
             "signature": "public static ValuePatterns numericEquals(double)",
             "parameters": [
               {
@@ -23324,6 +23747,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PUBLIC",
             "signature": "public static Patterns existencePatterns()",
             "parameters": []
           }
@@ -23351,6 +23775,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PUBLIC",
             "signature": "public static Patterns absencePatterns()",
             "parameters": []
           }
@@ -23382,6 +23807,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ValuePatterns",
+            "access_type": "PUBLIC",
             "signature": "public static ValuePatterns equalsIgnoreCaseMatch(String)",
             "parameters": [
               {
@@ -23418,6 +23844,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ValuePatterns",
+            "access_type": "PUBLIC",
             "signature": "public static ValuePatterns wildcardMatch(String)",
             "parameters": [
               {
@@ -23455,6 +23882,7 @@
               }
             ],
             "return_type": "java.lang.Object",
+            "access_type": "PUBLIC",
             "signature": "public Object clone()",
             "parameters": []
           }
@@ -23487,6 +23915,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -23514,6 +23943,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -23530,6 +23960,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -23539,6 +23970,7 @@
       "javadoc": "\n * The Patterns deal pre-processing of rules for the eventual matching against events.\n * It has subclasses for different match types (like ValuePatterns, Ranges, AnythingBut, etc).\n * This class also acts as the factory for to build patterns which is useful if you have\n * key value pairs and would like to build your rules for them directly instead of using the fancy\n * JSON query language (and its compiler). Once you build rules, you can add them via `Machine.addRule()`.\n *\n * NOTE: The subclasses have additional builders that are only needed by JSON rule compilier and are\n * left out of here intentionally for now.\n "
     },
     "software.amazon.event.ruler.Range": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 24,
@@ -23784,6 +24216,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Range",
+            "access_type": "PUBLIC",
             "signature": "public static Range lessThan(double)",
             "parameters": [
               {
@@ -23828,6 +24261,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Range",
+            "access_type": "PUBLIC",
             "signature": "public static Range lessThanOrEqualTo(double)",
             "parameters": [
               {
@@ -23872,6 +24306,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Range",
+            "access_type": "PUBLIC",
             "signature": "public static Range greaterThan(double)",
             "parameters": [
               {
@@ -23916,6 +24351,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Range",
+            "access_type": "PUBLIC",
             "signature": "public static Range greaterThanOrEqualTo(double)",
             "parameters": [
               {
@@ -23955,6 +24391,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.Range",
+            "access_type": "PUBLIC",
             "signature": "public static Range between(double, boolean, double, boolean)",
             "parameters": [
               {
@@ -23994,6 +24431,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.Range",
+            "access_type": "PRIVATE",
             "signature": "private static Range deepCopy(Range)",
             "parameters": [
               {
@@ -24056,6 +24494,7 @@
               }
             ],
             "return_type": "byte[]",
+            "access_type": "NONE",
             "signature": " static byte[] digitSequence(byte, byte, boolean, boolean)",
             "parameters": [
               {
@@ -24090,6 +24529,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PRIVATE",
             "signature": "private static int getHexByteIndex(byte)",
             "parameters": [
               {
@@ -24122,6 +24562,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.Object",
+            "access_type": "PUBLIC",
             "signature": "public Object clone()",
             "parameters": []
           }
@@ -24190,6 +24631,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -24249,6 +24691,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -24301,6 +24744,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }
@@ -24310,6 +24754,7 @@
       "javadoc": "\n * Represents a range of numeric values to match against.\n * \"Numeric\" means that the character repertoire is \"digits\"; initially, either 0-9 or 0-9a-f. In the current\n *  implementation, the number of digits in the top and bottom of the range is the same.\n "
     },
     "software.amazon.event.ruler.RuleCompiler": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 34,
@@ -24367,6 +24812,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String check(Reader)",
             "parameters": [
               {
@@ -24413,6 +24859,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String check(String)",
             "parameters": [
               {
@@ -24459,6 +24906,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String check(byte[])",
             "parameters": [
               {
@@ -24505,6 +24953,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public static String check(InputStream)",
             "parameters": [
               {
@@ -24548,6 +24997,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>",
+            "access_type": "PUBLIC",
             "signature": "public static Map<String, List<Patterns>> compile(Reader)",
             "parameters": [
               {
@@ -24589,6 +25039,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>",
+            "access_type": "PUBLIC",
             "signature": "public static Map<String, List<Patterns>> compile(String)",
             "parameters": [
               {
@@ -24630,6 +25081,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>",
+            "access_type": "PUBLIC",
             "signature": "public static Map<String, List<Patterns>> compile(byte[])",
             "parameters": [
               {
@@ -24671,6 +25123,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>",
+            "access_type": "PUBLIC",
             "signature": "public static Map<String, List<Patterns>> compile(InputStream)",
             "parameters": [
               {
@@ -24750,6 +25203,7 @@
               }
             ],
             "return_type": "java.util.Map<java.lang.String, java.util.List<software.amazon.event.ruler.Patterns>>",
+            "access_type": "PRIVATE",
             "signature": "private static Map<String, List<Patterns>> doCompile(JsonParser)",
             "parameters": [
               {
@@ -24887,6 +25341,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void parseObject(Map<String, List<Patterns>>, Path, JsonParser, boolean)",
             "parameters": [
               {
@@ -25052,6 +25507,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)",
             "parameters": [
               {
@@ -25348,6 +25804,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processMatchExpression(JsonParser)",
             "parameters": [
               {
@@ -25455,6 +25912,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processAnythingButListMatchExpression(JsonParser)",
             "parameters": [
               {
@@ -25535,6 +25993,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processAnythingButEqualsIgnoreCaseListMatchExpression(JsonParser)",
             "parameters": [
               {
@@ -25628,6 +26087,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processAnythingButMatchExpression(JsonParser, JsonToken)",
             "parameters": [
               {
@@ -25698,6 +26158,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processAnythingButEqualsIgnoreCaseMatchExpression(JsonParser, JsonToken)",
             "parameters": [
               {
@@ -25879,6 +26340,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processNumericMatchExpression(JsonParser)",
             "parameters": [
               {
@@ -25979,6 +26441,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns completeNumericRange(JsonParser, JsonToken, double, boolean)",
             "parameters": [
               {
@@ -26050,6 +26513,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Patterns",
+            "access_type": "PRIVATE",
             "signature": "private static Patterns processExistsExpression(JsonParser)",
             "parameters": [
               {
@@ -26081,6 +26545,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void tooManyElements(JsonParser)",
             "parameters": [
               {
@@ -26121,6 +26586,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void barf(JsonParser, String)",
             "parameters": [
               {
@@ -26139,6 +26605,7 @@
       "javadoc": "\n * Compiles Rules, expressed in JSON, for use in Ruler.\n * There are two flavors of compilation:\n * 1. Compile a JSON-based Rule into Map of String to List of Patterns which can be used in rulesForEvent,\n *    and has a \"check\" variant that just checks rules for syntactic accuracy\n * 2. Starting in ListBasedRuleCompiler, does the same thing but expresses field names as List ofString\n *    rather than \".\"-separated strings for use in the Ruler class, which does not use state machines and\n *    needs to step into the event field by field.\n *\n * Is public so clients can call the check() method to syntax-check filters\n "
     },
     "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -26182,6 +26649,7 @@
               }
             ],
             "return_type": "java.util.Map<java.util.List<java.lang.String>, java.util.List<software.amazon.event.ruler.Patterns>>",
+            "access_type": "PUBLIC",
             "signature": "public static Map<List<String>, List<Patterns>> flattenRule(String)",
             "parameters": [
               {
@@ -26261,6 +26729,7 @@
               }
             ],
             "return_type": "java.util.Map<java.util.List<java.lang.String>, java.util.List<software.amazon.event.ruler.Patterns>>",
+            "access_type": "PRIVATE",
             "signature": "private static Map<List<String>, List<Patterns>> doFlattenRule(JsonParser)",
             "parameters": [
               {
@@ -26402,6 +26871,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void parseRuleObject(Map<List<String>, List<Patterns>>, Deque<String>, JsonParser, boolean)",
             "parameters": [
               {
@@ -26557,6 +27027,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PRIVATE",
             "signature": "private static void writeRules(Map<List<String>, List<Patterns>>, List<String>, JsonParser, boolean)",
             "parameters": [
               {
@@ -26606,6 +27077,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.List<java.lang.String>",
+            "access_type": "PRIVATE",
             "signature": "private static List<String> rulePathname(Deque<String>, String)",
             "parameters": [
               {
@@ -26624,6 +27096,7 @@
       "javadoc": "\n     * This is a rule parser which will parse rule of JSON format into a map of string list to Patterns list structure\n     * which is suitable to be used by Ruler.matches.\n     * The only difference in output between ListBasedRuleCompiler.flattenRule and Filter.compile is type and format of\n     * Map.key.\n     * For example, if input rule is below JSON string:\n     * {\n     *     \"detail\" : {\n     *         \"state\" : [ \"initializing\" ]\n     *     }\n     * }\n     * The key of output MAP by ListBasedRuleCompiler.flattenRule will be a list like: [\"detail\",\"state\"].\n     * The key of output MAP by Filter.compile will be a String: \"detail.state\".\n     "
     },
     "software.amazon.event.ruler.Ruler": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 29,
@@ -26685,6 +27158,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public static boolean matchesRule(String, String)",
             "parameters": [
               {
@@ -26750,6 +27224,7 @@
             ],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean matchesAllFields(JsonNode, Map<List<String>, List<Patterns>>)",
             "parameters": [
               {
@@ -26800,6 +27275,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean matchesOneOf(JsonNode, List<Patterns>)",
             "parameters": [
               {
@@ -27057,6 +27533,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PRIVATE",
             "signature": "private static boolean matches(JsonNode, Patterns)",
             "parameters": [
               {
@@ -27093,6 +27570,7 @@
             ],
             "external_fields": [],
             "return_type": "com.fasterxml.jackson.databind.JsonNode",
+            "access_type": "NONE",
             "signature": " static JsonNode tryToRetrievePath(JsonNode, List<String>)",
             "parameters": [
               {
@@ -27118,6 +27596,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "NONE",
             "signature": " static int compare(byte[], byte[])",
             "parameters": [
               {
@@ -27136,6 +27615,7 @@
       "javadoc": "\n * The core idea of Ruler is to match rules to events at a rate that's independent of the number of rules.  This is\n *  achieved by compiling the rules into an automaton, at some up-front cost for compilation and memory use. There\n *  are some users who are unable to persist the compiled automaton but still like the \"Event Pattern\" idiom and want\n *  to match events with those semantics.\n * The memory cost is proportional to the product of the number of possible values provided in the rule and can\n *  grow surprisingly large\n * This class matches a single rule to a single event without any precompilation, using brute-force techniques, but\n *  with no up-front compute or memory cost.\n "
     },
     "software.amazon.event.ruler.ShortcutTransition": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -27153,6 +27633,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteState",
+            "access_type": "NONE",
             "signature": " ByteState getNextByteState()",
             "parameters": []
           }
@@ -27164,6 +27645,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "NONE",
             "signature": " SingleByteTransition setNextByteState(ByteState)",
             "parameters": [
               {
@@ -27180,6 +27662,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition getTransition(byte)",
             "parameters": [
               {
@@ -27196,6 +27679,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "PUBLIC",
             "signature": "public ByteTransition getTransitionForAllBytes()",
             "parameters": []
           }
@@ -27212,6 +27696,7 @@
               }
             ],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ByteTransition> getTransitions()",
             "parameters": []
           }
@@ -27228,6 +27713,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.ByteMatch",
+            "access_type": "NONE",
             "signature": " ByteMatch getMatch()",
             "parameters": []
           }
@@ -27244,6 +27730,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "NONE",
             "signature": " SingleByteTransition setMatch(ByteMatch)",
             "parameters": [
               {
@@ -27271,6 +27758,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ShortcutTransition>",
+            "access_type": "PUBLIC",
             "signature": "public Set<ShortcutTransition> getShortcuts()",
             "parameters": []
           }
@@ -27282,6 +27770,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isShortcutTrans()",
             "parameters": []
           }
@@ -27290,6 +27779,7 @@
       "file": "software\\amazon\\event\\ruler\\ShortcutTransition.java"
     },
     "software.amazon.event.ruler.SingleByteTransition": {
+      "is_abstract": true,
       "constructors": [],
       "fields": [],
       "methods": {
@@ -27300,6 +27790,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteMatch",
+            "access_type": "NONE",
             "signature": " abstract ByteMatch getMatch()",
             "parameters": [],
             "javadoc": "\n     * Returns the match that is triggered if this transition is made.\n     *\n     * @return the match, or {@code null} if this transition does not support matching\n     "
@@ -27312,6 +27803,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.SingleByteTransition",
+            "access_type": "NONE",
             "signature": " abstract SingleByteTransition setMatch(ByteMatch)",
             "parameters": [
               {
@@ -27329,6 +27821,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "NONE",
             "signature": " abstract ByteTransition getTransitionForAllBytes()",
             "parameters": [],
             "javadoc": "\n     * Get the transition that all bytes lead to. Could be compound if all bytes lead to more than one single\n     * transition, or could be the empty transition if there are no transitions that all bytes lead to.\n     *\n     * @return The transition that all bytes lead to.\n     "
@@ -27362,6 +27855,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.ByteMatch>",
+            "access_type": "NONE",
             "signature": " Set<ByteMatch> getMatches()",
             "parameters": []
           }
@@ -27384,6 +27878,7 @@
             ],
             "external_fields": [],
             "return_type": "java.util.Set<software.amazon.event.ruler.SingleByteTransition>",
+            "access_type": "NONE",
             "signature": " Set<SingleByteTransition> expand()",
             "parameters": [],
             "javadoc": "\n     * Get all transitions represented by this transition, which is simply this as this is a single byte transition.\n     *\n     * @return A set of all transitions represented by this transition.\n     "
@@ -27402,6 +27897,7 @@
             ],
             "external_fields": [],
             "return_type": "software.amazon.event.ruler.ByteTransition",
+            "access_type": "NONE",
             "signature": " ByteTransition getTransitionForNextByteStates()",
             "parameters": []
           }
@@ -27469,6 +27965,7 @@
             ],
             "external_fields": [],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void gatherObjects(Set<Object>)",
             "parameters": [
               {
@@ -27483,6 +27980,7 @@
       "javadoc": "\n * This class represents a singular ByteTransition. This is in contrast to a compound ByteTransition that represents\n * having taken multiple distinct transitions simultaneously (i.e. for NFA traversal).\n "
     },
     "software.amazon.event.ruler.SingleStateNameMatcher": {
+      "is_abstract": false,
       "constructors": [],
       "fields": [
         {
@@ -27505,6 +28003,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean isEmpty()",
             "parameters": []
           }
@@ -27527,6 +28026,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PUBLIC",
             "signature": "public NameState addPattern(Patterns, Supplier<? extends NameState>)",
             "parameters": [
               {
@@ -27552,6 +28052,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "PUBLIC",
             "signature": "public void deletePattern(Patterns)",
             "parameters": [
               {
@@ -27573,6 +28074,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PUBLIC",
             "signature": "public NameState findPattern(Patterns)",
             "parameters": [
               {
@@ -27594,6 +28096,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "PUBLIC",
             "signature": "public NameState getNextState()",
             "parameters": []
           }
@@ -27603,6 +28106,7 @@
       "javadoc": "\n * Implements the { [ \"exists\" : false] } pattern by performing a binary search\n * of the key in the event keys.\n "
     },
     "software.amazon.event.ruler.Step": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 16,
@@ -27682,6 +28186,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -27722,6 +28227,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -27731,6 +28237,7 @@
       "javadoc": "\n * Represents a suggestion of a state/token combo from which there might be a transition.  The event token\n *  indexed is always the key of a key/value combination\n "
     },
     "software.amazon.event.ruler.Task": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 39,
@@ -27844,6 +28351,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.NameState",
+            "access_type": "NONE",
             "signature": " NameState startState()",
             "parameters": []
           }
@@ -27911,6 +28419,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean isFieldUsed(String)",
             "parameters": [
               {
@@ -27938,6 +28447,7 @@
               }
             ],
             "return_type": "software.amazon.event.ruler.Step",
+            "access_type": "NONE",
             "signature": " Step nextStep()",
             "parameters": []
           }
@@ -27979,6 +28489,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void addStep(Step)",
             "parameters": [
               {
@@ -28006,6 +28517,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "NONE",
             "signature": " boolean stepsRemain()",
             "parameters": []
           }
@@ -28033,6 +28545,7 @@
               }
             ],
             "return_type": "java.util.List<java.lang.Object>",
+            "access_type": "NONE",
             "signature": " List<Object> getMatchedRules()",
             "parameters": []
           }
@@ -28065,6 +28578,7 @@
               }
             ],
             "return_type": "void",
+            "access_type": "NONE",
             "signature": " void collectRules(NameState)",
             "parameters": [
               {
@@ -28079,6 +28593,7 @@
       "javadoc": "\n * Represents the state of a rule-finding project.\n "
     },
     "software.amazon.event.ruler.ValuePatterns": {
+      "is_abstract": false,
       "constructors": [
         {
           "start_line": 12,
@@ -28124,6 +28639,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String pattern()",
             "parameters": []
           }
@@ -28180,6 +28696,7 @@
               }
             ],
             "return_type": "boolean",
+            "access_type": "PUBLIC",
             "signature": "public boolean equals(Object)",
             "parameters": [
               {
@@ -28212,6 +28729,7 @@
               }
             ],
             "return_type": "int",
+            "access_type": "PUBLIC",
             "signature": "public int hashCode()",
             "parameters": []
           }
@@ -28234,6 +28752,7 @@
               }
             ],
             "return_type": "java.lang.String",
+            "access_type": "PUBLIC",
             "signature": "public String toString()",
             "parameters": []
           }

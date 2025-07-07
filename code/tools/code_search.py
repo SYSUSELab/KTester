@@ -217,9 +217,10 @@ class CodeSearcher:
     def collect_usage_context(self, class_name, method_name:str):
         '''
         content in usage context:
-        - External variables (unimplemented) and methods called in the focus method
-        - Code context for calling focus methods (unimplemented)
         - Parameter & Return Value in the focus method, expecially classes defined in the project
+        - External variables and methods called in the focus method
+        - Related mathods with focal method and dependent method
+        - Code context for calling focus methods (unimplemented)
         - API documents (optional)
         - Code summary (optional) (unimplemented)
         '''

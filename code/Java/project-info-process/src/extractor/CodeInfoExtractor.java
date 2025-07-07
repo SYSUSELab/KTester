@@ -1,5 +1,6 @@
 package extractor;
 
+import com.github.javaparser.ast.AccessSpecifier;
 import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
 import com.github.javaparser.ast.body.ConstructorDeclaration;
@@ -123,12 +124,15 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
         });
         // get return type
         String return_type = resolveType(method.getType());
+        // get access type
+        AccessSpecifier access_type = method.getAccessSpecifier();
         MethodInfo method_obj = new MethodInfo(signature,
                 parameters,
                 position,
                 method_call_list.toArray(new CallMethodInfo[0]),
                 external_fields.toArray(new VariableInfo[0]),
-                return_type);
+                return_type,
+                access_type);
         JsonObject method_info = this.gson.toJsonTree(method_obj).getAsJsonObject();
         String methoddoc = extractJavadoc(method);
         if (methoddoc != null)
@@ -138,12 +142,14 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
 
     private JsonObject extractClassInfo(ClassOrInterfaceDeclaration class_dec) {
         JsonObject class_info = new JsonObject();
+        class_info.addProperty("is_abstract", class_dec.isAbstract());
 
         // get constructor information
         List<ConstructorDeclaration> constructors = class_dec.getConstructors();
         JsonArray constructor_list = new JsonArray();
         for (ConstructorDeclaration constructor : constructors) {
             if (constructor.getAnnotationByClass(Deprecated.class).isPresent())
+                // || constructor.isPrivate())
                 continue;
             JsonObject constructor_info = extractConstuctorInfo(constructor);
             constructor_list.add(constructor_info);

@@ -19,7 +19,7 @@ public class CFGBuilder {
         CtModel model = launcher.buildModel();
         CtClass<?> ctClass = model.getElements((Filter<CtClass<?>>) element -> true)
                 .stream()
-                .filter(c -> c.getQualifiedName().equals("extractor.CodeInfoExtractor"))
+                .filter(c -> c.getQualifiedName().equals("extractor.JavaParserExtractor"))
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("Class CodeInfoExtractor not found"));
         CtClass<?> ctClass2 = model.getElements((Filter<CtClass<?>>) element -> true)
@@ -27,13 +27,13 @@ public class CFGBuilder {
                 .filter(c -> c.getQualifiedName().equals("extractor.JavaParserExtractor"))
                 .findFirst()
                 .orElseThrow(() -> new RuntimeException("Class CodeInfoExtractor not found"));
-        CtMethod<?> method = ctClass.getMethodsByName("extractCodeInfo").get(0); // Changed to getMethodsByName
-        CtMethod<?> method2 = ctClass.getMethodsByName("extractClassInfo").get(0); //
+        CtMethod<?> method = ctClass.getMethodsByName("extractJavadoc").get(0); // Changed to getMethodsByName
+        // CtMethod<?> method2 = ctClass.getMethodsByName("extractClassInfo").get(0); //
         // Changed to getMethodsByName
         ControlFlowBuilder builder = new ControlFlowBuilder();
-        builder.visitCtClass(ctClass);
-        builder.visitCtClass(ctClass2);
-        // builder.visitCtMethod(method2);
+        // builder.visitCtClass(ctClass);
+        // builder.visitCtClass(ctClass2);
+        builder.visitCtMethod(method);
         // ControlFlowGraph cfg = builder.build(ctClass2);
         // ControlFlowGraph cfg = builder.build(method);
         // builder.build(method2);
