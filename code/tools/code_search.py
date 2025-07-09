@@ -7,27 +7,42 @@ import logging
 
 import tools.io_utils as utils
 
+
 class SnippetReader:
     project_path: str
-    cache = {}
+    cache:dict # {"<file_path>": ["line1", "line2"]}
     def __init__(self, pj_path):
         self.project_path = pj_path
+        self.cache = {}
         pass
 
-    def read_lines(self, file_path, start_line, end_line):
-        if start_line < 0 or start_line is None: start_line = 0
-        if end_line < start_line: end_line = start_line + 1
-        if self.cache.get(file_path) is None:
-            content:str = utils.load_text(f"{self.project_path}/{file_path}")
+    def _get_contents(self, file_path):
+        lines = self.cache.get(file_path)
+        if lines is None:
+            content:str = utils.load_text(file_path)
             lines = content.splitlines()
-            end_line = min(end_line, len(lines)-1)
             self.cache[file_path] = lines
-            return lines[start_line:end_line]
-        else:
-            lines = self.cache[file_path]
-            end_line = min(end_line, len(lines)-1)
-            return lines[start_line:end_line]
+        return lines
 
+    def read_single_line(self, file_path, line):
+        line = max(0, line)
+        lines = self._get_contents(file_path)
+        return lines[min(line, len(lines)-1)]
+
+    def read_lines(self, file_path, start_line, end_line):
+        start_line = max(0, start_line if start_line is not None else 0)
+        lines = self._get_contents(file_path)
+        end_line = min(max(start_line, end_line) + 1, len(lines))
+        return lines[start_line:end_line]
+
+    def read_incoherent_lines(self, file_path, read_lines:list):
+        extracted_contents = []
+        for line in read_lines:
+            if isinstance(line,int):
+                extracted_contents.append(self.read_single_line(file_path, line))
+            elif isinstance(line,list):
+                extracted_contents += (self.read_lines(file_path, line[0], line[1]))
+        return extracted_contents
 
 
 class CodeSearcher:

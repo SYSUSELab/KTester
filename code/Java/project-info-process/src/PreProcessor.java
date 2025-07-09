@@ -57,8 +57,8 @@ public class PreProcessor {
             Path json_path = output_dir.resolve("json/" + project_name + ".json");
             Path cfg_path = output_dir.resolve("codegraph/" + project_name + "_controlflow.json");
             System.out.println("process project: " + project_name);
-            // extractProjectStructure(project_name, projectDir, json_path);
-            buildControlflowFlowGraph(projectDir, cfg_path);
+            extractProjectStructure(project_name, projectDir, json_path);
+            // buildControlflowFlowGraph(projectDir, cfg_path);
         });
         long end = System.currentTimeMillis();
         System.out.println("Time Cost:" + (end - start) + "ms");

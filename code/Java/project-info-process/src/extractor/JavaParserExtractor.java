@@ -142,7 +142,7 @@ public class JavaParserExtractor {
                 VariableInfo arg_info = new VariableInfo(arg_name, arg_type);
                 args.add(arg_info);
             }
-            qualified_sig = qualified_name + "." + method_sig;
+            qualified_sig = qualified_name + "#" + method_sig;
         } catch (Exception e) {
             for (int i = 0; i < arg_count; i++) {
                 String arg_type = "unresolved";
@@ -182,7 +182,7 @@ public class JavaParserExtractor {
                 VariableInfo arg_info = new VariableInfo(arg_name, arg_type);
                 args.add(arg_info);
             }
-            qualified_sig = qualified_name + "." + method_sig;
+            qualified_sig = qualified_name + "#" + method_sig;
         } catch (Exception e) {
             for (int i = 0; i < arg_count; i++) {
                 String arg_type = "unresolved";

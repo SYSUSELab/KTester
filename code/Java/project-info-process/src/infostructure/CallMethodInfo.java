@@ -6,6 +6,7 @@ public class CallMethodInfo {
     String signature;
     VariableInfo[] arguments;
     String return_type;
+    int[] line_numbers = null;
 
     public CallMethodInfo(String sig, List<VariableInfo> arguments, String rtn) {
         this.signature = sig;
@@ -15,6 +16,10 @@ public class CallMethodInfo {
 
     public String getSignature() {
         return signature;
+    }
+
+    public void setLineNumbers(int[] line_numbers) {
+        this.line_numbers = line_numbers;
     }
 
     @Override

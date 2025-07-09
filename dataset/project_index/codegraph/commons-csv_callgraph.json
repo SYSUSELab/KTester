@@ -1,576 +1,2288 @@
 {
   "org.apache.commons.csv.Constants": {
-    "Constants()": []
+    "Constants()": {
+      "type": "PRIVATE",
+      "caller": []
+    }
   },
   "org.apache.commons.csv.CSVFormat": {
-    "clone(T...)": [],
-    "contains(String, char)": [
-      "containsLineBreak(String)",
-      "validate()"
-    ],
-    "containsLineBreak(String)": [
-      "validate()",
-      "setDelimiter(String)"
-    ],
-    "isBlank(String)": [
-      "validate()",
-      "createHeaders()"
-    ],
-    "isLineBreak(char)": [
-      "isLineBreak(Character)"
-    ],
-    "isLineBreak(Character)": [
-      "setCommentMarker(Character)",
-      "setEscape(Character)",
-      "setQuote(Character)"
-    ],
-    "isTrimChar(char)": [
-      "isTrimChar(CharSequence, int)",
-      "printWithQuotes(Object, CharSequence, Appendable, boolean)"
-    ],
-    "isTrimChar(CharSequence, int)": [
-      "trim(CharSequence)"
-    ],
-    "newFormat(char)": [],
-    "toStringArray(Object[])": [
-      "setHeaderComments(Object...)"
-    ],
-    "trim(CharSequence)": [
-      "print(Object, Appendable, boolean)"
-    ],
-    "trim(String)": [
-      "addRecordValue(boolean)"
-    ],
-    "valueOf(String)": [],
-    "append(char, Appendable)": [
-      "printWithEscapes(Reader, Appendable)",
-      "printWithQuotes(Reader, Appendable)"
-    ],
-    "append(CharSequence, Appendable)": [
-      "print(Reader, Appendable, boolean)",
-      "println(Appendable)",
-      "printWithEscapes(Reader, Appendable)",
-      "printWithQuotes(Reader, Appendable)"
-    ],
-    "builder()": [
-      "copy()",
-      "printHeaders(ResultSet)"
-    ],
-    "copy()": [],
-    "equals(Object)": [],
-    "format(Object...)": [],
-    "getAllowMissingColumnNames()": [
-      "createHeaders()"
-    ],
-    "getAutoFlush()": [
-      "close(boolean)"
-    ],
-    "getCommentMarker()": [
-      "printComment(String)"
-    ],
-    "getDelimiterString()": [
-      "print(Object, CharSequence, Appendable, boolean)",
-      "print(Reader, Appendable, boolean)",
-      "println(Appendable)",
-      "printWithEscapes(CharSequence, Appendable)",
-      "printWithEscapes(Reader, Appendable)",
-      "printWithQuotes(Object, CharSequence, Appendable, boolean)"
-    ],
-    "getDuplicateHeaderMode()": [
-      "createHeaders()"
-    ],
-    "getEscapeCharacter()": [
-      "printWithEscapes(CharSequence, Appendable)",
-      "printWithEscapes(Reader, Appendable)",
-      "printWithQuotes(Object, CharSequence, Appendable, boolean)"
-    ],
-    "getHeader()": [
-      "createHeaders()",
-      "printHeaders(ResultSet)"
-    ],
-    "getHeaderComments()": [],
-    "getIgnoreEmptyLines()": [
-      "toString()"
-    ],
-    "getIgnoreHeaderCase()": [
-      "toString()",
-      "createEmptyHeaderMap()"
-    ],
-    "getIgnoreSurroundingSpaces()": [
-      "toString()"
-    ],
-    "getNullString()": [
-      "handleNull(String)"
-    ],
-    "getQuoteCharacter()": [
-      "printWithQuotes(Object, CharSequence, Appendable, boolean)",
-      "printWithQuotes(Reader, Appendable)"
-    ],
-    "getQuoteMode()": [
-      "printWithQuotes(Object, CharSequence, Appendable, boolean)",
-      "printWithQuotes(Reader, Appendable)",
-      "isStrictQuoteMode()"
-    ],
-    "getRecordSeparator()": [],
-    "getSkipHeaderRecord()": [
-      "createHeaders()"
-    ],
-    "getTrailingDelimiter()": [
-      "println(Appendable)",
-      "addRecordValue(boolean)"
-    ],
-    "getTrim()": [
-      "trim(String)",
-      "print(Object, Appendable, boolean)"
-    ],
-    "hashCode()": [],
-    "isCommentMarkerSet()": [
-      "toString()",
-      "printComment(String)"
-    ],
-    "isDelimiter(char, CharSequence, int, char[], int)": [
-      "printWithEscapes(CharSequence, Appendable)",
-      "printWithEscapes(Reader, Appendable)",
-      "printWithQuotes(Object, CharSequence, Appendable, boolean)"
-    ],
-    "isEscapeCharacterSet()": [
-      "print(Object, CharSequence, Appendable, boolean)",
-      "print(Reader, Appendable, boolean)",
-      "printWithQuotes(Object, CharSequence, Appendable, boolean)",
-      "toString()"
-    ],
-    "isNullStringSet()": [
-      "toString()"
-    ],
-    "isQuoteCharacterSet()": [
-      "print(Object, CharSequence, Appendable, boolean)",
-      "print(Reader, Appendable, boolean)",
-      "toString()"
-    ],
-    "parse(Reader)": [],
-    "print(Appendable)": [
-      "print(Path, Charset)"
-    ],
-    "print(File, Charset)": [],
-    "print(Object, Appendable, boolean)": [
-      "printRecord(Appendable, Object...)",
-      "print(Object)"
-    ],
-    "print(Object, CharSequence, Appendable, boolean)": [
-      "print(Object, Appendable, boolean)"
-    ],
-    "print(Path, Charset)": [],
-    "print(Reader, Appendable, boolean)": [
-      "print(Object, Appendable, boolean)"
-    ],
-    "printer()": [],
-    "println(Appendable)": [
-      "printRecord(Appendable, Object...)",
-      "println()"
-    ],
-    "printRecord(Appendable, Object...)": [],
-    "printWithEscapes(CharSequence, Appendable)": [
-      "print(Object, CharSequence, Appendable, boolean)",
-      "printWithQuotes(Object, CharSequence, Appendable, boolean)"
-    ],
-    "printWithEscapes(Reader, Appendable)": [
-      "print(Reader, Appendable, boolean)",
-      "printWithQuotes(Reader, Appendable)"
-    ],
-    "printWithQuotes(Object, CharSequence, Appendable, boolean)": [
-      "print(Object, CharSequence, Appendable, boolean)"
-    ],
-    "printWithQuotes(Reader, Appendable)": [
-      "print(Reader, Appendable, boolean)"
-    ],
-    "toString()": [],
-    "validate()": [],
-    "CSVFormat(Builder)": [
-      "build()"
-    ],
-    "CSVFormat(String, Character, QuoteMode, Character, Character, boolean, boolean, String, String, Object[], String[], boolean, boolean, boolean, boolean, boolean, boolean, DuplicateHeaderMode)": [
-      "newFormat(char)"
-    ]
+    "clone(T...)": {
+      "type": "NONE",
+      "caller": []
+    },
+    "contains(String, char)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#containsLineBreak(String)",
+          "lines": [
+            1192
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#validate()",
+          "lines": [
+            2259,
+            2263,
+            2267
+          ]
+        }
+      ]
+    },
+    "containsLineBreak(String)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#validate()",
+          "lines": [
+            2255
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#setDelimiter(String)",
+          "lines": [
+            362
+          ]
+        }
+      ]
+    },
+    "isBlank(String)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#validate()",
+          "lines": [
+            2288
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#createHeaders()",
+          "lines": [
+            505
+          ]
+        }
+      ]
+    },
+    "isLineBreak(char)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#isLineBreak(Character)",
+          "lines": [
+            1218
+          ]
+        }
+      ]
+    },
+    "isLineBreak(Character)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#setCommentMarker(Character)",
+          "lines": [
+            338
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#setEscape(Character)",
+          "lines": [
+            404
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#setQuote(Character)",
+          "lines": [
+            622
+          ]
+        }
+      ]
+    },
+    "isTrimChar(char)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#isTrimChar(CharSequence, int)",
+          "lines": [
+            1228
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            2102
+          ]
+        }
+      ]
+    },
+    "isTrimChar(CharSequence, int)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#trim(CharSequence)",
+          "lines": [
+            1270,
+            1273
+          ]
+        }
+      ]
+    },
+    "newFormat(char)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "toStringArray(Object[])": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#setHeaderComments(Object...)",
+          "lines": [
+            533
+          ]
+        }
+      ]
+    },
+    "trim(CharSequence)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object, Appendable, boolean)",
+          "lines": [
+            1828
+          ]
+        }
+      ]
+    },
+    "trim(String)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#addRecordValue(boolean)",
+          "lines": [
+            443
+          ]
+        }
+      ]
+    },
+    "valueOf(String)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "append(char, Appendable)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithEscapes(Reader, Appendable)",
+          "lines": [
+            2020,
+            2021,
+            2014,
+            2015
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Reader, Appendable)",
+          "lines": [
+            2179,
+            2165,
+            2189,
+            2174
+          ]
+        }
+      ]
+    },
+    "append(CharSequence, Appendable)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Reader, Appendable, boolean)",
+          "lines": [
+            1871
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#println(Appendable)",
+          "lines": [
+            1909,
+            1912
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithEscapes(Reader, Appendable)",
+          "lines": [
+            2032,
+            2004
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Reader, Appendable)",
+          "lines": [
+            2186,
+            2173
+          ]
+        }
+      ]
+    },
+    "builder()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#copy()",
+          "lines": [
+            1432
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printHeaders(ResultSet)",
+          "lines": [
+            232
+          ]
+        }
+      ]
+    },
+    "copy()": {
+      "type": "NONE",
+      "caller": []
+    },
+    "equals(Object)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "format(Object...)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getAllowMissingColumnNames()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#createHeaders()",
+          "lines": [
+            506
+          ]
+        }
+      ]
+    },
+    "getAutoFlush()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#close(boolean)",
+          "lines": [
+            129
+          ]
+        }
+      ]
+    },
+    "getCommentMarker()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printComment(String)",
+          "lines": [
+            212,
+            200
+          ]
+        }
+      ]
+    },
+    "getDelimiterString()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            1836
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Reader, Appendable, boolean)",
+          "lines": [
+            1871
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#println(Appendable)",
+          "lines": [
+            1909
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithEscapes(CharSequence, Appendable)",
+          "lines": [
+            1944
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithEscapes(Reader, Appendable)",
+          "lines": [
+            1991
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            2046
+          ]
+        }
+      ]
+    },
+    "getDuplicateHeaderMode()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#createHeaders()",
+          "lines": [
+            512
+          ]
+        }
+      ]
+    },
+    "getEscapeCharacter()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithEscapes(CharSequence, Appendable)",
+          "lines": [
+            1946
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithEscapes(Reader, Appendable)",
+          "lines": [
+            1993
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            2052
+          ]
+        }
+      ]
+    },
+    "getHeader()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#createHeaders()",
+          "lines": [
+            478
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printHeaders(ResultSet)",
+          "lines": [
+            232
+          ]
+        }
+      ]
+    },
+    "getHeaderComments()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getIgnoreEmptyLines()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#toString()",
+          "lines": [
+            2220
+          ]
+        }
+      ]
+    },
+    "getIgnoreHeaderCase()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#toString()",
+          "lines": [
+            2226
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#createEmptyHeaderMap()",
+          "lines": [
+            464
+          ]
+        }
+      ]
+    },
+    "getIgnoreSurroundingSpaces()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#toString()",
+          "lines": [
+            2223
+          ]
+        }
+      ]
+    },
+    "getNullString()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#handleNull(String)",
+          "lines": [
+            672
+          ]
+        }
+      ]
+    },
+    "getQuoteCharacter()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            2048
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Reader, Appendable)",
+          "lines": [
+            2162
+          ]
+        }
+      ]
+    },
+    "getQuoteMode()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            2054
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Reader, Appendable)",
+          "lines": [
+            2155
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#isStrictQuoteMode()",
+          "lines": [
+            727,
+            728
+          ]
+        }
+      ]
+    },
+    "getRecordSeparator()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getSkipHeaderRecord()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#createHeaders()",
+          "lines": [
+            490
+          ]
+        }
+      ]
+    },
+    "getTrailingDelimiter()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#println(Appendable)",
+          "lines": [
+            1908
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#addRecordValue(boolean)",
+          "lines": [
+            444
+          ]
+        }
+      ]
+    },
+    "getTrim()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#trim(String)",
+          "lines": [
+            2242
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object, Appendable, boolean)",
+          "lines": [
+            1828
+          ]
+        }
+      ]
+    },
+    "hashCode()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "isCommentMarkerSet()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#toString()",
+          "lines": [
+            2208
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printComment(String)",
+          "lines": [
+            194
+          ]
+        }
+      ]
+    },
+    "isDelimiter(char, CharSequence, int, char[], int)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithEscapes(CharSequence, Appendable)",
+          "lines": [
+            1950
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithEscapes(Reader, Appendable)",
+          "lines": [
+            1999
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            2090
+          ]
+        }
+      ]
+    },
+    "isEscapeCharacterSet()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            1843
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Reader, Appendable, boolean)",
+          "lines": [
+            1875
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            2052
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#toString()",
+          "lines": [
+            2196
+          ]
+        }
+      ]
+    },
+    "isNullStringSet()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#toString()",
+          "lines": [
+            2212
+          ]
+        }
+      ]
+    },
+    "isQuoteCharacterSet()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            1840
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Reader, Appendable, boolean)",
+          "lines": [
+            1873
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#toString()",
+          "lines": [
+            2200
+          ]
+        }
+      ]
+    },
+    "parse(Reader)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "print(Appendable)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Path, Charset)",
+          "lines": [
+            1865
+          ]
+        }
+      ]
+    },
+    "print(File, Charset)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "print(Object, Appendable, boolean)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printRecord(Appendable, Object...)",
+          "lines": [
+            1931
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object)",
+          "lines": [
+            168
+          ]
+        }
+      ]
+    },
+    "print(Object, CharSequence, Appendable, boolean)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object, Appendable, boolean)",
+          "lines": [
+            1829
+          ]
+        }
+      ]
+    },
+    "print(Path, Charset)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "print(Reader, Appendable, boolean)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object, Appendable, boolean)",
+          "lines": [
+            1823
+          ]
+        }
+      ]
+    },
+    "printer()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "println(Appendable)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printRecord(Appendable, Object...)",
+          "lines": [
+            1933
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#println()",
+          "lines": [
+            242
+          ]
+        }
+      ]
+    },
+    "printRecord(Appendable, Object...)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "printWithEscapes(CharSequence, Appendable)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            1844
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            2068
+          ]
+        }
+      ]
+    },
+    "printWithEscapes(Reader, Appendable)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Reader, Appendable, boolean)",
+          "lines": [
+            1876
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#printWithQuotes(Reader, Appendable)",
+          "lines": [
+            2156
+          ]
+        }
+      ]
+    },
+    "printWithQuotes(Object, CharSequence, Appendable, boolean)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Object, CharSequence, Appendable, boolean)",
+          "lines": [
+            1842
+          ]
+        }
+      ]
+    },
+    "printWithQuotes(Reader, Appendable)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#print(Reader, Appendable, boolean)",
+          "lines": [
+            1874
+          ]
+        }
+      ]
+    },
+    "toString()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "validate()": {
+      "type": "PRIVATE",
+      "caller": []
+    },
+    "CSVFormat(Builder)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#build()",
+          "lines": [
+            274
+          ]
+        }
+      ]
+    },
+    "CSVFormat(String, Character, QuoteMode, Character, Character, boolean, boolean, String, String, Object[], String[], boolean, boolean, boolean, boolean, boolean, boolean, DuplicateHeaderMode)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat#newFormat(char)",
+          "lines": [
+            1249
+          ]
+        }
+      ]
+    }
   },
   "org.apache.commons.csv.CSVFormat.Builder": {
-    "create()": [],
-    "create(CSVFormat)": [
-      "builder()"
-    ],
-    "build()": [
-      "copy()",
-      "printHeaders(ResultSet)"
-    ],
-    "setAllowMissingColumnNames(boolean)": [],
-    "setAutoFlush(boolean)": [],
-    "setCommentMarker(char)": [],
-    "setCommentMarker(Character)": [
-      "setCommentMarker(char)"
-    ],
-    "setDelimiter(char)": [],
-    "setDelimiter(String)": [
-      "setDelimiter(char)"
-    ],
-    "setDuplicateHeaderMode(DuplicateHeaderMode)": [],
-    "setEscape(char)": [],
-    "setEscape(Character)": [
-      "setEscape(char)"
-    ],
-    "setHeader(Class)": [],
-    "setHeader(ResultSet)": [
-      "printHeaders(ResultSet)"
-    ],
-    "setHeader(ResultSetMetaData)": [
-      "setHeader(ResultSet)"
-    ],
-    "setHeader(String...)": [],
-    "setHeaderComments(Object...)": [],
-    "setHeaderComments(String...)": [],
-    "setIgnoreEmptyLines(boolean)": [],
-    "setIgnoreHeaderCase(boolean)": [],
-    "setIgnoreSurroundingSpaces(boolean)": [],
-    "setNullString(String)": [],
-    "setQuote(char)": [],
-    "setQuote(Character)": [
-      "setQuote(char)"
-    ],
-    "setQuoteMode(QuoteMode)": [],
-    "setRecordSeparator(char)": [],
-    "setRecordSeparator(String)": [],
-    "setSkipHeaderRecord(boolean)": [],
-    "setTrailingDelimiter(boolean)": [],
-    "setTrim(boolean)": [],
-    "Builder(CSVFormat)": [
-      "create()",
-      "create(CSVFormat)"
-    ]
+    "create()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "create(CSVFormat)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#builder()",
+          "lines": [
+            1423
+          ]
+        }
+      ]
+    },
+    "build()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#copy()",
+          "lines": [
+            1432
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#printHeaders(ResultSet)",
+          "lines": [
+            232
+          ]
+        }
+      ]
+    },
+    "setAllowMissingColumnNames(boolean)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setAutoFlush(boolean)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setCommentMarker(char)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setCommentMarker(Character)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#setCommentMarker(char)",
+          "lines": [
+            324
+          ]
+        }
+      ]
+    },
+    "setDelimiter(char)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setDelimiter(String)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#setDelimiter(char)",
+          "lines": [
+            352
+          ]
+        }
+      ]
+    },
+    "setDuplicateHeaderMode(DuplicateHeaderMode)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setEscape(char)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setEscape(Character)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#setEscape(char)",
+          "lines": [
+            392
+          ]
+        }
+      ]
+    },
+    "setHeader(Class)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setHeader(ResultSet)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#printHeaders(ResultSet)",
+          "lines": [
+            232
+          ]
+        }
+      ]
+    },
+    "setHeader(ResultSetMetaData)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#setHeader(ResultSet)",
+          "lines": [
+            463
+          ]
+        }
+      ]
+    },
+    "setHeader(String...)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setHeaderComments(Object...)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setHeaderComments(String...)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setIgnoreEmptyLines(boolean)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setIgnoreHeaderCase(boolean)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setIgnoreSurroundingSpaces(boolean)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setNullString(String)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setQuote(char)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setQuote(Character)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#setQuote(char)",
+          "lines": [
+            611
+          ]
+        }
+      ]
+    },
+    "setQuoteMode(QuoteMode)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setRecordSeparator(char)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setRecordSeparator(String)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setSkipHeaderRecord(boolean)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setTrailingDelimiter(boolean)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "setTrim(boolean)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "Builder(CSVFormat)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#create()",
+          "lines": [
+            195
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVFormat.Builder#create(CSVFormat)",
+          "lines": [
+            205
+          ]
+        }
+      ]
+    }
   },
   "org.apache.commons.csv.CSVFormat.Predefined": {
-    "getFormat()": [],
-    "Predefined(CSVFormat)": []
+    "getFormat()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "Predefined(CSVFormat)": {
+      "type": "NONE",
+      "caller": []
+    }
   },
   "org.apache.commons.csv.CSVParser": {
-    "parse(File, Charset, CSVFormat)": [],
-    "parse(InputStream, Charset, CSVFormat)": [
-      "parse(Path, Charset, CSVFormat)"
-    ],
-    "parse(Path, Charset, CSVFormat)": [
-      "parse(File, Charset, CSVFormat)"
-    ],
-    "parse(Reader, CSVFormat)": [
-      "parse(InputStream, Charset, CSVFormat)"
-    ],
-    "parse(String, CSVFormat)": [],
-    "parse(URL, Charset, CSVFormat)": [],
-    "addRecordValue(boolean)": [
-      "nextRecord()"
-    ],
-    "close()": [],
-    "createEmptyHeaderMap()": [
-      "createHeaders()",
-      "getHeaderMap()"
-    ],
-    "createHeaders()": [],
-    "getCurrentLineNumber()": [
-      "nextRecord()"
-    ],
-    "getFirstEndOfLine()": [],
-    "getHeaderComment()": [],
-    "getHeaderMap()": [],
-    "getHeaderMapRaw()": [
-      "getHeaderMapRaw()"
-    ],
-    "getHeaderNames()": [],
-    "getRecordNumber()": [],
-    "getRecords()": [],
-    "getTrailerComment()": [],
-    "handleNull(String)": [
-      "addRecordValue(boolean)"
-    ],
-    "hasHeaderComment()": [],
-    "hasTrailerComment()": [],
-    "isClosed()": [
-      "hasNext()",
-      "next()"
-    ],
-    "isStrictQuoteMode()": [
-      "handleNull(String)"
-    ],
-    "iterator()": [
-      "stream()"
-    ],
-    "nextRecord()": [
-      "createHeaders()",
-      "getNextRecord()"
-    ],
-    "stream()": [
-      "getRecords()"
-    ],
-    "CSVParser(Reader, CSVFormat)": [
-      "parse(Reader)",
-      "parse(Reader, CSVFormat)",
-      "parse(String, CSVFormat)",
-      "parse(URL, Charset, CSVFormat)"
-    ],
-    "CSVParser(Reader, CSVFormat, long, long)": []
+    "parse(File, Charset, CSVFormat)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "parse(InputStream, Charset, CSVFormat)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#parse(Path, Charset, CSVFormat)",
+          "lines": [
+            280
+          ]
+        }
+      ]
+    },
+    "parse(Path, Charset, CSVFormat)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#parse(File, Charset, CSVFormat)",
+          "lines": [
+            228
+          ]
+        }
+      ]
+    },
+    "parse(Reader, CSVFormat)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#parse(InputStream, Charset, CSVFormat)",
+          "lines": [
+            257
+          ]
+        }
+      ]
+    },
+    "parse(String, CSVFormat)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "parse(URL, Charset, CSVFormat)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "addRecordValue(boolean)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#nextRecord()",
+          "lines": [
+            772,
+            775,
+            779
+          ]
+        }
+      ]
+    },
+    "close()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "createEmptyHeaderMap()": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#createHeaders()",
+          "lines": [
+            480
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVParser#getHeaderMap()",
+          "lines": [
+            592
+          ]
+        }
+      ]
+    },
+    "createHeaders()": {
+      "type": "PRIVATE",
+      "caller": []
+    },
+    "getCurrentLineNumber()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#nextRecord()",
+          "lines": [
+            785
+          ]
+        }
+      ]
+    },
+    "getFirstEndOfLine()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getHeaderComment()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getHeaderMap()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getHeaderMapRaw()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#getHeaderMapRaw()",
+          "lines": [
+            155
+          ]
+        }
+      ]
+    },
+    "getHeaderNames()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getRecordNumber()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getRecords()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getTrailerComment()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "handleNull(String)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#addRecordValue(boolean)",
+          "lines": [
+            447
+          ]
+        }
+      ]
+    },
+    "hasHeaderComment()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "hasTrailerComment()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "isClosed()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#hasNext()",
+          "lines": [
+            155
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVParser#next()",
+          "lines": [
+            167
+          ]
+        }
+      ]
+    },
+    "isStrictQuoteMode()": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#handleNull(String)",
+          "lines": [
+            673
+          ]
+        }
+      ]
+    },
+    "iterator()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#stream()",
+          "lines": [
+            819
+          ]
+        }
+      ]
+    },
+    "nextRecord()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#createHeaders()",
+          "lines": [
+            484,
+            491
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVParser#getNextRecord()",
+          "lines": [
+            147
+          ]
+        }
+      ]
+    },
+    "stream()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#getRecords()",
+          "lines": [
+            649
+          ]
+        }
+      ]
+    },
+    "CSVParser(Reader, CSVFormat)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser#parse(Reader)",
+          "lines": [
+            1760
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVParser#parse(Reader, CSVFormat)",
+          "lines": [
+            303
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVParser#parse(String, CSVFormat)",
+          "lines": [
+            325
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVParser#parse(URL, Charset, CSVFormat)",
+          "lines": [
+            354
+          ]
+        }
+      ]
+    },
+    "CSVParser(Reader, CSVFormat, long, long)": {
+      "type": "PUBLIC",
+      "caller": []
+    }
   },
   "org.apache.commons.csv.CSVParser.CSVRecordIterator": {
-    "getNextRecord()": [
-      "hasNext()",
-      "next()"
-    ],
-    "hasNext()": [],
-    "next()": [],
-    "remove()": []
+    "getNextRecord()": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser.CSVRecordIterator#hasNext()",
+          "lines": [
+            159
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVParser.CSVRecordIterator#next()",
+          "lines": [
+            175
+          ]
+        }
+      ]
+    },
+    "hasNext()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "next()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "remove()": {
+      "type": "PUBLIC",
+      "caller": []
+    }
   },
   "org.apache.commons.csv.CSVParser.Headers": {
-    "Headers(Map, List)": [
-      "createHeaders()"
-    ]
+    "Headers(Map, List)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVParser.Headers#createHeaders()",
+          "lines": [
+            538
+          ]
+        }
+      ]
+    }
   },
   "org.apache.commons.csv.CSVPrinter": {
-    "close()": [],
-    "close(boolean)": [
-      "close()"
-    ],
-    "flush()": [
-      "close(boolean)"
-    ],
-    "getOut()": [],
-    "print(Object)": [
-      "printRecord(Iterable<?>)",
-      "printRecords(ResultSet)"
-    ],
-    "printComment(String)": [],
-    "printHeaders(ResultSet)": [
-      "printRecords(ResultSet, boolean)"
-    ],
-    "println()": [
-      "printComment(String)",
-      "printRecord(Iterable<?>)",
-      "printRecord(Stream<?>)",
-      "printRecords(ResultSet)"
-    ],
-    "printRecord(Iterable)": [
-      "printRecord(Object...)",
-      "printRecordObject(Object)"
-    ],
-    "printRecord(Object...)": [],
-    "printRecord(Stream)": [],
-    "printRecordObject(Object)": [
-      "printRecords(Iterable<?>)"
-    ],
-    "printRecords(Iterable)": [
-      "printRecords(Object...)"
-    ],
-    "printRecords(Object...)": [],
-    "printRecords(ResultSet)": [
-      "printRecords(ResultSet, boolean)"
-    ],
-    "printRecords(ResultSet, boolean)": [],
-    "printRecords(Stream)": [],
-    "CSVPrinter(Appendable, CSVFormat)": [
-      "format(Object...)",
-      "print(Appendable)",
-      "print(File, Charset)",
-      "printer()"
-    ]
+    "close()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "close(boolean)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#close()",
+          "lines": [
+            117
+          ]
+        }
+      ]
+    },
+    "flush()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#close(boolean)",
+          "lines": [
+            130
+          ]
+        }
+      ]
+    },
+    "getOut()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "print(Object)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecord(Iterable<?>)",
+          "lines": [
+            261
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecords(ResultSet)",
+          "lines": [
+            422
+          ]
+        }
+      ]
+    },
+    "printComment(String)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "printHeaders(ResultSet)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecords(ResultSet, boolean)",
+          "lines": [
+            439
+          ]
+        }
+      ]
+    },
+    "println()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printComment(String)",
+          "lines": [
+            211,
+            198,
+            220
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecord(Iterable<?>)",
+          "lines": [
+            263
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecord(Stream<?>)",
+          "lines": [
+            305
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecords(ResultSet)",
+          "lines": [
+            424
+          ]
+        }
+      ]
+    },
+    "printRecord(Iterable)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecord(Object...)",
+          "lines": [
+            280
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecordObject(Object)",
+          "lines": [
+            312
+          ]
+        }
+      ]
+    },
+    "printRecord(Object...)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "printRecord(Stream)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "printRecordObject(Object)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecords(Iterable<?>)",
+          "lines": [
+            359
+          ]
+        }
+      ]
+    },
+    "printRecords(Iterable)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecords(Object...)",
+          "lines": [
+            403
+          ]
+        }
+      ]
+    },
+    "printRecords(Object...)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "printRecords(ResultSet)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printRecords(ResultSet, boolean)",
+          "lines": [
+            441
+          ]
+        }
+      ]
+    },
+    "printRecords(ResultSet, boolean)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "printRecords(Stream)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "CSVPrinter(Appendable, CSVFormat)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#format(Object...)",
+          "lines": [
+            1462
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#print(Appendable)",
+          "lines": [
+            1775
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#print(File, Charset)",
+          "lines": [
+            1794
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVPrinter#printer()",
+          "lines": [
+            1897
+          ]
+        }
+      ]
+    }
   },
   "org.apache.commons.csv.CSVRecord": {
-    "get(Enum)": [],
-    "get(int)": [],
-    "get(String)": [
-      "get(Enum<?>)"
-    ],
-    "getCharacterPosition()": [],
-    "getComment()": [
-      "createHeaders()"
-    ],
-    "getHeaderMapRaw()": [
-      "get(String)",
-      "isConsistent()",
-      "isMapped(String)",
-      "isSet(String)",
-      "putIn(M)"
-    ],
-    "getParser()": [],
-    "getRecordNumber()": [],
-    "hasComment()": [],
-    "isConsistent()": [],
-    "isMapped(String)": [
-      "isSet(String)"
-    ],
-    "isSet(int)": [],
-    "isSet(String)": [],
-    "iterator()": [],
-    "putIn(M)": [
-      "toMap()"
-    ],
-    "size()": [],
-    "stream()": [
-      "toList()"
-    ],
-    "toList()": [
-      "iterator()"
-    ],
-    "toMap()": [],
-    "toString()": [],
-    "values()": [
-      "createHeaders()"
-    ],
-    "CSVRecord(CSVParser, String[], String, long, long)": [
-      "nextRecord()"
-    ]
+    "get(Enum)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "get(int)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "get(String)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#get(Enum<?>)",
+          "lines": [
+            75
+          ]
+        }
+      ]
+    },
+    "getCharacterPosition()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getComment()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#createHeaders()",
+          "lines": [
+            487,
+            493
+          ]
+        }
+      ]
+    },
+    "getHeaderMapRaw()": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#get(String)",
+          "lines": [
+            113
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#isConsistent()",
+          "lines": [
+            212
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#isMapped(String)",
+          "lines": [
+            224
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#isSet(String)",
+          "lines": [
+            247
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#putIn(M)",
+          "lines": [
+            272,
+            269
+          ]
+        }
+      ]
+    },
+    "getParser()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "getRecordNumber()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "hasComment()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "isConsistent()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "isMapped(String)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#isSet(String)",
+          "lines": [
+            247
+          ]
+        }
+      ]
+    },
+    "isSet(int)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "isSet(String)": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "iterator()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "putIn(M)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#toMap()",
+          "lines": [
+            321
+          ]
+        }
+      ]
+    },
+    "size()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "stream()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#toList()",
+          "lines": [
+            309
+          ]
+        }
+      ]
+    },
+    "toList()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#iterator()",
+          "lines": [
+            257
+          ]
+        }
+      ]
+    },
+    "toMap()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "toString()": {
+      "type": "PUBLIC",
+      "caller": []
+    },
+    "values()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#createHeaders()",
+          "lines": [
+            486
+          ]
+        }
+      ]
+    },
+    "CSVRecord(CSVParser, String[], String, long, long)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.CSVRecord#nextRecord()",
+          "lines": [
+            803
+          ]
+        }
+      ]
+    }
   },
   "org.apache.commons.csv.DuplicateHeaderMode": {},
   "org.apache.commons.csv.ExtendedBufferedReader": {
-    "close()": [
-      "close()"
-    ],
-    "getCurrentLineNumber()": [
-      "getCurrentLineNumber()"
-    ],
-    "getLastChar()": [
-      "nextToken(Token)",
-      "parseEncapsulatedToken(Token)",
-      "parseSimpleToken(Token, int)"
-    ],
-    "getPosition()": [
-      "getCharacterPosition()"
-    ],
-    "isClosed()": [
-      "isClosed()"
-    ],
-    "lookAhead()": [
-      "readLine()",
-      "parseEncapsulatedToken(Token)",
-      "readEndOfLine(int)"
-    ],
-    "lookAhead(char[])": [
-      "lookAhead(int)",
-      "isDelimiter(int)",
-      "isEscapeDelimiter()"
-    ],
-    "lookAhead(int)": [
-      "printWithEscapes(Reader, Appendable)"
-    ],
-    "read()": [
-      "printWithEscapes(Reader, Appendable)",
-      "readLine()",
-      "nextToken(Token)",
-      "parseEncapsulatedToken(Token)",
-      "parseSimpleToken(Token, int)",
-      "readEndOfLine(int)",
-      "readEscape()"
-    ],
-    "read(char[], int, int)": [
-      "isDelimiter(int)",
-      "isEscapeDelimiter()"
-    ],
-    "readLine()": [
-      "nextToken(Token)"
-    ],
-    "ExtendedBufferedReader(Reader)": [
-      "printWithEscapes(Reader, Appendable)"
-    ]
+    "close()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#close()",
+          "lines": [
+            86
+          ]
+        }
+      ]
+    },
+    "getCurrentLineNumber()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#getCurrentLineNumber()",
+          "lines": [
+            104
+          ]
+        }
+      ]
+    },
+    "getLastChar()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#nextToken(Token)",
+          "lines": [
+            223
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#parseEncapsulatedToken(Token)",
+          "lines": [
+            339
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#parseSimpleToken(Token, int)",
+          "lines": [
+            427
+          ]
+        }
+      ]
+    },
+    "getPosition()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#getCharacterPosition()",
+          "lines": [
+            95
+          ]
+        }
+      ]
+    },
+    "isClosed()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#isClosed()",
+          "lines": [
+            112
+          ]
+        }
+      ]
+    },
+    "lookAhead()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#readLine()",
+          "lines": [
+            213,
+            220
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#parseEncapsulatedToken(Token)",
+          "lines": [
+            345
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#readEndOfLine(int)",
+          "lines": [
+            452
+          ]
+        }
+      ]
+    },
+    "lookAhead(char[])": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#lookAhead(int)",
+          "lines": [
+            153
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#isDelimiter(int)",
+          "lines": [
+            136
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#isEscapeDelimiter()",
+          "lines": [
+            174
+          ]
+        }
+      ]
+    },
+    "lookAhead(int)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#printWithEscapes(Reader, Appendable)",
+          "lines": [
+            1999
+          ]
+        }
+      ]
+    },
+    "read()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#printWithEscapes(Reader, Appendable)",
+          "lines": [
+            2019,
+            1997
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#readLine()",
+          "lines": [
+            218,
+            222
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#nextToken(Token)",
+          "lines": [
+            226,
+            274,
+            238
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#parseEncapsulatedToken(Token)",
+          "lines": [
+            352,
+            331,
+            347
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#parseSimpleToken(Token, int)",
+          "lines": [
+            435
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#readEndOfLine(int)",
+          "lines": [
+            454
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#readEscape()",
+          "lines": [
+            486
+          ]
+        }
+      ]
+    },
+    "read(char[], int, int)": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#isDelimiter(int)",
+          "lines": [
+            142
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#isEscapeDelimiter()",
+          "lines": [
+            183
+          ]
+        }
+      ]
+    },
+    "readLine()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#nextToken(Token)",
+          "lines": [
+            257
+          ]
+        }
+      ]
+    },
+    "ExtendedBufferedReader(Reader)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.ExtendedBufferedReader#printWithEscapes(Reader, Appendable)",
+          "lines": [
+            1990
+          ]
+        }
+      ]
+    }
   },
   "org.apache.commons.csv.IOUtils": {
-    "copy(Reader, Appendable)": [
-      "print(Reader, Appendable, boolean)"
-    ],
-    "copy(Reader, Appendable, CharBuffer)": [
-      "copy(Reader, Appendable)"
-    ],
-    "copyLarge(Reader, Writer)": [
-      "print(Reader, Appendable, boolean)"
-    ],
-    "copyLarge(Reader, Writer, char[])": [
-      "copyLarge(Reader, Writer)"
-    ],
-    "rethrow(Throwable)": [
-      "printRecord(Stream<?>)",
-      "printRecords(Stream<?>)"
-    ],
-    "IOUtils()": []
+    "copy(Reader, Appendable)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.IOUtils#print(Reader, Appendable, boolean)",
+          "lines": [
+            1880
+          ]
+        }
+      ]
+    },
+    "copy(Reader, Appendable, CharBuffer)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.IOUtils#copy(Reader, Appendable)",
+          "lines": [
+            53
+          ]
+        }
+      ]
+    },
+    "copyLarge(Reader, Writer)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.IOUtils#print(Reader, Appendable, boolean)",
+          "lines": [
+            1878
+          ]
+        }
+      ]
+    },
+    "copyLarge(Reader, Writer, char[])": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.IOUtils#copyLarge(Reader, Writer)",
+          "lines": [
+            100
+          ]
+        }
+      ]
+    },
+    "rethrow(Throwable)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.IOUtils#printRecord(Stream<?>)",
+          "lines": [
+            302
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.IOUtils#printRecords(Stream<?>)",
+          "lines": [
+            491
+          ]
+        }
+      ]
+    },
+    "IOUtils()": {
+      "type": "PRIVATE",
+      "caller": []
+    }
   },
   "org.apache.commons.csv.Lexer": {
-    "close()": [
-      "close()"
-    ],
-    "getCharacterPosition()": [
-      "nextRecord()"
-    ],
-    "getCurrentLineNumber()": [
-      "getCurrentLineNumber()",
-      "parseEncapsulatedToken(Token)"
-    ],
-    "getFirstEol()": [
-      "getFirstEndOfLine()"
-    ],
-    "isClosed()": [
-      "isClosed()"
-    ],
-    "isCommentStart(int)": [
-      "nextToken(Token)"
-    ],
-    "isDelimiter(int)": [
-      "nextToken(Token)",
-      "parseEncapsulatedToken(Token)",
-      "parseSimpleToken(Token, int)"
-    ],
-    "isEndOfFile(int)": [
-      "nextToken(Token)",
-      "parseEncapsulatedToken(Token)",
-      "parseSimpleToken(Token, int)"
-    ],
-    "isEscape(int)": [
-      "parseEncapsulatedToken(Token)",
-      "parseSimpleToken(Token, int)"
-    ],
-    "isEscapeDelimiter()": [
-      "parseEncapsulatedToken(Token)",
-      "parseSimpleToken(Token, int)"
-    ],
-    "isMetaChar(int)": [
-      "readEscape()"
-    ],
-    "isQuoteChar(int)": [
-      "nextToken(Token)",
-      "parseEncapsulatedToken(Token)"
-    ],
-    "isStartOfLine(int)": [
-      "nextToken(Token)"
-    ],
-    "mapNullToDisabled(Character)": [],
-    "nextToken(Token)": [
-      "nextRecord()"
-    ],
-    "parseEncapsulatedToken(Token)": [
-      "nextToken(Token)"
-    ],
-    "parseSimpleToken(Token, int)": [
-      "nextToken(Token)"
-    ],
-    "readEndOfLine(int)": [
-      "nextToken(Token)",
-      "parseEncapsulatedToken(Token)",
-      "parseSimpleToken(Token, int)"
-    ],
-    "readEscape()": [
-      "parseEncapsulatedToken(Token)",
-      "parseSimpleToken(Token, int)"
-    ],
-    "trimTrailingSpaces(StringBuilder)": [
-      "parseSimpleToken(Token, int)"
-    ],
-    "Lexer(CSVFormat, ExtendedBufferedReader)": []
+    "close()": {
+      "type": "PUBLIC",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#close()",
+          "lines": [
+            459
+          ]
+        }
+      ]
+    },
+    "getCharacterPosition()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextRecord()",
+          "lines": [
+            766
+          ]
+        }
+      ]
+    },
+    "getCurrentLineNumber()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#getCurrentLineNumber()",
+          "lines": [
+            552
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)",
+          "lines": [
+            368,
+            328
+          ]
+        }
+      ]
+    },
+    "getFirstEol()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#getFirstEndOfLine()",
+          "lines": [
+            562
+          ]
+        }
+      ]
+    },
+    "isClosed()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#isClosed()",
+          "lines": [
+            717
+          ]
+        }
+      ]
+    },
+    "isCommentStart(int)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextToken(Token)",
+          "lines": [
+            256
+          ]
+        }
+      ]
+    },
+    "isDelimiter(int)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextToken(Token)",
+          "lines": [
+            273,
+            280
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)",
+          "lines": [
+            353
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseSimpleToken(Token, int)",
+          "lines": [
+            416
+          ]
+        }
+      ]
+    },
+    "isEndOfFile(int)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextToken(Token)",
+          "lines": [
+            241,
+            290,
+            250
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)",
+          "lines": [
+            357,
+            373
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseSimpleToken(Token, int)",
+          "lines": [
+            411
+          ]
+        }
+      ]
+    },
+    "isEscape(int)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)",
+          "lines": [
+            333
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseSimpleToken(Token, int)",
+          "lines": [
+            421
+          ]
+        }
+      ]
+    },
+    "isEscapeDelimiter()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)",
+          "lines": [
+            334
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseSimpleToken(Token, int)",
+          "lines": [
+            422
+          ]
+        }
+      ]
+    },
+    "isMetaChar(int)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#readEscape()",
+          "lines": [
+            508
+          ]
+        }
+      ]
+    },
+    "isQuoteChar(int)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextToken(Token)",
+          "lines": [
+            287
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)",
+          "lines": [
+            344,
+            345
+          ]
+        }
+      ]
+    },
+    "isStartOfLine(int)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextToken(Token)",
+          "lines": [
+            256,
+            235
+          ]
+        }
+      ]
+    },
+    "mapNullToDisabled(Character)": {
+      "type": "PRIVATE",
+      "caller": []
+    },
+    "nextToken(Token)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextRecord()",
+          "lines": [
+            769
+          ]
+        }
+      ]
+    },
+    "parseEncapsulatedToken(Token)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextToken(Token)",
+          "lines": [
+            289
+          ]
+        }
+      ]
+    },
+    "parseSimpleToken(Token, int)": {
+      "type": "PRIVATE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextToken(Token)",
+          "lines": [
+            298
+          ]
+        }
+      ]
+    },
+    "readEndOfLine(int)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#nextToken(Token)",
+          "lines": [
+            275,
+            231,
+            239
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)",
+          "lines": [
+            362
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseSimpleToken(Token, int)",
+          "lines": [
+            407
+          ]
+        }
+      ]
+    },
+    "readEscape()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseEncapsulatedToken(Token)",
+          "lines": [
+            337
+          ]
+        },
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseSimpleToken(Token, int)",
+          "lines": [
+            425
+          ]
+        }
+      ]
+    },
+    "trimTrailingSpaces(StringBuilder)": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Lexer#parseSimpleToken(Token, int)",
+          "lines": [
+            439
+          ]
+        }
+      ]
+    },
+    "Lexer(CSVFormat, ExtendedBufferedReader)": {
+      "type": "NONE",
+      "caller": []
+    }
   },
   "org.apache.commons.csv.QuoteMode": {},
   "org.apache.commons.csv.Token": {
-    "reset()": [
-      "nextRecord()"
-    ],
-    "toString()": []
+    "reset()": {
+      "type": "NONE",
+      "caller": [
+        {
+          "sig": "org.apache.commons.csv.Token#nextRecord()",
+          "lines": [
+            768
+          ]
+        }
+      ]
+    },
+    "toString()": {
+      "type": "PUBLIC",
+      "caller": []
+    }
   },
   "org.apache.commons.csv.Token.Type": {}
 }

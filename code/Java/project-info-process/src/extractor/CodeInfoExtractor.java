@@ -22,6 +22,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -54,12 +55,26 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
         });
         // get method call
         List<MethodCallExpr> methodCalls = constructor.findAll(MethodCallExpr.class);
-        Set<CallMethodInfo> method_call_list = new HashSet<CallMethodInfo>();
+        HashMap<CallMethodInfo, Set<Integer>> method_call_list = new HashMap<CallMethodInfo, Set<Integer>>();
         for (MethodCallExpr methodCall : methodCalls) {
             CallMethodInfo method_call_info = resolveQualifiedName(methodCall);
-            if (!method_call_info.getSignature().startsWith(full_class_name)) {
-                method_call_list.add(method_call_info);
+            // if (!method_call_info.getSignature().startsWith(full_class_name)) {
+            // method_call_list.add(method_call_info);
+            int[] call_pos = getPosition(methodCall);
+            if (method_call_list.get(method_call_info) == null) {
+                Set<Integer> line_numbers = new HashSet<Integer>();
+                line_numbers.add(call_pos[0]);
+                method_call_list.put(method_call_info, line_numbers);
+            } else {
+                Set<Integer> line_numbers = method_call_list.get(method_call_info);
+                line_numbers.add(call_pos[0]);
             }
+            // }
+        }
+        for (CallMethodInfo method_call_info : method_call_list.keySet()) {
+            Set<Integer> line_numbers = method_call_list.get(method_call_info);
+            int[] intArray = line_numbers.stream().mapToInt(Integer::intValue).toArray();
+            method_call_info.setLineNumbers(intArray);
         }
         // get external fields
         Set<VariableInfo> external_fields = new HashSet<VariableInfo>();
@@ -68,10 +83,12 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
             external_fields.add(field_info);
         });
 
+        AccessSpecifier access_type = constructor.getAccessSpecifier();
         ConstructorInfo constructor_obj = new ConstructorInfo(signature,
                 parameters,
                 position,
-                method_call_list.toArray(new CallMethodInfo[0]),
+                access_type,
+                method_call_list.keySet().toArray(new CallMethodInfo[0]),
                 external_fields.toArray(new VariableInfo[0]));
         JsonObject constructor_info = this.gson.toJsonTree(constructor_obj).getAsJsonObject();
         String methoddoc = extractJavadoc(constructor);
@@ -96,19 +113,41 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
         });
         // get method call
         List<MethodCallExpr> methodCalls = method.findAll(MethodCallExpr.class);
-        Set<CallMethodInfo> method_call_list = new HashSet<CallMethodInfo>();
+        HashMap<CallMethodInfo, Set<Integer>> method_call_list = new HashMap<CallMethodInfo, Set<Integer>>();
         for (MethodCallExpr methodCall : methodCalls) {
             CallMethodInfo method_call_info = resolveQualifiedName(methodCall);
             // if (!method_call_info.getSignature().startsWith(full_class_name)) {
-            method_call_list.add(method_call_info);
+            int[] call_pos = getPosition(methodCall);
+            if (method_call_list.get(method_call_info) == null) {
+                Set<Integer> line_numbers = new HashSet<Integer>();
+                line_numbers.add(call_pos[0]);
+                method_call_list.put(method_call_info, line_numbers);
+            } else {
+                Set<Integer> line_numbers = method_call_list.get(method_call_info);
+                line_numbers.add(call_pos[0]);
+            }
             // }
         }
         List<ObjectCreationExpr> object_creations = method.findAll(ObjectCreationExpr.class);
         for (ObjectCreationExpr objectCreation : object_creations) {
             CallMethodInfo method_call_info = resolveQualifiedName(objectCreation);
             // if (!method_call_info.getSignature().startsWith(full_class_name)) {
-            method_call_list.add(method_call_info);
+            // method_call_list.add(method_call_info);
+            int[] call_pos = getPosition(objectCreation);
+            if (method_call_list.get(method_call_info) == null) {
+                Set<Integer> line_numbers = new HashSet<Integer>();
+                line_numbers.add(call_pos[0]);
+                method_call_list.put(method_call_info, line_numbers);
+            } else {
+                Set<Integer> line_numbers = method_call_list.get(method_call_info);
+                line_numbers.add(call_pos[0]);
+            }
             // }
+        }
+        for (CallMethodInfo method_call_info : method_call_list.keySet()) {
+            Set<Integer> line_numbers = method_call_list.get(method_call_info);
+            int[] intArray = line_numbers.stream().mapToInt(Integer::intValue).toArray();
+            method_call_info.setLineNumbers(intArray);
         }
         // get external fields
         Set<VariableInfo> external_fields = new HashSet<VariableInfo>();
@@ -129,10 +168,10 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
         MethodInfo method_obj = new MethodInfo(signature,
                 parameters,
                 position,
-                method_call_list.toArray(new CallMethodInfo[0]),
+                access_type,
+                method_call_list.keySet().toArray(new CallMethodInfo[0]),
                 external_fields.toArray(new VariableInfo[0]),
-                return_type,
-                access_type);
+                return_type);
         JsonObject method_info = this.gson.toJsonTree(method_obj).getAsJsonObject();
         String methoddoc = extractJavadoc(method);
         if (methoddoc != null)
