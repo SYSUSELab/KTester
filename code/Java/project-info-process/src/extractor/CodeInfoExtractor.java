@@ -44,6 +44,7 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
         int[] position = getPosition(constructor);
         // get method signature
         String signature = constructor.getSignature().toString();
+        signature = signature.replaceAll("\\.\\.\\.", "[]");
         // String body = constructor.getDeclarationAsString() + "\n" +
         // constructor.getBody().toString();
         List<VariableInfo> parameters = new ArrayList<VariableInfo>();
@@ -102,6 +103,7 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
         int[] position = getPosition(method);
         // get method signature
         String signature = method.getDeclarationAsString(true, false, false);
+        signature = signature.replaceAll("\\.\\.\\.", "[]");
         // String body = method.getDeclarationAsString() + "\n" +
         // method.getBody().get().toString();
         List<VariableInfo> parameters = new ArrayList<VariableInfo>();

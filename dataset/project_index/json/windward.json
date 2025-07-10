@@ -832,7 +832,15 @@
                 ]
               },
               {
-                "signature": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#mappingResource(String, ..)",
+                "signature": "java.lang.Enum#name()",
+                "arguments": [],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  165
+                ]
+              },
+              {
+                "signature": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#mappingResource(String, String[])",
                 "arguments": [
                   {
                     "name": "staticResourceLocation",
@@ -840,20 +848,12 @@
                   },
                   {
                     "name": "pathPatterns",
-                    "type": "java.lang.String..."
+                    "type": "java.lang.String"
                   }
                 ],
                 "return_type": "org.flmelody.core.plugin.resource.ResourcePlugin",
                 "line_numbers": [
                   166
-                ]
-              },
-              {
-                "signature": "java.lang.Enum#name()",
-                "arguments": [],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  165
                 ]
               },
               {
@@ -922,7 +922,7 @@
               }
             ],
             "return_type": "org.flmelody.core.RouterGroup<M>",
-            "signature": "public RouterGroup<M> resources(String, String...)",
+            "signature": "public RouterGroup<M> resources(String, String[])",
             "parameters": [
               {
                 "name": "staticResourceLocation",
@@ -1607,23 +1607,6 @@
                 ]
               },
               {
-                "signature": "org.flmelody.util.UrlUtil#buildUrl(..)",
-                "arguments": [
-                  {
-                    "name": "groupPath",
-                    "type": "java.lang.String..."
-                  },
-                  {
-                    "name": "relativePath",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  265
-                ]
-              },
-              {
                 "signature": "java.util.Map#put(K, V)",
                 "arguments": [
                   {
@@ -1664,6 +1647,19 @@
                 ]
               },
               {
+                "signature": "org.flmelody.core.Windward#publishEvent(Event[])",
+                "arguments": [
+                  {
+                    "name": "RouterBindEvent.builder().requestUrl(path).classname(functionDefinition.getClassname()).method(functionDefinition.getMethod()).build()",
+                    "type": "org.flmelody.core.wind.event.Event"
+                  }
+                ],
+                "return_type": "org.flmelody.core.Windward",
+                "line_numbers": [
+                  280
+                ]
+              },
+              {
                 "signature": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder#classname(String)",
                 "arguments": [
                   {
@@ -1674,19 +1670,6 @@
                 "return_type": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder",
                 "line_numbers": [
                   282
-                ]
-              },
-              {
-                "signature": "org.flmelody.core.Windward#publishEvent(..)",
-                "arguments": [
-                  {
-                    "name": "RouterBindEvent.builder().requestUrl(path).classname(functionDefinition.getClassname()).method(functionDefinition.getMethod()).build()",
-                    "type": "org.flmelody.core.wind.event.Event..."
-                  }
-                ],
-                "return_type": "org.flmelody.core.Windward",
-                "line_numbers": [
-                  280
                 ]
               },
               {
@@ -1716,6 +1699,23 @@
                 "return_type": "org.flmelody.support.FunctionDefinition",
                 "line_numbers": [
                   277
+                ]
+              },
+              {
+                "signature": "org.flmelody.util.UrlUtil#buildUrl(String[])",
+                "arguments": [
+                  {
+                    "name": "groupPath",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "relativePath",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  265
                 ]
               },
               {
@@ -2026,15 +2026,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.flmelody.core.WindwardRequest#getRequestBody()",
-                "arguments": [],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  56
-                ]
-              },
-              {
-                "signature": "org.flmelody.core.WindwardRequest#bindJson(String, Class<I>, Class<?>...)",
+                "signature": "org.flmelody.core.WindwardRequest#bindJson(String, Class<I>, Class<?>[])",
                 "arguments": [
                   {
                     "name": "windwardRequest.getRequestBody()",
@@ -2046,10 +2038,18 @@
                   },
                   {
                     "name": "groups",
-                    "type": "java.lang.Class<?>..."
+                    "type": "java.lang.Class<?>"
                   }
                 ],
                 "return_type": "I",
+                "line_numbers": [
+                  56
+                ]
+              },
+              {
+                "signature": "org.flmelody.core.WindwardRequest#getRequestBody()",
+                "arguments": [],
+                "return_type": "java.lang.String",
                 "line_numbers": [
                   56
                 ]
@@ -2062,7 +2062,7 @@
               }
             ],
             "return_type": "I",
-            "signature": "public I bindJson(Class<I>, Class<?>...)",
+            "signature": "public I bindJson(Class<I>, Class<?>[])",
             "parameters": [
               {
                 "name": "clazz",
@@ -2089,7 +2089,7 @@
                 ]
               },
               {
-                "signature": "org.flmelody.core.WindwardRequest#bindJson(String, Type, Class<?>...)",
+                "signature": "org.flmelody.core.WindwardRequest#bindJson(String, Type, Class<?>[])",
                 "arguments": [
                   {
                     "name": "windwardRequest.getRequestBody()",
@@ -2101,7 +2101,7 @@
                   },
                   {
                     "name": "groups",
-                    "type": "java.lang.Class<?>..."
+                    "type": "java.lang.Class<?>"
                   }
                 ],
                 "return_type": "I",
@@ -2117,7 +2117,7 @@
               }
             ],
             "return_type": "I",
-            "signature": "public I bindJson(Type, Class<?>...)",
+            "signature": "public I bindJson(Type, Class<?>[])",
             "parameters": [
               {
                 "name": "type",
@@ -3572,7 +3572,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
-            "signature": " abstract I bindJson(Class<I>, Class<?>...)",
+            "signature": " abstract I bindJson(Class<I>, Class<?>[])",
             "parameters": [
               {
                 "name": "clazz",
@@ -3592,7 +3592,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
-            "signature": " abstract I bindJson(Type, Class<?>...)",
+            "signature": " abstract I bindJson(Type, Class<?>[])",
             "parameters": [
               {
                 "name": "type",
@@ -4647,20 +4647,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.flmelody.core.exception.ValidationException#ValidationException(String)",
-                "arguments": [
-                  {
-                    "name": "\"Body is empty\"",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "org.flmelody.core.exception.ValidationException",
-                "line_numbers": [
-                  47
-                ]
-              },
-              {
-                "signature": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Class<T>, Class<?>...)",
+                "signature": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Class<T>, Class<?>[])",
                 "arguments": [
                   {
                     "name": "Windward.plugin(JsonPlugin.class)",
@@ -4676,12 +4663,25 @@
                   },
                   {
                     "name": "groups",
-                    "type": "java.lang.Class<?>..."
+                    "type": "java.lang.Class<?>"
                   }
                 ],
                 "return_type": "T",
                 "line_numbers": [
                   49
+                ]
+              },
+              {
+                "signature": "org.flmelody.core.exception.ValidationException#ValidationException(String)",
+                "arguments": [
+                  {
+                    "name": "\"Body is empty\"",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "org.flmelody.core.exception.ValidationException",
+                "line_numbers": [
+                  47
                 ]
               },
               {
@@ -4700,7 +4700,7 @@
             ],
             "external_fields": [],
             "return_type": "I",
-            "signature": "public I bindJson(String, Class<I>, Class<?>...)",
+            "signature": "public I bindJson(String, Class<I>, Class<?>[])",
             "parameters": [
               {
                 "name": "body",
@@ -4722,7 +4722,20 @@
           {
             "call_methods": [
               {
-                "signature": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Type, Class<?>...)",
+                "signature": "org.flmelody.core.exception.ValidationException#ValidationException(String)",
+                "arguments": [
+                  {
+                    "name": "\"Body is empty\"",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "org.flmelody.core.exception.ValidationException",
+                "line_numbers": [
+                  55
+                ]
+              },
+              {
+                "signature": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Type, Class<?>[])",
                 "arguments": [
                   {
                     "name": "Windward.plugin(JsonPlugin.class)",
@@ -4738,25 +4751,12 @@
                   },
                   {
                     "name": "groups",
-                    "type": "java.lang.Class<?>..."
+                    "type": "java.lang.Class<?>"
                   }
                 ],
                 "return_type": "T",
                 "line_numbers": [
                   57
-                ]
-              },
-              {
-                "signature": "org.flmelody.core.exception.ValidationException#ValidationException(String)",
-                "arguments": [
-                  {
-                    "name": "\"Body is empty\"",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "org.flmelody.core.exception.ValidationException",
-                "line_numbers": [
-                  55
                 ]
               },
               {
@@ -4775,7 +4775,7 @@
             ],
             "external_fields": [],
             "return_type": "I",
-            "signature": "public I bindJson(String, Type, Class<?>...)",
+            "signature": "public I bindJson(String, Type, Class<?>[])",
             "parameters": [
               {
                 "name": "body",
@@ -6684,19 +6684,6 @@
                 ]
               },
               {
-                "signature": "io.netty.channel.ChannelPipeline#addLast(..)",
-                "arguments": [
-                  {
-                    "name": "new SocketTailHandler()",
-                    "type": "io.netty.channel.ChannelHandler..."
-                  }
-                ],
-                "return_type": "io.netty.channel.ChannelPipeline",
-                "line_numbers": [
-                  103
-                ]
-              },
-              {
                 "signature": "io.netty.handler.codec.http.websocketx.WebSocketServerProtocolHandler#WebSocketServerProtocolHandler(String, String, boolean)",
                 "arguments": [
                   {
@@ -6745,6 +6732,19 @@
                 "return_type": "io.netty.handler.codec.http.HttpMethod",
                 "line_numbers": [
                   79
+                ]
+              },
+              {
+                "signature": "io.netty.channel.ChannelPipeline#addLast(ChannelHandler[])",
+                "arguments": [
+                  {
+                    "name": "new SocketTailHandler()",
+                    "type": "io.netty.channel.ChannelHandler"
+                  }
+                ],
+                "return_type": "io.netty.channel.ChannelPipeline",
+                "line_numbers": [
+                  103
                 ]
               },
               {
@@ -7186,6 +7186,20 @@
                 ]
               },
               {
+                "signature": "io.netty.channel.ChannelPipeline#addLast(ChannelHandler[])",
+                "arguments": [
+                  {
+                    "name": "webSocketCodecs.toArray(new WebSocketCodec[0])",
+                    "type": "io.netty.channel.ChannelHandler"
+                  }
+                ],
+                "return_type": "io.netty.channel.ChannelPipeline",
+                "line_numbers": [
+                  164,
+                  167
+                ]
+              },
+              {
                 "signature": "org.flmelody.core.plugin.ws.ExtensionalWebSocketPlugin#getWebSocketCodecs()",
                 "arguments": [],
                 "return_type": "java.util.List<org.flmelody.core.ws.codec.WebSocketCodec>",
@@ -7212,20 +7226,6 @@
                 "return_type": "io.netty.util.Attribute<T>",
                 "line_numbers": [
                   169
-                ]
-              },
-              {
-                "signature": "io.netty.channel.ChannelPipeline#addLast(..)",
-                "arguments": [
-                  {
-                    "name": "webSocketCodecs.toArray(new WebSocketCodec[0])",
-                    "type": "io.netty.channel.ChannelHandler..."
-                  }
-                ],
-                "return_type": "io.netty.channel.ChannelPipeline",
-                "line_numbers": [
-                  164,
-                  167
                 ]
               },
               {
@@ -7498,6 +7498,23 @@
                 ]
               },
               {
+                "signature": "java.lang.Class#getConstructor(Class<?>[])",
+                "arguments": [
+                  {
+                    "name": "WindwardRequest.class",
+                    "type": "java.lang.Class<?>"
+                  },
+                  {
+                    "name": "WindwardResponse.class",
+                    "type": "java.lang.Class<?>"
+                  }
+                ],
+                "return_type": "java.lang.reflect.Constructor<T>",
+                "line_numbers": [
+                  228
+                ]
+              },
+              {
                 "signature": "io.netty.buffer.ByteBuf#toString(Charset)",
                 "arguments": [
                   {
@@ -7528,6 +7545,23 @@
                   232,
                   218,
                   236
+                ]
+              },
+              {
+                "signature": "java.lang.reflect.Constructor#newInstance(Object[])",
+                "arguments": [
+                  {
+                    "name": "windwardRequestBuilder.pathVariables(functionMetaInfo.getPathVariables()).build()",
+                    "type": "java.lang.Object"
+                  },
+                  {
+                    "name": "windwardResponseBuild.build()",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "T",
+                "line_numbers": [
+                  228
                 ]
               },
               {
@@ -7736,23 +7770,6 @@
                 ]
               },
               {
-                "signature": "java.lang.Class#getConstructor(Class<?>...)",
-                "arguments": [
-                  {
-                    "name": "WindwardRequest.class",
-                    "type": "java.lang.Class<?>..."
-                  },
-                  {
-                    "name": "WindwardResponse.class",
-                    "type": "java.lang.Class<?>"
-                  }
-                ],
-                "return_type": "java.lang.reflect.Constructor<T>",
-                "line_numbers": [
-                  228
-                ]
-              },
-              {
                 "signature": "io.netty.handler.codec.http.HttpUtil#isKeepAlive(HttpMessage)",
                 "arguments": [
                   {
@@ -7870,23 +7887,6 @@
                 "return_type": "io.netty.handler.codec.http.HttpHeaders",
                 "line_numbers": [
                   205
-                ]
-              },
-              {
-                "signature": "java.lang.reflect.Constructor#newInstance(..)",
-                "arguments": [
-                  {
-                    "name": "windwardRequestBuilder.pathVariables(functionMetaInfo.getPathVariables()).build()",
-                    "type": "java.lang.Object..."
-                  },
-                  {
-                    "name": "windwardResponseBuild.build()",
-                    "type": "java.lang.Object"
-                  }
-                ],
-                "return_type": "T",
-                "line_numbers": [
-                  228
                 ]
               },
               {
@@ -9075,6 +9075,22 @@
                 ]
               },
               {
+                "signature": "io.netty.channel.ChannelPipeline#addLast(ChannelHandler[])",
+                "arguments": [
+                  {
+                    "name": "new HttpServerCodec()",
+                    "type": "io.netty.channel.ChannelHandler"
+                  }
+                ],
+                "return_type": "io.netty.channel.ChannelPipeline",
+                "line_numbers": [
+                  68,
+                  69,
+                  61,
+                  62
+                ]
+              },
+              {
                 "signature": "org.flmelody.core.exception.ServerException#ServerException(String)",
                 "arguments": [
                   {
@@ -9148,22 +9164,6 @@
                 "line_numbers": [
                   50,
                   51
-                ]
-              },
-              {
-                "signature": "io.netty.channel.ChannelPipeline#addLast(..)",
-                "arguments": [
-                  {
-                    "name": "new HttpServerCodec()",
-                    "type": "io.netty.channel.ChannelHandler..."
-                  }
-                ],
-                "return_type": "io.netty.channel.ChannelPipeline",
-                "line_numbers": [
-                  68,
-                  69,
-                  61,
-                  62
                 ]
               },
               {
@@ -11343,23 +11343,6 @@
                 ]
               },
               {
-                "signature": "org.flmelody.util.UrlUtil#buildUrl(..)",
-                "arguments": [
-                  {
-                    "name": "staticResourceLocation",
-                    "type": "java.lang.String..."
-                  },
-                  {
-                    "name": "fileUri",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  75
-                ]
-              },
-              {
                 "signature": "java.util.stream.Stream#collect(Collector<? super T, A, R>)",
                 "arguments": [
                   {
@@ -11404,6 +11387,23 @@
                 "return_type": "int",
                 "line_numbers": [
                   83
+                ]
+              },
+              {
+                "signature": "org.flmelody.util.UrlUtil#buildUrl(String[])",
+                "arguments": [
+                  {
+                    "name": "staticResourceLocation",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "fileUri",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  75
                 ]
               },
               {
@@ -11493,7 +11493,7 @@
               }
             ],
             "return_type": "org.flmelody.core.plugin.resource.ResourcePlugin",
-            "signature": "public final ResourcePlugin mappingResource(String, String...)",
+            "signature": "public final ResourcePlugin mappingResource(String, String[])",
             "parameters": [
               {
                 "name": "staticResourceLocation",
@@ -11564,6 +11564,19 @@
           {
             "call_methods": [
               {
+                "signature": "java.util.Arrays#asList(T[])",
+                "arguments": [
+                  {
+                    "name": "pageNames",
+                    "type": "T"
+                  }
+                ],
+                "return_type": "java.util.List<T>",
+                "line_numbers": [
+                  46
+                ]
+              },
+              {
                 "signature": "java.util.Set#addAll(Collection<? extends E>)",
                 "arguments": [
                   {
@@ -11572,19 +11585,6 @@
                   }
                 ],
                 "return_type": "boolean",
-                "line_numbers": [
-                  46
-                ]
-              },
-              {
-                "signature": "java.util.Arrays#asList(..)",
-                "arguments": [
-                  {
-                    "name": "pageNames",
-                    "type": "T..."
-                  }
-                ],
-                "return_type": "java.util.List<T>",
                 "line_numbers": [
                   46
                 ]
@@ -11597,7 +11597,7 @@
               }
             ],
             "return_type": "void",
-            "signature": "public void appendPages(String...)",
+            "signature": "public void appendPages(String[])",
             "parameters": [
               {
                 "name": "pageNames",
@@ -11685,25 +11685,6 @@
                 ]
               },
               {
-                "signature": "org.flmelody.util.UrlUtil#buildUrl(..)",
-                "arguments": [
-                  {
-                    "name": "fileUri",
-                    "type": "java.lang.String..."
-                  },
-                  {
-                    "name": "fixedPage",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  84,
-                  76,
-                  92
-                ]
-              },
-              {
                 "signature": "java.util.stream.IntStream#count()",
                 "arguments": [],
                 "return_type": "long",
@@ -11739,6 +11720,25 @@
                 "return_type": "java.util.StringTokenizer",
                 "line_numbers": [
                   81
+                ]
+              },
+              {
+                "signature": "org.flmelody.util.UrlUtil#buildUrl(String[])",
+                "arguments": [
+                  {
+                    "name": "fileUri",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "fixedPage",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  84,
+                  76,
+                  92
                 ]
               },
               {
@@ -11863,7 +11863,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "org.flmelody.core.plugin.resource.ResourcePlugin",
-            "signature": " abstract ResourcePlugin mappingResource(String, String...)",
+            "signature": " abstract ResourcePlugin mappingResource(String, String[])",
             "parameters": [
               {
                 "name": "staticResourceLocation",
@@ -12310,6 +12310,23 @@
           {
             "call_methods": [
               {
+                "signature": "org.flmelody.util.UrlUtil#buildUrl(String[])",
+                "arguments": [
+                  {
+                    "name": "templateLocationPrefix",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "viewUrl",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  52
+                ]
+              },
+              {
                 "signature": "org.flmelody.core.plugin.view.ViewPlugin#render(String, Map<String, Object>)",
                 "arguments": [
                   {
@@ -12319,23 +12336,6 @@
                   {
                     "name": "model",
                     "type": "java.util.Map<java.lang.String, java.lang.Object>"
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  52
-                ]
-              },
-              {
-                "signature": "org.flmelody.util.UrlUtil#buildUrl(..)",
-                "arguments": [
-                  {
-                    "name": "templateLocationPrefix",
-                    "type": "java.lang.String..."
-                  },
-                  {
-                    "name": "viewUrl",
-                    "type": "java.lang.String"
                   }
                 ],
                 "return_type": "java.lang.String",
@@ -13209,7 +13209,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
-            "signature": " abstract I bindJson(String, Class<I>, Class<?>...)",
+            "signature": " abstract I bindJson(String, Class<I>, Class<?>[])",
             "parameters": [
               {
                 "name": "body",
@@ -13233,7 +13233,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "I",
-            "signature": " abstract I bindJson(String, Type, Class<?>...)",
+            "signature": " abstract I bindJson(String, Type, Class<?>[])",
             "parameters": [
               {
                 "name": "body",
@@ -13816,7 +13816,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
-            "signature": " T resource(String...)",
+            "signature": " T resource(String[])",
             "parameters": [
               {
                 "name": "pathPatterns",
@@ -13834,7 +13834,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "T",
-            "signature": " abstract T resources(String, String...)",
+            "signature": " abstract T resources(String, String[])",
             "parameters": [
               {
                 "name": "staticResourceLocation",
@@ -14578,7 +14578,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.flmelody.core.Windward#setup(int, ..)",
+                "signature": "org.flmelody.core.Windward#setup(int, Filter[])",
                 "arguments": [
                   {
                     "name": "8080",
@@ -14586,7 +14586,7 @@
                   },
                   {
                     "name": "new LoggingFilter()",
-                    "type": "org.flmelody.core.Filter..."
+                    "type": "org.flmelody.core.Filter"
                   }
                 ],
                 "return_type": "org.flmelody.core.Windward",
@@ -14614,7 +14614,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.flmelody.core.Windward#setup(int, String, ..)",
+                "signature": "org.flmelody.core.Windward#setup(int, String, Filter[])",
                 "arguments": [
                   {
                     "name": "port",
@@ -14626,7 +14626,7 @@
                   },
                   {
                     "name": "filters",
-                    "type": "org.flmelody.core.Filter..."
+                    "type": "org.flmelody.core.Filter"
                   }
                 ],
                 "return_type": "org.flmelody.core.Windward",
@@ -14642,7 +14642,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
-            "signature": "public static Windward setup(int, Filter...)",
+            "signature": "public static Windward setup(int, Filter[])",
             "parameters": [
               {
                 "name": "port",
@@ -14661,7 +14661,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.flmelody.core.Windward#setup(int, String, String, String, ..)",
+                "signature": "org.flmelody.core.Windward#setup(int, String, String, String, Filter[])",
                 "arguments": [
                   {
                     "name": "port",
@@ -14681,7 +14681,7 @@
                   },
                   {
                     "name": "filters",
-                    "type": "org.flmelody.core.Filter..."
+                    "type": "org.flmelody.core.Filter"
                   }
                 ],
                 "return_type": "org.flmelody.core.Windward",
@@ -14692,7 +14692,7 @@
             ],
             "external_fields": [],
             "return_type": "org.flmelody.core.Windward",
-            "signature": "public static Windward setup(int, String, Filter...)",
+            "signature": "public static Windward setup(int, String, Filter[])",
             "parameters": [
               {
                 "name": "port",
@@ -14774,11 +14774,11 @@
                 ]
               },
               {
-                "signature": "org.flmelody.core.Windward#registerExceptionHandler(..)",
+                "signature": "org.flmelody.core.Windward#registerExceptionHandler(ExceptionHandler[])",
                 "arguments": [
                   {
                     "name": "new DefaultNotFoundHandler()",
-                    "type": "org.flmelody.core.ExceptionHandler..."
+                    "type": "org.flmelody.core.ExceptionHandler"
                   }
                 ],
                 "return_type": "org.flmelody.core.Windward",
@@ -14808,11 +14808,11 @@
                 ]
               },
               {
-                "signature": "org.flmelody.core.Windward#registerFilter(..)",
+                "signature": "org.flmelody.core.Windward#registerFilter(Filter[])",
                 "arguments": [
                   {
                     "name": "filters",
-                    "type": "org.flmelody.core.Filter..."
+                    "type": "org.flmelody.core.Filter"
                   }
                 ],
                 "return_type": "org.flmelody.core.Windward",
@@ -14840,7 +14840,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
-            "signature": "public static Windward setup(int, String, String, String, Filter...)",
+            "signature": "public static Windward setup(int, String, String, String, Filter[])",
             "parameters": [
               {
                 "name": "port",
@@ -15021,6 +15021,23 @@
           {
             "call_methods": [
               {
+                "signature": "org.flmelody.util.UrlUtil#buildUrl(String[])",
+                "arguments": [
+                  {
+                    "name": "contextPath",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "relativePath",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  174
+                ]
+              },
+              {
                 "signature": "java.util.List#add(E)",
                 "arguments": [
                   {
@@ -15031,23 +15048,6 @@
                 "return_type": "boolean",
                 "line_numbers": [
                   175
-                ]
-              },
-              {
-                "signature": "org.flmelody.util.UrlUtil#buildUrl(..)",
-                "arguments": [
-                  {
-                    "name": "contextPath",
-                    "type": "java.lang.String..."
-                  },
-                  {
-                    "name": "relativePath",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  174
                 ]
               },
               {
@@ -15096,6 +15096,23 @@
           {
             "call_methods": [
               {
+                "signature": "org.flmelody.util.UrlUtil#buildUrl(String[])",
+                "arguments": [
+                  {
+                    "name": "contextPath",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "relativePath",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  188
+                ]
+              },
+              {
                 "signature": "java.util.List#add(E)",
                 "arguments": [
                   {
@@ -15125,23 +15142,6 @@
                   }
                 ],
                 "return_type": "org.flmelody.core.DefaultRouterGroup",
-                "line_numbers": [
-                  188
-                ]
-              },
-              {
-                "signature": "org.flmelody.util.UrlUtil#buildUrl(..)",
-                "arguments": [
-                  {
-                    "name": "contextPath",
-                    "type": "java.lang.String..."
-                  },
-                  {
-                    "name": "relativePath",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "java.lang.String",
                 "line_numbers": [
                   188
                 ]
@@ -15188,11 +15188,11 @@
                 ]
               },
               {
-                "signature": "java.util.Arrays#asList(..)",
+                "signature": "java.util.Arrays#asList(T[])",
                 "arguments": [
                   {
                     "name": "filters",
-                    "type": "T..."
+                    "type": "T"
                   }
                 ],
                 "return_type": "java.util.List<T>",
@@ -15212,7 +15212,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
-            "signature": "public Windward registerFilter(Filter...)",
+            "signature": "public Windward registerFilter(Filter[])",
             "parameters": [
               {
                 "name": "filters",
@@ -15242,6 +15242,19 @@
                 ]
               },
               {
+                "signature": "java.util.Arrays#asList(T[])",
+                "arguments": [
+                  {
+                    "name": "exceptionHandlers",
+                    "type": "T"
+                  }
+                ],
+                "return_type": "java.util.List<T>",
+                "line_numbers": [
+                  217
+                ]
+              },
+              {
                 "signature": "java.util.Comparator#comparingInt(ToIntFunction<? super T>)",
                 "arguments": [
                   {
@@ -15252,19 +15265,6 @@
                 "return_type": "java.util.Comparator<T>",
                 "line_numbers": [
                   218
-                ]
-              },
-              {
-                "signature": "java.util.Arrays#asList(..)",
-                "arguments": [
-                  {
-                    "name": "exceptionHandlers",
-                    "type": "T..."
-                  }
-                ],
-                "return_type": "java.util.List<T>",
-                "line_numbers": [
-                  217
                 ]
               },
               {
@@ -15292,7 +15292,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
-            "signature": "public Windward registerExceptionHandler(ExceptionHandler...)",
+            "signature": "public Windward registerExceptionHandler(ExceptionHandler[])",
             "parameters": [
               {
                 "name": "exceptionHandlers",
@@ -15329,7 +15329,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
-            "signature": "public Windward registerListener(Listener...)",
+            "signature": "public Windward registerListener(Listener[])",
             "parameters": [
               {
                 "name": "listeners",
@@ -15510,7 +15510,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
-            "signature": "public Windward publishEvent(Event...)",
+            "signature": "public Windward publishEvent(Event[])",
             "parameters": [
               {
                 "name": "events",
@@ -15667,6 +15667,23 @@
                 ]
               },
               {
+                "signature": "java.lang.String#format(String, Object[])",
+                "arguments": [
+                  {
+                    "name": "\"Plugin [%s] not found\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "clazz.getName()",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  336
+                ]
+              },
+              {
                 "signature": "java.lang.Class#getName()",
                 "arguments": [],
                 "return_type": "java.lang.String",
@@ -15685,23 +15702,6 @@
                 "return_type": "V",
                 "line_numbers": [
                   339
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
-                "arguments": [
-                  {
-                    "name": "\"Plugin [%s] not found\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "clazz.getName()",
-                    "type": "java.lang.Object..."
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  336
                 ]
               }
             ],
@@ -16890,7 +16890,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.flmelody.core.Windward#resources(String, ..)",
+                "signature": "org.flmelody.core.Windward#resources(String, String[])",
                 "arguments": [
                   {
                     "name": "staticResourceLocation",
@@ -16898,7 +16898,7 @@
                   },
                   {
                     "name": "pathPatterns",
-                    "type": "java.lang.String..."
+                    "type": "java.lang.String"
                   }
                 ],
                 "return_type": "org.flmelody.core.Windward",
@@ -16914,7 +16914,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
-            "signature": "public Windward resource(String...)",
+            "signature": "public Windward resource(String[])",
             "parameters": [
               {
                 "name": "pathPatterns",
@@ -16944,7 +16944,7 @@
                 ]
               },
               {
-                "signature": "org.flmelody.core.Router#resources(String, ..)",
+                "signature": "org.flmelody.core.Router#resources(String, String[])",
                 "arguments": [
                   {
                     "name": "staticResourceLocation",
@@ -16952,7 +16952,7 @@
                   },
                   {
                     "name": "pathPatterns",
-                    "type": "java.lang.String..."
+                    "type": "java.lang.String"
                   }
                 ],
                 "return_type": "T",
@@ -16968,7 +16968,7 @@
               }
             ],
             "return_type": "org.flmelody.core.Windward",
-            "signature": "public Windward resources(String, String...)",
+            "signature": "public Windward resources(String, String[])",
             "parameters": [
               {
                 "name": "staticResourceLocation",
@@ -17345,7 +17345,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.flmelody.core.RequestReader#bindJson(String, Class<I>, Class<?>...)",
+                "signature": "org.flmelody.core.RequestReader#bindJson(String, Class<I>, Class<?>[])",
                 "arguments": [
                   {
                     "name": "body",
@@ -17357,7 +17357,7 @@
                   },
                   {
                     "name": "groups",
-                    "type": "java.lang.Class<?>..."
+                    "type": "java.lang.Class<?>"
                   }
                 ],
                 "return_type": "I",
@@ -17373,7 +17373,7 @@
               }
             ],
             "return_type": "I",
-            "signature": "public I bindJson(String, Class<I>, Class<?>...)",
+            "signature": "public I bindJson(String, Class<I>, Class<?>[])",
             "parameters": [
               {
                 "name": "body",
@@ -17396,7 +17396,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.flmelody.core.RequestReader#bindJson(String, Type, Class<?>...)",
+                "signature": "org.flmelody.core.RequestReader#bindJson(String, Type, Class<?>[])",
                 "arguments": [
                   {
                     "name": "body",
@@ -17408,7 +17408,7 @@
                   },
                   {
                     "name": "groups",
-                    "type": "java.lang.Class<?>..."
+                    "type": "java.lang.Class<?>"
                   }
                 ],
                 "return_type": "I",
@@ -17424,7 +17424,7 @@
               }
             ],
             "return_type": "I",
-            "signature": "public I bindJson(String, Type, Class<?>...)",
+            "signature": "public I bindJson(String, Type, Class<?>[])",
             "parameters": [
               {
                 "name": "body",
@@ -19659,19 +19659,6 @@
           {
             "call_methods": [
               {
-                "signature": "java.lang.Class#getDeclaredMethod(String, Class<?>...)",
-                "arguments": [
-                  {
-                    "name": "\"writeReplace\"",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "java.lang.reflect.Method",
-                "line_numbers": [
-                  104
-                ]
-              },
-              {
                 "signature": "java.lang.Object#getClass()",
                 "arguments": [],
                 "return_type": "java.lang.Class<?>",
@@ -19680,7 +19667,7 @@
                 ]
               },
               {
-                "signature": "java.lang.reflect.Method#invoke(Object, ..)",
+                "signature": "java.lang.reflect.Method#invoke(Object, Object[])",
                 "arguments": [
                   {
                     "name": "lambda",
@@ -19720,6 +19707,19 @@
                 "return_type": "void",
                 "line_numbers": [
                   105
+                ]
+              },
+              {
+                "signature": "java.lang.Class#getDeclaredMethod(String, Class<?>[])",
+                "arguments": [
+                  {
+                    "name": "\"writeReplace\"",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "java.lang.reflect.Method",
+                "line_numbers": [
+                  104
                 ]
               }
             ],
@@ -20804,7 +20804,7 @@
               }
             ],
             "return_type": "java.lang.String",
-            "signature": "public static String buildUrl(String...)",
+            "signature": "public static String buildUrl(String[])",
             "parameters": [
               {
                 "name": "path",
@@ -20846,6 +20846,23 @@
           {
             "call_methods": [
               {
+                "signature": "org.flmelody.util.ValidationUtil#validate(T, Class<?>[])",
+                "arguments": [
+                  {
+                    "name": "jsonPlugin.toObject(content, targetClass)",
+                    "type": "T"
+                  },
+                  {
+                    "name": "groups",
+                    "type": "java.lang.Class<?>"
+                  }
+                ],
+                "return_type": "T",
+                "line_numbers": [
+                  51
+                ]
+              },
+              {
                 "signature": "org.flmelody.core.plugin.json.JsonPlugin#toObject(String, Class<O>)",
                 "arguments": [
                   {
@@ -20861,28 +20878,11 @@
                 "line_numbers": [
                   51
                 ]
-              },
-              {
-                "signature": "org.flmelody.util.ValidationUtil#validate(T, Class<?>...)",
-                "arguments": [
-                  {
-                    "name": "jsonPlugin.toObject(content, targetClass)",
-                    "type": "T"
-                  },
-                  {
-                    "name": "groups",
-                    "type": "java.lang.Class<?>..."
-                  }
-                ],
-                "return_type": "T",
-                "line_numbers": [
-                  51
-                ]
               }
             ],
             "external_fields": [],
             "return_type": "T",
-            "signature": "public static T validate(JsonPlugin, String, Class<T>, Class<?>...)",
+            "signature": "public static T validate(JsonPlugin, String, Class<T>, Class<?>[])",
             "parameters": [
               {
                 "name": "jsonPlugin",
@@ -20909,6 +20909,23 @@
           {
             "call_methods": [
               {
+                "signature": "org.flmelody.util.ValidationUtil#validate(T, Class<?>[])",
+                "arguments": [
+                  {
+                    "name": "jsonPlugin.toObject(content, type)",
+                    "type": "T"
+                  },
+                  {
+                    "name": "groups",
+                    "type": "java.lang.Class<?>"
+                  }
+                ],
+                "return_type": "T",
+                "line_numbers": [
+                  66
+                ]
+              },
+              {
                 "signature": "org.flmelody.core.plugin.json.JsonPlugin#toObject(I, Type)",
                 "arguments": [
                   {
@@ -20924,28 +20941,11 @@
                 "line_numbers": [
                   66
                 ]
-              },
-              {
-                "signature": "org.flmelody.util.ValidationUtil#validate(T, Class<?>...)",
-                "arguments": [
-                  {
-                    "name": "jsonPlugin.toObject(content, type)",
-                    "type": "T"
-                  },
-                  {
-                    "name": "groups",
-                    "type": "java.lang.Class<?>..."
-                  }
-                ],
-                "return_type": "T",
-                "line_numbers": [
-                  66
-                ]
               }
             ],
             "external_fields": [],
             "return_type": "T",
-            "signature": "public static T validate(JsonPlugin, String, Type, Class<?>...)",
+            "signature": "public static T validate(JsonPlugin, String, Type, Class<?>[])",
             "parameters": [
               {
                 "name": "jsonPlugin",
@@ -20990,20 +20990,6 @@
                 "return_type": "org.flmelody.core.exception.ValidationException",
                 "line_numbers": [
                   80
-                ]
-              },
-              {
-                "signature": "jakarta.validation.Validator#validate(T, Class<?>...)",
-                "arguments": [
-                  {
-                    "name": "target",
-                    "type": "T"
-                  }
-                ],
-                "return_type": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
-                "line_numbers": [
-                  73,
-                  75
                 ]
               },
               {
@@ -21052,6 +21038,20 @@
                 ]
               },
               {
+                "signature": "jakarta.validation.Validator#validate(T, Class<?>[])",
+                "arguments": [
+                  {
+                    "name": "target",
+                    "type": "T"
+                  }
+                ],
+                "return_type": "java.util.Set<jakarta.validation.ConstraintViolation<T>>",
+                "line_numbers": [
+                  73,
+                  75
+                ]
+              },
+              {
                 "signature": "jakarta.validation.ConstraintViolation#getPropertyPath()",
                 "arguments": [],
                 "return_type": "jakarta.validation.Path",
@@ -21075,7 +21075,7 @@
               }
             ],
             "return_type": "T",
-            "signature": "private static T validate(T, Class<?>...)",
+            "signature": "private static T validate(T, Class<?>[])",
             "parameters": [
               {
                 "name": "target",
@@ -21230,18 +21230,18 @@
                 ]
               },
               {
-                "signature": "org.flmelody.core.AbstractRouterGroup#post(String, Consumer<SimpleWindwardContext>)",
+                "signature": "post",
                 "arguments": [
                   {
                     "name": "\"/dev/{version}/{name}/post\"",
-                    "type": "java.lang.String"
+                    "type": "unresolved"
                   },
                   {
                     "name": "() -> \"hello world\"",
-                    "type": "java.util.function.Consumer<org.flmelody.core.context.SimpleWindwardContext>"
+                    "type": "unresolved"
                   }
                 ],
-                "return_type": "org.flmelody.core.RouterGroup<M>",
+                "return_type": "unresolved",
                 "line_numbers": [
                   25
                 ]
@@ -21886,6 +21886,32 @@
           {
             "call_methods": [
               {
+                "signature": "org.flmelody.util.UrlUtil#buildUrl(String[])",
+                "arguments": [
+                  {
+                    "name": "\"/a\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "\"/b/\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "\"c\"",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  17,
+                  20,
+                  23,
+                  26,
+                  29,
+                  14
+                ]
+              },
+              {
                 "signature": "org.junit.jupiter.api.Assertions#assertEquals(Object, Object)",
                 "arguments": [
                   {
@@ -21905,32 +21931,6 @@
                   27,
                   30,
                   15
-                ]
-              },
-              {
-                "signature": "org.flmelody.util.UrlUtil#buildUrl(..)",
-                "arguments": [
-                  {
-                    "name": "\"/a\"",
-                    "type": "java.lang.String..."
-                  },
-                  {
-                    "name": "\"/b/\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "\"c\"",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  17,
-                  20,
-                  23,
-                  26,
-                  29,
-                  14
                 ]
               }
             ],

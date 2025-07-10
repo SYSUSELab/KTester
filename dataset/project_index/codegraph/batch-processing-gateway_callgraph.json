@@ -8,7 +8,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.DeleteSubmissionResponse#deleteSubmission(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#deleteSubmission(String, String, User)",
           "lines": [
             476
           ]
@@ -25,7 +25,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.GetDriverInfoResponse#getDriverInfo(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
           "lines": [
             741
           ]
@@ -36,7 +36,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.GetDriverInfoResponse#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             117
           ]
@@ -47,7 +47,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.GetDriverInfoResponse#getDriverInfo(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
           "lines": [
             742
           ]
@@ -60,7 +60,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.GetMySubmissionsResponse#main(String[])",
+          "sig": "com.apple.spark.tools.DeleteApplications#main(String[])",
           "lines": [
             59
           ]
@@ -71,7 +71,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.GetMySubmissionsResponse#getSubmissions(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSubmissions(String, User)",
           "lines": [
             892
           ]
@@ -88,7 +88,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.GetSubmissionStatusResponse#getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImplWithoutCache(SparkApplication, String, SparkCluster)",
           "lines": [
             636
           ]
@@ -105,7 +105,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.HealthcheckResponse#healthcheckStatus(User)",
+          "sig": "com.apple.spark.rest.HealthcheckRest#healthcheckStatus(User)",
           "lines": [
             69
           ]
@@ -118,13 +118,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             106
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImplWithoutCache(SparkApplication, String, SparkCluster)",
           "lines": [
             631
           ]
@@ -142,7 +142,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImplWithoutCache(SparkApplication, String, SparkCluster)",
           "lines": [
             656,
             655
@@ -165,7 +165,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication, AppConfig.SparkCluster, AppConfig)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, SparkCluster, AppConfig)",
           "lines": [
             99
           ]
@@ -208,14 +208,14 @@
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImplWithoutCache(SparkApplication, String, SparkCluster)",
           "lines": [
             656,
             655
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             111
           ]
@@ -250,7 +250,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication, AppConfig.SparkCluster, AppConfig)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, SparkCluster, AppConfig)",
           "lines": [
             96,
             97,
@@ -258,14 +258,14 @@
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImplWithoutCache(SparkApplication, String, SparkCluster)",
           "lines": [
             634,
             654
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             109,
             110
@@ -289,7 +289,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImplWithoutCache(SparkApplication, String, SparkCluster)",
           "lines": [
             670
           ]
@@ -306,7 +306,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmissionStatus#getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImplWithoutCache(SparkApplication, String, SparkCluster)",
           "lines": [
             677
           ]
@@ -327,7 +327,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmissionSummary#main(String[])",
+          "sig": "com.apple.spark.tools.DeleteApplications#main(String[])",
           "lines": [
             60,
             61
@@ -391,15 +391,28 @@
         }
       ]
     },
-    "copyFrom(SparkApplication, AppConfig.SparkCluster, AppConfig)": {
+    "copyFrom(SparkApplication, SparkCluster, AppConfig)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.core.RestSubmissionsStreamingOutput#writeSubmissions(OutputStream, SparkApplicationResourceList, SparkCluster, AppConfig)",
+          "lines": [
+            48
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSubmissions(String, User)",
+          "lines": [
+            886
+          ]
+        }
+      ]
     },
     "copyFrom(SparkApplication)": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, AppConfig.SparkCluster, AppConfig)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, SparkCluster, AppConfig)",
           "lines": [
             91
           ]
@@ -542,7 +555,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, AppConfig.SparkCluster, AppConfig)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, SparkCluster, AppConfig)",
           "lines": [
             100,
             95
@@ -595,7 +608,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             97,
             104,
@@ -613,14 +626,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getSparkConf(String, SubmitApplicationRequest, AppConfig, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, SparkCluster)",
           "lines": [
             193,
             197
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
           "lines": [
             362,
             364
@@ -636,7 +649,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             266
           ]
@@ -647,7 +660,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             152
           ]
@@ -658,7 +671,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             273
           ]
@@ -669,7 +682,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             154
           ]
@@ -688,13 +701,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#applyFeatureGate(SubmitApplicationRequest, Map<String, String>)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#applyFeatureGate(SubmitApplicationRequest, Map)",
           "lines": [
             364
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getImage(AppConfig, SubmitApplicationRequest, String, String, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getImage(AppConfig, SubmitApplicationRequest, String, String, String)",
           "lines": [
             792,
             794,
@@ -711,7 +724,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             727
           ]
@@ -726,14 +739,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#logApplicationSubmissionImpl(String, String, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.LogDao#logApplicationSubmissionImpl(String, String, SubmitApplicationRequest, String)",
           "lines": [
             201,
             205
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             98,
             117,
@@ -743,7 +756,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             274,
             262
@@ -755,7 +768,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             155
           ]
@@ -766,7 +779,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             288,
             273
@@ -782,7 +795,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             289
           ]
@@ -793,7 +806,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             156
           ]
@@ -804,7 +817,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             293
           ]
@@ -815,7 +828,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             157
           ]
@@ -826,21 +839,21 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getSparkConf(String, SubmitApplicationRequest, AppConfig, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, SparkCluster)",
           "lines": [
             177,
             181
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
           "lines": [
             378,
             379
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#validateSubmissionRequest(SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#validateSubmissionRequest(SubmitApplicationRequest, String)",
           "lines": [
             1000,
             1002
@@ -856,28 +869,28 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getVolumes(SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getVolumes(SubmitApplicationRequest, SparkCluster)",
           "lines": [
             232,
             233
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             428,
             429
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             679,
             680
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             296
           ]
@@ -892,14 +905,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             258,
             266
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             404,
             405,
@@ -909,7 +922,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
+          "sig": "com.apple.spark.util.CustomSerDe#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
           "lines": [
             44,
             45
@@ -921,7 +934,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             165
           ]
@@ -932,14 +945,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             279,
             287
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             656,
             658,
@@ -949,14 +962,14 @@
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#validateSubmissionRequest(SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#validateSubmissionRequest(SubmitApplicationRequest, String)",
           "lines": [
             988,
             989
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
+          "sig": "com.apple.spark.util.CustomSerDe#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
           "lines": [
             49,
             50
@@ -968,7 +981,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             172
           ]
@@ -979,7 +992,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             297
           ]
@@ -994,7 +1007,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             298
           ]
@@ -1009,7 +1022,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             294
           ]
@@ -1024,7 +1037,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             295
           ]
@@ -1039,14 +1052,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#logApplicationSubmissionImpl(String, String, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.LogDao#logApplicationSubmissionImpl(String, String, SubmitApplicationRequest, String)",
           "lines": [
             203,
             207
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getQueue(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#getQueue(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             48,
             47
@@ -1062,13 +1075,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#getQueue(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#getQueue(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             72
           ]
         },
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
+          "sig": "com.apple.spark.util.CustomSerDe#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
           "lines": [
             54
           ]
@@ -1079,7 +1092,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationRequest#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
+          "sig": "com.apple.spark.util.CustomSerDe#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
           "lines": [
             55
           ]
@@ -1092,7 +1105,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationResponse#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             193,
             202
@@ -1104,7 +1117,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.SubmitApplicationResponse#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
           "lines": [
             420
           ]
@@ -1121,13 +1134,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.api.UploadS3Response#uploadStreamS3(InputStream, Long, String, String)",
+          "sig": "com.apple.spark.rest.CloudStorageRest#uploadStreamS3(InputStream, Long, String, String)",
           "lines": [
             262
           ]
         },
         {
-          "sig": "com.apple.spark.api.UploadS3Response#uploadStreamGcs(InputStream, String, String)",
+          "sig": "com.apple.spark.rest.CloudStorageRest#uploadStreamGcs(InputStream, String, String)",
           "lines": [
             280
           ]
@@ -1140,7 +1153,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             100
           ]
@@ -1155,7 +1168,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#getSparkConf(String, SubmitApplicationRequest, AppConfig, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, SparkCluster)",
           "lines": [
             154
           ]
@@ -1174,7 +1187,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#getSparkConf(String, SubmitApplicationRequest, AppConfig, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, SparkCluster)",
           "lines": [
             155
           ]
@@ -1185,46 +1198,46 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             161
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
+          "sig": "com.apple.spark.BPGApplication#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
           "lines": [
             225,
             226
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             157,
             159
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             96,
             116
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getSparkClusters()",
+          "sig": "com.apple.spark.rest.RestBase#getSparkClusters()",
           "lines": [
             93
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getSparkCluster(String)",
+          "sig": "com.apple.spark.rest.RestBase#getSparkCluster(String)",
           "lines": [
             106
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#mergeConfig(AppConfig)",
+          "sig": "com.apple.spark.util.ConfigUtil#mergeConfig(AppConfig)",
           "lines": [
             44
           ]
@@ -1235,7 +1248,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#mergeConfig(AppConfig)",
+          "sig": "com.apple.spark.util.ConfigUtil#mergeConfig(AppConfig)",
           "lines": [
             46
           ]
@@ -1254,7 +1267,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#uploadStream(String, InputStream, Long, String, String, String, User)",
+          "sig": "com.apple.spark.rest.CloudStorageRest#uploadStream(String, InputStream, Long, String, String, String, User)",
           "lines": [
             132
           ]
@@ -1269,7 +1282,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#getLog(String, String, String, String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(String, String, String, String, String, User)",
           "lines": [
             234
           ]
@@ -1296,7 +1309,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#getPodNamePrefixFromAppId(String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getPodNamePrefixFromAppId(String)",
           "lines": [
             370
           ]
@@ -1307,13 +1320,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#copyFrom(SparkApplication, AppConfig.SparkCluster, AppConfig)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, SparkCluster, AppConfig)",
           "lines": [
             99
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getPodNamePrefixFromAppId(String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getPodNamePrefixFromAppId(String)",
           "lines": [
             374
           ]
@@ -1324,7 +1337,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#generateS3Key(String, String)",
+          "sig": "com.apple.spark.rest.CloudStorageRest#generateS3Key(String, String)",
           "lines": [
             290,
             293
@@ -1340,7 +1353,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             147,
             137
@@ -1356,7 +1369,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             147,
             137
@@ -1380,81 +1393,81 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#validateQueueToken(String, String, AppConfig)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#validateQueueToken(String, String, AppConfig)",
           "lines": [
             320,
             317
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getDriverCPUBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverCPUBufferForQueue(AppConfig, String)",
           "lines": [
             506
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getDriverMemBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverMemBufferForQueue(AppConfig, String)",
           "lines": [
             519
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getDriverNodeLabelKeyForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverNodeLabelKeyForQueue(AppConfig, String)",
           "lines": [
             532
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getDriverNodeLabelValuesForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverNodeLabelValuesForQueue(AppConfig, String)",
           "lines": [
             545
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getExecutorMemBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorMemBufferForQueue(AppConfig, String)",
           "lines": [
             559
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getExecutorCPUBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorCPUBufferForQueue(AppConfig, String)",
           "lines": [
             572
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getExecutorSpotNodeLabelValuesForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpotNodeLabelValuesForQueue(AppConfig, String)",
           "lines": [
             586
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getExecutorNodeLabelKeyForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorNodeLabelKeyForQueue(AppConfig, String)",
           "lines": [
             600
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getExecutorNodeLabelValuesForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorNodeLabelValuesForQueue(AppConfig, String)",
           "lines": [
             614
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getQueue(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#getQueue(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             50,
             52
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getMaxRunningMillisForQueue(String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getMaxRunningMillisForQueue(String)",
           "lines": [
             948
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig#getMaxExecutorInstanceForQueue(String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getMaxExecutorInstanceForQueue(String)",
           "lines": [
             960
           ]
@@ -1469,7 +1482,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#validateQueueToken(String, String, AppConfig)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#validateQueueToken(String, String, AppConfig)",
           "lines": [
             336,
             342
@@ -1485,7 +1498,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#getConfFromDB(AppConfig)",
+          "sig": "com.apple.spark.util.ConfigUtil#getConfFromDB(AppConfig)",
           "lines": [
             77
           ]
@@ -1508,7 +1521,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#getImage(AppConfig, SubmitApplicationRequest, String, String, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getImage(AppConfig, SubmitApplicationRequest, String, String, String)",
           "lines": [
             783
           ]
@@ -1546,7 +1559,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             414
           ]
@@ -1557,7 +1570,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             413
           ]
@@ -1574,13 +1587,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             160
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             117,
             149
@@ -1596,40 +1609,40 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
+          "sig": "com.apple.spark.BPGApplication#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
           "lines": [
             235
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#start(AppConfig.SparkCluster, Timer)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start(SparkCluster, Timer)",
           "lines": [
             246,
             189
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             97,
             109
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             329,
             266
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getSparkCluster(String)",
+          "sig": "com.apple.spark.rest.RestBase#getSparkCluster(String)",
           "lines": [
             107
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getConfFromDB(AppConfig)",
+          "sig": "com.apple.spark.util.ConfigUtil#getConfFromDB(AppConfig)",
           "lines": [
             98
           ]
@@ -1644,7 +1657,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             305
           ]
@@ -1659,19 +1672,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             163
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getK8sConfig(AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.KubernetesHelper#getK8sConfig(SparkCluster)",
           "lines": [
             230
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#main(String[])",
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
           "lines": [
             73
           ]
@@ -1682,7 +1695,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#main(String[])",
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
           "lines": [
             62
           ]
@@ -1697,7 +1710,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#main(String[])",
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
           "lines": [
             65
           ]
@@ -1708,7 +1721,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getK8sConfig(AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.KubernetesHelper#getK8sConfig(SparkCluster)",
           "lines": [
             246,
             231
@@ -1720,7 +1733,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#main(String[])",
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
           "lines": [
             63
           ]
@@ -1735,7 +1748,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#main(String[])",
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
           "lines": [
             64
           ]
@@ -1746,7 +1759,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getK8sConfig(AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.KubernetesHelper#getK8sConfig(SparkCluster)",
           "lines": [
             221
           ]
@@ -1761,7 +1774,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getK8sConfig(AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.KubernetesHelper#getK8sConfig(SparkCluster)",
           "lines": [
             240,
             239
@@ -1773,7 +1786,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#main(String[])",
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
           "lines": [
             66
           ]
@@ -1784,7 +1797,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getK8sConfig(AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.KubernetesHelper#getK8sConfig(SparkCluster)",
           "lines": [
             242,
             243
@@ -1796,7 +1809,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#main(String[])",
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
           "lines": [
             67
           ]
@@ -1807,86 +1820,86 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             163
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#start(AppConfig.SparkCluster, Timer)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start(SparkCluster, Timer)",
           "lines": [
             191
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             333
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getK8sConfig(AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.KubernetesHelper#getK8sConfig(SparkCluster)",
           "lines": [
             234
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getLog(SparkApplication, String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(SparkApplication, String)",
           "lines": [
             351
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
           "lines": [
             354
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#deleteSubmission(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#deleteSubmission(String, String, User)",
           "lines": [
             471
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getEvents(AppConfig.SparkCluster, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getEvents(SparkCluster, String)",
           "lines": [
             907
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getSparkApplicationResource(String)",
+          "sig": "com.apple.spark.rest.RestBase#getSparkApplicationResource(String)",
           "lines": [
             130
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getSparkApplicationResourcesByLabel(AppConfig.SparkCluster, String, String)",
+          "sig": "com.apple.spark.rest.RestBase#getSparkApplicationResourcesByLabel(SparkCluster, String, String)",
           "lines": [
             160
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getSparkApplicationResources(AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.RestBase#getSparkApplicationResources(SparkCluster)",
           "lines": [
             182
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getPod(String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.RestBase#getPod(String, SparkCluster)",
           "lines": [
             200
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#main(String[])",
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
           "lines": [
             73,
             76
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getSparkUIUrl(SparkCluster, String)",
+          "sig": "com.apple.spark.util.ConfigUtil#getSparkUIUrl(SparkCluster, String)",
           "lines": [
             51
           ]
@@ -1897,7 +1910,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#main(String[])",
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
           "lines": [
             68
           ]
@@ -1908,7 +1921,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             440
           ]
@@ -1930,7 +1943,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
+          "sig": "com.apple.spark.BPGApplication#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
           "lines": [
             228
           ]
@@ -1951,7 +1964,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
+          "sig": "com.apple.spark.BPGApplication#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
           "lines": [
             229
           ]
@@ -1966,7 +1979,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             299
           ]
@@ -1981,19 +1994,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#copyFrom(SparkApplication, AppConfig.SparkCluster, AppConfig)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, SparkCluster, AppConfig)",
           "lines": [
             92
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImplWithoutCache(SparkApplication, String, SparkCluster)",
           "lines": [
             633
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getSparkUIUrl(SparkCluster, String)",
+          "sig": "com.apple.spark.util.ConfigUtil#getSparkUIUrl(SparkCluster, String)",
           "lines": [
             51
           ]
@@ -2008,7 +2021,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getSparkConf(String, SubmitApplicationRequest, AppConfig, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, SparkCluster)",
           "lines": [
             168,
             172
@@ -2024,7 +2037,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getSparkUIConfiguration(String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkUIConfiguration(String, SparkCluster)",
           "lines": [
             208,
             207
@@ -2040,21 +2053,21 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getVolumes(SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getVolumes(SubmitApplicationRequest, SparkCluster)",
           "lines": [
             237,
             238
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             432,
             433
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             683,
             684
@@ -2070,14 +2083,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             256,
             248
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             434,
             431
@@ -2093,14 +2106,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             277,
             268
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             682,
             685
@@ -2116,7 +2129,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             98,
             117
@@ -2128,7 +2141,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#chooseSparkCluster(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             133
           ]
@@ -2139,19 +2152,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
+          "sig": "com.apple.spark.BPGApplication#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
           "lines": [
             234
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#start(AppConfig.SparkCluster, Timer)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start(SparkCluster, Timer)",
           "lines": [
             190
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#killApplication(String, String)",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#killApplication(String, String)",
           "lines": [
             250
           ]
@@ -2166,7 +2179,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getK8sConfig(AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.KubernetesHelper#getK8sConfig(SparkCluster)",
           "lines": [
             226
           ]
@@ -2177,7 +2190,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkCluster#getK8sConfig(AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.KubernetesHelper#getK8sConfig(SparkCluster)",
           "lines": [
             225
           ]
@@ -2190,7 +2203,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.SparkImage#getImage(AppConfig, SubmitApplicationRequest, String, String, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getImage(AppConfig, SubmitApplicationRequest, String, String, String)",
           "lines": [
             789
           ]
@@ -2223,79 +2236,79 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#validateQueueToken(String, String, AppConfig)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#validateQueueToken(String, String, AppConfig)",
           "lines": [
             321
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getDriverCPUBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverCPUBufferForQueue(AppConfig, String)",
           "lines": [
             506
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getDriverMemBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverMemBufferForQueue(AppConfig, String)",
           "lines": [
             519
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getDriverNodeLabelKeyForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverNodeLabelKeyForQueue(AppConfig, String)",
           "lines": [
             532
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getDriverNodeLabelValuesForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverNodeLabelValuesForQueue(AppConfig, String)",
           "lines": [
             545
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorMemBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorMemBufferForQueue(AppConfig, String)",
           "lines": [
             559
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorCPUBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorCPUBufferForQueue(AppConfig, String)",
           "lines": [
             572
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorSpotNodeLabelValuesForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpotNodeLabelValuesForQueue(AppConfig, String)",
           "lines": [
             586
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorNodeLabelKeyForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorNodeLabelKeyForQueue(AppConfig, String)",
           "lines": [
             600
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorNodeLabelValuesForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorNodeLabelValuesForQueue(AppConfig, String)",
           "lines": [
             614
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getQueue(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#getQueue(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             59
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getMaxRunningMillisForQueue(String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getMaxRunningMillisForQueue(String)",
           "lines": [
             948
           ]
         },
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getMaxExecutorInstanceForQueue(String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getMaxExecutorInstanceForQueue(String)",
           "lines": [
             961
           ]
@@ -2310,7 +2323,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#validateQueueToken(String, String, AppConfig)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#validateQueueToken(String, String, AppConfig)",
           "lines": [
             326,
             327
@@ -2334,7 +2347,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getMaxRunningMillisForQueue(String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getMaxRunningMillisForQueue(String)",
           "lines": [
             951,
             952
@@ -2350,7 +2363,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getQueue(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#getQueue(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             53
           ]
@@ -2361,7 +2374,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getDriverNodeLabelKeyForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverNodeLabelKeyForQueue(AppConfig, String)",
           "lines": [
             536,
             537
@@ -2377,7 +2390,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorNodeLabelKeyForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorNodeLabelKeyForQueue(AppConfig, String)",
           "lines": [
             604,
             605
@@ -2393,7 +2406,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getDriverNodeLabelValuesForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverNodeLabelValuesForQueue(AppConfig, String)",
           "lines": [
             550,
             551
@@ -2409,7 +2422,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorNodeLabelValuesForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorNodeLabelValuesForQueue(AppConfig, String)",
           "lines": [
             619,
             620
@@ -2425,7 +2438,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorSpotNodeLabelValuesForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpotNodeLabelValuesForQueue(AppConfig, String)",
           "lines": [
             592,
             591
@@ -2441,7 +2454,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getDriverCPUBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverCPUBufferForQueue(AppConfig, String)",
           "lines": [
             510,
             511
@@ -2457,7 +2470,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorCPUBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorCPUBufferForQueue(AppConfig, String)",
           "lines": [
             576,
             577
@@ -2473,7 +2486,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getDriverMemBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverMemBufferForQueue(AppConfig, String)",
           "lines": [
             523,
             524
@@ -2489,7 +2502,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getExecutorMemBufferForQueue(AppConfig, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorMemBufferForQueue(AppConfig, String)",
           "lines": [
             563,
             564
@@ -2505,7 +2518,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueConfig#getMaxExecutorInstanceForQueue(String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getMaxExecutorInstanceForQueue(String)",
           "lines": [
             972,
             974
@@ -2523,7 +2536,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.QueueTokenConfig#validateQueueToken(String, String, AppConfig)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#validateQueueToken(String, String, AppConfig)",
           "lines": [
             342
           ]
@@ -2540,7 +2553,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.DBStorage#getConfFromDB(AppConfig)",
+          "sig": "com.apple.spark.util.ConfigUtil#getConfFromDB(AppConfig)",
           "lines": [
             78
           ]
@@ -2555,7 +2568,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.DBStorage#getConfFromDB(AppConfig)",
+          "sig": "com.apple.spark.util.ConfigUtil#getConfFromDB(AppConfig)",
           "lines": [
             79
           ]
@@ -2586,7 +2599,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.AppConfig.DBStorage#getConfFromDB(AppConfig)",
+          "sig": "com.apple.spark.util.ConfigUtil#getConfFromDB(AppConfig)",
           "lines": [
             80
           ]
@@ -2671,7 +2684,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.clients.sparkhistory.GetJobEnvironmentResponse#getPodNamePrefixFromAppId(String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getPodNamePrefixFromAppId(String)",
           "lines": [
             377
           ]
@@ -2684,30 +2697,44 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationMonitor#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             191
           ]
         }
       ]
     },
-    "start(AppConfig.SparkCluster, Timer)": {
+    "start(SparkCluster, Timer)": {
       "type": "PRIVATE",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
+          "lines": [
+            173
+          ]
+        }
+      ]
     },
     "close()": {
       "type": "PUBLIC",
       "caller": []
     },
-    "onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)": {
+    "onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)": {
       "type": "PRIVATE",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
+          "lines": [
+            127
+          ]
+        }
+      ]
     },
     "ApplicationMonitor(AppConfig, MeterRegistry)": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationMonitor#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             191
           ]
@@ -2720,7 +2747,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             251
           ]
@@ -2731,13 +2758,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#submitApplication(String, String, String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplication(String, String, String, String, User)",
           "lines": [
             245
           ]
         },
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             270
           ]
@@ -2755,21 +2782,49 @@
         }
       ]
     },
-    "getSparkConf(String, SubmitApplicationRequest, AppConfig, AppConfig.SparkCluster)": {
+    "getSparkConf(String, SubmitApplicationRequest, AppConfig, SparkCluster)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
+          "lines": [
+            300
+          ]
+        }
+      ]
     },
-    "getSparkUIConfiguration(String, AppConfig.SparkCluster)": {
+    "getSparkUIConfiguration(String, SparkCluster)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
+          "lines": [
+            301
+          ]
+        }
+      ]
     },
-    "getVolumes(SubmitApplicationRequest, AppConfig.SparkCluster)": {
+    "getVolumes(SubmitApplicationRequest, SparkCluster)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
+          "lines": [
+            302
+          ]
+        }
+      ]
     },
-    "populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)": {
+    "populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
+          "lines": [
+            321
+          ]
+        }
+      ]
     },
     "generateSubmissionId(String)": {
       "type": "PUBLIC",
@@ -2787,7 +2842,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             265
           ]
@@ -2798,13 +2853,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             431
           ]
         },
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkCluster(String)",
+          "sig": "com.apple.spark.rest.RestBase#getSparkCluster(String)",
           "lines": [
             99
           ]
@@ -2815,7 +2870,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getQueue(AppConfig, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.SparkClusterHelper#getQueue(AppConfig, SubmitApplicationRequest, String)",
           "lines": [
             72
           ]
@@ -2826,7 +2881,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, SparkCluster)",
           "lines": [
             164,
             173
@@ -2838,7 +2893,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkConf(String, SubmitApplicationRequest, AppConfig, SparkCluster)",
           "lines": [
             161
           ]
@@ -2849,7 +2904,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             309
           ]
@@ -2860,7 +2915,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             290
           ]
@@ -3021,7 +3076,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             291
           ]
@@ -3032,7 +3087,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             273
           ]
@@ -3043,7 +3098,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             292
           ]
@@ -3056,7 +3111,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationUpdateEvent#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             128,
             137
@@ -3068,7 +3123,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationUpdateEvent#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             128,
             137
@@ -3080,7 +3135,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationUpdateEvent#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             128
           ]
@@ -3091,7 +3146,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ApplicationUpdateEvent#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             135
           ]
@@ -3109,7 +3164,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.BPGStatsdConfig#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             110
           ]
@@ -3163,19 +3218,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ConfigValue#getCaCertDataSOPSDecoded()",
+          "sig": "com.apple.spark.AppConfig.SparkCluster#getCaCertDataSOPSDecoded()",
           "lines": [
             466
           ]
         },
         {
-          "sig": "com.apple.spark.core.ConfigValue#getUserTokenSOPSDecoded()",
+          "sig": "com.apple.spark.AppConfig.SparkCluster#getUserTokenSOPSDecoded()",
           "lines": [
             470
           ]
         },
         {
-          "sig": "com.apple.spark.core.ConfigValue#getPasswordDecodedValue()",
+          "sig": "com.apple.spark.AppConfig.DBStorage#getPasswordDecodedValue()",
           "lines": [
             697
           ]
@@ -3221,68 +3276,68 @@
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#getSubmissionIdFromAppIdImpl(String)",
+          "sig": "com.apple.spark.core.LogDao#getSubmissionIdFromAppIdImpl(String)",
           "lines": [
             135
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#logApplicationSubmissionImpl(String, String, SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.core.LogDao#logApplicationSubmissionImpl(String, String, SubmitApplicationRequest, String)",
           "lines": [
             198
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#logApplicationIdImpl(String, String)",
+          "sig": "com.apple.spark.core.LogDao#logApplicationIdImpl(String, String)",
           "lines": [
             243
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#logApplicationStatusImpl(String, String)",
+          "sig": "com.apple.spark.core.LogDao#logApplicationStatusImpl(String, String)",
           "lines": [
             280
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#logApplicationFinishedImpl(String, String, Timestamp, Double, Double)",
+          "sig": "com.apple.spark.core.LogDao#logApplicationFinishedImpl(String, String, Timestamp, Double, Double)",
           "lines": [
             333
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#updateJobInfoImpl(String, Timestamp, int, int, int, String, String, String)",
+          "sig": "com.apple.spark.core.LogDao#updateJobInfoImpl(String, Timestamp, int, int, int, String, String, String)",
           "lines": [
             419
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#getJobInfoQueryImpl(String, String, int, int)",
+          "sig": "com.apple.spark.core.LogDao#getJobInfoQueryImpl(String, String, int, int)",
           "lines": [
             550,
             524
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#updateExecutorInfoImpl(String, int, int)",
+          "sig": "com.apple.spark.core.LogDao#updateExecutorInfoImpl(String, int, int)",
           "lines": [
             595
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#getKeyListImpl(String, String)",
+          "sig": "com.apple.spark.core.LogDao#getKeyListImpl(String, String)",
           "lines": [
             632
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#dbQueryImpl(String)",
+          "sig": "com.apple.spark.core.LogDao#dbQueryImpl(String)",
           "lines": [
             660
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#getConfFromDB(AppConfig)",
+          "sig": "com.apple.spark.util.ConfigUtil#getConfFromDB(AppConfig)",
           "lines": [
             88
           ]
@@ -3293,19 +3348,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.DBConnection#createDatabase()",
+          "sig": "com.apple.spark.core.LogDao#createDatabase()",
           "lines": [
             362
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#createApplicationSubmissionTable()",
+          "sig": "com.apple.spark.core.LogDao#createApplicationSubmissionTable()",
           "lines": [
             470
           ]
         },
         {
-          "sig": "com.apple.spark.core.DBConnection#createLogIndexTable()",
+          "sig": "com.apple.spark.core.LogDao#createLogIndexTable()",
           "lines": [
             488
           ]
@@ -3324,7 +3379,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.DBConnection#getConfFromDB(AppConfig)",
+          "sig": "com.apple.spark.util.ConfigUtil#getConfFromDB(AppConfig)",
           "lines": [
             83
           ]
@@ -3337,7 +3392,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.InvalidSubmissionIdException#getClusterIdFromSubmissionId(String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getClusterIdFromSubmissionId(String)",
           "lines": [
             305,
             310
@@ -3355,7 +3410,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.KubernetesHelper#tryGetEncodedSecretValueFromK8sSecret(String)",
+          "sig": "com.apple.spark.core.ConfigValue#tryGetEncodedSecretValueFromK8sSecret(String)",
           "lines": [
             88
           ]
@@ -3388,16 +3443,89 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.KubernetesHelper#tryGetEncodedSecretValueFromK8sSecret(String)",
+          "sig": "com.apple.spark.core.ConfigValue#tryGetEncodedSecretValueFromK8sSecret(String)",
           "lines": [
             104
           ]
         }
       ]
     },
-    "getK8sClient(AppConfig.SparkCluster)": {
+    "getK8sClient(SparkCluster)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.core.ApplicationMonitor#start(SparkCluster, Timer)",
+          "lines": [
+            193
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
+          "lines": [
+            300
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#killApplication(String, String)",
+          "lines": [
+            216
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(SparkApplication, String)",
+          "lines": [
+            313
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
+          "lines": [
+            348
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#deleteSubmission(String, String, User)",
+          "lines": [
+            464
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getEvents(SparkCluster, String)",
+          "lines": [
+            901
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.RestBase#getSparkApplicationResource(String)",
+          "lines": [
+            121
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.RestBase#getSparkApplicationResourcesByLabel(SparkCluster, String, String)",
+          "lines": [
+            152
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.RestBase#getSparkApplicationResources(SparkCluster)",
+          "lines": [
+            175
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.RestBase#getPod(String, SparkCluster)",
+          "lines": [
+            195
+          ]
+        },
+        {
+          "sig": "com.apple.spark.tools.SparkClusterTest#main(String[])",
+          "lines": [
+            74
+          ]
+        }
+      ]
     },
     "getSparkApplicationCrdContext()": {
       "type": "PUBLIC",
@@ -3407,7 +3535,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.KubernetesHelper#getLog(SparkApplication, String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(SparkApplication, String)",
           "lines": [
             350
           ]
@@ -3418,7 +3546,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.KubernetesHelper#close()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#close()",
           "lines": [
             264
           ]
@@ -3436,36 +3564,43 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.KubernetesHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             418,
             413
           ]
         },
         {
-          "sig": "com.apple.spark.core.KubernetesHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             664,
             669
           ]
         },
         {
-          "sig": "com.apple.spark.core.KubernetesHelper#listSubmissions(String, String, User)",
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissions(String, String, User)",
           "lines": [
             98
           ]
         },
         {
-          "sig": "com.apple.spark.core.KubernetesHelper#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
           "lines": [
             364
           ]
         }
       ]
     },
-    "getK8sConfig(AppConfig.SparkCluster)": {
+    "getK8sConfig(SparkCluster)": {
       "type": "PRIVATE",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.core.KubernetesHelper#getK8sClient(SparkCluster)",
+          "lines": [
+            120
+          ]
+        }
+      ]
     },
     "isLabelValueAlphanumericChar(char)": {
       "type": "PRIVATE",
@@ -3506,7 +3641,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.LogDao#getSubmissionIdFromAppIdFromDB(String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getSubmissionIdFromAppIdFromDB(String)",
           "lines": [
             387
           ]
@@ -3528,7 +3663,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.LogDao#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             332
           ]
@@ -3550,7 +3685,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.LogDao#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             400
           ]
@@ -3572,7 +3707,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.LogDao#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             295
           ]
@@ -3594,7 +3729,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.LogDao#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             409
           ]
@@ -3620,7 +3755,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.LogDao#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             366
           ]
@@ -3680,7 +3815,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.LogDao#getLog(String, String, String, String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(String, String, String, String, String, User)",
           "lines": [
             209
           ]
@@ -3727,7 +3862,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.NamespaceAndName#deleteLongRunningApplications()",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#deleteLongRunningApplications()",
           "lines": [
             195,
             198,
@@ -3744,7 +3879,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.NamespaceAndName#deleteLongRunningApplications()",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#deleteLongRunningApplications()",
           "lines": [
             192,
             195,
@@ -3777,7 +3912,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.NamespaceAndName#onUpdate(SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#onUpdate(SparkApplication, SparkApplication)",
           "lines": [
             169
           ]
@@ -3790,7 +3925,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.QueueTokenVerifier#validateQueueToken(String, String, AppConfig)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#validateQueueToken(String, String, AppConfig)",
           "lines": [
             342
           ]
@@ -3803,19 +3938,19 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "com.apple.spark.core.RestStreamingOutput#writeSubmissions(OutputStream, SparkApplicationResourceList, AppConfig.SparkCluster, AppConfig)",
+          "sig": "com.apple.spark.core.RestSubmissionsStreamingOutput#writeSubmissions(OutputStream, SparkApplicationResourceList, SparkCluster, AppConfig)",
           "lines": [
             50
           ]
         },
         {
-          "sig": "com.apple.spark.core.RestStreamingOutput#version()",
+          "sig": "com.apple.spark.rest.AdminRest#version()",
           "lines": [
             178
           ]
         },
         {
-          "sig": "com.apple.spark.core.RestStreamingOutput#describe(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#describe(String, String, User)",
           "lines": [
             817,
             825,
@@ -3829,9 +3964,22 @@
     }
   },
   "com.apple.spark.core.RestSubmissionsStreamingOutput": {
-    "writeSubmissions(OutputStream, SparkApplicationResourceList, AppConfig.SparkCluster, AppConfig)": {
+    "writeSubmissions(OutputStream, SparkApplicationResourceList, SparkCluster, AppConfig)": {
       "type": "PROTECTED",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.AdminRest#listAllSubmissions(User)",
+          "lines": [
+            111
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissionsByApplicationName(String, User)",
+          "lines": [
+            138
+          ]
+        }
+      ]
     }
   },
   "com.apple.spark.core.RunningApplicationMonitor": {
@@ -3850,7 +3998,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.RunningApplicationMonitor#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             135
           ]
@@ -3890,7 +4038,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.RunningApplicationMonitor.RunningAppInfo#deleteLongRunningApplications()",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#deleteLongRunningApplications()",
           "lines": [
             193
           ]
@@ -3909,7 +4057,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.RunningApplicationMonitor.RunningAppInfo#deleteLongRunningApplications()",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#deleteLongRunningApplications()",
           "lines": [
             183
           ]
@@ -3920,7 +4068,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.RunningApplicationMonitor.RunningAppInfo#onUpdate(SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#onUpdate(SparkApplication, SparkApplication)",
           "lines": [
             174
           ]
@@ -3933,14 +4081,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.SparkApplicationResourceHelper#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             281,
             282
           ]
         },
         {
-          "sig": "com.apple.spark.core.SparkApplicationResourceHelper#onUpdate(SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#onUpdate(SparkApplication, SparkApplication)",
           "lines": [
             146
           ]
@@ -3959,7 +4107,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.core.SparkClusterHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             276,
             252
@@ -3971,7 +4119,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.SparkClusterHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             259
           ]
@@ -3999,7 +4147,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.core.SparkClusterHelper#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             277
           ]
@@ -4012,19 +4160,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.SparkConstants#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             402
           ]
         },
         {
-          "sig": "com.apple.spark.core.SparkConstants#onUpdate(SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#onUpdate(SparkApplication, SparkApplication)",
           "lines": [
             170
           ]
         },
         {
-          "sig": "com.apple.spark.core.SparkConstants#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             108
           ]
@@ -4037,7 +4185,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.SparkSpecHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             256,
             276,
@@ -4057,7 +4205,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.core.ThrowableExceptionMapper#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             130
           ]
@@ -4074,7 +4222,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.health.BPGHealthCheck#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             161
           ]
@@ -4099,13 +4247,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.Affinity#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             497
           ]
         },
         {
-          "sig": "com.apple.spark.operator.Affinity#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             751
           ]
@@ -4118,13 +4266,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.ApplicationState#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication)",
           "lines": [
             52
           ]
         },
         {
-          "sig": "com.apple.spark.operator.ApplicationState#getState(SparkApplication)",
+          "sig": "com.apple.spark.core.SparkApplicationResourceHelper#getState(SparkApplication)",
           "lines": [
             27
           ]
@@ -4139,7 +4287,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.ApplicationState#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication)",
           "lines": [
             53
           ]
@@ -4160,7 +4308,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.BatchSchedulerConfiguration#getYuniKornSchedulerConfig(String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getYuniKornSchedulerConfig(String)",
           "lines": [
             390
           ]
@@ -4175,7 +4323,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.BatchSchedulerConfiguration#getYuniKornSchedulerConfig(String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getYuniKornSchedulerConfig(String)",
           "lines": [
             391
           ]
@@ -4190,7 +4338,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.BatchSchedulerConfiguration#getYuniKornSchedulerConfig(String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getYuniKornSchedulerConfig(String)",
           "lines": [
             392
           ]
@@ -4271,19 +4419,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.DriverInfo#killApplication(String, String)",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#killApplication(String, String)",
           "lines": [
             234
           ]
         },
         {
-          "sig": "com.apple.spark.operator.DriverInfo#getLog(SparkApplication, String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(SparkApplication, String)",
           "lines": [
             330
           ]
         },
         {
-          "sig": "com.apple.spark.operator.DriverInfo#getDriverInfo(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
           "lines": [
             741,
             726,
@@ -4302,7 +4450,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.DriverSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             405
           ]
@@ -4329,20 +4477,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.DriverSpec#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             261,
             251
           ]
         },
         {
-          "sig": "com.apple.spark.operator.DriverSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             402
           ]
         },
         {
-          "sig": "com.apple.spark.operator.DriverSpec#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             160
           ]
@@ -4397,7 +4545,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.EnvVar#copyEnv(List<EnvVar>, List<EnvVar>)",
+          "sig": "com.apple.spark.core.SparkSpecHelper#copyEnv(List, List)",
           "lines": [
             32,
             35
@@ -4461,7 +4609,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.ExecutorSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             656
           ]
@@ -4472,20 +4620,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.ExecutorSpec#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             154,
             155
           ]
         },
         {
-          "sig": "com.apple.spark.operator.ExecutorSpec#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             324
           ]
         },
         {
-          "sig": "com.apple.spark.operator.ExecutorSpec#validateSubmissionRequest(SubmitApplicationRequest, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#validateSubmissionRequest(SubmitApplicationRequest, String)",
           "lines": [
             989
           ]
@@ -4496,7 +4644,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.ExecutorSpec#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             170
           ]
@@ -4515,20 +4663,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.ExecutorSpec#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             282,
             271
           ]
         },
         {
-          "sig": "com.apple.spark.operator.ExecutorSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             653
           ]
         },
         {
-          "sig": "com.apple.spark.operator.ExecutorSpec#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             167
           ]
@@ -4663,13 +4811,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.NodeAffinity#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             496
           ]
         },
         {
-          "sig": "com.apple.spark.operator.NodeAffinity#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             750
           ]
@@ -4682,13 +4830,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.NodeSelectorOperator#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             485
           ]
         },
         {
-          "sig": "com.apple.spark.operator.NodeSelectorOperator#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             739
           ]
@@ -4733,13 +4881,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.NodeSelectorRequirement#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             483
           ]
         },
         {
-          "sig": "com.apple.spark.operator.NodeSelectorRequirement#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             737
           ]
@@ -4764,13 +4912,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.NodeSelectorTerm#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             489
           ]
         },
         {
-          "sig": "com.apple.spark.operator.NodeSelectorTerm#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             743
           ]
@@ -4873,13 +5021,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.RequiredDuringSchedulingIgnoredDuringExecutionTerm#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             492
           ]
         },
         {
-          "sig": "com.apple.spark.operator.RequiredDuringSchedulingIgnoredDuringExecutionTerm#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             746
           ]
@@ -4960,7 +5108,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplication#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             160,
             130,
@@ -4979,7 +5127,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplication#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             321,
             420,
@@ -4987,13 +5135,13 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplication#getSparkSpec(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSparkSpec(String, String, User)",
           "lines": [
             520
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplication#describe(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#describe(String, String, User)",
           "lines": [
             780
           ]
@@ -5004,7 +5152,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplication#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
           "lines": [
             412
           ]
@@ -5015,14 +5163,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplication#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication)",
           "lines": [
             45,
             46
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplication#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             404,
             405,
@@ -5033,20 +5181,20 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplication#killApplication(String, String)",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#killApplication(String, String)",
           "lines": [
             229
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplication#getState(SparkApplication)",
+          "sig": "com.apple.spark.core.SparkApplicationResourceHelper#getState(SparkApplication)",
           "lines": [
             26,
             27
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplication#getLog(SparkApplication, String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(SparkApplication, String)",
           "lines": [
             322,
             330,
@@ -5055,7 +5203,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplication#getDriverInfo(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
           "lines": [
             721,
             722,
@@ -5083,13 +5231,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             189
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             420
           ]
@@ -5120,13 +5268,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             332
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
           "lines": [
             359,
             360
@@ -5182,7 +5330,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             190
           ]
@@ -5197,14 +5345,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             192,
             191
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             321,
             311
@@ -5252,7 +5400,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             130,
             148,
@@ -5264,13 +5412,13 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             309
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             256,
             260,
@@ -5283,14 +5431,14 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#removeEnvFromSpec(SparkApplicationSpec)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#removeEnvFromSpec(SparkApplicationSpec)",
           "lines": [
             926,
             927
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#sparkSpecToNonSensitiveJson(SparkApplicationSpec)",
+          "sig": "com.apple.spark.util.CustomSerDe#sparkSpecToNonSensitiveJson(SparkApplicationSpec)",
           "lines": [
             77,
             78
@@ -5302,7 +5450,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             261,
             251
@@ -5314,7 +5462,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             160,
             151,
@@ -5325,13 +5473,13 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             310
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             273,
             274,
@@ -5344,14 +5492,14 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#removeEnvFromSpec(SparkApplicationSpec)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#removeEnvFromSpec(SparkApplicationSpec)",
           "lines": [
             929,
             930
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#sparkSpecToNonSensitiveJson(SparkApplicationSpec)",
+          "sig": "com.apple.spark.util.CustomSerDe#sparkSpecToNonSensitiveJson(SparkApplicationSpec)",
           "lines": [
             82,
             83
@@ -5363,7 +5511,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             282,
             271
@@ -5441,7 +5589,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5452,7 +5600,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5463,7 +5611,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5474,7 +5622,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5485,7 +5633,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5496,7 +5644,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5507,7 +5655,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5518,7 +5666,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5529,7 +5677,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5540,7 +5688,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5551,7 +5699,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5562,7 +5710,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5573,7 +5721,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             308
           ]
@@ -5584,7 +5732,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             309
           ]
@@ -5595,7 +5743,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5606,7 +5754,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5617,7 +5765,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5628,7 +5776,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5639,7 +5787,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5650,7 +5798,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5661,7 +5809,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5672,7 +5820,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5683,7 +5831,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             318
           ]
@@ -5694,7 +5842,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationSpec.Builder#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             282
           ]
@@ -5707,13 +5855,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication)",
           "lines": [
             47
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             397,
             398
@@ -5729,13 +5877,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication)",
           "lines": [
             50
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             405,
             406
@@ -5751,7 +5899,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication)",
           "lines": [
             51,
             52,
@@ -5759,7 +5907,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#getState(SparkApplication)",
+          "sig": "com.apple.spark.core.SparkApplicationResourceHelper#getState(SparkApplication)",
           "lines": [
             26,
             27
@@ -5775,7 +5923,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication)",
           "lines": [
             49
           ]
@@ -5790,20 +5938,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#killApplication(String, String)",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#killApplication(String, String)",
           "lines": [
             229
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#getLog(SparkApplication, String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(SparkApplication, String)",
           "lines": [
             322,
             330
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#getDriverInfo(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
           "lines": [
             722,
             725
@@ -5819,7 +5967,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkApplicationStatus#getLog(SparkApplication, String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(SparkApplication, String)",
           "lines": [
             333
           ]
@@ -5836,13 +5984,13 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#copyFrom(DriverSpec)",
+          "sig": "com.apple.spark.operator.DriverSpec#copyFrom(DriverSpec)",
           "lines": [
             41
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#copyFrom(ExecutorSpec)",
+          "sig": "com.apple.spark.operator.ExecutorSpec#copyFrom(ExecutorSpec)",
           "lines": [
             43
           ]
@@ -5853,7 +6001,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             148,
             149,
@@ -5862,14 +6010,14 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             452,
             443
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             691,
             700
@@ -5881,19 +6029,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             445
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             693
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             162,
             168
@@ -5905,14 +6053,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             448,
             454
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             696,
             702
@@ -5924,14 +6072,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             449,
             457
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             705,
             697
@@ -5943,7 +6091,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             160,
             137,
@@ -5952,14 +6100,14 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             461,
             463
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             709,
             711
@@ -5971,19 +6119,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             464
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             712
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             163,
             169
@@ -6011,7 +6159,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             256,
             273,
@@ -6028,7 +6176,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#removeEnvFromSpec(SparkApplicationSpec)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#removeEnvFromSpec(SparkApplicationSpec)",
           "lines": [
             929,
             926
@@ -6040,7 +6188,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#populateEnv(SparkApplicationSpec, SubmitApplicationRequest, SparkCluster)",
           "lines": [
             274,
             264,
@@ -6049,21 +6197,21 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#removeEnvFromSpec(SparkApplicationSpec)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#removeEnvFromSpec(SparkApplicationSpec)",
           "lines": [
             930,
             927
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
+          "sig": "com.apple.spark.util.CustomSerDe#submitRequestToNonSensitiveJson(SubmitApplicationRequest)",
           "lines": [
             50,
             45
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#sparkSpecToNonSensitiveJson(SparkApplicationSpec)",
+          "sig": "com.apple.spark.util.CustomSerDe#sparkSpecToNonSensitiveJson(SparkApplicationSpec)",
           "lines": [
             83,
             78
@@ -6075,7 +6223,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication)",
           "lines": [
             130,
             123,
@@ -6083,19 +6231,19 @@
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             313
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             407
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             658
           ]
@@ -6106,13 +6254,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             421
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             672
           ]
@@ -6123,13 +6271,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             469
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             716
           ]
@@ -6140,13 +6288,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             473
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             721
           ]
@@ -6169,7 +6317,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             759
           ]
@@ -6180,7 +6328,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             439
           ]
@@ -6191,7 +6339,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             440
           ]
@@ -6202,14 +6350,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             434,
             430
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             681,
             685
@@ -6221,14 +6369,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             434,
             430
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             681,
             685
@@ -6248,13 +6396,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             477
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             724
           ]
@@ -6265,13 +6413,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getDriverSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             497
           ]
         },
         {
-          "sig": "com.apple.spark.operator.SparkPodSpec#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getExecutorSpec(SubmitApplicationRequest, AppConfig, String, SparkCluster)",
           "lines": [
             751
           ]
@@ -6308,7 +6456,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkUIConfiguration#getSparkUIConfiguration(String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkUIConfiguration(String, SparkCluster)",
           "lines": [
             211,
             214
@@ -6320,7 +6468,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkUIConfiguration#getSparkUIConfiguration(String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkUIConfiguration(String, SparkCluster)",
           "lines": [
             221
           ]
@@ -6343,7 +6491,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.operator.SparkUIConfiguration#getSparkUIConfiguration(String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#getSparkUIConfiguration(String, SparkCluster)",
           "lines": [
             208
           ]
@@ -6462,7 +6610,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.AdminRest#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             124
           ]
@@ -6516,7 +6664,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.ApplicationGetLogRest#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             118
           ]
@@ -6574,9 +6722,18 @@
         }
       ]
     },
-    "getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)": {
+    "getStatusImplWithoutCache(SparkApplication, String, SparkCluster)": {
       "type": "PRIVATE",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImpl(String, User)",
+          "lines": [
+            578,
+            597,
+            585
+          ]
+        }
+      ]
     },
     "getDriverInfo(String, String, User)": {
       "type": "PUBLIC",
@@ -6590,9 +6747,17 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "getEvents(AppConfig.SparkCluster, String)": {
+    "getEvents(SparkCluster, String)": {
       "type": "PROTECTED",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#describe(String, String, User)",
+          "lines": [
+            800,
+            797
+          ]
+        }
+      ]
     },
     "removeEnvFromSpec(SparkApplicationSpec)": {
       "type": "PRIVATE",
@@ -6665,7 +6830,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             114
           ]
@@ -6716,7 +6881,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.CloudStorageRest#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             121
           ]
@@ -6729,7 +6894,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.GetSubmissionStatusResponseCacheValue#getStatusImpl(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImpl(String, User)",
           "lines": [
             601,
             619
@@ -6741,7 +6906,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.GetSubmissionStatusResponseCacheValue#getStatusImpl(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImpl(String, User)",
           "lines": [
             610,
             602,
@@ -6754,7 +6919,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.GetSubmissionStatusResponseCacheValue#getStatusImpl(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImpl(String, User)",
           "lines": [
             589
           ]
@@ -6779,7 +6944,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.HealthcheckRest#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             127
           ]
@@ -6792,38 +6957,38 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.RestBase#listAllSubmissions(User)",
+          "sig": "com.apple.spark.rest.AdminRest#listAllSubmissions(User)",
           "lines": [
             111
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#listSubmissionsByApplicationName(String, User)",
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissionsByApplicationName(String, User)",
           "lines": [
             138
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getLog(String, String, String, String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(String, String, String, String, String, User)",
           "lines": [
             234
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getPodNamePrefixFromAppId(String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getPodNamePrefixFromAppId(String)",
           "lines": [
             370,
             374
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             292
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getSubmissions(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSubmissions(String, User)",
           "lines": [
             886
           ]
@@ -6834,19 +6999,19 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.RestBase#listAllSubmissions(User)",
+          "sig": "com.apple.spark.rest.AdminRest#listAllSubmissions(User)",
           "lines": [
             109
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#listSubmissionsByApplicationName(String, User)",
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissionsByApplicationName(String, User)",
           "lines": [
             134
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getSubmissions(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSubmissions(String, User)",
           "lines": [
             879
           ]
@@ -6857,19 +7022,19 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.RestBase#getLog(SparkApplication, String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(SparkApplication, String)",
           "lines": [
             312
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#deleteSubmission(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#deleteSubmission(String, String, User)",
           "lines": [
             461
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getStatusImpl(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImpl(String, User)",
           "lines": [
             577,
             596,
@@ -6877,13 +7042,13 @@
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getDriverInfo(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
           "lines": [
             719
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#describe(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#describe(String, String, User)",
           "lines": [
             796
           ]
@@ -6900,19 +7065,19 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.RestBase#getLog(String, String, String, String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(String, String, String, String, String, User)",
           "lines": [
             198
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getSparkSpec(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSparkSpec(String, String, User)",
           "lines": [
             519
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getStatusImpl(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImpl(String, User)",
           "lines": [
             579,
             598,
@@ -6920,46 +7085,80 @@
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getDriverInfo(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
           "lines": [
             720
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#describe(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#describe(String, String, User)",
           "lines": [
             778
           ]
         }
       ]
     },
-    "getSparkApplicationResourcesByUser(AppConfig.SparkCluster, String)": {
+    "getSparkApplicationResourcesByUser(SparkCluster, String)": {
       "type": "PROTECTED",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSubmissions(String, User)",
+          "lines": [
+            881
+          ]
+        }
+      ]
     },
-    "getSparkApplicationResourcesByLabel(AppConfig.SparkCluster, String, String)": {
+    "getSparkApplicationResourcesByLabel(SparkCluster, String, String)": {
       "type": "PROTECTED",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissionsByApplicationName(String, User)",
+          "lines": [
+            136
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.RestBase#getSparkApplicationResourcesByUser(SparkCluster, String)",
+          "lines": [
+            144
+          ]
+        }
+      ]
     },
-    "getSparkApplicationResources(AppConfig.SparkCluster)": {
+    "getSparkApplicationResources(SparkCluster)": {
       "type": "PROTECTED",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.AdminRest#listAllSubmissions(User)",
+          "lines": [
+            110
+          ]
+        }
+      ]
     },
-    "getPod(String, AppConfig.SparkCluster)": {
+    "getPod(String, SparkCluster)": {
       "type": "PROTECTED",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
+          "lines": [
+            730
+          ]
+        }
+      ]
     },
     "checkRateForListSubmissions(String)": {
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "com.apple.spark.rest.RestBase#listSubmissions(String, String, User)",
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissions(String, String, User)",
           "lines": [
             88
           ]
         },
         {
-          "sig": "com.apple.spark.rest.RestBase#getSubmissions(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSubmissions(String, User)",
           "lines": [
             876
           ]
@@ -6976,42 +7175,42 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.security.User#listSubmissions(String, String, User)",
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissions(String, String, User)",
           "lines": [
             86,
             91
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#listAllSubmissions(User)",
+          "sig": "com.apple.spark.rest.AdminRest#listAllSubmissions(User)",
           "lines": [
             114,
             119
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#listSubmissionsByApplicationName(String, User)",
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissionsByApplicationName(String, User)",
           "lines": [
             149,
             143
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#getLog(String, String, String, String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(String, String, String, String, String, User)",
           "lines": [
             152,
             154
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#submitApplication(String, String, String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplication(String, String, String, String, User)",
           "lines": [
             245,
             236
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#submitApplicationImpl(String, String, User, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
           "lines": [
             259,
             276,
@@ -7022,47 +7221,47 @@
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#deleteSubmission(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#deleteSubmission(String, String, User)",
           "lines": [
             455,
             459
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#getSparkSpec(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSparkSpec(String, String, User)",
           "lines": [
             514,
             518
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#getStatus(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatus(String, String, User)",
           "lines": [
             556
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#getStatusImpl(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImpl(String, User)",
           "lines": [
             568
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#getDriverInfo(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
           "lines": [
             713,
             717
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#describe(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#describe(String, String, User)",
           "lines": [
             772,
             776
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#getSubmissions(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSubmissions(String, User)",
           "lines": [
             881,
             870,
@@ -7070,21 +7269,21 @@
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#getUserTagValue(User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getUserTagValue(User)",
           "lines": [
             939,
             940
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#uploadStream(String, InputStream, Long, String, String, String, User)",
+          "sig": "com.apple.spark.rest.CloudStorageRest#uploadStream(String, InputStream, Long, String, String, String, User)",
           "lines": [
             130,
             126
           ]
         },
         {
-          "sig": "com.apple.spark.security.User#healthcheckStatus(User)",
+          "sig": "com.apple.spark.rest.HealthcheckRest#healthcheckStatus(User)",
           "lines": [
             67
           ]
@@ -7095,7 +7294,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.security.User#authenticate(BasicCredentials)",
+          "sig": "com.apple.spark.security.UserNameBasicAuthenticator#authenticate(BasicCredentials)",
           "lines": [
             58
           ]
@@ -7123,7 +7322,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.apple.spark.security.UserNameAuthFilter#newInstance()",
+          "sig": "com.apple.spark.security.UserNameAuthFilter.Builder#newInstance()",
           "lines": [
             64
           ]
@@ -7140,7 +7339,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.security.UserNameAuthFilter.Builder#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             134
           ]
@@ -7157,7 +7356,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.security.UserNameBasicAuthenticator#run(AppConfig, Environment)",
+          "sig": "com.apple.spark.BPGApplication#run(AppConfig, Environment)",
           "lines": [
             146,
             136
@@ -7200,7 +7399,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.tools.LoadTest.TestApplicationInfo#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             113,
             104,
@@ -7218,7 +7417,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.tools.LoadTest.TestApplicationInfo#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             194
           ]
@@ -7229,7 +7428,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.tools.LoadTest.TestApplicationInfo#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             201
           ]
@@ -7240,7 +7439,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.tools.LoadTest.TestApplicationInfo#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             195
           ]
@@ -7255,7 +7454,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.tools.LoadTest.TestApplicationInfo#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             110
           ]
@@ -7270,7 +7469,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.tools.LoadTest.TestApplicationInfo#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             117
           ]
@@ -7285,7 +7484,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.tools.LoadTest.TestApplicationInfo#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             111
           ]
@@ -7322,7 +7521,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.tools.LoadTest.TestApplicationInfo#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             193
           ]
@@ -7365,13 +7564,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.ConfigUtil#copyFrom(SparkApplication, AppConfig.SparkCluster, AppConfig)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, SparkCluster, AppConfig)",
           "lines": [
             94
           ]
         },
         {
-          "sig": "com.apple.spark.util.ConfigUtil#getStatusImplWithoutCache(SparkApplication, String, AppConfig.SparkCluster)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImplWithoutCache(SparkApplication, String, SparkCluster)",
           "lines": [
             635
           ]
@@ -7382,7 +7581,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.ConfigUtil#copyFrom(SparkApplication, AppConfig.SparkCluster, AppConfig)",
+          "sig": "com.apple.spark.api.SubmissionSummary#copyFrom(SparkApplication, SparkCluster, AppConfig)",
           "lines": [
             99
           ]
@@ -7415,7 +7614,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.ConfigUtil#version()",
+          "sig": "com.apple.spark.rest.AdminRest#version()",
           "lines": [
             169
           ]
@@ -7424,15 +7623,167 @@
     }
   },
   "com.apple.spark.util.CounterMetricContainer": {
-    "increment(String, Tag...)": {
+    "increment(String, Tag[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.BPGApplication#sendQueueInfoMetrics(AppConfig, CounterMetricContainer)",
+          "lines": [
+            232
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.ApplicationMonitor#start(SparkCluster, Timer)",
+          "lines": [
+            223
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
+          "lines": [
+            424
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#getSubmissionIdFromAppIdImpl(String)",
+          "lines": [
+            158
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#logApplicationSubmissionImpl(String, String, SubmitApplicationRequest, String)",
+          "lines": [
+            216
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#logApplicationIdImpl(String, String)",
+          "lines": [
+            254
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#logApplicationStatusImpl(String, String)",
+          "lines": [
+            290
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#logApplicationFinishedImpl(String, String, Timestamp, Double, Double)",
+          "lines": [
+            348
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#updateJobInfoImpl(String, Timestamp, int, int, int, String, String, String)",
+          "lines": [
+            431
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#getJobInfoQueryImpl(String, String, int, int)",
+          "lines": [
+            564
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#updateExecutorInfoImpl(String, int, int)",
+          "lines": [
+            602
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#getKeyListImpl(String, String)",
+          "lines": [
+            644
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#dbQueryImpl(String)",
+          "lines": [
+            666
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#killApplication(String, String)",
+          "lines": [
+            248
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissions(String, String, User)",
+          "lines": [
+            85
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(String, String, String, String, String, User)",
+          "lines": [
+            153
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplicationImpl(String, String, User, String)",
+          "lines": [
+            323
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#deleteSubmission(String, String, User)",
+          "lines": [
+            458
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSparkSpec(String, String, User)",
+          "lines": [
+            517
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImpl(String, User)",
+          "lines": [
+            567,
+            574
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
+          "lines": [
+            716
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#describe(String, String, User)",
+          "lines": [
+            773
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getSubmissions(String, User)",
+          "lines": [
+            873
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.CloudStorageRest#uploadStream(String, InputStream, Long, String, String, String, User)",
+          "lines": [
+            129
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.HealthcheckRest#healthcheckStatus(User)",
+          "lines": [
+            66
+          ]
+        }
+      ]
     },
     "increment(String, Collection)": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.CounterMetricContainer#increment(String, Tag...)",
+          "sig": "com.apple.spark.util.CounterMetricContainer#increment(String, Tag[])",
           "lines": [
             44
           ]
@@ -7443,7 +7794,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.CounterMetricContainer#sendPeriodicMetrics(AppConfig, MeterRegistry)",
+          "sig": "com.apple.spark.BPGApplication#sendPeriodicMetrics(AppConfig, MeterRegistry)",
           "lines": [
             198
           ]
@@ -7456,7 +7807,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.CustomSerDe#logApplicationSubmission(String, String, SubmitApplicationRequest)",
+          "sig": "com.apple.spark.core.LogDao#logApplicationSubmission(String, String, SubmitApplicationRequest)",
           "lines": [
             175
           ]
@@ -7467,7 +7818,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.CustomSerDe#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitSparkCRD(SparkCluster, String, SparkApplicationSpec, SubmitApplicationRequest, String, String)",
           "lines": [
             406
           ]
@@ -7480,27 +7831,27 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.DateTimeUtils#copyFrom(SparkApplication)",
+          "sig": "com.apple.spark.api.SubmissionStatus#copyFrom(SparkApplication)",
           "lines": [
             50,
             43
           ]
         },
         {
-          "sig": "com.apple.spark.util.DateTimeUtils#onUpdateImpl_logApplication(AppConfig.SparkCluster, SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.ApplicationMonitor#onUpdateImpl_logApplication(SparkCluster, SparkApplication, SparkApplication)",
           "lines": [
             406,
             363
           ]
         },
         {
-          "sig": "com.apple.spark.util.DateTimeUtils#onUpdate(SparkApplication, SparkApplication)",
+          "sig": "com.apple.spark.core.RunningApplicationMonitor#onUpdate(SparkApplication, SparkApplication)",
           "lines": [
             158
           ]
         },
         {
-          "sig": "com.apple.spark.util.DateTimeUtils#getDriverInfo(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getDriverInfo(String, String, User)",
           "lines": [
             739
           ]
@@ -7623,7 +7974,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.util.EndAwareInputStream#executeWithResultValue(CallableWithIOException<T>)",
+          "sig": "com.apple.spark.util.EndAwareInputStream#executeWithResultValue(CallableWithIOException)",
           "lines": [
             96
           ]
@@ -7640,7 +7991,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.EndAwareInputStream#tryGetLogStream(DefaultKubernetesClient, String, String)",
+          "sig": "com.apple.spark.core.KubernetesHelper#tryGetLogStream(DefaultKubernetesClient, String, String)",
           "lines": [
             160
           ]
@@ -7653,7 +8004,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.apple.spark.util.EndAwareInputStream.CallableWithIOException#executeWithResultValue(CallableWithIOException<T>)",
+          "sig": "com.apple.spark.util.EndAwareInputStream#executeWithResultValue(CallableWithIOException)",
           "lines": [
             94
           ]
@@ -7666,7 +8017,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.apple.spark.util.EndAwareInputStream.RunnableWithIOException#executeWithoutResultValue(RunnableWithIOException)",
+          "sig": "com.apple.spark.util.EndAwareInputStream#executeWithoutResultValue(RunnableWithIOException)",
           "lines": [
             103
           ]
@@ -7679,14 +8030,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#parseSubmitRequest(String, String)",
+          "sig": "com.apple.spark.core.ApplicationSubmissionHelper#parseSubmitRequest(String, String)",
           "lines": [
             116,
             93
           ]
         },
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#toResponse(Throwable)",
+          "sig": "com.apple.spark.core.ThrowableExceptionMapper#toResponse(Throwable)",
           "lines": [
             48,
             67,
@@ -7694,25 +8045,25 @@
           ]
         },
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#getStatusImpl(String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatusImpl(String, User)",
           "lines": [
             610
           ]
         },
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#uploadStreamS3(InputStream, Long, String, String)",
+          "sig": "com.apple.spark.rest.CloudStorageRest#uploadStreamS3(InputStream, Long, String, String)",
           "lines": [
             256
           ]
         },
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#uploadStreamGcs(InputStream, String, String)",
+          "sig": "com.apple.spark.rest.CloudStorageRest#uploadStreamGcs(InputStream, String, String)",
           "lines": [
             277
           ]
         },
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#checkResponseOK(String, HttpResponse<?>)",
+          "sig": "com.apple.spark.util.HttpUtils#checkResponseOK(String, HttpResponse)",
           "lines": [
             157
           ]
@@ -7727,7 +8078,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#describe(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#describe(String, String, User)",
           "lines": [
             791
           ]
@@ -7738,32 +8089,32 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#listAllSubmissions(User)",
+          "sig": "com.apple.spark.rest.AdminRest#listAllSubmissions(User)",
           "lines": [
             121
           ]
         },
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#listSubmissionsByApplicationName(String, User)",
+          "sig": "com.apple.spark.rest.AdminRest#listSubmissionsByApplicationName(String, User)",
           "lines": [
             151
           ]
         },
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#version()",
+          "sig": "com.apple.spark.rest.AdminRest#version()",
           "lines": [
             183
           ]
         },
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#getLog(String, String, String, String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getLog(String, String, String, String, String, User)",
           "lines": [
             201,
             269
           ]
         },
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#describe(String, String, User)",
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#describe(String, String, User)",
           "lines": [
             841
           ]
@@ -7778,7 +8129,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.ExceptionUtils#uploadStreamS3(InputStream, Long, String, String)",
+          "sig": "com.apple.spark.rest.CloudStorageRest#uploadStreamS3(InputStream, Long, String, String)",
           "lines": [
             250
           ]
@@ -7787,7 +8138,7 @@
     }
   },
   "com.apple.spark.util.GaugeMetricContainer": {
-    "register(String, Supplier, Tag...)": {
+    "register(String, Supplier, Tag[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -7795,7 +8146,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.GaugeMetricContainer#register(String, Supplier<Number>, Tag...)",
+          "sig": "com.apple.spark.util.GaugeMetricContainer#register(String, Supplier, Tag[])",
           "lines": [
             45
           ]
@@ -7812,7 +8163,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.HttpUtils#submitApplication(int, int, int, int)",
+          "sig": "com.apple.spark.tools.LoadTest#submitApplication(int, int, int, int)",
           "lines": [
             185
           ]
@@ -7823,7 +8174,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.HttpUtils#post(String, String, String, String, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#post(String, String, String, String, Class)",
           "lines": [
             33
           ]
@@ -7838,7 +8189,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.HttpUtils#post(String, String, String, String, String, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#post(String, String, String, String, String, Class)",
           "lines": [
             43
           ]
@@ -7863,7 +8214,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.HttpUtils#post(String, InputStream, String, String, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#post(String, InputStream, String, String, Class)",
           "lines": [
             69
           ]
@@ -7874,7 +8225,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.HttpUtils#post(String, InputStream, String, String, long, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#post(String, InputStream, String, String, long, Class)",
           "lines": [
             80
           ]
@@ -7891,13 +8242,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.HttpUtils#main(String[])",
+          "sig": "com.apple.spark.tools.DeleteApplications#main(String[])",
           "lines": [
             54
           ]
         },
         {
-          "sig": "com.apple.spark.util.HttpUtils#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             115,
             106
@@ -7909,13 +8260,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.HttpUtils#getPodNamePrefixFromAppId(String)",
+          "sig": "com.apple.spark.rest.ApplicationGetLogRest#getPodNamePrefixFromAppId(String)",
           "lines": [
             374
           ]
         },
         {
-          "sig": "com.apple.spark.util.HttpUtils#get(String, String, String, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#get(String, String, String, Class)",
           "lines": [
             105
           ]
@@ -7940,19 +8291,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.HttpUtils#main(String[])",
+          "sig": "com.apple.spark.tools.DeleteApplications#main(String[])",
           "lines": [
             71
           ]
         },
         {
-          "sig": "com.apple.spark.util.HttpUtils#main(String[])",
+          "sig": "com.apple.spark.tools.LoadTest#main(String[])",
           "lines": [
             141
           ]
         },
         {
-          "sig": "com.apple.spark.util.HttpUtils#delete(String, String, String, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#delete(String, String, String, Class)",
           "lines": [
             129
           ]
@@ -7969,7 +8320,7 @@
           ]
         },
         {
-          "sig": "com.apple.spark.util.HttpUtils#executeHttpRequest(String, HttpRequest, HttpResponse.BodyHandler<String>)",
+          "sig": "com.apple.spark.util.HttpUtils#executeHttpRequest(String, HttpRequest, BodyHandler)",
           "lines": [
             201
           ]
@@ -7980,31 +8331,31 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.apple.spark.util.HttpUtils#post(String, String, String, String, String, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#post(String, String, String, String, String, Class)",
           "lines": [
             44
           ]
         },
         {
-          "sig": "com.apple.spark.util.HttpUtils#post(String, InputStream, String, String, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#post(String, InputStream, String, String, Class)",
           "lines": [
             70
           ]
         },
         {
-          "sig": "com.apple.spark.util.HttpUtils#post(String, InputStream, String, String, long, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#post(String, InputStream, String, String, long, Class)",
           "lines": [
             81
           ]
         },
         {
-          "sig": "com.apple.spark.util.HttpUtils#get(String, String, String, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#get(String, String, String, Class)",
           "lines": [
             106
           ]
         },
         {
-          "sig": "com.apple.spark.util.HttpUtils#delete(String, String, String, Class<T>)",
+          "sig": "com.apple.spark.util.HttpUtils#delete(String, String, String, Class)",
           "lines": [
             130
           ]
@@ -8015,9 +8366,22 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "executeHttpRequest(String, HttpRequest, HttpResponse.BodyHandler)": {
+    "executeHttpRequest(String, HttpRequest, BodyHandler)": {
       "type": "PRIVATE",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.util.HttpUtils#post(String, String, String, String, String)",
+          "lines": [
+            60
+          ]
+        },
+        {
+          "sig": "com.apple.spark.util.HttpUtils#post(String, InputStream, String, String, long)",
+          "lines": [
+            97
+          ]
+        }
+      ]
     }
   },
   "com.apple.spark.util.JwtUtils": {
@@ -8025,7 +8389,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.JwtUtils#main(String[])",
+          "sig": "com.apple.spark.tools.QueueTokenGenerator#main(String[])",
           "lines": [
             69
           ]
@@ -8040,7 +8404,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.JwtUtils#verify(String, List<String>, String)",
+          "sig": "com.apple.spark.core.QueueTokenVerifier#verify(String, List, String)",
           "lines": [
             57
           ]
@@ -8073,7 +8437,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.KubernetesClusterAndNamespace#start()",
+          "sig": "com.apple.spark.core.ApplicationMonitor#start()",
           "lines": [
             162
           ]
@@ -8106,19 +8470,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.MetricId#increment(String, Collection<Tag>)",
+          "sig": "com.apple.spark.util.CounterMetricContainer#increment(String, Collection)",
           "lines": [
             49
           ]
         },
         {
-          "sig": "com.apple.spark.util.MetricId#register(String, Supplier<Number>, Collection<Tag>)",
+          "sig": "com.apple.spark.util.GaugeMetricContainer#register(String, Supplier, Collection)",
           "lines": [
             50
           ]
         },
         {
-          "sig": "com.apple.spark.util.MetricId#getTimer(String, Collection<Tag>)",
+          "sig": "com.apple.spark.util.TimerMetricContainer#getTimer(String, Collection)",
           "lines": [
             64
           ]
@@ -8127,22 +8491,83 @@
     }
   },
   "com.apple.spark.util.TimerMetricContainer": {
-    "record(Runnable, String, Tag...)": {
+    "record(Runnable, String, Tag[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.apple.spark.core.LogDao#getSubmissionIdFromAppId(String)",
+          "lines": [
+            121
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#logApplicationSubmission(String, String, SubmitApplicationRequest)",
+          "lines": [
+            182
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#logApplicationId(String, String)",
+          "lines": [
+            228
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#logApplicationStatus(String, String)",
+          "lines": [
+            266
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#logApplicationFinished(String, String, Timestamp, Double, Double)",
+          "lines": [
+            307
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#updateJobInfo(String, Timestamp, int, int, int, String, String, String)",
+          "lines": [
+            382
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#updateExecutorInfo(String, int, int)",
+          "lines": [
+            578
+          ]
+        },
+        {
+          "sig": "com.apple.spark.core.LogDao#getKeyList(String, String)",
+          "lines": [
+            612
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#submitApplication(String, String, String, String, User)",
+          "lines": [
+            240
+          ]
+        },
+        {
+          "sig": "com.apple.spark.rest.ApplicationSubmissionRest#getStatus(String, String, User)",
+          "lines": [
+            559
+          ]
+        }
+      ]
     },
     "record(Runnable, String, Collection)": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.TimerMetricContainer#record(Runnable, String, Tag...)",
+          "sig": "com.apple.spark.util.TimerMetricContainer#record(Runnable, String, Tag[])",
           "lines": [
             45
           ]
         }
       ]
     },
-    "record(Supplier, String, Tag...)": {
+    "record(Supplier, String, Tag[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -8150,7 +8575,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.apple.spark.util.TimerMetricContainer#record(Supplier<T>, String, Tag...)",
+          "sig": "com.apple.spark.util.TimerMetricContainer#record(Supplier, String, Tag[])",
           "lines": [
             54
           ]
@@ -8161,13 +8586,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.apple.spark.util.TimerMetricContainer#record(Runnable, String, Collection<Tag>)",
+          "sig": "com.apple.spark.util.TimerMetricContainer#record(Runnable, String, Collection)",
           "lines": [
             49
           ]
         },
         {
-          "sig": "com.apple.spark.util.TimerMetricContainer#record(Supplier<T>, String, Collection<Tag>)",
+          "sig": "com.apple.spark.util.TimerMetricContainer#record(Supplier, String, Collection)",
           "lines": [
             58
           ]

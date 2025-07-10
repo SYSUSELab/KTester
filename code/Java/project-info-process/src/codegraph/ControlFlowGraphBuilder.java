@@ -167,6 +167,19 @@ public class ControlFlowGraphBuilder {
                     String class_fqn = ctClass.getQualifiedName();
                     JsonObject classGraph = buildGraph4Class(ctClass);
                     graph.add(class_fqn, classGraph);
+                    ctClass.getNestedTypes().forEach(nestedType -> {
+                        if (nestedType.isClass()) {
+                            CtClass<?> nestedClass = (CtClass<?>) nestedType;
+                            String nestedClass_fqn = nestedClass.getQualifiedName().replace("$", ".");
+                            JsonObject nestedClassGraph = buildGraph4Class(nestedClass);
+                            graph.add(nestedClass_fqn, nestedClassGraph);
+                        } else if (nestedType.isInterface()) {
+                            CtInterface<?> nestedInterface = (CtInterface<?>) nestedType;
+                            String nestedInterface_fqn = nestedInterface.getQualifiedName().replace("$", ".");
+                            JsonObject nestedInterfaceGraph = buildGraph4Interface(nestedInterface);
+                            graph.add(nestedInterface_fqn, nestedInterfaceGraph);
+                        }
+                    });
                 } else if (ctType.isInterface()) {
                     CtInterface<?> ctInterface = (CtInterface<?>) ctType;
                     String interface_fqn = ctInterface.getQualifiedName();

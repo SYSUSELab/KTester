@@ -14283,11 +14283,11 @@
           {
             "call_methods": [
               {
-                "signature": "java.util.Objects#hash(..)",
+                "signature": "java.util.Objects#hash(Object[])",
                 "arguments": [
                   {
                     "name": "byteTransitions",
-                    "type": "java.lang.Object..."
+                    "type": "java.lang.Object"
                   }
                 ],
                 "return_type": "int",
@@ -20318,20 +20318,6 @@
                 ]
               },
               {
-                "signature": "software.amazon.event.ruler.input.MultiByte#MultiByte(..)",
-                "arguments": [
-                  {
-                    "name": "lower",
-                    "type": "byte..."
-                  }
-                ],
-                "return_type": "software.amazon.event.ruler.input.MultiByte",
-                "line_numbers": [
-                  26,
-                  27
-                ]
-              },
-              {
                 "signature": "java.lang.String#length()",
                 "arguments": [],
                 "return_type": "int",
@@ -20380,6 +20366,20 @@
                 "return_type": "java.lang.String",
                 "line_numbers": [
                   24
+                ]
+              },
+              {
+                "signature": "software.amazon.event.ruler.input.MultiByte#MultiByte(byte[])",
+                "arguments": [
+                  {
+                    "name": "lower",
+                    "type": "byte"
+                  }
+                ],
+                "return_type": "software.amazon.event.ruler.input.MultiByte",
+                "line_numbers": [
+                  26,
+                  27
                 ]
               },
               {
@@ -20826,11 +20826,11 @@
                 ]
               },
               {
-                "signature": "java.util.Objects#hash(..)",
+                "signature": "java.util.Objects#hash(Object[])",
                 "arguments": [
                   {
                     "name": "getMultiBytes()",
-                    "type": "java.lang.Object..."
+                    "type": "java.lang.Object"
                   }
                 ],
                 "return_type": "int",
@@ -21174,7 +21174,7 @@
               }
             ],
             "return_type": "boolean",
-            "signature": "public boolean is(byte...)",
+            "signature": "public boolean is(byte[])",
             "parameters": [
               {
                 "name": "bytes",
@@ -22252,9 +22252,9 @@
                 ]
               },
               {
-                "signature": "software.amazon.event.ruler.IntIntMap.Anonymous-4be572e9-52cb-4645-b9e0-893f056e731c#Anonymous-4be572e9-52cb-4645-b9e0-893f056e731c()",
+                "signature": "software.amazon.event.ruler.IntIntMap.Anonymous-8b0a95cb-8fd3-4fc9-9b82-7c902eeb092f#Anonymous-8b0a95cb-8fd3-4fc9-9b82-7c902eeb092f()",
                 "arguments": [],
-                "return_type": "software.amazon.event.ruler.IntIntMap.Anonymous-4be572e9-52cb-4645-b9e0-893f056e731c",
+                "return_type": "software.amazon.event.ruler.IntIntMap.Anonymous-8b0a95cb-8fd3-4fc9-9b82-7c902eeb092f",
                 "line_numbers": [
                   189
                 ]
@@ -23456,6 +23456,23 @@
                 ]
               },
               {
+                "signature": "java.lang.String#format(String, Object[])",
+                "arguments": [
+                  {
+                    "name": "\"\\\"%s\\\" must be an object or an array\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "stepName",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  163
+                ]
+              },
+              {
                 "signature": "software.amazon.event.ruler.Path#pop()",
                 "arguments": [],
                 "return_type": "java.lang.String",
@@ -23482,23 +23499,6 @@
                 "return_type": "java.lang.String",
                 "line_numbers": [
                   141
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
-                "arguments": [
-                  {
-                    "name": "\"\\\"%s\\\" must be an object or an array\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "stepName",
-                    "type": "java.lang.Object..."
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  163
                 ]
               }
             ],
@@ -23678,6 +23678,23 @@
                 ]
               },
               {
+                "signature": "java.lang.String#format(String, Object[])",
+                "arguments": [
+                  {
+                    "name": "\"\\\"%s\\\" must be an object or an array\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "stepName",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  208
+                ]
+              },
+              {
                 "signature": "software.amazon.event.ruler.Path#pop()",
                 "arguments": [],
                 "return_type": "java.lang.String",
@@ -23704,23 +23721,6 @@
                 "return_type": "java.lang.String",
                 "line_numbers": [
                   181
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
-                "arguments": [
-                  {
-                    "name": "\"\\\"%s\\\" must be an object or an array\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "stepName",
-                    "type": "java.lang.Object..."
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  208
                 ]
               },
               {
@@ -29977,6 +29977,23 @@
                 ]
               },
               {
+                "signature": "java.lang.String#format(String, Object[])",
+                "arguments": [
+                  {
+                    "name": "\"\\\"%s\\\" must be an object or an array\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "stepName",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  173
+                ]
+              },
+              {
                 "signature": "software.amazon.event.ruler.Path#pop()",
                 "arguments": [],
                 "return_type": "java.lang.String",
@@ -30028,23 +30045,6 @@
                 "return_type": "void",
                 "line_numbers": [
                   169
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
-                "arguments": [
-                  {
-                    "name": "\"\\\"%s\\\" must be an object or an array\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "stepName",
-                    "type": "java.lang.Object..."
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  173
                 ]
               },
               {
@@ -31927,6 +31927,23 @@
                 ]
               },
               {
+                "signature": "java.lang.String#format(String, Object[])",
+                "arguments": [
+                  {
+                    "name": "\"\\\"%s\\\" must be an object or an array\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "stepName",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  675
+                ]
+              },
+              {
                 "signature": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#writeRules(Map<List<String>, List<Patterns>>, List<String>, JsonParser, boolean)",
                 "arguments": [
                   {
@@ -31995,23 +32012,6 @@
                 "return_type": "void",
                 "line_numbers": [
                   666
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
-                "arguments": [
-                  {
-                    "name": "\"\\\"%s\\\" must be an object or an array\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "stepName",
-                    "type": "java.lang.Object..."
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  675
                 ]
               },
               {
@@ -33626,11 +33626,11 @@
           {
             "call_methods": [
               {
-                "signature": "java.util.Objects#hash(..)",
+                "signature": "java.util.Objects#hash(Object[])",
                 "arguments": [
                   {
                     "name": "keyIndex",
-                    "type": "java.lang.Object..."
+                    "type": "java.lang.Object"
                   },
                   {
                     "name": "nameState",

@@ -1,0 +1,3802 @@
+{
+  "org.apache.commons.csv.Constants": {},
+  "org.apache.commons.csv.CSVFormat": {
+    "clone(T[])": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              517,
+              518
+            ],
+            520
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              532,
+              533
+            ],
+            535
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              547,
+              548
+            ],
+            550
+          ]
+        }
+      ]
+    ],
+    "contains(String, char)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1191,
+              1193
+            ]
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              361,
+              362
+            ],
+            370
+          ]
+        }
+      ]
+    ],
+    "containsLineBreak(String)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              361,
+              362
+            ],
+            370
+          ]
+        }
+      ]
+    ],
+    "isBlank(String)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              2254,
+              2255
+            ],
+            2259,
+            2263,
+            2267,
+            2271,
+            2275,
+            2279,
+            [
+              2284,
+              2288
+            ],
+            2299
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              475,
+              482
+            ],
+            [
+              484,
+              485
+            ],
+            490,
+            496,
+            500,
+            [
+              502,
+              505
+            ],
+            539
+          ]
+        }
+      ]
+    ],
+    "isLineBreak(char)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1217,
+              1219
+            ]
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              337,
+              338
+            ],
+            343
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1217,
+              1219
+            ]
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              403,
+              404
+            ],
+            409
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1217,
+              1219
+            ]
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              621,
+              622
+            ],
+            627
+          ]
+        }
+      ]
+    ],
+    "isLineBreak(Character)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              337,
+              338
+            ],
+            343
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              403,
+              404
+            ],
+            409
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              621,
+              622
+            ],
+            627
+          ]
+        }
+      ]
+    ],
+    "isTrimChar(char)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1227,
+              1229
+            ]
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1262,
+              1263
+            ],
+            [
+              1266,
+              1268
+            ],
+            1270,
+            1273,
+            1277
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              2040,
+              2044
+            ],
+            [
+              2046,
+              2048
+            ],
+            2052,
+            [
+              2054,
+              2055
+            ],
+            2058,
+            [
+              2070,
+              2071
+            ],
+            2080,
+            2082,
+            2088,
+            [
+              2097,
+              2099
+            ],
+            2102,
+            2144
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1832,
+              1835
+            ],
+            1838,
+            1840,
+            1842,
+            1848
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            [
+              1813,
+              1814
+            ],
+            [
+              1820,
+              1821
+            ],
+            [
+              1828,
+              1830
+            ]
+          ]
+        }
+      ]
+    ],
+    "isTrimChar(CharSequence, int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1262,
+              1263
+            ],
+            [
+              1266,
+              1268
+            ],
+            1270,
+            1273,
+            1277
+          ]
+        }
+      ]
+    ],
+    "toStringArray(Object[])": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              532,
+              533
+            ],
+            535
+          ]
+        }
+      ]
+    ],
+    "trim(CharSequence)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            [
+              1813,
+              1814
+            ],
+            [
+              1820,
+              1821
+            ],
+            1828,
+            1830
+          ]
+        }
+      ]
+    ],
+    "trim(String)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              442,
+              443
+            ],
+            448
+          ]
+        }
+      ]
+    ],
+    "append(char, Appendable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1985,
+              1987
+            ],
+            [
+              1990,
+              1994
+            ],
+            [
+              1996,
+              2001
+            ],
+            2003,
+            [
+              2008,
+              2010
+            ],
+            [
+              2014,
+              2015
+            ],
+            [
+              2017,
+              2021
+            ],
+            2034
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            1873,
+            [
+              1875,
+              1876
+            ],
+            1883
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2153,
+            2155,
+            2160,
+            [
+              2162,
+              2163
+            ],
+            2165,
+            [
+              2167,
+              2170
+            ],
+            [
+              2172,
+              2174
+            ],
+            2179,
+            2185,
+            [
+              2189,
+              2190
+            ]
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            [
+              1873,
+              1874
+            ],
+            1883
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1985,
+              1987
+            ],
+            [
+              1990,
+              1994
+            ],
+            [
+              1996,
+              2001
+            ],
+            2003,
+            [
+              2008,
+              2010
+            ],
+            [
+              2014,
+              2015
+            ],
+            [
+              2017,
+              2021
+            ],
+            2034
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2153,
+            [
+              2155,
+              2156
+            ],
+            2190
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            [
+              1873,
+              1874
+            ],
+            1883
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ]
+    ],
+    "append(CharSequence, Appendable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1907,
+              1909
+            ],
+            [
+              1911,
+              1912
+            ],
+            1914
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            [
+              1870,
+              1871
+            ],
+            1883
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1985,
+              1987
+            ],
+            [
+              1990,
+              1994
+            ],
+            [
+              1996,
+              2001
+            ],
+            [
+              2003,
+              2004
+            ],
+            [
+              2031,
+              2032
+            ],
+            2034
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            1873,
+            [
+              1875,
+              1876
+            ],
+            1883
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ]
+    ],
+    "builder()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1431,
+              1433
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              231,
+              233
+            ]
+          ]
+        }
+      ]
+    ],
+    "getAllowMissingColumnNames()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              475,
+              482
+            ],
+            [
+              484,
+              485
+            ],
+            490,
+            496,
+            500,
+            [
+              502,
+              506
+            ],
+            539
+          ]
+        }
+      ]
+    ],
+    "getAutoFlush()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              128,
+              129
+            ],
+            135
+          ]
+        }
+      ]
+    ],
+    "getCommentMarker()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              193,
+              194
+            ],
+            197,
+            [
+              200,
+              204
+            ],
+            [
+              210,
+              212
+            ],
+            221
+          ]
+        }
+      ]
+    ],
+    "getDelimiterString()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            [
+              1870,
+              1871
+            ],
+            1883
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1907,
+              1909
+            ],
+            1914
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1832,
+              1836
+            ],
+            1848
+          ]
+        }
+      ]
+    ],
+    "getDuplicateHeaderMode()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              475,
+              482
+            ],
+            [
+              484,
+              485
+            ],
+            490,
+            496,
+            500,
+            [
+              502,
+              506
+            ],
+            [
+              511,
+              512
+            ],
+            539
+          ]
+        }
+      ]
+    ],
+    "getEscapeCharacter()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1939,
+              1942
+            ],
+            [
+              1944,
+              1946
+            ],
+            1983
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1985,
+              1987
+            ],
+            [
+              1990,
+              1993
+            ],
+            2034
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              2040,
+              2044
+            ],
+            [
+              2046,
+              2048
+            ],
+            2052,
+            2144
+          ]
+        }
+      ]
+    ],
+    "getHeader()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              231,
+              233
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              475,
+              478
+            ],
+            539
+          ]
+        }
+      ]
+    ],
+    "getIgnoreEmptyLines()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2192,
+            [
+              2194,
+              2196
+            ],
+            2200,
+            2204,
+            2208,
+            2212,
+            2216,
+            2220,
+            2239
+          ]
+        }
+      ]
+    ],
+    "getIgnoreHeaderCase()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              463,
+              467
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2192,
+            [
+              2194,
+              2196
+            ],
+            2200,
+            2204,
+            2208,
+            2212,
+            2216,
+            2220,
+            2223,
+            2226,
+            2239
+          ]
+        }
+      ]
+    ],
+    "getIgnoreSurroundingSpaces()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2192,
+            [
+              2194,
+              2196
+            ],
+            2200,
+            2204,
+            2208,
+            2212,
+            2216,
+            2220,
+            2223,
+            2239
+          ]
+        }
+      ]
+    ],
+    "getNullString()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              670,
+              672
+            ],
+            680
+          ]
+        }
+      ]
+    ],
+    "getQuoteCharacter()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2153,
+            2155,
+            2160,
+            2162,
+            2190
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              2040,
+              2044
+            ],
+            [
+              2046,
+              2048
+            ],
+            2144
+          ]
+        }
+      ]
+    ],
+    "getQuoteMode()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2153,
+            2155,
+            2190
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              726,
+              729
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              2040,
+              2044
+            ],
+            [
+              2046,
+              2048
+            ],
+            2052,
+            2054,
+            2144
+          ]
+        }
+      ]
+    ],
+    "getSkipHeaderRecord()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              475,
+              482
+            ],
+            490,
+            539
+          ]
+        }
+      ]
+    ],
+    "getTrailingDelimiter()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1907,
+              1908
+            ],
+            1914
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              442,
+              444
+            ],
+            448
+          ]
+        }
+      ]
+    ],
+    "getTrim()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              2241,
+              2243
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            [
+              1813,
+              1814
+            ],
+            [
+              1820,
+              1821
+            ],
+            1828,
+            1830
+          ]
+        }
+      ]
+    ],
+    "isCommentMarkerSet()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              193,
+              194
+            ],
+            221
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2192,
+            [
+              2194,
+              2196
+            ],
+            2200,
+            2204,
+            2208,
+            2239
+          ]
+        }
+      ]
+    ],
+    "isDelimiter(char, CharSequence, int, char[], int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1939,
+              1942
+            ],
+            [
+              1944,
+              1946
+            ],
+            [
+              1948,
+              1950
+            ],
+            1983
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1832,
+              1835
+            ],
+            1838,
+            1840,
+            [
+              1843,
+              1844
+            ],
+            1848
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            [
+              1813,
+              1814
+            ],
+            [
+              1820,
+              1821
+            ],
+            [
+              1828,
+              1830
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1985,
+              1987
+            ],
+            [
+              1990,
+              1994
+            ],
+            [
+              1996,
+              2000
+            ],
+            2034
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            1873,
+            [
+              1875,
+              1876
+            ],
+            1883
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              2040,
+              2044
+            ],
+            [
+              2046,
+              2048
+            ],
+            2052,
+            [
+              2054,
+              2055
+            ],
+            2058,
+            [
+              2070,
+              2071
+            ],
+            2080,
+            2082,
+            [
+              2088,
+              2090
+            ],
+            2144
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1832,
+              1835
+            ],
+            1838,
+            1840,
+            1842,
+            1848
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            [
+              1813,
+              1814
+            ],
+            [
+              1820,
+              1821
+            ],
+            [
+              1828,
+              1830
+            ]
+          ]
+        }
+      ]
+    ],
+    "isEscapeCharacterSet()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            1873,
+            1875,
+            1883
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2192,
+            [
+              2194,
+              2196
+            ],
+            2239
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1832,
+              1835
+            ],
+            1838,
+            1840,
+            1843,
+            1848
+          ]
+        }
+      ]
+    ],
+    "isNullStringSet()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2192,
+            [
+              2194,
+              2196
+            ],
+            2200,
+            2204,
+            2208,
+            2212,
+            2239
+          ]
+        }
+      ]
+    ],
+    "isQuoteCharacterSet()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            1873,
+            1883
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2192,
+            [
+              2194,
+              2196
+            ],
+            2200,
+            2239
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1832,
+              1835
+            ],
+            1838,
+            1840,
+            1848
+          ]
+        }
+      ]
+    ],
+    "print(Appendable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1863,
+            [
+              1865,
+              1866
+            ]
+          ]
+        }
+      ]
+    ],
+    "print(Object, Appendable, boolean)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              167,
+              168
+            ],
+            170
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1929,
+              1931
+            ],
+            1934
+          ]
+        }
+      ]
+    ],
+    "print(Object, CharSequence, Appendable, boolean)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            [
+              1813,
+              1814
+            ],
+            [
+              1820,
+              1821
+            ],
+            [
+              1828,
+              1830
+            ]
+          ]
+        }
+      ]
+    ],
+    "print(Reader, Appendable, boolean)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ]
+    ],
+    "println(Appendable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              241,
+              242
+            ],
+            244
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1929,
+              1930
+            ],
+            [
+              1933,
+              1934
+            ]
+          ]
+        }
+      ]
+    ],
+    "printWithEscapes(CharSequence, Appendable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1832,
+              1835
+            ],
+            1838,
+            1840,
+            [
+              1843,
+              1844
+            ],
+            1848
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            [
+              1813,
+              1814
+            ],
+            [
+              1820,
+              1821
+            ],
+            [
+              1828,
+              1830
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              2040,
+              2044
+            ],
+            [
+              2046,
+              2048
+            ],
+            2052,
+            [
+              2054,
+              2055
+            ],
+            2058,
+            2066,
+            2068,
+            2144
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1832,
+              1835
+            ],
+            1838,
+            1840,
+            1842,
+            1848
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            [
+              1813,
+              1814
+            ],
+            [
+              1820,
+              1821
+            ],
+            [
+              1828,
+              1830
+            ]
+          ]
+        }
+      ]
+    ],
+    "printWithEscapes(Reader, Appendable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            1873,
+            [
+              1875,
+              1876
+            ],
+            1883
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            2153,
+            [
+              2155,
+              2156
+            ],
+            2190
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            [
+              1873,
+              1874
+            ],
+            1883
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ]
+    ],
+    "printWithQuotes(Object, CharSequence, Appendable, boolean)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1832,
+              1835
+            ],
+            1838,
+            1840,
+            1842,
+            1848
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            [
+              1813,
+              1814
+            ],
+            [
+              1820,
+              1821
+            ],
+            [
+              1828,
+              1830
+            ]
+          ]
+        }
+      ]
+    ],
+    "printWithQuotes(Reader, Appendable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            [
+              1873,
+              1874
+            ],
+            1883
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1807,
+            [
+              1810,
+              1811
+            ],
+            1820,
+            [
+              1822,
+              1823
+            ],
+            1830
+          ]
+        }
+      ]
+    ],
+    "CSVFormat(Builder)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              273,
+              275
+            ]
+          ]
+        }
+      ]
+    ],
+    "CSVFormat(String, Character, QuoteMode, Character, Character, boolean, boolean, String, String, Object[], String[], boolean, boolean, boolean, boolean, boolean, boolean, DuplicateHeaderMode)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1248,
+              1251
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.CSVFormat.Builder": {
+    "create(CSVFormat)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1422,
+              1424
+            ]
+          ]
+        }
+      ]
+    ],
+    "build()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1431,
+              1433
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              231,
+              233
+            ]
+          ]
+        }
+      ]
+    ],
+    "setCommentMarker(Character)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              323,
+              324
+            ],
+            326
+          ]
+        }
+      ]
+    ],
+    "setDelimiter(String)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              351,
+              353
+            ]
+          ]
+        }
+      ]
+    ],
+    "setEscape(Character)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              391,
+              392
+            ],
+            394
+          ]
+        }
+      ]
+    ],
+    "setHeader(ResultSet)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              231,
+              233
+            ]
+          ]
+        }
+      ]
+    ],
+    "setHeader(ResultSetMetaData)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              462,
+              464
+            ]
+          ]
+        }
+      ]
+    ],
+    "setHeader(String[])": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            486,
+            [
+              495,
+              496
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              432,
+              434
+            ],
+            [
+              439,
+              440
+            ]
+          ]
+        }
+      ]
+    ],
+    "setQuote(Character)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              610,
+              611
+            ],
+            613
+          ]
+        }
+      ]
+    ],
+    "Builder(CSVFormat)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              194,
+              196
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              204,
+              206
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.CSVFormat.Predefined": {},
+  "org.apache.commons.csv.CSVParser": {
+    "parse(InputStream, Charset, CSVFormat)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            276,
+            [
+              278,
+              281
+            ]
+          ]
+        }
+      ]
+    ],
+    "parse(Path, Charset, CSVFormat)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              226,
+              229
+            ]
+          ]
+        }
+      ]
+    ],
+    "parse(Reader, CSVFormat)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            252,
+            [
+              255,
+              258
+            ]
+          ]
+        }
+      ]
+    ],
+    "addRecordValue(boolean)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              762,
+              766
+            ],
+            [
+              768,
+              772
+            ],
+            [
+              774,
+              775
+            ],
+            [
+              777,
+              779
+            ],
+            807
+          ]
+        }
+      ]
+    ],
+    "createEmptyHeaderMap()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              588,
+              589
+            ],
+            592,
+            595
+          ]
+        }
+      ]
+    ],
+    "getCurrentLineNumber()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            762,
+            785,
+            807
+          ]
+        }
+      ]
+    ],
+    "getHeaderMapRaw()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
+          "lines": [
+            [
+              154,
+              156
+            ]
+          ]
+        }
+      ]
+    ],
+    "handleNull(String)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              442,
+              444
+            ],
+            [
+              447,
+              448
+            ]
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              762,
+              766
+            ],
+            [
+              768,
+              772
+            ],
+            [
+              774,
+              775
+            ],
+            [
+              777,
+              779
+            ],
+            807
+          ]
+        }
+      ]
+    ],
+    "isClosed()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            153,
+            155,
+            163
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            165,
+            167,
+            182
+          ]
+        }
+      ]
+    ],
+    "isStrictQuoteMode()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              670,
+              673
+            ],
+            680
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              442,
+              444
+            ],
+            [
+              447,
+              448
+            ]
+          ]
+        },
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              762,
+              766
+            ],
+            [
+              768,
+              772
+            ],
+            [
+              774,
+              775
+            ],
+            [
+              777,
+              779
+            ],
+            807
+          ]
+        }
+      ]
+    ],
+    "iterator()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              818,
+              820
+            ]
+          ]
+        }
+      ]
+    ],
+    "nextRecord()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            145,
+            147,
+            151
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              475,
+              482
+            ],
+            484,
+            [
+              490,
+              491
+            ],
+            539
+          ]
+        }
+      ]
+    ],
+    "stream()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              648,
+              650
+            ]
+          ]
+        }
+      ]
+    ],
+    "CSVParser(Reader, CSVFormat)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1759,
+              1761
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              302,
+              304
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              321,
+              323
+            ],
+            [
+              325,
+              326
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.CSVParser.CSVRecordIterator": {
+    "getNextRecord()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            153,
+            155,
+            [
+              158,
+              159
+            ],
+            163
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            165,
+            167,
+            [
+              170,
+              171
+            ],
+            173,
+            175,
+            182
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.CSVParser.Headers": {
+    "Headers(Map, List)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              475,
+              479
+            ],
+            [
+              533,
+              534
+            ],
+            536,
+            [
+              538,
+              539
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.CSVPrinter": {
+    "close(boolean)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            115,
+            [
+              117,
+              118
+            ]
+          ]
+        }
+      ]
+    ],
+    "flush()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              128,
+              130
+            ],
+            135
+          ]
+        }
+      ]
+    ],
+    "print(Object)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            416,
+            422,
+            426
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              259,
+              261
+            ],
+            264
+          ]
+        }
+      ]
+    ],
+    "printHeaders(ResultSet)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              437,
+              439
+            ],
+            442
+          ]
+        }
+      ]
+    ],
+    "println()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            297,
+            [
+              305,
+              306
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            416,
+            424,
+            426
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              259,
+              260
+            ],
+            [
+              263,
+              264
+            ]
+          ]
+        }
+      ]
+    ],
+    "printRecord(Iterable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              279,
+              281
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              308,
+              309
+            ],
+            [
+              311,
+              312
+            ],
+            316
+          ]
+        }
+      ]
+    ],
+    "printRecord(Object[])": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1460,
+            1463,
+            1471
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              231,
+              233
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              308,
+              311
+            ],
+            314,
+            316
+          ]
+        }
+      ]
+    ],
+    "printRecordObject(Object)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              357,
+              359
+            ],
+            361
+          ]
+        }
+      ]
+    ],
+    "printRecords(Iterable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              402,
+              404
+            ]
+          ]
+        }
+      ]
+    ],
+    "printRecords(ResultSet)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              437,
+              438
+            ],
+            [
+              441,
+              442
+            ]
+          ]
+        }
+      ]
+    ],
+    "CSVPrinter(Appendable, CSVFormat)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1460,
+            1462,
+            1471
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1774,
+              1776
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1791,
+            [
+              1794,
+              1795
+            ]
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.CSVRecord": {
+    "get(String)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
+          "lines": [
+            [
+              74,
+              76
+            ]
+          ]
+        }
+      ]
+    ],
+    "getComment()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              475,
+              482
+            ],
+            [
+              484,
+              487
+            ],
+            [
+              490,
+              493
+            ],
+            539
+          ]
+        }
+      ]
+    ],
+    "getHeaderMapRaw()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
+          "lines": [
+            [
+              112,
+              113
+            ],
+            130
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
+          "lines": [
+            [
+              211,
+              212
+            ],
+            214
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
+          "lines": [
+            [
+              223,
+              224
+            ],
+            226
+          ]
+        }
+      ]
+    ],
+    "isMapped(String)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
+          "lines": [
+            [
+              246,
+              248
+            ]
+          ]
+        }
+      ]
+    ],
+    "putIn(M)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
+          "lines": [
+            [
+              320,
+              322
+            ]
+          ]
+        }
+      ]
+    ],
+    "stream()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
+          "lines": [
+            [
+              308,
+              310
+            ]
+          ]
+        }
+      ]
+    ],
+    "toList()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
+          "lines": [
+            255,
+            [
+              257,
+              258
+            ]
+          ]
+        }
+      ]
+    ],
+    "values()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              475,
+              482
+            ],
+            [
+              484,
+              486
+            ],
+            539
+          ]
+        }
+      ]
+    ],
+    "CSVRecord(CSVParser, String[], String, long, long)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              762,
+              766
+            ],
+            768,
+            798,
+            [
+              800,
+              804
+            ],
+            807
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.DuplicateHeaderMode": {},
+  "org.apache.commons.csv.ExtendedBufferedReader": {
+    "close()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            84,
+            [
+              86,
+              87
+            ]
+          ]
+        }
+      ]
+    ],
+    "getCurrentLineNumber()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              103,
+              105
+            ]
+          ]
+        }
+      ]
+    ],
+    "getLastChar()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            302
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            [
+              328,
+              330
+            ],
+            339,
+            382
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            404,
+            [
+              406,
+              407
+            ],
+            411,
+            416,
+            [
+              421,
+              422
+            ],
+            [
+              425,
+              427
+            ],
+            443
+          ]
+        }
+      ]
+    ],
+    "getPosition()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              94,
+              96
+            ]
+          ]
+        }
+      ]
+    ],
+    "isClosed()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              111,
+              113
+            ]
+          ]
+        }
+      ]
+    ],
+    "lookAhead()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            450,
+            452,
+            470
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\ExtendedBufferedReader.java",
+          "lines": [
+            211,
+            213,
+            [
+              216,
+              220
+            ],
+            231
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            [
+              328,
+              331
+            ],
+            333,
+            [
+              344,
+              345
+            ],
+            382
+          ]
+        }
+      ]
+    ],
+    "lookAhead(char[])": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              173,
+              174
+            ],
+            185
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\ExtendedBufferedReader.java",
+          "lines": [
+            [
+              151,
+              154
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              127,
+              129
+            ],
+            132,
+            136,
+            145
+          ]
+        }
+      ]
+    ],
+    "lookAhead(int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1985,
+              1987
+            ],
+            [
+              1990,
+              1994
+            ],
+            [
+              1996,
+              2000
+            ],
+            2034
+          ]
+        }
+      ]
+    ],
+    "read()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            484,
+            486,
+            514
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            404,
+            406,
+            435,
+            443
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            450,
+            452,
+            454,
+            470
+          ]
+        }
+      ]
+    ],
+    "read(char[], int, int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              173,
+              175
+            ],
+            178,
+            183,
+            185
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              127,
+              129
+            ],
+            132,
+            [
+              136,
+              137
+            ],
+            142,
+            145
+          ]
+        }
+      ]
+    ],
+    "readLine()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            226,
+            231,
+            234,
+            250,
+            [
+              256,
+              257
+            ],
+            302
+          ]
+        }
+      ]
+    ],
+    "ExtendedBufferedReader(Reader)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1985,
+              1987
+            ],
+            1990,
+            2034
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.IOUtils": {
+    "copy(Reader, Appendable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            1873,
+            1875,
+            1877,
+            1880,
+            1883
+          ]
+        }
+      ]
+    ],
+    "copy(Reader, Appendable, CharBuffer)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\IOUtils.java",
+          "lines": [
+            [
+              52,
+              54
+            ]
+          ]
+        }
+      ]
+    ],
+    "copyLarge(Reader, Writer)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            1868,
+            1870,
+            1873,
+            1875,
+            [
+              1877,
+              1878
+            ],
+            1883
+          ]
+        }
+      ]
+    ],
+    "copyLarge(Reader, Writer, char[])": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\IOUtils.java",
+          "lines": [
+            [
+              99,
+              101
+            ]
+          ]
+        }
+      ]
+    ],
+    "rethrow(Throwable)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            297,
+            302,
+            306
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            485,
+            491,
+            494
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.Lexer": {
+    "close()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            456,
+            [
+              458,
+              459
+            ],
+            461
+          ]
+        }
+      ]
+    ],
+    "getCharacterPosition()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              762,
+              766
+            ],
+            807
+          ]
+        }
+      ]
+    ],
+    "getCurrentLineNumber()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              551,
+              553
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            328,
+            368,
+            382
+          ]
+        }
+      ]
+    ],
+    "getFirstEol()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              561,
+              563
+            ]
+          ]
+        }
+      ]
+    ],
+    "isClosed()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              716,
+              718
+            ]
+          ]
+        }
+      ]
+    ],
+    "isCommentStart(int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            226,
+            231,
+            234,
+            250,
+            256,
+            302
+          ]
+        }
+      ]
+    ],
+    "isDelimiter(int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            404,
+            [
+              406,
+              407
+            ],
+            411,
+            416,
+            443
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            [
+              328,
+              330
+            ],
+            [
+              351,
+              353
+            ],
+            382
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            226,
+            231,
+            234,
+            250,
+            256,
+            270,
+            [
+              272,
+              273
+            ],
+            280,
+            302
+          ]
+        }
+      ]
+    ],
+    "isEndOfFile(int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            404,
+            [
+              406,
+              407
+            ],
+            411,
+            443
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            [
+              328,
+              330
+            ],
+            [
+              351,
+              353
+            ],
+            357,
+            373,
+            382
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            226,
+            231,
+            [
+              234,
+              235
+            ],
+            241,
+            250,
+            256,
+            270,
+            272,
+            280,
+            283,
+            287,
+            290,
+            302
+          ]
+        }
+      ]
+    ],
+    "isEscape(int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            404,
+            [
+              406,
+              407
+            ],
+            411,
+            416,
+            421,
+            443
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            [
+              328,
+              331
+            ],
+            333,
+            382
+          ]
+        }
+      ]
+    ],
+    "isEscapeDelimiter()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            404,
+            [
+              406,
+              407
+            ],
+            411,
+            416,
+            [
+              421,
+              422
+            ],
+            443
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            [
+              328,
+              331
+            ],
+            [
+              333,
+              334
+            ],
+            382
+          ]
+        }
+      ]
+    ],
+    "isMetaChar(int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            484,
+            [
+              486,
+              487
+            ],
+            504,
+            508,
+            514
+          ]
+        }
+      ]
+    ],
+    "isQuoteChar(int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            [
+              328,
+              331
+            ],
+            333,
+            [
+              344,
+              345
+            ],
+            382
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            226,
+            231,
+            234,
+            250,
+            256,
+            270,
+            272,
+            280,
+            283,
+            287,
+            302
+          ]
+        }
+      ]
+    ],
+    "isStartOfLine(int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            226,
+            231,
+            [
+              234,
+              235
+            ],
+            250,
+            256,
+            302
+          ]
+        }
+      ]
+    ],
+    "nextToken(Token)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              762,
+              766
+            ],
+            [
+              768,
+              769
+            ],
+            807
+          ]
+        }
+      ]
+    ],
+    "parseEncapsulatedToken(Token)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            226,
+            231,
+            234,
+            250,
+            256,
+            270,
+            289,
+            302
+          ]
+        }
+      ]
+    ],
+    "parseSimpleToken(Token, int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            226,
+            231,
+            234,
+            250,
+            256,
+            270,
+            298,
+            302
+          ]
+        }
+      ]
+    ],
+    "readEndOfLine(int)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            404,
+            [
+              406,
+              407
+            ],
+            443
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            [
+              328,
+              330
+            ],
+            [
+              351,
+              353
+            ],
+            357,
+            362,
+            382
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            220,
+            223,
+            226,
+            231,
+            [
+              234,
+              235
+            ],
+            [
+              237,
+              239
+            ],
+            250,
+            256,
+            270,
+            [
+              272,
+              273
+            ],
+            275,
+            302
+          ]
+        }
+      ]
+    ],
+    "readEscape()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            404,
+            [
+              406,
+              407
+            ],
+            411,
+            416,
+            [
+              421,
+              422
+            ],
+            425,
+            443
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              325,
+              326
+            ],
+            [
+              328,
+              331
+            ],
+            [
+              333,
+              334
+            ],
+            337,
+            382
+          ]
+        }
+      ]
+    ],
+    "trimTrailingSpaces(StringBuilder)": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            404,
+            406,
+            [
+              438,
+              439
+            ],
+            443
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.QuoteMode": {},
+  "org.apache.commons.csv.Token": {
+    "reset()": [
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
+          "lines": [
+            [
+              762,
+              766
+            ],
+            768,
+            807
+          ]
+        }
+      ]
+    ]
+  },
+  "org.apache.commons.csv.Token.Type": {}
+}

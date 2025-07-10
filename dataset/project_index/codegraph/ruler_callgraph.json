@@ -4,13 +4,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ACFinder#rulesForJSONEvent(String)",
+          "sig": "software.amazon.event.ruler.GenericMachine#rulesForJSONEvent(String)",
           "lines": [
             63
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ACFinder#rulesForJSONEvent(JsonNode)",
+          "sig": "software.amazon.event.ruler.GenericMachine#rulesForJSONEvent(JsonNode)",
           "lines": [
             68
           ]
@@ -21,7 +21,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ACFinder#matchRules(Event, GenericMachine<?>)",
+          "sig": "software.amazon.event.ruler.ACFinder#matchRules(Event, GenericMachine)",
           "lines": [
             21
           ]
@@ -94,7 +94,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ACStep#moveFrom(NameState, int, ACTask, ArrayMembership)",
+          "sig": "software.amazon.event.ruler.ACFinder#moveFrom(NameState, int, ACTask, ArrayMembership)",
           "lines": [
             96
           ]
@@ -107,7 +107,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ACTask#find(ACTask)",
+          "sig": "software.amazon.event.ruler.ACFinder#find(ACTask)",
           "lines": [
             27
           ]
@@ -118,7 +118,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ACTask#find(ACTask)",
+          "sig": "software.amazon.event.ruler.ACFinder#find(ACTask)",
           "lines": [
             34
           ]
@@ -129,13 +129,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ACTask#tryStep(ACTask, ACStep)",
+          "sig": "software.amazon.event.ruler.ACFinder#tryStep(ACTask, ACStep)",
           "lines": [
             55
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ACTask#addNameState(NameState, ACTask, int, ArrayMembership)",
+          "sig": "software.amazon.event.ruler.ACFinder#addNameState(NameState, ACTask, int, ArrayMembership)",
           "lines": [
             102
           ]
@@ -146,7 +146,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ACTask#matchRules(Event, GenericMachine<?>)",
+          "sig": "software.amazon.event.ruler.ACFinder#matchRules(Event, GenericMachine)",
           "lines": [
             21
           ]
@@ -159,25 +159,25 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#processAnythingButListMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processAnythingButListMatchExpression(JsonParser)",
           "lines": [
             536
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#processAnythingButMatchExpression(JsonParser, JsonToken)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processAnythingButMatchExpression(JsonParser, JsonToken)",
           "lines": [
             576
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#processAnythingButListMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processAnythingButListMatchExpression(JsonParser)",
           "lines": [
             435
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#processAnythingButMatchExpression(JsonParser, JsonToken)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processAnythingButMatchExpression(JsonParser, JsonToken)",
           "lines": [
             476
           ]
@@ -188,26 +188,26 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#deleteAnythingButPattern(AnythingBut)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteAnythingButPattern(AnythingBut)",
           "lines": [
             163
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#addAnythingButPattern(AnythingBut)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addAnythingButPattern(AnythingBut)",
           "lines": [
             665
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#findAnythingButPattern(AnythingBut)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findAnythingButPattern(AnythingBut)",
           "lines": [
             857,
             858
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#matches(JsonNode, Patterns)",
+          "sig": "software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)",
           "lines": [
             116,
             118
@@ -219,19 +219,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             508
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#addMatchReferences(ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchReferences(ByteMatch)",
           "lines": [
             1570
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#updateMatchReferences(ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#updateMatchReferences(ByteMatch)",
           "lines": [
             1672
           ]
@@ -254,31 +254,31 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#anythingButMatch(Set<String>, boolean)",
+          "sig": "software.amazon.event.ruler.AnythingBut#anythingButMatch(Set, boolean)",
           "lines": [
             25
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#anythingButMatch(String)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButMatch(String)",
           "lines": [
             52
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#anythingButMatch(double)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButMatch(double)",
           "lines": [
             56
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#anythingButMatch(Set<String>)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButMatch(Set)",
           "lines": [
             60
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingBut#anythingButNumberMatch(Set<Double>)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButNumberMatch(Set)",
           "lines": [
             76
           ]
@@ -291,26 +291,26 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase#deleteAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
           "lines": [
             168
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase#addAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
           "lines": [
             682
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase#findAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
           "lines": [
             873,
             874
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase#matches(JsonNode, Patterns)",
+          "sig": "software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)",
           "lines": [
             126
           ]
@@ -333,13 +333,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase#anythingButIgnoreCaseMatch(String)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButIgnoreCaseMatch(String)",
           "lines": [
             64
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase#anythingButIgnoreCaseMatch(Set<String>)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButIgnoreCaseMatch(Set)",
           "lines": [
             68
           ]
@@ -358,14 +358,14 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ArrayMembership#traverseArray(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseArray(JsonParser, TreeMap, Progress)",
           "lines": [
             161,
             166
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ArrayMembership#loadArray(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadArray(JsonNode, Map, Progress)",
           "lines": [
             324,
             319
@@ -377,14 +377,14 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ArrayMembership#traverseArray(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseArray(JsonParser, TreeMap, Progress)",
           "lines": [
             163,
             168
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ArrayMembership#loadArray(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadArray(JsonNode, Map, Progress)",
           "lines": [
             321,
             326
@@ -427,13 +427,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ArrayMembership#tryStep(ACTask, ACStep)",
+          "sig": "software.amazon.event.ruler.ACFinder#tryStep(ACTask, ACStep)",
           "lines": [
             42
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ArrayMembership#getNameTransitions(Event, ArrayMembership)",
+          "sig": "software.amazon.event.ruler.NameState#getNameTransitions(Event, ArrayMembership)",
           "lines": [
             126
           ]
@@ -444,7 +444,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ArrayMembership#find(ACTask)",
+          "sig": "software.amazon.event.ruler.ACFinder#find(ACTask)",
           "lines": [
             32
           ]
@@ -469,13 +469,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#tryStep(ACTask, ACStep)",
+          "sig": "software.amazon.event.ruler.ACFinder#tryStep(ACTask, ACStep)",
           "lines": [
             51
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#tryValueMatching(Task, Step)",
+          "sig": "software.amazon.event.ruler.Finder#tryValueMatching(Task, Step)",
           "lines": [
             123
           ]
@@ -486,7 +486,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
           "lines": [
             317
           ]
@@ -497,7 +497,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
           "lines": [
             316
           ]
@@ -632,7 +632,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             451
           ]
@@ -643,7 +643,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             454
           ]
@@ -654,7 +654,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             466
           ]
@@ -665,7 +665,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             464
           ]
@@ -782,7 +782,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List, int, Map, T, List)",
           "lines": [
             277
           ]
@@ -1106,25 +1106,25 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteStateAlongTraversedPath(ArrayDeque<AbstractMap.SimpleImmutableEntry<Byte, ByteTransition>>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteStateAlongTraversedPath(ArrayDeque)",
           "lines": [
             432
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             464
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#addExistenceMatch(Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addExistenceMatch(Set)",
           "lines": [
             554
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#addSuffixMatch(byte[], Set<NameState>, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addSuffixMatch(byte[], Set, Set)",
           "lines": [
             577
           ]
@@ -1277,7 +1277,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteStateAlongTraversedPath(ArrayDeque<AbstractMap.SimpleImmutableEntry<Byte, ByteTransition>>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteStateAlongTraversedPath(ArrayDeque)",
           "lines": [
             436
           ]
@@ -1561,7 +1561,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#evaluateComplexity(MachineComplexityEvaluator)",
+          "sig": "software.amazon.event.ruler.NameState#evaluateComplexity(MachineComplexityEvaluator)",
           "lines": [
             146
           ]
@@ -1572,7 +1572,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMachine#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.NameState#gatherObjects(Set)",
           "lines": [
             158
           ]
@@ -1627,7 +1627,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#putTransition(byte, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteState#putTransition(byte, SingleByteTransition)",
           "lines": [
             87
           ]
@@ -1638,7 +1638,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#putTransitionForAllBytes(SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteState#putTransitionForAllBytes(SingleByteTransition)",
           "lines": [
             97
           ]
@@ -1649,7 +1649,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#addTransition(byte, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteState#addTransition(byte, SingleByteTransition)",
           "lines": [
             108
           ]
@@ -1660,7 +1660,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#addTransitionForAllBytes(SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteState#addTransitionForAllBytes(SingleByteTransition)",
           "lines": [
             118
           ]
@@ -1671,7 +1671,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#removeTransition(byte, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteState#removeTransition(byte, SingleByteTransition)",
           "lines": [
             127
           ]
@@ -1682,7 +1682,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#removeTransitionForAllBytes(SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteState#removeTransitionForAllBytes(SingleByteTransition)",
           "lines": [
             136
           ]
@@ -1727,7 +1727,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#hasNoTransitions()",
+          "sig": "software.amazon.event.ruler.ByteState#hasNoTransitions()",
           "lines": [
             53
           ]
@@ -1744,7 +1744,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMap#hasOnlySelfReferentialTransition()",
+          "sig": "software.amazon.event.ruler.ByteState#hasOnlySelfReferentialTransition()",
           "lines": [
             154
           ]
@@ -1755,7 +1755,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#hasOnlySelfReferentialTransition()",
+          "sig": "software.amazon.event.ruler.ByteState#hasOnlySelfReferentialTransition()",
           "lines": [
             154
           ]
@@ -1766,7 +1766,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#getTransition(byte)",
+          "sig": "software.amazon.event.ruler.ByteState#getTransition(byte)",
           "lines": [
             66
           ]
@@ -1777,7 +1777,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#getTransitionForAllBytes()",
+          "sig": "software.amazon.event.ruler.ByteState#getTransitionForAllBytes()",
           "lines": [
             71
           ]
@@ -1788,7 +1788,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#getTransitions()",
+          "sig": "software.amazon.event.ruler.ByteState#getTransitions()",
           "lines": [
             76
           ]
@@ -1799,7 +1799,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMap#getCeilings()",
+          "sig": "software.amazon.event.ruler.ByteState#getCeilings()",
           "lines": [
             163
           ]
@@ -1845,7 +1845,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMap#mergeAdjacentInMapIfNeeded(NavigableMap<Integer, ByteTransition>)",
+          "sig": "software.amazon.event.ruler.ByteMap#mergeAdjacentInMapIfNeeded(NavigableMap)",
           "lines": [
             136
           ]
@@ -1915,7 +1915,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             499,
             472,
@@ -1923,38 +1923,38 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addExistenceMatch(Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addExistenceMatch(Set)",
           "lines": [
             563
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addSuffixMatch(byte[], Set<NameState>, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addSuffixMatch(byte[], Set, Set)",
           "lines": [
             581
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set)",
           "lines": [
             614,
             615
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#findMatchPattern(InputCharacter[], Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)",
           "lines": [
             936
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
           "lines": [
             1251
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1360,
             1361,
@@ -1963,31 +1963,31 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addMatchReferences(ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchReferences(ByteMatch)",
           "lines": [
             1546
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#deleteMatch(InputCharacter, ByteState, Patterns, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatch(InputCharacter, ByteState, Patterns, SingleByteTransition)",
           "lines": [
             1639
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#updateMatchReferences(ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#updateMatchReferences(ByteMatch)",
           "lines": [
             1648
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#findMatch(Set<ByteMatch>, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatch(Set, Patterns)",
           "lines": [
             1895
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#getWildcardPatterns(Set<ByteMatch>)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#getWildcardPatterns(Set)",
           "lines": [
             177,
             178
@@ -1999,7 +1999,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             483,
             515,
@@ -2012,44 +2012,44 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addExistenceMatch(Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addExistenceMatch(Set)",
           "lines": [
             564
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addSuffixMatch(byte[], Set<NameState>, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addSuffixMatch(byte[], Set, Set)",
           "lines": [
             583,
             585
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set)",
           "lines": [
             618
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#findMatchPattern(InputCharacter[], Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)",
           "lines": [
             937
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1357
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
           "lines": [
             1487
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addMatchReferences(ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchReferences(ByteMatch)",
           "lines": [
             1569,
             1575,
@@ -2058,13 +2058,13 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#findMatchForRangePattern(byte, ByteTransition, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchForRangePattern(byte, ByteTransition, Patterns)",
           "lines": [
             1597
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#updateMatchReferences(ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#updateMatchReferences(ByteMatch)",
           "lines": [
             1681,
             1684,
@@ -2073,7 +2073,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#evaluate(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)",
           "lines": [
             103
           ]
@@ -2088,7 +2088,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.SingleByteTransition#gatherObjects(Set)",
           "lines": [
             67
           ]
@@ -2103,20 +2103,20 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1457,
             1343
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
           "lines": [
             1493
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteMatch#addTransitionNextState(ByteState, InputCharacter, InputCharacter[], int, ByteState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransitionNextState(ByteState, InputCharacter, InputCharacter[], int, ByteState, Patterns, ByteState)",
           "lines": [
             1747
           ]
@@ -2141,13 +2141,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
           "lines": [
             1506
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#addTransitionNextState(ByteState, InputCharacter, InputCharacter[], int, ByteState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransitionNextState(ByteState, InputCharacter, InputCharacter[], int, ByteState, Patterns, ByteState)",
           "lines": [
             1748
           ]
@@ -2162,31 +2162,31 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#isEmpty()",
+          "sig": "software.amazon.event.ruler.ByteMachine#isEmpty()",
           "lines": [
             114
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
           "lines": [
             205
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
           "lines": [
             264
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#checkAndDeleteStateAlongTraversedPath(ArrayDeque<AbstractMap.SimpleImmutableEntry<Byte, ByteTransition>>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteStateAlongTraversedPath(ArrayDeque)",
           "lines": [
             435
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
           "lines": [
             1860
           ]
@@ -2201,13 +2201,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
           "lines": [
             792
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#evaluate(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)",
           "lines": [
             70
           ]
@@ -2218,13 +2218,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#evaluate(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)",
           "lines": [
             52
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#getMatchesAccessibleFromEachTransition(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#getMatchesAccessibleFromEachTransition(ByteState)",
           "lines": [
             161,
             142
@@ -2240,7 +2240,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#addTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1870
           ]
@@ -2251,13 +2251,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#addTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1874
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#addTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
           "lines": [
             1889,
             1886
@@ -2269,13 +2269,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
           "lines": [
             1511
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#addTransitionNextStateForWildcard(ByteState, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransitionNextStateForWildcard(ByteState, ByteState)",
           "lines": [
             1798,
             1803
@@ -2287,13 +2287,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1840
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
           "lines": [
             1861,
             1854
@@ -2305,13 +2305,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
           "lines": [
             245
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1836
           ]
@@ -2322,32 +2322,32 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#canReuseNextByteState(ByteState, ByteState, InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#canReuseNextByteState(ByteState, ByteState, InputCharacter[], int)",
           "lines": [
             742
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
           "lines": [
             1259
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
           "lines": [
             1284
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#findOrMakeNextByteState(ByteState, ByteState, InputCharacter[], int, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findOrMakeNextByteState(ByteState, ByteState, InputCharacter[], int, Patterns)",
           "lines": [
             1299,
             1307
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1426,
             1380,
@@ -2355,13 +2355,13 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#hasIndeterminatePrefix()",
+          "sig": "software.amazon.event.ruler.CompositeByteTransition#hasIndeterminatePrefix()",
           "lines": [
             84
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#getNextByteState()",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getNextByteState()",
           "lines": [
             88
           ]
@@ -2372,51 +2372,51 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
           "lines": [
             1259
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
           "lines": [
             1284
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#findOrMakeNextByteState(ByteState, ByteState, InputCharacter[], int, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findOrMakeNextByteState(ByteState, ByteState, InputCharacter[], int, Patterns)",
           "lines": [
             1307
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1380,
             1438
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
           "lines": [
             1512
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#addTransitionNextState(ByteState, InputCharacter, InputCharacter[], int, ByteState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransitionNextState(ByteState, InputCharacter, InputCharacter[], int, ByteState, Patterns, ByteState)",
           "lines": [
             1749,
             1751
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#addTransitionNextStateForWildcard(ByteState, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransitionNextStateForWildcard(ByteState, ByteState)",
           "lines": [
             1800
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#addTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
           "lines": [
             1885
           ]
@@ -2427,20 +2427,20 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
           "lines": [
             205
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
           "lines": [
             244,
             265
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteState#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
           "lines": [
             1860
           ]
@@ -2451,7 +2451,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteState#getTransitions()",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getTransitions()",
           "lines": [
             172
           ]
@@ -2468,74 +2468,74 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
           "lines": [
             195
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
           "lines": [
             262
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#checkAndDeleteStateAlongTraversedPath(ArrayDeque<AbstractMap.SimpleImmutableEntry<Byte, ByteTransition>>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteStateAlongTraversedPath(ArrayDeque)",
           "lines": [
             434,
             436
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addMatchValue(Patterns, String, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchValue(Patterns, String, NameState)",
           "lines": [
             708
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#findMatchPattern(InputCharacter[], Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)",
           "lines": [
             909
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
           "lines": [
             1280
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#findOrMakeNextByteState(ByteState, ByteState, InputCharacter[], int, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findOrMakeNextByteState(ByteState, ByteState, InputCharacter[], int, Patterns)",
           "lines": [
             1298
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1423
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
           "lines": [
             1509
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransitionHavingNextByteState(SingleByteTransition, SingleByteTransition, InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransitionHavingNextByteState(SingleByteTransition, SingleByteTransition, InputCharacter)",
           "lines": [
             1538
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#deleteMatches(InputCharacter, ByteTransition, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatches(InputCharacter, ByteTransition, Patterns)",
           "lines": [
             1616
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
           "lines": [
             1857
           ]
@@ -2547,38 +2547,38 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.ByteTransition#gatherObjects(Set)",
           "lines": [
             114
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getNextByteState()",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getNextByteState()",
           "lines": [
             86
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransitions()",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getTransitions()",
           "lines": [
             170
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#evaluate(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)",
           "lines": [
             68
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getMatchesAccessibleFromEachTransition(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#getMatchesAccessibleFromEachTransition(ByteState)",
           "lines": [
             140,
             159
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransitionForNextByteStates()",
+          "sig": "software.amazon.event.ruler.SingleByteTransition#getTransitionForNextByteStates()",
           "lines": [
             58
           ]
@@ -2589,7 +2589,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#putTransitionNextState(ByteState, InputCharacter, SingleByteTransition, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#putTransitionNextState(ByteState, InputCharacter, SingleByteTransition, ByteState)",
           "lines": [
             1811
           ]
@@ -2600,25 +2600,25 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransition(ByteTransition, byte)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransition(ByteTransition, byte)",
           "lines": [
             1692
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransitionForMultiBytes(SingleByteTransition, Set<MultiByte>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransitionForMultiBytes(SingleByteTransition, Set)",
           "lines": [
             1715
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransition(byte)",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getTransition(byte)",
           "lines": [
             151
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransitions()",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getTransitions()",
           "lines": [
             182
           ]
@@ -2629,19 +2629,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.ByteTransition#gatherObjects(Set)",
           "lines": [
             111
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#evaluate(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)",
           "lines": [
             91
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.SingleByteTransition#gatherObjects(Set)",
           "lines": [
             69
           ]
@@ -2652,37 +2652,37 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             471
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addExistenceMatch(Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addExistenceMatch(Set)",
           "lines": [
             562
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addSuffixMatch(byte[], Set<NameState>, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addSuffixMatch(byte[], Set, Set)",
           "lines": [
             578
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#findMatchPattern(InputCharacter[], Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)",
           "lines": [
             935
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
           "lines": [
             1484
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#findMatchForRangePattern(byte, ByteTransition, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchForRangePattern(byte, ByteTransition, Patterns)",
           "lines": [
             1596
           ]
@@ -2699,7 +2699,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set)",
           "lines": [
             611
           ]
@@ -2710,107 +2710,107 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
           "lines": [
             189
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
           "lines": [
             261
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#checkAndDeleteStateAlongTraversedPath(ArrayDeque<AbstractMap.SimpleImmutableEntry<Byte, ByteTransition>>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteStateAlongTraversedPath(ArrayDeque)",
           "lines": [
             433,
             428
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addMatchValue(Patterns, String, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchValue(Patterns, String, NameState)",
           "lines": [
             707
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#findMatchPattern(InputCharacter[], Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)",
           "lines": [
             901
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
           "lines": [
             1285
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1440
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransitionHavingNextByteState(SingleByteTransition, SingleByteTransition, InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransitionHavingNextByteState(SingleByteTransition, SingleByteTransition, InputCharacter)",
           "lines": [
             1537
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#deleteMatches(InputCharacter, ByteTransition, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatches(InputCharacter, ByteTransition, Patterns)",
           "lines": [
             1613,
             1615
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransitionForMultiBytes(SingleByteTransition, Set<MultiByte>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransitionForMultiBytes(SingleByteTransition, Set)",
           "lines": [
             1723,
             1726
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransitionForBytes(ByteState, byte[], int, SingleByteTransition)",
           "lines": [
             1856
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransitionForAllBytes()",
+          "sig": "software.amazon.event.ruler.ByteMap#getTransitionForAllBytes()",
           "lines": [
             178,
             171
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#expand(ByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMap#expand(ByteTransition)",
           "lines": [
             230
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getNextByteState()",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getNextByteState()",
           "lines": [
             85
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransition(byte)",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getTransition(byte)",
           "lines": [
             158
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getTransitions()",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getTransitions()",
           "lines": [
             184
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#evaluate(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)",
           "lines": [
             70,
             73,
@@ -2818,7 +2818,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#getMatchesAccessibleFromEachTransition(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#getMatchesAccessibleFromEachTransition(ByteState)",
           "lines": [
             162,
             143
@@ -2830,31 +2830,31 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             529
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addExistenceMatch(Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addExistenceMatch(Set)",
           "lines": [
             555
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addSuffixMatch(byte[], Set<NameState>, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addSuffixMatch(byte[], Set, Set)",
           "lines": [
             588
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#findNextByteStateForRangePattern(ByteTransition, byte)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findNextByteStateForRangePattern(ByteTransition, byte)",
           "lines": [
             1320
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#evaluate(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)",
           "lines": [
             89
           ]
@@ -2865,31 +2865,31 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStep(ByteState, int, Patterns, InputCharacter[])",
           "lines": [
             192
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             468
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#findMatchPattern(InputCharacter[], Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)",
           "lines": [
             904
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
           "lines": [
             1246
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1350
           ]
@@ -2904,32 +2904,32 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addMatchValue(Patterns, String, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchValue(Patterns, String, NameState)",
           "lines": [
             703
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
           "lines": [
             793
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1350,
             1420
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#putTransitionNextState(ByteState, InputCharacter, SingleByteTransition, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#putTransitionNextState(ByteState, InputCharacter, SingleByteTransition, ByteState)",
           "lines": [
             1812
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#putTransitionMatch(ByteState, InputCharacter, SingleByteTransition, ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#putTransitionMatch(ByteState, InputCharacter, SingleByteTransition, ByteMatch)",
           "lines": [
             1827
           ]
@@ -2944,13 +2944,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.ByteTransition#gatherObjects(Set)",
           "lines": [
             112
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.SingleByteTransition#gatherObjects(Set)",
           "lines": [
             70,
             74
@@ -2962,19 +2962,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatch(InputCharacter[], int, ByteState, NameState, Patterns, ByteState)",
           "lines": [
             1510
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#putTransitionNextState(ByteState, InputCharacter, SingleByteTransition, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#putTransitionNextState(ByteState, InputCharacter, SingleByteTransition, ByteState)",
           "lines": [
             1810
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ByteTransition#putTransitionMatch(ByteState, InputCharacter, SingleByteTransition, ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#putTransitionMatch(ByteState, InputCharacter, SingleByteTransition, ByteMatch)",
           "lines": [
             1825
           ]
@@ -3033,7 +3033,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.CIDR#transitionOn(String)",
+          "sig": "software.amazon.event.ruler.ByteMachine#transitionOn(String)",
           "lines": [
             101,
             103
@@ -3046,7 +3046,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.CIDR#matches(JsonNode, Patterns)",
+          "sig": "software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)",
           "lines": [
             152
           ]
@@ -3061,13 +3061,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.CIDR#writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#writeRules(List, String, JsonParser, boolean)",
           "lines": [
             294
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.CIDR#writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#writeRules(Map, String, JsonParser, boolean)",
           "lines": [
             197
           ]
@@ -3101,13 +3101,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.CIDR#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             475
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.CIDR#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             374
           ]
@@ -3157,55 +3157,55 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ComparableNumber#transitionOn(String)",
+          "sig": "software.amazon.event.ruler.ByteMachine#transitionOn(String)",
           "lines": [
             91
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ComparableNumber#processAnythingButListMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processAnythingButListMatchExpression(JsonParser)",
           "lines": [
             521
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ComparableNumber#processAnythingButMatchExpression(JsonParser, JsonToken)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processAnythingButMatchExpression(JsonParser, JsonToken)",
           "lines": [
             570
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ComparableNumber#anythingButMatch(double)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButMatch(double)",
           "lines": [
             56
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ComparableNumber#anythingButNumberMatch(Set<Double>)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButNumberMatch(Set)",
           "lines": [
             74
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ComparableNumber#numericEquals(double)",
+          "sig": "software.amazon.event.ruler.Patterns#numericEquals(double)",
           "lines": [
             88
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ComparableNumber#processAnythingButListMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processAnythingButListMatchExpression(JsonParser)",
           "lines": [
             420
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ComparableNumber#processAnythingButMatchExpression(JsonParser, JsonToken)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processAnythingButMatchExpression(JsonParser, JsonToken)",
           "lines": [
             470
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ComparableNumber#matches(JsonNode, Patterns)",
+          "sig": "software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)",
           "lines": [
             160,
             119,
@@ -3297,13 +3297,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.CompositeByteTransition#setNextByteState(ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMatch#setNextByteState(ByteState)",
           "lines": [
             25
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.CompositeByteTransition#setMatch(ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteState#setMatch(ByteMatch)",
           "lines": [
             39
           ]
@@ -3316,31 +3316,31 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.CompoundByteTransition#getTransitionForMultiBytes(SingleByteTransition, Set<MultiByte>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransitionForMultiBytes(SingleByteTransition, Set)",
           "lines": [
             1734
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.CompoundByteTransition#addTransitionForAllBytes(SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMap#addTransitionForAllBytes(SingleByteTransition)",
           "lines": [
             51
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.CompoundByteTransition#removeTransitionForAllBytes(SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMap#removeTransitionForAllBytes(SingleByteTransition)",
           "lines": [
             67
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.CompoundByteTransition#updateTransition(byte, SingleByteTransition, Operation)",
+          "sig": "software.amazon.event.ruler.ByteMap#updateTransition(byte, SingleByteTransition, Operation)",
           "lines": [
             108
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.CompoundByteTransition#getTransitionForAllBytes()",
+          "sig": "software.amazon.event.ruler.ByteMap#getTransitionForAllBytes()",
           "lines": [
             184
           ]
@@ -3407,7 +3407,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.CompoundByteTransition#coalesce(Set<SingleByteTransition>)",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#coalesce(Set)",
           "lines": [
             70
           ]
@@ -3426,13 +3426,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap, Progress)",
           "lines": [
             137
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#traverseArray(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseArray(JsonParser, TreeMap, Progress)",
           "lines": [
             162
           ]
@@ -3443,13 +3443,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap, Progress)",
           "lines": [
             140
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#traverseArray(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseArray(JsonParser, TreeMap, Progress)",
           "lines": [
             167
           ]
@@ -3485,13 +3485,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#loadObject(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadObject(JsonNode, Map, Progress)",
           "lines": [
             260
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#loadArray(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadArray(JsonNode, Map, Progress)",
           "lines": [
             320
           ]
@@ -3508,13 +3508,13 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#flattenObject(JsonNode, Map<String, List<String>>, Stack<String>)",
+          "sig": "software.amazon.event.ruler.Event#flattenObject(JsonNode, Map, Stack)",
           "lines": [
             290
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#flattenArray(JsonNode, Map<String, List<String>>, Stack<String>)",
+          "sig": "software.amazon.event.ruler.Event#flattenArray(JsonNode, Map, Stack)",
           "lines": [
             349
           ]
@@ -3525,13 +3525,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#loadObject(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadObject(JsonNode, Map, Progress)",
           "lines": [
             263
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#loadArray(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadArray(JsonNode, Map, Progress)",
           "lines": [
             325
           ]
@@ -3542,13 +3542,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#flattenObject(JsonNode, Map<String, List<String>>, Stack<String>)",
+          "sig": "software.amazon.event.ruler.Event#flattenObject(JsonNode, Map, Stack)",
           "lines": [
             293
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#flattenArray(JsonNode, Map<String, List<String>>, Stack<String>)",
+          "sig": "software.amazon.event.ruler.Event#flattenArray(JsonNode, Map, Stack)",
           "lines": [
             352
           ]
@@ -3559,28 +3559,28 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap, Progress)",
           "lines": [
             146,
             143
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#traverseArray(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseArray(JsonParser, TreeMap, Progress)",
           "lines": [
             171,
             174
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#loadObject(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadObject(JsonNode, Map, Progress)",
           "lines": [
             272,
             267
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#loadArray(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadArray(JsonNode, Map, Progress)",
           "lines": [
             329,
             334
@@ -3592,14 +3592,14 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#flattenObject(JsonNode, Map<String, List<String>>, Stack<String>)",
+          "sig": "software.amazon.event.ruler.Event#flattenObject(JsonNode, Map, Stack)",
           "lines": [
             296,
             301
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Event#flattenArray(JsonNode, Map<String, List<String>>, Stack<String>)",
+          "sig": "software.amazon.event.ruler.Event#flattenArray(JsonNode, Map, Stack)",
           "lines": [
             355,
             360
@@ -3611,7 +3611,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#recordNameVal(Map<String, List<String>>, Stack<String>, String)",
+          "sig": "software.amazon.event.ruler.Event#recordNameVal(Map, Stack, String)",
           "lines": [
             375
           ]
@@ -3622,7 +3622,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap, Progress)",
           "lines": [
             130
           ]
@@ -3645,7 +3645,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#rulesForJSONEvent(String)",
+          "sig": "software.amazon.event.ruler.GenericMachine#rulesForJSONEvent(String)",
           "lines": [
             62
           ]
@@ -3656,7 +3656,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event#rulesForJSONEvent(JsonNode)",
+          "sig": "software.amazon.event.ruler.GenericMachine#rulesForJSONEvent(JsonNode)",
           "lines": [
             67
           ]
@@ -3675,7 +3675,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Event.Value#addField(Map<String, List<Value>>, Progress, String)",
+          "sig": "software.amazon.event.ruler.Event#addField(Map, Progress, String)",
           "lines": [
             371
           ]
@@ -3694,7 +3694,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Finder#rulesForEvent(String[])",
+          "sig": "software.amazon.event.ruler.GenericMachine#rulesForEvent(String[])",
           "lines": [
             116
           ]
@@ -3705,7 +3705,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Finder#rulesForEvent(List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#rulesForEvent(List)",
           "lines": [
             92
           ]
@@ -3716,13 +3716,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Finder#rulesForEvent(String[], GenericMachine<?>)",
+          "sig": "software.amazon.event.ruler.Finder#rulesForEvent(String[], GenericMachine)",
           "lines": [
             42
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Finder#rulesForEvent(List<String>, GenericMachine<?>)",
+          "sig": "software.amazon.event.ruler.Finder#rulesForEvent(List, GenericMachine)",
           "lines": [
             53
           ]
@@ -3806,7 +3806,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#matchesRule(String, String)",
+          "sig": "software.amazon.event.ruler.Ruler#matchesRule(String, String)",
           "lines": [
             42
           ]
@@ -3829,25 +3829,25 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#startState()",
+          "sig": "software.amazon.event.ruler.ACTask#startState()",
           "lines": [
             28
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addPatternRule(T, Map<String, List<Patterns>>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addPatternRule(T, Map)",
           "lines": [
             200
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#deletePatternRule(T, Map<String, List<Patterns>>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deletePatternRule(T, Map)",
           "lines": [
             237
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#startState()",
+          "sig": "software.amazon.event.ruler.Task#startState()",
           "lines": [
             49
           ]
@@ -3858,19 +3858,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#traverseObject(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap, Progress)",
           "lines": [
             129
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#loadObject(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadObject(JsonNode, Map, Progress)",
           "lines": [
             253
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#isFieldUsed(String)",
+          "sig": "software.amazon.event.ruler.Task#isFieldUsed(String)",
           "lines": [
             58
           ]
@@ -3885,7 +3885,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#matchesRule(String, String)",
+          "sig": "software.amazon.event.ruler.Ruler#matchesRule(String, String)",
           "lines": [
             41
           ]
@@ -3908,7 +3908,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, Map<String, List<String>>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, Map)",
           "lines": [
             172
           ]
@@ -3947,7 +3947,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#deleteRule(T, Map<String, List<String>>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteRule(T, Map)",
           "lines": [
             250
           ]
@@ -3995,13 +3995,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#deletePatternRule(T, Map<String, List<Patterns>>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deletePatternRule(T, Map)",
           "lines": [
             237
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List, int, Map, T, List)",
           "lines": [
             292
           ]
@@ -4012,7 +4012,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List, int, Map, T, List)",
           "lines": [
             294,
             287
@@ -4024,13 +4024,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addPatternRule(T, Map<String, List<Patterns>>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addPatternRule(T, Map)",
           "lines": [
             200
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             472
           ]
@@ -4041,7 +4041,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             442
           ]
@@ -4052,7 +4052,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             448
           ]
@@ -4063,7 +4063,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List, int, Map, T, List)",
           "lines": [
             271
           ]
@@ -4075,13 +4075,13 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             459
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#hasValuePatterns(List<Patterns>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#hasValuePatterns(List)",
           "lines": [
             479
           ]
@@ -4092,7 +4092,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addPatternRule(T, Map<String, List<Patterns>>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addPatternRule(T, Map)",
           "lines": [
             201
           ]
@@ -4103,7 +4103,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#deletePatternRule(T, Map<String, List<Patterns>>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deletePatternRule(T, Map)",
           "lines": [
             239
           ]
@@ -4118,7 +4118,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             449
           ]
@@ -4129,7 +4129,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#addIntoUsedFields(List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addIntoUsedFields(List)",
           "lines": [
             492
           ]
@@ -4140,7 +4140,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteUsedFields(List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteUsedFields(List)",
           "lines": [
             498
           ]
@@ -4175,31 +4175,31 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteExistencePattern(Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteExistencePattern(Patterns)",
           "lines": [
             158
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteAnythingButPattern(AnythingBut)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteAnythingButPattern(AnythingBut)",
           "lines": [
             164
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
           "lines": [
             169
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteMatchPattern(ValuePatterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchPattern(ValuePatterns)",
           "lines": [
             173
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteRangePattern(Range)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteRangePattern(Range)",
           "lines": [
             352,
             402,
@@ -4211,67 +4211,67 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#checkAndDeleteStateAlongTraversedPath(ArrayDeque<AbstractMap.SimpleImmutableEntry<Byte, ByteTransition>>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteStateAlongTraversedPath(ArrayDeque)",
           "lines": [
             436
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#addMatchValue(Patterns, String, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchValue(Patterns, String, NameState)",
           "lines": [
             697
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
           "lines": [
             801
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findPattern(Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findPattern(Patterns)",
           "lines": [
             849
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findAnythingButPattern(AnythingBut)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findAnythingButPattern(AnythingBut)",
           "lines": [
             859
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
           "lines": [
             875
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findMatchPattern(ValuePatterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(ValuePatterns)",
           "lines": [
             888
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
           "lines": [
             1253
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
           "lines": [
             1277
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1361
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#insertMatchForRangePattern(byte, ByteState, NameState, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatchForRangePattern(byte, ByteState, NameState, Patterns)",
           "lines": [
             1477
           ]
@@ -4282,73 +4282,73 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteExistencePattern(Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteExistencePattern(Patterns)",
           "lines": [
             158
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteAnythingButPattern(AnythingBut)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteAnythingButPattern(AnythingBut)",
           "lines": [
             164
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
           "lines": [
             169
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteMatchPattern(ValuePatterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchPattern(ValuePatterns)",
           "lines": [
             173
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#addMatchValue(Patterns, String, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchValue(Patterns, String, NameState)",
           "lines": [
             697
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
           "lines": [
             801
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findPattern(Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findPattern(Patterns)",
           "lines": [
             849
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findAnythingButPattern(AnythingBut)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findAnythingButPattern(AnythingBut)",
           "lines": [
             859
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
           "lines": [
             875
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findMatchPattern(ValuePatterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(ValuePatterns)",
           "lines": [
             888
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
           "lines": [
             1253
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1361
           ]
@@ -4359,7 +4359,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#deleteRangePattern(Range)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteRangePattern(Range)",
           "lines": [
             352,
             402,
@@ -4371,19 +4371,19 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#checkAndDeleteStateAlongTraversedPath(ArrayDeque<AbstractMap.SimpleImmutableEntry<Byte, ByteTransition>>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#checkAndDeleteStateAlongTraversedPath(ArrayDeque)",
           "lines": [
             436
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findOrMakeNextByteStateForRangePattern(ByteState, byte[], int)",
           "lines": [
             1277
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.DefaultParser#insertMatchForRangePattern(byte, ByteState, NameState, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#insertMatchForRangePattern(byte, ByteState, NameState, Patterns)",
           "lines": [
             1477
           ]
@@ -4404,7 +4404,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.EqualsIgnoreCaseParser#parse(MatchType, String)",
+          "sig": "software.amazon.event.ruler.input.DefaultParser#parse(MatchType, String)",
           "lines": [
             61
           ]
@@ -4421,13 +4421,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#isNextCharacterFirstByteOfMultiByte(InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#isNextCharacterFirstByteOfMultiByte(InputCharacter[], int)",
           "lines": [
             808
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#extractNextJavaCharacterFromInputCharacters(InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extractNextJavaCharacterFromInputCharacters(InputCharacter[], int)",
           "lines": [
             819,
             822,
@@ -4436,19 +4436,19 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#getTransition(SingleByteTransition, InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransition(SingleByteTransition, InputCharacter)",
           "lines": [
             1703
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1840
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#addTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1874
           ]
@@ -4459,13 +4459,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#isNextCharacterFirstByteOfMultiByte(InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#isNextCharacterFirstByteOfMultiByte(InputCharacter[], int)",
           "lines": [
             808
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#extractNextJavaCharacterFromInputCharacters(InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extractNextJavaCharacterFromInputCharacters(InputCharacter[], int)",
           "lines": [
             819,
             822,
@@ -4474,19 +4474,19 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#getTransition(SingleByteTransition, InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransition(SingleByteTransition, InputCharacter)",
           "lines": [
             1703
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1840
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#addTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1874
           ]
@@ -4525,25 +4525,25 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#parse(MatchType, String)",
+          "sig": "software.amazon.event.ruler.input.DefaultParser#parse(MatchType, String)",
           "lines": [
             70
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#parse(byte)",
+          "sig": "software.amazon.event.ruler.input.DefaultParser#parse(byte)",
           "lines": [
             77
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#parse(String)",
+          "sig": "software.amazon.event.ruler.input.SuffixParser#parse(String)",
           "lines": [
             21
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputByte#parse(String)",
+          "sig": "software.amazon.event.ruler.input.WildcardParser#parse(String)",
           "lines": [
             38,
             31
@@ -4557,25 +4557,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.InputCharacter#getTransition(SingleByteTransition, InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransition(SingleByteTransition, InputCharacter)",
           "lines": [
             1697
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputCharacter#isByte(InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#isByte(InputCharacter)",
           "lines": [
             1903
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputCharacter#isWildcard(InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#isWildcard(InputCharacter)",
           "lines": [
             1907
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputCharacter#isMultiByteSet(InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#isMultiByteSet(InputCharacter)",
           "lines": [
             1911
           ]
@@ -4589,25 +4589,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.InputMultiByteSet#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
           "lines": [
             802
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputMultiByteSet#getTransition(SingleByteTransition, InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransition(SingleByteTransition, InputCharacter)",
           "lines": [
             1701
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputMultiByteSet#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1838
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputMultiByteSet#addTransition(ByteState, InputCharacter, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransition(ByteState, InputCharacter, SingleByteTransition)",
           "lines": [
             1872
           ]
@@ -4618,25 +4618,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.InputMultiByteSet#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doMultipleTransitionsConvergeForInputByte(ByteState, InputCharacter[], int)",
           "lines": [
             804
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputMultiByteSet#getTransition(SingleByteTransition, InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransition(SingleByteTransition, InputCharacter)",
           "lines": [
             1701
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputMultiByteSet#removeTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
           "lines": [
             1846
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.InputMultiByteSet#addTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
           "lines": [
             1880
           ]
@@ -4681,7 +4681,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.InputMultiByteSet#parse(String)",
+          "sig": "software.amazon.event.ruler.input.EqualsIgnoreCaseParser#parse(String)",
           "lines": [
             28
           ]
@@ -4710,7 +4710,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.InputWildcard#parse(String)",
+          "sig": "software.amazon.event.ruler.input.WildcardParser#parse(String)",
           "lines": [
             26
           ]
@@ -4729,19 +4729,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.MultiByte#getTransitionForMultiBytes(SingleByteTransition, Set<MultiByte>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransitionForMultiBytes(SingleByteTransition, Set)",
           "lines": [
             1714
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.MultiByte#removeTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#removeTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
           "lines": [
             1847
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.input.MultiByte#addTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addTransitionForMultiByteSet(ByteState, InputMultiByteSet, SingleByteTransition)",
           "lines": [
             1881
           ]
@@ -4776,7 +4776,7 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "is(byte...)": {
+    "is(byte[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -4845,7 +4845,15 @@
     },
     "MultiByte(byte[])": {
       "type": "NONE",
-      "caller": []
+      "caller": [
+        {
+          "sig": "software.amazon.event.ruler.input.EqualsIgnoreCaseParser#parse(String)",
+          "lines": [
+            26,
+            27
+          ]
+        }
+      ]
     }
   },
   "software.amazon.event.ruler.input.ParseException": {
@@ -4853,7 +4861,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.ParseException#parse(String)",
+          "sig": "software.amazon.event.ruler.input.WildcardParser#parse(String)",
           "lines": [
             36,
             24
@@ -4873,7 +4881,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.SuffixParser#parse(MatchType, String)",
+          "sig": "software.amazon.event.ruler.input.DefaultParser#parse(MatchType, String)",
           "lines": [
             63
           ]
@@ -4890,7 +4898,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.input.WildcardParser#parse(MatchType, String)",
+          "sig": "software.amazon.event.ruler.input.DefaultParser#parse(MatchType, String)",
           "lines": [
             59
           ]
@@ -4907,7 +4915,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.IntIntMap#getMembership(int)",
+          "sig": "software.amazon.event.ruler.ArrayMembership#getMembership(int)",
           "lines": [
             34
           ]
@@ -4918,7 +4926,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.IntIntMap#putMembership(int, int)",
+          "sig": "software.amazon.event.ruler.ArrayMembership#putMembership(int, int)",
           "lines": [
             27
           ]
@@ -4935,13 +4943,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.IntIntMap#putMembership(int, int)",
+          "sig": "software.amazon.event.ruler.ArrayMembership#putMembership(int, int)",
           "lines": [
             25
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.IntIntMap#deleteMembership(int)",
+          "sig": "software.amazon.event.ruler.ArrayMembership#deleteMembership(int)",
           "lines": [
             31
           ]
@@ -4952,7 +4960,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.IntIntMap#size()",
+          "sig": "software.amazon.event.ruler.ArrayMembership#size()",
           "lines": [
             40
           ]
@@ -4963,7 +4971,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.IntIntMap#isEmpty()",
+          "sig": "software.amazon.event.ruler.ArrayMembership#isEmpty()",
           "lines": [
             37
           ]
@@ -4974,13 +4982,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.IntIntMap#toString()",
+          "sig": "software.amazon.event.ruler.ArrayMembership#toString()",
           "lines": [
             46
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.IntIntMap#checkArrayConsistency(ArrayMembership, ArrayMembership)",
+          "sig": "software.amazon.event.ruler.ArrayMembership#checkArrayConsistency(ArrayMembership, ArrayMembership)",
           "lines": [
             72
           ]
@@ -5105,13 +5113,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.IntIntMap.Entry#toString()",
+          "sig": "software.amazon.event.ruler.ArrayMembership#toString()",
           "lines": [
             47
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.IntIntMap.Entry#checkArrayConsistency(ArrayMembership, ArrayMembership)",
+          "sig": "software.amazon.event.ruler.ArrayMembership#checkArrayConsistency(ArrayMembership, ArrayMembership)",
           "lines": [
             73
           ]
@@ -5122,13 +5130,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.IntIntMap.Entry#toString()",
+          "sig": "software.amazon.event.ruler.ArrayMembership#toString()",
           "lines": [
             47
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.IntIntMap.Entry#checkArrayConsistency(ArrayMembership, ArrayMembership)",
+          "sig": "software.amazon.event.ruler.ArrayMembership#checkArrayConsistency(ArrayMembership, ArrayMembership)",
           "lines": [
             74
           ]
@@ -5139,7 +5147,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.IntIntMap.Entry#next()",
+          "sig": "software.amazon.event.ruler.IntIntMap.EntryIterator#next()",
           "lines": [
             330
           ]
@@ -5189,13 +5197,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#addRule(T, Reader)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, Reader)",
           "lines": [
             350
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#deleteRule(T, Reader)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteRule(T, Reader)",
           "lines": [
             410
           ]
@@ -5206,13 +5214,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#addRule(T, String)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, String)",
           "lines": [
             335
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#deleteRule(T, String)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteRule(T, String)",
           "lines": [
             395
           ]
@@ -5223,7 +5231,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#addRule(T, byte[])",
+          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, byte[])",
           "lines": [
             380
           ]
@@ -5234,13 +5242,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#addRule(T, InputStream)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, InputStream)",
           "lines": [
             365
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#deleteRule(T, InputStream)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteRule(T, InputStream)",
           "lines": [
             425
           ]
@@ -5310,7 +5318,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List, Path, JsonParser, boolean)",
           "lines": [
             154
           ]
@@ -5321,13 +5329,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             199
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseIntoOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseIntoOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             260
           ]
@@ -5338,13 +5346,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List, Path, JsonParser, boolean)",
           "lines": [
             146
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             186
           ]
@@ -5355,7 +5363,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseIntoOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseIntoOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             256,
             244
@@ -5367,13 +5375,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List, Path, JsonParser, boolean)",
           "lines": [
             159
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             204
           ]
@@ -5384,7 +5392,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#writeRules(List, String, JsonParser, boolean)",
           "lines": [
             288
           ]
@@ -5500,14 +5508,14 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List, Path, JsonParser, boolean)",
           "lines": [
             163,
             167
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             208,
             212,
@@ -5515,7 +5523,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseIntoOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseIntoOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             263,
             249,
@@ -5523,7 +5531,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.JsonRuleCompiler#writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#writeRules(List, String, JsonParser, boolean)",
           "lines": [
             327,
             331
@@ -5631,7 +5639,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Machine#matchesRule(String, String)",
+          "sig": "software.amazon.event.ruler.Ruler#matchesRule(String, String)",
           "lines": [
             40
           ]
@@ -5644,7 +5652,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluateComplexity(MachineComplexityEvaluator)",
+          "sig": "software.amazon.event.ruler.NameState#evaluateComplexity(MachineComplexityEvaluator)",
           "lines": [
             143
           ]
@@ -5655,7 +5663,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluateComplexity(MachineComplexityEvaluator)",
+          "sig": "software.amazon.event.ruler.ByteMachine#evaluateComplexity(MachineComplexityEvaluator)",
           "lines": [
             1915
           ]
@@ -5696,7 +5704,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameMatcher#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
           "lines": [
             310
           ]
@@ -5707,7 +5715,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameMatcher#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             461
           ]
@@ -5718,7 +5726,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameMatcher#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
           "lines": [
             309
           ]
@@ -5729,7 +5737,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameMatcher#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List, int, Map, T, List)",
           "lines": [
             273
           ]
@@ -5740,19 +5748,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameMatcher#getNameTransitions(String[])",
+          "sig": "software.amazon.event.ruler.NameState#getNameTransitions(String[])",
           "lines": [
             103
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameMatcher#getNameTransitions(Event, ArrayMembership)",
+          "sig": "software.amazon.event.ruler.NameState#getNameTransitions(Event, ArrayMembership)",
           "lines": [
             136
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameMatcher#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.NameState#gatherObjects(Set)",
           "lines": [
             161
           ]
@@ -5765,31 +5773,31 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#tryStep(ACTask, ACStep)",
+          "sig": "software.amazon.event.ruler.ACFinder#tryStep(ACTask, ACStep)",
           "lines": [
             46
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#tryValueMatching(Task, Step)",
+          "sig": "software.amazon.event.ruler.Finder#tryValueMatching(Task, Step)",
           "lines": [
             118
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List, int, Map, T, List)",
           "lines": [
             261
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
           "lines": [
             315
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             439
           ]
@@ -5800,13 +5808,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#collectRules(NameState)",
+          "sig": "software.amazon.event.ruler.ACTask#collectRules(NameState)",
           "lines": [
             36
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#collectRules(NameState)",
+          "sig": "software.amazon.event.ruler.Task#collectRules(NameState)",
           "lines": [
             82
           ]
@@ -5817,7 +5825,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List, int, Map, T, List)",
           "lines": [
             284
           ]
@@ -5828,7 +5836,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List, int, Map, T, List)",
           "lines": [
             285
           ]
@@ -5839,7 +5847,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
           "lines": [
             318
           ]
@@ -5850,7 +5858,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
           "lines": [
             311
           ]
@@ -5861,13 +5869,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
           "lines": [
             306
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#isEmpty()",
+          "sig": "software.amazon.event.ruler.GenericMachine#isEmpty()",
           "lines": [
             503
           ]
@@ -5878,7 +5886,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             470
           ]
@@ -5889,7 +5897,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             444
           ]
@@ -5900,7 +5908,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             450
           ]
@@ -5911,19 +5919,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#deleteStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteStep(NameState, List, int, Map, T, List)",
           "lines": [
             262
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#checkAndDeleteNameState(NameState, NameState, String, Patterns)",
           "lines": [
             308
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#addStep(NameState, List<String>, int, Map<String, List<Patterns>>, T, List<String>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addStep(NameState, List, int, Map, T, List)",
           "lines": [
             440
           ]
@@ -5934,13 +5942,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#tryMustNotExistMatch(NameState, ACTask, int, ArrayMembership)",
+          "sig": "software.amazon.event.ruler.ACFinder#tryMustNotExistMatch(NameState, ACTask, int, ArrayMembership)",
           "lines": [
             65
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#tryNameMatching(NameState, Task, int)",
+          "sig": "software.amazon.event.ruler.Finder#tryNameMatching(NameState, Task, int)",
           "lines": [
             130
           ]
@@ -5951,7 +5959,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#tryNameMatching(NameState, Task, int)",
+          "sig": "software.amazon.event.ruler.Finder#tryNameMatching(NameState, Task, int)",
           "lines": [
             134
           ]
@@ -5962,7 +5970,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#tryMustNotExistMatch(NameState, ACTask, int, ArrayMembership)",
+          "sig": "software.amazon.event.ruler.ACFinder#tryMustNotExistMatch(NameState, ACTask, int, ArrayMembership)",
           "lines": [
             69
           ]
@@ -5973,13 +5981,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#evaluateComplexity(MachineComplexityEvaluator)",
+          "sig": "software.amazon.event.ruler.GenericMachine#evaluateComplexity(MachineComplexityEvaluator)",
           "lines": [
             528
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#evaluate(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#evaluate(ByteState)",
           "lines": [
             105
           ]
@@ -5990,25 +5998,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.NameState#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#gatherObjects(Set)",
           "lines": [
             1923
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.ByteMatch#gatherObjects(Set)",
           "lines": [
             72
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#approximateObjectCount()",
+          "sig": "software.amazon.event.ruler.GenericMachine#approximateObjectCount()",
           "lines": [
             548
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.NameState#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.NameState#gatherObjects(Set)",
           "lines": [
             161
           ]
@@ -6025,31 +6033,31 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Path#traverseObject(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap, Progress)",
           "lines": [
             134
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#loadObject(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadObject(JsonNode, Map, Progress)",
           "lines": [
             257
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#parseObject(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List, Path, JsonParser, boolean)",
           "lines": [
             153
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#parseObjectInsideOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             198
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#parseObject(Map<String, List<Patterns>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#parseObject(Map, Path, JsonParser, boolean)",
           "lines": [
             163
           ]
@@ -6060,31 +6068,31 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Path#traverseObject(JsonParser, TreeMap<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#traverseObject(JsonParser, TreeMap, Progress)",
           "lines": [
             149
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#loadObject(JsonNode, Map<String, List<Value>>, Progress)",
+          "sig": "software.amazon.event.ruler.Event#loadObject(JsonNode, Map, Progress)",
           "lines": [
             277
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#parseObject(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List, Path, JsonParser, boolean)",
           "lines": [
             155
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#parseObjectInsideOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             200
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#parseObject(Map<String, List<Patterns>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#parseObject(Map, Path, JsonParser, boolean)",
           "lines": [
             165
           ]
@@ -6095,7 +6103,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Path#addField(Map<String, List<Value>>, Progress, String)",
+          "sig": "software.amazon.event.ruler.Event#addField(Map, Progress, String)",
           "lines": [
             369
           ]
@@ -6112,19 +6120,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Path#parseObject(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObject(List, Path, JsonParser, boolean)",
           "lines": [
             159
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#parseObjectInsideOrRelationship(List<Map<String, List<Patterns>>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#parseObjectInsideOrRelationship(List, Path, JsonParser, boolean)",
           "lines": [
             204
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Path#parseObject(Map<String, List<Patterns>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#parseObject(Map, Path, JsonParser, boolean)",
           "lines": [
             169
           ]
@@ -6137,110 +6145,110 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#deletePattern(Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deletePattern(Patterns)",
           "lines": [
             125
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#deleteExistencePattern(Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteExistencePattern(Patterns)",
           "lines": [
             158
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#deleteAnythingButPattern(AnythingBut)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteAnythingButPattern(AnythingBut)",
           "lines": [
             164
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#deleteAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
           "lines": [
             169
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#deleteMatchPattern(ValuePatterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchPattern(ValuePatterns)",
           "lines": [
             173
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#doTransitionOn(String, Set<NameState>, boolean)",
+          "sig": "software.amazon.event.ruler.ByteMachine#doTransitionOn(String, Set, boolean)",
           "lines": [
             472
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#addExistenceMatch(Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addExistenceMatch(Set)",
           "lines": [
             563
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#addSuffixMatch(byte[], Set<NameState>, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addSuffixMatch(byte[], Set, Set)",
           "lines": [
             581
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set)",
           "lines": [
             614
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#addPattern(Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addPattern(Patterns)",
           "lines": [
             628
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#addMatchValue(Patterns, String, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchValue(Patterns, String, NameState)",
           "lines": [
             697
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#findPattern(Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findPattern(Patterns)",
           "lines": [
             849,
             828
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#findAnythingButPattern(AnythingBut)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findAnythingButPattern(AnythingBut)",
           "lines": [
             859
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#findAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findAnythingButEqualsIgnoreCasePattern(AnythingButEqualsIgnoreCase)",
           "lines": [
             875
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#findMatchPattern(ValuePatterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(ValuePatterns)",
           "lines": [
             888
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#findMatchPattern(InputCharacter[], Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)",
           "lines": [
             904
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
           "lines": [
             1253
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1361,
             1354,
@@ -6248,37 +6256,37 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#addMatchReferences(ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchReferences(ByteMatch)",
           "lines": [
             1547
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#updateMatchReferences(ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#updateMatchReferences(ByteMatch)",
           "lines": [
             1649
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#isNamePattern(Patterns)",
+          "sig": "software.amazon.event.ruler.GenericMachine#isNamePattern(Patterns)",
           "lines": [
             487
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#getWildcardPatterns(Set<ByteMatch>)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#getWildcardPatterns(Set)",
           "lines": [
             177
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#matchesOneOf(JsonNode, List<Patterns>)",
+          "sig": "software.amazon.event.ruler.Ruler#matchesOneOf(JsonNode, List)",
           "lines": [
             81
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#matches(JsonNode, Patterns)",
+          "sig": "software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)",
           "lines": [
             176,
             101
@@ -6290,7 +6298,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#writeRules(List, String, JsonParser, boolean)",
           "lines": [
             323,
             298,
@@ -6299,13 +6307,13 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             357
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#writeRules(Map, String, JsonParser, boolean)",
           "lines": [
             226,
             201,
@@ -6314,13 +6322,13 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             255
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#writeRules(Map<List<String>, List<Patterns>>, List<String>, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#writeRules(Map, List, JsonParser, boolean)",
           "lines": [
             707,
             713,
@@ -6334,13 +6342,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             367
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             265
           ]
@@ -6351,13 +6359,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             377
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             275
           ]
@@ -6384,25 +6392,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#processAnythingButEqualsIgnoreCaseListMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processAnythingButEqualsIgnoreCaseListMatchExpression(JsonParser)",
           "lines": [
             557
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processAnythingButEqualsIgnoreCaseMatchExpression(JsonParser, JsonToken)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processAnythingButEqualsIgnoreCaseMatchExpression(JsonParser, JsonToken)",
           "lines": [
             589
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processAnythingButEqualsIgnoreCaseListMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processAnythingButEqualsIgnoreCaseListMatchExpression(JsonParser)",
           "lines": [
             456
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processAnythingButEqualsIgnoreCaseMatchExpression(JsonParser, JsonToken)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processAnythingButEqualsIgnoreCaseMatchExpression(JsonParser, JsonToken)",
           "lines": [
             489
           ]
@@ -6417,13 +6425,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             426
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             324
           ]
@@ -6434,13 +6442,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             428
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             326
           ]
@@ -6451,31 +6459,31 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#writeRules(List<Map<String, List<Patterns>>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#writeRules(List, String, JsonParser, boolean)",
           "lines": [
             313
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             608
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#writeRules(Map, String, JsonParser, boolean)",
           "lines": [
             216
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             508
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#writeRules(Map<List<String>, List<Patterns>>, List<String>, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#writeRules(Map, List, JsonParser, boolean)",
           "lines": [
             706
           ]
@@ -6486,13 +6494,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#processExistsExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processExistsExpression(JsonParser)",
           "lines": [
             691
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processExistsExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processExistsExpression(JsonParser)",
           "lines": [
             589
           ]
@@ -6503,13 +6511,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#processExistsExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processExistsExpression(JsonParser)",
           "lines": [
             693
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processExistsExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processExistsExpression(JsonParser)",
           "lines": [
             591
           ]
@@ -6520,13 +6528,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             485
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             384
           ]
@@ -6537,13 +6545,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             496
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#processMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processMatchExpression(JsonParser)",
           "lines": [
             395
           ]
@@ -6554,13 +6562,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#addPatternRule(T, Map<String, List<Patterns>>)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addPatternRule(T, Map)",
           "lines": [
             192
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#clone()",
+          "sig": "software.amazon.event.ruler.Range#clone()",
           "lines": [
             120
           ]
@@ -6571,49 +6579,49 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#equals(Object)",
+          "sig": "software.amazon.event.ruler.AnythingBut#equals(Object)",
           "lines": [
             44
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#equals(Object)",
+          "sig": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase#equals(Object)",
           "lines": [
             32
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#findMatchPattern(InputCharacter[], Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(InputCharacter[], Patterns)",
           "lines": [
             936
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1356
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#deleteMatch(InputCharacter, ByteState, Patterns, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatch(InputCharacter, ByteState, Patterns, SingleByteTransition)",
           "lines": [
             1639
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#findMatch(Set<ByteMatch>, Patterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatch(Set, Patterns)",
           "lines": [
             1895
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#equals(Object)",
+          "sig": "software.amazon.event.ruler.Range#equals(Object)",
           "lines": [
             132
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#equals(Object)",
+          "sig": "software.amazon.event.ruler.ValuePatterns#equals(Object)",
           "lines": [
             29
           ]
@@ -6624,25 +6632,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#hashCode()",
+          "sig": "software.amazon.event.ruler.AnythingBut#hashCode()",
           "lines": [
             55
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#hashCode()",
+          "sig": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase#hashCode()",
           "lines": [
             43
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#hashCode()",
+          "sig": "software.amazon.event.ruler.Range#hashCode()",
           "lines": [
             146
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#hashCode()",
+          "sig": "software.amazon.event.ruler.ValuePatterns#hashCode()",
           "lines": [
             40
           ]
@@ -6653,25 +6661,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Patterns#toString()",
+          "sig": "software.amazon.event.ruler.AnythingBut#toString()",
           "lines": [
             63
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#toString()",
+          "sig": "software.amazon.event.ruler.AnythingButEqualsIgnoreCase#toString()",
           "lines": [
             50
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#toString()",
+          "sig": "software.amazon.event.ruler.Range#toString()",
           "lines": [
             156
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Patterns#toString()",
+          "sig": "software.amazon.event.ruler.ValuePatterns#toString()",
           "lines": [
             47
           ]
@@ -6707,13 +6715,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Range#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             649
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Range#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             549
           ]
@@ -6724,13 +6732,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Range#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             639
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Range#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             539
           ]
@@ -6741,13 +6749,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Range#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             627
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Range#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             527
           ]
@@ -6758,13 +6766,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Range#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             616
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Range#processNumericMatchExpression(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#processNumericMatchExpression(JsonParser)",
           "lines": [
             516
           ]
@@ -6775,13 +6783,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Range#completeNumericRange(JsonParser, JsonToken, double, boolean)",
+          "sig": "software.amazon.event.ruler.JsonRuleCompiler#completeNumericRange(JsonParser, JsonToken, double, boolean)",
           "lines": [
             683
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Range#completeNumericRange(JsonParser, JsonToken, double, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#completeNumericRange(JsonParser, JsonToken, double, boolean)",
           "lines": [
             581
           ]
@@ -6803,7 +6811,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Range#deleteRangePattern(Range)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteRangePattern(Range)",
           "lines": [
             401,
             357,
@@ -6813,7 +6821,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Range#findRangePattern(Range)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findRangePattern(Range)",
           "lines": [
             1040,
             963,
@@ -6823,7 +6831,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Range#addRangePattern(Range)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addRangePattern(Range)",
           "lines": [
             1232,
             1154,
@@ -6901,13 +6909,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Range#ipToRangeIfPossible(String)",
+          "sig": "software.amazon.event.ruler.CIDR#ipToRangeIfPossible(String)",
           "lines": [
             97
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Range#cidr(String)",
+          "sig": "software.amazon.event.ruler.CIDR#cidr(String)",
           "lines": [
             144
           ]
@@ -6947,13 +6955,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#addRule(T, Reader)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, Reader)",
           "lines": [
             352
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#deleteRule(T, Reader)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteRule(T, Reader)",
           "lines": [
             412
           ]
@@ -6964,13 +6972,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#addRule(T, String)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, String)",
           "lines": [
             337
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#deleteRule(T, String)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteRule(T, String)",
           "lines": [
             397
           ]
@@ -6981,7 +6989,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#addRule(T, byte[])",
+          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, byte[])",
           "lines": [
             382
           ]
@@ -6992,13 +7000,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#addRule(T, InputStream)",
+          "sig": "software.amazon.event.ruler.GenericMachine#addRule(T, InputStream)",
           "lines": [
             367
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#deleteRule(T, InputStream)",
+          "sig": "software.amazon.event.ruler.GenericMachine#deleteRule(T, InputStream)",
           "lines": [
             427
           ]
@@ -7068,7 +7076,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#parseObject(Map<String, List<Patterns>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#parseObject(Map, Path, JsonParser, boolean)",
           "lines": [
             164
           ]
@@ -7079,7 +7087,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#parseObject(Map<String, List<Patterns>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#parseObject(Map, Path, JsonParser, boolean)",
           "lines": [
             169
           ]
@@ -7090,13 +7098,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#writeRules(Map, String, JsonParser, boolean)",
           "lines": [
             191
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#writeRules(Map<List<String>, List<Patterns>>, List<String>, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#writeRules(Map, List, JsonParser, boolean)",
           "lines": [
             693
           ]
@@ -7212,14 +7220,14 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#parseObject(Map<String, List<Patterns>>, Path, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#parseObject(Map, Path, JsonParser, boolean)",
           "lines": [
             177,
             173
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#writeRules(Map<String, List<Patterns>>, String, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler#writeRules(Map, String, JsonParser, boolean)",
           "lines": [
             230,
             234
@@ -7315,20 +7323,20 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#doFlattenRule(JsonParser)",
+          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#doFlattenRule(JsonParser)",
           "lines": [
             644
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#parseRuleObject(Map<List<String>, List<Patterns>>, Deque<String>, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#parseRuleObject(Map, Deque, JsonParser, boolean)",
           "lines": [
             675,
             679
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler#writeRules(Map<List<String>, List<Patterns>>, List<String>, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#writeRules(Map, List, JsonParser, boolean)",
           "lines": [
             721,
             717
@@ -7367,7 +7375,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#parseRuleObject(Map<List<String>, List<Patterns>>, Deque<String>, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#parseRuleObject(Map, Deque, JsonParser, boolean)",
           "lines": [
             666
           ]
@@ -7378,7 +7386,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#parseRuleObject(Map<List<String>, List<Patterns>>, Deque<String>, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#parseRuleObject(Map, Deque, JsonParser, boolean)",
           "lines": [
             671
           ]
@@ -7389,7 +7397,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#parseRuleObject(Map<List<String>, List<Patterns>>, Deque<String>, JsonParser, boolean)",
+          "sig": "software.amazon.event.ruler.RuleCompiler.ListBasedRuleCompiler#parseRuleObject(Map, Deque, JsonParser, boolean)",
           "lines": [
             671
           ]
@@ -7410,7 +7418,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Ruler#matchesAllFields(JsonNode, Map<List<String>, List<Patterns>>)",
+          "sig": "software.amazon.event.ruler.Ruler#matchesAllFields(JsonNode, Map)",
           "lines": [
             69
           ]
@@ -7421,7 +7429,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Ruler#matchesOneOf(JsonNode, List<Patterns>)",
+          "sig": "software.amazon.event.ruler.Ruler#matchesOneOf(JsonNode, List)",
           "lines": [
             87,
             92
@@ -7433,7 +7441,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Ruler#matchesAllFields(JsonNode, Map<List<String>, List<Patterns>>)",
+          "sig": "software.amazon.event.ruler.Ruler#matchesAllFields(JsonNode, Map)",
           "lines": [
             68
           ]
@@ -7482,20 +7490,20 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ShortcutTransition#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set)",
           "lines": [
             612
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ShortcutTransition#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
           "lines": [
             1251,
             1269
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ShortcutTransition#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1352
           ]
@@ -7506,7 +7514,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ShortcutTransition#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1458
           ]
@@ -7527,7 +7535,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#deleteMatch(InputCharacter, ByteState, Patterns, SingleByteTransition)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatch(InputCharacter, ByteState, Patterns, SingleByteTransition)",
           "lines": [
             1637
           ]
@@ -7539,7 +7547,7 @@
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.SingleByteTransition#gatherObjects(Set)",
           "lines": [
             65
           ]
@@ -7550,7 +7558,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#putTransitionMatch(ByteState, InputCharacter, SingleByteTransition, ByteMatch)",
+          "sig": "software.amazon.event.ruler.ByteMachine#putTransitionMatch(ByteState, InputCharacter, SingleByteTransition, ByteMatch)",
           "lines": [
             1826
           ]
@@ -7561,7 +7569,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#getTransition(SingleByteTransition, InputCharacter)",
+          "sig": "software.amazon.event.ruler.ByteMachine#getTransition(SingleByteTransition, InputCharacter)",
           "lines": [
             1699
           ]
@@ -7572,19 +7580,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchStepForWildcard(ByteState, int, Patterns, InputCharacter[], SingleByteTransition, ByteState)",
           "lines": [
             263
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#getMatches()",
+          "sig": "software.amazon.event.ruler.CompoundByteTransition#getMatches()",
           "lines": [
             131
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#getMatchesAccessibleFromEachTransition(ByteState)",
+          "sig": "software.amazon.event.ruler.MachineComplexityEvaluator#getMatchesAccessibleFromEachTransition(ByteState)",
           "lines": [
             155
           ]
@@ -7599,7 +7607,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.SingleByteTransition#gatherObjects(Set)",
           "lines": [
             72
           ]
@@ -7610,13 +7618,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#gatherObjects(Set)",
           "lines": [
             1921
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.SingleByteTransition#gatherObjects(Set<Object>)",
+          "sig": "software.amazon.event.ruler.ByteTransition#gatherObjects(Set)",
           "lines": [
             116
           ]
@@ -7659,7 +7667,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Step#moveFrom(NameState, int, Task)",
+          "sig": "software.amazon.event.ruler.Finder#moveFrom(NameState, int, Task)",
           "lines": [
             94
           ]
@@ -7672,7 +7680,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Task#find(Task)",
+          "sig": "software.amazon.event.ruler.Finder#find(Task)",
           "lines": [
             59
           ]
@@ -7683,13 +7691,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Task#moveFrom(NameState, int, Task)",
+          "sig": "software.amazon.event.ruler.Finder#moveFrom(NameState, int, Task)",
           "lines": [
             93
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.Task#tryValueMatching(Task, Step)",
+          "sig": "software.amazon.event.ruler.Finder#tryValueMatching(Task, Step)",
           "lines": [
             113
           ]
@@ -7700,7 +7708,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Task#tryStep(Task)",
+          "sig": "software.amazon.event.ruler.Finder#tryStep(Task)",
           "lines": [
             101
           ]
@@ -7711,7 +7719,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Task#moveFrom(NameState, int, Task)",
+          "sig": "software.amazon.event.ruler.Finder#moveFrom(NameState, int, Task)",
           "lines": [
             94
           ]
@@ -7722,7 +7730,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Task#find(Task)",
+          "sig": "software.amazon.event.ruler.Finder#find(Task)",
           "lines": [
             66
           ]
@@ -7733,7 +7741,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Task#find(Task)",
+          "sig": "software.amazon.event.ruler.Finder#find(Task)",
           "lines": [
             70
           ]
@@ -7744,7 +7752,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Task#addNameState(NameState, Task, int)",
+          "sig": "software.amazon.event.ruler.Finder#addNameState(NameState, Task, int)",
           "lines": [
             143
           ]
@@ -7755,7 +7763,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Task#rulesForEvent(List<String>, GenericMachine<?>)",
+          "sig": "software.amazon.event.ruler.Finder#rulesForEvent(List, GenericMachine)",
           "lines": [
             53
           ]
@@ -7766,7 +7774,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.Task#rulesForEvent(String[], GenericMachine<?>)",
+          "sig": "software.amazon.event.ruler.Finder#rulesForEvent(String[], GenericMachine)",
           "lines": [
             42
           ]
@@ -7779,43 +7787,43 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#deleteMatchPattern(ValuePatterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#deleteMatchPattern(ValuePatterns)",
           "lines": [
             173
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set<NameState>)",
+          "sig": "software.amazon.event.ruler.ByteMachine#attemptAddShortcutTransitionMatch(ByteTransition, String, MatchType, Set)",
           "lines": [
             616
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#findMatchPattern(ValuePatterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#findMatchPattern(ValuePatterns)",
           "lines": [
             888
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
+          "sig": "software.amazon.event.ruler.ByteMachine#extendShortcutTransition(ByteState, ByteTransition, InputCharacter, int)",
           "lines": [
             1252
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#addMatchPattern(ValuePatterns)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addMatchPattern(ValuePatterns)",
           "lines": [
             1325
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
+          "sig": "software.amazon.event.ruler.ByteMachine#addEndOfMatch(ByteState, ByteState, InputCharacter[], int, Patterns, NameState)",
           "lines": [
             1360
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#matches(JsonNode, Patterns)",
+          "sig": "software.amazon.event.ruler.Ruler#matches(JsonNode, Patterns)",
           "lines": [
             132,
             135,
@@ -7844,49 +7852,49 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#exactMatch(String)",
+          "sig": "software.amazon.event.ruler.Patterns#exactMatch(String)",
           "lines": [
             36
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#prefixMatch(String)",
+          "sig": "software.amazon.event.ruler.Patterns#prefixMatch(String)",
           "lines": [
             44
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#suffixMatch(String)",
+          "sig": "software.amazon.event.ruler.Patterns#suffixMatch(String)",
           "lines": [
             48
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#anythingButPrefix(String)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButPrefix(String)",
           "lines": [
             80
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#anythingButSuffix(String)",
+          "sig": "software.amazon.event.ruler.Patterns#anythingButSuffix(String)",
           "lines": [
             84
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#numericEquals(double)",
+          "sig": "software.amazon.event.ruler.Patterns#numericEquals(double)",
           "lines": [
             88
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#equalsIgnoreCaseMatch(String)",
+          "sig": "software.amazon.event.ruler.Patterns#equalsIgnoreCaseMatch(String)",
           "lines": [
             101
           ]
         },
         {
-          "sig": "software.amazon.event.ruler.ValuePatterns#wildcardMatch(String)",
+          "sig": "software.amazon.event.ruler.Patterns#wildcardMatch(String)",
           "lines": [
             105
           ]

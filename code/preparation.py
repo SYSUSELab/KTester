@@ -83,7 +83,8 @@ def run(args):
         # ProjectPreprocessor = jpype.JClass("PreProcessor")
         # ProjectPreprocessor.main([dataset_abs, f"{code_info_path}/json"])
         # TODO: add code graph
-        PreProcess.build_calling_graph(FS)
+        # PreProcess.build_calling_graph(FS)
+        PreProcess.extract_invoke_patterns(FS)
         # IndexBuilder = jpype.JClass("IndexBuilder")
         # IndexBuilder.main(["group", f"{code_info_path}/json", f"{code_info_path}/lucene"])
     

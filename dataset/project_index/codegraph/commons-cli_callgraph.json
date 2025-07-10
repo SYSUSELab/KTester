@@ -12,7 +12,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.AlreadySelectedException#setSelected(Option)",
+          "sig": "org.apache.commons.cli.OptionGroup#setSelected(Option)",
           "lines": [
             111
           ]
@@ -41,13 +41,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.AmbiguousOptionException#handleLongOptionWithEqual(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleLongOptionWithEqual(String)",
           "lines": [
             353
           ]
         },
         {
-          "sig": "org.apache.commons.cli.AmbiguousOptionException#handleLongOptionWithoutEqual(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleLongOptionWithoutEqual(String)",
           "lines": [
             379
           ]
@@ -60,19 +60,19 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.CommandLine#addArg(String)",
+          "sig": "org.apache.commons.cli.CommandLine.Builder#addArg(String)",
           "lines": [
             61
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#handleToken(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleToken(String)",
           "lines": [
             512
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#handleUnknownToken(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleUnknownToken(String)",
           "lines": [
             540
           ]
@@ -83,13 +83,13 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.CommandLine#addOption(Option)",
+          "sig": "org.apache.commons.cli.CommandLine.Builder#addOption(Option)",
           "lines": [
             73
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#handleOption(Option)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleOption(Option)",
           "lines": [
             391
           ]
@@ -132,7 +132,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.CommandLine#getOptionValue(Option, Supplier<String>)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionValue(Option, Supplier)",
           "lines": [
             293
           ]
@@ -144,7 +144,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(Option, Supplier<T>)",
+          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(Option, Supplier)",
           "lines": [
             441
           ]
@@ -171,7 +171,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#getOptionValue(String, Supplier<String>)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionValue(String, Supplier)",
           "lines": [
             327
           ]
@@ -203,7 +203,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#getOptionValue(char, Supplier<String>)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionValue(char, Supplier)",
           "lines": [
             254
           ]
@@ -281,7 +281,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(String, Supplier<T>)",
+          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(String, Supplier)",
           "lines": [
             494
           ]
@@ -314,7 +314,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(char, Supplier<T>)",
+          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(char, Supplier)",
           "lines": [
             396
           ]
@@ -357,7 +357,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#handleProperties(Properties)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleProperties(Properties)",
           "lines": [
             413
           ]
@@ -401,7 +401,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#getOptionValue(String, Supplier<String>)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionValue(String, Supplier)",
           "lines": [
             327
           ]
@@ -419,7 +419,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(String, Supplier<T>)",
+          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(String, Supplier)",
           "lines": [
             494
           ]
@@ -442,7 +442,7 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.CommandLine#parse(Options, String[], Properties, boolean)",
+          "sig": "org.apache.commons.cli.DefaultParser#parse(Options, String[], Properties, boolean)",
           "lines": [
             679
           ]
@@ -479,13 +479,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Converter#getParsedOptionValue(Option, Supplier<T>)",
+          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(Option, Supplier)",
           "lines": [
             447
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Converter#createValue(String, Class<T>)",
+          "sig": "org.apache.commons.cli.TypeHandler#createValue(String, Class)",
           "lines": [
             171
           ]
@@ -911,7 +911,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.DefaultParser#build()",
+          "sig": "org.apache.commons.cli.DefaultParser.Builder#build()",
           "lines": [
             69
           ]
@@ -936,7 +936,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.DefaultParser.Builder#builder()",
+          "sig": "org.apache.commons.cli.DefaultParser#builder()",
           "lines": [
             128
           ]
@@ -1413,7 +1413,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.MissingArgumentException#checkRequiredArgs()",
+          "sig": "org.apache.commons.cli.DefaultParser#checkRequiredArgs()",
           "lines": [
             233
           ]
@@ -1438,7 +1438,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.MissingOptionException#checkRequiredOptions()",
+          "sig": "org.apache.commons.cli.DefaultParser#checkRequiredOptions()",
           "lines": [
             245
           ]
@@ -1465,7 +1465,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#parsePattern(String)",
+          "sig": "org.apache.commons.cli.PatternOptionBuilder#parsePattern(String)",
           "lines": [
             209,
             189
@@ -1477,20 +1477,20 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#handleLongOptionWithEqual(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleLongOptionWithEqual(String)",
           "lines": [
             357
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#handleShortAndLongOption(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)",
           "lines": [
             483,
             461
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#handleToken(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleToken(String)",
           "lines": [
             515,
             524
@@ -1526,25 +1526,25 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#handleConcatenatedOptions(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleConcatenatedOptions(String)",
           "lines": [
             317
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#handleLongOptionWithEqual(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleLongOptionWithEqual(String)",
           "lines": [
             359
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#handleProperties(Properties)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleProperties(Properties)",
           "lines": [
             419
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#handleShortAndLongOption(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)",
           "lines": [
             468,
             485,
@@ -1554,7 +1554,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#handleToken(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleToken(String)",
           "lines": [
             516
           ]
@@ -1569,7 +1569,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#handleOption(Option)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleOption(Option)",
           "lines": [
             389
           ]
@@ -1580,13 +1580,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#getOptionProperties(Option)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionProperties(Option)",
           "lines": [
             186
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#getOptionValues(Option)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionValues(Option)",
           "lines": [
             352
           ]
@@ -1597,14 +1597,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#appendOption(StringBuffer, Option, boolean)",
+          "sig": "org.apache.commons.cli.HelpFormatter#appendOption(StringBuffer, Option, boolean)",
           "lines": [
             212,
             214
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#renderOptions(StringBuffer, int, Options, int, int)",
+          "sig": "org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)",
           "lines": [
             707,
             701
@@ -1616,7 +1616,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#isJavaProperty(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#isJavaProperty(String)",
           "lines": [
             561
           ]
@@ -1627,7 +1627,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#getParsedOptionValue(Option, Supplier<T>)",
+          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(Option, Supplier)",
           "lines": [
             447
           ]
@@ -1638,14 +1638,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#renderOptions(StringBuffer, int, Options, int, int)",
+          "sig": "org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)",
           "lines": [
             729,
             730
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#toString()",
+          "sig": "org.apache.commons.cli.OptionGroup#toString()",
           "lines": [
             140,
             142
@@ -1661,19 +1661,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#checkRequiredArgs()",
+          "sig": "org.apache.commons.cli.DefaultParser#checkRequiredArgs()",
           "lines": [
             230
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#updateRequiredOptions(Option)",
+          "sig": "org.apache.commons.cli.DefaultParser#updateRequiredOptions(Option)",
           "lines": [
             733
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#compare(Option, Option)",
+          "sig": "org.apache.commons.cli.HelpFormatter.OptionComparator#compare(Option, Option)",
           "lines": [
             85
           ]
@@ -1685,39 +1685,39 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#addOption(Option)",
+          "sig": "org.apache.commons.cli.OptionGroup#addOption(Option)",
           "lines": [
             50
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#setSelected(Option)",
+          "sig": "org.apache.commons.cli.OptionGroup#setSelected(Option)",
           "lines": [
             113,
             110
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#addOption(Option)",
+          "sig": "org.apache.commons.cli.Options#addOption(Option)",
           "lines": [
             63
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#addOptionGroup(OptionGroup)",
+          "sig": "org.apache.commons.cli.Options#addOptionGroup(OptionGroup)",
           "lines": [
             147
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#addOptions(Options)",
+          "sig": "org.apache.commons.cli.Options#addOptions(Options)",
           "lines": [
             162,
             163
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#getOptionGroup(Option)",
+          "sig": "org.apache.commons.cli.Options#getOptionGroup(Option)",
           "lines": [
             245
           ]
@@ -1728,44 +1728,44 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#getOptionProperties(String)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionProperties(String)",
           "lines": [
             207
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#resolveOption(String)",
+          "sig": "org.apache.commons.cli.CommandLine#resolveOption(String)",
           "lines": [
             597
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#getMatchingLongOptions(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#getMatchingLongOptions(String)",
           "lines": [
             281
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#appendOption(StringBuffer, Option, boolean)",
+          "sig": "org.apache.commons.cli.HelpFormatter#appendOption(StringBuffer, Option, boolean)",
           "lines": [
             208
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#renderOptions(StringBuffer, int, Options, int, int)",
+          "sig": "org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)",
           "lines": [
             691,
             696
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#toString()",
+          "sig": "org.apache.commons.cli.OptionGroup#toString()",
           "lines": [
             137
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#addOption(Option)",
+          "sig": "org.apache.commons.cli.Options#addOption(Option)",
           "lines": [
             66
           ]
@@ -1776,19 +1776,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#getOptionProperties(String)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionProperties(String)",
           "lines": [
             207
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#resolveOption(String)",
+          "sig": "org.apache.commons.cli.CommandLine#resolveOption(String)",
           "lines": [
             597
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#appendOption(StringBuffer, Option, boolean)",
+          "sig": "org.apache.commons.cli.HelpFormatter#appendOption(StringBuffer, Option, boolean)",
           "lines": [
             213,
             205,
@@ -1796,14 +1796,14 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#renderOptions(StringBuffer, int, Options, int, int)",
+          "sig": "org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)",
           "lines": [
             690,
             693
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#toString()",
+          "sig": "org.apache.commons.cli.OptionGroup#toString()",
           "lines": [
             132,
             134
@@ -1838,7 +1838,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#handleProperties(Properties)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleProperties(Properties)",
           "lines": [
             418
           ]
@@ -1860,25 +1860,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#getOptionProperties(Option)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionProperties(Option)",
           "lines": [
             187
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#getOptionProperties(String)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionProperties(String)",
           "lines": [
             208
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#getOptionValues(Option)",
+          "sig": "org.apache.commons.cli.CommandLine#getOptionValues(Option)",
           "lines": [
             353
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#checkRequiredArgs()",
+          "sig": "org.apache.commons.cli.DefaultParser#checkRequiredArgs()",
           "lines": [
             230
           ]
@@ -1889,25 +1889,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#handleOption(Option)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleOption(Option)",
           "lines": [
             392
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#handleProperties(Properties)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleProperties(Properties)",
           "lines": [
             417
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#appendOption(StringBuffer, Option, boolean)",
+          "sig": "org.apache.commons.cli.HelpFormatter#appendOption(StringBuffer, Option, boolean)",
           "lines": [
             212
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#renderOptions(StringBuffer, int, Options, int, int)",
+          "sig": "org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)",
           "lines": [
             700
           ]
@@ -1955,14 +1955,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#renderOptions(StringBuffer, int, Options, int, int)",
+          "sig": "org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)",
           "lines": [
             706,
             695
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#addOption(Option)",
+          "sig": "org.apache.commons.cli.Options#addOption(Option)",
           "lines": [
             65
           ]
@@ -2018,19 +2018,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#updateRequiredOptions(Option)",
+          "sig": "org.apache.commons.cli.DefaultParser#updateRequiredOptions(Option)",
           "lines": [
             732
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#printUsage(PrintWriter, int, String, Options)",
+          "sig": "org.apache.commons.cli.HelpFormatter#printUsage(PrintWriter, int, String, Options)",
           "lines": [
             621
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#addOption(Option)",
+          "sig": "org.apache.commons.cli.Options#addOption(Option)",
           "lines": [
             69
           ]
@@ -2052,7 +2052,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#checkRequiredArgs()",
+          "sig": "org.apache.commons.cli.DefaultParser#checkRequiredArgs()",
           "lines": [
             229
           ]
@@ -2087,13 +2087,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#addOptionGroup(OptionGroup)",
+          "sig": "org.apache.commons.cli.Options#addOptionGroup(OptionGroup)",
           "lines": [
             145
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#addRequiredOption(String, String, boolean, String)",
+          "sig": "org.apache.commons.cli.Options#addRequiredOption(String, String, boolean, String)",
           "lines": [
             195
           ]
@@ -2116,7 +2116,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#build()",
+          "sig": "org.apache.commons.cli.Option.Builder#build()",
           "lines": [
             119
           ]
@@ -2135,13 +2135,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option#addOption(String, String, boolean, String)",
+          "sig": "org.apache.commons.cli.Options#addOption(String, String, boolean, String)",
           "lines": [
             127
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option#addRequiredOption(String, String, boolean, String)",
+          "sig": "org.apache.commons.cli.Options#addRequiredOption(String, String, boolean, String)",
           "lines": [
             194
           ]
@@ -2158,7 +2158,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option.Builder#parsePattern(String)",
+          "sig": "org.apache.commons.cli.PatternOptionBuilder#parsePattern(String)",
           "lines": [
             209,
             189
@@ -2170,7 +2170,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option.Builder#parsePattern(String)",
+          "sig": "org.apache.commons.cli.PatternOptionBuilder#parsePattern(String)",
           "lines": [
             189
           ]
@@ -2195,7 +2195,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option.Builder#parsePattern(String)",
+          "sig": "org.apache.commons.cli.PatternOptionBuilder#parsePattern(String)",
           "lines": [
             209,
             189
@@ -2237,7 +2237,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Option.Builder#parsePattern(String)",
+          "sig": "org.apache.commons.cli.PatternOptionBuilder#parsePattern(String)",
           "lines": [
             209,
             189
@@ -2249,7 +2249,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option.Builder#parsePattern(String)",
+          "sig": "org.apache.commons.cli.PatternOptionBuilder#parsePattern(String)",
           "lines": [
             209,
             189
@@ -2276,7 +2276,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Option.Builder#builder(String)",
+          "sig": "org.apache.commons.cli.Option#builder(String)",
           "lines": [
             323
           ]
@@ -2297,7 +2297,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.OptionGroup#appendOptionGroup(StringBuffer, OptionGroup)",
+          "sig": "org.apache.commons.cli.HelpFormatter#appendOptionGroup(StringBuffer, OptionGroup)",
           "lines": [
             236
           ]
@@ -2309,7 +2309,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.OptionGroup#addOptionGroup(OptionGroup)",
+          "sig": "org.apache.commons.cli.Options#addOptionGroup(OptionGroup)",
           "lines": [
             141
           ]
@@ -2320,7 +2320,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.OptionGroup#handleProperties(Properties)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleProperties(Properties)",
           "lines": [
             412
           ]
@@ -2331,20 +2331,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.OptionGroup#updateRequiredOptions(Option)",
+          "sig": "org.apache.commons.cli.DefaultParser#updateRequiredOptions(Option)",
           "lines": [
             740
           ]
         },
         {
-          "sig": "org.apache.commons.cli.OptionGroup#appendOptionGroup(StringBuffer, OptionGroup)",
+          "sig": "org.apache.commons.cli.HelpFormatter#appendOptionGroup(StringBuffer, OptionGroup)",
           "lines": [
             232,
             250
           ]
         },
         {
-          "sig": "org.apache.commons.cli.OptionGroup#addOptionGroup(OptionGroup)",
+          "sig": "org.apache.commons.cli.Options#addOptionGroup(OptionGroup)",
           "lines": [
             138
           ]
@@ -2359,13 +2359,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.OptionGroup#parse(Options, String[], Properties, boolean)",
+          "sig": "org.apache.commons.cli.DefaultParser#parse(Options, String[], Properties, boolean)",
           "lines": [
             676
           ]
         },
         {
-          "sig": "org.apache.commons.cli.OptionGroup#updateRequiredOptions(Option)",
+          "sig": "org.apache.commons.cli.DefaultParser#updateRequiredOptions(Option)",
           "lines": [
             744
           ]
@@ -2406,7 +2406,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#parsePattern(String)",
+          "sig": "org.apache.commons.cli.PatternOptionBuilder#parsePattern(String)",
           "lines": [
             193,
             212
@@ -2455,7 +2455,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#getMatchingLongOptions(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#getMatchingLongOptions(String)",
           "lines": [
             276
           ]
@@ -2466,37 +2466,37 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#getMatchingLongOptions(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#getMatchingLongOptions(String)",
           "lines": [
             280
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#handleConcatenatedOptions(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleConcatenatedOptions(String)",
           "lines": [
             313
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#handleLongOptionWithEqual(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleLongOptionWithEqual(String)",
           "lines": [
             356
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#handleLongOptionWithoutEqual(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleLongOptionWithoutEqual(String)",
           "lines": [
             382
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#handleProperties(Properties)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleProperties(Properties)",
           "lines": [
             406
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#handleShortAndLongOption(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)",
           "lines": [
             482,
             467,
@@ -2508,7 +2508,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#isJavaProperty(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#isJavaProperty(String)",
           "lines": [
             560
           ]
@@ -2519,20 +2519,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#handleProperties(Properties)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleProperties(Properties)",
           "lines": [
             411
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#updateRequiredOptions(Option)",
+          "sig": "org.apache.commons.cli.DefaultParser#updateRequiredOptions(Option)",
           "lines": [
             737,
             738
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#printUsage(PrintWriter, int, String, Options)",
+          "sig": "org.apache.commons.cli.HelpFormatter#printUsage(PrintWriter, int, String, Options)",
           "lines": [
             602
           ]
@@ -2543,7 +2543,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#parse(Options, String[], Properties, boolean)",
+          "sig": "org.apache.commons.cli.DefaultParser#parse(Options, String[], Properties, boolean)",
           "lines": [
             675
           ]
@@ -2560,7 +2560,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#printUsage(PrintWriter, int, String, Options)",
+          "sig": "org.apache.commons.cli.HelpFormatter#printUsage(PrintWriter, int, String, Options)",
           "lines": [
             592
           ]
@@ -2577,7 +2577,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#parse(Options, String[], Properties, boolean)",
+          "sig": "org.apache.commons.cli.DefaultParser#parse(Options, String[], Properties, boolean)",
           "lines": [
             672
           ]
@@ -2588,26 +2588,26 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#getLongPrefix(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#getLongPrefix(String)",
           "lines": [
             260
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#getMatchingLongOptions(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#getMatchingLongOptions(String)",
           "lines": [
             279
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#handleLongOptionWithEqual(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleLongOptionWithEqual(String)",
           "lines": [
             352,
             355
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#handleLongOptionWithoutEqual(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleLongOptionWithoutEqual(String)",
           "lines": [
             378,
             381
@@ -2619,7 +2619,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#handleConcatenatedOptions(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleConcatenatedOptions(String)",
           "lines": [
             309
           ]
@@ -2636,14 +2636,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#handleShortAndLongOption(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)",
           "lines": [
             452,
             445
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Options#isShortOption(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#isShortOption(String)",
           "lines": [
             626,
             622
@@ -2655,7 +2655,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Options#renderOptions(StringBuffer, int, Options, int, int)",
+          "sig": "org.apache.commons.cli.HelpFormatter#renderOptions(StringBuffer, int, Options, int, int)",
           "lines": [
             681
           ]
@@ -2717,7 +2717,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.OptionValidator#option(String)",
+          "sig": "org.apache.commons.cli.Option.Builder#option(String)",
           "lines": [
             207
           ]
@@ -2730,13 +2730,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.ParseException#getParsedOptionValue(Option, Supplier<T>)",
+          "sig": "org.apache.commons.cli.CommandLine#getParsedOptionValue(Option, Supplier)",
           "lines": [
             449
           ]
         },
         {
-          "sig": "org.apache.commons.cli.ParseException#createValue(String, Class<T>)",
+          "sig": "org.apache.commons.cli.TypeHandler#createValue(String, Class)",
           "lines": [
             173
           ]
@@ -2801,19 +2801,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.TypeHandler#getConverter()",
+          "sig": "org.apache.commons.cli.Option#getConverter()",
           "lines": [
             552
           ]
         },
         {
-          "sig": "org.apache.commons.cli.TypeHandler#parsePattern(String)",
+          "sig": "org.apache.commons.cli.PatternOptionBuilder#parsePattern(String)",
           "lines": [
             204
           ]
         },
         {
-          "sig": "org.apache.commons.cli.TypeHandler#createValue(String, Class<T>)",
+          "sig": "org.apache.commons.cli.TypeHandler#createValue(String, Class)",
           "lines": [
             171
           ]
@@ -2828,7 +2828,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.TypeHandler#registerTypes()",
+          "sig": "org.apache.commons.cli.PatternOptionBuilder#registerTypes()",
           "lines": [
             223
           ]
@@ -2853,13 +2853,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.UnrecognizedOptionException#handleProperties(Properties)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleProperties(Properties)",
           "lines": [
             408
           ]
         },
         {
-          "sig": "org.apache.commons.cli.UnrecognizedOptionException#handleUnknownToken(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleUnknownToken(String)",
           "lines": [
             538
           ]
@@ -2889,13 +2889,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Util#stripLeadingAndTrailingQuotesDefaultOff(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#stripLeadingAndTrailingQuotesDefaultOff(String)",
           "lines": [
             707
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Util#stripLeadingAndTrailingQuotesDefaultOn(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#stripLeadingAndTrailingQuotesDefaultOn(String)",
           "lines": [
             721
           ]
@@ -2906,49 +2906,49 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.cli.Util#resolveOption(String)",
+          "sig": "org.apache.commons.cli.CommandLine#resolveOption(String)",
           "lines": [
             594
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Util#getLongPrefix(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#getLongPrefix(String)",
           "lines": [
             255
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Util#handleShortAndLongOption(String)",
+          "sig": "org.apache.commons.cli.DefaultParser#handleShortAndLongOption(String)",
           "lines": [
             441
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Util#getMatchingOptions(String)",
+          "sig": "org.apache.commons.cli.Options#getMatchingOptions(String)",
           "lines": [
             208
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Util#getOption(String)",
+          "sig": "org.apache.commons.cli.Options#getOption(String)",
           "lines": [
             233
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Util#hasLongOption(String)",
+          "sig": "org.apache.commons.cli.Options#hasLongOption(String)",
           "lines": [
             288
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Util#hasOption(String)",
+          "sig": "org.apache.commons.cli.Options#hasOption(String)",
           "lines": [
             299
           ]
         },
         {
-          "sig": "org.apache.commons.cli.Util#hasShortOption(String)",
+          "sig": "org.apache.commons.cli.Options#hasShortOption(String)",
           "lines": [
             311
           ]

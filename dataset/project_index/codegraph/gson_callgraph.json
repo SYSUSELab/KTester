@@ -4,7 +4,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.ExclusionStrategy#excludeField(Field, boolean)",
+          "sig": "com.google.gson.internal.Excluder#excludeField(Field, boolean)",
           "lines": [
             182
           ]
@@ -15,7 +15,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.ExclusionStrategy#excludeClassInStrategy(Class<?>, boolean)",
+          "sig": "com.google.gson.internal.Excluder#excludeClassInStrategy(Class, boolean)",
           "lines": [
             211
           ]
@@ -60,7 +60,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.FieldAttributes#excludeField(Field, boolean)",
+          "sig": "com.google.gson.internal.Excluder#excludeField(Field, boolean)",
           "lines": [
             180
           ]
@@ -83,7 +83,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.FieldNamingStrategy#getFieldNames(Field)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getFieldNames(Field)",
           "lines": [
             86
           ]
@@ -149,7 +149,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#getAdapter(Class<T>)",
+          "sig": "com.google.gson.Gson#getAdapter(Class)",
           "lines": [
             666
           ]
@@ -161,37 +161,37 @@
           ]
         },
         {
-          "sig": "com.google.gson.Gson#fromJson(JsonReader, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonReader, TypeToken)",
           "lines": [
             1225
           ]
         },
         {
-          "sig": "com.google.gson.Gson#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             52
           ]
         },
         {
-          "sig": "com.google.gson.Gson#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             124
           ]
         },
         {
-          "sig": "com.google.gson.Gson#getKeyAdapter(Gson, Type)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#getKeyAdapter(Gson, Type)",
           "lines": [
             140
           ]
         },
         {
-          "sig": "com.google.gson.Gson#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             159
           ]
         },
         {
-          "sig": "com.google.gson.Gson#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper#write(JsonWriter, T)",
           "lines": [
             54
           ]
@@ -202,7 +202,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#write(JsonWriter, Object)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#write(JsonWriter, Object)",
           "lines": [
             175
           ]
@@ -213,13 +213,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#delegate()",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#delegate()",
           "lines": [
             96
           ]
         },
         {
-          "sig": "com.google.gson.Gson#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken)",
           "lines": [
             144
           ]
@@ -230,7 +230,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#serialize(Object)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.GsonContextImpl#serialize(Object)",
           "lines": [
             171
           ]
@@ -247,7 +247,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.Gson#serialize(Object, Type)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.GsonContextImpl#serialize(Object, Type)",
           "lines": [
             174
           ]
@@ -367,7 +367,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#fromJson(Reader, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(Reader, TypeToken)",
           "lines": [
             1135
           ]
@@ -386,7 +386,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#fromJson(String, Class<T>)",
+          "sig": "com.google.gson.Gson#fromJson(String, Class)",
           "lines": [
             981
           ]
@@ -411,13 +411,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#fromJson(String, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(String, TypeToken)",
           "lines": [
             1046
           ]
         },
         {
-          "sig": "com.google.gson.Gson#fromJson(Reader, Class<T>)",
+          "sig": "com.google.gson.Gson#fromJson(Reader, Class)",
           "lines": [
             1074
           ]
@@ -438,7 +438,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#fromJson(Reader, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(Reader, TypeToken)",
           "lines": [
             1136
           ]
@@ -450,7 +450,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.Gson#fromJson(JsonElement, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonElement, TypeToken)",
           "lines": [
             1328
           ]
@@ -465,7 +465,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#deserialize(JsonElement, Type)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.GsonContextImpl#deserialize(JsonElement, Type)",
           "lines": [
             178
           ]
@@ -476,7 +476,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#fromJson(JsonElement, Class<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonElement, Class)",
           "lines": [
             1270
           ]
@@ -493,7 +493,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#fromJson(Reader, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(Reader, TypeToken)",
           "lines": [
             1137
           ]
@@ -512,7 +512,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.Gson#create()",
+          "sig": "com.google.gson.GsonBuilder#create()",
           "lines": [
             761
           ]
@@ -525,7 +525,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.Gson.FutureTypeAdapter#getAdapter(TypeToken<T>)",
+          "sig": "com.google.gson.Gson#getAdapter(TypeToken)",
           "lines": [
             557
           ]
@@ -573,7 +573,7 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "excludeFieldsWithModifiers(int...)": {
+    "excludeFieldsWithModifiers(int[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -624,7 +624,7 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "setExclusionStrategies(ExclusionStrategy...)": {
+    "setExclusionStrategies(ExclusionStrategy[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -707,7 +707,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.GsonBuilder#newBuilder()",
+          "sig": "com.google.gson.Gson#newBuilder()",
           "lines": [
             353
           ]
@@ -720,7 +720,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.InstanceCreator#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             105,
             93
@@ -734,31 +734,31 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Preconditions#registerTypeAdapter(Type, Object)",
+          "sig": "com.google.gson.GsonBuilder#registerTypeAdapter(Type, Object)",
           "lines": [
             605
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Preconditions#registerTypeHierarchyAdapter(Class<?>, Object)",
+          "sig": "com.google.gson.GsonBuilder#registerTypeHierarchyAdapter(Class, Object)",
           "lines": [
             658
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Preconditions#getRawType(Type)",
+          "sig": "com.google.gson.internal.$Gson$Types#getRawType(Type)",
           "lines": [
             144
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Preconditions#getSupertype(Type, Class<?>, Class<?>)",
+          "sig": "com.google.gson.internal.$Gson$Types#getSupertype(Type, Class, Class)",
           "lines": [
             289
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Preconditions#checkNotPrimitive(Type)",
+          "sig": "com.google.gson.internal.$Gson$Types#checkNotPrimitive(Type)",
           "lines": [
             480
           ]
@@ -771,22 +771,35 @@
     }
   },
   "com.google.gson.internal.$Gson$Types": {
-    "newParameterizedTypeWithOwner(Type, Type, Type...)": {
+    "newParameterizedTypeWithOwner(Type, Type, Type[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class, Type, Map)",
+          "lines": [
+            406
+          ]
+        },
+        {
+          "sig": "com.google.gson.reflect.TypeToken#getParameterized(Type, Type[])",
+          "lines": [
+            375
+          ]
+        }
+      ]
     },
     "arrayOf(Type)": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class, Type, Map)",
           "lines": [
             384,
             375
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#getArray(Type)",
+          "sig": "com.google.gson.reflect.TypeToken#getArray(Type)",
           "lines": [
             382
           ]
@@ -797,7 +810,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class, Type, Map)",
           "lines": [
             424
           ]
@@ -808,7 +821,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class, Type, Map)",
           "lines": [
             418
           ]
@@ -825,7 +838,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#getTypeTokenTypeArgument()",
+          "sig": "com.google.gson.reflect.TypeToken#getTypeTokenTypeArgument()",
           "lines": [
             94
           ]
@@ -843,13 +856,13 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#isAssignableFrom(Type, ParameterizedType, Map<String, Type>)",
+          "sig": "com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map)",
           "lines": [
             214
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#getParameterized(Type, Type...)",
+          "sig": "com.google.gson.reflect.TypeToken#getParameterized(Type, Type[])",
           "lines": [
             362,
             366
@@ -867,7 +880,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class, Type, Map)",
           "lines": [
             373,
             391,
@@ -887,25 +900,25 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#equals(Object)",
+          "sig": "com.google.gson.internal.$Gson$Types.ParameterizedTypeImpl#equals(Object)",
           "lines": [
             522
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#equals(Object)",
+          "sig": "com.google.gson.internal.$Gson$Types.GenericArrayTypeImpl#equals(Object)",
           "lines": [
             566
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#equals(Object)",
+          "sig": "com.google.gson.internal.$Gson$Types.WildcardTypeImpl#equals(Object)",
           "lines": [
             619
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#equals(Object)",
+          "sig": "com.google.gson.reflect.TypeToken#equals(Object)",
           "lines": [
             302
           ]
@@ -916,7 +929,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#toString()",
+          "sig": "com.google.gson.internal.$Gson$Types.ParameterizedTypeImpl#toString()",
           "lines": [
             544,
             538,
@@ -924,20 +937,20 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#toString()",
+          "sig": "com.google.gson.internal.$Gson$Types.GenericArrayTypeImpl#toString()",
           "lines": [
             574
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#toString()",
+          "sig": "com.google.gson.internal.$Gson$Types.WildcardTypeImpl#toString()",
           "lines": [
             630,
             634
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#toString()",
+          "sig": "com.google.gson.reflect.TypeToken#toString()",
           "lines": [
             306
           ]
@@ -948,20 +961,20 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#getGenericSupertype(Type, Class<?>, Class<?>)",
+          "sig": "com.google.gson.internal.$Gson$Types#getGenericSupertype(Type, Class, Class)",
           "lines": [
             264,
             252
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#getSupertype(Type, Class<?>, Class<?>)",
+          "sig": "com.google.gson.internal.$Gson$Types#getSupertype(Type, Class, Class)",
           "lines": [
             291
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolveTypeVariable(Type, Class<?>, TypeVariable<?>)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolveTypeVariable(Type, Class, TypeVariable)",
           "lines": [
             450
           ]
@@ -972,13 +985,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#getCollectionElementType(Type, Class<?>)",
+          "sig": "com.google.gson.internal.$Gson$Types#getCollectionElementType(Type, Class)",
           "lines": [
             309
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#getMapKeyAndValueTypes(Type, Class<?>)",
+          "sig": "com.google.gson.internal.$Gson$Types#getMapKeyAndValueTypes(Type, Class)",
           "lines": [
             331
           ]
@@ -993,7 +1006,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             51
           ]
@@ -1004,7 +1017,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             122
           ]
@@ -1015,13 +1028,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#getSupertype(Type, Class<?>, Class<?>)",
+          "sig": "com.google.gson.internal.$Gson$Types#getSupertype(Type, Class, Class)",
           "lines": [
             290
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             304,
             287
@@ -1033,13 +1046,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class, Type)",
           "lines": [
             342
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class, Type, Map)",
           "lines": [
             416,
             372,
@@ -1055,7 +1068,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class<?>, Type, Map<TypeVariable<?>, Type>)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolve(Type, Class, Type, Map)",
           "lines": [
             364
           ]
@@ -1066,7 +1079,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolveTypeVariable(Type, Class<?>, TypeVariable<?>)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolveTypeVariable(Type, Class, TypeVariable)",
           "lines": [
             452
           ]
@@ -1077,7 +1090,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types#resolveTypeVariable(Type, Class<?>, TypeVariable<?>)",
+          "sig": "com.google.gson.internal.$Gson$Types#resolveTypeVariable(Type, Class, TypeVariable)",
           "lines": [
             443
           ]
@@ -1131,7 +1144,20 @@
     },
     "ParameterizedTypeImpl(Type, Type, Type[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.google.gson.internal.$Gson$Types#newParameterizedTypeWithOwner(Type, Type, Type[])",
+          "lines": [
+            59
+          ]
+        },
+        {
+          "sig": "com.google.gson.internal.$Gson$Types#canonicalize(Type)",
+          "lines": [
+            115
+          ]
+        }
+      ]
     }
   },
   "com.google.gson.internal.$Gson$Types.GenericArrayTypeImpl": {
@@ -1155,13 +1181,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types.GenericArrayTypeImpl#arrayOf(Type)",
+          "sig": "com.google.gson.internal.$Gson$Types#arrayOf(Type)",
           "lines": [
             69
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types.GenericArrayTypeImpl#canonicalize(Type)",
+          "sig": "com.google.gson.internal.$Gson$Types#canonicalize(Type)",
           "lines": [
             120,
             111
@@ -1195,19 +1221,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.$Gson$Types.WildcardTypeImpl#subtypeOf(Type)",
+          "sig": "com.google.gson.internal.$Gson$Types#subtypeOf(Type)",
           "lines": [
             85
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types.WildcardTypeImpl#supertypeOf(Type)",
+          "sig": "com.google.gson.internal.$Gson$Types#supertypeOf(Type)",
           "lines": [
             100
           ]
         },
         {
-          "sig": "com.google.gson.internal.$Gson$Types.WildcardTypeImpl#canonicalize(Type)",
+          "sig": "com.google.gson.internal.$Gson$Types#canonicalize(Type)",
           "lines": [
             124
           ]
@@ -1252,7 +1278,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             56
           ]
@@ -1313,7 +1339,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#createAdapterFactory(String)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter.DateType#createAdapterFactory(String)",
           "lines": [
             69
           ]
@@ -1324,7 +1350,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#createAdapterFactory(int)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter.DateType#createAdapterFactory(int)",
           "lines": [
             73
           ]
@@ -1335,13 +1361,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#createAdapterFactory(int, int)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter.DateType#createAdapterFactory(int, int)",
           "lines": [
             77
           ]
         },
         {
-          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#createDefaultsAdapterFactory()",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter.DateType#createDefaultsAdapterFactory()",
           "lines": [
             81
           ]
@@ -1354,7 +1380,7 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter.DateType#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#read(JsonReader)",
           "lines": [
             147
           ]
@@ -1394,7 +1420,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter.DateType#addTypeAdaptersForDate(String, int, int, List<TypeAdapterFactory>)",
+          "sig": "com.google.gson.GsonBuilder#addTypeAdaptersForDate(String, int, int, List)",
           "lines": [
             778,
             781,
@@ -1411,7 +1437,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter.DateType#addTypeAdaptersForDate(String, int, int, List<TypeAdapterFactory>)",
+          "sig": "com.google.gson.GsonBuilder#addTypeAdaptersForDate(String, int, int, List)",
           "lines": [
             785,
             788,
@@ -1438,13 +1464,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             48
           ]
         },
         {
-          "sig": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             155
           ]
@@ -1909,13 +1935,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.JsonTreeReader#fromJson(JsonElement, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonElement, TypeToken)",
           "lines": [
             1328
           ]
         },
         {
-          "sig": "com.google.gson.internal.bind.JsonTreeReader#fromJsonTree(JsonElement)",
+          "sig": "com.google.gson.TypeAdapter#fromJsonTree(JsonElement)",
           "lines": [
             297
           ]
@@ -1928,13 +1954,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.JsonTreeWriter#toJsonTree(Object, Type)",
+          "sig": "com.google.gson.Gson#toJsonTree(Object, Type)",
           "lines": [
             712
           ]
         },
         {
-          "sig": "com.google.gson.internal.bind.JsonTreeWriter#toJsonTree(T)",
+          "sig": "com.google.gson.TypeAdapter#toJsonTree(T)",
           "lines": [
             240
           ]
@@ -2123,13 +2149,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.JsonTreeWriter#toJsonTree(Object, Type)",
+          "sig": "com.google.gson.Gson#toJsonTree(Object, Type)",
           "lines": [
             710
           ]
         },
         {
-          "sig": "com.google.gson.internal.bind.JsonTreeWriter#toJsonTree(T)",
+          "sig": "com.google.gson.TypeAdapter#toJsonTree(T)",
           "lines": [
             238
           ]
@@ -2146,7 +2172,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             123
           ]
@@ -2171,7 +2197,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             236
           ]
@@ -2182,7 +2208,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             129
           ]
@@ -2291,7 +2317,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             250,
             251
@@ -2303,7 +2329,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             288
           ]
@@ -2318,7 +2344,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             214,
             169,
@@ -2331,7 +2357,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             293
           ]
@@ -2342,7 +2368,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             129,
             124
@@ -2360,7 +2386,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.BoundField#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#write(JsonWriter, T)",
           "lines": [
             367
           ]
@@ -2371,7 +2397,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.BoundField#readField(Object[], JsonReader, BoundField)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.RecordAdapter#readField(Object[], JsonReader, BoundField)",
           "lines": [
             508
           ]
@@ -2382,7 +2408,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.BoundField#readField(T, JsonReader, BoundField)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.FieldReflectionAdapter#readField(T, JsonReader, BoundField)",
           "lines": [
             432
           ]
@@ -2393,7 +2419,7 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.BoundField#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             163
           ]
@@ -2465,7 +2491,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.FieldReflectionAdapter#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             129
           ]
@@ -2494,7 +2520,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.RecordAdapter#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             123
           ]
@@ -2507,7 +2533,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.SerializationDelegatingTypeAdapter#isReflective(TypeAdapter<?>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper#isReflective(TypeAdapter)",
           "lines": [
             80
           ]
@@ -2559,7 +2585,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#registerTypeAdapter(Type, Object)",
+          "sig": "com.google.gson.GsonBuilder#registerTypeAdapter(Type, Object)",
           "lines": [
             614
           ]
@@ -2570,7 +2596,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#registerTypeHierarchyAdapter(Class<?>, Object)",
+          "sig": "com.google.gson.GsonBuilder#registerTypeHierarchyAdapter(Class, Object)",
           "lines": [
             662
           ]
@@ -2585,7 +2611,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.SingleTypeFactory#create(Gson, TypeToken)",
           "lines": [
             163
           ]
@@ -2602,19 +2628,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.SingleTypeFactory#newFactory(TypeToken<?>, Object)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#newFactory(TypeToken, Object)",
           "lines": [
             112
           ]
         },
         {
-          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.SingleTypeFactory#newFactoryWithMatchRawType(TypeToken<?>, Object)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#newFactoryWithMatchRawType(TypeToken, Object)",
           "lines": [
             123
           ]
         },
         {
-          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.SingleTypeFactory#newTypeHierarchyFactory(Class<?>, Object)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#newTypeHierarchyFactory(Class, Object)",
           "lines": [
             132
           ]
@@ -2671,7 +2697,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             194
           ]
@@ -2684,7 +2710,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.TypeAdapters#registerTypeAdapter(Type, Object)",
+          "sig": "com.google.gson.GsonBuilder#registerTypeAdapter(Type, Object)",
           "lines": [
             618
           ]
@@ -2695,7 +2721,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.TypeAdapters#createFactory(DefaultDateTypeAdapter<T>)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter.DateType#createFactory(DefaultDateTypeAdapter)",
           "lines": [
             65
           ]
@@ -2714,7 +2740,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.TypeAdapters#registerTypeHierarchyAdapter(Class<?>, Object)",
+          "sig": "com.google.gson.GsonBuilder#registerTypeHierarchyAdapter(Class, Object)",
           "lines": [
             666
           ]
@@ -2770,13 +2796,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.bind.util.ISO8601Utils#deserializeToDate(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DateTypeAdapter#deserializeToDate(JsonReader)",
           "lines": [
             87
           ]
         },
         {
-          "sig": "com.google.gson.internal.bind.util.ISO8601Utils#deserializeToDate(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#deserializeToDate(JsonReader)",
           "lines": [
             161
           ]
@@ -2852,13 +2878,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             131
           ]
         },
         {
-          "sig": "com.google.gson.internal.ConstructorConstructor#assertInstantiable(Class<?>)",
+          "sig": "com.google.gson.internal.UnsafeAllocator#assertInstantiable(Class)",
           "lines": [
             38
           ]
@@ -2869,19 +2895,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ConstructorConstructor#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             53
           ]
         },
         {
-          "sig": "com.google.gson.internal.ConstructorConstructor#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             125
           ]
         },
         {
-          "sig": "com.google.gson.internal.ConstructorConstructor#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             128
           ]
@@ -2892,7 +2918,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             113
           ]
@@ -2903,7 +2929,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             119
           ]
@@ -2914,7 +2940,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             124
           ]
@@ -2925,7 +2951,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             144
           ]
@@ -2952,7 +2978,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.Excluder#withModifiers(int...)",
+          "sig": "com.google.gson.internal.Excluder#withModifiers(int[])",
           "lines": [
             75
           ]
@@ -2981,22 +3007,29 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Excluder#setVersion(double)",
+          "sig": "com.google.gson.GsonBuilder#setVersion(double)",
           "lines": [
             165
           ]
         }
       ]
     },
-    "withModifiers(int...)": {
+    "withModifiers(int[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "com.google.gson.GsonBuilder#excludeFieldsWithModifiers(int[])",
+          "lines": [
+            185
+          ]
+        }
+      ]
     },
     "disableInnerClassSerialization()": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Excluder#disableInnerClassSerialization()",
+          "sig": "com.google.gson.GsonBuilder#disableInnerClassSerialization()",
           "lines": [
             333
           ]
@@ -3007,7 +3040,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Excluder#excludeFieldsWithoutExposeAnnotation()",
+          "sig": "com.google.gson.GsonBuilder#excludeFieldsWithoutExposeAnnotation()",
           "lines": [
             213
           ]
@@ -3018,19 +3051,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Excluder#setExclusionStrategies(ExclusionStrategy...)",
+          "sig": "com.google.gson.GsonBuilder#setExclusionStrategies(ExclusionStrategy[])",
           "lines": [
             432
           ]
         },
         {
-          "sig": "com.google.gson.internal.Excluder#addSerializationExclusionStrategy(ExclusionStrategy)",
+          "sig": "com.google.gson.GsonBuilder#addSerializationExclusionStrategy(ExclusionStrategy)",
           "lines": [
             454
           ]
         },
         {
-          "sig": "com.google.gson.internal.Excluder#addDeserializationExclusionStrategy(ExclusionStrategy)",
+          "sig": "com.google.gson.GsonBuilder#addDeserializationExclusionStrategy(ExclusionStrategy)",
           "lines": [
             475
           ]
@@ -3045,7 +3078,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Excluder#includeField(Field, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#includeField(Field, boolean)",
           "lines": [
             79
           ]
@@ -3056,13 +3089,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken)",
           "lines": [
             111
           ]
         },
         {
-          "sig": "com.google.gson.internal.Excluder#excludeClass(Class<?>, boolean)",
+          "sig": "com.google.gson.internal.Excluder#excludeClass(Class, boolean)",
           "lines": [
             204
           ]
@@ -3073,7 +3106,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Excluder#includeField(Field, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#includeField(Field, boolean)",
           "lines": [
             79
           ]
@@ -3084,14 +3117,14 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken)",
           "lines": [
             113,
             114
           ]
         },
         {
-          "sig": "com.google.gson.internal.Excluder#excludeClass(Class<?>, boolean)",
+          "sig": "com.google.gson.internal.Excluder#excludeClass(Class, boolean)",
           "lines": [
             205
           ]
@@ -3108,7 +3141,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.Excluder#excludeClassChecks(Class<?>)",
+          "sig": "com.google.gson.internal.Excluder#excludeClassChecks(Class)",
           "lines": [
             200
           ]
@@ -3125,7 +3158,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.Excluder#excludeClassChecks(Class<?>)",
+          "sig": "com.google.gson.internal.Excluder#excludeClassChecks(Class)",
           "lines": [
             196
           ]
@@ -3136,13 +3169,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Excluder#isAnonymousOrNonStaticLocal(Class<?>)",
+          "sig": "com.google.gson.internal.Excluder#isAnonymousOrNonStaticLocal(Class)",
           "lines": [
             219
           ]
         },
         {
-          "sig": "com.google.gson.internal.Excluder#isInnerClass(Class<?>)",
+          "sig": "com.google.gson.internal.Excluder#isInnerClass(Class)",
           "lines": [
             224
           ]
@@ -3159,7 +3192,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.Excluder#excludeClassChecks(Class<?>)",
+          "sig": "com.google.gson.internal.Excluder#excludeClassChecks(Class)",
           "lines": [
             192
           ]
@@ -3245,7 +3278,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.JsonReaderInternalAccess#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             183
           ]
@@ -3294,7 +3327,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LazilyParsedNumber#getAsNumber()",
+          "sig": "com.google.gson.JsonPrimitive#getAsNumber()",
           "lines": [
             134
           ]
@@ -3307,13 +3340,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#size()",
+          "sig": "com.google.gson.JsonObject#size()",
           "lines": [
             154
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#isEmpty()",
+          "sig": "com.google.gson.JsonObject#isEmpty()",
           "lines": [
             164
           ]
@@ -3324,25 +3357,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#get(String)",
+          "sig": "com.google.gson.JsonObject#get(String)",
           "lines": [
             184
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#getAsJsonPrimitive(String)",
+          "sig": "com.google.gson.JsonObject#getAsJsonPrimitive(String)",
           "lines": [
             196
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#getAsJsonArray(String)",
+          "sig": "com.google.gson.JsonObject#getAsJsonArray(String)",
           "lines": [
             208
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#getAsJsonObject(String)",
+          "sig": "com.google.gson.JsonObject#getAsJsonObject(String)",
           "lines": [
             220
           ]
@@ -3353,13 +3386,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#contains(Object)",
+          "sig": "com.google.gson.internal.LinkedTreeMap.KeySet#contains(Object)",
           "lines": [
             636
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#has(String)",
+          "sig": "com.google.gson.JsonObject#has(String)",
           "lines": [
             174
           ]
@@ -3370,7 +3403,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#add(String, JsonElement)",
+          "sig": "com.google.gson.JsonObject#add(String, JsonElement)",
           "lines": [
             68
           ]
@@ -3381,13 +3414,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#clear()",
+          "sig": "com.google.gson.internal.LinkedTreeMap.EntrySet#clear()",
           "lines": [
             618
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#clear()",
+          "sig": "com.google.gson.internal.LinkedTreeMap.KeySet#clear()",
           "lines": [
             644
           ]
@@ -3398,7 +3431,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#remove(String)",
+          "sig": "com.google.gson.JsonObject#remove(String)",
           "lines": [
             80
           ]
@@ -3438,7 +3471,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#findByEntry(Entry<?, ?>)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#findByEntry(Entry)",
           "lines": [
             224
           ]
@@ -3455,13 +3488,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#contains(Object)",
+          "sig": "com.google.gson.internal.LinkedTreeMap.EntrySet#contains(Object)",
           "lines": [
             601
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#remove(Object)",
+          "sig": "com.google.gson.internal.LinkedTreeMap.EntrySet#remove(Object)",
           "lines": [
             609
           ]
@@ -3472,7 +3505,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#findByEntry(Entry<?, ?>)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#findByEntry(Entry)",
           "lines": [
             225
           ]
@@ -3483,7 +3516,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#removeInternal(Node<K, V>, boolean)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#removeInternal(Node, boolean)",
           "lines": [
             260
           ]
@@ -3495,13 +3528,13 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#remove()",
+          "sig": "com.google.gson.internal.LinkedTreeMap.LinkedTreeMapIterator#remove()",
           "lines": [
             581
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#remove(Object)",
+          "sig": "com.google.gson.internal.LinkedTreeMap.EntrySet#remove(Object)",
           "lines": [
             613
           ]
@@ -3518,7 +3551,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#remove(Object)",
+          "sig": "com.google.gson.internal.LinkedTreeMap.KeySet#remove(Object)",
           "lines": [
             640
           ]
@@ -3529,7 +3562,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#removeInternal(Node<K, V>, boolean)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#removeInternal(Node, boolean)",
           "lines": [
             290,
             281,
@@ -3538,13 +3571,13 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#rotateLeft(Node<K, V>)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#rotateLeft(Node)",
           "lines": [
             407
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#rotateRight(Node<K, V>)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#rotateRight(Node)",
           "lines": [
             435
           ]
@@ -3561,7 +3594,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#removeInternal(Node<K, V>, boolean)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#removeInternal(Node, boolean)",
           "lines": [
             293
           ]
@@ -3572,7 +3605,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#rebalance(Node<K, V>, boolean)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#rebalance(Node, boolean)",
           "lines": [
             352,
             369,
@@ -3585,7 +3618,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#rebalance(Node<K, V>, boolean)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#rebalance(Node, boolean)",
           "lines": [
             370,
             366,
@@ -3598,13 +3631,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#deepCopy()",
+          "sig": "com.google.gson.JsonObject#deepCopy()",
           "lines": [
             53
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#entrySet()",
+          "sig": "com.google.gson.JsonObject#entrySet()",
           "lines": [
             134
           ]
@@ -3615,7 +3648,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#keySet()",
+          "sig": "com.google.gson.JsonObject#keySet()",
           "lines": [
             144
           ]
@@ -3634,13 +3667,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#tryBeginNesting(JsonReader, JsonToken)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#tryBeginNesting(JsonReader, JsonToken)",
           "lines": [
             84
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap#newDefaultImplementationConstructor(Type, Class<? super T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newDefaultImplementationConstructor(Type, Class)",
           "lines": [
             354
           ]
@@ -3685,7 +3718,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap.Node#removeInternal(Node<K, V>, boolean)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#removeInternal(Node, boolean)",
           "lines": [
             259
           ]
@@ -3696,7 +3729,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap.Node#removeInternal(Node<K, V>, boolean)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#removeInternal(Node, boolean)",
           "lines": [
             259
           ]
@@ -3711,7 +3744,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap.Node#find(K, boolean)",
+          "sig": "com.google.gson.internal.LinkedTreeMap#find(K, boolean)",
           "lines": [
             188,
             191
@@ -3729,13 +3762,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap.LinkedTreeMapIterator#iterator()",
+          "sig": "com.google.gson.internal.LinkedTreeMap.EntrySet#iterator()",
           "lines": [
             595
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap.LinkedTreeMapIterator#iterator()",
+          "sig": "com.google.gson.internal.LinkedTreeMap.KeySet#iterator()",
           "lines": [
             630
           ]
@@ -3750,13 +3783,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap.LinkedTreeMapIterator#iterator()",
+          "sig": "com.google.gson.internal.LinkedTreeMap.EntrySet#iterator()",
           "lines": [
             593
           ]
         },
         {
-          "sig": "com.google.gson.internal.LinkedTreeMap.LinkedTreeMapIterator#iterator()",
+          "sig": "com.google.gson.internal.LinkedTreeMap.KeySet#iterator()",
           "lines": [
             628
           ]
@@ -3894,7 +3927,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.NonNullElementWrapperList#asList()",
+          "sig": "com.google.gson.JsonArray#asList()",
           "lines": [
             411
           ]
@@ -3907,19 +3940,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ObjectConstructor#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             78
           ]
         },
         {
-          "sig": "com.google.gson.internal.ObjectConstructor#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             165
           ]
         },
         {
-          "sig": "com.google.gson.internal.ObjectConstructor#createAccumulator()",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.FieldReflectionAdapter#createAccumulator()",
           "lines": [
             426
           ]
@@ -3975,7 +4008,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Primitives#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             146
           ]
@@ -3990,19 +4023,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Primitives#fromJson(String, Class<T>)",
+          "sig": "com.google.gson.Gson#fromJson(String, Class)",
           "lines": [
             982
           ]
         },
         {
-          "sig": "com.google.gson.internal.Primitives#fromJson(Reader, Class<T>)",
+          "sig": "com.google.gson.Gson#fromJson(Reader, Class)",
           "lines": [
             1075
           ]
         },
         {
-          "sig": "com.google.gson.internal.Primitives#fromJson(JsonElement, Class<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonElement, Class)",
           "lines": [
             1271
           ]
@@ -4023,7 +4056,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             268,
             285
@@ -4035,20 +4068,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#checkAccessible(Object, M)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#checkAccessible(Object, M)",
           "lines": [
             134
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             182,
             218
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             276
           ]
@@ -4065,7 +4098,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             301
           ]
@@ -4082,20 +4115,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#readField(Object[], JsonReader, BoundField)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.RecordAdapter#readField(Object[], JsonReader, BoundField)",
           "lines": [
             501
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#finalize(Object[])",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.RecordAdapter#finalize(Object[])",
           "lines": [
             528,
             522
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#newDefaultConstructor(Class<? super T>, FilterResult)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newDefaultConstructor(Class, FilterResult)",
           "lines": [
             272,
             267
@@ -4108,7 +4141,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#tryMakeAccessible(Constructor<?>)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper#tryMakeAccessible(Constructor)",
           "lines": [
             125
           ]
@@ -4125,7 +4158,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#constructorToString(Constructor<?>)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper#constructorToString(Constructor)",
           "lines": [
             90
           ]
@@ -4136,7 +4169,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#newDefaultConstructor(Class<? super T>, FilterResult)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newDefaultConstructor(Class, FilterResult)",
           "lines": [
             235
           ]
@@ -4147,7 +4180,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             121
           ]
@@ -4162,7 +4195,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             265
           ]
@@ -4177,25 +4210,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#write(JsonWriter, T)",
           "lines": [
             370
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             398
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#finalize(Object[])",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.RecordAdapter#finalize(Object[])",
           "lines": [
             516
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#newDefaultConstructor(Class<? super T>, FilterResult)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newDefaultConstructor(Class, FilterResult)",
           "lines": [
             275
           ]
@@ -4206,25 +4239,25 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#isRecord(Class<?>)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper.RecordSupportedHelper#isRecord(Class)",
           "lines": [
             202
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getRecordComponentNames(Class<?>)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper.RecordSupportedHelper#getRecordComponentNames(Class)",
           "lines": [
             216
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getCanonicalRecordConstructor(Class<T>)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper.RecordSupportedHelper#getCanonicalRecordConstructor(Class)",
           "lines": [
             232
           ]
         },
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getAccessor(Class<?>, Field)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper.RecordSupportedHelper#getAccessor(Class, Field)",
           "lines": [
             243
           ]
@@ -4241,7 +4274,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper.RecordHelper#isRecord(Class<?>)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper#isRecord(Class)",
           "lines": [
             134
           ]
@@ -4252,7 +4285,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper.RecordHelper#getRecordComponentNames(Class<?>)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getRecordComponentNames(Class)",
           "lines": [
             138
           ]
@@ -4263,7 +4296,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper.RecordHelper#getCanonicalRecordConstructor(Class<T>)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getCanonicalRecordConstructor(Class)",
           "lines": [
             147
           ]
@@ -4274,7 +4307,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.reflect.ReflectionHelper.RecordHelper#getAccessor(Class<?>, Field)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper#getAccessor(Class, Field)",
           "lines": [
             143
           ]
@@ -4331,7 +4364,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#isJavaType(Class<?>)",
+          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#isJavaType(Class)",
           "lines": [
             19
           ]
@@ -4352,13 +4385,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#isAndroidType(Class<?>)",
+          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#isAndroidType(Class)",
           "lines": [
             27
           ]
         },
         {
-          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#isAnyPlatformType(Class<?>)",
+          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#isAnyPlatformType(Class)",
           "lines": [
             38
           ]
@@ -4373,19 +4406,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             111
           ]
         },
         {
-          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             240
           ]
         },
         {
-          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             118
           ]
@@ -4396,13 +4429,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#checkAccessible(Object, M)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#checkAccessible(Object, M)",
           "lines": [
             133
           ]
         },
         {
-          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#newDefaultConstructor(Class<? super T>, FilterResult)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newDefaultConstructor(Class, FilterResult)",
           "lines": [
             216
           ]
@@ -4419,7 +4452,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper.AccessChecker#canAccess(AccessibleObject, Object)",
+          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#canAccess(AccessibleObject, Object)",
           "lines": [
             63
           ]
@@ -4432,7 +4465,7 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "write(JsonWriter, java.sql.Date)": {
+    "write(JsonWriter, Date)": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -4480,19 +4513,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Streams#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#read(JsonReader)",
           "lines": [
             71
           ]
         },
         {
-          "sig": "com.google.gson.internal.Streams#parseReader(JsonReader)",
+          "sig": "com.google.gson.JsonParser#parseReader(JsonReader)",
           "lines": [
             101
           ]
         },
         {
-          "sig": "com.google.gson.internal.Streams#next()",
+          "sig": "com.google.gson.JsonStreamParser#next()",
           "lines": [
             88
           ]
@@ -4503,25 +4536,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Streams#toJson(JsonElement, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, JsonWriter)",
           "lines": [
             944
           ]
         },
         {
-          "sig": "com.google.gson.internal.Streams#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             227
           ]
         },
         {
-          "sig": "com.google.gson.internal.Streams#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#write(JsonWriter, T)",
           "lines": [
             88
           ]
         },
         {
-          "sig": "com.google.gson.internal.Streams#toString()",
+          "sig": "com.google.gson.JsonElement#toString()",
           "lines": [
             322
           ]
@@ -4532,13 +4565,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Streams#toJson(Object, Type, Appendable)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, Appendable)",
           "lines": [
             810
           ]
         },
         {
-          "sig": "com.google.gson.internal.Streams#toJson(JsonElement, Appendable)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, Appendable)",
           "lines": [
             876
           ]
@@ -4583,7 +4616,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Streams.AppendableWriter#writerForAppendable(Appendable)",
+          "sig": "com.google.gson.internal.Streams#writerForAppendable(Appendable)",
           "lines": [
             76
           ]
@@ -4596,7 +4629,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.internal.Streams.AppendableWriter.CurrentWrite#write(char[], int, int)",
+          "sig": "com.google.gson.internal.Streams.AppendableWriter#write(char[], int, int)",
           "lines": [
             92
           ]
@@ -4625,7 +4658,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.internal.UnsafeAllocator#newUnsafeAllocator(Class<? super T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newUnsafeAllocator(Class)",
           "lines": [
             369
           ]
@@ -4675,7 +4708,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonArray#put(JsonElement)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#put(JsonElement)",
           "lines": [
             87
           ]
@@ -4720,7 +4753,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonArray#beginArray()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#beginArray()",
           "lines": [
             74
           ]
@@ -4862,7 +4895,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonArray#beginArray()",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#beginArray()",
           "lines": [
             95
           ]
@@ -4898,7 +4931,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonDeserializer#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#read(JsonReader)",
           "lines": [
             75
           ]
@@ -4911,13 +4944,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#deepCopy()",
+          "sig": "com.google.gson.JsonArray#deepCopy()",
           "lines": [
             71
           ]
         },
         {
-          "sig": "com.google.gson.JsonElement#deepCopy()",
+          "sig": "com.google.gson.JsonObject#deepCopy()",
           "lines": [
             54
           ]
@@ -4928,7 +4961,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             220
           ]
@@ -4945,7 +4978,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             220
           ]
@@ -4962,7 +4995,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#keyToString(JsonElement)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#keyToString(JsonElement)",
           "lines": [
             244
           ]
@@ -4979,19 +5012,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#put(JsonElement)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#put(JsonElement)",
           "lines": [
             77
           ]
         },
         {
-          "sig": "com.google.gson.JsonElement#keyToString(JsonElement)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#keyToString(JsonElement)",
           "lines": [
             255
           ]
         },
         {
-          "sig": "com.google.gson.JsonElement#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#read(JsonReader)",
           "lines": [
             72
           ]
@@ -5003,7 +5036,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.JsonElement#parseReader(Reader)",
+          "sig": "com.google.gson.JsonParser#parseReader(Reader)",
           "lines": [
             70
           ]
@@ -5022,7 +5055,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#keyToString(JsonElement)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#keyToString(JsonElement)",
           "lines": [
             245
           ]
@@ -5037,7 +5070,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsBoolean()",
+          "sig": "com.google.gson.JsonArray#getAsBoolean()",
           "lines": [
             396
           ]
@@ -5048,7 +5081,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsNumber()",
+          "sig": "com.google.gson.JsonArray#getAsNumber()",
           "lines": [
             248
           ]
@@ -5059,7 +5092,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsString()",
+          "sig": "com.google.gson.JsonArray#getAsString()",
           "lines": [
             261
           ]
@@ -5070,7 +5103,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsDouble()",
+          "sig": "com.google.gson.JsonArray#getAsDouble()",
           "lines": [
             274
           ]
@@ -5081,7 +5114,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsFloat()",
+          "sig": "com.google.gson.JsonArray#getAsFloat()",
           "lines": [
             315
           ]
@@ -5092,7 +5125,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsLong()",
+          "sig": "com.google.gson.JsonArray#getAsLong()",
           "lines": [
             328
           ]
@@ -5103,7 +5136,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsInt()",
+          "sig": "com.google.gson.JsonArray#getAsInt()",
           "lines": [
             341
           ]
@@ -5114,7 +5147,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsByte()",
+          "sig": "com.google.gson.JsonArray#getAsByte()",
           "lines": [
             354
           ]
@@ -5125,7 +5158,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsBigDecimal()",
+          "sig": "com.google.gson.JsonArray#getAsBigDecimal()",
           "lines": [
             288
           ]
@@ -5136,7 +5169,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsBigInteger()",
+          "sig": "com.google.gson.JsonArray#getAsBigInteger()",
           "lines": [
             302
           ]
@@ -5147,7 +5180,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonElement#getAsShort()",
+          "sig": "com.google.gson.JsonArray#getAsShort()",
           "lines": [
             383
           ]
@@ -5164,39 +5197,39 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonIOException#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             113
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#checkAccessible(Object, M)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#checkAccessible(Object, M)",
           "lines": [
             135
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             219
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             242,
             277
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             135,
             151
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#newSpecialCollectionConstructor(Type, Class<? super T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newSpecialCollectionConstructor(Type, Class)",
           "lines": [
             194,
             171,
@@ -5205,14 +5238,14 @@
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#newDefaultConstructor(Class<? super T>, FilterResult)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newDefaultConstructor(Class, FilterResult)",
           "lines": [
             227,
             251
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#newUnsafeAllocator(Class<? super T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newUnsafeAllocator(Class)",
           "lines": [
             384
           ]
@@ -5223,13 +5256,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonIOException#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             183
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#makeAccessible(AccessibleObject)",
+          "sig": "com.google.gson.internal.reflect.ReflectionHelper#makeAccessible(AccessibleObject)",
           "lines": [
             37
           ]
@@ -5240,67 +5273,67 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonIOException#toJson(Object, Type, Appendable)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, Appendable)",
           "lines": [
             813
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#toJson(Object, Type, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, JsonWriter)",
           "lines": [
             843
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#toJson(JsonElement, Appendable)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, Appendable)",
           "lines": [
             879
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#toJson(JsonElement, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, JsonWriter)",
           "lines": [
             946
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#assertFullConsumption(Object, JsonReader)",
+          "sig": "com.google.gson.Gson#assertFullConsumption(Object, JsonReader)",
           "lines": [
             1149
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#parse(JsonReader)",
+          "sig": "com.google.gson.internal.Streams#parse(JsonReader)",
           "lines": [
             62
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#parseReader(Reader)",
+          "sig": "com.google.gson.JsonParser#parseReader(Reader)",
           "lines": [
             77
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#hasNext()",
+          "sig": "com.google.gson.JsonStreamParser#hasNext()",
           "lines": [
             110
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#toJson(T)",
+          "sig": "com.google.gson.TypeAdapter#toJson(T)",
           "lines": [
             223
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#toJsonTree(T)",
+          "sig": "com.google.gson.TypeAdapter#toJsonTree(T)",
           "lines": [
             242
           ]
         },
         {
-          "sig": "com.google.gson.JsonIOException#fromJsonTree(JsonElement)",
+          "sig": "com.google.gson.TypeAdapter#fromJsonTree(JsonElement)",
           "lines": [
             300
           ]
@@ -5331,7 +5364,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonObject#put(JsonElement)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#put(JsonElement)",
           "lines": [
             79
           ]
@@ -5392,7 +5425,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonObject#beginObject()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#beginObject()",
           "lines": [
             90
           ]
@@ -5447,7 +5480,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonObject#beginObject()",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#beginObject()",
           "lines": [
             114
           ]
@@ -5466,7 +5499,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonParseException#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             202
           ]
@@ -5477,14 +5510,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonParseException#parseReader(JsonReader)",
+          "sig": "com.google.gson.JsonParser#parseReader(JsonReader)",
           "lines": [
             103,
             105
           ]
         },
         {
-          "sig": "com.google.gson.JsonParseException#next()",
+          "sig": "com.google.gson.JsonStreamParser#next()",
           "lines": [
             90,
             92
@@ -5534,13 +5567,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#peek()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#peek()",
           "lines": [
             135
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#keyToString(JsonElement)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#keyToString(JsonElement)",
           "lines": [
             248
           ]
@@ -5563,13 +5596,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#nextBoolean()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#nextBoolean()",
           "lines": [
             197
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#keyToString(JsonElement)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#keyToString(JsonElement)",
           "lines": [
             249
           ]
@@ -5580,13 +5613,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#peek()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#peek()",
           "lines": [
             137
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#keyToString(JsonElement)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#keyToString(JsonElement)",
           "lines": [
             246
           ]
@@ -5639,7 +5672,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#keyToString(JsonElement)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#keyToString(JsonElement)",
           "lines": [
             247
           ]
@@ -5707,13 +5740,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#peek()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#peek()",
           "lines": [
             133
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#keyToString(JsonElement)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#keyToString(JsonElement)",
           "lines": [
             250
           ]
@@ -5724,13 +5757,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#nextString()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#nextString()",
           "lines": [
             188
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#keyToString(JsonElement)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#keyToString(JsonElement)",
           "lines": [
             251
           ]
@@ -5795,7 +5828,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#nextDouble()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#nextDouble()",
           "lines": [
             218
           ]
@@ -5818,7 +5851,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#nextLong()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#nextLong()",
           "lines": [
             235
           ]
@@ -5833,7 +5866,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#nextInt()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#nextInt()",
           "lines": [
             249
           ]
@@ -5873,25 +5906,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#value(boolean)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(boolean)",
           "lines": [
             163
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#value(Boolean)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(Boolean)",
           "lines": [
             171
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#add(Boolean)",
+          "sig": "com.google.gson.JsonArray#add(Boolean)",
           "lines": [
             85
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#addProperty(String, Boolean)",
+          "sig": "com.google.gson.JsonObject#addProperty(String, Boolean)",
           "lines": [
             113
           ]
@@ -5902,37 +5935,37 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#value(float)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(float)",
           "lines": [
             179
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#value(double)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(double)",
           "lines": [
             187
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#value(long)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(long)",
           "lines": [
             192
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#value(Number)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(Number)",
           "lines": [
             208
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#add(Number)",
+          "sig": "com.google.gson.JsonArray#add(Number)",
           "lines": [
             105
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#addProperty(String, Number)",
+          "sig": "com.google.gson.JsonObject#addProperty(String, Number)",
           "lines": [
             102
           ]
@@ -5943,25 +5976,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#promoteNameToValue()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#promoteNameToValue()",
           "lines": [
             309
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#value(String)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(String)",
           "lines": [
             149
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#add(String)",
+          "sig": "com.google.gson.JsonArray#add(String)",
           "lines": [
             115
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#addProperty(String, String)",
+          "sig": "com.google.gson.JsonObject#addProperty(String, String)",
           "lines": [
             91
           ]
@@ -5972,13 +6005,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonPrimitive#add(Character)",
+          "sig": "com.google.gson.JsonArray#add(Character)",
           "lines": [
             95
           ]
         },
         {
-          "sig": "com.google.gson.JsonPrimitive#addProperty(String, Character)",
+          "sig": "com.google.gson.JsonObject#addProperty(String, Character)",
           "lines": [
             124
           ]
@@ -6001,7 +6034,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonSerializer#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#write(JsonWriter, T)",
           "lines": [
             87
           ]
@@ -6043,32 +6076,32 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonSyntaxException#assertFullConsumption(Object, JsonReader)",
+          "sig": "com.google.gson.Gson#assertFullConsumption(Object, JsonReader)",
           "lines": [
             1144
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             188,
             175
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.NumberTypeAdapter#read(JsonReader)",
           "lines": [
             74
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#newTypeHierarchyFactory(Class<T1>, TypeAdapter<T1>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newTypeHierarchyFactory(Class, TypeAdapter)",
           "lines": [
             1008
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#parseReader(Reader)",
+          "sig": "com.google.gson.JsonParser#parseReader(Reader)",
           "lines": [
             71
           ]
@@ -6079,25 +6112,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonSyntaxException#deserializeToDate(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DateTypeAdapter#deserializeToDate(JsonReader)",
           "lines": [
             89
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#deserializeToDate(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#deserializeToDate(JsonReader)",
           "lines": [
             163
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlDateTypeAdapter#read(JsonReader)",
           "lines": [
             66
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlTimeTypeAdapter#read(JsonReader)",
           "lines": [
             64
           ]
@@ -6108,7 +6141,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.JsonSyntaxException#fromJson(JsonReader, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonReader, TypeToken)",
           "lines": [
             1235,
             1237,
@@ -6116,19 +6149,19 @@
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#assertFullConsumption(Object, JsonReader)",
+          "sig": "com.google.gson.Gson#assertFullConsumption(Object, JsonReader)",
           "lines": [
             1147
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             396
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#parse(JsonReader)",
+          "sig": "com.google.gson.internal.Streams#parse(JsonReader)",
           "lines": [
             64,
             58,
@@ -6136,14 +6169,14 @@
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#parseReader(Reader)",
+          "sig": "com.google.gson.JsonParser#parseReader(Reader)",
           "lines": [
             75,
             79
           ]
         },
         {
-          "sig": "com.google.gson.JsonSyntaxException#hasNext()",
+          "sig": "com.google.gson.JsonStreamParser#hasNext()",
           "lines": [
             108
           ]
@@ -6166,104 +6199,104 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             46
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             43
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             117
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newFactory(ToNumberStrategy)",
+          "sig": "com.google.gson.internal.bind.NumberTypeAdapter#newFactory(ToNumberStrategy)",
           "lines": [
             51
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newFactory(ToNumberStrategy)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#newFactory(ToNumberStrategy)",
           "lines": [
             57
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             104
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             146
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             305
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newFactoryWithMatchRawType(TypeToken<?>, Object)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#newFactoryWithMatchRawType(TypeToken, Object)",
           "lines": [
             122
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.SingleTypeFactory#create(Gson, TypeToken)",
           "lines": [
             160,
             161
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newFactory(Class<TT>, TypeAdapter<TT>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newFactory(Class, TypeAdapter)",
           "lines": [
             949
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newFactory(Class<TT>, Class<TT>, TypeAdapter<? super TT>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newFactory(Class, Class, TypeAdapter)",
           "lines": [
             962
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newFactoryForMultipleTypes(Class<TT>, Class<? extends TT>, TypeAdapter<? super TT>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newFactoryForMultipleTypes(Class, Class, TypeAdapter)",
           "lines": [
             977
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newTypeHierarchyFactory(Class<T1>, TypeAdapter<T1>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newTypeHierarchyFactory(Class, TypeAdapter)",
           "lines": [
             996
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             84
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newDefaultImplementationConstructor(Type, Class<? super T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newDefaultImplementationConstructor(Type, Class)",
           "lines": [
             345
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken)",
           "lines": [
             110
           ]
@@ -6274,56 +6307,56 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             44
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             115
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             194
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             304,
             287
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#read(JsonReader)",
           "lines": [
             75
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#write(JsonWriter, T)",
           "lines": [
             87
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newFactoryWithMatchRawType(TypeToken<?>, Object)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#newFactoryWithMatchRawType(TypeToken, Object)",
           "lines": [
             122
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.SingleTypeFactory#create(Gson, TypeToken)",
           "lines": [
             160
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#get(TypeToken<T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#get(TypeToken)",
           "lines": [
             83
           ]
@@ -6344,7 +6377,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map<String, Type>)",
+          "sig": "com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map)",
           "lines": [
             241,
             248
@@ -6356,14 +6389,14 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map<String, Type>)",
+          "sig": "com.google.gson.reflect.TypeToken#isAssignableFrom(Type, ParameterizedType, Map)",
           "lines": [
             235
           ]
         }
       ]
     },
-    "buildUnexpectedTypeError(Type, Class...)": {
+    "buildUnexpectedTypeError(Type, Class[])": {
       "type": "PRIVATE",
       "caller": []
     },
@@ -6371,7 +6404,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "com.google.gson.reflect.TypeToken#typeEquals(ParameterizedType, ParameterizedType, Map<String, Type>)",
+          "sig": "com.google.gson.reflect.TypeToken#typeEquals(ParameterizedType, ParameterizedType, Map)",
           "lines": [
             261
           ]
@@ -6386,13 +6419,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter.SingleTypeFactory#create(Gson, TypeToken)",
           "lines": [
             160
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newFactory(TypeToken<TT>, TypeAdapter<TT>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newFactory(TypeToken, TypeAdapter)",
           "lines": [
             939
           ]
@@ -6403,7 +6436,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.reflect.TypeToken#getTypeAdapter(ConstructorConstructor, Gson, TypeToken<?>, JsonAdapter)",
+          "sig": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory#getTypeAdapter(ConstructorConstructor, Gson, TypeToken, JsonAdapter)",
           "lines": [
             76
           ]
@@ -6414,75 +6447,75 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.reflect.TypeToken#toJson(Object, Type, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, JsonWriter)",
           "lines": [
             833
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#fromJson(String, Type)",
+          "sig": "com.google.gson.Gson#fromJson(String, Type)",
           "lines": [
             1013
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#fromJson(Reader, Type)",
+          "sig": "com.google.gson.Gson#fromJson(Reader, Type)",
           "lines": [
             1106
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#fromJson(JsonReader, Type)",
+          "sig": "com.google.gson.Gson#fromJson(JsonReader, Type)",
           "lines": [
             1185
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#fromJson(JsonElement, Type)",
+          "sig": "com.google.gson.Gson#fromJson(JsonElement, Type)",
           "lines": [
             1299
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#registerTypeAdapter(Type, Object)",
+          "sig": "com.google.gson.GsonBuilder#registerTypeAdapter(Type, Object)",
           "lines": [
             613,
             618
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             52
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#create(Gson, TypeToken)",
           "lines": [
             124
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#getKeyAdapter(Gson, Type)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory#getKeyAdapter(Gson, Type)",
           "lines": [
             140
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#getBoundFields(Gson, TypeToken<?>, Class<?>, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#getBoundFields(Gson, TypeToken, Class, boolean, boolean)",
           "lines": [
             304,
             294
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper#write(JsonWriter, T)",
           "lines": [
             54
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#newDefaultImplementationConstructor(Type, Class<? super T>)",
+          "sig": "com.google.gson.internal.ConstructorConstructor#newDefaultImplementationConstructor(Type, Class)",
           "lines": [
             345
           ]
@@ -6493,32 +6526,32 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.reflect.TypeToken#getAdapter(Class<T>)",
+          "sig": "com.google.gson.Gson#getAdapter(Class)",
           "lines": [
             666
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#fromJson(String, Class<T>)",
+          "sig": "com.google.gson.Gson#fromJson(String, Class)",
           "lines": [
             981
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#fromJson(Reader, Class<T>)",
+          "sig": "com.google.gson.Gson#fromJson(Reader, Class)",
           "lines": [
             1074
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#fromJson(JsonElement, Class<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonElement, Class)",
           "lines": [
             1270
           ]
         }
       ]
     },
-    "getParameterized(Type, Type...)": {
+    "getParameterized(Type, Type[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -6540,13 +6573,13 @@
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#get(Class<T>)",
+          "sig": "com.google.gson.reflect.TypeToken#get(Class)",
           "lines": [
             320
           ]
         },
         {
-          "sig": "com.google.gson.reflect.TypeToken#getParameterized(Type, Type...)",
+          "sig": "com.google.gson.reflect.TypeToken#getParameterized(Type, Type[])",
           "lines": [
             375
           ]
@@ -6565,7 +6598,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.ReflectionAccessFilter#getFilterResult(List<ReflectionAccessFilter>, Class<?>)",
+          "sig": "com.google.gson.internal.ReflectionAccessFilterHelper#getFilterResult(List, Class)",
           "lines": [
             51
           ]
@@ -6579,20 +6612,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#newJsonReader(Reader)",
+          "sig": "com.google.gson.Gson#newJsonReader(Reader)",
           "lines": [
             919
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#fromJson(JsonReader, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonReader, TypeToken)",
           "lines": [
             1221,
             1244
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#parseReader(JsonReader)",
+          "sig": "com.google.gson.JsonParser#parseReader(JsonReader)",
           "lines": [
             99,
             107
@@ -6604,19 +6637,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#fromJson(JsonReader, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonReader, TypeToken)",
           "lines": [
             1220
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#nextDouble()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#nextDouble()",
           "lines": [
             219
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#parseReader(JsonReader)",
+          "sig": "com.google.gson.JsonParser#parseReader(JsonReader)",
           "lines": [
             98
           ]
@@ -6627,32 +6660,32 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#atomicLongArrayAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongArrayAdapter(TypeAdapter)",
           "lines": [
             498
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#read(JsonReader)",
           "lines": [
             69
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             79
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             168,
             170
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#tryBeginNesting(JsonReader, JsonToken)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#tryBeginNesting(JsonReader, JsonToken)",
           "lines": [
             80
           ]
@@ -6663,32 +6696,32 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#atomicLongArrayAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongArrayAdapter(TypeAdapter)",
           "lines": [
             503
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#read(JsonReader)",
           "lines": [
             74
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             84
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             177,
             179
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)",
           "lines": [
             154
           ]
@@ -6699,19 +6732,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             181
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#tryBeginNesting(JsonReader, JsonToken)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#tryBeginNesting(JsonReader, JsonToken)",
           "lines": [
             83
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             385
           ]
@@ -6722,19 +6755,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             191
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)",
           "lines": [
             156
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             400
           ]
@@ -6745,38 +6778,38 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#atomicLongArrayAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongArrayAdapter(TypeAdapter)",
           "lines": [
             499
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#read(JsonReader)",
           "lines": [
             70
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             80
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             182,
             169
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)",
           "lines": [
             121
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             386
           ]
@@ -6787,116 +6820,116 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#doubleAdapter(boolean)",
+          "sig": "com.google.gson.Gson#doubleAdapter(boolean)",
           "lines": [
             400
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#floatAdapter(boolean)",
+          "sig": "com.google.gson.Gson#floatAdapter(boolean)",
           "lines": [
             424
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#longAdapter(LongSerializationPolicy)",
+          "sig": "com.google.gson.Gson#longAdapter(LongSerializationPolicy)",
           "lines": [
             459
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#fromJson(JsonReader, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonReader, TypeToken)",
           "lines": [
             1223
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#assertFullConsumption(Object, JsonReader)",
+          "sig": "com.google.gson.Gson#assertFullConsumption(Object, JsonReader)",
           "lines": [
             1143
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#read(JsonReader)",
           "lines": [
             63
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             73
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DateTypeAdapter#read(JsonReader)",
           "lines": [
             70
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#read(JsonReader)",
           "lines": [
             142
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             159
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.NumberTypeAdapter#read(JsonReader)",
           "lines": [
             65
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)",
           "lines": [
             128,
             111
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             377
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters.EnumTypeAdapter#read(JsonReader)",
           "lines": [
             905
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlDateTypeAdapter#read(JsonReader)",
           "lines": [
             54
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlTimeTypeAdapter#read(JsonReader)",
           "lines": [
             53
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#parse(JsonReader)",
+          "sig": "com.google.gson.internal.Streams#parse(JsonReader)",
           "lines": [
             46
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#parseReader(Reader)",
+          "sig": "com.google.gson.JsonParser#parseReader(Reader)",
           "lines": [
             70
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#hasNext()",
+          "sig": "com.google.gson.JsonStreamParser#hasNext()",
           "lines": [
             106
           ]
@@ -6968,7 +7001,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#nullSafe()",
+          "sig": "com.google.gson.TypeAdapter#nullSafe()",
           "lines": [
             199
           ]
@@ -7114,13 +7147,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#read(JsonReader)",
           "lines": [
             125
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             387
           ]
@@ -7131,37 +7164,37 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#deserializeToDate(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DateTypeAdapter#deserializeToDate(JsonReader)",
           "lines": [
             78
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#deserializeToDate(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#deserializeToDate(JsonReader)",
           "lines": [
             151
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#readTerminal(JsonReader, JsonToken)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#readTerminal(JsonReader, JsonToken)",
           "lines": [
             94
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters.EnumTypeAdapter#read(JsonReader)",
           "lines": [
             909
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlDateTypeAdapter#read(JsonReader)",
           "lines": [
             58
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlTimeTypeAdapter#read(JsonReader)",
           "lines": [
             57
           ]
@@ -7172,7 +7205,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#readTerminal(JsonReader, JsonToken)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#readTerminal(JsonReader, JsonToken)",
           "lines": [
             98
           ]
@@ -7183,91 +7216,91 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#doubleAdapter(boolean)",
+          "sig": "com.google.gson.Gson#doubleAdapter(boolean)",
           "lines": [
             401
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#floatAdapter(boolean)",
+          "sig": "com.google.gson.Gson#floatAdapter(boolean)",
           "lines": [
             425
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#longAdapter(LongSerializationPolicy)",
+          "sig": "com.google.gson.Gson#longAdapter(LongSerializationPolicy)",
           "lines": [
             460
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#read(JsonReader)",
           "lines": [
             64
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             74
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DateTypeAdapter#read(JsonReader)",
           "lines": [
             71
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#read(JsonReader)",
           "lines": [
             143
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             161
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.NumberTypeAdapter#read(JsonReader)",
           "lines": [
             68
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#readTerminal(JsonReader, JsonToken)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#readTerminal(JsonReader, JsonToken)",
           "lines": [
             100
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             378
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters.EnumTypeAdapter#read(JsonReader)",
           "lines": [
             906
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlDateTypeAdapter#read(JsonReader)",
           "lines": [
             55
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlTimeTypeAdapter#read(JsonReader)",
           "lines": [
             54
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#nullSafe()",
+          "sig": "com.google.gson.TypeAdapter#nullSafe()",
           "lines": [
             200
           ]
@@ -7278,13 +7311,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#doubleAdapter(boolean)",
+          "sig": "com.google.gson.Gson#doubleAdapter(boolean)",
           "lines": [
             404
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#floatAdapter(boolean)",
+          "sig": "com.google.gson.Gson#floatAdapter(boolean)",
           "lines": [
             428
           ]
@@ -7295,7 +7328,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#longAdapter(LongSerializationPolicy)",
+          "sig": "com.google.gson.Gson#longAdapter(LongSerializationPolicy)",
           "lines": [
             463
           ]
@@ -7412,13 +7445,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             390
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken)",
           "lines": [
             126
           ]
@@ -7737,13 +7770,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.NumberTypeAdapter#read(JsonReader)",
           "lines": [
             74
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             203
           ]
@@ -7760,31 +7793,31 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#deserializeToDate(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DateTypeAdapter#deserializeToDate(JsonReader)",
           "lines": [
             89
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#deserializeToDate(JsonReader)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#deserializeToDate(JsonReader)",
           "lines": [
             163
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#newTypeHierarchyFactory(Class<T1>, TypeAdapter<T1>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newTypeHierarchyFactory(Class, TypeAdapter)",
           "lines": [
             1009
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlDateTypeAdapter#read(JsonReader)",
           "lines": [
             66
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlTimeTypeAdapter#read(JsonReader)",
           "lines": [
             64
           ]
@@ -7872,19 +7905,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonReader#newJsonReader(Reader)",
+          "sig": "com.google.gson.Gson#newJsonReader(Reader)",
           "lines": [
             918
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#parseReader(Reader)",
+          "sig": "com.google.gson.JsonParser#parseReader(Reader)",
           "lines": [
             68
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonReader#fromJson(Reader)",
+          "sig": "com.google.gson.TypeAdapter#fromJson(Reader)",
           "lines": [
             267
           ]
@@ -7899,7 +7932,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#newJsonWriter(Writer)",
+          "sig": "com.google.gson.Gson#newJsonWriter(Writer)",
           "lines": [
             901
           ]
@@ -7910,27 +7943,27 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(Object, Type, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, JsonWriter)",
           "lines": [
             835,
             847
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(JsonElement, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, JsonWriter)",
           "lines": [
             950,
             938
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#newJsonWriter(Writer)",
+          "sig": "com.google.gson.Gson#newJsonWriter(Writer)",
           "lines": [
             904
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#toString()",
+          "sig": "com.google.gson.JsonElement#toString()",
           "lines": [
             321
           ]
@@ -7941,31 +7974,31 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(Object, Type, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, JsonWriter)",
           "lines": [
             834
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(JsonElement, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, JsonWriter)",
           "lines": [
             937
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#value(float)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(float)",
           "lines": [
             176
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#value(double)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(double)",
           "lines": [
             184
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#value(Number)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#value(Number)",
           "lines": [
             201
           ]
@@ -7976,21 +8009,21 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(Object, Type, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, JsonWriter)",
           "lines": [
             848,
             837
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(JsonElement, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, JsonWriter)",
           "lines": [
             951,
             940
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#newJsonWriter(Writer)",
+          "sig": "com.google.gson.Gson#newJsonWriter(Writer)",
           "lines": [
             903
           ]
@@ -8001,13 +8034,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(Object, Type, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, JsonWriter)",
           "lines": [
             836
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(JsonElement, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, JsonWriter)",
           "lines": [
             939
           ]
@@ -8018,21 +8051,21 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(Object, Type, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, JsonWriter)",
           "lines": [
             849,
             839
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(JsonElement, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, JsonWriter)",
           "lines": [
             952,
             942
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#newJsonWriter(Writer)",
+          "sig": "com.google.gson.Gson#newJsonWriter(Writer)",
           "lines": [
             905
           ]
@@ -8043,19 +8076,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(Object, Type, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, JsonWriter)",
           "lines": [
             838
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(JsonElement, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(JsonElement, JsonWriter)",
           "lines": [
             941
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#put(JsonElement)",
+          "sig": "com.google.gson.internal.bind.JsonTreeWriter#put(JsonElement)",
           "lines": [
             77
           ]
@@ -8066,25 +8099,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#atomicLongArrayAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongArrayAdapter(TypeAdapter)",
           "lines": [
             490
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Object)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#write(JsonWriter, Object)",
           "lines": [
             99
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Collection<E>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#write(JsonWriter, Collection)",
           "lines": [
             94
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             224,
             226
@@ -8096,25 +8129,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#atomicLongArrayAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongArrayAdapter(TypeAdapter)",
           "lines": [
             494
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Object)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#write(JsonWriter, Object)",
           "lines": [
             105
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Collection<E>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#write(JsonWriter, Collection)",
           "lines": [
             98
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             229,
             231
@@ -8126,20 +8159,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             233,
             203
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Object)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#write(JsonWriter, Object)",
           "lines": [
             177
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#write(JsonWriter, T)",
           "lines": [
             364
           ]
@@ -8150,20 +8183,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             208,
             239
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Object)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#write(JsonWriter, Object)",
           "lines": [
             178
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#write(JsonWriter, T)",
           "lines": [
             372
           ]
@@ -8265,14 +8298,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             236,
             205
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             192
           ]
@@ -8354,37 +8387,37 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#longAdapter(LongSerializationPolicy)",
+          "sig": "com.google.gson.Gson#longAdapter(LongSerializationPolicy)",
           "lines": [
             470
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Date)",
+          "sig": "com.google.gson.internal.bind.DateTypeAdapter#write(JsonWriter, Date)",
           "lines": [
             104
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Date)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#write(JsonWriter, Date)",
           "lines": [
             137
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters.EnumTypeAdapter#write(JsonWriter, T)",
           "lines": [
             915
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, java.sql.Date)",
+          "sig": "com.google.gson.internal.sql.SqlDateTypeAdapter#write(JsonWriter, Date)",
           "lines": [
             80
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Time)",
+          "sig": "com.google.gson.internal.sql.SqlTimeTypeAdapter#write(JsonWriter, Time)",
           "lines": [
             77
           ]
@@ -8407,7 +8440,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#doubleAdapter(boolean)",
+          "sig": "com.google.gson.Gson#doubleAdapter(boolean)",
           "lines": [
             413
           ]
@@ -8422,13 +8455,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#floatAdapter(boolean)",
+          "sig": "com.google.gson.Gson#floatAdapter(boolean)",
           "lines": [
             440
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Number)",
+          "sig": "com.google.gson.internal.bind.NumberTypeAdapter#write(JsonWriter, Number)",
           "lines": [
             79
           ]
@@ -8443,85 +8476,85 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#doubleAdapter(boolean)",
+          "sig": "com.google.gson.Gson#doubleAdapter(boolean)",
           "lines": [
             408
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#floatAdapter(boolean)",
+          "sig": "com.google.gson.Gson#floatAdapter(boolean)",
           "lines": [
             432
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#longAdapter(LongSerializationPolicy)",
+          "sig": "com.google.gson.Gson#longAdapter(LongSerializationPolicy)",
           "lines": [
             467
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Object)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#write(JsonWriter, Object)",
           "lines": [
             95
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Collection<E>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#write(JsonWriter, Collection)",
           "lines": [
             90
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Date)",
+          "sig": "com.google.gson.internal.bind.DateTypeAdapter#write(JsonWriter, Date)",
           "lines": [
             95
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Date)",
+          "sig": "com.google.gson.internal.bind.DefaultDateTypeAdapter#write(JsonWriter, Date)",
           "lines": [
             128
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             198
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Object)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#write(JsonWriter, Object)",
           "lines": [
             170
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory.Adapter#write(JsonWriter, T)",
           "lines": [
             360
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#write(JsonWriter, T)",
           "lines": [
             84
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken)",
           "lines": [
             134
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, java.sql.Date)",
+          "sig": "com.google.gson.internal.sql.SqlDateTypeAdapter#write(JsonWriter, Date)",
           "lines": [
             73
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#write(JsonWriter, Time)",
+          "sig": "com.google.gson.internal.sql.SqlTimeTypeAdapter#write(JsonWriter, Time)",
           "lines": [
             70
           ]
@@ -8551,7 +8584,7 @@
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#nullSafe()",
+          "sig": "com.google.gson.TypeAdapter#nullSafe()",
           "lines": [
             193
           ]
@@ -8694,19 +8727,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.JsonWriter#newJsonWriter(Writer)",
+          "sig": "com.google.gson.Gson#newJsonWriter(Writer)",
           "lines": [
             899
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#toString()",
+          "sig": "com.google.gson.JsonElement#toString()",
           "lines": [
             320
           ]
         },
         {
-          "sig": "com.google.gson.stream.JsonWriter#toJson(Writer, T)",
+          "sig": "com.google.gson.TypeAdapter#toJson(Writer, T)",
           "lines": [
             145
           ]
@@ -8719,25 +8752,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.stream.MalformedJsonException#peek()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#peek()",
           "lines": [
             147
           ]
         },
         {
-          "sig": "com.google.gson.stream.MalformedJsonException#nextDouble()",
+          "sig": "com.google.gson.internal.bind.JsonTreeReader#nextDouble()",
           "lines": [
             220
           ]
         },
         {
-          "sig": "com.google.gson.stream.MalformedJsonException#nextDouble()",
+          "sig": "com.google.gson.stream.JsonReader#nextDouble()",
           "lines": [
             923
           ]
         },
         {
-          "sig": "com.google.gson.stream.MalformedJsonException#syntaxError(String)",
+          "sig": "com.google.gson.stream.JsonReader#syntaxError(String)",
           "lines": [
             1658
           ]
@@ -8759,13 +8792,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.ToNumberStrategy#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.NumberTypeAdapter#read(JsonReader)",
           "lines": [
             72
           ]
         },
         {
-          "sig": "com.google.gson.ToNumberStrategy#readTerminal(JsonReader, JsonToken)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#readTerminal(JsonReader, JsonToken)",
           "lines": [
             96
           ]
@@ -8778,43 +8811,43 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.TypeAdapter#atomicLongAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongAdapter(TypeAdapter)",
           "lines": [
             478
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#atomicLongArrayAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongArrayAdapter(TypeAdapter)",
           "lines": [
             492
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#toJson(Object, Type, JsonWriter)",
+          "sig": "com.google.gson.Gson#toJson(Object, Type, JsonWriter)",
           "lines": [
             841
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonWriter, T)",
+          "sig": "com.google.gson.Gson.FutureTypeAdapter#write(JsonWriter, T)",
           "lines": [
             1370
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonWriter, Object)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#write(JsonWriter, Object)",
           "lines": [
             103
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonWriter, Collection<E>)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#write(JsonWriter, Collection)",
           "lines": [
             96
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             228,
             237,
@@ -8822,49 +8855,49 @@
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonWriter, Object)",
+          "sig": "com.google.gson.internal.bind.ObjectTypeAdapter#write(JsonWriter, Object)",
           "lines": [
             182
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             195
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#write(JsonWriter, T)",
           "lines": [
             80
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonWriter, T)",
+          "sig": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper#write(JsonWriter, T)",
           "lines": [
             69
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#newTypeHierarchyFactory(Class<T1>, TypeAdapter<T1>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newTypeHierarchyFactory(Class, TypeAdapter)",
           "lines": [
             1002
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken)",
           "lines": [
             137
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonWriter, Timestamp)",
+          "sig": "com.google.gson.internal.sql.SqlTimestampTypeAdapter#write(JsonWriter, Timestamp)",
           "lines": [
             40
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonElement, JsonWriter)",
+          "sig": "com.google.gson.internal.Streams#write(JsonElement, JsonWriter)",
           "lines": [
             72
           ]
@@ -8902,19 +8935,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.TypeAdapter#atomicLongAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongAdapter(TypeAdapter)",
           "lines": [
             476
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#atomicLongArrayAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongArrayAdapter(TypeAdapter)",
           "lines": [
             488
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#getTypeAdapter(ConstructorConstructor, Gson, TypeToken<?>, JsonAdapter)",
+          "sig": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory#getTypeAdapter(ConstructorConstructor, Gson, TypeToken, JsonAdapter)",
           "lines": [
             82
           ]
@@ -8925,7 +8958,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.TypeAdapter#write(JsonWriter, Map<K, V>)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#write(JsonWriter, Map)",
           "lines": [
             217
           ]
@@ -8936,43 +8969,43 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.TypeAdapter#atomicLongAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongAdapter(TypeAdapter)",
           "lines": [
             481
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#atomicLongArrayAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongArrayAdapter(TypeAdapter)",
           "lines": [
             500
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#fromJson(JsonReader, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#fromJson(JsonReader, TypeToken)",
           "lines": [
             1226
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#read(JsonReader)",
+          "sig": "com.google.gson.Gson.FutureTypeAdapter#read(JsonReader)",
           "lines": [
             1366
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.ArrayTypeAdapter#read(JsonReader)",
           "lines": [
             71
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.CollectionTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             81
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.MapTypeAdapterFactory.Adapter#read(JsonReader)",
           "lines": [
             184,
             185,
@@ -8981,44 +9014,44 @@
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#createBoundField(Gson, Field, Method, String, TypeToken<?>, boolean, boolean, boolean)",
+          "sig": "com.google.gson.internal.bind.ReflectiveTypeAdapterFactory#createBoundField(Gson, Field, Method, String, TypeToken, boolean, boolean, boolean)",
           "lines": [
             211,
             200
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.TreeTypeAdapter#read(JsonReader)",
           "lines": [
             69
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#read(JsonReader)",
+          "sig": "com.google.gson.internal.bind.TypeAdapterRuntimeTypeWrapper#read(JsonReader)",
           "lines": [
             39
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#newTypeHierarchyFactory(Class<T1>, TypeAdapter<T1>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newTypeHierarchyFactory(Class, TypeAdapter)",
           "lines": [
             1006
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken)",
           "lines": [
             129
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#read(JsonReader)",
+          "sig": "com.google.gson.internal.sql.SqlTimestampTypeAdapter#read(JsonReader)",
           "lines": [
             34
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#parse(JsonReader)",
+          "sig": "com.google.gson.internal.Streams#parse(JsonReader)",
           "lines": [
             48
           ]
@@ -9060,43 +9093,43 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "com.google.gson.TypeAdapter#doubleAdapter(boolean)",
+          "sig": "com.google.gson.Gson#doubleAdapter(boolean)",
           "lines": [
             398
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#floatAdapter(boolean)",
+          "sig": "com.google.gson.Gson#floatAdapter(boolean)",
           "lines": [
             422
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#longAdapter(LongSerializationPolicy)",
+          "sig": "com.google.gson.Gson#longAdapter(LongSerializationPolicy)",
           "lines": [
             457
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#atomicLongAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongAdapter(TypeAdapter)",
           "lines": [
             476
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#atomicLongArrayAdapter(TypeAdapter<Number>)",
+          "sig": "com.google.gson.Gson#atomicLongArrayAdapter(TypeAdapter)",
           "lines": [
             488
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#newTypeHierarchyFactory(Class<T1>, TypeAdapter<T1>)",
+          "sig": "com.google.gson.internal.bind.TypeAdapters#newTypeHierarchyFactory(Class, TypeAdapter)",
           "lines": [
             1000
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapter#create(Gson, TypeToken<T>)",
+          "sig": "com.google.gson.internal.Excluder#create(Gson, TypeToken)",
           "lines": [
             120
           ]
@@ -9115,19 +9148,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "com.google.gson.TypeAdapterFactory#getAdapter(TypeToken<T>)",
+          "sig": "com.google.gson.Gson#getAdapter(TypeToken)",
           "lines": [
             555
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapterFactory#getDelegateAdapter(TypeAdapterFactory, TypeToken<T>)",
+          "sig": "com.google.gson.Gson#getDelegateAdapter(TypeAdapterFactory, TypeToken)",
           "lines": [
             651
           ]
         },
         {
-          "sig": "com.google.gson.TypeAdapterFactory#getTypeAdapter(ConstructorConstructor, Gson, TypeToken<?>, JsonAdapter)",
+          "sig": "com.google.gson.internal.bind.JsonAdapterAnnotationTypeAdapterFactory#getTypeAdapter(ConstructorConstructor, Gson, TypeToken, JsonAdapter)",
           "lines": [
             60
           ]

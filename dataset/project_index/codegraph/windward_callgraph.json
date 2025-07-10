@@ -64,7 +64,7 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "resources(String, String...)": {
+    "resources(String, String[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -80,31 +80,31 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#get(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#get(String, EnhancedFunction)",
           "lines": [
             93
           ]
         },
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#put(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#put(String, EnhancedFunction)",
           "lines": [
             109
           ]
         },
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#post(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#post(String, EnhancedFunction)",
           "lines": [
             125
           ]
         },
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#delete(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#delete(String, EnhancedFunction)",
           "lines": [
             141
           ]
         },
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#sse(String, EnhancedFunction<SseWindwardContext, SseEjector>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#sse(String, EnhancedFunction)",
           "lines": [
             147
           ]
@@ -115,7 +115,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#findRouter(String, String)",
+          "sig": "org.flmelody.core.Windward#findRouter(String, String)",
           "lines": [
             295,
             301
@@ -127,31 +127,31 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#ws(String, Consumer<WebSocketWindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#ws(String, Consumer)",
           "lines": [
             152
           ]
         },
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#resources(String, String...)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#resources(String, String[])",
           "lines": [
             163
           ]
         },
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#http(HttpMethod, String, Supplier<R>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#http(HttpMethod, String, Supplier)",
           "lines": [
             178
           ]
         },
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#http(HttpMethod, String, Consumer<SimpleWindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#http(HttpMethod, String, Consumer)",
           "lines": [
             185
           ]
         },
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#http(HttpMethod, String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#http(HttpMethod, String, EnhancedFunction)",
           "lines": [
             192
           ]
@@ -162,7 +162,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             266
           ]
@@ -187,11 +187,11 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "bindJson(Class, Class...)": {
+    "bindJson(Class, Class[])": {
       "type": "PUBLIC",
       "caller": []
     },
-    "bindJson(Type, Class...)": {
+    "bindJson(Type, Class[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -214,7 +214,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#doOnResponse(R)",
+          "sig": "org.flmelody.core.context.support.ViewWindwardContext#doOnResponse(R)",
           "lines": [
             39
           ]
@@ -247,7 +247,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.AbstractWindwardContext#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             55
           ]
@@ -266,7 +266,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.AbstractWindwardContext#doOnResponse(R)",
+          "sig": "org.flmelody.core.context.support.JsonWindwardContext#doOnResponse(R)",
           "lines": [
             47
           ]
@@ -325,13 +325,13 @@
           ]
         },
         {
-          "sig": "org.flmelody.core.context.AbstractWindwardContext#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             67
           ]
         },
         {
-          "sig": "org.flmelody.core.context.AbstractWindwardContext#write(int, String, T)",
+          "sig": "org.flmelody.core.ws.WebSocketWindwardContext#write(int, String, T)",
           "lines": [
             76
           ]
@@ -390,7 +390,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.EnhancedWindwardContext#execute(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo, WindwardContext)",
           "lines": [
             282
           ]
@@ -401,7 +401,7 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.EnhancedWindwardContext#execute(EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.context.EnhancedWindwardContext#execute(EnhancedFunction)",
           "lines": [
             35
           ]
@@ -412,7 +412,7 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.EnhancedWindwardContext#execute(EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.context.EnhancedWindwardContext#execute(EnhancedFunction)",
           "lines": [
             37
           ]
@@ -433,11 +433,11 @@
       "type": "NONE",
       "caller": []
     },
-    "bindJson(Class, Class...)": {
+    "bindJson(Class, Class[])": {
       "type": "NONE",
       "caller": []
     },
-    "bindJson(Type, Class...)": {
+    "bindJson(Type, Class[])": {
       "type": "NONE",
       "caller": []
     },
@@ -459,7 +459,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.ResourceWindwardContext#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             59
           ]
@@ -470,7 +470,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.ResourceWindwardContext#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             238
           ]
@@ -483,7 +483,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.SimpleWindwardContext#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             217,
             223
@@ -556,7 +556,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.WindwardContext#filter(WindwardContext)",
+          "sig": "org.flmelody.core.LoggingFilter#filter(WindwardContext)",
           "lines": [
             30
           ]
@@ -567,7 +567,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.WindwardContext#handle(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handle(FunctionMetaInfo, WindwardContext)",
           "lines": [
             262
           ]
@@ -578,7 +578,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.WindwardContext#handle(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handle(FunctionMetaInfo, WindwardContext)",
           "lines": [
             251
           ]
@@ -589,7 +589,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.WindwardContext#channelRead0(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#channelRead0(ChannelHandlerContext, Object)",
           "lines": [
             83
           ]
@@ -610,7 +610,7 @@
           ]
         },
         {
-          "sig": "org.flmelody.core.context.WindwardContext#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             50
           ]
@@ -621,7 +621,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.WindwardContext#execute(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo, WindwardContext)",
           "lines": [
             288
           ]
@@ -643,7 +643,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.context.WindwardContext#execute(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo, WindwardContext)",
           "lines": [
             290
           ]
@@ -660,19 +660,19 @@
           ]
         },
         {
-          "sig": "org.flmelody.core.context.WindwardContext#handle(WindwardContext)",
+          "sig": "org.flmelody.core.DefaultNotFoundHandler#handle(WindwardContext)",
           "lines": [
             28
           ]
         },
         {
-          "sig": "org.flmelody.core.context.WindwardContext#handle(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handle(FunctionMetaInfo, WindwardContext)",
           "lines": [
             259
           ]
         },
         {
-          "sig": "org.flmelody.core.context.WindwardContext#execute(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo, WindwardContext)",
           "lines": [
             298
           ]
@@ -703,11 +703,11 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "bindJson(String, Class, Class...)": {
+    "bindJson(String, Class, Class[])": {
       "type": "PUBLIC",
       "caller": []
     },
-    "bindJson(String, Type, Class...)": {
+    "bindJson(String, Type, Class[])": {
       "type": "PUBLIC",
       "caller": []
     }
@@ -725,7 +725,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.DefaultRouterGroup#group(String)",
+          "sig": "org.flmelody.core.Windward#group(String)",
           "lines": [
             174
           ]
@@ -736,7 +736,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.DefaultRouterGroup#resourceGroup(String)",
+          "sig": "org.flmelody.core.Windward#resourceGroup(String)",
           "lines": [
             188
           ]
@@ -749,7 +749,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.HandlerNotFoundException#execute(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo, WindwardContext)",
           "lines": [
             272,
             293
@@ -763,31 +763,31 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.JsonDeserializeException#toObject(String, Class<O>)",
+          "sig": "org.flmelody.core.plugin.json.GsonPlugin#toObject(String, Class)",
           "lines": [
             62
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.JsonDeserializeException#toObject(String, Class<O>)",
+          "sig": "org.flmelody.core.plugin.json.JacksonPlugin#toObject(String, Class)",
           "lines": [
             64
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.JsonDeserializeException#toObject(I, Type)",
+          "sig": "org.flmelody.core.plugin.json.JacksonPlugin#toObject(I, Type)",
           "lines": [
             74
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.JsonDeserializeException#toObject(String, Class<O>)",
+          "sig": "org.flmelody.util.GsonUtil#toObject(String, Class)",
           "lines": [
             62
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.JsonDeserializeException#toObject(String, Class<O>)",
+          "sig": "org.flmelody.util.JacksonUtil#toObject(String, Class)",
           "lines": [
             64
           ]
@@ -814,25 +814,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.JsonSerializeException#toJson(I)",
+          "sig": "org.flmelody.core.plugin.json.GsonPlugin#toJson(I)",
           "lines": [
             52
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.JsonSerializeException#toJson(I)",
+          "sig": "org.flmelody.core.plugin.json.JacksonPlugin#toJson(I)",
           "lines": [
             54
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.JsonSerializeException#toJson(I)",
+          "sig": "org.flmelody.util.GsonUtil#toJson(I)",
           "lines": [
             46
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.JsonSerializeException#toJson(I)",
+          "sig": "org.flmelody.util.JacksonUtil#toJson(I)",
           "lines": [
             48
           ]
@@ -854,7 +854,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.PluginMissException#plugin(Class<T>)",
+          "sig": "org.flmelody.core.Windward#plugin(Class)",
           "lines": [
             336
           ]
@@ -867,20 +867,20 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.ResourceNotFoundException#doOnResponse(R)",
+          "sig": "org.flmelody.core.context.support.ViewWindwardContext#doOnResponse(R)",
           "lines": [
             37
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.ResourceNotFoundException#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             80,
             84
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.ResourceNotFoundException#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             102
           ]
@@ -893,7 +893,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.RouterMappingException#checkPlaceholder(String)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#checkPlaceholder(String)",
           "lines": [
             297
           ]
@@ -906,7 +906,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.ServerException#run()",
+          "sig": "org.flmelody.core.netty.NettyHttpServer#run()",
           "lines": [
             79
           ]
@@ -919,25 +919,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.ValidationException#doOnRequest()",
+          "sig": "org.flmelody.core.context.support.JsonWindwardContext#doOnRequest()",
           "lines": [
             42
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.ValidationException#bindJson(String, Class<I>, Class<?>...)",
+          "sig": "org.flmelody.core.DefaultRequestReader#bindJson(String, Class, Class[])",
           "lines": [
             47
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.ValidationException#bindJson(String, Type, Class<?>...)",
+          "sig": "org.flmelody.core.DefaultRequestReader#bindJson(String, Type, Class[])",
           "lines": [
             55
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.ValidationException#validate(T, Class<?>...)",
+          "sig": "org.flmelody.util.ValidationUtil#validate(T, Class[])",
           "lines": [
             80
           ]
@@ -950,19 +950,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.WindwardException#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             65
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.WindwardException#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             90
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.WindwardException#findLambdaFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findLambdaFunction(F)",
           "lines": [
             93
           ]
@@ -973,19 +973,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.exception.WindwardException#resources(String, String...)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#resources(String, String[])",
           "lines": [
             159
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.WindwardException#redirect(int, String)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#redirect(int, String)",
           "lines": [
             80
           ]
         },
         {
-          "sig": "org.flmelody.core.exception.WindwardException#html(String, M)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#html(String, M)",
           "lines": [
             115,
             87,
@@ -1000,7 +1000,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.ExceptionHandler#handleException(WindwardContext, Exception)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handleException(WindwardContext, Exception)",
           "lines": [
             311
           ]
@@ -1011,7 +1011,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.ExceptionHandler#handleException(WindwardContext, Exception)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handleException(WindwardContext, Exception)",
           "lines": [
             310
           ]
@@ -1024,7 +1024,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Filter#handle(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handle(FunctionMetaInfo, WindwardContext)",
           "lines": [
             256
           ]
@@ -1037,7 +1037,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.FunctionMetaInfo#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             241
           ]
@@ -1048,7 +1048,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.FunctionMetaInfo#execute(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo, WindwardContext)",
           "lines": [
             274
           ]
@@ -1059,7 +1059,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.FunctionMetaInfo#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             221
           ]
@@ -1070,7 +1070,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.FunctionMetaInfo#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             227
           ]
@@ -1085,13 +1085,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.FunctionMetaInfo#matchRouter(String, String)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#matchRouter(String, String)",
           "lines": [
             243
           ]
         },
         {
-          "sig": "org.flmelody.core.FunctionMetaInfo#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             224,
             231,
@@ -1105,7 +1105,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.FunctionMetaInfo#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             276
           ]
@@ -1116,7 +1116,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.FunctionMetaInfo#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             267
           ]
@@ -1132,7 +1132,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.HttpServer#run()",
+          "sig": "org.flmelody.core.Windward#run()",
           "lines": [
             163
           ]
@@ -1145,86 +1145,86 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.HttpStatus#redirect(String)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#redirect(String)",
           "lines": [
             68
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#redirect(int, String)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#redirect(int, String)",
           "lines": [
             74
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#html(String, M)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#html(String, M)",
           "lines": [
             107
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#writeJson(T)",
+          "sig": "org.flmelody.core.context.AbstractWindwardContext#writeJson(T)",
           "lines": [
             90
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#writeString(String)",
+          "sig": "org.flmelody.core.context.AbstractWindwardContext#writeString(String)",
           "lines": [
             102
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#write(String, T)",
+          "sig": "org.flmelody.core.context.AbstractWindwardContext#write(String, T)",
           "lines": [
             114
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#write(String, T)",
+          "sig": "org.flmelody.core.context.WindwardContext#write(String, T)",
           "lines": [
             93
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#writeJson(T)",
+          "sig": "org.flmelody.core.context.WindwardContext#writeJson(T)",
           "lines": [
             113
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#writeString(String)",
+          "sig": "org.flmelody.core.context.WindwardContext#writeString(String)",
           "lines": [
             131
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#handle(WindwardContext)",
+          "sig": "org.flmelody.core.DefaultNotFoundHandler#handle(WindwardContext)",
           "lines": [
             28
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#handle(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handle(FunctionMetaInfo, WindwardContext)",
           "lines": [
             260
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#execute(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo, WindwardContext)",
           "lines": [
             299
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             51,
             68
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#writeBinaryData(T)",
+          "sig": "org.flmelody.core.ws.WebSocketWindwardContext#writeBinaryData(T)",
           "lines": [
             88
           ]
@@ -1235,19 +1235,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.HttpStatus#handle(WindwardContext)",
+          "sig": "org.flmelody.core.DefaultNotFoundHandler#handle(WindwardContext)",
           "lines": [
             28
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#handle(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handle(FunctionMetaInfo, WindwardContext)",
           "lines": [
             261
           ]
         },
         {
-          "sig": "org.flmelody.core.HttpStatus#execute(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo, WindwardContext)",
           "lines": [
             300
           ]
@@ -1270,13 +1270,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.MediaType#doOnRequest()",
+          "sig": "org.flmelody.core.context.support.JsonWindwardContext#doOnRequest()",
           "lines": [
             37
           ]
         },
         {
-          "sig": "org.flmelody.core.MediaType#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             68
           ]
@@ -1322,7 +1322,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             205
           ]
@@ -1367,7 +1367,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handle(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handle(FunctionMetaInfo, WindwardContext)",
           "lines": [
             266
           ]
@@ -1378,7 +1378,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#execute(FunctionMetaInfo, WindwardContext)",
           "lines": [
             296
           ]
@@ -1422,7 +1422,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.netty.NettyHttpServer#setup(int, String, String, String, Filter...)",
+          "sig": "org.flmelody.core.Windward#setup(int, String, String, String, Filter[])",
           "lines": [
             127
           ]
@@ -1471,7 +1471,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.netty.NettyResponseWriter#write(int, String, Map<String, Object>, T)",
+          "sig": "org.flmelody.core.netty.NettyResponseWriter#write(int, String, Map, T)",
           "lines": [
             63
           ]
@@ -1492,7 +1492,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.netty.NettyResponseWriter#write(int, String, Map<String, Object>, T, boolean)",
+          "sig": "org.flmelody.core.netty.NettyResponseWriter#write(int, String, Map, T, boolean)",
           "lines": [
             104
           ]
@@ -1503,7 +1503,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.netty.NettyResponseWriter#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             215
           ]
@@ -1565,7 +1565,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.json.JsonPlugin#write(int, String, Map<String, Object>, T, boolean)",
+          "sig": "org.flmelody.core.netty.NettyResponseWriter#write(int, String, Map, T, boolean)",
           "lines": [
             85
           ]
@@ -1576,14 +1576,14 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.json.JsonPlugin#readJson(String, Class<I>)",
+          "sig": "org.flmelody.core.DefaultRequestReader#readJson(String, Class)",
           "lines": [
             33,
             31
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.json.JsonPlugin#validate(JsonPlugin, String, Class<T>, Class<?>...)",
+          "sig": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Class, Class[])",
           "lines": [
             51
           ]
@@ -1594,20 +1594,20 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.json.JsonPlugin#html(String, M)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#html(String, M)",
           "lines": [
             105
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.json.JsonPlugin#readJson(String, Type)",
+          "sig": "org.flmelody.core.DefaultRequestReader#readJson(String, Type)",
           "lines": [
             39,
             41
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.json.JsonPlugin#validate(JsonPlugin, String, Type, Class<?>...)",
+          "sig": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Type, Class[])",
           "lines": [
             66
           ]
@@ -1621,7 +1621,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.PluginSlot#registerPlugin(Class<? extends Plugin>, Plugin)",
+          "sig": "org.flmelody.core.Windward#registerPlugin(Class, Plugin)",
           "lines": [
             260
           ]
@@ -1652,13 +1652,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.resolver.PluginResolver#resolve(Windward, Plugin)",
+          "sig": "org.flmelody.core.plugin.resolver.CompositePluginResolver#resolve(Windward, Plugin)",
           "lines": [
             35
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.resolver.PluginResolver#registerPlugin(Class<? extends Plugin>, Plugin)",
+          "sig": "org.flmelody.core.Windward#registerPlugin(Class, Plugin)",
           "lines": [
             258
           ]
@@ -1677,7 +1677,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.ResourcePluginProxy#accept(WindwardContext)",
           "lines": [
             46
           ]
@@ -1694,7 +1694,7 @@
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             68,
             53,
@@ -1704,13 +1704,20 @@
         }
       ]
     },
-    "mappingResource(String, String...)": {
+    "mappingResource(String, String[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.AbstractRouterGroup#resources(String, String[])",
+          "lines": [
+            166
+          ]
+        }
+      ]
     }
   },
   "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin": {
-    "appendPages(String...)": {
+    "appendPages(String[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -1728,7 +1735,7 @@
     }
   },
   "org.flmelody.core.plugin.resource.ResourcePlugin": {
-    "mappingResource(String, String...)": {
+    "mappingResource(String, String[])": {
       "type": "NONE",
       "caller": []
     }
@@ -1738,7 +1745,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.resource.ResourcePluginProxy#resources(String, String...)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#resources(String, String[])",
           "lines": [
             166
           ]
@@ -1759,7 +1766,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             57
           ]
@@ -1770,13 +1777,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             74
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             70,
             91,
@@ -1795,13 +1802,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             60
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             82,
             72,
@@ -1809,7 +1816,7 @@
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             55
           ]
@@ -1833,19 +1840,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             57
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             74
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             70,
             91,
@@ -1858,13 +1865,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             57
           ]
         },
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder#findResource(String, StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin#findResource(String, StaticResource)",
           "lines": [
             70,
             91,
@@ -1877,7 +1884,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.resource.StaticResource.StaticResourceBuilder#newBuilder(StaticResource)",
+          "sig": "org.flmelody.core.plugin.resource.StaticResource#newBuilder(StaticResource)",
           "lines": [
             31
           ]
@@ -1890,7 +1897,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.view.AbstractViewPlugin#resolve(Windward, Plugin)",
+          "sig": "org.flmelody.core.plugin.resolver.ViewPluginResolver#resolve(Windward, Plugin)",
           "lines": [
             29
           ]
@@ -1901,7 +1908,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.view.AbstractViewPlugin#html(String, M)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#html(String, M)",
           "lines": [
             98
           ]
@@ -1930,7 +1937,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.view.freemarker.FreemarkerView#prepareDefault(Windward)",
+          "sig": "org.flmelody.core.Windward#prepareDefault(Windward)",
           "lines": [
             145
           ]
@@ -1951,7 +1958,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.view.groovy.GroovyView#prepareDefault(Windward)",
+          "sig": "org.flmelody.core.Windward#prepareDefault(Windward)",
           "lines": [
             139
           ]
@@ -1972,7 +1979,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.view.thymeleaf.ThymeleafView#prepareDefault(Windward)",
+          "sig": "org.flmelody.core.Windward#prepareDefault(Windward)",
           "lines": [
             142
           ]
@@ -1994,7 +2001,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.view.ViewPlugin#resolveView(String, Map<String, Object>)",
+          "sig": "org.flmelody.core.plugin.view.AbstractViewPlugin#resolveView(String, Map)",
           "lines": [
             52
           ]
@@ -2007,7 +2014,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.ws.ExtensionalWebSocketPlugin#extractHandlers(ChannelHandlerContext, String)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#extractHandlers(ChannelHandlerContext, String)",
           "lines": [
             154
           ]
@@ -2018,7 +2025,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.ws.ExtensionalWebSocketPlugin#extractHandlers(ChannelHandlerContext, String)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#extractHandlers(ChannelHandlerContext, String)",
           "lines": [
             155
           ]
@@ -2029,7 +2036,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.plugin.ws.ExtensionalWebSocketPlugin#extractHandlers(ChannelHandlerContext, String)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#extractHandlers(ChannelHandlerContext, String)",
           "lines": [
             156
           ]
@@ -2055,7 +2062,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.RequestReader#readJson(String, Class<I>)",
+          "sig": "org.flmelody.core.WindwardRequest#readJson(String, Class)",
           "lines": [
             114
           ]
@@ -2066,29 +2073,29 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.RequestReader#readJson(String, Type)",
+          "sig": "org.flmelody.core.WindwardRequest#readJson(String, Type)",
           "lines": [
             120
           ]
         }
       ]
     },
-    "bindJson(String, Class, Class...)": {
+    "bindJson(String, Class, Class[])": {
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.RequestReader#bindJson(String, Class<I>, Class<?>...)",
+          "sig": "org.flmelody.core.WindwardRequest#bindJson(String, Class, Class[])",
           "lines": [
             126
           ]
         }
       ]
     },
-    "bindJson(String, Type, Class...)": {
+    "bindJson(String, Type, Class[])": {
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.RequestReader#bindJson(String, Type, Class<?>...)",
+          "sig": "org.flmelody.core.WindwardRequest#bindJson(String, Type, Class[])",
           "lines": [
             132
           ]
@@ -2101,7 +2108,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.ResponseWriter#write(int, T)",
+          "sig": "org.flmelody.core.WindwardResponse#write(int, T)",
           "lines": [
             34
           ]
@@ -2112,7 +2119,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.ResponseWriter#write(int, String, T)",
+          "sig": "org.flmelody.core.WindwardResponse#write(int, String, T)",
           "lines": [
             46
           ]
@@ -2123,7 +2130,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.ResponseWriter#write(int, String, Map<String, Object>, T)",
+          "sig": "org.flmelody.core.WindwardResponse#write(int, String, Map, T)",
           "lines": [
             59
           ]
@@ -2146,7 +2153,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.ResponseWriter#close()",
+          "sig": "org.flmelody.core.WindwardResponse#close()",
           "lines": [
             64
           ]
@@ -2167,7 +2174,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Router#http(HttpMethod, String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#http(HttpMethod, String, EnhancedFunction)",
           "lines": [
             395
           ]
@@ -2186,7 +2193,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Router#get(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#get(String, EnhancedFunction)",
           "lines": [
             415
           ]
@@ -2205,7 +2212,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Router#put(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#put(String, EnhancedFunction)",
           "lines": [
             436
           ]
@@ -2224,7 +2231,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Router#post(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#post(String, EnhancedFunction)",
           "lines": [
             457
           ]
@@ -2243,7 +2250,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Router#delete(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#delete(String, EnhancedFunction)",
           "lines": [
             478
           ]
@@ -2254,7 +2261,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Router#sse(String, EnhancedFunction<SseWindwardContext, SseEjector>)",
+          "sig": "org.flmelody.core.Windward#sse(String, EnhancedFunction)",
           "lines": [
             486
           ]
@@ -2265,20 +2272,27 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Router#ws(String, Consumer<WebSocketWindwardContext>)",
+          "sig": "org.flmelody.core.Windward#ws(String, Consumer)",
           "lines": [
             493
           ]
         }
       ]
     },
-    "resource(String...)": {
+    "resource(String[])": {
       "type": "NONE",
       "caller": []
     },
-    "resources(String, String...)": {
+    "resources(String, String[])": {
       "type": "NONE",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.Windward#resources(String, String[])",
+          "lines": [
+            506
+          ]
+        }
+      ]
     }
   },
   "org.flmelody.core.RouterGroup": {
@@ -2322,7 +2336,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.event.RouterBindEvent#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             282
           ]
@@ -2358,7 +2372,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             282
           ]
@@ -2369,7 +2383,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             282
           ]
@@ -2380,7 +2394,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             282
           ]
@@ -2391,7 +2405,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             282
           ]
@@ -2402,7 +2416,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.event.RouterBindEvent.RouterBindEventBuilder#builder()",
+          "sig": "org.flmelody.core.wind.event.RouterBindEvent#builder()",
           "lines": [
             29
           ]
@@ -2415,7 +2429,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.listener.Listener#triggerEvent()",
+          "sig": "org.flmelody.core.wind.AbstractWindManager#triggerEvent()",
           "lines": [
             52
           ]
@@ -2428,7 +2442,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.WindManager#registerListener(Listener...)",
+          "sig": "org.flmelody.core.Windward#registerListener(Listener[])",
           "lines": [
             233
           ]
@@ -2439,7 +2453,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.WindManager#publishEvent(Event...)",
+          "sig": "org.flmelody.core.Windward#publishEvent(Event[])",
           "lines": [
             280
           ]
@@ -2450,7 +2464,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.flmelody.core.wind.WindManager#beforeStart()",
+          "sig": "org.flmelody.core.Windward#beforeStart()",
           "lines": [
             152
           ]
@@ -2463,23 +2477,44 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "setup(int, Filter...)": {
+    "setup(int, Filter[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.Windward#setup()",
+          "lines": [
+            84
+          ]
+        }
+      ]
     },
-    "setup(int, String, Filter...)": {
+    "setup(int, String, Filter[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.Windward#setup(int, Filter[])",
+          "lines": [
+            95
+          ]
+        }
+      ]
     },
-    "setup(int, String, String, String, Filter...)": {
+    "setup(int, String, String, String, Filter[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.Windward#setup(int, String, Filter[])",
+          "lines": [
+            107
+          ]
+        }
+      ]
     },
     "prepareDefault(Windward)": {
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#setup(int, String, String, String, Filter...)",
+          "sig": "org.flmelody.core.Windward#setup(int, String, String, String, Filter[])",
           "lines": [
             133
           ]
@@ -2505,103 +2540,103 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#http(HttpMethod, String, Supplier<R>)",
+          "sig": "org.flmelody.core.Windward#http(HttpMethod, String, Supplier)",
           "lines": [
             379
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#http(HttpMethod, String, Consumer<SimpleWindwardContext>)",
+          "sig": "org.flmelody.core.Windward#http(HttpMethod, String, Consumer)",
           "lines": [
             387
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#http(HttpMethod, String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#http(HttpMethod, String, EnhancedFunction)",
           "lines": [
             395
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#get(String, Supplier<R>)",
+          "sig": "org.flmelody.core.Windward#get(String, Supplier)",
           "lines": [
             401
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#get(String, Consumer<SimpleWindwardContext>)",
+          "sig": "org.flmelody.core.Windward#get(String, Consumer)",
           "lines": [
             407
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#get(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#get(String, EnhancedFunction)",
           "lines": [
             415
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#put(String, Supplier<R>)",
+          "sig": "org.flmelody.core.Windward#put(String, Supplier)",
           "lines": [
             422
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#put(String, Consumer<SimpleWindwardContext>)",
+          "sig": "org.flmelody.core.Windward#put(String, Consumer)",
           "lines": [
             428
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#put(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#put(String, EnhancedFunction)",
           "lines": [
             436
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#post(String, Supplier<R>)",
+          "sig": "org.flmelody.core.Windward#post(String, Supplier)",
           "lines": [
             443
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#post(String, Consumer<SimpleWindwardContext>)",
+          "sig": "org.flmelody.core.Windward#post(String, Consumer)",
           "lines": [
             449
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#post(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#post(String, EnhancedFunction)",
           "lines": [
             457
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#delete(String, Supplier<R>)",
+          "sig": "org.flmelody.core.Windward#delete(String, Supplier)",
           "lines": [
             464
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#delete(String, Consumer<SimpleWindwardContext>)",
+          "sig": "org.flmelody.core.Windward#delete(String, Consumer)",
           "lines": [
             470
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#delete(String, EnhancedFunction<C, ?>)",
+          "sig": "org.flmelody.core.Windward#delete(String, EnhancedFunction)",
           "lines": [
             478
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#sse(String, EnhancedFunction<SseWindwardContext, SseEjector>)",
+          "sig": "org.flmelody.core.Windward#sse(String, EnhancedFunction)",
           "lines": [
             486
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#ws(String, Consumer<WebSocketWindwardContext>)",
+          "sig": "org.flmelody.core.Windward#ws(String, Consumer)",
           "lines": [
             493
           ]
@@ -2612,22 +2647,36 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#resources(String, String...)",
+          "sig": "org.flmelody.core.Windward#resources(String, String[])",
           "lines": [
             506
           ]
         }
       ]
     },
-    "registerFilter(Filter...)": {
+    "registerFilter(Filter[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.Windward#setup(int, String, String, String, Filter[])",
+          "lines": [
+            128
+          ]
+        }
+      ]
     },
-    "registerExceptionHandler(ExceptionHandler...)": {
+    "registerExceptionHandler(ExceptionHandler[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.Windward#setup(int, String, String, String, Filter[])",
+          "lines": [
+            128
+          ]
+        }
+      ]
     },
-    "registerListener(Listener...)": {
+    "registerListener(Listener[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -2635,7 +2684,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#setup(int, String, String, String, Filter...)",
+          "sig": "org.flmelody.core.Windward#setup(int, String, String, String, Filter[])",
           "lines": [
             128
           ]
@@ -2661,15 +2710,22 @@
         }
       ]
     },
-    "publishEvent(Event...)": {
+    "publishEvent(Event[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
+          "lines": [
+            280
+          ]
+        }
+      ]
     },
     "findRouter(String, String)": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#channelRead0(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#channelRead0(ChannelHandlerContext, Object)",
           "lines": [
             79
           ]
@@ -2680,7 +2736,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#handle(FunctionMetaInfo<?>, WindwardContext)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handle(FunctionMetaInfo, WindwardContext)",
           "lines": [
             254
           ]
@@ -2691,7 +2747,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#handleException(WindwardContext, Exception)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#handleException(WindwardContext, Exception)",
           "lines": [
             306
           ]
@@ -2702,45 +2758,45 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#html(String, M)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#html(String, M)",
           "lines": [
             105
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#readJson(String, Class<I>)",
+          "sig": "org.flmelody.core.DefaultRequestReader#readJson(String, Class)",
           "lines": [
             33,
             31
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#readJson(String, Type)",
+          "sig": "org.flmelody.core.DefaultRequestReader#readJson(String, Type)",
           "lines": [
             39,
             41
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#bindJson(String, Class<I>, Class<?>...)",
+          "sig": "org.flmelody.core.DefaultRequestReader#bindJson(String, Class, Class[])",
           "lines": [
             49
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#bindJson(String, Type, Class<?>...)",
+          "sig": "org.flmelody.core.DefaultRequestReader#bindJson(String, Type, Class[])",
           "lines": [
             57
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#write(int, String, Map<String, Object>, T, boolean)",
+          "sig": "org.flmelody.core.netty.NettyResponseWriter#write(int, String, Map, T, boolean)",
           "lines": [
             85
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.ResourcePluginProxy#accept(WindwardContext)",
           "lines": [
             40
           ]
@@ -2751,13 +2807,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#html(String, M)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#html(String, M)",
           "lines": [
             97
           ]
         },
         {
-          "sig": "org.flmelody.core.Windward#extractHandlers(ChannelHandlerContext, String)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#extractHandlers(ChannelHandlerContext, String)",
           "lines": [
             152
           ]
@@ -2772,7 +2828,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#resolve(Windward, Plugin)",
+          "sig": "org.flmelody.core.plugin.resolver.ViewPluginResolver#resolve(Windward, Plugin)",
           "lines": [
             29
           ]
@@ -2855,19 +2911,26 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "resource(String...)": {
+    "resource(String[])": {
       "type": "PUBLIC",
       "caller": []
     },
-    "resources(String, String...)": {
+    "resources(String, String[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.Windward#resource(String[])",
+          "lines": [
+            500
+          ]
+        }
+      ]
     },
     "Windward(String, String, String)": {
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.Windward#setup(int, String, String, String, Filter...)",
+          "sig": "org.flmelody.core.Windward#setup(int, String, String, String, Filter[])",
           "lines": [
             126
           ]
@@ -2880,7 +2943,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             204
           ]
@@ -2895,7 +2958,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#doOnRequest()",
+          "sig": "org.flmelody.core.context.support.JsonWindwardContext#doOnRequest()",
           "lines": [
             36
           ]
@@ -2910,13 +2973,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#filter(WindwardContext)",
+          "sig": "org.flmelody.core.LoggingFilter#filter(WindwardContext)",
           "lines": [
             30
           ]
         },
         {
-          "sig": "org.flmelody.core.WindwardRequest#accept(WindwardContext)",
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#accept(WindwardContext)",
           "lines": [
             56
           ]
@@ -2927,13 +2990,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#getRequestParameter(String)",
+          "sig": "org.flmelody.core.context.AbstractWindwardContext#getRequestParameter(String)",
           "lines": [
             42
           ]
         },
         {
-          "sig": "org.flmelody.core.WindwardRequest#getRequestParameters(String)",
+          "sig": "org.flmelody.core.context.AbstractWindwardContext#getRequestParameters(String)",
           "lines": [
             53
           ]
@@ -2944,7 +3007,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#getPathVariables()",
+          "sig": "org.flmelody.core.context.AbstractWindwardContext#getPathVariables()",
           "lines": [
             59
           ]
@@ -2955,31 +3018,31 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#readJson(Class<I>)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#readJson(Class)",
           "lines": [
             44
           ]
         },
         {
-          "sig": "org.flmelody.core.WindwardRequest#readJson(Type)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#readJson(Type)",
           "lines": [
             50
           ]
         },
         {
-          "sig": "org.flmelody.core.WindwardRequest#bindJson(Class<I>, Class<?>...)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#bindJson(Class, Class[])",
           "lines": [
             56
           ]
         },
         {
-          "sig": "org.flmelody.core.WindwardRequest#bindJson(Type, Class<?>...)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#bindJson(Type, Class[])",
           "lines": [
             62
           ]
         },
         {
-          "sig": "org.flmelody.core.WindwardRequest#getRequestBody()",
+          "sig": "org.flmelody.core.context.AbstractWindwardContext#getRequestBody()",
           "lines": [
             65
           ]
@@ -2990,7 +3053,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#readJson(Class<I>)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#readJson(Class)",
           "lines": [
             44
           ]
@@ -3001,29 +3064,29 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#readJson(Type)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#readJson(Type)",
           "lines": [
             50
           ]
         }
       ]
     },
-    "bindJson(String, Class, Class...)": {
+    "bindJson(String, Class, Class[])": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#bindJson(Class<I>, Class<?>...)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#bindJson(Class, Class[])",
           "lines": [
             56
           ]
         }
       ]
     },
-    "bindJson(String, Type, Class...)": {
+    "bindJson(String, Type, Class[])": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest#bindJson(Type, Class<?>...)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#bindJson(Type, Class[])",
           "lines": [
             62
           ]
@@ -3047,7 +3110,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             204
           ]
@@ -3058,7 +3121,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             204
           ]
@@ -3069,7 +3132,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             204
           ]
@@ -3080,7 +3143,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             204
           ]
@@ -3091,7 +3154,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             204
           ]
@@ -3102,7 +3165,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             224,
             231,
@@ -3116,7 +3179,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             212
           ]
@@ -3127,7 +3190,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             224,
             231,
@@ -3142,7 +3205,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardRequest.WindwardRequestBuilder#newBuild()",
+          "sig": "org.flmelody.core.WindwardRequest#newBuild()",
           "lines": [
             39
           ]
@@ -3159,13 +3222,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardResponse#write(int, String, T)",
+          "sig": "org.flmelody.core.context.AbstractWindwardContext#write(int, String, T)",
           "lines": [
             120
           ]
         },
         {
-          "sig": "org.flmelody.core.WindwardResponse#writeBinaryData(T)",
+          "sig": "org.flmelody.core.ws.WebSocketWindwardContext#writeBinaryData(T)",
           "lines": [
             88
           ]
@@ -3176,13 +3239,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardResponse#redirect(int, String)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#redirect(int, String)",
           "lines": [
             77
           ]
         },
         {
-          "sig": "org.flmelody.core.WindwardResponse#html(String, M)",
+          "sig": "org.flmelody.core.context.AbstractHttpWindwardContext#html(String, M)",
           "lines": [
             106
           ]
@@ -3193,7 +3256,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardResponse#close()",
+          "sig": "org.flmelody.core.context.AbstractWindwardContext#close()",
           "lines": [
             78
           ]
@@ -3204,7 +3267,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardResponse#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             215
           ]
@@ -3228,7 +3291,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardResponse.WindwardResponseBuild#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             215
           ]
@@ -3239,7 +3302,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardResponse.WindwardResponseBuild#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             240,
             225,
@@ -3254,7 +3317,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.WindwardResponse.WindwardResponseBuild#newBuilder()",
+          "sig": "org.flmelody.core.WindwardResponse#newBuilder()",
           "lines": [
             68
           ]
@@ -3271,7 +3334,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent#userEventTriggered(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#userEventTriggered(ChannelHandlerContext, Object)",
           "lines": [
             127
           ]
@@ -3282,7 +3345,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent#userEventTriggered(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#userEventTriggered(ChannelHandlerContext, Object)",
           "lines": [
             128
           ]
@@ -3293,19 +3356,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent#userEventTriggered(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.SocketTailHandler#userEventTriggered(ChannelHandlerContext, Object)",
           "lines": [
             38
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent#exceptionCaught(ChannelHandlerContext, Throwable)",
+          "sig": "org.flmelody.core.netty.handler.SocketTailHandler#exceptionCaught(ChannelHandlerContext, Throwable)",
           "lines": [
             47
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent#channelRead(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.WebSocketHandler#channelRead(ChannelHandlerContext, Object)",
           "lines": [
             39,
             56,
@@ -3331,19 +3394,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#userEventTriggered(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.SocketTailHandler#userEventTriggered(ChannelHandlerContext, Object)",
           "lines": [
             38
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#exceptionCaught(ChannelHandlerContext, Throwable)",
+          "sig": "org.flmelody.core.netty.handler.SocketTailHandler#exceptionCaught(ChannelHandlerContext, Throwable)",
           "lines": [
             47
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#channelRead(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.WebSocketHandler#channelRead(ChannelHandlerContext, Object)",
           "lines": [
             39,
             56,
@@ -3356,19 +3419,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#userEventTriggered(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.SocketTailHandler#userEventTriggered(ChannelHandlerContext, Object)",
           "lines": [
             38
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#exceptionCaught(ChannelHandlerContext, Throwable)",
+          "sig": "org.flmelody.core.netty.handler.SocketTailHandler#exceptionCaught(ChannelHandlerContext, Throwable)",
           "lines": [
             47
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#channelRead(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.WebSocketHandler#channelRead(ChannelHandlerContext, Object)",
           "lines": [
             39,
             56,
@@ -3381,19 +3444,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#userEventTriggered(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.SocketTailHandler#userEventTriggered(ChannelHandlerContext, Object)",
           "lines": [
             38
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#exceptionCaught(ChannelHandlerContext, Throwable)",
+          "sig": "org.flmelody.core.netty.handler.SocketTailHandler#exceptionCaught(ChannelHandlerContext, Throwable)",
           "lines": [
             47
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#channelRead(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.WebSocketHandler#channelRead(ChannelHandlerContext, Object)",
           "lines": [
             39,
             56,
@@ -3406,7 +3469,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#channelRead(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.WebSocketHandler#channelRead(ChannelHandlerContext, Object)",
           "lines": [
             39,
             56,
@@ -3419,7 +3482,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketFireEvent.WebSocketFireEventBuilder#builder()",
+          "sig": "org.flmelody.core.ws.WebSocketFireEvent#builder()",
           "lines": [
             37
           ]
@@ -3433,13 +3496,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketWindwardContext#userEventTriggered(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#userEventTriggered(ChannelHandlerContext, Object)",
           "lines": [
             127
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketWindwardContext#exceptionCaught(ChannelHandlerContext, Throwable)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#exceptionCaught(ChannelHandlerContext, Throwable)",
           "lines": [
             144
           ]
@@ -3450,13 +3513,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketWindwardContext#userEventTriggered(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#userEventTriggered(ChannelHandlerContext, Object)",
           "lines": [
             128
           ]
         },
         {
-          "sig": "org.flmelody.core.ws.WebSocketWindwardContext#exceptionCaught(ChannelHandlerContext, Throwable)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#exceptionCaught(ChannelHandlerContext, Throwable)",
           "lines": [
             145
           ]
@@ -3467,7 +3530,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketWindwardContext#channelRead0(ChannelHandlerContext, Object)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#channelRead0(ChannelHandlerContext, Object)",
           "lines": [
             111
           ]
@@ -3530,7 +3593,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.core.ws.WebSocketWindwardContext#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo<I>)",
+          "sig": "org.flmelody.core.netty.handler.HttpServerHandler#initContext(ChannelHandlerContext, FullHttpRequest, FunctionMetaInfo)",
           "lines": [
             234
           ]
@@ -3544,13 +3607,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             277
           ]
         },
         {
-          "sig": "org.flmelody.support.FunctionDefinition#findFunctionSmartly(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findFunctionSmartly(F)",
           "lines": [
             52
           ]
@@ -3561,13 +3624,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition#findRegularFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findRegularFunction(F)",
           "lines": [
             57
           ]
         },
         {
-          "sig": "org.flmelody.support.FunctionDefinition#findLambdaFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findLambdaFunction(F)",
           "lines": [
             70
           ]
@@ -3578,7 +3641,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             284
           ]
@@ -3589,7 +3652,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition#registerRouter(String, String, I, Class<? extends WindwardContext>)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
           "lines": [
             285
           ]
@@ -3621,13 +3684,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findRegularFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findRegularFunction(F)",
           "lines": [
             60
           ]
         },
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findLambdaFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findLambdaFunction(F)",
           "lines": [
             87
           ]
@@ -3638,13 +3701,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findRegularFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findRegularFunction(F)",
           "lines": [
             60
           ]
         },
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findLambdaFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findLambdaFunction(F)",
           "lines": [
             87
           ]
@@ -3655,13 +3718,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findRegularFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findRegularFunction(F)",
           "lines": [
             60
           ]
         },
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findLambdaFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findLambdaFunction(F)",
           "lines": [
             87
           ]
@@ -3672,13 +3735,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findRegularFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findRegularFunction(F)",
           "lines": [
             60
           ]
         },
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findLambdaFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findLambdaFunction(F)",
           "lines": [
             87
           ]
@@ -3689,13 +3752,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findRegularFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findRegularFunction(F)",
           "lines": [
             65
           ]
         },
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#findLambdaFunction(F)",
+          "sig": "org.flmelody.support.FunctionHelper#findLambdaFunction(F)",
           "lines": [
             95
           ]
@@ -3706,7 +3769,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.support.FunctionDefinition.FunctionDefinitionBuilder#builder()",
+          "sig": "org.flmelody.support.FunctionDefinition#builder()",
           "lines": [
             40
           ]
@@ -3784,13 +3847,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.util.AntPathMatcher#matchRouter(String, String)",
+          "sig": "org.flmelody.core.AbstractRouterGroup#matchRouter(String, String)",
           "lines": [
             218
           ]
         },
         {
-          "sig": "org.flmelody.util.AntPathMatcher#isMatch(String)",
+          "sig": "org.flmelody.core.plugin.ws.ExtensionalWebSocketPlugin#isMatch(String)",
           "lines": [
             77
           ]
@@ -3854,7 +3917,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.util.AntPathMatcher#build()",
+          "sig": "org.flmelody.util.AntPathMatcher.Builder#build()",
           "lines": [
             145
           ]
@@ -3887,7 +3950,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.util.AntPathMatcher.Builder#newBuild()",
+          "sig": "org.flmelody.util.AntPathMatcher#newBuild()",
           "lines": [
             91
           ]
@@ -3928,9 +3991,48 @@
     }
   },
   "org.flmelody.util.UrlUtil": {
-    "buildUrl(String...)": {
+    "buildUrl(String[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.flmelody.core.AbstractRouterGroup#registerRouter(String, String, I, Class)",
+          "lines": [
+            265
+          ]
+        },
+        {
+          "sig": "org.flmelody.core.plugin.resource.BaseStaticResourcePlugin#findResource(String, StaticResource)",
+          "lines": [
+            75
+          ]
+        },
+        {
+          "sig": "org.flmelody.core.plugin.resource.FixedStaticResourcePlugin#findResource(String, StaticResource)",
+          "lines": [
+            84,
+            76,
+            92
+          ]
+        },
+        {
+          "sig": "org.flmelody.core.plugin.view.AbstractViewPlugin#resolveView(String, Map)",
+          "lines": [
+            52
+          ]
+        },
+        {
+          "sig": "org.flmelody.core.Windward#group(String)",
+          "lines": [
+            174
+          ]
+        },
+        {
+          "sig": "org.flmelody.core.Windward#resourceGroup(String)",
+          "lines": [
+            188
+          ]
+        }
+      ]
     },
     "UrlUtil()": {
       "type": "PRIVATE",
@@ -3938,39 +4040,39 @@
     }
   },
   "org.flmelody.util.ValidationUtil": {
-    "validate(JsonPlugin, String, Class, Class...)": {
+    "validate(JsonPlugin, String, Class, Class[])": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.util.ValidationUtil#bindJson(String, Class<I>, Class<?>...)",
+          "sig": "org.flmelody.core.DefaultRequestReader#bindJson(String, Class, Class[])",
           "lines": [
             49
           ]
         }
       ]
     },
-    "validate(JsonPlugin, String, Type, Class...)": {
+    "validate(JsonPlugin, String, Type, Class[])": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.flmelody.util.ValidationUtil#bindJson(String, Type, Class<?>...)",
+          "sig": "org.flmelody.core.DefaultRequestReader#bindJson(String, Type, Class[])",
           "lines": [
             57
           ]
         }
       ]
     },
-    "validate(T, Class...)": {
+    "validate(T, Class[])": {
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Class<T>, Class<?>...)",
+          "sig": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Class, Class[])",
           "lines": [
             51
           ]
         },
         {
-          "sig": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Type, Class<?>...)",
+          "sig": "org.flmelody.util.ValidationUtil#validate(JsonPlugin, String, Type, Class[])",
           "lines": [
             66
           ]

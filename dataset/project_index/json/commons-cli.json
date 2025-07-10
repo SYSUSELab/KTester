@@ -9408,11 +9408,11 @@
           {
             "call_methods": [
               {
-                "signature": "java.util.Objects#hash(..)",
+                "signature": "java.util.Objects#hash(Object[])",
                 "arguments": [
                   {
                     "name": "longOption",
-                    "type": "java.lang.Object..."
+                    "type": "java.lang.Object"
                   },
                   {
                     "name": "option",
@@ -18424,24 +18424,24 @@
                 ]
               },
               {
-                "signature": "java.util.Arrays#asList(..)",
-                "arguments": [
-                  {
-                    "name": "cl.getOptionValues(\"J\")",
-                    "type": "T..."
-                  }
-                ],
-                "return_type": "java.util.List<T>",
-                "line_numbers": [
-                  598
-                ]
-              },
-              {
                 "signature": "org.apache.commons.cli.CommandLine#getArgList()",
                 "arguments": [],
                 "return_type": "java.util.List<java.lang.String>",
                 "line_numbers": [
                   606
+                ]
+              },
+              {
+                "signature": "java.util.Arrays#asList(T[])",
+                "arguments": [
+                  {
+                    "name": "cl.getOptionValues(\"J\")",
+                    "type": "T"
+                  }
+                ],
+                "return_type": "java.util.List<T>",
+                "line_numbers": [
+                  598
                 ]
               },
               {
@@ -32583,11 +32583,11 @@
           {
             "call_methods": [
               {
-                "signature": "org.junit.jupiter.params.provider.Arguments#of(..)",
+                "signature": "org.junit.jupiter.params.provider.Arguments#of(Object[])",
                 "arguments": [
                   {
                     "name": "\"123\"",
-                    "type": "java.lang.Object..."
+                    "type": "java.lang.Object"
                   },
                   {
                     "name": "Long.valueOf(\"123\")",
@@ -41572,23 +41572,6 @@
                 ]
               },
               {
-                "signature": "java.util.Arrays#asList(..)",
-                "arguments": [
-                  {
-                    "name": "group1",
-                    "type": "T..."
-                  },
-                  {
-                    "name": "group2",
-                    "type": "T"
-                  }
-                ],
-                "return_type": "java.util.List<T>",
-                "line_numbers": [
-                  79
-                ]
-              },
-              {
                 "signature": "org.apache.commons.cli.Option.Builder#build()",
                 "arguments": [],
                 "return_type": "org.apache.commons.cli.Option",
@@ -41623,6 +41606,23 @@
                 "return_type": "boolean",
                 "line_numbers": [
                   84
+                ]
+              },
+              {
+                "signature": "java.util.Arrays#asList(T[])",
+                "arguments": [
+                  {
+                    "name": "group1",
+                    "type": "T"
+                  },
+                  {
+                    "name": "group2",
+                    "type": "T"
+                  }
+                ],
+                "return_type": "java.util.List<T>",
+                "line_numbers": [
+                  79
                 ]
               },
               {
@@ -45080,11 +45080,11 @@
           {
             "call_methods": [
               {
-                "signature": "org.junit.jupiter.params.provider.Arguments#of(..)",
+                "signature": "org.junit.jupiter.params.provider.Arguments#of(Object[])",
                 "arguments": [
                   {
                     "name": "\"CamelCase\"",
-                    "type": "java.lang.Object..."
+                    "type": "java.lang.Object"
                   },
                   {
                     "name": "true",
@@ -45116,6 +45116,30 @@
                 "return_type": "java.util.stream.Stream<E>",
                 "line_numbers": [
                   106
+                ]
+              },
+              {
+                "signature": "java.lang.String#format(String, Object[])",
+                "arguments": [
+                  {
+                    "name": "\"%sMoreText\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "c",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  97,
+                  98,
+                  86,
+                  102,
+                  87,
+                  103,
+                  91,
+                  92
                 ]
               },
               {
@@ -45158,30 +45182,6 @@
                   85,
                   101,
                   90
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
-                "arguments": [
-                  {
-                    "name": "\"%sMoreText\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "c",
-                    "type": "java.lang.Object..."
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  97,
-                  98,
-                  86,
-                  102,
-                  87,
-                  103,
-                  91,
-                  92
                 ]
               }
             ],
@@ -45442,6 +45442,24 @@
                 ]
               },
               {
+                "signature": "java.lang.String#format(String, Object[])",
+                "arguments": [
+                  {
+                    "name": "\"'%s' should not be in 'ADDITIONAL_LONG_CHARS\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "c",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  166,
+                  169
+                ]
+              },
+              {
                 "signature": "org.junit.jupiter.api.Assertions#assertFalse(boolean, Supplier<String>)",
                 "arguments": [
                   {
@@ -45454,24 +45472,6 @@
                   }
                 ],
                 "return_type": "void",
-                "line_numbers": [
-                  166,
-                  169
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
-                "arguments": [
-                  {
-                    "name": "\"'%s' should not be in 'ADDITIONAL_LONG_CHARS\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "c",
-                    "type": "java.lang.Object..."
-                  }
-                ],
-                "return_type": "java.lang.String",
                 "line_numbers": [
                   166,
                   169
@@ -47029,76 +47029,6 @@
                 ]
               },
               {
-                "signature": "org.junit.jupiter.params.provider.Arguments#of(..)",
-                "arguments": [
-                  {
-                    "name": "Instantiable.class.getName()",
-                    "type": "java.lang.Object..."
-                  },
-                  {
-                    "name": "PatternOptionBuilder.CLASS_VALUE",
-                    "type": "java.lang.Object"
-                  },
-                  {
-                    "name": "Instantiable.class",
-                    "type": "java.lang.Object"
-                  }
-                ],
-                "return_type": "org.junit.jupiter.params.provider.Arguments",
-                "line_numbers": [
-                  129,
-                  130,
-                  131,
-                  133,
-                  134,
-                  136,
-                  138,
-                  141,
-                  142,
-                  71,
-                  72,
-                  74,
-                  75,
-                  77,
-                  79,
-                  81,
-                  83,
-                  86,
-                  88,
-                  89,
-                  90,
-                  91,
-                  93,
-                  94,
-                  95,
-                  97,
-                  98,
-                  99,
-                  100,
-                  102,
-                  103,
-                  104,
-                  105,
-                  107,
-                  108,
-                  109,
-                  110,
-                  112,
-                  113,
-                  114,
-                  116,
-                  117,
-                  118,
-                  119,
-                  121,
-                  122,
-                  123,
-                  125,
-                  126,
-                  127
-                ]
-              },
-              {
                 "signature": "java.util.Collection#stream()",
                 "arguments": [],
                 "return_type": "java.util.stream.Stream<E>",
@@ -47213,6 +47143,76 @@
                 "return_type": "java.nio.file.Path",
                 "line_numbers": [
                   83
+                ]
+              },
+              {
+                "signature": "org.junit.jupiter.params.provider.Arguments#of(Object[])",
+                "arguments": [
+                  {
+                    "name": "Instantiable.class.getName()",
+                    "type": "java.lang.Object"
+                  },
+                  {
+                    "name": "PatternOptionBuilder.CLASS_VALUE",
+                    "type": "java.lang.Object"
+                  },
+                  {
+                    "name": "Instantiable.class",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "org.junit.jupiter.params.provider.Arguments",
+                "line_numbers": [
+                  129,
+                  130,
+                  131,
+                  133,
+                  134,
+                  136,
+                  138,
+                  141,
+                  142,
+                  71,
+                  72,
+                  74,
+                  75,
+                  77,
+                  79,
+                  81,
+                  83,
+                  86,
+                  88,
+                  89,
+                  90,
+                  91,
+                  93,
+                  94,
+                  95,
+                  97,
+                  98,
+                  99,
+                  100,
+                  102,
+                  103,
+                  104,
+                  105,
+                  107,
+                  108,
+                  109,
+                  110,
+                  112,
+                  113,
+                  114,
+                  116,
+                  117,
+                  118,
+                  119,
+                  121,
+                  122,
+                  123,
+                  125,
+                  126,
+                  127
                 ]
               },
               {

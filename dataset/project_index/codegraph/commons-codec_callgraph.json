@@ -179,7 +179,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.Base32#get()",
+          "sig": "org.apache.commons.codec.binary.Base32.Builder#get()",
           "lines": [
             74
           ]
@@ -196,7 +196,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.Base32.Builder#builder()",
+          "sig": "org.apache.commons.codec.binary.Base32#builder()",
           "lines": [
             163
           ]
@@ -268,7 +268,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.Base64#doEncoding(byte[])",
+          "sig": "org.apache.commons.codec.net.BCodec#doEncoding(byte[])",
           "lines": [
             165
           ]
@@ -399,7 +399,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.Base64#setUrlSafe(boolean)",
+          "sig": "org.apache.commons.codec.binary.Base64.Builder#setUrlSafe(boolean)",
           "lines": [
             97
           ]
@@ -504,7 +504,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.Base64#doDecoding(byte[])",
+          "sig": "org.apache.commons.codec.net.BCodec#doDecoding(byte[])",
           "lines": [
             157
           ]
@@ -515,7 +515,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.Base64#get()",
+          "sig": "org.apache.commons.codec.binary.Base64.Builder#get()",
           "lines": [
             87
           ]
@@ -536,7 +536,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.Base64.Builder#builder()",
+          "sig": "org.apache.commons.codec.binary.Base64#builder()",
           "lines": [
             189
           ]
@@ -596,7 +596,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#doDecoding(byte[])",
+          "sig": "org.apache.commons.codec.net.BCodec#doDecoding(byte[])",
           "lines": [
             157
           ]
@@ -628,7 +628,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#flush(boolean)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecOutputStream#flush(boolean)",
           "lines": [
             118
           ]
@@ -643,7 +643,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#decodeBase64(byte[])",
+          "sig": "org.apache.commons.codec.binary.Base64#decodeBase64(byte[])",
           "lines": [
             203
           ]
@@ -661,7 +661,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#doDecoding(byte[])",
+          "sig": "org.apache.commons.codec.net.BCodec#doDecoding(byte[])",
           "lines": [
             157
           ]
@@ -679,19 +679,19 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#read(byte[], int, int)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecInputStream#read(byte[], int, int)",
           "lines": [
             193
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#eof()",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecOutputStream#eof()",
           "lines": [
             93
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#write(byte[], int, int)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecOutputStream#write(byte[], int, int)",
           "lines": [
             178
           ]
@@ -706,7 +706,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#decodeBase64(String)",
+          "sig": "org.apache.commons.codec.binary.Base64#decodeBase64(String)",
           "lines": [
             218
           ]
@@ -723,7 +723,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#encodeBase64(byte[], boolean, boolean, int)",
+          "sig": "org.apache.commons.codec.binary.Base64#encodeBase64(byte[], boolean, boolean, int)",
           "lines": [
             311
           ]
@@ -770,19 +770,19 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#read(byte[], int, int)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecInputStream#read(byte[], int, int)",
           "lines": [
             191
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#eof()",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecOutputStream#eof()",
           "lines": [
             91
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#write(byte[], int, int)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecOutputStream#write(byte[], int, int)",
           "lines": [
             176
           ]
@@ -805,40 +805,40 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#decode(byte[], int, int, Context)",
+          "sig": "org.apache.commons.codec.binary.Base16#decode(byte[], int, int, Context)",
           "lines": [
             167
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#encode(byte[], int, int, Context)",
+          "sig": "org.apache.commons.codec.binary.Base16#encode(byte[], int, int, Context)",
           "lines": [
             214
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#decode(byte[], int, int, Context)",
+          "sig": "org.apache.commons.codec.binary.Base32#decode(byte[], int, int, Context)",
           "lines": [
             409,
             430
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#encode(byte[], int, int, Context)",
+          "sig": "org.apache.commons.codec.binary.Base32#encode(byte[], int, int, Context)",
           "lines": [
             566,
             510
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#decode(byte[], int, int, Context)",
+          "sig": "org.apache.commons.codec.binary.Base64#decode(byte[], int, int, Context)",
           "lines": [
             753,
             778
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#encode(byte[], int, int, Context)",
+          "sig": "org.apache.commons.codec.binary.Base64#encode(byte[], int, int, Context)",
           "lines": [
             837,
             874
@@ -865,7 +865,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#encodeBase64(byte[], boolean, boolean, int)",
+          "sig": "org.apache.commons.codec.binary.Base64#encodeBase64(byte[], boolean, boolean, int)",
           "lines": [
             304
           ]
@@ -889,7 +889,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#read(byte[], int, int)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecInputStream#read(byte[], int, int)",
           "lines": [
             186
           ]
@@ -932,43 +932,43 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#validateTrailingCharacter()",
+          "sig": "org.apache.commons.codec.binary.Base16#validateTrailingCharacter()",
           "lines": [
             243
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#validateCharacter(long, Context)",
+          "sig": "org.apache.commons.codec.binary.Base32#validateCharacter(long, Context)",
           "lines": [
             627
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#validateTrailingCharacters()",
+          "sig": "org.apache.commons.codec.binary.Base32#validateTrailingCharacters()",
           "lines": [
             639
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#validateCharacter(int, Context)",
+          "sig": "org.apache.commons.codec.binary.Base64#validateCharacter(int, Context)",
           "lines": [
             942
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#validateTrailingCharacter()",
+          "sig": "org.apache.commons.codec.binary.Base64#validateTrailingCharacter()",
           "lines": [
             957
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#isStrictDecoding()",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecInputStream#isStrictDecoding()",
           "lines": [
             88
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#isStrictDecoding()",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecOutputStream#isStrictDecoding()",
           "lines": [
             144
           ]
@@ -991,13 +991,13 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#read(byte[], int, int)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecInputStream#read(byte[], int, int)",
           "lines": [
             196
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec#flush(boolean)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodecOutputStream#flush(boolean)",
           "lines": [
             121
           ]
@@ -1028,7 +1028,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#setEncodeTable(byte...)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#setEncodeTable(byte[])",
           "lines": [
             120
           ]
@@ -1040,7 +1040,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#setLineSeparator(byte...)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#setLineSeparator(byte[])",
           "lines": [
             142
           ]
@@ -1057,13 +1057,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base32.Builder#get()",
           "lines": [
             74
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base64.Builder#get()",
           "lines": [
             87
           ]
@@ -1074,13 +1074,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base32.Builder#get()",
           "lines": [
             74
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base64.Builder#get()",
           "lines": [
             87
           ]
@@ -1091,13 +1091,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base32.Builder#get()",
           "lines": [
             74
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base64.Builder#get()",
           "lines": [
             87
           ]
@@ -1108,13 +1108,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base32.Builder#get()",
           "lines": [
             74
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base64.Builder#get()",
           "lines": [
             87
           ]
@@ -1125,13 +1125,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base32.Builder#get()",
           "lines": [
             74
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BaseNCodec.AbstractBuilder#get()",
+          "sig": "org.apache.commons.codec.binary.Base64.Builder#get()",
           "lines": [
             87
           ]
@@ -1142,15 +1142,22 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "setEncodeTable(byte...)": {
+    "setEncodeTable(byte[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.apache.commons.codec.binary.Base64.Builder#setUrlSafe(boolean)",
+          "lines": [
+            97
+          ]
+        }
+      ]
     },
     "setLineLength(int)": {
       "type": "PUBLIC",
       "caller": []
     },
-    "setLineSeparator(byte...)": {
+    "setLineSeparator(byte[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -1329,25 +1336,25 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.BinaryCodec#encodeBase64(byte[], boolean, boolean, int)",
+          "sig": "org.apache.commons.codec.binary.Base64#encodeBase64(byte[], boolean, boolean, int)",
           "lines": [
             298
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BinaryCodec#decode(byte[])",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec#decode(byte[])",
           "lines": [
             522
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BinaryCodec#encode(byte[])",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec#encode(byte[])",
           "lines": [
             578
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.BinaryCodec#encode(byte[], int, int)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec#encode(byte[], int, int)",
           "lines": [
             598
           ]
@@ -1430,7 +1437,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.CharSequenceUtils#equals(CharSequence, CharSequence)",
+          "sig": "org.apache.commons.codec.binary.StringUtils#equals(CharSequence, CharSequence)",
           "lines": [
             79
           ]
@@ -1614,289 +1621,289 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#println(String, byte[], String)",
+          "sig": "org.apache.commons.codec.cli.Digest#println(String, byte[], String)",
           "lines": [
             86
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#md2Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#md2Hex(byte[])",
           "lines": [
             398
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#md2Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#md2Hex(InputStream)",
           "lines": [
             410
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#md2Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#md2Hex(String)",
           "lines": [
             421
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#md5Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#md5Hex(byte[])",
           "lines": [
             463
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#md5Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#md5Hex(InputStream)",
           "lines": [
             475
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#md5Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#md5Hex(String)",
           "lines": [
             485
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha1Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha1Hex(byte[])",
           "lines": [
             567
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha1Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha1Hex(InputStream)",
           "lines": [
             579
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha1Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha1Hex(String)",
           "lines": [
             590
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha256Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha256Hex(byte[])",
           "lines": [
             635
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha256Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha256Hex(InputStream)",
           "lines": [
             647
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha256Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha256Hex(String)",
           "lines": [
             658
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_224Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_224Hex(byte[])",
           "lines": [
             703
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_224Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_224Hex(InputStream)",
           "lines": [
             715
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_224Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_224Hex(String)",
           "lines": [
             726
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_256Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_256Hex(byte[])",
           "lines": [
             771
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_256Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_256Hex(InputStream)",
           "lines": [
             783
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_256Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_256Hex(String)",
           "lines": [
             794
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_384Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_384Hex(byte[])",
           "lines": [
             839
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_384Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_384Hex(InputStream)",
           "lines": [
             851
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_384Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_384Hex(String)",
           "lines": [
             862
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_512Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_512Hex(byte[])",
           "lines": [
             907
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_512Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_512Hex(InputStream)",
           "lines": [
             919
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha3_512Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_512Hex(String)",
           "lines": [
             930
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha384Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha384Hex(byte[])",
           "lines": [
             975
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha384Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha384Hex(InputStream)",
           "lines": [
             987
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha384Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha384Hex(String)",
           "lines": [
             998
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha512_224Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512_224Hex(byte[])",
           "lines": [
             1077
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha512_224Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512_224Hex(InputStream)",
           "lines": [
             1089
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha512_224Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512_224Hex(String)",
           "lines": [
             1100
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha512_256Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512_256Hex(byte[])",
           "lines": [
             1145
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha512_256Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512_256Hex(InputStream)",
           "lines": [
             1157
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha512_256Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512_256Hex(String)",
           "lines": [
             1168
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha512Hex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512Hex(byte[])",
           "lines": [
             1179
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha512Hex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512Hex(InputStream)",
           "lines": [
             1191
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#sha512Hex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512Hex(String)",
           "lines": [
             1202
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#digestAsHex(byte[])",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#digestAsHex(byte[])",
           "lines": [
             1489
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#digestAsHex(ByteBuffer)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#digestAsHex(ByteBuffer)",
           "lines": [
             1501
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#digestAsHex(File)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#digestAsHex(File)",
           "lines": [
             1513
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#digestAsHex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#digestAsHex(InputStream)",
           "lines": [
             1525
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#digestAsHex(Path, OpenOption...)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#digestAsHex(Path, OpenOption[])",
           "lines": [
             1538
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#digestAsHex(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#digestAsHex(String)",
           "lines": [
             1549
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#hmacHex(byte[])",
+          "sig": "org.apache.commons.codec.digest.HmacUtils#hmacHex(byte[])",
           "lines": [
             1020
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#hmacHex(ByteBuffer)",
+          "sig": "org.apache.commons.codec.digest.HmacUtils#hmacHex(ByteBuffer)",
           "lines": [
             1031
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#hmacHex(File)",
+          "sig": "org.apache.commons.codec.digest.HmacUtils#hmacHex(File)",
           "lines": [
             1044
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#hmacHex(InputStream)",
+          "sig": "org.apache.commons.codec.digest.HmacUtils#hmacHex(InputStream)",
           "lines": [
             1061
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.Hex#hmacHex(String)",
+          "sig": "org.apache.commons.codec.digest.HmacUtils#hmacHex(String)",
           "lines": [
             1072
           ]
@@ -2092,7 +2099,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#isDoubleMetaphoneEqual(String, String, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#isDoubleMetaphoneEqual(String, String, boolean)",
           "lines": [
             948
           ]
@@ -2167,25 +2174,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#decode(String, Charset)",
+          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#decode(String, Charset)",
           "lines": [
             470
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#decode(String, String)",
+          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#decode(String, String)",
           "lines": [
             491
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#decodeText(String)",
+          "sig": "org.apache.commons.codec.net.RFC1522Codec#decodeText(String)",
           "lines": [
             106
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#decode(String, String)",
+          "sig": "org.apache.commons.codec.net.URLCodec#decode(String, String)",
           "lines": [
             270
           ]
@@ -2208,121 +2215,121 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#isBase64(String)",
+          "sig": "org.apache.commons.codec.binary.Base64#isBase64(String)",
           "lines": [
             438
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#decode(String)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec#decode(String)",
           "lines": [
             566
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#isInAlphabet(String)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec#isInAlphabet(String)",
           "lines": [
             770
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#md2(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#md2(String)",
           "lines": [
             387
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#md5(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#md5(String)",
           "lines": [
             453
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha1(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha1(String)",
           "lines": [
             556
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha256(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha256(String)",
           "lines": [
             624
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha3_224(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_224(String)",
           "lines": [
             692
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha3_256(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_256(String)",
           "lines": [
             760
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha3_384(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_384(String)",
           "lines": [
             828
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha3_512(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha3_512(String)",
           "lines": [
             896
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha384(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha384(String)",
           "lines": [
             964
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha512(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512(String)",
           "lines": [
             1032
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha512_224(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512_224(String)",
           "lines": [
             1066
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#sha512_256(String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#sha512_256(String)",
           "lines": [
             1134
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#updateDigest(MessageDigest, String)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#updateDigest(MessageDigest, String)",
           "lines": [
             1368
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#updateHmac(Mac, String)",
+          "sig": "org.apache.commons.codec.digest.HmacUtils#updateHmac(Mac, String)",
           "lines": [
             868
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#hmac(String)",
+          "sig": "org.apache.commons.codec.digest.HmacUtils#hmac(String)",
           "lines": [
             1009
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#hash32(String)",
+          "sig": "org.apache.commons.codec.digest.MurmurHash2#hash32(String)",
           "lines": [
             176
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#hash64(String)",
+          "sig": "org.apache.commons.codec.digest.MurmurHash2#hash64(String)",
           "lines": [
             292
           ]
@@ -2399,37 +2406,37 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#encodeBase64String(byte[])",
+          "sig": "org.apache.commons.codec.binary.Base64#encodeBase64String(byte[])",
           "lines": [
             337
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#encodeBase64URLSafeString(byte[])",
+          "sig": "org.apache.commons.codec.binary.Base64#encodeBase64URLSafeString(byte[])",
           "lines": [
             363
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#encode(String, Charset)",
+          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#encode(String, Charset)",
           "lines": [
             575
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#encode(String, String)",
+          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#encode(String, String)",
           "lines": [
             598
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#encodeText(String, Charset)",
+          "sig": "org.apache.commons.codec.net.RFC1522Codec#encodeText(String, Charset)",
           "lines": [
             159
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#encode(String, String)",
+          "sig": "org.apache.commons.codec.net.URLCodec#encode(String, String)",
           "lines": [
             346
           ]
@@ -2452,13 +2459,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#encodeAsString(byte[])",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec#encodeAsString(byte[])",
           "lines": [
             642
           ]
         },
         {
-          "sig": "org.apache.commons.codec.binary.StringUtils#encodeToString(byte[])",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec#encodeToString(byte[])",
           "lines": [
             654
           ]
@@ -2623,56 +2630,56 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(Object)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec#decode(Object)",
           "lines": [
             555
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(Object)",
+          "sig": "org.apache.commons.codec.binary.BinaryCodec#decode(Object)",
           "lines": [
             250
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decodeHex(char[], byte[], int)",
+          "sig": "org.apache.commons.codec.binary.Hex#decodeHex(char[], byte[], int)",
           "lines": [
             97,
             93
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#toDigit(char, int)",
+          "sig": "org.apache.commons.codec.binary.Hex#toDigit(char, int)",
           "lines": [
             367
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(Object)",
+          "sig": "org.apache.commons.codec.net.BCodec#decode(Object)",
           "lines": [
             130
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(Object)",
+          "sig": "org.apache.commons.codec.net.PercentCodec#decode(Object)",
           "lines": [
             141
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(Object)",
+          "sig": "org.apache.commons.codec.net.QCodec#decode(Object)",
           "lines": [
             161
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(Object)",
+          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#decode(Object)",
           "lines": [
             434
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decodeText(String)",
+          "sig": "org.apache.commons.codec.net.RFC1522Codec#decodeText(String)",
           "lines": [
             98,
             83,
@@ -2682,13 +2689,13 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(Object)",
+          "sig": "org.apache.commons.codec.net.URLCodec#decode(Object)",
           "lines": [
             225
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#digit16(byte)",
+          "sig": "org.apache.commons.codec.net.Utils#digit16(byte)",
           "lines": [
             48
           ]
@@ -2699,43 +2706,43 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(Object)",
+          "sig": "org.apache.commons.codec.binary.Hex#decode(Object)",
           "lines": [
             462
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(String)",
+          "sig": "org.apache.commons.codec.net.BCodec#decode(String)",
           "lines": [
             148
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(byte[])",
+          "sig": "org.apache.commons.codec.net.PercentCodec#decode(byte[])",
           "lines": [
             115
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(String)",
+          "sig": "org.apache.commons.codec.net.QCodec#decode(String)",
           "lines": [
             179
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decodeQuotedPrintable(byte[])",
+          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#decodeQuotedPrintable(byte[])",
           "lines": [
             140
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decodeUrl(byte[])",
+          "sig": "org.apache.commons.codec.net.URLCodec#decodeUrl(byte[])",
           "lines": [
             116
           ]
         },
         {
-          "sig": "org.apache.commons.codec.DecoderException#decode(String)",
+          "sig": "org.apache.commons.codec.net.URLCodec#decode(String)",
           "lines": [
             247
           ]
@@ -2752,7 +2759,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.B64#md5Crypt(byte[], String, String, Random)",
+          "sig": "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String, Random)",
           "lines": [
             378,
             379,
@@ -2763,7 +2770,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.B64#sha2Crypt(byte[], String, String, int, String)",
+          "sig": "org.apache.commons.codec.digest.Sha2Crypt#sha2Crypt(byte[], String, String, int, String)",
           "lines": [
             512,
             513,
@@ -2806,25 +2813,25 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.B64#apr1Crypt(byte[])",
+          "sig": "org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(byte[])",
           "lines": [
             78
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.B64#md5Crypt(byte[])",
+          "sig": "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[])",
           "lines": [
             179
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.B64#sha256Crypt(byte[], String)",
+          "sig": "org.apache.commons.codec.digest.Sha2Crypt#sha256Crypt(byte[], String)",
           "lines": [
             111
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.B64#sha512Crypt(byte[], String)",
+          "sig": "org.apache.commons.codec.digest.Sha2Crypt#sha512Crypt(byte[], String)",
           "lines": [
             584
           ]
@@ -2841,31 +2848,31 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.B64#apr1Crypt(byte[], Random)",
+          "sig": "org.apache.commons.codec.digest.Md5Crypt#apr1Crypt(byte[], Random)",
           "lines": [
             96
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.B64#md5Crypt(byte[], Random)",
+          "sig": "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], Random)",
           "lines": [
             202
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.B64#md5Crypt(byte[], String, String, Random)",
+          "sig": "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String, Random)",
           "lines": [
             280
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.B64#sha256Crypt(byte[], String, Random)",
+          "sig": "org.apache.commons.codec.digest.Sha2Crypt#sha256Crypt(byte[], String, Random)",
           "lines": [
             137
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.B64#sha512Crypt(byte[], String, Random)",
+          "sig": "org.apache.commons.codec.digest.Sha2Crypt#sha512Crypt(byte[], String, Random)",
           "lines": [
             611
           ]
@@ -2895,19 +2902,19 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3#update(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#update(byte[], int, int)",
           "lines": [
             114
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3#chainingValue()",
+          "sig": "org.apache.commons.codec.digest.Blake3.Output#chainingValue()",
           "lines": [
             234
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3#rootOutputBytes(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.Output#rootOutputBytes(byte[], int, int)",
           "lines": [
             242
           ]
@@ -2970,7 +2977,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3#rootOutputBytes(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.Output#rootOutputBytes(byte[], int, int)",
           "lines": [
             246
           ]
@@ -2981,7 +2988,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3#addChunkCV(int[], long)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#addChunkCV(int[], long)",
           "lines": [
             159
           ]
@@ -2998,7 +3005,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3#outputHash(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#outputHash(byte[], int, int)",
           "lines": [
             193
           ]
@@ -3043,13 +3050,13 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3#output()",
+          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#output()",
           "lines": [
             98
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3#update(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#update(byte[], int, int)",
           "lines": [
             112
           ]
@@ -3156,7 +3163,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#inputData(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#inputData(byte[], int, int)",
           "lines": [
             177,
             169
@@ -3168,13 +3175,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#inputData(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#inputData(byte[], int, int)",
           "lines": [
             170
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#outputHash(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#outputHash(byte[], int, int)",
           "lines": [
             189
           ]
@@ -3202,7 +3209,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#inputData(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#inputData(byte[], int, int)",
           "lines": [
             179
           ]
@@ -3213,13 +3220,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#inputData(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#inputData(byte[], int, int)",
           "lines": [
             173
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#reset()",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#reset()",
           "lines": [
             209
           ]
@@ -3243,13 +3250,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#initKeyDerivationFunction(byte[])",
+          "sig": "org.apache.commons.codec.digest.Blake3#initKeyDerivationFunction(byte[])",
           "lines": [
             369
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#update(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3#update(byte[], int, int)",
           "lines": [
             531
           ]
@@ -3260,13 +3267,13 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#initKeyDerivationFunction(byte[])",
+          "sig": "org.apache.commons.codec.digest.Blake3#initKeyDerivationFunction(byte[])",
           "lines": [
             371
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#doFinalize(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3#doFinalize(byte[], int, int)",
           "lines": [
             478
           ]
@@ -3299,7 +3306,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#reset()",
+          "sig": "org.apache.commons.codec.digest.Blake3#reset()",
           "lines": [
             503
           ]
@@ -3310,7 +3317,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#initKeyDerivationFunction(byte[])",
+          "sig": "org.apache.commons.codec.digest.Blake3#initKeyDerivationFunction(byte[])",
           "lines": [
             368
           ]
@@ -3323,19 +3330,19 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.Output#parentChainingValue(int[], int[], int[], int)",
+          "sig": "org.apache.commons.codec.digest.Blake3#parentChainingValue(int[], int[], int[], int)",
           "lines": [
             411
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.Output#inputData(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#inputData(byte[], int, int)",
           "lines": [
             170
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.Output#outputHash(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#outputHash(byte[], int, int)",
           "lines": [
             193
           ]
@@ -3346,7 +3353,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.Output#outputHash(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.Blake3.EngineState#outputHash(byte[], int, int)",
           "lines": [
             195
           ]
@@ -3357,7 +3364,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Blake3.Output#output()",
+          "sig": "org.apache.commons.codec.digest.Blake3.ChunkState#output()",
           "lines": [
             100
           ]
@@ -3408,7 +3415,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#run(String, MessageDigest)",
+          "sig": "org.apache.commons.codec.cli.Digest#run(String, MessageDigest)",
           "lines": [
             119
           ]
@@ -3423,13 +3430,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#run(String, MessageDigest)",
+          "sig": "org.apache.commons.codec.cli.Digest#run(String, MessageDigest)",
           "lines": [
             110
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#run(String, MessageDigest, File[])",
+          "sig": "org.apache.commons.codec.cli.Digest#run(String, MessageDigest, File[])",
           "lines": [
             127
           ]
@@ -3440,7 +3447,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#run(String, MessageDigest)",
+          "sig": "org.apache.commons.codec.cli.Digest#run(String, MessageDigest)",
           "lines": [
             104
           ]
@@ -3519,7 +3526,7 @@
         }
       ]
     },
-    "digest(MessageDigest, Path, OpenOption...)": {
+    "digest(MessageDigest, Path, OpenOption[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -3571,9 +3578,16 @@
         }
       ]
     },
-    "digest(Path, OpenOption...)": {
+    "digest(Path, OpenOption[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.apache.commons.codec.digest.DigestUtils#digestAsHex(Path, OpenOption[])",
+          "lines": [
+            1538
+          ]
+        }
+      ]
     },
     "digest(String)": {
       "type": "PUBLIC",
@@ -3590,13 +3604,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#run()",
+          "sig": "org.apache.commons.codec.cli.Digest#run()",
           "lines": [
             98
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#run(String, String)",
+          "sig": "org.apache.commons.codec.cli.Digest#run(String, String)",
           "lines": [
             133
           ]
@@ -3674,7 +3688,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#sha2Crypt(byte[], String, String, int, String)",
+          "sig": "org.apache.commons.codec.digest.Sha2Crypt#sha2Crypt(byte[], String, String, int, String)",
           "lines": [
             224,
             196,
@@ -3689,7 +3703,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#run()",
+          "sig": "org.apache.commons.codec.cli.Digest#run()",
           "lines": [
             94
           ]
@@ -3735,7 +3749,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#md5Crypt(byte[], String, String, Random)",
+          "sig": "org.apache.commons.codec.digest.Md5Crypt#md5Crypt(byte[], String, String, Random)",
           "lines": [
             352,
             291,
@@ -3939,7 +3953,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#run(String[])",
+          "sig": "org.apache.commons.codec.cli.Digest#run(String[])",
           "lines": [
             138
           ]
@@ -4630,16 +4644,29 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.DigestUtils#updateDigest(MessageDigest, Path, OpenOption...)",
+          "sig": "org.apache.commons.codec.digest.DigestUtils#updateDigest(MessageDigest, Path, OpenOption[])",
           "lines": [
             1338
           ]
         }
       ]
     },
-    "updateDigest(MessageDigest, Path, OpenOption...)": {
+    "updateDigest(MessageDigest, Path, OpenOption[])": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.apache.commons.codec.digest.DigestUtils#digest(MessageDigest, Path, OpenOption[])",
+          "lines": [
+            127
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.digest.DigestUtils#digest(Path, OpenOption[])",
+          "lines": [
+            1467
+          ]
+        }
+      ]
     },
     "updateDigest(MessageDigest, RandomAccessFile)": {
       "type": "PUBLIC",
@@ -4679,7 +4706,7 @@
       "type": "PUBLIC",
       "caller": []
     },
-    "digestAsHex(Path, OpenOption...)": {
+    "digestAsHex(Path, OpenOption[])": {
       "type": "PUBLIC",
       "caller": []
     },
@@ -4701,13 +4728,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.HmacAlgorithms#getInitializedMac(HmacAlgorithms, byte[])",
+          "sig": "org.apache.commons.codec.digest.HmacUtils#getInitializedMac(HmacAlgorithms, byte[])",
           "lines": [
             178
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.HmacAlgorithms#isAvailable(HmacAlgorithms)",
+          "sig": "org.apache.commons.codec.digest.HmacUtils#isAvailable(HmacAlgorithms)",
           "lines": [
             786
           ]
@@ -4920,7 +4947,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Md5Crypt#crypt(byte[], String)",
+          "sig": "org.apache.commons.codec.digest.Crypt#crypt(byte[], String)",
           "lines": [
             83
           ]
@@ -4973,7 +5000,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.MessageDigestAlgorithms#run()",
+          "sig": "org.apache.commons.codec.cli.Digest#run()",
           "lines": [
             91
           ]
@@ -5110,7 +5137,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.MurmurHash3#finalise(int, int, byte[], int)",
+          "sig": "org.apache.commons.codec.digest.MurmurHash3.IncrementalHash32x86#finalise(int, int, byte[], int)",
           "lines": [
             276
           ]
@@ -5139,7 +5166,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.MurmurHash3#add(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.MurmurHash3.IncrementalHash32x86#add(byte[], int, int)",
           "lines": [
             223
           ]
@@ -5259,7 +5286,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.digest.MurmurHash3#add(byte[], int, int)",
+          "sig": "org.apache.commons.codec.digest.MurmurHash3.IncrementalHash32x86#add(byte[], int, int)",
           "lines": [
             208,
             224
@@ -5374,7 +5401,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Sha2Crypt#crypt(byte[], String)",
+          "sig": "org.apache.commons.codec.digest.Crypt#crypt(byte[], String)",
           "lines": [
             80
           ]
@@ -5424,7 +5451,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Sha2Crypt#crypt(byte[], String)",
+          "sig": "org.apache.commons.codec.digest.Crypt#crypt(byte[], String)",
           "lines": [
             74
           ]
@@ -5435,7 +5462,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.Sha2Crypt#crypt(byte[], String)",
+          "sig": "org.apache.commons.codec.digest.Crypt#crypt(byte[], String)",
           "lines": [
             77
           ]
@@ -5494,7 +5521,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.digest.UnixCrypt#crypt(byte[], String)",
+          "sig": "org.apache.commons.codec.digest.Crypt#crypt(byte[], String)",
           "lines": [
             85
           ]
@@ -5686,7 +5713,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.Encoder#compare(Object, Object)",
+          "sig": "org.apache.commons.codec.StringEncoderComparator#compare(Object, Object)",
           "lines": [
             80,
             79
@@ -5704,103 +5731,103 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.binary.BaseNCodec#encode(Object)",
           "lines": [
             625
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.binary.BinaryCodec#encode(Object)",
           "lines": [
             279
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.AbstractCaverphone#encode(Object)",
           "lines": [
             49
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#encode(Object)",
           "lines": [
             91
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.ColognePhonetic#encode(Object)",
           "lines": [
             399
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#encode(Object)",
           "lines": [
             394
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#encode(Object)",
           "lines": [
             390
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.MatchRatingApproachEncoder#encode(Object)",
           "lines": [
             103
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.Metaphone#encode(Object)",
           "lines": [
             91
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.Nysiis#encode(Object)",
           "lines": [
             214
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.RefinedSoundex#encode(Object)",
           "lines": [
             145
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.language.Soundex#encode(Object)",
           "lines": [
             235
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.net.BCodec#encode(Object)",
           "lines": [
             185
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.net.PercentCodec#encode(Object)",
           "lines": [
             198
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.net.QCodec#encode(Object)",
           "lines": [
             243
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#encode(Object)",
           "lines": [
             532
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.net.URLCodec#encode(Object)",
           "lines": [
             305
           ]
@@ -5811,25 +5838,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(Object)",
+          "sig": "org.apache.commons.codec.binary.Hex#encode(Object)",
           "lines": [
             530
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(String, String)",
+          "sig": "org.apache.commons.codec.net.BCodec#encode(String, String)",
           "lines": [
             233
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(String, String)",
+          "sig": "org.apache.commons.codec.net.QCodec#encode(String, String)",
           "lines": [
             291
           ]
         },
         {
-          "sig": "org.apache.commons.codec.EncoderException#encode(String)",
+          "sig": "org.apache.commons.codec.net.URLCodec#encode(String)",
           "lines": [
             327
           ]
@@ -5919,7 +5946,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.Lang#encode(String)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String)",
           "lines": [
             361
           ]
@@ -5943,7 +5970,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Lang.LangRule#guessLanguages(String)",
+          "sig": "org.apache.commons.codec.language.bm.Lang#guessLanguages(String)",
           "lines": [
             215
           ]
@@ -5954,7 +5981,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Lang.LangRule#loadFromResource(String, Languages)",
+          "sig": "org.apache.commons.codec.language.bm.Lang#loadFromResource(String, Languages)",
           "lines": [
             176
           ]
@@ -5979,7 +6006,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages#guessLanguages(String)",
+          "sig": "org.apache.commons.codec.language.bm.Lang#guessLanguages(String)",
           "lines": [
             213
           ]
@@ -6003,31 +6030,31 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#guessLanguages(String)",
+          "sig": "org.apache.commons.codec.language.bm.Lang#guessLanguages(String)",
           "lines": [
             223
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#merge(LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.Languages.SomeLanguages#merge(LanguageSet)",
           "lines": [
             134
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#restrictTo(LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.Languages.SomeLanguages#restrictTo(LanguageSet)",
           "lines": [
             146
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#getInstance(NameType, RuleType, String)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#getInstance(NameType, RuleType, String)",
           "lines": [
             329
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#parsePhoneme(String)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#parsePhoneme(String)",
           "lines": [
             384
           ]
@@ -6042,13 +6069,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#guessLanguage(String)",
+          "sig": "org.apache.commons.codec.language.bm.Lang#guessLanguage(String)",
           "lines": [
             201
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#getInstanceMap(NameType, RuleType, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#getInstanceMap(NameType, RuleType, LanguageSet)",
           "lines": [
             346
           ]
@@ -6059,7 +6086,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#apply(Rule.PhonemeExpr, int)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#apply(PhonemeExpr, int)",
           "lines": [
             112
           ]
@@ -6070,13 +6097,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#guessLanguage(String)",
+          "sig": "org.apache.commons.codec.language.bm.Lang#guessLanguage(String)",
           "lines": [
             201
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#getInstanceMap(NameType, RuleType, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#getInstanceMap(NameType, RuleType, LanguageSet)",
           "lines": [
             346
           ]
@@ -6087,7 +6114,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#mergeWithLanguage(LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.Rule.Phoneme#mergeWithLanguage(LanguageSet)",
           "lines": [
             165
           ]
@@ -6098,7 +6125,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#apply(Rule.PhonemeExpr, int)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#apply(PhonemeExpr, int)",
           "lines": [
             111
           ]
@@ -6143,7 +6170,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Languages.SomeLanguages#from(Set<String>)",
+          "sig": "org.apache.commons.codec.language.bm.Languages.LanguageSet#from(Set)",
           "lines": [
             73
           ]
@@ -6156,19 +6183,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.NameType#langResourceName(NameType)",
+          "sig": "org.apache.commons.codec.language.bm.Languages#langResourceName(NameType)",
           "lines": [
             273
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.NameType#createResourceName(NameType, RuleType, String)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#createResourceName(NameType, RuleType, String)",
           "lines": [
             268
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.NameType#getInstanceMap(NameType, RuleType, String)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#getInstanceMap(NameType, RuleType, String)",
           "lines": [
             368
           ]
@@ -6185,7 +6212,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
           "lines": [
             428
           ]
@@ -6196,7 +6223,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
           "lines": [
             451,
             453
@@ -6208,13 +6235,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#encode(String)",
           "lines": [
             101
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
           "lines": [
             435,
             390,
@@ -6223,9 +6250,16 @@
         }
       ]
     },
-    "encode(String, Languages.LanguageSet)": {
+    "encode(String, LanguageSet)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String)",
+          "lines": [
+            362
+          ]
+        }
+      ]
     },
     "getLang()": {
       "type": "PUBLIC",
@@ -6235,19 +6269,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setConcat(boolean)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setConcat(boolean)",
           "lines": [
             142
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setNameType(NameType)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setNameType(NameType)",
           "lines": [
             170
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setRuleType(RuleType)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setRuleType(RuleType)",
           "lines": [
             183
           ]
@@ -6258,25 +6292,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#getNameType()",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#getNameType()",
           "lines": [
             110
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setConcat(boolean)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setConcat(boolean)",
           "lines": [
             139
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setMaxPhonemes(int)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setMaxPhonemes(int)",
           "lines": [
             153
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setRuleType(RuleType)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setRuleType(RuleType)",
           "lines": [
             180
           ]
@@ -6287,25 +6321,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#getRuleType()",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#getRuleType()",
           "lines": [
             119
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setConcat(boolean)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setConcat(boolean)",
           "lines": [
             140
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setMaxPhonemes(int)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setMaxPhonemes(int)",
           "lines": [
             154
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setNameType(NameType)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setNameType(NameType)",
           "lines": [
             168
           ]
@@ -6316,25 +6350,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#isConcat()",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#isConcat()",
           "lines": [
             128
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setMaxPhonemes(int)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setMaxPhonemes(int)",
           "lines": [
             155
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setNameType(NameType)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setNameType(NameType)",
           "lines": [
             169
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setRuleType(RuleType)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setRuleType(RuleType)",
           "lines": [
             182
           ]
@@ -6349,25 +6383,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setConcat(boolean)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setConcat(boolean)",
           "lines": [
             139
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setMaxPhonemes(int)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setMaxPhonemes(int)",
           "lines": [
             153
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setNameType(NameType)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setNameType(NameType)",
           "lines": [
             167
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#setRuleType(RuleType)",
+          "sig": "org.apache.commons.codec.language.bm.BeiderMorseEncoder#setRuleType(RuleType)",
           "lines": [
             180
           ]
@@ -6376,30 +6410,50 @@
     }
   },
   "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder": {
-    "empty(Languages.LanguageSet)": {
+    "empty(LanguageSet)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
+          "lines": [
+            320
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
+          "lines": [
+            440
+          ]
+        }
+      ]
     },
     "append(CharSequence)": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             330
           ]
         }
       ]
     },
-    "apply(Rule.PhonemeExpr, int)": {
+    "apply(PhonemeExpr, int)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#invoke()",
+          "lines": [
+            205
+          ]
+        }
+      ]
     },
     "getPhonemes()": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             339,
             319
@@ -6411,7 +6465,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#encode(String, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
           "lines": [
             455
           ]
@@ -6426,7 +6480,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             350
           ]
@@ -6439,13 +6493,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             333
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#encode(String, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
           "lines": [
             446
           ]
@@ -6456,13 +6510,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             326
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#encode(String, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
           "lines": [
             447
           ]
@@ -6473,13 +6527,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             324
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#encode(String, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
           "lines": [
             445
           ]
@@ -6490,7 +6544,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             325
           ]
@@ -6501,13 +6555,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             324
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#encode(String, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
           "lines": [
             445
           ]
@@ -6567,29 +6621,50 @@
         }
       ]
     },
-    "getInstance(NameType, RuleType, Languages.LanguageSet)": {
+    "getInstance(NameType, RuleType, LanguageSet)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.apache.commons.codec.language.bm.Rule#getInstance(NameType, RuleType, String)",
+          "lines": [
+            329
+          ]
+        }
+      ]
     },
     "getInstance(NameType, RuleType, String)": {
       "type": "PUBLIC",
       "caller": []
     },
-    "getInstanceMap(NameType, RuleType, Languages.LanguageSet)": {
+    "getInstanceMap(NameType, RuleType, LanguageSet)": {
       "type": "PUBLIC",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
+          "lines": [
+            376,
+            380
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.bm.Rule#getInstance(NameType, RuleType, LanguageSet)",
+          "lines": [
+            311
+          ]
+        }
+      ]
     },
     "getInstanceMap(NameType, RuleType, String)": {
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule#encode(String, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#encode(String, LanguageSet)",
           "lines": [
             378
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule#getInstanceMap(NameType, RuleType, Languages.LanguageSet)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#getInstanceMap(NameType, RuleType, LanguageSet)",
           "lines": [
             346,
             347
@@ -6668,7 +6743,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule#invoke()",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#invoke()",
           "lines": [
             202
           ]
@@ -6679,7 +6754,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule#invoke()",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#invoke()",
           "lines": [
             205
           ]
@@ -6694,7 +6769,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule#invoke()",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.RulesApplication#invoke()",
           "lines": [
             204
           ]
@@ -6718,7 +6793,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule.Phoneme#append(CharSequence)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#append(CharSequence)",
           "lines": [
             94
           ]
@@ -6729,14 +6804,14 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule.Phoneme#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             320,
             342
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule.Phoneme#apply(Rule.PhonemeExpr, int)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#apply(PhonemeExpr, int)",
           "lines": [
             111
           ]
@@ -6751,7 +6826,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule.Phoneme#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             321
           ]
@@ -6762,7 +6837,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule.Phoneme#applyFinalRules(PhonemeBuilder, Map<String, List<Rule>>)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine#applyFinalRules(PhonemeBuilder, Map)",
           "lines": [
             342
           ]
@@ -6795,7 +6870,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule.PhonemeExpr#apply(Rule.PhonemeExpr, int)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#apply(PhonemeExpr, int)",
           "lines": [
             110
           ]
@@ -6812,7 +6887,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule.PhonemeExpr#apply(Rule.PhonemeExpr, int)",
+          "sig": "org.apache.commons.codec.language.bm.PhoneticEngine.PhonemeBuilder#apply(PhonemeExpr, int)",
           "lines": [
             108
           ]
@@ -6833,7 +6908,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule.PhonemeList#parsePhonemeExpr(String)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#parsePhonemeExpr(String)",
           "lines": [
             404
           ]
@@ -6846,7 +6921,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.Rule.RPattern#patternAndContextMatches(CharSequence, int)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#patternAndContextMatches(CharSequence, int)",
           "lines": [
             689,
             686
@@ -6860,13 +6935,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.bm.RuleType#createResourceName(NameType, RuleType, String)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#createResourceName(NameType, RuleType, String)",
           "lines": [
             268
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.bm.RuleType#getInstanceMap(NameType, RuleType, String)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#getInstanceMap(NameType, RuleType, String)",
           "lines": [
             368
           ]
@@ -6973,7 +7048,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.ColognePhonetic.CologneBuffer#colognePhonetic(String)",
+          "sig": "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)",
           "lines": [
             358,
             329,
@@ -6986,7 +7061,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.ColognePhonetic.CologneBuffer#colognePhonetic(String)",
+          "sig": "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)",
           "lines": [
             322
           ]
@@ -7003,7 +7078,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.ColognePhonetic.CologneBuffer#colognePhonetic(String)",
+          "sig": "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)",
           "lines": [
             393
           ]
@@ -7028,7 +7103,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.ColognePhonetic.CologneInputBuffer#colognePhonetic(String)",
+          "sig": "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)",
           "lines": [
             333
           ]
@@ -7056,7 +7131,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.ColognePhonetic.CologneInputBuffer#colognePhonetic(String)",
+          "sig": "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)",
           "lines": [
             330
           ]
@@ -7067,7 +7142,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.ColognePhonetic.CologneInputBuffer#colognePhonetic(String)",
+          "sig": "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)",
           "lines": [
             321
           ]
@@ -7084,7 +7159,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.ColognePhonetic.CologneOutputBuffer#colognePhonetic(String)",
+          "sig": "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)",
           "lines": [
             384,
             353,
@@ -7111,7 +7186,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.ColognePhonetic.CologneOutputBuffer#colognePhonetic(String)",
+          "sig": "org.apache.commons.codec.language.ColognePhonetic#colognePhonetic(String)",
           "lines": [
             322
           ]
@@ -7128,7 +7203,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#parseRules(Scanner, String, Map<Character, List<Rule>>, Map<Character, Character>)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#parseRules(Scanner, String, Map, Map)",
           "lines": [
             292,
             293,
@@ -7199,7 +7274,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex.Branch#soundex(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)",
           "lines": [
             504
           ]
@@ -7214,7 +7289,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex.Branch#soundex(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)",
           "lines": [
             533
           ]
@@ -7229,7 +7304,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex.Branch#soundex(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)",
           "lines": [
             509
           ]
@@ -7240,7 +7315,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex.Branch#soundex(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)",
           "lines": [
             534
           ]
@@ -7269,7 +7344,7 @@
       "type": "PRIVATE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex.Branch#soundex(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)",
           "lines": [
             473
           ]
@@ -7288,7 +7363,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex.Rule#soundex(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)",
           "lines": [
             522
           ]
@@ -7305,7 +7380,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex.Rule#soundex(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)",
           "lines": [
             498
           ]
@@ -7327,7 +7402,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex.Rule#soundex(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#soundex(String, boolean)",
           "lines": [
             494
           ]
@@ -7342,7 +7417,7 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex.Rule#parseRules(Scanner, String, Map<Character, List<Rule>>, Map<Character, Character>)",
+          "sig": "org.apache.commons.codec.language.DaitchMokotoffSoundex#parseRules(Scanner, String, Map, Map)",
           "lines": [
             297
           ]
@@ -7351,9 +7426,201 @@
     }
   },
   "org.apache.commons.codec.language.DoubleMetaphone": {
-    "contains(String, int, int, String...)": {
+    "contains(String, int, int, String[])": {
       "type": "PROTECTED",
-      "caller": []
+      "caller": [
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#conditionC0(String, int)",
+          "lines": [
+            196,
+            201,
+            187
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#conditionCH0(String, int)",
+          "lines": [
+            211,
+            212,
+            215
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#conditionCH1(String, int)",
+          "lines": [
+            224,
+            225,
+            226,
+            222,
+            223
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#conditionL0(String, int)",
+          "lines": [
+            234,
+            237,
+            238,
+            239
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#conditionM0(String, int)",
+          "lines": [
+            251,
+            252
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleC(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            449,
+            465,
+            434,
+            466,
+            436,
+            452,
+            437,
+            454,
+            441,
+            445,
+            462,
+            431
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleCC(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            480,
+            481,
+            484
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleCH(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            519,
+            504
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleD(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            544,
+            534,
+            536
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleG(String, DoubleMetaphoneResult, int, boolean)",
+          "lines": [
+            576,
+            580,
+            582,
+            583,
+            584,
+            588,
+            589,
+            591,
+            592,
+            593,
+            564,
+            596,
+            571
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleGH(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            627,
+            628,
+            629,
+            634
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleJ(String, DoubleMetaphoneResult, int, boolean)",
+          "lines": [
+            676,
+            666,
+            683,
+            684,
+            669
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleP(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            724
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleR(String, DoubleMetaphoneResult, int, boolean)",
+          "lines": [
+            736,
+            735
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleS(String, DoubleMetaphoneResult, int, boolean)",
+          "lines": [
+            785,
+            754,
+            758,
+            774,
+            759,
+            775,
+            791,
+            781,
+            766,
+            782,
+            751
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleSC(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            802,
+            804,
+            815
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleT(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            833,
+            834,
+            842,
+            827,
+            830,
+            831
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleW(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            866,
+            851,
+            867,
+            871,
+            856
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleX(String, DoubleMetaphoneResult, int)",
+          "lines": [
+            890,
+            891,
+            895
+          ]
+        },
+        {
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleZ(String, DoubleMetaphoneResult, int, boolean)",
+          "lines": [
+            912
+          ]
+        }
+      ]
     },
     "charAt(String, int)": {
       "type": "PROTECTED",
@@ -7888,7 +8155,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#doubleMetaphone(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#doubleMetaphone(String, boolean)",
           "lines": [
             322,
             338,
@@ -7902,13 +8169,13 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleAEIOUY(DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleAEIOUY(DoubleMetaphoneResult, int)",
           "lines": [
             419
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleC(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleC(String, DoubleMetaphoneResult, int)",
           "lines": [
             432,
             450,
@@ -7919,14 +8186,14 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleCC(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleCC(String, DoubleMetaphoneResult, int)",
           "lines": [
             489,
             493
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleCH(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleCH(String, DoubleMetaphoneResult, int)",
           "lines": [
             515,
             520,
@@ -7935,7 +8202,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleD(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleD(String, DoubleMetaphoneResult, int)",
           "lines": [
             545,
             548,
@@ -7943,7 +8210,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleG(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleG(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             608,
             595,
@@ -7951,7 +8218,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleGH(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleGH(String, DoubleMetaphoneResult, int)",
           "lines": [
             624,
             618,
@@ -7961,40 +8228,40 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleH(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleH(String, DoubleMetaphoneResult, int)",
           "lines": [
             652
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleJ(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleJ(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             685,
             670
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleL(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleL(String, DoubleMetaphoneResult, int)",
           "lines": [
             705,
             710
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleP(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleP(String, DoubleMetaphoneResult, int)",
           "lines": [
             720,
             723
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleR(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleR(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             739
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleS(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleS(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             769,
             789,
@@ -8003,14 +8270,14 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleSC(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleSC(String, DoubleMetaphoneResult, int)",
           "lines": [
             816,
             813
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleT(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleT(String, DoubleMetaphoneResult, int)",
           "lines": [
             835,
             841,
@@ -8018,20 +8285,20 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleW(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleW(String, DoubleMetaphoneResult, int)",
           "lines": [
             853,
             862
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleX(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleX(String, DoubleMetaphoneResult, int)",
           "lines": [
             886
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleZ(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleZ(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             916,
             909
@@ -8043,21 +8310,21 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleC(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleC(String, DoubleMetaphoneResult, int)",
           "lines": [
             439,
             455
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleCH(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleCH(String, DoubleMetaphoneResult, int)",
           "lines": [
             505,
             522
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleG(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleG(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             578,
             599,
@@ -8065,7 +8332,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleJ(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleJ(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             672,
             677,
@@ -8074,7 +8341,7 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleS(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleS(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             771,
             756,
@@ -8082,19 +8349,19 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleSC(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleSC(String, DoubleMetaphoneResult, int)",
           "lines": [
             811
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleT(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleT(String, DoubleMetaphoneResult, int)",
           "lines": [
             837
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleW(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleW(String, DoubleMetaphoneResult, int)",
           "lines": [
             859
           ]
@@ -8105,32 +8372,32 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleCC(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleCC(String, DoubleMetaphoneResult, int)",
           "lines": [
             486
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleD(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleD(String, DoubleMetaphoneResult, int)",
           "lines": [
             541
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleG(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleG(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             568
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleSC(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleSC(String, DoubleMetaphoneResult, int)",
           "lines": [
             818,
             808
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleX(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleX(String, DoubleMetaphoneResult, int)",
           "lines": [
             893
           ]
@@ -8141,7 +8408,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleG(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleG(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             563,
             566,
@@ -8149,19 +8416,19 @@
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleSC(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleSC(String, DoubleMetaphoneResult, int)",
           "lines": [
             806
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleW(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleW(String, DoubleMetaphoneResult, int)",
           "lines": [
             873
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleZ(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleZ(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             914
           ]
@@ -8172,19 +8439,19 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleR(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleR(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             737
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleS(String, DoubleMetaphoneResult, int, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleS(String, DoubleMetaphoneResult, int, boolean)",
           "lines": [
             787
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleW(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleW(String, DoubleMetaphoneResult, int)",
           "lines": [
             869
           ]
@@ -8224,7 +8491,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#handleL(String, DoubleMetaphoneResult, int)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#handleL(String, DoubleMetaphoneResult, int)",
           "lines": [
             703
           ]
@@ -8264,7 +8531,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#doubleMetaphone(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#doubleMetaphone(String, boolean)",
           "lines": [
             376
           ]
@@ -8275,7 +8542,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#doubleMetaphone(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#doubleMetaphone(String, boolean)",
           "lines": [
             376
           ]
@@ -8286,7 +8553,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#doubleMetaphone(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#doubleMetaphone(String, boolean)",
           "lines": [
             283
           ]
@@ -8297,7 +8564,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.DoubleMetaphone.DoubleMetaphoneResult#doubleMetaphone(String, boolean)",
+          "sig": "org.apache.commons.codec.language.DoubleMetaphone#doubleMetaphone(String, boolean)",
           "lines": [
             281
           ]
@@ -8769,19 +9036,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.SoundexUtils#nysiis(String)",
+          "sig": "org.apache.commons.codec.language.Nysiis#nysiis(String)",
           "lines": [
             255
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.SoundexUtils#soundex(String)",
+          "sig": "org.apache.commons.codec.language.RefinedSoundex#soundex(String)",
           "lines": [
             193
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.SoundexUtils#soundex(String)",
+          "sig": "org.apache.commons.codec.language.Soundex#soundex(String)",
           "lines": [
             316
           ]
@@ -8792,13 +9059,13 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.SoundexUtils#difference(String, String)",
+          "sig": "org.apache.commons.codec.language.RefinedSoundex#difference(String, String)",
           "lines": [
             126
           ]
         },
         {
-          "sig": "org.apache.commons.codec.language.SoundexUtils#difference(String, String)",
+          "sig": "org.apache.commons.codec.language.Soundex#difference(String, String)",
           "lines": [
             216
           ]
@@ -8820,7 +9087,7 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.language.SoundexUtils#encode(String)",
+          "sig": "org.apache.commons.codec.language.Caverphone2#encode(String)",
           "lines": [
             45
           ]
@@ -9136,7 +9403,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#doDecoding(byte[])",
+          "sig": "org.apache.commons.codec.net.QCodec#doDecoding(byte[])",
           "lines": [
             205,
             207
@@ -9168,7 +9435,7 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#doEncoding(byte[])",
+          "sig": "org.apache.commons.codec.net.QCodec#doEncoding(byte[])",
           "lines": [
             215
           ]
@@ -9388,13 +9655,13 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.net.RFC1522Codec#decode(String)",
+          "sig": "org.apache.commons.codec.net.BCodec#decode(String)",
           "lines": [
             146
           ]
         },
         {
-          "sig": "org.apache.commons.codec.net.RFC1522Codec#decode(String)",
+          "sig": "org.apache.commons.codec.net.QCodec#decode(String)",
           "lines": [
             177
           ]
@@ -9427,13 +9694,13 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.net.RFC1522Codec#encode(String, Charset)",
+          "sig": "org.apache.commons.codec.net.BCodec#encode(String, Charset)",
           "lines": [
             215
           ]
         },
         {
-          "sig": "org.apache.commons.codec.net.RFC1522Codec#encode(String, Charset)",
+          "sig": "org.apache.commons.codec.net.QCodec#encode(String, Charset)",
           "lines": [
             273
           ]
@@ -9450,13 +9717,13 @@
       "type": "PROTECTED",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.net.RFC1522Codec#encode(String, String)",
+          "sig": "org.apache.commons.codec.net.BCodec#encode(String, String)",
           "lines": [
             231
           ]
         },
         {
-          "sig": "org.apache.commons.codec.net.RFC1522Codec#encode(String, String)",
+          "sig": "org.apache.commons.codec.net.QCodec#encode(String, String)",
           "lines": [
             289
           ]
@@ -9467,13 +9734,13 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.net.RFC1522Codec#encode(String)",
+          "sig": "org.apache.commons.codec.net.BCodec#encode(String)",
           "lines": [
             199
           ]
         },
         {
-          "sig": "org.apache.commons.codec.net.RFC1522Codec#encode(String)",
+          "sig": "org.apache.commons.codec.net.QCodec#encode(String)",
           "lines": [
             257
           ]
@@ -9646,21 +9913,21 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.net.Utils#decode(byte[])",
+          "sig": "org.apache.commons.codec.net.PercentCodec#decode(byte[])",
           "lines": [
             112,
             111
           ]
         },
         {
-          "sig": "org.apache.commons.codec.net.Utils#decodeQuotedPrintable(byte[])",
+          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#decodeQuotedPrintable(byte[])",
           "lines": [
             136,
             137
           ]
         },
         {
-          "sig": "org.apache.commons.codec.net.Utils#decodeUrl(byte[])",
+          "sig": "org.apache.commons.codec.net.URLCodec#decodeUrl(byte[])",
           "lines": [
             112,
             113
@@ -9672,21 +9939,21 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.net.Utils#doEncode(byte[], int, boolean)",
+          "sig": "org.apache.commons.codec.net.PercentCodec#doEncode(byte[], int, boolean)",
           "lines": [
             152,
             153
           ]
         },
         {
-          "sig": "org.apache.commons.codec.net.Utils#encodeQuotedPrintable(int, ByteArrayOutputStream)",
+          "sig": "org.apache.commons.codec.net.QuotedPrintableCodec#encodeQuotedPrintable(int, ByteArrayOutputStream)",
           "lines": [
             285,
             286
           ]
         },
         {
-          "sig": "org.apache.commons.codec.net.Utils#encodeUrl(BitSet, byte[])",
+          "sig": "org.apache.commons.codec.net.URLCodec#encodeUrl(BitSet, byte[])",
           "lines": [
             155,
             156
@@ -9700,25 +9967,25 @@
       "type": "PUBLIC",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.Resources#loadFromResource(String, Languages)",
+          "sig": "org.apache.commons.codec.language.bm.Lang#loadFromResource(String, Languages)",
           "lines": [
             137
           ]
         },
         {
-          "sig": "org.apache.commons.codec.Resources#getInstance(String)",
+          "sig": "org.apache.commons.codec.language.bm.Languages#getInstance(String)",
           "lines": [
             253
           ]
         },
         {
-          "sig": "org.apache.commons.codec.Resources#createScanner(NameType, RuleType, String)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#createScanner(NameType, RuleType, String)",
           "lines": [
             274
           ]
         },
         {
-          "sig": "org.apache.commons.codec.Resources#createScanner(String)",
+          "sig": "org.apache.commons.codec.language.bm.Rule#createScanner(String)",
           "lines": [
             280
           ]
@@ -9737,19 +10004,19 @@
       "type": "NONE",
       "caller": [
         {
-          "sig": "org.apache.commons.codec.StringEncoder#encode(Object)",
+          "sig": "org.apache.commons.codec.language.AbstractCaverphone#encode(Object)",
           "lines": [
             51
           ]
         },
         {
-          "sig": "org.apache.commons.codec.StringEncoder#isEncodeEqual(String, String)",
+          "sig": "org.apache.commons.codec.language.AbstractCaverphone#isEncodeEqual(String, String)",
           "lines": [
             68
           ]
         },
         {
-          "sig": "org.apache.commons.codec.StringEncoder#difference(StringEncoder, String, String)",
+          "sig": "org.apache.commons.codec.language.SoundexUtils#difference(StringEncoder, String, String)",
           "lines": [
             84
           ]

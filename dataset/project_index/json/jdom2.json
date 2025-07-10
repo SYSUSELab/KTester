@@ -159,7 +159,7 @@
           {
             "call_methods": [
               {
-                "signature": "java.lang.Class#getMethod(String, Class<?>...)",
+                "signature": "java.lang.Class#getMethod(String, Class<?>[])",
                 "arguments": [
                   {
                     "name": "\"setInternalSubset\"",
@@ -167,7 +167,7 @@
                   },
                   {
                     "name": "String.class",
-                    "type": "java.lang.Class<?>..."
+                    "type": "java.lang.Class<?>"
                   }
                 ],
                 "return_type": "java.lang.reflect.Method",
@@ -184,7 +184,7 @@
                 ]
               },
               {
-                "signature": "java.lang.reflect.Method#invoke(Object, ..)",
+                "signature": "java.lang.reflect.Method#invoke(Object, Object[])",
                 "arguments": [
                   {
                     "name": "dt",
@@ -192,7 +192,7 @@
                   },
                   {
                     "name": "s",
-                    "type": "java.lang.Object..."
+                    "type": "java.lang.Object"
                   }
                 ],
                 "return_type": "java.lang.Object",
@@ -4503,6 +4503,23 @@
                 ]
               },
               {
+                "signature": "java.lang.String#format(String, Object[])",
+                "arguments": [
+                  {
+                    "name": "\"Unable to clone class %s which should always support it.\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "this.getClass().getName()",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  109
+                ]
+              },
+              {
                 "signature": "java.lang.Class#getName()",
                 "arguments": [],
                 "return_type": "java.lang.String",
@@ -4523,23 +4540,6 @@
                   }
                 ],
                 "return_type": "java.lang.IllegalStateException",
-                "line_numbers": [
-                  109
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
-                "arguments": [
-                  {
-                    "name": "\"Unable to clone class %s which should always support it.\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "this.getClass().getName()",
-                    "type": "java.lang.Object..."
-                  }
-                ],
-                "return_type": "java.lang.String",
                 "line_numbers": [
                   109
                 ]
@@ -14140,11 +14140,11 @@
           {
             "call_methods": [
               {
-                "signature": "java.util.Collections#unmodifiableList(List<? extends T>)",
+                "signature": "java.util.Arrays#asList(T[])",
                 "arguments": [
                   {
-                    "name": "Arrays.asList(new Namespace[] { Namespace.NO_NAMESPACE, Namespace.XML_NAMESPACE })",
-                    "type": "java.util.List<? extends T>"
+                    "name": "new Namespace[] { Namespace.NO_NAMESPACE, Namespace.XML_NAMESPACE }",
+                    "type": "T"
                   }
                 ],
                 "return_type": "java.util.List<T>",
@@ -14153,11 +14153,11 @@
                 ]
               },
               {
-                "signature": "java.util.Arrays#asList(..)",
+                "signature": "java.util.Collections#unmodifiableList(List<? extends T>)",
                 "arguments": [
                   {
-                    "name": "new Namespace[] { Namespace.NO_NAMESPACE, Namespace.XML_NAMESPACE }",
-                    "type": "T..."
+                    "name": "Arrays.asList(new Namespace[] { Namespace.NO_NAMESPACE, Namespace.XML_NAMESPACE })",
+                    "type": "java.util.List<? extends T>"
                   }
                 ],
                 "return_type": "java.util.List<T>",
@@ -14189,11 +14189,11 @@
           {
             "call_methods": [
               {
-                "signature": "java.util.Collections#unmodifiableList(List<? extends T>)",
+                "signature": "java.util.Arrays#asList(T[])",
                 "arguments": [
                   {
-                    "name": "Arrays.asList(new Namespace[] { Namespace.NO_NAMESPACE, Namespace.XML_NAMESPACE })",
-                    "type": "java.util.List<? extends T>"
+                    "name": "new Namespace[] { Namespace.NO_NAMESPACE, Namespace.XML_NAMESPACE }",
+                    "type": "T"
                   }
                 ],
                 "return_type": "java.util.List<T>",
@@ -14202,11 +14202,11 @@
                 ]
               },
               {
-                "signature": "java.util.Arrays#asList(..)",
+                "signature": "java.util.Collections#unmodifiableList(List<? extends T>)",
                 "arguments": [
                   {
-                    "name": "new Namespace[] { Namespace.NO_NAMESPACE, Namespace.XML_NAMESPACE }",
-                    "type": "T..."
+                    "name": "Arrays.asList(new Namespace[] { Namespace.NO_NAMESPACE, Namespace.XML_NAMESPACE })",
+                    "type": "java.util.List<? extends T>"
                   }
                 ],
                 "return_type": "java.util.List<T>",
@@ -26221,7 +26221,7 @@
         {
           "call_methods": [
             {
-              "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromString(SchemaFactoryProvider, ..)",
+              "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromString(SchemaFactoryProvider, String[])",
               "arguments": [
                 {
                   "name": "sfp",
@@ -26229,7 +26229,7 @@
                 },
                 {
                   "name": "systemid",
-                  "type": "java.lang.String..."
+                  "type": "java.lang.String"
                 }
               ],
               "return_type": "javax.xml.validation.Schema",
@@ -26262,7 +26262,7 @@
         {
           "call_methods": [
             {
-              "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromURL(SchemaFactoryProvider, ..)",
+              "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromURL(SchemaFactoryProvider, URL[])",
               "arguments": [
                 {
                   "name": "sfp",
@@ -26270,7 +26270,7 @@
                 },
                 {
                   "name": "systemid",
-                  "type": "java.net.URL..."
+                  "type": "java.net.URL"
                 }
               ],
               "return_type": "javax.xml.validation.Schema",
@@ -26303,7 +26303,7 @@
         {
           "call_methods": [
             {
-              "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromFile(SchemaFactoryProvider, ..)",
+              "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromFile(SchemaFactoryProvider, File[])",
               "arguments": [
                 {
                   "name": "sfp",
@@ -26311,7 +26311,7 @@
                 },
                 {
                   "name": "systemid",
-                  "type": "java.io.File..."
+                  "type": "java.io.File"
                 }
               ],
               "return_type": "javax.xml.validation.Schema",
@@ -26344,7 +26344,7 @@
         {
           "call_methods": [
             {
-              "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromSource(SchemaFactoryProvider, ..)",
+              "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromSource(SchemaFactoryProvider, Source[])",
               "arguments": [
                 {
                   "name": "sfp",
@@ -26352,7 +26352,7 @@
                 },
                 {
                   "name": "sources",
-                  "type": "javax.xml.transform.Source..."
+                  "type": "javax.xml.transform.Source"
                 }
               ],
               "return_type": "javax.xml.validation.Schema",
@@ -26410,7 +26410,7 @@
                 ]
               },
               {
-                "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromSource(SchemaFactoryProvider, ..)",
+                "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromSource(SchemaFactoryProvider, Source[])",
                 "arguments": [
                   {
                     "name": "sfp",
@@ -26418,7 +26418,7 @@
                   },
                   {
                     "name": "urls",
-                    "type": "javax.xml.transform.Source..."
+                    "type": "javax.xml.transform.Source"
                   }
                 ],
                 "return_type": "javax.xml.validation.Schema",
@@ -26460,7 +26460,7 @@
               }
             ],
             "return_type": "javax.xml.validation.Schema",
-            "signature": "private static final Schema getSchemaFromString(SchemaFactoryProvider, String...)",
+            "signature": "private static final Schema getSchemaFromString(SchemaFactoryProvider, String[])",
             "parameters": [
               {
                 "name": "sfp",
@@ -26508,7 +26508,7 @@
                 ]
               },
               {
-                "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromSource(SchemaFactoryProvider, ..)",
+                "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromSource(SchemaFactoryProvider, Source[])",
                 "arguments": [
                   {
                     "name": "sfp",
@@ -26516,7 +26516,7 @@
                   },
                   {
                     "name": "sources",
-                    "type": "javax.xml.transform.Source..."
+                    "type": "javax.xml.transform.Source"
                   }
                 ],
                 "return_type": "javax.xml.validation.Schema",
@@ -26545,7 +26545,7 @@
               }
             ],
             "return_type": "javax.xml.validation.Schema",
-            "signature": "private static final Schema getSchemaFromFile(SchemaFactoryProvider, File...)",
+            "signature": "private static final Schema getSchemaFromFile(SchemaFactoryProvider, File[])",
             "parameters": [
               {
                 "name": "sfp",
@@ -26606,7 +26606,7 @@
                 ]
               },
               {
-                "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromSource(SchemaFactoryProvider, ..)",
+                "signature": "org.jdom2.input.sax.AbstractReaderXSDFactory#getSchemaFromSource(SchemaFactoryProvider, Source[])",
                 "arguments": [
                   {
                     "name": "sfp",
@@ -26614,7 +26614,7 @@
                   },
                   {
                     "name": "sources",
-                    "type": "javax.xml.transform.Source..."
+                    "type": "javax.xml.transform.Source"
                   }
                 ],
                 "return_type": "javax.xml.validation.Schema",
@@ -26676,7 +26676,7 @@
               }
             ],
             "return_type": "javax.xml.validation.Schema",
-            "signature": "private static final Schema getSchemaFromURL(SchemaFactoryProvider, URL...)",
+            "signature": "private static final Schema getSchemaFromURL(SchemaFactoryProvider, URL[])",
             "parameters": [
               {
                 "name": "sfp",
@@ -26819,7 +26819,7 @@
               }
             ],
             "return_type": "javax.xml.validation.Schema",
-            "signature": "private static final Schema getSchemaFromSource(SchemaFactoryProvider, Source...)",
+            "signature": "private static final Schema getSchemaFromSource(SchemaFactoryProvider, Source[])",
             "parameters": [
               {
                 "name": "sfp",
@@ -35192,7 +35192,7 @@
             ],
             "external_fields": [],
             "return_type": "java.lang.String",
-            "signature": "private static final String getGroup(Matcher, int...)",
+            "signature": "private static final String getGroup(Matcher, int[])",
             "parameters": [
               {
                 "name": "mat",
@@ -35411,6 +35411,37 @@
                 ]
               },
               {
+                "signature": "org.jdom2.input.stax.DTDParser#getGroup(Matcher, int[])",
+                "arguments": [
+                  {
+                    "name": "mat",
+                    "type": "java.util.regex.Matcher"
+                  },
+                  {
+                    "name": "7",
+                    "type": "int"
+                  },
+                  {
+                    "name": "9",
+                    "type": "int"
+                  },
+                  {
+                    "name": "19",
+                    "type": "int"
+                  },
+                  {
+                    "name": "21",
+                    "type": "int"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  396,
+                  397,
+                  398
+                ]
+              },
+              {
                 "signature": "org.jdom2.JDOMFactory#docType(String, String, String)",
                 "arguments": [
                   {
@@ -35468,37 +35499,6 @@
                 "return_type": "org.jdom2.JDOMException",
                 "line_numbers": [
                   391
-                ]
-              },
-              {
-                "signature": "org.jdom2.input.stax.DTDParser#getGroup(Matcher, ..)",
-                "arguments": [
-                  {
-                    "name": "mat",
-                    "type": "java.util.regex.Matcher"
-                  },
-                  {
-                    "name": "7",
-                    "type": "int..."
-                  },
-                  {
-                    "name": "9",
-                    "type": "int"
-                  },
-                  {
-                    "name": "19",
-                    "type": "int"
-                  },
-                  {
-                    "name": "21",
-                    "type": "int"
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  396,
-                  397,
-                  398
                 ]
               },
               {
@@ -57287,7 +57287,7 @@
           {
             "call_methods": [
               {
-                "signature": "java.lang.Class#getMethod(String, Class<?>...)",
+                "signature": "java.lang.Class#getMethod(String, Class<?>[])",
                 "arguments": [
                   {
                     "name": "\"newInstance\"",
@@ -57323,20 +57323,7 @@
                 ]
               },
               {
-                "signature": "java.lang.Class#forName(String)",
-                "arguments": [
-                  {
-                    "name": "\"javax.xml.parsers.SAXParserFactory\"",
-                    "type": "java.lang.String"
-                  }
-                ],
-                "return_type": "java.lang.Class<?>",
-                "line_numbers": [
-                  743
-                ]
-              },
-              {
-                "signature": "java.lang.reflect.Method#invoke(Object, ..)",
+                "signature": "java.lang.reflect.Method#invoke(Object, Object[])",
                 "arguments": [
                   {
                     "name": "null",
@@ -57348,6 +57335,19 @@
                   752,
                   757,
                   748
+                ]
+              },
+              {
+                "signature": "java.lang.Class#forName(String)",
+                "arguments": [
+                  {
+                    "name": "\"javax.xml.parsers.SAXParserFactory\"",
+                    "type": "java.lang.String"
+                  }
+                ],
+                "return_type": "java.lang.Class<?>",
+                "line_numbers": [
+                  743
                 ]
               }
             ],
@@ -81735,6 +81735,26 @@
                 ]
               },
               {
+                "signature": "java.lang.String#format(String, Object[])",
+                "arguments": [
+                  {
+                    "name": "\"Truncated Surrogate Pair 0x%04x????\"",
+                    "type": "java.lang.String"
+                  },
+                  {
+                    "name": "(int) text.charAt(i - 1)",
+                    "type": "java.lang.Object"
+                  }
+                ],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  486,
+                  473,
+                  463,
+                  479
+                ]
+              },
+              {
                 "signature": "java.lang.String#length()",
                 "arguments": [],
                 "return_type": "int",
@@ -81753,26 +81773,6 @@
                 "return_type": "boolean",
                 "line_numbers": [
                   466
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
-                "arguments": [
-                  {
-                    "name": "\"Truncated Surrogate Pair 0x%04x????\"",
-                    "type": "java.lang.String"
-                  },
-                  {
-                    "name": "(int) text.charAt(i - 1)",
-                    "type": "java.lang.Object..."
-                  }
-                ],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  486,
-                  473,
-                  463,
-                  479
                 ]
               }
             ],
@@ -83919,7 +83919,7 @@
             ],
             "external_fields": [],
             "return_type": "org.jdom2.xpath.XPathExpression<T>",
-            "signature": "public XPathExpression<T> compile(String, Filter<T>, Map<String, Object>, Namespace...)",
+            "signature": "public XPathExpression<T> compile(String, Filter<T>, Map<String, Object>, Namespace[])",
             "parameters": [
               {
                 "name": "expression",
@@ -84966,6 +84966,19 @@
                 ]
               },
               {
+                "signature": "java.util.Arrays#asList(T[])",
+                "arguments": [
+                  {
+                    "name": "ret",
+                    "type": "T"
+                  }
+                ],
+                "return_type": "java.util.List<T>",
+                "line_numbers": [
+                  306
+                ]
+              },
+              {
                 "signature": "java.util.List#iterator()",
                 "arguments": [],
                 "return_type": "java.util.Iterator<E>",
@@ -85034,19 +85047,6 @@
                 "return_type": "V",
                 "line_numbers": [
                   303
-                ]
-              },
-              {
-                "signature": "java.util.Arrays#asList(..)",
-                "arguments": [
-                  {
-                    "name": "ret",
-                    "type": "T..."
-                  }
-                ],
-                "return_type": "java.util.List<T>",
-                "line_numbers": [
-                  306
                 ]
               }
             ],
@@ -86802,16 +86802,7 @@
                 ]
               },
               {
-                "signature": "java.util.Map#size()",
-                "arguments": [],
-                "return_type": "int",
-                "line_numbers": [
-                  380,
-                  383
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
+                "signature": "java.lang.String#format(String, Object[])",
                 "arguments": [
                   {
                     "name": "\"[XPathExpression: %d namespaces and %d variables for query %s]\"",
@@ -86819,7 +86810,7 @@
                   },
                   {
                     "name": "nscnt",
-                    "type": "java.lang.Object..."
+                    "type": "java.lang.Object"
                   },
                   {
                     "name": "vcnt",
@@ -86833,6 +86824,15 @@
                 "return_type": "java.lang.String",
                 "line_numbers": [
                   385
+                ]
+              },
+              {
+                "signature": "java.util.Map#size()",
+                "arguments": [],
+                "return_type": "int",
+                "line_numbers": [
+                  380,
+                  383
                 ]
               }
             ],
@@ -87214,32 +87214,7 @@
                 ]
               },
               {
-                "signature": "org.jdom2.xpath.XPathExpression#getExpression()",
-                "arguments": [],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  158
-                ]
-              },
-              {
-                "signature": "java.util.List#size()",
-                "arguments": [],
-                "return_type": "int",
-                "line_numbers": [
-                  160,
-                  159
-                ]
-              },
-              {
-                "signature": "java.lang.Class#getName()",
-                "arguments": [],
-                "return_type": "java.lang.String",
-                "line_numbers": [
-                  159
-                ]
-              },
-              {
-                "signature": "java.lang.String#format(String, ..)",
+                "signature": "java.lang.String#format(String, Object[])",
                 "arguments": [
                   {
                     "name": "\"[XPathDiagnostic: '%s' evaluated (%s) against \" + \"%s produced  raw=%d discarded=%d returned=%d]\"",
@@ -87247,7 +87222,7 @@
                   },
                   {
                     "name": "dxpath.getExpression()",
-                    "type": "java.lang.Object..."
+                    "type": "java.lang.Object"
                   },
                   {
                     "name": "(dfirstonly ? \"first\" : \"all\")",
@@ -87273,6 +87248,31 @@
                 "return_type": "java.lang.String",
                 "line_numbers": [
                   156
+                ]
+              },
+              {
+                "signature": "org.jdom2.xpath.XPathExpression#getExpression()",
+                "arguments": [],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  158
+                ]
+              },
+              {
+                "signature": "java.util.List#size()",
+                "arguments": [],
+                "return_type": "int",
+                "line_numbers": [
+                  160,
+                  159
+                ]
+              },
+              {
+                "signature": "java.lang.Class#getName()",
+                "arguments": [],
+                "return_type": "java.lang.String",
+                "line_numbers": [
+                  159
                 ]
               }
             ],
@@ -87911,7 +87911,7 @@
                 ]
               },
               {
-                "signature": "org.jdom2.xpath.XPathFactory#compile(String, Filter<T>, Map<String, Object>, ..)",
+                "signature": "org.jdom2.xpath.XPathFactory#compile(String, Filter<T>, Map<String, Object>, Namespace[])",
                 "arguments": [
                   {
                     "name": "expression",
@@ -88433,7 +88433,7 @@
             "call_methods": [],
             "external_fields": [],
             "return_type": "org.jdom2.xpath.XPathExpression<T>",
-            "signature": "public abstract XPathExpression<T> compile(String, Filter<T>, Map<String, Object>, Namespace...)",
+            "signature": "public abstract XPathExpression<T> compile(String, Filter<T>, Map<String, Object>, Namespace[])",
             "parameters": [
               {
                 "name": "expression",
@@ -88460,7 +88460,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.jdom2.xpath.XPathFactory#compile(String, Filter<T>, Map<String, Object>, ..)",
+                "signature": "org.jdom2.xpath.XPathFactory#compile(String, Filter<T>, Map<String, Object>, Namespace[])",
                 "arguments": [
                   {
                     "name": "expression",
@@ -88476,7 +88476,7 @@
                   },
                   {
                     "name": "namespaces.toArray(EMPTYNS)",
-                    "type": "org.jdom2.Namespace..."
+                    "type": "org.jdom2.Namespace"
                   }
                 ],
                 "return_type": "org.jdom2.xpath.XPathExpression<T>",
@@ -88532,7 +88532,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.jdom2.xpath.XPathFactory#compile(String, Filter<T>, Map<String, Object>, ..)",
+                "signature": "org.jdom2.xpath.XPathFactory#compile(String, Filter<T>, Map<String, Object>, Namespace[])",
                 "arguments": [
                   {
                     "name": "expression",
@@ -88548,7 +88548,7 @@
                   },
                   {
                     "name": "EMPTYNS",
-                    "type": "org.jdom2.Namespace..."
+                    "type": "org.jdom2.Namespace"
                   }
                 ],
                 "return_type": "org.jdom2.xpath.XPathExpression<T>",
@@ -88583,7 +88583,7 @@
           {
             "call_methods": [
               {
-                "signature": "org.jdom2.xpath.XPathFactory#compile(String, Filter<T>, Map<String, Object>, ..)",
+                "signature": "org.jdom2.xpath.XPathFactory#compile(String, Filter<T>, Map<String, Object>, Namespace[])",
                 "arguments": [
                   {
                     "name": "expression",
@@ -88599,7 +88599,7 @@
                   },
                   {
                     "name": "EMPTYNS",
-                    "type": "org.jdom2.Namespace..."
+                    "type": "org.jdom2.Namespace"
                   }
                 ],
                 "return_type": "org.jdom2.xpath.XPathExpression<T>",
