@@ -8,12 +8,12 @@ public class Test{
             System.out.println(args[i]);
         }
 
-        // // test IndexBuilder
-        // String mode = "group";
-        // String code_path = "../../../dataset/project_index/json";
-        // String index_path = "../../../dataset/project_index/lucene";
-        // String[] arguments = new String[] {mode, code_path, index_path};
-        // IndexBuilder.main(arguments);
+        // test IndexBuilder
+        String mode = "group";
+        String code_path = "../../../dataset/project_index/json";
+        String index_path = "../../../dataset/project_index/lucene";
+        String[] arguments = new String[] {mode, code_path, index_path};
+        IndexBuilder.main(arguments);
 
         // // test CodeSearcher
         // String project = "../../../dataset/projects/batch-processing-gateway";

@@ -8819,14 +8819,6 @@
                 ]
               },
               {
-                "signature": "com.apple.spark.core.ApplicationMonitor.Anonymous-b78aa35a-200f-4158-82d5-5f2c7f7763d4#Anonymous-b78aa35a-200f-4158-82d5-5f2c7f7763d4()",
-                "arguments": [],
-                "return_type": "com.apple.spark.core.ApplicationMonitor.Anonymous-b78aa35a-200f-4158-82d5-5f2c7f7763d4",
-                "line_numbers": [
-                  207
-                ]
-              },
-              {
                 "signature": "com.apple.spark.AppConfig.SparkCluster#getId()",
                 "arguments": [],
                 "return_type": "java.lang.String",
@@ -8947,6 +8939,14 @@
                 "return_type": "io.fabric8.kubernetes.client.informers.SharedIndexInformer<T>",
                 "line_numbers": [
                   201
+                ]
+              },
+              {
+                "signature": "com.apple.spark.core.ApplicationMonitor.Anonymous-51335e65-b251-48f3-914a-11ec7a3f24a1#Anonymous-51335e65-b251-48f3-914a-11ec7a3f24a1()",
+                "arguments": [],
+                "return_type": "com.apple.spark.core.ApplicationMonitor.Anonymous-51335e65-b251-48f3-914a-11ec7a3f24a1",
+                "line_numbers": [
+                  207
                 ]
               },
               {
@@ -40095,6 +40095,14 @@
                 ]
               },
               {
+                "signature": "com.apple.spark.rest.CloudStorageRest.Anonymous-d8f080bf-dac5-4e33-ae60-656911a3036f#Anonymous-d8f080bf-dac5-4e33-ae60-656911a3036f()",
+                "arguments": [],
+                "return_type": "com.apple.spark.rest.CloudStorageRest.Anonymous-d8f080bf-dac5-4e33-ae60-656911a3036f",
+                "line_numbers": [
+                  217
+                ]
+              },
+              {
                 "signature": "java.util.Optional#get()",
                 "arguments": [],
                 "return_type": "T",
@@ -40277,14 +40285,6 @@
                 "return_type": "com.amazonaws.RequestClientOptions",
                 "line_numbers": [
                   238
-                ]
-              },
-              {
-                "signature": "com.apple.spark.rest.CloudStorageRest.Anonymous-e41558bd-f782-47ee-8dbf-416f2d4aec71#Anonymous-e41558bd-f782-47ee-8dbf-416f2d4aec71()",
-                "arguments": [],
-                "return_type": "com.apple.spark.rest.CloudStorageRest.Anonymous-e41558bd-f782-47ee-8dbf-416f2d4aec71",
-                "line_numbers": [
-                  217
                 ]
               },
               {
@@ -60308,14 +60308,6 @@
           {
             "call_methods": [
               {
-                "signature": "com.apple.spark.util.EndAwareInputStreamTest.Anonymous-e5a76067-3641-4cee-955b-8d5efefb81c1#Anonymous-e5a76067-3641-4cee-955b-8d5efefb81c1()",
-                "arguments": [],
-                "return_type": "com.apple.spark.util.EndAwareInputStreamTest.Anonymous-e5a76067-3641-4cee-955b-8d5efefb81c1",
-                "line_numbers": [
-                  45
-                ]
-              },
-              {
                 "signature": "java.io.ByteArrayInputStream#ByteArrayInputStream(byte[])",
                 "arguments": [
                   {
@@ -60488,6 +60480,14 @@
                   85,
                   87,
                   76
+                ]
+              },
+              {
+                "signature": "com.apple.spark.util.EndAwareInputStreamTest.Anonymous-0e17e4c0-7920-46fb-90e8-3b2e9206e9a6#Anonymous-0e17e4c0-7920-46fb-90e8-3b2e9206e9a6()",
+                "arguments": [],
+                "return_type": "com.apple.spark.util.EndAwareInputStreamTest.Anonymous-0e17e4c0-7920-46fb-90e8-3b2e9206e9a6",
+                "line_numbers": [
+                  45
                 ]
               }
             ],

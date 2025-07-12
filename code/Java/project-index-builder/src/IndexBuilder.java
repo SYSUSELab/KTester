@@ -90,7 +90,7 @@ public class IndexBuilder {
             methods.entrySet().forEach(method_entry -> {
                 method_entry.getValue().getAsJsonArray().forEach(info -> {
                     JsonObject method_info = info.getAsJsonObject();
-                    String method_sig = method_info.get("signature").getAsString();
+                    String method_sig = method_info.get("signature").getAsString().replace("...", "[]");
                     int start = method_info.get("start_line").getAsInt();
                     int end = method_info.get("end_line").getAsInt();
                     JsonArray call_func = method_info.get("call_methods").getAsJsonArray();

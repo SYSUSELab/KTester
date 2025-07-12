@@ -22252,9 +22252,9 @@
                 ]
               },
               {
-                "signature": "software.amazon.event.ruler.IntIntMap.Anonymous-8b0a95cb-8fd3-4fc9-9b82-7c902eeb092f#Anonymous-8b0a95cb-8fd3-4fc9-9b82-7c902eeb092f()",
+                "signature": "software.amazon.event.ruler.IntIntMap.Anonymous-95569c1a-e5dc-4de4-978c-1c95f9757e07#Anonymous-95569c1a-e5dc-4de4-978c-1c95f9757e07()",
                 "arguments": [],
-                "return_type": "software.amazon.event.ruler.IntIntMap.Anonymous-8b0a95cb-8fd3-4fc9-9b82-7c902eeb092f",
+                "return_type": "software.amazon.event.ruler.IntIntMap.Anonymous-95569c1a-e5dc-4de4-978c-1c95f9757e07",
                 "line_numbers": [
                   189
                 ]

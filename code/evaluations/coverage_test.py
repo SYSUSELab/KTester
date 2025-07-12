@@ -144,10 +144,8 @@ class CoverageCalculator(CoverageExtractor):
                 classname = test["class"].split(".")[-1]
                 html_path = f"{self.report_path}/jacoco-report-html/{testid}/{package}/{classname}.html"
                 cov_score = self.extract_single_coverage(html_path, method)
-                # cov_score = self.extract_single_coverage(testid, package, classname, method)
                 data_id = f"{test['class']}#{method}"
                 if cov_score: 
-                    # summary[data_id].update(cov_score)
                     summary[data_id].update({"inst_cov": cov_score[0], "bran_cov": cov_score[1]})
                 else: 
                     summary[data_id].update({"inst_cov": "<missing>", "bran_cov": "<missing>"})

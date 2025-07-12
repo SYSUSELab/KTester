@@ -71,8 +71,8 @@ def run(args):
 
     if args.workspace:
         logger.info("Preparing workspace...")
-        WSP.prepare_workspace(dataset_abs)
-        # logger.info("Setting file structure...")
+        # WSP.prepare_workspace(dataset_abs)
+        logger.info("Setting file structure...")
         set_file_structure()
     # if args.dataset:
     #     logger.info("Preparing dataset_info.json ...")
@@ -80,13 +80,12 @@ def run(args):
     #     DatasetProcessor.main([dataset_abs])
     if args.project_index:
         logger.info("Constructing project index ...")
-        # ProjectPreprocessor = jpype.JClass("PreProcessor")
-        # ProjectPreprocessor.main([dataset_abs, f"{code_info_path}/json"])
-        # TODO: add code graph
-        # PreProcess.build_calling_graph(FS)
+        ProjectPreprocessor = jpype.JClass("PreProcessor")
+        ProjectPreprocessor.main([dataset_abs, f"{code_info_path}/json"])
+        PreProcess.build_calling_graph(FS)
         PreProcess.extract_invoke_patterns(FS)
-        # IndexBuilder = jpype.JClass("IndexBuilder")
-        # IndexBuilder.main(["group", f"{code_info_path}/json", f"{code_info_path}/lucene"])
+        IndexBuilder = jpype.JClass("IndexBuilder")
+        IndexBuilder.main(["group", f"{code_info_path}/json", f"{code_info_path}/lucene"])
     
     logger.info("preparation completed.")
     return

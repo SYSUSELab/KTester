@@ -159,28 +159,6 @@ class InvokePatternExtractor:
                     bfs_queue.put((caller, npath))
                 else:
                     call_chains.append(npath)
-        # bfs_queue = Queue()
-        # bfs_queue.put(node_id)
-        # prev = {}
-        # prev[node_id] = None
-        # visited = {node_id}
-        # call_chains = []
-        # while not bfs_queue.empty():
-        #     cur_node_id = bfs_queue.get()
-        #     visited.add(cur_node_id)
-        #     print("cur_node_id: ",cur_node_id)
-        #     cur_node = self.call_graph.nodes[cur_node_id]
-        #     # if cur_node in self.call_graph:
-        #     if cur_node["type"] != "PRIVATE" and cur_node_id!=node_id:
-        #         path = self._build_path(prev, cur_node_id)
-        #         call_chains.append(path)
-        #     # get cur_node's edge:
-        #     for edge in self.call_graph.edges(cur_node_id,data=True):
-        #         caller = edge[1]
-        #         if caller not in visited:
-        #             bfs_queue.put(caller)
-        #             prev[caller] = {"id": cur_node_id, "target": edge[2]["target"]}
-
         # keep the shortest 3 paths
         call_chains.sort(key=lambda x: len(x))
         call_chains = call_chains[:min(3, len(call_chains))]

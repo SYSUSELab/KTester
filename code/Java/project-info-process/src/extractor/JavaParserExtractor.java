@@ -137,7 +137,7 @@ public class JavaParserExtractor {
                 else{
                     arg_type = rsv_const.getParam(i).describeType().replace("...", "");
                 }
-                method_sig = method_sig.replaceAll("\\.\\.\\.", "[]");
+                method_sig = method_sig.replace("...", "[]");
                 method_sig = method_sig.replaceAll("([0-9a-zA-Z]+\\.)+", "");
                 String arg_name = arguments.get(i).toString();
                 VariableInfo arg_info = new VariableInfo(arg_name, arg_type);

@@ -77,17 +77,16 @@ class CodeRepairer(JavaRunner):
         if not cflag:
             return (VerifyResult.COMPILE_ERROR, cfeedback, passrate)
         eflag, efeedback = self.run_singal_unit_test(test_class, coverage=False)
+        passrate = -1.0
         if eflag:
             try:
                 cases = int(re.findall(r"([0-9]+) tests started", efeedback)[0])
                 passed = int(re.findall(r"([0-9]+) tests successful", efeedback)[0])
-                passrate = passed / cases if cases > 0 else -1.0
+                if cases > 0: passrate = passed / cases 
             except:
                 pass
         if not eflag or passrate<0.9:
-            passrate = -1.0
             return (VerifyResult.EXECUTE_ERROR, efeedback, passrate)
-
         return (VerifyResult.PASS, "", passrate)
 
 
@@ -249,7 +248,7 @@ class CodeRepairer(JavaRunner):
             if max_index < count:
                 index_file = f"{self.temp_path}/{class_name}".replace(".java", f"_{max_index}.java")
                 fixed_code = io_utils.load_text(index_file)
-                io_utils.write_text(class_path, fixed_code)
+            io_utils.write_text(class_path, fixed_code)
         return
 
 

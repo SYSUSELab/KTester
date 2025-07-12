@@ -19,7 +19,7 @@ class SnippetReader:
     def _get_contents(self, file_path):
         lines = self.cache.get(file_path)
         if lines is None:
-            content:str = utils.load_text(file_path)
+            content:str = utils.load_text(f"{self.project_path}/{file_path}")
             lines = content.splitlines()
             self.cache[file_path] = lines
         return lines
@@ -47,18 +47,22 @@ class SnippetReader:
 
 class CodeSearcher:
     project_path: str
-    index_path: str
     top_k: str
+    index_path: str
     code_info: dict
+    invoke_pattern: dict
     snippet_reader: SnippetReader
 
-    def __init__(self, project_path: str, code_info_path: str, index_path:str, top_k):
+    def __init__(self, project_path: str, project_name: str, project_index_path: str, top_k):
         self.project_path = project_path
-        self.index_path = index_path
         self.top_k = top_k
         self.logger = logging.getLogger(__name__)
-        self.logger.info(f"Loading code info from {code_info_path}")
+        code_info_path = f"{project_index_path}/json/{project_name}.json"
+        self.index_path = f"{project_index_path}/lucene/{project_name}"
+        invoke_pattern_path = f"{project_index_path}/codegraph/{project_name}_invoke.json"
+        self.logger.info(f"Loading code index for {project_name}")
         self.code_info = utils.load_json(code_info_path)
+        self.invoke_pattern = utils.load_json(invoke_pattern_path)
 
     # todo: will be replaced by _get_class_info
     def _get_test_classes(self, class_url: str):
@@ -151,6 +155,12 @@ class CodeSearcher:
                 class_info.append(pcontext)
             return '\n'.join(class_info)
 
+    def _process_signature(self, signature:str):
+        processed_sig = copy.copy(signature)
+        while len(re.findall(r"<[^<>]*>", processed_sig, flags=re.DOTALL))>0:
+            processed_sig = re.sub(r"<[^<>]*>", "", processed_sig, flags=re.DOTALL)
+        processed_sig = re.sub(r"\w+\.", "", processed_sig, flags=re.DOTALL)
+        return processed_sig
 
     # todo: compress overlong context
     def collect_construct_context(self, class_name, method_name:str, class_url):
@@ -160,6 +170,7 @@ class CodeSearcher:
         - Class constructor
         - Parameter in constructor, expecially classes defined in the project        
         - Existing test class (optional)
+        - Invoke examples of focal method (optional)
         '''
         class_info = self._get_class_info(class_name)
         if class_info is None:
@@ -223,6 +234,20 @@ class CodeSearcher:
             if len(lines) > 150:
                 test_class = '\n'.join(lines[:100]) + "\n......\n" + '\n'.join(lines[-50:])
             context["existing test class"] = f"```java\n{test_class}\n```"
+        # get invoke patterns
+        invoke_codes = []
+        processed_sig = self._process_signature(method_name)
+        code_lines = self.invoke_pattern[class_name].get(processed_sig)
+        if code_lines is not None:
+            for i in range(len(code_lines)):
+                invoke_code = ""
+                for single_line in code_lines[i]:
+                    file_path = "src/main/java/" + single_line["file_path"].replace("\\","/")
+                    lines = single_line["lines"]
+                    read_code = self.snippet_reader.read_incoherent_lines(file_path, lines)
+                    invoke_code += '\n'.join(read_code) + "\n"
+                invoke_codes.append(f"example {i+1}:\n```java\n{invoke_code}```")
+            context["invoke examples of focal method"] = '\n'.join(invoke_codes)
         # more context can be added here
         context = self._extract_snippet(context)
         return context
@@ -333,28 +358,6 @@ class CodeSearcher:
         result_str = str(CodeSearcher.main([self.project_path, self.index_path, str(query), self.top_k]))
         results = json.loads(result_str)
         return results
-
-    # def search_class_usage(self, target_class: str) -> List[Dict]:
-    #     """
-    #     Search the variable declaration of the specified class in the Java project and extract the context.
-    #     Args:
-    #         target_class: Class to seach for.
-    #     Returns:
-    #         A list containing variable declaration information. Each element is a dictionary containing file path, line number, and context.
-    #     """
-    #     results = []
-    #     return results
-
-    # def search_method_usage(self, target_method: str) -> list[dict]:
-    #     """
-    #     Search the usage of the specified method name in the Java project and extract the context.
-    #     Args:
-    #         target_method: Method to search for.
-    #     Returns:
-    #         A list containing method usage information. Each element is a dictionary containing file path, line number, and context.
-    #     """
-    #     results = []
-    #     return results
 
 
 if __name__ == "__main__":
