@@ -226,6 +226,7 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
     dependency_dir = f"{root_path}/{fstruct.DEPENDENCY_PATH}"
     compile_test = task_setting.COMPILE_TEST
     projects = task_setting.PROJECTS
+    model = task_setting.MODEL
     select = True if len(projects)>0 else False
     logger = logging.getLogger(__name__)
     total_result = {}
@@ -248,7 +249,7 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
         coverage_file = f"{report_path}/summary.json".replace("<project>", pj_name)
         utils.write_json(coverage_file, coverage_data)
 
-    total_file = report_path.split("<project>")[0] + "summary.json"
+    total_file = report_path.split("<project>")[0] + f"summary-{model}.json"
     calculator.calculate_total_result(total_result, total_file)
     return
 

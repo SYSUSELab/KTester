@@ -253,7 +253,6 @@ class CodeSearcher:
         return context
 
 
-    # TODO: compress overlong context
     def collect_usage_context(self, class_name, method_name:str):
         '''
         content in usage context:
@@ -329,19 +328,19 @@ class CodeSearcher:
             if self._get_class_info(class_name) is not None:
                 depclass.update_list(class_name, "dep_field", f"{ftype} {fqn};")
         # related functions
-        # sim_funcs = self.search_similar_function(query_list)
-        # self.logger.debug(f"length of search result: {len(sim_funcs)}")
-        # for func in sim_funcs:
-        #     class_fqn = func["class_fqn"]
-        #     method_sig = func["signature"]
-        #     caller = func["related_func"]
-        #     cinfo = self._get_class_info(class_fqn)
-        #     minfo = self._get_method_info(cinfo, method_sig)
-        #     api_doc = minfo.get("javadoc")
-        #     return_type = minfo["return_type"]
-        #     cmtext = f"method `{method_sig}` returns `{return_type}`, related with `{'`, `'.join(caller)}`"
-        #     if api_doc is not None: cmtext += f", api document: {api_doc}"
-        #     depclass.update_list(class_fqn, "rel_func", cmtext)
+        sim_funcs = self.search_similar_function(query_list)
+        self.logger.debug(f"length of search result: {len(sim_funcs)}")
+        for func in sim_funcs:
+            class_fqn = func["class_fqn"]
+            method_sig = func["signature"]
+            caller = func["related_func"]
+            cinfo = self._get_class_info(class_fqn)
+            minfo = self._get_method_info(cinfo, method_sig)
+            api_doc = minfo.get("javadoc")
+            return_type = minfo["return_type"]
+            cmtext = f"method `{method_sig}` returns `{return_type}`, related with `{'`, `'.join(caller)}`"
+            if api_doc is not None: cmtext += f", api document: {api_doc}"
+            depclass.update_list(class_fqn, "rel_func", cmtext)
         context["dependent classes"] = str(depclass)
         # add more context here
         return context

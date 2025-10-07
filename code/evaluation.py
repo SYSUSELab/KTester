@@ -6,7 +6,7 @@ import argparse
 import tools.io_utils as utils
 from evaluations.coverage_test import test_coverage
 from evaluations.extracrt_baseline_result import exract_baseline_coverage
-from settings import FileStructure as FS, TaskSettings as TS, BaseLine as BL
+from settings import FileStructure as FS, LLMSettings as MS, TaskSettings as TS, BaseLine as BL
 
 def get_args():
     parser = argparse.ArgumentParser()
@@ -36,6 +36,7 @@ def run(operation):
     dataset_info = utils.load_json(f"{dataset_path}/dataset_info.json")
 
     if operation == 'coverage':
+        TS.MODEL = MS.MODEL
         test_coverage(FS, TS, dataset_info)
     if operation == 'baseline':
         exract_baseline_coverage(FS, TS, BL, dataset_info)
