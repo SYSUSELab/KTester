@@ -6,7 +6,7 @@ This is a replication of the UTGen for the HITS dataset. Source code avaliable: 
 Docker or
 ```c++
 Requirements = (Ollama && Java>=11 && Python>=3.10? && LLM_Interface)
-LLM_Interface = Nvidia tookits if you want to run model localy else Ollama_API
+LLM_Interface = Nvidia tookits? if you want to run model localy else Ollama_API
 ```
 you can install requirements following these links:
 - [Docker](https://docs.docker.com/engine/install/)

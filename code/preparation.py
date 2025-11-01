@@ -81,11 +81,17 @@ def run(args):
     if args.project_index:
         logger.info("Constructing project index ...")
         ProjectPreprocessor = jpype.JClass("PreProcessor")
+        """
+        TODO: fix
+        process project: batch-processing-gateway
+        The method public abstract R collect(Collector<? super java.lang.Object,A,R>) is wrongly tagged as containing missing types
+        Error: ..\\data\\project_index\\json\\codegraph\\batch-processing-gateway_controlflow.json
+        """
         ProjectPreprocessor.main([dataset_abs, f"{code_info_path}/json"])
-        PreProcess.build_calling_graph(FS)
-        PreProcess.extract_invoke_patterns(FS)
-        IndexBuilder = jpype.JClass("IndexBuilder")
-        IndexBuilder.main(["group", f"{code_info_path}/json", f"{code_info_path}/lucene"])
+        # PreProcess.build_calling_graph(FS)
+        # PreProcess.extract_invoke_patterns(FS)
+        # IndexBuilder = jpype.JClass("IndexBuilder")
+        # IndexBuilder.main(["group", f"{code_info_path}/json", f"{code_info_path}/lucene"])
     
     logger.info("preparation completed.")
     return

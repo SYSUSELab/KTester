@@ -95,11 +95,15 @@ class CoverageCalculator(CoverageExtractor):
     }
 
     def __init__(self, project_info, rpt_path):
-        self.report_path = rpt_path.replace("<project>",project_info["project-name"])
+        project_name = project_info.get("project-name","")
+        self.report_path = rpt_path.replace("<project>", project_name)
         self.project_info = project_info
         self.astparser = ASTParser()
         super().__init__()
         pass
+
+    def get_testclass_path(self, tinfo):
+        return tinfo["test-path"]
 
     def generate_project_summary(self, test_result:dict, filter=False):
         """
@@ -135,7 +139,7 @@ class CoverageCalculator(CoverageExtractor):
             data_id = f"{test['class']}#{method}"
             if "error_type" in summary[data_id]:
                 if "test_cases" not in summary[data_id]:
-                    class_path = project_path + '/' + test["test-path"]
+                    class_path = project_path + '/' + self.get_testclass_path(test)
                     self.astparser.parse(utils.load_text(class_path))
                     test_cases = len(self.astparser.get_test_cases())
                     summary[data_id].update({"test_cases": test_cases, "passed_cases": 0})
@@ -230,7 +234,7 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
     select = True if len(projects)>0 else False
     logger = logging.getLogger(__name__)
     total_result = {}
-    calculator: CoverageCalculator
+    calculator: CoverageCalculator = CoverageCalculator({}, "")
 
     logger.info(f"Start coverage test ...")
     for pj_name, info in dataset_info.items():
@@ -257,7 +261,7 @@ def test_coverage(fstruct, task_setting, dataset_info: dict):
 if __name__ == "__main__":
 
     project_path = "../dataset/puts/commons-csv"
-    test_runner = ProjectTestRunner(project_path)
+    test_runner = ProjectTestRunner(None, None, None, None)
     class_path = "org.jacoco.examples"
     class_name = "QrConfig"
     method_name = "toHints(BarcodeFormat)"

@@ -29,6 +29,10 @@ class UTGenRunner():
                     extracted_classes.add(class_name)
         io_utils.write_csv(csv_file, csv_data, csv_header)
         pass
+    
+    def process_test_classes(self):
+        pass
+
 
 if __name__ == "__main__":
     # test runners

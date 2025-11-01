@@ -11,9 +11,18 @@ class JavaRunner:
     dependency_fd: str
     logger: logging.Logger
     
-    def __init__(self, project_url:str, dep_fd=None):
+    def __init__(self, project_url:str, dep_fd=""):
         self.cd_cmd = ['cd', project_url, '&&']
         self.dependency_fd = dep_fd
+        test_dependencies = f"libs/*;target/test-classes;target/classes;{self.dependency_fd}/*"
+        self.test_base_cmd = [
+            'java',
+            '-cp', test_dependencies,
+            'org.junit.platform.console.ConsoleLauncher',
+            '--disable-banner',
+            '--disable-ansi-colors',
+            '--fail-if-no-tests',
+        ]
         self.logger = logging.getLogger(__name__)
         return
     
@@ -36,12 +45,11 @@ class JavaRunner:
         - 2: No tests
         """
         self.logger.info(f"Running single unit test, testclass: {testclass}")
-        test_dependencies = f"libs/*;target/test-classes;target/classes;{self.dependency_fd}/*"
-        java_agent = f"-javaagent:{self.dependency_fd}/jacocoagent.jar=destfile=target/jacoco.exec"
+        test_cmd = self.test_base_cmd.copy() + ['--select-class', testclass]
         if coverage:
-            test_cmd = ['java', '-cp', test_dependencies, java_agent, 'org.junit.platform.console.ConsoleLauncher', '--disable-banner', '--disable-ansi-colors', '--fail-if-no-tests', '--select-class', testclass]
-        else:
-            test_cmd = ['java', '-cp', test_dependencies, 'org.junit.platform.console.ConsoleLauncher', '--disable-banner', '--disable-ansi-colors', '--fail-if-no-tests', '--select-class', testclass]
+            java_agent = f"-javaagent:{self.dependency_fd}/jacocoagent.jar=destfile=target/jacoco.exec" 
+            test_cmd.insert(test_cmd.index('-cp'), java_agent)
+        
         script = self.cd_cmd + test_cmd
         result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8", errors='ignore')
         self.logger.info(f"return code: {result.returncode}")
@@ -59,9 +67,10 @@ class JavaRunner:
             return (False, test_info)
 
     def run_selected_mehods(self, methods:list[str]):
-        test_dependencies = f"libs/*;target/test-classes;target/classes;{self.dependency_fd}/*"
         java_agent = f"-javaagent:{self.dependency_fd}/jacocoagent.jar=destfile=target/jacoco.exec"
-        test_cmd = ['java', '-cp', test_dependencies, java_agent, 'org.junit.platform.console.ConsoleLauncher', '--disable-banner', '--disable-ansi-colors']
+        test_cmd = self.test_base_cmd.copy()
+        # test_cmd = ['java', '-cp', test_dependencies, java_agent, 'org.junit.platform.console.ConsoleLauncher', '--disable-banner', '--disable-ansi-colors']
+        test_cmd.insert(test_cmd.index('-cp'), java_agent)
         for method in methods:
             test_cmd += ['--select-method', method]
         script = self.cd_cmd + test_cmd
@@ -124,8 +133,9 @@ class CoverageExtractor:
             self.logger.exception(f"report file not found: {html_path}")
             return coverage_score
         # extract coverage
-        with open(html_path, "r") as file:
-            soup = BeautifulSoup(file, 'lxml-xml')
+        with open(html_path, "r") as cfile:
+            content = cfile.read()
+            soup = BeautifulSoup(content, 'lxml-xml')
         for tr in soup.find_all(name='tbody')[0].find_all(name='tr', recursive=False):
             tds = tr.contents
             try:
@@ -140,16 +150,18 @@ class CoverageExtractor:
                 break
         return coverage_score
 
-    def extract_uncovered_line(self):
-        # get html file with function body
-        # get line span
-        # get coverage label
-        return
+    # def extract_uncovered_line(self):
+    #     # get html file with function body
+    #     # get line span
+    #     # get coverage label
+    #     return
 
+    # @staticmethod
     # def jacoco_missing_lines(report_root, package, class_name) -> Tuple[List[Tuple[int, str]], List[Tuple[int, str]]]:
     #     html_path = os.path.join(report_root, package, f"{class_name}.java.html")
     #     with open(html_path, "r") as file:
-    #         soup = BeautifulSoup(file, 'lxml-xml')
+    #         content = file.read()
+    #         soup = BeautifulSoup(content, 'lxml-xml')
 
     #     def get_id(_span):
     #         return int(_span['id'][1:])  # since the 'id' has format 'L{id}', e.g., 'L15', means line 15

@@ -13,7 +13,7 @@ from tools.execute_test import JavaRunner
 from tools.prompt_generator import PromptGenerator
 
 
-def check_class_name(init_class:str, tcname:str, pcname:str=None):
+def check_class_name(init_class:str, tcname:str, pcname:str=""):
     class_name = re.findall(r'class ([\w$]*)(<.*>)?( extends [\w]+)?', init_class)[0][0]
     new_class = copy.copy(init_class)
     if class_name != tcname:
@@ -298,5 +298,5 @@ if __name__ == "__main__":
     sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
     s = '''
     '''
-    code_repair = CodeRepairer("", "", 1)
+    # code_repair = CodeRepairer("", "", 1)
     pass

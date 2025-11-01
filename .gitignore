@@ -3,6 +3,7 @@ code/settings.py
 code/test.py
 code/java/spoon-control-flow
 code/java/sootup
+code/java/ktester-java
 code/evaluations/check_empty_class.py
 code/evaluations/fill_questionare_template.py
 data/projects

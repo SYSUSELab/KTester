@@ -110,10 +110,10 @@ class InvokePatternExtractor:
                     edges.append((node_id, caller["sig"], {"target": caller["lines"]}))
         graph.add_nodes_from([(node_id, nodes[node_id]) for node_id in nodes])
         graph.add_edges_from(edges)
-        nodes = list(graph.nodes)
+        gnodes = list(graph.nodes)
         # delete nodes without edges
-        for node in nodes:
-            if graph.degree(node)==0:
+        for node in gnodes:
+            if len(list(graph.neighbors(node))) + len(list(graph.predecessors(node))) == 0:
                 graph.remove_node(node)
         self.call_graph = graph
         return
@@ -190,13 +190,16 @@ class InvokePatternExtractor:
     def _get_lines_from_cfg(self, cfg:DiGraph, target_lines):
         visited = set(target_lines)
         # find the node with kind="BEGIN"
-        start_node: int
+        start_node = None
         target_nodes = set()
         for nid, node in cfg.nodes.data():
             if any(line in node["lines"] for line in target_lines):
                 target_nodes.add(nid)
             if node["kind"] == "BEGIN":
                 start_node = nid
+        # 如果没有找到BEGIN节点，返回已访问的行
+        if start_node is None:
+            return list(visited)
         for target in target_nodes:
             paths = nx.all_shortest_paths(cfg, start_node, target)
             for path in paths:
@@ -220,7 +223,7 @@ class InvokePatternExtractor:
 
     def _get_lines_from_method(self, class_fqn, method_sig, target_lines):
         class_info = self.code_info["source"][class_fqn]
-        method_info:dict = None
+        method_info = None
         for method, m_infos in class_info["methods"].items():
             if method_sig.find(method) != -1:
                 for m_info in m_infos: 
@@ -273,11 +276,14 @@ class InvokePatternExtractor:
             path_line = []
             for full_sig, target_lines in call_chain:
                 class_fqn, method_sig = full_sig.split("#")
-                code_line = self._get_lines_from_method(class_fqn, method_sig, target_lines)[0]
+                result = self._get_lines_from_method(class_fqn, method_sig, target_lines)
+                code_line, length = result
                 if code_line is None: continue
                 file_path = self.code_info["source"][class_fqn]["file"]
                 path_line.append({"file_path": file_path, "lines": code_line})
-            path_lines.append(path_line)
+            # 计算总长度
+            total_length = sum(len(item.get("lines", [])) for item in path_line if isinstance(item, dict))
+            path_lines.append((path_line, total_length))
         return path_lines
 
     '''
