@@ -8,6 +8,10 @@ class ChatUniTestRunner():
     def __init__(self):
         pass
 
+    def generate_test_class(self):
+        # mvn chatunitest:method -DphaseType <method> -D testOutput /tmp/<method>-test -DselectMethod <class>#<method>
+        pass
+
 
 class UTGenRunner():
     data_folder = ""

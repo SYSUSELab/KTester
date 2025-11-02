@@ -1,14 +1,15 @@
 import re
 import json
 import logging
-from openai import NOT_GIVEN, OpenAI
+from openai import  OpenAI, Omit, omit
+from openai.types.chat.completion_create_params import ResponseFormat
 from tenacity import retry, wait_random_exponential, stop_after_attempt
 
 class LLMCaller:
     account_num = 0
     cur_account_num = 0
-    accounts = None
-    gpt = None
+    accounts = []
+    gpt:OpenAI
     system_prompt = None
     base_message = []
     
@@ -36,14 +37,13 @@ class LLMCaller:
         return
 
     @retry(wait=wait_random_exponential(min=1, max=30), stop=stop_after_attempt(3))
-    def _generation(self, prompt:str, 
-                rps_format:dict=NOT_GIVEN) -> str:
+    def _generation(self, prompt:str, rps_format:dict|Omit=omit) -> str:
         messages = self.base_message.copy()
         messages.append({"role": "user", "content": prompt})
         response = self.gpt.chat.completions.create(
             model=self.model,
             messages=messages,
-            response_format = rps_format,
+            response_format = rps_format,  # pyright: ignore[reportArgumentType]
             # add more parameters
         )
         if response.choices[0].message.content:
@@ -104,7 +104,7 @@ class LLMCaller:
         response = ""
         try:
             response_format = { 'type': 'json_object' }
-            response = self._generation(prompt, response_format)
+            response = self._generation(prompt, response_format) 
             json_data = self._handle_json_response(response)    
         except Exception as e:
             self.logger.error(f"Error occured while get json object from llm api: {e}")
