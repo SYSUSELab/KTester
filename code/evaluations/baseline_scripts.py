@@ -1,14 +1,14 @@
 import concurrent
 import os
-import sys
+
 import time
 import logging
 import subprocess
 import concurrent.futures
 from venv import logger
-# sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
 import tools.io_utils as io_utils
+
 
 class ChatUniTestRunner():
     # project_url = ""
@@ -31,7 +31,7 @@ class ChatUniTestRunner():
         time_record = {}
 
         for test_info in project_info["focal-methods"]:
-            task_ids.add(test_info["task-id"].replace("_", "#").replace("#2", ""))
+            task_ids.add(test_info["id"].replace("_", "#").replace("#2", ""))
         for task_id in task_ids:
             start_time = time.time()
             self.generate_test4method(task_id)
@@ -41,14 +41,15 @@ class ChatUniTestRunner():
 
     def generate_test4method(self, select_method:str):
         # mvn chatunitest:method -DphaseType <method> -D testOutput /tmp/<method>-test -DselectMethod <class>#<method>
-        gen_cmd = ["mvn", "chatunitest:method", "-DtestOutput", self.gen_folder, "-DselectMethod", select_method]
+        # TODO: use full name for generation
+        gen_cmd = ["mvn", "chatunitest:method", f"-DtestOutput={self.gen_folder}", f"-DselectMethod={select_method}"]
         if self.phase_type != "CHATUNITEST":
-            gen_cmd.extend(["-DphaseType", self.phase_type])
+            gen_cmd.append(f"-DphaseType={self.phase_type}")
             if self.phase_type == "HITS":
                 gen_cmd.append("-DtestNumber=3")
         script = self.cd_cmd + gen_cmd
         self.logger.info("Command: " + " ".join(script))
-        result = subprocess.run(script, shell=True, capture_output=True, text=True)
+        result = subprocess.run(script, shell=True, capture_output=True, text=True, encoding="utf-8")
         self.logger.info("Output: " + result.stdout)
         if result.returncode != 0:
             self.logger.error(f"Error occurred at {select_method}, info:\n{result.stderr}")
@@ -79,7 +80,7 @@ class UTGenRunner():
         pass
 
 
-def running_chatunitest(dataset_info, phase_type, result_folder):
+def running_chatunitest(dataset_info, phase_type, workspace, result_folder):
     mworkers = len(dataset_info)
     logger = logging.getLogger(__name__)
     time_file = f"{result_folder}/time_record.json"
@@ -99,7 +100,10 @@ def running_chatunitest(dataset_info, phase_type, result_folder):
     with concurrent.futures.ThreadPoolExecutor(max_workers=mworkers) as executor:
         futures = []
         for _, p_info in dataset_info.items():
-            future = executor.submit(run4project, p_info)
+            project_path = f"{workspace}/{p_info['project-url']}"
+            project_info = p_info.copy()
+            project_info["project-url"] = project_path
+            future = executor.submit(run4project, project_info)
             futures.append(future)
         for future in concurrent.futures.as_completed(futures):
             try:
@@ -107,42 +111,45 @@ def running_chatunitest(dataset_info, phase_type, result_folder):
                 time_record_sum["details"].update(record)
             except Exception as e:
                 logger.error(f"Error processing test case: {e}")
+    io_utils.write_json(time_file, time_record_sum)
     pass
 
 
-def running_baselines(file_structure, benchmark, dataset_info):
-    dataset_path = file_structure.DATASET_PATH
-    baseline_path = benchmark.BASELINE_PATH
-    selected_baselines = benchmark.BASELINES
+def running_baselines(baseline, dataset_info):
+    baseline_path = baseline.BASELINE_PATH
+    selected_baselines = baseline.BASELINES
+    chatunitest_data = baseline.CHATUNITEST_DATA
     logger = logging.getLogger(__name__)
 
     root_path = os.getcwd().replace("\\", "/")
-    dataset_dir = f"{root_path}/{dataset_path}"
-    
-    for _, info in dataset_info.items():
-        project_path = f"{dataset_dir}/{info['project-url']}"
-        info["project-url"] = project_path
     
     # HITS script
     if "HITS" in selected_baselines:
+        logger.info("Using HITS generation...")
         hits_result = f"{baseline_path}/HITS"
-        running_chatunitest(dataset_info, "HITS", hits_result)
+        workspace = f"{root_path}/{chatunitest_data}"
+        running_chatunitest(dataset_info, "HITS", workspace, hits_result)
 
     # ChatUniTest script
     if "ChatUniTest" in selected_baselines:
+        logger.info("Using ChatUniTest generation...")
         chatunitest_result = f"{baseline_path}/ChatUniTest"
-        running_chatunitest(dataset_info, "ChatUniTest", chatunitest_result)
+        workspace = f"{root_path}/{chatunitest_data}"
+        running_chatunitest(dataset_info, "ChatUniTest", workspace, chatunitest_result)
     
     # ChatTester script
     if "ChatTester" in selected_baselines:
+        logger.info("Using ChatTester generation...")
         chattester_result = f"{baseline_path}/ChatTester"
-        running_chatunitest(dataset_info, "ChatTester", chattester_result)
-
-    pass
+        workspace = f"{root_path}/{chatunitest_data}"
+        running_chatunitest(dataset_info, "ChatTester", workspace, chattester_result)
+    return
 
 
 if __name__ == "__main__":
     # test runners
+    # import sys
+    # sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
     from settings import BaseLine, FileStructure
     utgen_data_folder = BaseLine.UTGEN_DATA
     dataset_file = f"{FileStructure.DATASET_PATH}/dataset_info.json"

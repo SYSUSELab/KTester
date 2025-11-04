@@ -6,13 +6,14 @@ import argparse
 import tools.io_utils as utils
 from evaluations.coverage_test import test_coverage
 from evaluations.extracrt_baseline_result import exract_baseline_coverage
+from evaluations.baseline_scripts import running_baselines
 from settings import FileStructure as FS, LLMSettings as MS, TaskSettings as TS, BaseLine as BL
 
 def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument('-L','--log_level', type=str, default='info', help='log level: info, debug, warning, error, critical')
     parser.add_argument('-F','--log_file', help="storage file of output info", default=None)
-    parser.add_argument('-O','--operation',type=str, default='precision', help='evaluation operation: coverage')
+    parser.add_argument('-O','--operation',type=str, default='', help='evaluation operation: coverage, baseline, basegen')
 
     args = parser.parse_args()
     log_level = {
@@ -40,6 +41,9 @@ def run(operation):
         test_coverage(FS, TS, dataset_info)
     if operation == 'baseline':
         exract_baseline_coverage(FS, TS, BL, dataset_info)
+    if operation == 'basegen':
+        running_baselines(BL, dataset_info)
+
     if operation == 'check':
         import evaluations.check_empty_class as Check
         Check.check_empty_class(FS, dataset_info)
