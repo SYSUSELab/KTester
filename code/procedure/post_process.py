@@ -14,12 +14,12 @@ from tools.prompt_generator import PromptGenerator
 
 
 def check_class_name(init_class:str, tcname:str, pcname:str=""):
-    class_name = re.findall(r'class ([\w$]*)(<.*>)?( extends [\w]+)?', init_class)[0][0]
+    class_name = re.findall(r'class ([\w$/\s.]+)(<.*>)?( extends [\w]+)?', init_class)[0][0]
     new_class = copy.copy(init_class)
     if class_name != tcname:
         new_class = new_class.replace(class_name, tcname)
     package_name = re.findall(r'package\s+([\w\.]+);', init_class)[0]
-    if pcname and package_name != pcname:
+    if len(pcname)>0 and package_name != pcname:
         new_class = new_class.replace(package_name, pcname)
     return new_class
 
@@ -271,6 +271,7 @@ def verify_test_classes(file_structure, task_setting, dataset_info):
     case_select = True if len(case_list)>0 else False
     logger = logging.getLogger(__name__)
 
+    # TODO: multi-threading
     for pj_name, pj_info in dataset_info.items():
         if project_select and pj_name not in projects: continue
         logger.info(f"verify process test classes in {pj_name}...")

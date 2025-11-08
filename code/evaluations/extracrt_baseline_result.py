@@ -1,6 +1,6 @@
 import os
 import re
-import queue
+# import queue
 import shutil
 import logging
 import subprocess
@@ -15,27 +15,27 @@ class HITSRunner(ProjectTestRunner):
     def __init__(self, project_info, dependency_dir, testclass_path, report_path):
         super().__init__(project_info, dependency_dir, testclass_path, report_path)
 
-    def check_testclass_name(self):
-        # Traverse all files under testclass_path
-        dir_list = queue.Queue()
-        dir_list.put(self.testclass_path)
-        while not dir_list.empty():
-            current_dir = dir_list.get()
-            paths = os.listdir(current_dir)
-            for path in paths:
-                full_path = os.path.join(current_dir, path)
-                if os.path.isdir(full_path):
-                    dir_list.put(full_path)
-                elif path.endswith(".java") and "slice" in path:
-                    self.logger.info(f"Checking class name in {full_path}")
-                    class_name = path.replace(".java", "")
-                    if class_name is None:
-                        self.logger.error(f"Invalid class name in {path}")
-                        continue
-                    file_path = os.path.join(current_dir, path)
-                    code = io_utils.load_text(file_path)
-                    code = check_class_name(code, class_name)
-                    io_utils.write_text(file_path, code)
+    # def check_testclass_name(self):
+    #     # Traverse all files under testclass_path
+    #     dir_list = queue.Queue()
+    #     dir_list.put(self.testclass_path)
+    #     while not dir_list.empty():
+    #         current_dir = dir_list.get()
+    #         paths = os.listdir(current_dir)
+    #         for path in paths:
+    #             full_path = os.path.join(current_dir, path)
+    #             if os.path.isdir(full_path):
+    #                 dir_list.put(full_path)
+    #             elif path.endswith(".java") and "slice" in path:
+    #                 self.logger.info(f"Checking class name in {full_path}")
+    #                 class_name = path.replace(".java", "")
+    #                 if class_name is None:
+    #                     self.logger.error(f"Invalid class name in {path}")
+    #                     continue
+    #                 file_path = os.path.join(current_dir, path)
+    #                 code = io_utils.load_text(file_path)
+    #                 code = check_class_name(code, class_name)
+    #                 io_utils.write_text(file_path, code)
 
 
     def run_project_test(self, compile=True):
@@ -289,8 +289,8 @@ def extract_coverage_generic(runner_class, result_folder, dataset_info, fstruct,
         if select and pj_name not in projects: continue
         # run converage test & generate report
         runner = runner_class(info, dependency_dir, testclass_path, report_path)
-        if runner_class.__name__ == HITSRunner.__name__:
-            runner.check_testclass_name()
+        # if runner_class.__name__ == HITSRunner.__name__:
+        #     runner.check_testclass_name()
         test_result = runner.run_project_test(compile_test)
         logger.info(test_result)
         # extract coverage
@@ -313,6 +313,7 @@ def exract_baseline_coverage(file_structure, task_setting, benchmark, dataset_in
     dataset_path = file_structure.DATASET_PATH
     baseline_path = benchmark.BASELINE_PATH
     selected_baselines = benchmark.BASELINES
+    repetition_num = task_setting.REPETITION_NUM
     logger = logging.getLogger(__name__)
 
     root_path = os.getcwd().replace("\\", "/")
@@ -324,19 +325,19 @@ def exract_baseline_coverage(file_structure, task_setting, benchmark, dataset_in
     # extract HITS coverage
     if "HITS" in selected_baselines:
         logger.info("Extracting HITS coverage...")
-        HITS_result = f"{baseline_path}/HITS"
+        HITS_result = f"{baseline_path}/HITS/rep_{repetition_num}"
         extract_coverage_generic(HITSRunner, HITS_result, dataset_info, file_structure, task_setting)
     
     # extract ChatUniTest coverage
     if "ChatUniTest" in selected_baselines:
         logger.info("Extracting ChatUniTest coverage...")
-        chatunitest_result = f"{baseline_path}/ChatUniTest"
+        chatunitest_result = f"{baseline_path}/ChatUniTest/rep_{repetition_num}"
         extract_coverage_generic(ProjectTestRunner, chatunitest_result, dataset_info, file_structure, task_setting)
 
     # extract ChatTester coverage
     if "ChatTester" in selected_baselines:
         logger.info("Extracting ChatTester coverage...")
-        chattester_result = f"{baseline_path}/ChatTester"
+        chattester_result = f"{baseline_path}/ChatTester/rep_{repetition_num}"
         extract_coverage_generic(ProjectTestRunner, chattester_result, dataset_info, file_structure, task_setting)
 
     # extract UTGen coverage
