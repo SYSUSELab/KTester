@@ -8,7 +8,7 @@ from enum import Enum
 
 from tools import io_utils
 from tools.llm_api import LLMCaller
-from tools.code_analysis import ASTParser
+from tools.code_analysis import JavaCodeEditor
 from tools.execute_test import JavaRunner
 from tools.prompt_generator import PromptGenerator
 
@@ -54,7 +54,7 @@ class CodeRepairer(JavaRunner):
     import_dict: dict
     llm_caller: LLMCaller
     prompt_gen: PromptGenerator
-    parser: ASTParser
+    parser: JavaCodeEditor
     class_editor: jpype.JClass
 
     def __init__(self, dependency_fd, project_url, tc_path:str, fix_tries:int, impt_dict:dict):
@@ -67,7 +67,7 @@ class CodeRepairer(JavaRunner):
         self.import_dict = impt_dict
         self.llm_caller = LLMCaller()
         self.prompt_gen = PromptGenerator('./templates', [])
-        self.parser = ASTParser()
+        self.parser = JavaCodeEditor()
         self.class_editor = jpype.JClass("editcode.TestClassUpdator")
         self.logger = logging.getLogger(__name__)
 
@@ -175,16 +175,15 @@ class CodeRepairer(JavaRunner):
         Clean/Comment the error test cases from the test class.
         '''
         self.parser.parse(code)
-        start, end = self.parser.get_test_case_position()
+        start, end, _ = self.parser.get_test_case_position()
         lines = [line for line, _ in error_infos]
-        fulL_lines = set(lines)
         for line in lines:
             for i in range(0, len(start)):
                 if line >=start[i] and line<=end[i]:
-                    fulL_lines.update(range(start[i], end[i]+1))
+                    lines.append([start[i], end[i]])
                     break
-        self.logger.info(f"clean error cases in lines {fulL_lines}")
-        self.parser.comment_code(fulL_lines)
+        self.logger.info(f"clean error cases in lines {lines}")
+        self.parser.comment_code(lines)
         return self.parser.get_code()
 
     def check_test_class(self, ts_info:dict, prompt_path:str, response_path:str, context_path:str):

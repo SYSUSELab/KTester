@@ -4,7 +4,7 @@ import logging
 
 import tools.io_utils as utils
 from tools.execute_test import JavaRunner, CoverageExtractor
-from tools.code_analysis import ASTParser
+from tools.code_analysis import JavaASTParser
 
 
 class ProjectTestRunner(JavaRunner):
@@ -87,7 +87,7 @@ class ProjectTestRunner(JavaRunner):
 class CoverageCalculator(CoverageExtractor):
     report_path: str
     project_info: dict
-    astparser: ASTParser
+    astparser: JavaASTParser
     error_type = {
         "compile error": 1,
         "execution error": 2,
@@ -98,7 +98,7 @@ class CoverageCalculator(CoverageExtractor):
         project_name = project_info.get("project-name","")
         self.report_path = rpt_path.replace("<project>", project_name)
         self.project_info = project_info
-        self.astparser = ASTParser()
+        self.astparser = JavaASTParser()
         super().__init__()
         pass
 

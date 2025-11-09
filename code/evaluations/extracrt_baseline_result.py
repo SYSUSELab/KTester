@@ -15,29 +15,6 @@ class HITSRunner(ProjectTestRunner):
     def __init__(self, project_info, dependency_dir, testclass_path, report_path):
         super().__init__(project_info, dependency_dir, testclass_path, report_path)
 
-    # def check_testclass_name(self):
-    #     # Traverse all files under testclass_path
-    #     dir_list = queue.Queue()
-    #     dir_list.put(self.testclass_path)
-    #     while not dir_list.empty():
-    #         current_dir = dir_list.get()
-    #         paths = os.listdir(current_dir)
-    #         for path in paths:
-    #             full_path = os.path.join(current_dir, path)
-    #             if os.path.isdir(full_path):
-    #                 dir_list.put(full_path)
-    #             elif path.endswith(".java") and "slice" in path:
-    #                 self.logger.info(f"Checking class name in {full_path}")
-    #                 class_name = path.replace(".java", "")
-    #                 if class_name is None:
-    #                     self.logger.error(f"Invalid class name in {path}")
-    #                     continue
-    #                 file_path = os.path.join(current_dir, path)
-    #                 code = io_utils.load_text(file_path)
-    #                 code = check_class_name(code, class_name)
-    #                 io_utils.write_text(file_path, code)
-
-
     def run_project_test(self, compile=True):
         project_name = self.project_info["project-name"]
         project_url = self.project_info["project-url"]
@@ -289,8 +266,6 @@ def extract_coverage_generic(runner_class, result_folder, dataset_info, fstruct,
         if select and pj_name not in projects: continue
         # run converage test & generate report
         runner = runner_class(info, dependency_dir, testclass_path, report_path)
-        # if runner_class.__name__ == HITSRunner.__name__:
-        #     runner.check_testclass_name()
         test_result = runner.run_project_test(compile_test)
         logger.info(test_result)
         # extract coverage

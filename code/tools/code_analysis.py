@@ -1,9 +1,9 @@
 import re
 import tree_sitter_java as ts_java
 from queue import Queue
-from tree_sitter import Language, Parser
+from tree_sitter import Language, Node, Parser
 
-class ASTParser:
+class JavaASTParser:
     source_code: str
     parser: Parser
     tree = None
@@ -36,8 +36,9 @@ class ASTParser:
         return
 
     def _traverse_get(self, type):
-        node_list = []
-        bfs_queue = Queue()
+        node_list:list[Node] = []
+        bfs_queue = Queue[Node]()
+        if self.tree is None: return node_list
         bfs_queue.put(self.tree.root_node)
         while not bfs_queue.empty():
             node = bfs_queue.get()
@@ -61,10 +62,24 @@ class ASTParser:
             function_code = '\n'.join(self.lines[start_line:end_line+1])
             functions.append(function_code)
         return functions
-    
 
-    def get_code(self):
-        return self.source_code
+    def _sort_line_number(self, positions:list[int|list[int]], rvs=False):
+        lines = set[int]()
+        for pos in positions:
+            if isinstance(pos, int):
+                lines.add(pos)
+            elif isinstance(pos, list) and len(pos) == 2:
+                lines.update(range(pos[0], pos[1]+1))
+        sourted = list(lines)
+        sourted.sort(reverse=rvs)
+        return sourted
+
+    def get_code(self, position:list|None=None):
+        if position is None:
+            return self.source_code
+        lines = self._sort_line_number(position)
+        code_lines = [self.lines[i] for i in lines]
+        return '\n'.join(code_lines)
 
     def get_test_cases(self) -> list:
         test_cases = []
@@ -79,46 +94,13 @@ class ASTParser:
             if flag:
                 test_cases.append(func)
         return test_cases
-    
-    # def _get_imports(self):
-    #     return re.findall(r'import .*;', self.source_code, re.MULTILINE)
-
-    # def get_additional_imports(self, existing_imports):
-    #     imports = self._get_imports()
-    #     additional_imports = []
-    #     for imp in imports:
-    #         if imp not in existing_imports:
-    #             additional_imports.append(imp)
-    #     return additional_imports
-
-    def remove_lines(self, remove_lines:list[int]):
-        """
-        Remove lines from the source code.
-        param remove_lines: List of line numbers to be removed.
-        """
-        remove_lines.sort(reverse=True)
-        for line in remove_lines:
-            self.lines.pop(line)
-        self._update_code()
-        self._get_import_position()
-        return
-
-
-    def add_imports(self, import_lines:list[str]):
-        """
-        Add import lines to the source code.
-        :param import_lines: List of import lines to be added.
-        """
-        # Insert the new imports and Update the import position
-        self.lines = self.lines[:self.insert_position] + import_lines + self.lines[self.insert_position:]
-        self.insert_position += len(import_lines)
-        self._update_code()
-        return
-
 
     def get_test_case_position(self):
+        """
+        output format: [[start_lines], [end_lines], [method_name]]
+        """
         function_nodes = self._traverse_get('method_declaration')
-        test_case_positions = [[],[]]
+        test_cases = []
         exclude_annotations = ['@BeforeEach', '@AfterEach', '@BeforeAll', '@AfterAll']
         for node in function_nodes:
             start_line = node.start_point[0]
@@ -131,18 +113,52 @@ class ASTParser:
                 if func_code.find(annotation) > -1:
                     flag = False
             if flag:
-                test_case_positions[0].append(start_line)
-                test_case_positions[1].append(end_line)
-        return test_case_positions
+                method_name = node.child_by_field_name('name').text.decode('utf-8') # pyright: ignore[reportOptionalMemberAccess]
+                test_cases.append([start_line, end_line, method_name])
+
+        sorted_data = sorted(test_cases, key=lambda x: x[0])
+        test_cases_positions = [[],[],[]]
+        for obj in sorted_data:
+            test_cases_positions[0].append(obj[0])
+            test_cases_positions[1].append(obj[1])
+            test_cases_positions[2].append(obj[2])
+        return test_cases_positions
 
 
-    def comment_code(self, comment_lines):
+class JavaCodeEditor(JavaASTParser):
+    def __init__(self):
+        super().__init__()
+
+    def comment_code(self, positions:list):
+        comment_lines = self._sort_line_number(positions)
         for line in comment_lines:
             self.lines[line] = '// ' + self.lines[line]
-        # self._update_code()
+        self._update_code()
         self.source_code = '\n'.join(self.lines)
         return
+    
+    def remove_lines(self, positions:list):
+        """
+        Remove lines from the source code.
+        param remove_lines: List of line numbers to be removed.
+        """
+        removed_lines = self._sort_line_number(positions, rvs=True)
+        for line in removed_lines:
+            self.lines.pop(line)
+        self._update_code()
+        self._get_import_position()
+        return
 
+    def add_imports(self, import_lines:list[str]):
+        """
+        Add import lines to the source code.
+        :param import_lines: List of import lines to be added.
+        """
+        # Insert the new imports and Update the import position
+        self.lines = self.lines[:self.insert_position] + import_lines + self.lines[self.insert_position:]
+        self.insert_position += len(import_lines)
+        self._update_code()
+        return
 
     def add_exception(self, lines:list[int]):
         lines.sort()
@@ -165,7 +181,7 @@ class ASTParser:
             if cur >= len(lines): break
         self._update_code()
         return
-            
+
 
 #test
 if __name__ == '__main__':
@@ -188,7 +204,6 @@ if __name__ == '__main__':
         }
     }
     '''
-    # ast = ASTParser()
+    # ast = JavaASTParser()
     # ast.parse(source_code)
-    # print(ast.get_test_cases())
-    # print(ast.get_additional_imports(set()))
+    # print(ast.get_test_case_position())

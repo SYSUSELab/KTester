@@ -83,7 +83,7 @@ class JavaRunner:
         else:
             self.logger.info(f"test execution info: {result.stdout}")
         return True
-    
+
     def generate_report_single(self, html_report, csv_report=None):
         # generate report
         jacoco_cli = f"{self.dependency_fd}/jacococli.jar"

@@ -7,7 +7,9 @@ import subprocess
 import concurrent.futures
 
 import tools.io_utils as io_utils
+from tools.code_analysis import JavaCodeEditor
 from procedure.post_process import check_class_name
+from tools.execute_test import JavaRunner, CoverageExtractor
 
 
 class ChatUniTestRunner():
@@ -152,9 +154,14 @@ class ChatUniTestRunner():
 
 class UTGenRunner():
     data_folder = ""
+    tmp_folder = ""
 
-    def __init__(self, dfolder):
+    def __init__(self, dfolder, tmp_fd, dep_fd):
         self.data_folder = dfolder
+        self.tmp_folder = tmp_fd
+        self.dependency_fd = dep_fd
+        
+        self.logger = logging.getLogger(__name__)
         return
     
     def prepare_dataset(self, dataset):
@@ -170,13 +177,86 @@ class UTGenRunner():
                     extracted_classes.add(class_name)
         io_utils.write_csv(csv_file, csv_data, csv_header)
         return
-    
+
     """
     TODO: check whether generated tests covered target method
     Extract test cases that cover the target method and assemble them into a test class
+    1. copy test class to projects
+    2. extract test methods and class framework
+    3. remove uncompiled test cases
+    4. check which test methods cover the target method
+    5. assemble test methods into a new test class
+    6. write new test class to file
     """
-    def process_test_classes(self):
-        # 
+    def process_test_classes(self, result_folder, dataset_info, running_space):
+        for pname, pinfo in dataset_info.items():
+            project_source = f"{self.tmp_folder}/{pname}/evosuite-tests/"
+            project_target = f"{result_folder}/{pname}/test_classes/"
+            project_running = f"{running_space}/{pname}"
+            project_url = pinfo["project-url"]
+            io_utils.check_path(project_target)
+            # 1. prepare task dictionary
+            # {"test_class": {"ids":{"id":method_name}, "package":package, "running_path": running_path}}
+            task_dict = {}
+            for tinfo in pinfo["focal-methods"]:
+                id = tinfo["id"]
+                method_name = tinfo["method-name"]
+                test_class = tinfo["class"].split(".java")[-1] + "_ESTest"
+                if test_class not in task_dict:
+                    running_path = "/".join(tinfo["test-path"].split('/')[:-1])
+                    package = tinfo["package"]
+                    task_dict[test_class] = {"ids": {id: method_name}, "package": package, "running_path": running_path}
+                else:
+                    task_dict[test_class]["ids"][id] = method_name
+            # 2. copy test classes
+            dir_list = queue.Queue()
+            dir_list.put(project_source)
+            while not dir_list.empty():
+                current_dir = dir_list.get()
+                paths = os.listdir(current_dir)
+                for path in paths:
+                    full_path = os.path.join(current_dir, path)
+                    if os.path.isdir(full_path):
+                        dir_list.put(full_path)
+                    elif path.endswith(".java") and path.find("Original") == -1:
+                        if path.endswith("scaffolding.java"):
+                            self.logger.info(f"Copying file {full_path} to {project_target}")
+                            io_utils.copy_file(full_path, project_target)
+                        class_name = path.split("_")[0]
+                        running_path = project_running + "/" + task_dict[class_name]["running_path"]
+                        io_utils.copy_file(full_path, running_path)
+            # 3. extract test methods and class framework
+            for test_class, tinfo in task_dict.items():
+                code_editor = JavaCodeEditor()
+                code_path= f"{tinfo['running_path']}/{test_class}.java"
+                code = io_utils.load_text(code_path)
+                code_editor.parse(code)
+                starts, ends, mnames = code_editor.get_test_case_position()
+                framework_code = code[:starts[0]] + code[ends[-1]+1:]
+                # 4. remove uncompiled test cases
+                
+
+            java_runner = JavaRunner(project_url, self.dependency_fd)
+            test_dependencies = f"libs/*;target/test-classes;target/classes;{self.dependency_fd}/*"
+            java_runner.test_base_cmd = [
+                'java', 
+                "--add-opens", "java.base/java.lang=ALL-UNNAMED",
+                "--add-opens", "java.base/java.net=ALL-UNNAMED",
+                "--add-opens", "java.desktop/java.awt=ALL-UNNAMED",
+                # "--add-opens", "java.base/java.util=ALL-UNNAMED",
+                # "--add-opens", "java.base/sun.reflect.annotation=ALL-UNNAMED",
+                # "--add-opens", "java.base/java.text=ALL-UNNAMED",
+                '-cp', test_dependencies, 
+                'org.junit.platform.console.ConsoleLauncher', 
+                '--disable-banner', 
+                '--disable-ansi-colors',
+                '--fail-if-no-tests',
+            ]
+            coverage_extractor = CoverageExtractor()
+            
+
+        
+        
         pass
 
 
@@ -230,7 +310,7 @@ def running_baselines(baseline, dataset_info, task_setting):
     chatunitest_data = baseline.CHATUNITEST_DATA
     logger = logging.getLogger(__name__)
     root_path = os.getcwd().replace("\\", "/")
-    tmp_folder = f"{baseline_path}/tmp"
+    tmp_folder = f"{root_path}/{baseline_path}/tmp"
     
     # HITS script
     if "HITS" in selected_baselines:
