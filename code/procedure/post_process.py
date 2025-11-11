@@ -90,13 +90,13 @@ class CodeRepairer(JavaRunner):
         return (VerifyResult.PASS, "", passrate)
 
 
-    def parse_feedback(self, feedback:str, test_class:str):#, method_name:str):
+    def parse_feedback(self, feedback:str, class_path:str):
         '''
         Parse the compilation feedback to get the error line number and error message.
         '''
         rule_fixes = []
         llm_fixes = []
-        split_str = test_class.replace("/", "\\")
+        split_str = class_path.replace("/", "\\")
         errors = feedback.split(f"{split_str}:")
         for error in errors:
             if str(error).find(": error: ")==-1: continue
@@ -177,7 +177,7 @@ class CodeRepairer(JavaRunner):
         self.parser.parse(code)
         start, end, _ = self.parser.get_test_case_position()
         lines = [line for line, _ in error_infos]
-        for line in lines:
+        for line in lines.copy():
             for i in range(0, len(start)):
                 if line >=start[i] and line<=end[i]:
                     lines.append([start[i], end[i]])

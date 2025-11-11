@@ -42,7 +42,7 @@ def run(operation):
     if operation == 'baseline':
         exract_baseline_coverage(FS, TS, BL, dataset_info)
     if operation == 'basegen':
-        running_baselines(BL, dataset_info, TS)
+        running_baselines(BL, dataset_info, TS, FS)
     # if operation == 'check':
     #     import evaluations.check_empty_class as Check
     #     Check.check_empty_class(FS, dataset_info)

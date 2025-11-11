@@ -49,7 +49,6 @@ class ChatUniTestRunner():
 
     def generate_test4method(self, select_method:str):
         # mvn chatunitest:method -DphaseType <method> -D testOutput /tmp/<method>-test -DselectMethod <class>#<method>
-        # TODO: use full name for generation
         gen_cmd = ["mvn", "chatunitest:method", f"-DtestOutput={self.gen_folder}", f"-DselectMethod={select_method}"]
         if self.phase_type != "CHATUNITEST":
             gen_cmd.append(f"-DphaseType={self.phase_type}")
@@ -178,34 +177,78 @@ class UTGenRunner():
         io_utils.write_csv(csv_file, csv_data, csv_header)
         return
 
+    def set_java_runner(self, project_url):
+        java_runner = JavaRunner(project_url, self.dependency_fd)
+        test_dependencies = f"libs/*;target/test-classes;target/classes;{self.dependency_fd}/*"
+        java_runner.test_base_cmd = [
+            'java', 
+            "--add-opens", "java.base/java.lang=ALL-UNNAMED",
+            "--add-opens", "java.base/java.net=ALL-UNNAMED",
+            "--add-opens", "java.desktop/java.awt=ALL-UNNAMED",
+            # "--add-opens", "java.base/java.util=ALL-UNNAMED",
+            # "--add-opens", "java.base/sun.reflect.annotation=ALL-UNNAMED",
+            # "--add-opens", "java.base/java.text=ALL-UNNAMED",
+            '-cp', test_dependencies, 
+            'org.junit.platform.console.ConsoleLauncher', 
+            '--disable-banner', 
+            '--disable-ansi-colors',
+            '--fail-if-no-tests',
+        ]
+        return java_runner
+
+    def _parse_error_line(self, feedback:str, class_path:str):
+        '''
+        Parse the compilation feedback to get the error line number and error message.
+        '''
+        error_lines = []
+        split_str = class_path.replace("/", "\\")
+        errors = feedback.split(f"{split_str}:")
+        for error in errors:
+            if str(error).find(": error: ")==-1: continue
+            splits = error.split(": error: ")
+            try:
+                line = int(splits[0]) - 1
+                error_lines.append(line)
+            except:
+                continue
+        return error_lines
+
+    def _extend_removing_lines(self, error_lines: list, case_positions):
+        starts = case_positions[0]
+        ends = case_positions[1]
+        count = len(starts)
+        extend = set(error_lines)
+
+        for line in error_lines:
+            for i in range(count):
+                if line >= starts[i] and line <= ends[i]:
+                    extend.update(range(starts[i], ends[i]+1))
+                    break
+        self.logger.info(f"Extending removing lines: {extend}")
+        return list(extend)
+
     """
-    TODO: check whether generated tests covered target method
+    check whether generated tests covered target method
     Extract test cases that cover the target method and assemble them into a test class
-    1. copy test class to projects
-    2. extract test methods and class framework
-    3. remove uncompiled test cases
-    4. check which test methods cover the target method
-    5. assemble test methods into a new test class
-    6. write new test class to file
     """
-    def process_test_classes(self, result_folder, dataset_info, running_space):
+    def process_test_classes(self, result_folder, dataset_info):
         for pname, pinfo in dataset_info.items():
             project_source = f"{self.tmp_folder}/{pname}/evosuite-tests/"
             project_target = f"{result_folder}/{pname}/test_classes/"
-            project_running = f"{running_space}/{pname}"
             project_url = pinfo["project-url"]
             io_utils.check_path(project_target)
+            self.logger.info(f"project source:{project_source}, project target:{project_target}, project url:{project_url}")
             # 1. prepare task dictionary
             # {"test_class": {"ids":{"id":method_name}, "package":package, "running_path": running_path}}
             task_dict = {}
             for tinfo in pinfo["focal-methods"]:
                 id = tinfo["id"]
                 method_name = tinfo["method-name"]
-                test_class = tinfo["class"].split(".java")[-1] + "_ESTest"
+                test_class = tinfo["class"].split('.')[-1] + "_ESTest"
                 if test_class not in task_dict:
                     running_path = "/".join(tinfo["test-path"].split('/')[:-1])
-                    package = tinfo["package"]
-                    task_dict[test_class] = {"ids": {id: method_name}, "package": package, "running_path": running_path}
+                    pkgname = tinfo["package"]
+                    task_dict[test_class] = {"ids": {id: method_name}, "package": pkgname, "running_path": running_path}
                 else:
                     task_dict[test_class]["ids"][id] = method_name
             # 2. copy test classes
@@ -222,42 +265,61 @@ class UTGenRunner():
                         if path.endswith("scaffolding.java"):
                             self.logger.info(f"Copying file {full_path} to {project_target}")
                             io_utils.copy_file(full_path, project_target)
-                        class_name = path.split("_")[0]
-                        running_path = project_running + "/" + task_dict[class_name]["running_path"]
+                        class_name = path.removesuffix(".java").removesuffix("_scaffolding")
+                        running_path = f"{project_url}/{task_dict[class_name]['running_path']}/{path}"
                         io_utils.copy_file(full_path, running_path)
-            # 3. extract test methods and class framework
+            # set running environment
+            java_runner = self.set_java_runner(project_url)
+            coverage_extractor = CoverageExtractor()
             for test_class, tinfo in task_dict.items():
                 code_editor = JavaCodeEditor()
-                code_path= f"{tinfo['running_path']}/{test_class}.java"
+                running_path = f"{tinfo['running_path']}/{test_class}.java"
+                code_path= f"{project_url}/{running_path}"
+                self.logger.info(f"code path: {code_path}")
+                if not os.path.exists(code_path): continue
+                pkgname = tinfo['package']
+                class_fqn = f"{pkgname}.{test_class}"
                 code = io_utils.load_text(code_path)
                 code_editor.parse(code)
+                # 3. remove uncompiled test cases
+                java_runner.compile_test(running_path.replace(".java", "_scaffolding.java"))
+                cflag, feedback = java_runner.compile_test(running_path)
+                while not cflag:
+                    error_lines = self._parse_error_line(feedback, running_path)
+                    case_positions = code_editor.get_test_case_position()
+                    error_lines = self._extend_removing_lines(error_lines, case_positions)
+                    code_editor.remove_lines(error_lines)
+                    code = code_editor.get_code()
+                    io_utils.write_text(code_path, code)
+                    cflag, feedback = java_runner.compile_test(running_path)
+                # 4. extract test methods and class framework
                 starts, ends, mnames = code_editor.get_test_case_position()
-                framework_code = code[:starts[0]] + code[ends[-1]+1:]
-                # 4. remove uncompiled test cases
-                
-
-            java_runner = JavaRunner(project_url, self.dependency_fd)
-            test_dependencies = f"libs/*;target/test-classes;target/classes;{self.dependency_fd}/*"
-            java_runner.test_base_cmd = [
-                'java', 
-                "--add-opens", "java.base/java.lang=ALL-UNNAMED",
-                "--add-opens", "java.base/java.net=ALL-UNNAMED",
-                "--add-opens", "java.desktop/java.awt=ALL-UNNAMED",
-                # "--add-opens", "java.base/java.util=ALL-UNNAMED",
-                # "--add-opens", "java.base/sun.reflect.annotation=ALL-UNNAMED",
-                # "--add-opens", "java.base/java.text=ALL-UNNAMED",
-                '-cp', test_dependencies, 
-                'org.junit.platform.console.ConsoleLauncher', 
-                '--disable-banner', 
-                '--disable-ansi-colors',
-                '--fail-if-no-tests',
-            ]
-            coverage_extractor = CoverageExtractor()
-            
-
-        
-        
-        pass
+                framework_start = code_editor.get_code([[0, starts[0]-1]])
+                framework_end = code_editor.get_code([ends[-1]+1,code_editor.get_length()-1])
+                # 5. check which test methods cover the target method
+                task_method_position = {}
+                for id in tinfo["ids"]: task_method_position[id] = []
+                for i in range(len(mnames)):
+                    mname = f"{class_fqn}#{mnames[i]}"
+                    eflag = java_runner.run_selected_mehods([mname])
+                    if not eflag: continue
+                    html_report = "target/jacoco-report/"
+                    java_runner.generate_report_single(html_report)
+                    for id, tmname in tinfo["ids"].items():
+                        html_path = f"{project_url}/{html_report}{pkgname}/{test_class.removesuffix('_ESTest')}.html"
+                        coverage = coverage_extractor.extract_single_coverage(html_path, tmname)
+                        if coverage and coverage[0] > 0:
+                            task_method_position[id].append([starts[i], ends[i]])
+                    java_runner.delete_jacoco_exec()
+                # 6. assemble test methods into a new test class
+                for id, tmname in tinfo["ids"].items():
+                    position = task_method_position[id]
+                    test_cases = code_editor.get_code(position)
+                    new_code = framework_start + "\n" + test_cases + "\n" + framework_end
+                    new_code = check_class_name(new_code, f"{id}_Test")
+                    file_name = f"{project_target}/{id}_Test.java"
+                    self.logger.info(f"Writing new test class to {file_name}")
+                    io_utils.write_text(file_name, new_code)
 
 
 def running_chatunitest(dataset_info, task_setting, phase_type, workspace, tmp_folder, result_folder):
@@ -304,12 +366,25 @@ def running_chatunitest(dataset_info, task_setting, phase_type, workspace, tmp_f
     return
 
 
-def running_baselines(baseline, dataset_info, task_setting):
+def running_utgen(dataset_info, dataset_folder, workspace, tmp_folder, dep_folder, result_folder):
+    tmp_folder = f"{tmp_folder}/UTGen-test"
+    for _, p_info in dataset_info.items():
+        p_info['project-url'] = f"{dataset_folder}/{p_info['project-url']}"
+    utgen_runner = UTGenRunner(workspace, tmp_folder, dep_folder)
+    # utgen_runner.prepare_dataset(dataset_info)
+    utgen_runner.process_test_classes(result_folder, dataset_info)
+
+
+def running_baselines(baseline, dataset_info, task_setting, file_structure):
     baseline_path = baseline.BASELINE_PATH
     selected_baselines = baseline.BASELINES
     chatunitest_data = baseline.CHATUNITEST_DATA
+    utgen_data = baseline.UTGEN_DATA
+    dependency_path = file_structure.DEPENDENCY_PATH
+    dataset_path = file_structure.DATASET_PATH
     logger = logging.getLogger(__name__)
     root_path = os.getcwd().replace("\\", "/")
+    dep_folder = f"{root_path}/{dependency_path}"
     tmp_folder = f"{root_path}/{baseline_path}/tmp"
     
     # HITS script
@@ -332,6 +407,12 @@ def running_baselines(baseline, dataset_info, task_setting):
         chattester_result = f"{baseline_path}/ChatTester"
         workspace = f"{root_path}/{chatunitest_data}"
         running_chatunitest(dataset_info, task_setting, "ChatTester", workspace, tmp_folder,chattester_result)
+    
+    # UTGen script
+    if "UTGen" in selected_baselines:
+        logger.info("Using UTGen generation...")
+        utgen_result = f"{baseline_path}/UTGen"
+        running_utgen(dataset_info, dataset_path, utgen_data, tmp_folder, dep_folder, utgen_result)
     return
 
 
@@ -343,6 +424,6 @@ if __name__ == "__main__":
     utgen_data_folder = BaseLine.UTGEN_DATA
     dataset_file = f"{FileStructure.DATASET_PATH}/dataset_info.json"
     dataset = io_utils.load_json(dataset_file)
-    utgen_runner = UTGenRunner(utgen_data_folder)
-    utgen_runner.prepare_dataset(dataset)
+    # utgen_runner = UTGenRunner(utgen_data_folder)
+    # utgen_runner.prepare_dataset(dataset)
     pass

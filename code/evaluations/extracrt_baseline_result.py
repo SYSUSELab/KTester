@@ -175,17 +175,17 @@ class UTGenRunner(ProjectTestRunner):
         for tobject in test_objects:
             testid = tobject["id"]
             method = tobject["method-name"]
-            test_folder = "/".join(tobject["test-path"].split('/')[:-1])
-            
-            test_class = tobject["test-class"].split('_')[0] + "_ESTest"
-            simple_class = test_class.split('.')[-1]
-            class_path = f"{self.testclass_path}{simple_class}.java"
-            scaffold_class = f"{simple_class}_scaffolding"
+            test_path = tobject["test-path"]
+            test_folder = "/".join(test_path.split('/')[:-1])
+            test_class = tobject["test-class"]
+            simple_class = tobject["class"].split('.')[-1]
+            scaffold_class = f"{simple_class}_ESTest_scaffolding"
+            class_path = f"{self.testclass_path}{test_class.split('.')[-1]}.java"
             scaffold_path = f"{self.testclass_path}{scaffold_class}.java"
+            class_target_path = f"{project_url}/{test_path}"
+            scaffold_target_path = f"{project_url}/{test_folder}/{scaffold_class}.java"
             data_id = f"{tobject['class']}#{method}"
             self.test_result[data_id] = {}
-            class_target_path = f"{project_url}/{test_folder}/{simple_class}.java"
-            scaffold_target_path = f"{project_url}/{test_folder}/{scaffold_class}.java"
             try:
                 io_utils.copy_file(class_path, class_target_path)
                 io_utils.copy_file(scaffold_path, scaffold_target_path)

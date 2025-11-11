@@ -17,22 +17,22 @@ class JavaASTParser:
     def parse(self, source_code):
         self.lines = source_code.splitlines()
         self._update_code()
-        self._get_import_position()
         return
     
     def _get_import_position(self):
         for i, line in enumerate(self.lines):
             if line.strip().startswith('import'):
-                self.insert_position = i + 1
+                self.import_position = i + 1
         return
 
-    def _update_code(self):
+    def _update_code(self, up_imp=True):
         """
         Update the source code and AST with the current lines
         """
         self.source_code = '\n'.join(self.lines)
         byte_code = self.source_code.encode('utf-8')
         self.tree = self.parser.parse(byte_code, encoding='utf8')
+        if up_imp: self._get_import_position()
         return
 
     def _traverse_get(self, type):
@@ -64,15 +64,17 @@ class JavaASTParser:
         return functions
 
     def _sort_line_number(self, positions:list[int|list[int]], rvs=False):
-        lines = set[int]()
-        for pos in positions:
-            if isinstance(pos, int):
-                lines.add(pos)
-            elif isinstance(pos, list) and len(pos) == 2:
-                lines.update(range(pos[0], pos[1]+1))
-        sourted = list(lines)
-        sourted.sort(reverse=rvs)
-        return sourted
+        lines = set[int]([pos for pos in positions if isinstance(pos, int)])
+        ranges = [pos for pos in positions if isinstance(pos, list) and len(pos) == 2]
+        for pos in ranges:
+            lines.update(range(pos[0], pos[1]+1))
+        sorted_lines = list(lines)
+        sorted_lines.sort(reverse=rvs)
+        sorted_lines = [i for i in sorted_lines if 0<=i<len(self.lines)]
+        return sorted_lines
+
+    def get_length(self):
+        return len(self.lines)
 
     def get_code(self, position:list|None=None):
         if position is None:
@@ -146,7 +148,6 @@ class JavaCodeEditor(JavaASTParser):
         for line in removed_lines:
             self.lines.pop(line)
         self._update_code()
-        self._get_import_position()
         return
 
     def add_imports(self, import_lines:list[str]):
@@ -155,8 +156,8 @@ class JavaCodeEditor(JavaASTParser):
         :param import_lines: List of import lines to be added.
         """
         # Insert the new imports and Update the import position
-        self.lines = self.lines[:self.insert_position] + import_lines + self.lines[self.insert_position:]
-        self.insert_position += len(import_lines)
+        self.lines = self.lines[:self.import_position] + import_lines + self.lines[self.import_position:]
+        self.import_position += len(import_lines)
         self._update_code()
         return
 
@@ -179,7 +180,7 @@ class JavaCodeEditor(JavaASTParser):
                     cur += 1
                     if cur<len(lines): cur_line = lines[cur]
             if cur >= len(lines): break
-        self._update_code()
+        self._update_code(up_imp=False)
         return
 
 

@@ -69,12 +69,11 @@ class JavaRunner:
     def run_selected_mehods(self, methods:list[str]):
         java_agent = f"-javaagent:{self.dependency_fd}/jacocoagent.jar=destfile=target/jacoco.exec"
         test_cmd = self.test_base_cmd.copy()
-        # test_cmd = ['java', '-cp', test_dependencies, java_agent, 'org.junit.platform.console.ConsoleLauncher', '--disable-banner', '--disable-ansi-colors']
         test_cmd.insert(test_cmd.index('-cp'), java_agent)
         for method in methods:
             test_cmd += ['--select-method', method]
         script = self.cd_cmd + test_cmd
-        self.logger.info(f"Running selected methods: {methods}")
+        self.logger.info(' '.join(test_cmd))
         result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8", errors='ignore')
         if result.returncode == -1: 
             test_info = f"{result.stderr}\n{result.stdout}"
@@ -88,6 +87,7 @@ class JavaRunner:
         # generate report
         jacoco_cli = f"{self.dependency_fd}/jacococli.jar"
         report_cmd = ['java', '-jar', jacoco_cli, "report", "target/jacoco.exec", '--classfiles', 'target/classes', '--sourcefiles', 'src/main/java', "--html", html_report]
+        self.logger.debug(' '.join(report_cmd))
         if csv_report is not None:
             report_cmd += ["--csv", csv_report]
         script = self.cd_cmd + report_cmd
