@@ -5,8 +5,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\OptionGroup.java",
           "lines": [
-            100,
-            111,
+            [
+              100,
+              111
+            ],
             114
           ]
         }
@@ -19,9 +21,11 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            345,
-            353,
-            365
+            [
+              374,
+              379
+            ],
+            384
           ]
         }
       ],
@@ -29,9 +33,11 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            374,
-            379,
-            384
+            [
+              345,
+              353
+            ],
+            365
           ]
         }
       ]
@@ -94,9 +100,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            386,
             [
-              388,
+              386,
               391
             ],
             393
@@ -132,8 +137,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\CommandLine.java",
           "lines": [
-            439,
-            441,
+            [
+              439,
+              441
+            ],
             451
           ]
         }
@@ -458,9 +465,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -477,21 +483,25 @@
     "apply(String)": [
       [
         {
-          "file_path": "org\\apache\\commons\\cli\\CommandLine.java",
+          "file_path": "org\\apache\\commons\\cli\\TypeHandler.java",
           "lines": [
-            439,
-            447,
-            451
+            [
+              168,
+              171
+            ],
+            175
           ]
         }
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\cli\\TypeHandler.java",
+          "file_path": "org\\apache\\commons\\cli\\CommandLine.java",
           "lines": [
-            168,
-            171,
-            175
+            [
+              439,
+              447
+            ],
+            451
           ]
         }
       ]
@@ -503,9 +513,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -520,8 +529,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            386,
-            388,
+            [
+              386,
+              388
+            ],
             393
           ]
         },
@@ -541,8 +552,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            386,
-            388,
+            [
+              386,
+              388
+            ],
             393
           ]
         },
@@ -568,9 +581,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -588,9 +600,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -640,9 +651,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -704,9 +714,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -755,9 +764,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -811,9 +819,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -875,9 +882,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -933,9 +939,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -981,9 +986,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1035,9 +1039,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1082,9 +1085,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1132,9 +1134,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1185,9 +1186,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1257,9 +1257,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1278,9 +1277,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1315,9 +1313,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1336,9 +1333,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1384,9 +1380,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1443,9 +1438,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1476,9 +1470,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1507,9 +1500,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1534,8 +1526,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            386,
-            388,
+            [
+              386,
+              388
+            ],
             393
           ]
         },
@@ -1594,9 +1588,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1645,9 +1638,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1687,9 +1679,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1729,9 +1720,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1780,9 +1770,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1801,9 +1790,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            629,
             [
-              631,
+              629,
               632
             ]
           ]
@@ -1815,10 +1803,9 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            634,
             [
-              636,
-              637
+              649,
+              651
             ]
           ]
         }
@@ -1828,8 +1815,8 @@
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
             [
-              649,
-              651
+              634,
+              637
             ]
           ]
         }
@@ -1872,9 +1859,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1930,9 +1916,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1966,9 +1951,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -1987,9 +1971,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            386,
             [
-              388,
+              386,
               390
             ],
             393
@@ -2011,9 +1994,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            386,
             [
-              388,
+              386,
               390
             ],
             393
@@ -2041,9 +2023,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -2059,9 +2040,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            386,
             [
-              388,
+              386,
               390
             ],
             393
@@ -2124,9 +2104,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -2175,8 +2154,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            585,
-            587,
+            [
+              585,
+              587
+            ],
             590,
             [
               592,
@@ -2211,8 +2192,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            585,
-            587,
+            [
+              585,
+              587
+            ],
             590,
             [
               592,
@@ -2235,8 +2218,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            585,
-            587,
+            [
+              585,
+              587
+            ],
             590,
             [
               592,
@@ -2384,8 +2369,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            432,
-            434,
+            [
+              432,
+              434
+            ],
             436,
             438
           ]
@@ -2397,8 +2384,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            432,
-            434,
+            [
+              432,
+              434
+            ],
             436,
             438
           ]
@@ -2443,8 +2432,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            800,
-            807,
+            [
+              800,
+              807
+            ],
             818
           ]
         }
@@ -2511,8 +2502,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            585,
-            587,
+            [
+              585,
+              587
+            ],
             590,
             [
               592,
@@ -2575,16 +2568,6 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            585,
-            587,
-            631
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
-          "lines": [
             [
               571,
               572
@@ -2593,6 +2576,18 @@
               574,
               575
             ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
+          "lines": [
+            [
+              585,
+              587
+            ],
+            631
           ]
         }
       ]
@@ -2672,9 +2667,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            454,
             [
-              456,
+              454,
               457
             ]
           ]
@@ -2684,8 +2678,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            432,
-            434,
+            [
+              432,
+              434
+            ],
             436,
             438
           ]
@@ -2710,8 +2706,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            474,
-            476,
+            [
+              474,
+              476
+            ],
             [
               480,
               481
@@ -2729,8 +2727,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            474,
-            476,
+            [
+              474,
+              476
+            ],
             480,
             483,
             495
@@ -2743,8 +2743,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            474,
-            476,
+            [
+              474,
+              476
+            ],
             [
               480,
               481
@@ -2785,8 +2787,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            585,
-            587,
+            [
+              585,
+              587
+            ],
             590,
             [
               592,
@@ -2806,8 +2810,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            474,
-            476,
+            [
+              474,
+              476
+            ],
             [
               480,
               481
@@ -2847,8 +2853,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            800,
-            811,
+            [
+              800,
+              811
+            ],
             818
           ]
         }
@@ -2929,8 +2937,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            228,
-            233,
+            [
+              228,
+              233
+            ],
             235
           ]
         }
@@ -2943,8 +2953,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            242,
-            245,
+            [
+              242,
+              245
+            ],
             247
           ]
         }
@@ -3128,9 +3140,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            386,
             [
-              388,
+              386,
               389
             ],
             393
@@ -3243,8 +3254,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\CommandLine.java",
           "lines": [
-            439,
-            447,
+            [
+              439,
+              447
+            ],
             451
           ]
         }
@@ -3255,8 +3268,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\OptionGroup.java",
           "lines": [
-            121,
-            123,
+            [
+              121,
+              123
+            ],
             125,
             127,
             [
@@ -3314,18 +3329,6 @@
     "getKey()": [
       [
         {
-          "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
-          "lines": [
-            83,
-            [
-              85,
-              86
-            ]
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "org\\apache\\commons\\cli\\Option.java",
           "lines": [
             [
@@ -3337,11 +3340,24 @@
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\cli\\OptionGroup.java",
+          "file_path": "org\\apache\\commons\\cli\\Options.java",
           "lines": [
-            47,
-            50,
-            53
+            [
+              62,
+              63
+            ],
+            77
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\cli\\Options.java",
+          "lines": [
+            [
+              244,
+              246
+            ]
           ]
         }
       ]
@@ -3544,18 +3560,6 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            386,
-            [
-              388,
-              393
-            ]
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
-          "lines": [
             [
               400,
               401
@@ -3565,6 +3569,24 @@
             415,
             417,
             429
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
+          "lines": [
+            [
+              200,
+              201
+            ],
+            [
+              205,
+              206
+            ],
+            208,
+            212,
+            221
           ]
         }
       ]
@@ -3585,8 +3607,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\Option.java",
           "lines": [
-            914,
-            916,
+            [
+              914,
+              916
+            ],
             918,
             920,
             924,
@@ -3738,8 +3762,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            585,
-            587,
+            [
+              585,
+              587
+            ],
             590,
             [
               592,
@@ -4056,17 +4082,6 @@
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\cli\\OptionGroup.java",
-          "lines": [
-            121,
-            123,
-            125,
-            153
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "org\\apache\\commons\\cli\\Options.java",
           "lines": [
             [
@@ -4075,6 +4090,19 @@
             ],
             141,
             150
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\cli\\OptionGroup.java",
+          "lines": [
+            [
+              121,
+              123
+            ],
+            125,
+            153
           ]
         }
       ]
@@ -4173,9 +4201,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             [
@@ -4349,8 +4376,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            585,
-            587,
+            [
+              585,
+              587
+            ],
             590,
             [
               592,
@@ -4382,9 +4411,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             675,
@@ -4410,8 +4438,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\HelpFormatter.java",
           "lines": [
-            585,
-            587,
+            [
+              585,
+              587
+            ],
             590,
             592,
             631
@@ -4424,9 +4454,8 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            666,
             [
-              668,
+              666,
               672
             ],
             696
@@ -4509,23 +4538,6 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            614,
-            616,
-            [
-              620,
-              622
-            ],
-            [
-              626,
-              627
-            ]
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
-          "lines": [
             [
               440,
               443
@@ -4534,6 +4546,25 @@
             450,
             452,
             501
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
+          "lines": [
+            [
+              614,
+              616
+            ],
+            [
+              620,
+              622
+            ],
+            [
+              626,
+              627
+            ]
           ]
         }
       ]
@@ -4575,8 +4606,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\OptionValidator.java",
           "lines": [
-            115,
-            117,
+            [
+              115,
+              117
+            ],
             121,
             123,
             [
@@ -4593,8 +4626,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\OptionValidator.java",
           "lines": [
-            115,
-            117,
+            [
+              115,
+              117
+            ],
             121,
             123,
             135
@@ -4616,8 +4651,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\OptionValidator.java",
           "lines": [
-            115,
-            117,
+            [
+              115,
+              117
+            ],
             121,
             123,
             [
@@ -4641,8 +4678,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\OptionValidator.java",
           "lines": [
-            115,
-            117,
+            [
+              115,
+              117
+            ],
             121,
             123,
             135
@@ -4669,21 +4708,25 @@
     "wrap(Throwable)": [
       [
         {
-          "file_path": "org\\apache\\commons\\cli\\CommandLine.java",
+          "file_path": "org\\apache\\commons\\cli\\TypeHandler.java",
           "lines": [
-            439,
-            449,
-            451
+            [
+              168,
+              173
+            ],
+            175
           ]
         }
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\cli\\TypeHandler.java",
+          "file_path": "org\\apache\\commons\\cli\\CommandLine.java",
           "lines": [
-            168,
-            173,
-            175
+            [
+              439,
+              449
+            ],
+            451
           ]
         }
       ]
@@ -4771,8 +4814,10 @@
         {
           "file_path": "org\\apache\\commons\\cli\\TypeHandler.java",
           "lines": [
-            168,
-            171,
+            [
+              168,
+              171
+            ],
             175
           ]
         }
@@ -4821,9 +4866,11 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            400,
-            408,
-            429
+            [
+              536,
+              538
+            ],
+            544
           ]
         }
       ],
@@ -4831,9 +4878,11 @@
         {
           "file_path": "org\\apache\\commons\\cli\\DefaultParser.java",
           "lines": [
-            536,
-            538,
-            544
+            [
+              400,
+              408
+            ],
+            429
           ]
         }
       ]

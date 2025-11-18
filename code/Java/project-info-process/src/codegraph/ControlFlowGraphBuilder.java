@@ -100,7 +100,6 @@ public class ControlFlowGraphBuilder {
         List<Edge> edgesList = new ArrayList<Edge>();
         for (ControlFlowEdge edge : edges) {
             // add source node and target node
-            // 提取添加节点的公共逻辑为一个私有方法
             ControlFlowNode source_node = edge.getSourceNode();
             ControlFlowNode target_node = edge.getTargetNode();
             addNodeFromControlFlow(source_node, nodes);
@@ -108,11 +107,7 @@ public class ControlFlowGraphBuilder {
             // add edge
             int source_id = source_node.getId();
             int target_id = target_node.getId();
-            if (edge.isBackEdge()){
-                edgesList.add(new Edge(target_id, source_id, true));
-            } else {
-                edgesList.add(new Edge(source_id, target_id, false));
-            }
+            edgesList.add(new Edge(target_id, source_id, edge.isBackEdge()));
         }
         // add nodes and edges to graph
         CfgNode[] nodesArray = nodes.toArray(new CfgNode[0]);

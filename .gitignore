@@ -6,6 +6,7 @@ code/java/sootup
 code/java/ktester-java
 code/evaluations/check_empty_class.py
 code/evaluations/fill_questionare_template.py
+code/evaluations/calculate_avg_test_cases.py
 data/projects
 data/project_index/lucene
 data/UTGen_replication/projects_binary

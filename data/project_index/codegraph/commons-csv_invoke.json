@@ -303,9 +303,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             [
@@ -363,9 +362,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             [
@@ -432,8 +430,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             1873,
             [
               1875,
@@ -445,9 +445,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -463,8 +462,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2153,
-            2155,
+            [
+              2153,
+              2155
+            ],
             2160,
             [
               2162,
@@ -490,8 +491,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             [
               1873,
               1874
@@ -502,9 +505,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -551,9 +553,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2153,
             [
-              2155,
+              2153,
               2156
             ],
             2190
@@ -562,8 +563,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             [
               1873,
               1874
@@ -574,9 +577,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -610,9 +612,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
             [
-              1870,
+              1868,
               1871
             ],
             1883
@@ -621,9 +622,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -665,8 +665,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             1873,
             [
               1875,
@@ -678,9 +680,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -784,12 +785,11 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
             [
-              1870,
-              1871
+              1907,
+              1909
             ],
-            1883
+            1914
           ]
         }
       ],
@@ -798,10 +798,10 @@
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
             [
-              1907,
-              1909
+              1868,
+              1871
             ],
-            1914
+            1883
           ]
         }
       ],
@@ -928,9 +928,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2192,
             [
-              2194,
+              2192,
               2196
             ],
             2200,
@@ -960,9 +959,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2192,
             [
-              2194,
+              2192,
               2196
             ],
             2200,
@@ -983,9 +981,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2192,
             [
-              2194,
+              2192,
               2196
             ],
             2200,
@@ -1019,8 +1016,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2153,
-            2155,
+            [
+              2153,
+              2155
+            ],
             2160,
             2162,
             2190
@@ -1049,8 +1048,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2153,
-            2155,
+            [
+              2153,
+              2155
+            ],
             2190
           ]
         }
@@ -1142,9 +1143,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             [
@@ -1178,9 +1178,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2192,
             [
-              2194,
+              2192,
               2196
             ],
             2200,
@@ -1230,9 +1229,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             [
@@ -1272,8 +1270,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             1873,
             [
               1875,
@@ -1285,9 +1285,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -1346,9 +1345,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             [
@@ -1372,8 +1370,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             1873,
             1875,
             1883
@@ -1384,9 +1384,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2192,
             [
-              2194,
+              2192,
               2196
             ],
             2239
@@ -1414,9 +1413,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2192,
             [
-              2194,
+              2192,
               2196
             ],
             2200,
@@ -1433,24 +1431,12 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             1873,
             1883
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
-          "lines": [
-            2192,
-            [
-              2194,
-              2196
-            ],
-            2200,
-            2239
           ]
         }
       ],
@@ -1467,6 +1453,19 @@
             1848
           ]
         }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              2192,
+              2196
+            ],
+            2200,
+            2239
+          ]
+        }
       ]
     ],
     "print(Appendable)": [
@@ -1474,9 +1473,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1863,
             [
-              1865,
+              1863,
               1866
             ]
           ]
@@ -1514,9 +1512,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             [
@@ -1540,9 +1537,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -1605,9 +1601,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             [
@@ -1664,9 +1659,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             [
@@ -1690,8 +1684,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             1873,
             [
               1875,
@@ -1703,9 +1699,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -1721,9 +1716,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            2153,
             [
-              2155,
+              2153,
               2156
             ],
             2190
@@ -1732,8 +1726,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             [
               1873,
               1874
@@ -1744,9 +1740,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -1777,9 +1772,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             [
@@ -1803,8 +1797,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             [
               1873,
               1874
@@ -1815,9 +1811,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1807,
             [
-              1810,
+              1807,
               1811
             ],
             1820,
@@ -1967,10 +1962,13 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            486,
             [
-              495,
-              496
+              432,
+              434
+            ],
+            [
+              439,
+              440
             ]
           ]
         }
@@ -1980,12 +1978,8 @@
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
             [
-              432,
-              434
-            ],
-            [
-              439,
-              440
+              486,
+              496
             ]
           ]
         }
@@ -2037,9 +2031,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
           "lines": [
-            276,
             [
-              278,
+              276,
               281
             ]
           ]
@@ -2064,9 +2057,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
           "lines": [
-            252,
             [
-              255,
+              252,
               258
             ]
           ]
@@ -2119,8 +2111,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
           "lines": [
-            762,
-            785,
+            [
+              762,
+              785
+            ],
             807
           ]
         }
@@ -2183,8 +2177,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
           "lines": [
-            153,
-            155,
+            [
+              153,
+              155
+            ],
             163
           ]
         }
@@ -2193,8 +2189,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
           "lines": [
-            165,
-            167,
+            [
+              165,
+              167
+            ],
             182
           ]
         }
@@ -2267,8 +2265,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
           "lines": [
-            145,
-            147,
+            [
+              145,
+              147
+            ],
             151
           ]
         }
@@ -2350,8 +2350,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
           "lines": [
-            153,
-            155,
+            [
+              153,
+              155
+            ],
             [
               158,
               159
@@ -2364,8 +2366,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
           "lines": [
-            165,
-            167,
+            [
+              165,
+              167
+            ],
             [
               170,
               171
@@ -2408,9 +2412,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
           "lines": [
-            115,
             [
-              117,
+              115,
               118
             ]
           ]
@@ -2436,9 +2439,11 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
           "lines": [
-            416,
-            422,
-            426
+            [
+              259,
+              261
+            ],
+            264
           ]
         }
       ],
@@ -2447,10 +2452,10 @@
           "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
           "lines": [
             [
-              259,
-              261
+              416,
+              422
             ],
-            264
+            426
           ]
         }
       ]
@@ -2474,9 +2479,23 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
           "lines": [
-            297,
             [
-              305,
+              259,
+              260
+            ],
+            [
+              263,
+              264
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
+          "lines": [
+            [
+              297,
               306
             ]
           ]
@@ -2486,24 +2505,11 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
           "lines": [
-            416,
-            424,
-            426
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
-          "lines": [
             [
-              259,
-              260
+              416,
+              424
             ],
-            [
-              263,
-              264
-            ]
+            426
           ]
         }
       ]
@@ -2540,22 +2546,24 @@
     "printRecord(Object[])": [
       [
         {
-          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
-          "lines": [
-            1460,
-            1463,
-            1471
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
           "lines": [
             [
               231,
               233
             ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1460,
+              1463
+            ],
+            1471
           ]
         }
       ],
@@ -2622,16 +2630,6 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1460,
-            1462,
-            1471
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
-          "lines": [
             [
               1774,
               1776
@@ -2643,11 +2641,22 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1791,
             [
-              1794,
-              1795
+              1896,
+              1898
             ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
+          "lines": [
+            [
+              1460,
+              1462
+            ],
+            1471
           ]
         }
       ]
@@ -2771,9 +2780,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVRecord.java",
           "lines": [
-            255,
             [
-              257,
+              255,
               258
             ]
           ]
@@ -2826,9 +2834,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            84,
             [
-              86,
+              84,
               87
             ]
           ]
@@ -2853,8 +2860,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             302
           ]
         }
@@ -2880,9 +2889,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            404,
             [
-              406,
+              404,
               407
             ],
             411,
@@ -2931,8 +2939,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            450,
-            452,
+            [
+              450,
+              452
+            ],
             470
           ]
         }
@@ -2941,8 +2951,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\ExtendedBufferedReader.java",
           "lines": [
-            211,
-            213,
+            [
+              211,
+              213
+            ],
             [
               216,
               220
@@ -3039,8 +3051,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            484,
-            486,
+            [
+              484,
+              486
+            ],
             514
           ]
         }
@@ -3049,8 +3063,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            404,
-            406,
+            [
+              404,
+              406
+            ],
             435,
             443
           ]
@@ -3060,8 +3076,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            450,
-            452,
+            [
+              450,
+              452
+            ],
             454,
             470
           ]
@@ -3107,8 +3125,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             226,
             231,
             234,
@@ -3144,8 +3164,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             1873,
             1875,
             1877,
@@ -3173,8 +3195,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVFormat.java",
           "lines": [
-            1868,
-            1870,
+            [
+              1868,
+              1870
+            ],
             1873,
             1875,
             [
@@ -3204,8 +3228,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
           "lines": [
-            297,
-            302,
+            [
+              297,
+              302
+            ],
             306
           ]
         }
@@ -3214,8 +3240,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVPrinter.java",
           "lines": [
-            485,
-            491,
+            [
+              485,
+              491
+            ],
             494
           ]
         }
@@ -3228,9 +3256,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\CSVParser.java",
           "lines": [
-            456,
             [
-              458,
+              456,
               459
             ],
             461
@@ -3310,8 +3337,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             226,
             231,
             234,
@@ -3327,9 +3356,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            404,
             [
-              406,
+              404,
               407
             ],
             411,
@@ -3362,8 +3390,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             226,
             231,
             234,
@@ -3385,9 +3415,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            404,
             [
-              406,
+              404,
               407
             ],
             411,
@@ -3421,8 +3450,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             226,
             231,
             [
@@ -3448,22 +3479,6 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            404,
-            [
-              406,
-              407
-            ],
-            411,
-            416,
-            421,
-            443
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
-          "lines": [
             [
               325,
               326
@@ -3476,28 +3491,24 @@
             382
           ]
         }
-      ]
-    ],
-    "isEscapeDelimiter()": [
+      ],
       [
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            404,
             [
-              406,
+              404,
               407
             ],
             411,
             416,
-            [
-              421,
-              422
-            ],
+            421,
             443
           ]
         }
-      ],
+      ]
+    ],
+    "isEscapeDelimiter()": [
       [
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
@@ -3517,6 +3528,24 @@
             382
           ]
         }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              404,
+              407
+            ],
+            411,
+            416,
+            [
+              421,
+              422
+            ],
+            443
+          ]
+        }
       ]
     ],
     "isMetaChar(int)": [
@@ -3524,9 +3553,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            484,
             [
-              486,
+              484,
               487
             ],
             504,
@@ -3562,8 +3590,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             226,
             231,
             234,
@@ -3584,8 +3614,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             226,
             231,
             [
@@ -3622,8 +3654,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             226,
             231,
             234,
@@ -3641,8 +3675,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             226,
             231,
             234,
@@ -3660,9 +3696,8 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            404,
             [
-              406,
+              404,
               407
             ],
             443
@@ -3695,8 +3730,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            220,
-            223,
+            [
+              220,
+              223
+            ],
             226,
             231,
             [
@@ -3725,26 +3762,6 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            404,
-            [
-              406,
-              407
-            ],
-            411,
-            416,
-            [
-              421,
-              422
-            ],
-            425,
-            443
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
-          "lines": [
             [
               325,
               326
@@ -3761,6 +3778,25 @@
             382
           ]
         }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\csv\\Lexer.java",
+          "lines": [
+            [
+              404,
+              407
+            ],
+            411,
+            416,
+            [
+              421,
+              422
+            ],
+            425,
+            443
+          ]
+        }
       ]
     ],
     "trimTrailingSpaces(StringBuilder)": [
@@ -3768,8 +3804,10 @@
         {
           "file_path": "org\\apache\\commons\\csv\\Lexer.java",
           "lines": [
-            404,
-            406,
+            [
+              404,
+              406
+            ],
             [
               438,
               439

@@ -36,6 +36,24 @@ class JavaRunner:
             return (False, result.stderr)
         return (True, "")
 
+    def run_test_verbose(self, testclass):
+        test_cmd = self.test_base_cmd.copy() + ['--details', 'verbose', '--select-class', testclass]
+        # script = self.cd_cmd + test_cmd
+        try:
+            result = subprocess.run(
+                test_cmd, # script, 
+                capture_output=True, 
+                text=True, 
+                cwd = self.cd_cmd[1],
+                encoding="utf-8", 
+                errors='ignore', 
+                timeout=15)
+        except Exception as e:
+            if isinstance(e, subprocess.TimeoutExpired):
+                return f"{e.stderr}\n{e.stdout}"
+            return ""
+        return f"{result.stderr}\n{result.stdout}"
+
     def run_singal_unit_test(self, testclass, coverage:bool=True):
         """
         return code of JUnit test:
@@ -47,11 +65,26 @@ class JavaRunner:
         self.logger.info(f"Running single unit test, testclass: {testclass}")
         test_cmd = self.test_base_cmd.copy() + ['--select-class', testclass]
         if coverage:
-            java_agent = f"-javaagent:{self.dependency_fd}/jacocoagent.jar=destfile=target/jacoco.exec" 
+            java_agent = f"-javaagent:{self.dependency_fd}/jacocoagent.jar=destfile=target/jacoco.exec"
             test_cmd.insert(test_cmd.index('-cp'), java_agent)
-        
-        script = self.cd_cmd + test_cmd
-        result = subprocess.run(script, capture_output=True, text=True, shell=True, encoding="utf-8", errors='ignore')
+        # script = self.cd_cmd + test_cmd
+
+        try:
+            result = subprocess.run(
+                test_cmd, 
+                capture_output=True, 
+                text=True, 
+                cwd = self.cd_cmd[1], 
+                encoding="utf-8", 
+                errors='ignore', 
+                timeout=600)
+        except Exception as e:
+            if isinstance(e, subprocess.TimeoutExpired):
+                error_info = f"Time takes too long while executing test class {testclass}"
+                return (False, error_info)
+            self.logger.error(f"error occured in execute test class {testclass}, info:\n{e}")
+            return (False, "error")
+
         self.logger.info(f"return code: {result.returncode}")
         if result.returncode == 0:
             self.logger.info(f"test execution info: {result.stdout}")

@@ -241,7 +241,9 @@ class CodeSearcher:
         if code_lines is not None:
             for i in range(len(code_lines)):
                 invoke_code = ""
-                for single_line in code_lines[i]:
+                path_line:list = code_lines[i].copy()
+                path_line.reverse()
+                for single_line in path_line:
                     file_path = "src/main/java/" + single_line["file_path"].replace("\\","/")
                     lines = single_line["lines"]
                     read_code = self.snippet_reader.read_incoherent_lines(file_path, lines)

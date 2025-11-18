@@ -5,6 +5,7 @@ from threading import Lock
 
 import tools.io_utils as io_utils
 from tools.llm_api import LLMCaller
+from tools.time_agent import TimeRecorder
 from procedure.post_process import check_class_name, insert_test_case
 
 
@@ -22,9 +23,10 @@ def generate_testclass_framework(file_structure, task_setting, dataset_info: dic
     file_lock = Lock() # ensure thread-safe file writing
     llm_callers = [LLMCaller() for _ in range(mworkers)]
 
-    def process_init_response(llm_caller:LLMCaller, test_info, project_prompt, project_response, gen_folder):
-        id = test_info["id"]
-        class_name = test_info["test-class"].split('.')[-1]
+    @TimeRecorder
+    def process_init_response(llm_caller:LLMCaller, task_info, project_prompt, project_response, gen_folder):
+        id = task_info["id"]
+        class_name = task_info["test-class"].split('.')[-1]
         test_class_path = f"{gen_folder}/{class_name}.java"
         prompt = io_utils.load_text(f"{project_prompt}/{id}/init_prompt.md")
         code, response = llm_caller.get_response_code(prompt)
@@ -84,9 +86,10 @@ def generate_testcase_code(file_structure, task_setting, dataset_info: dict):
     file_lock = Lock()
     llm_callers = [LLMCaller() for _ in range(mworkers)]
 
-    def process_case_response(llm_caller:LLMCaller, test_info, project_prompt, project_response, gen_folder):
-        class_name = test_info["test-class"].split('.')[-1]
-        id = test_info["id"]
+    @TimeRecorder
+    def process_case_response(llm_caller:LLMCaller, task_info, project_prompt, project_response, gen_folder):
+        class_name = task_info["test-class"].split('.')[-1]
+        id = task_info["id"]
         save_path = f"{gen_folder}/{class_name}.java"
         init_class = io_utils.load_text(save_path)
         for prompt_name in prompt_list:
@@ -208,8 +211,9 @@ def generate_case_then_code(file_structure, task_setting, dataset_info: dict):
     file_lock = Lock()
     llm_callers = [LLMCaller() for _ in range(mworkers)]
 
-    def process_case_response(llm_caller:LLMCaller, test_info, project_prompt, project_response, gen_folder):
-        id = test_info["id"]
+    @TimeRecorder
+    def process_case_response(llm_caller:LLMCaller, task_info, project_prompt, project_response, gen_folder):
+        id = task_info["id"]
         response_folder = f"{project_response}/{id}"
         prompt_folder = f"{project_prompt}/{id}"
         # generate test cases in json format
@@ -231,7 +235,7 @@ def generate_case_then_code(file_structure, task_setting, dataset_info: dict):
         with file_lock:
             io_utils.write_json(f"{response_folder}/cases.json", cases_json)
         # generate test code based on test cases
-        class_name = test_info["test-class"].split('.')[-1]
+        class_name = task_info["test-class"].split('.')[-1]
         save_path = f"{gen_folder}/{class_name}.java"
         init_class = io_utils.load_text(save_path)
         prompt = io_utils.load_text(f"{prompt_folder}/gencode_prompt.md")

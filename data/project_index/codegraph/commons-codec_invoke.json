@@ -5,8 +5,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base16.java",
           "lines": [
-            147,
-            149,
+            [
+              147,
+              149
+            ],
             [
               156,
               157
@@ -37,9 +39,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base16.java",
           "lines": [
-            147,
             [
-              149,
+              147,
               152
             ],
             188
@@ -56,8 +57,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
           "lines": [
-            392,
-            395,
+            [
+              392,
+              395
+            ],
             398,
             [
               401,
@@ -94,8 +97,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
           "lines": [
-            392,
-            395,
+            [
+              392,
+              395
+            ],
             398,
             [
               401,
@@ -128,9 +133,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
           "lines": [
-            72,
             [
-              74,
+              72,
               75
             ]
           ]
@@ -174,8 +178,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            160,
-            162,
+            [
+              160,
+              162
+            ],
             [
               165,
               166
@@ -272,8 +278,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            418,
-            420,
+            [
+              418,
+              420
+            ],
             425
           ]
         }
@@ -323,8 +331,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            743,
-            745,
+            [
+              743,
+              745
+            ],
             748,
             [
               751,
@@ -353,8 +363,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            743,
-            745,
+            [
+              743,
+              745
+            ],
             748,
             [
               751,
@@ -403,8 +415,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            296,
-            298,
+            [
+              296,
+              298
+            ],
             303,
             312
           ]
@@ -416,8 +430,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            296,
-            298,
+            [
+              296,
+              298
+            ],
             303,
             312
           ]
@@ -429,8 +445,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            152,
-            154,
+            [
+              152,
+              154
+            ],
             [
               157,
               158
@@ -444,9 +462,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            85,
             [
-              87,
+              85,
               88
             ]
           ]
@@ -477,9 +494,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
           "lines": [
-            351,
             [
-              353,
+              351,
               355
             ],
             [
@@ -510,8 +526,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            152,
-            154,
+            [
+              152,
+              154
+            ],
             [
               157,
               158
@@ -591,9 +609,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
           "lines": [
-            547,
             [
-              549,
+              547,
               550
             ],
             556
@@ -606,8 +623,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecOutputStream.java",
           "lines": [
-            88,
-            90,
+            [
+              88,
+              90
+            ],
             93,
             95
           ]
@@ -617,8 +636,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
           "lines": [
-            520,
-            522,
+            [
+              520,
+              522
+            ],
             [
               525,
               527
@@ -631,9 +652,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecOutputStream.java",
           "lines": [
-            165,
             [
-              167,
+              165,
               168
             ],
             171,
@@ -663,8 +683,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
           "lines": [
-            547,
-            549,
+            [
+              547,
+              549
+            ],
             [
               552,
               553
@@ -701,8 +723,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
           "lines": [
-            622,
-            624,
+            [
+              622,
+              624
+            ],
             [
               627,
               628
@@ -716,8 +740,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
           "lines": [
-            576,
-            578,
+            [
+              576,
+              578
+            ],
             [
               581,
               582
@@ -731,9 +757,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecOutputStream.java",
           "lines": [
-            88,
             [
-              90,
+              88,
               91
             ],
             95
@@ -760,9 +785,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecOutputStream.java",
           "lines": [
-            165,
             [
-              167,
+              165,
               168
             ],
             171,
@@ -780,8 +804,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base16.java",
           "lines": [
-            201,
-            203,
+            [
+              201,
+              203
+            ],
             206,
             [
               210,
@@ -796,8 +822,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base16.java",
           "lines": [
-            147,
-            149,
+            [
+              147,
+              149
+            ],
             [
               156,
               157
@@ -813,20 +841,22 @@
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
+          "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            497,
-            500,
             [
-              505,
-              507
+              743,
+              745
             ],
-            510,
+            748,
             [
-              565,
-              566
+              751,
+              753
             ],
-            591
+            [
+              777,
+              778
+            ],
+            802
           ]
         }
       ]
@@ -850,8 +880,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            296,
-            298,
+            [
+              296,
+              298
+            ],
             [
               303,
               304
@@ -889,9 +921,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecInputStream.java",
           "lines": [
-            155,
             [
-              157,
+              155,
               158
             ],
             161,
@@ -962,21 +993,23 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
           "lines": [
-            625,
-            627,
-            631
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
-          "lines": [
             [
               638,
               639
             ],
             643
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
+          "lines": [
+            [
+              941,
+              942
+            ],
+            948
           ]
         }
       ]
@@ -998,20 +1031,6 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
           "lines": [
-            520,
-            522,
-            [
-              525,
-              529
-            ],
-            531
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
-          "lines": [
             [
               597,
               598
@@ -1021,6 +1040,22 @@
               605
             ],
             607
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
+          "lines": [
+            [
+              520,
+              522
+            ],
+            [
+              525,
+              529
+            ],
+            531
           ]
         }
       ]
@@ -1067,9 +1102,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
           "lines": [
-            72,
             [
-              74,
+              72,
               75
             ]
           ]
@@ -1079,9 +1113,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            85,
             [
-              87,
+              85,
               88
             ]
           ]
@@ -1093,9 +1126,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
           "lines": [
-            72,
             [
-              74,
+              72,
               75
             ]
           ]
@@ -1105,9 +1137,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            85,
             [
-              87,
+              85,
               88
             ]
           ]
@@ -1119,9 +1150,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
           "lines": [
-            72,
             [
-              74,
+              72,
               75
             ]
           ]
@@ -1131,9 +1161,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            85,
             [
-              87,
+              85,
               88
             ]
           ]
@@ -1145,9 +1174,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
           "lines": [
-            72,
             [
-              74,
+              72,
               75
             ]
           ]
@@ -1157,9 +1185,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            85,
             [
-              87,
+              85,
               88
             ]
           ]
@@ -1171,9 +1198,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base32.java",
           "lines": [
-            72,
             [
-              74,
+              72,
               75
             ]
           ]
@@ -1183,9 +1209,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
           "lines": [
-            85,
             [
-              87,
+              85,
               88
             ]
           ]
@@ -1213,9 +1238,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecInputStream.java",
           "lines": [
-            123,
             [
-              125,
+              123,
               127
             ],
             134
@@ -1226,8 +1250,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecInputStream.java",
           "lines": [
-            226,
-            228,
+            [
+              226,
+              228
+            ],
             [
               232,
               236
@@ -1244,8 +1270,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecOutputStream.java",
           "lines": [
-            76,
-            78,
+            [
+              76,
+              78
+            ],
             81
           ]
         }
@@ -1256,9 +1284,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecOutputStream.java",
           "lines": [
-            76,
             [
-              78,
+              76,
               79
             ],
             81
@@ -1271,9 +1298,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecOutputStream.java",
           "lines": [
-            103,
             [
-              105,
+              103,
               106
             ]
           ]
@@ -1283,9 +1309,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecOutputStream.java",
           "lines": [
-            165,
             [
-              167,
+              165,
               168
             ],
             171,
@@ -1305,9 +1330,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodecOutputStream.java",
           "lines": [
-            192,
             [
-              194,
+              192,
               196
             ]
           ]
@@ -1321,9 +1345,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BinaryCodec.java",
           "lines": [
-            221,
             [
-              223,
+              221,
               224
             ]
           ]
@@ -1333,8 +1356,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BinaryCodec.java",
           "lines": [
-            236,
-            238,
+            [
+              236,
+              238
+            ],
             [
               241,
               242
@@ -1364,8 +1389,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BinaryCodec.java",
           "lines": [
-            236,
-            238,
+            [
+              236,
+              238
+            ],
             241,
             [
               244,
@@ -1383,31 +1410,37 @@
     "isEmpty(byte[])": [
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\binary\\Base64.java",
+          "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
           "lines": [
-            296,
-            298,
-            312
+            [
+              597,
+              598
+            ],
+            607
           ]
         }
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
+          "file_path": "org\\apache\\commons\\codec\\binary\\BinaryCodec.java",
           "lines": [
-            520,
-            522,
-            531
+            [
+              78,
+              79
+            ],
+            97
           ]
         }
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
+          "file_path": "org\\apache\\commons\\codec\\binary\\BinaryCodec.java",
           "lines": [
-            576,
-            578,
-            582
+            [
+              147,
+              148
+            ],
+            168
           ]
         }
       ]
@@ -1417,9 +1450,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BinaryCodec.java",
           "lines": [
-            261,
             [
-              263,
+              261,
               264
             ]
           ]
@@ -1442,8 +1474,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BinaryCodec.java",
           "lines": [
-            276,
-            278,
+            [
+              276,
+              278
+            ],
             [
               281,
               282
@@ -1491,10 +1525,9 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
-            414,
             [
-              416,
-              417
+              433,
+              435
             ]
           ]
         }
@@ -1504,8 +1537,8 @@
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
             [
-              433,
-              435
+              414,
+              417
             ]
           ]
         }
@@ -1541,9 +1574,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
-            519,
             [
-              521,
+              519,
               524
             ],
             [
@@ -1690,24 +1722,11 @@
     "encodeHexString(byte[])": [
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
+          "file_path": "org\\apache\\commons\\codec\\digest\\DigestUtils.java",
           "lines": [
-            480,
             [
-              482,
-              483
-            ]
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\cli\\Digest.java",
-          "lines": [
-            80,
-            [
-              86,
-              87
+              397,
+              399
             ]
           ]
         }
@@ -1717,8 +1736,19 @@
           "file_path": "org\\apache\\commons\\codec\\digest\\DigestUtils.java",
           "lines": [
             [
-              397,
-              399
+              409,
+              411
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\digest\\DigestUtils.java",
+          "lines": [
+            [
+              420,
+              422
             ]
           ]
         }
@@ -1799,9 +1829,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
-            519,
             [
-              521,
+              519,
               522
             ],
             [
@@ -1840,8 +1869,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
-            448,
-            450,
+            [
+              448,
+              450
+            ],
             [
               453,
               454
@@ -1856,8 +1887,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
-            448,
-            450,
+            [
+              448,
+              450
+            ],
             453,
             [
               456,
@@ -1873,9 +1906,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
-            448,
             [
-              450,
+              448,
               451
             ],
             464
@@ -1884,18 +1916,6 @@
       ]
     ],
     "getCharset()": [
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
-          "lines": [
-            414,
-            [
-              416,
-              417
-            ]
-          ]
-        }
-      ],
       [
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
@@ -1911,10 +1931,20 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
-            480,
             [
-              482,
-              483
+              501,
+              503
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
+          "lines": [
+            [
+              414,
+              417
             ]
           ]
         }
@@ -2018,8 +2048,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            265,
-            267,
+            [
+              265,
+              267
+            ],
             [
               270,
               271
@@ -2068,8 +2100,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\StringUtils.java",
           "lines": [
-            166,
-            173,
+            [
+              166,
+              173
+            ],
             175
           ]
         }
@@ -2078,8 +2112,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\StringUtils.java",
           "lines": [
-            307,
-            314,
+            [
+              307,
+              314
+            ],
             316
           ]
         }
@@ -2670,25 +2706,25 @@
     "DecoderException(String)": [
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
+          "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
-            547,
             [
-              555,
-              556
-            ]
+              364,
+              367
+            ],
+            370
           ]
         }
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\binary\\BinaryCodec.java",
+          "file_path": "org\\apache\\commons\\codec\\net\\Utils.java",
           "lines": [
-            236,
             [
-              250,
-              251
-            ]
+              45,
+              48
+            ],
+            51
           ]
         }
       ],
@@ -2696,9 +2732,12 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
           "lines": [
-            364,
-            367,
-            370
+            [
+              90,
+              93
+            ],
+            97,
+            108
           ]
         }
       ]
@@ -2706,31 +2745,37 @@
     "DecoderException(String, Throwable)": [
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
-          "lines": [
-            448,
-            462,
-            464
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            143,
-            148,
+            [
+              143,
+              148
+            ],
             150
           ]
         }
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
+          "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            101,
-            115,
-            124
+            [
+              174,
+              179
+            ],
+            181
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
+          "lines": [
+            [
+              239,
+              247
+            ],
+            249
           ]
         }
       ]
@@ -2781,8 +2826,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Sha2Crypt.java",
           "lines": [
-            169,
-            172,
+            [
+              169,
+              172
+            ],
             [
               175,
               177
@@ -3075,9 +3122,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            420,
             [
-              422,
+              420,
               425
             ],
             [
@@ -3140,9 +3186,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            420,
             [
-              422,
+              420,
               425
             ],
             [
@@ -3205,9 +3250,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            420,
             [
-              422,
+              420,
               425
             ],
             [
@@ -3306,9 +3350,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
             [
-              189,
+              185,
               191
             ],
             [
@@ -3346,9 +3389,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
             [
-              189,
+              185,
               191
             ],
             [
@@ -3374,9 +3416,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            148,
             [
-              156,
+              148,
               159
             ],
             163
@@ -3411,9 +3452,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            148,
             [
-              156,
+              148,
               159
             ],
             163
@@ -3450,9 +3490,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
             [
-              189,
+              185,
               191
             ],
             193,
@@ -3474,9 +3513,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
             [
-              189,
+              185,
               191
             ],
             193,
@@ -3507,9 +3545,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            148,
             [
-              156,
+              148,
               159
             ],
             163
@@ -4088,8 +4125,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
-            189,
+            [
+              185,
+              189
+            ],
             196
           ]
         },
@@ -4192,8 +4231,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
-            189,
+            [
+              185,
+              189
+            ],
             196
           ]
         },
@@ -4453,9 +4494,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            148,
             [
-              156,
+              148,
               159
             ],
             163
@@ -4490,9 +4530,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            148,
             [
-              156,
+              148,
               159
             ],
             163
@@ -4529,9 +4568,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            148,
             [
-              156,
+              148,
               158
             ],
             [
@@ -4569,9 +4607,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            148,
             [
-              156,
+              148,
               158
             ],
             [
@@ -4693,9 +4730,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
             [
-              189,
+              185,
               191
             ],
             193,
@@ -4719,9 +4755,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
             [
-              189,
+              185,
               191
             ],
             [
@@ -4745,9 +4780,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
             [
-              189,
+              185,
               191
             ],
             [
@@ -4852,8 +4886,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Blake3.java",
           "lines": [
-            185,
-            189,
+            [
+              185,
+              189
+            ],
             196
           ]
         },
@@ -5220,8 +5256,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\DigestUtils.java",
           "lines": [
-            153,
-            155,
+            [
+              153,
+              155
+            ],
             159
           ]
         }
@@ -5230,8 +5268,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\DigestUtils.java",
           "lines": [
-            173,
-            175,
+            [
+              173,
+              175
+            ],
             179
           ]
         }
@@ -6146,9 +6186,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\DigestUtils.java",
           "lines": [
-            1351,
             [
-              1353,
+              1351,
               1354
             ]
           ]
@@ -6182,8 +6221,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\DigestUtils.java",
           "lines": [
-            1278,
-            1280,
+            [
+              1278,
+              1280
+            ],
             1282
           ]
         }
@@ -6257,8 +6298,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\HmacUtils.java",
           "lines": [
-            784,
-            786,
+            [
+              784,
+              786
+            ],
             791
           ]
         }
@@ -6323,9 +6366,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\HmacUtils.java",
           "lines": [
-            972,
-            974,
-            976
+            [
+              1060,
+              1062
+            ]
           ]
         }
       ],
@@ -6334,9 +6378,10 @@
           "file_path": "org\\apache\\commons\\codec\\digest\\HmacUtils.java",
           "lines": [
             [
-              1060,
-              1062
-            ]
+              972,
+              974
+            ],
+            976
           ]
         }
       ]
@@ -6462,8 +6507,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\Md5Crypt.java",
           "lines": [
-            116,
-            118,
+            [
+              116,
+              118
+            ],
             [
               121,
               122
@@ -6508,8 +6555,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\MurmurHash2.java",
           "lines": [
-            118,
-            120,
+            [
+              118,
+              120
+            ],
             123,
             [
               126,
@@ -6711,9 +6760,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\MurmurHash3.java",
           "lines": [
-            497,
             [
-              499,
+              497,
               500
             ]
           ]
@@ -6784,9 +6832,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\MurmurHash3.java",
           "lines": [
-            497,
             [
-              499,
+              497,
               500
             ]
           ]
@@ -6811,9 +6858,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\MurmurHash3.java",
           "lines": [
-            497,
             [
-              499,
+              497,
               500
             ]
           ]
@@ -6944,9 +6990,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\MurmurHash3.java",
           "lines": [
-            241,
             [
-              243,
+              241,
               244
             ]
           ]
@@ -6960,9 +7005,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\PureJavaCrc32.java",
           "lines": [
-            589,
             [
-              591,
+              589,
               592
             ]
           ]
@@ -7456,9 +7500,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\XXHash32.java",
           "lines": [
-            91,
             [
-              93,
+              91,
               94
             ],
             [
@@ -7479,9 +7522,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\XXHash32.java",
           "lines": [
-            131,
             [
-              133,
+              131,
               136
             ],
             [
@@ -7494,8 +7536,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\XXHash32.java",
           "lines": [
-            159,
-            161,
+            [
+              159,
+              161
+            ],
             164,
             166,
             171,
@@ -7517,8 +7561,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\XXHash32.java",
           "lines": [
-            151,
-            153,
+            [
+              151,
+              153
+            ],
             157
           ]
         }
@@ -7529,8 +7575,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\XXHash32.java",
           "lines": [
-            159,
-            161,
+            [
+              159,
+              161
+            ],
             164,
             166,
             171,
@@ -7552,9 +7600,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\digest\\XXHash32.java",
           "lines": [
-            200,
             [
-              202,
+              200,
               204
             ]
           ]
@@ -7568,9 +7615,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\StringEncoderComparator.java",
           "lines": [
-            71,
             [
-              79,
+              71,
               80
             ],
             86
@@ -7585,8 +7631,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BaseNCodec.java",
           "lines": [
-            622,
-            625,
+            [
+              622,
+              625
+            ],
             628
           ]
         }
@@ -7595,8 +7643,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\binary\\BinaryCodec.java",
           "lines": [
-            276,
-            279,
+            [
+              276,
+              279
+            ],
             282
           ]
         }
@@ -7605,8 +7655,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\AbstractCaverphone.java",
           "lines": [
-            46,
-            49,
+            [
+              46,
+              49
+            ],
             52
           ]
         }
@@ -7615,20 +7667,12 @@
     "EncoderException(String, Throwable)": [
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\binary\\Hex.java",
-          "lines": [
-            519,
-            530,
-            534
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            229,
-            233,
+            [
+              229,
+              233
+            ],
             235
           ]
         }
@@ -7637,9 +7681,23 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            287,
-            291,
+            [
+              287,
+              291
+            ],
             293
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
+          "lines": [
+            [
+              319,
+              327
+            ],
+            329
           ]
         }
       ]
@@ -7652,8 +7710,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\BeiderMorseEncoder.java",
           "lines": [
-            88,
-            90,
+            [
+              88,
+              90
+            ],
             [
               93,
               94
@@ -7728,8 +7788,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Lang.java",
           "lines": [
-            135,
-            176,
+            [
+              135,
+              176
+            ],
             181
           ]
         }
@@ -7756,8 +7818,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Languages.java",
           "lines": [
-            250,
-            268,
+            [
+              250,
+              268
+            ],
             270
           ]
         }
@@ -7781,8 +7845,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Languages.java",
           "lines": [
-            137,
-            139,
+            [
+              137,
+              139
+            ],
             142,
             [
               145,
@@ -7795,8 +7861,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Languages.java",
           "lines": [
-            123,
-            125,
+            [
+              123,
+              125
+            ],
             128,
             [
               131,
@@ -7822,9 +7890,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            344,
             [
-              346,
+              344,
               348
             ]
           ]
@@ -7862,9 +7929,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            344,
             [
-              346,
+              344,
               348
             ]
           ]
@@ -7931,9 +7997,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            362,
-            368,
-            372
+            [
+              266,
+              269
+            ]
           ]
         }
       ],
@@ -7942,9 +8009,10 @@
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
             [
-              266,
-              269
-            ]
+              362,
+              368
+            ],
+            372
           ]
         }
       ]
@@ -8010,9 +8078,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\BeiderMorseEncoder.java",
           "lines": [
-            96,
             [
-              101,
+              96,
               102
             ]
           ]
@@ -8275,9 +8342,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8295,9 +8361,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8333,9 +8398,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8385,9 +8449,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8463,9 +8526,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8509,9 +8571,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8557,9 +8618,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8577,9 +8637,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8625,9 +8684,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8648,16 +8706,20 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            446,
+            [
+              409,
+              446
+            ],
             491
           ]
         },
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            447,
+            [
+              409,
+              447
+            ],
             491
           ]
         }
@@ -8681,8 +8743,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            309,
-            311,
+            [
+              309,
+              311
+            ],
             315
           ]
         }
@@ -8720,9 +8784,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            344,
             [
-              346,
+              344,
               348
             ]
           ]
@@ -8751,16 +8814,20 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            460,
+            [
+              409,
+              460
+            ],
             491
           ]
         },
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            447,
+            [
+              409,
+              447
+            ],
             491
           ]
         }
@@ -8771,16 +8838,20 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            460,
+            [
+              409,
+              460
+            ],
             491
           ]
         },
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            447,
+            [
+              409,
+              447
+            ],
             491
           ]
         }
@@ -8791,16 +8862,20 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            447,
+            [
+              409,
+              447
+            ],
             491
           ]
         },
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            447,
+            [
+              409,
+              447
+            ],
             491
           ]
         }
@@ -8811,9 +8886,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
             [
-              457,
+              409,
               460
             ],
             491
@@ -8822,8 +8896,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            447,
+            [
+              409,
+              447
+            ],
             491
           ]
         }
@@ -8881,8 +8957,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            409,
-            462,
+            [
+              409,
+              462
+            ],
             491
           ]
         }
@@ -8920,9 +8998,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8940,9 +9017,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8960,9 +9036,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\PhoneticEngine.java",
           "lines": [
-            310,
             [
-              312,
+              310,
               313
             ],
             317,
@@ -8982,9 +9057,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            188,
             [
-              190,
+              188,
               191
             ]
           ]
@@ -9072,9 +9146,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            362,
-            368,
-            372
+            [
+              266,
+              269
+            ]
           ]
         }
       ],
@@ -9083,9 +9158,10 @@
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
             [
-              266,
-              269
-            ]
+              362,
+              368
+            ],
+            372
           ]
         }
       ]
@@ -9145,10 +9221,9 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\ColognePhonetic.java",
           "lines": [
-            408,
             [
-              410,
-              411
+              421,
+              423
             ]
           ]
         }
@@ -9158,8 +9233,8 @@
           "file_path": "org\\apache\\commons\\codec\\language\\ColognePhonetic.java",
           "lines": [
             [
-              421,
-              423
+              408,
+              411
             ]
           ]
         }
@@ -9170,8 +9245,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\ColognePhonetic.java",
           "lines": [
-            396,
-            398,
+            [
+              396,
+              398
+            ],
             [
               405,
               406
@@ -9202,9 +9279,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\ColognePhonetic.java",
           "lines": [
-            215,
             [
-              217,
+              215,
               218
             ]
           ]
@@ -9512,9 +9588,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DaitchMokotoffSoundex.java",
           "lines": [
-            411,
             [
-              416,
+              411,
               417
             ]
           ]
@@ -9549,8 +9624,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DaitchMokotoffSoundex.java",
           "lines": [
-            391,
-            393,
+            [
+              391,
+              393
+            ],
             [
               397,
               398
@@ -9564,9 +9641,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DaitchMokotoffSoundex.java",
           "lines": [
-            411,
             [
-              416,
+              411,
               417
             ]
           ]
@@ -9705,18 +9781,6 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DaitchMokotoffSoundex.java",
           "lines": [
-            119,
-            [
-              121,
-              122
-            ]
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\language\\DaitchMokotoffSoundex.java",
-          "lines": [
             [
               90,
               92
@@ -9729,8 +9793,21 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DaitchMokotoffSoundex.java",
           "lines": [
-            97,
-            99,
+            [
+              119,
+              122
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\language\\DaitchMokotoffSoundex.java",
+          "lines": [
+            [
+              97,
+              99
+            ],
             102,
             [
               106,
@@ -9772,9 +9849,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DaitchMokotoffSoundex.java",
           "lines": [
-            411,
             [
-              416,
+              411,
               417
             ]
           ]
@@ -9953,8 +10029,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DaitchMokotoffSoundex.java",
           "lines": [
-            235,
-            297,
+            [
+              235,
+              297
+            ],
             308
           ]
         }
@@ -10274,9 +10352,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            401,
             [
-              403,
+              401,
               404
             ]
           ]
@@ -10286,8 +10363,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            387,
-            389,
+            [
+              387,
+              389
+            ],
             [
               392,
               393
@@ -10539,9 +10618,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            557,
             [
-              559,
+              557,
               560
             ],
             611
@@ -10739,8 +10817,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            749,
-            751,
+            [
+              749,
+              751
+            ],
             754,
             758,
             766,
@@ -10939,8 +11019,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            557,
-            559,
+            [
+              557,
+              559
+            ],
             [
               561,
               562
@@ -10976,9 +11058,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            648,
             [
-              650,
+              648,
               651
             ],
             659
@@ -11012,8 +11093,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            664,
-            666,
+            [
+              664,
+              666
+            ],
             676,
             [
               678,
@@ -11078,12 +11161,12 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            648,
             [
-              650,
-              652
+              718,
+              720
             ],
-            659
+            723,
+            727
           ]
         }
       ]
@@ -11213,8 +11296,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            905,
-            907,
+            [
+              905,
+              907
+            ],
             [
               912,
               914
@@ -11273,9 +11358,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\DoubleMetaphone.java",
           "lines": [
-            732,
             [
-              734,
+              732,
               737
             ],
             742
@@ -11463,18 +11547,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
           "lines": [
-            116,
-            124,
-            144
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
-          "lines": [
-            210,
-            212,
+            [
+              210,
+              212
+            ],
             215,
             218,
             221,
@@ -11485,6 +11561,18 @@
             262
           ]
         }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
+          "lines": [
+            [
+              116,
+              124
+            ],
+            144
+          ]
+        }
       ]
     ],
     "encode(String)": [
@@ -11492,8 +11580,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
           "lines": [
-            100,
-            102,
+            [
+              100,
+              102
+            ],
             [
               106,
               107
@@ -11507,20 +11597,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
           "lines": [
-            116,
             [
-              143,
-              144
-            ]
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
-          "lines": [
-            210,
-            212,
+              210,
+              212
+            ],
             215,
             218,
             221,
@@ -11543,6 +11623,17 @@
             262
           ]
         }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
+          "lines": [
+            [
+              116,
+              144
+            ]
+          ]
+        }
       ]
     ],
     "getMinRating(int)": [
@@ -11550,8 +11641,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
           "lines": [
-            210,
-            212,
+            [
+              210,
+              212
+            ],
             215,
             218,
             221,
@@ -11586,8 +11679,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
           "lines": [
-            406,
-            408,
+            [
+              406,
+              408
+            ],
             [
               410,
               414
@@ -11604,8 +11699,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
           "lines": [
-            210,
-            212,
+            [
+              210,
+              212
+            ],
             215,
             218,
             221,
@@ -11660,18 +11757,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
           "lines": [
-            116,
-            141,
-            144
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
-          "lines": [
-            210,
-            212,
+            [
+              210,
+              212
+            ],
             215,
             218,
             221,
@@ -11690,6 +11779,18 @@
             262
           ]
         }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
+          "lines": [
+            [
+              116,
+              141
+            ],
+            144
+          ]
+        }
       ]
     ],
     "removeVowels(String)": [
@@ -11697,18 +11798,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
           "lines": [
-            116,
-            133,
-            144
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
-          "lines": [
-            210,
-            212,
+            [
+              210,
+              212
+            ],
             215,
             218,
             221,
@@ -11721,6 +11814,18 @@
               233
             ],
             262
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\language\\MatchRatingApproachEncoder.java",
+          "lines": [
+            [
+              116,
+              133
+            ],
+            144
           ]
         }
       ]
@@ -11984,18 +12089,6 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\Metaphone.java",
           "lines": [
-            102,
-            [
-              104,
-              105
-            ]
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "org\\apache\\commons\\codec\\language\\Metaphone.java",
-          "lines": [
             [
               125,
               127
@@ -12007,8 +12100,21 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\Metaphone.java",
           "lines": [
-            88,
-            90,
+            [
+              102,
+              105
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "org\\apache\\commons\\codec\\language\\Metaphone.java",
+          "lines": [
+            [
+              88,
+              90
+            ],
             [
               93,
               94
@@ -12075,8 +12181,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\Nysiis.java",
           "lines": [
-            119,
-            121,
+            [
+              119,
+              121
+            ],
             126,
             133,
             146,
@@ -12199,9 +12307,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\Nysiis.java",
           "lines": [
-            228,
             [
-              230,
+              228,
               231
             ]
           ]
@@ -12211,8 +12318,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\Nysiis.java",
           "lines": [
-            211,
-            213,
+            [
+              211,
+              213
+            ],
             [
               216,
               217
@@ -12256,9 +12365,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\RefinedSoundex.java",
           "lines": [
-            157,
             [
-              159,
+              157,
               160
             ]
           ]
@@ -12268,8 +12376,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\RefinedSoundex.java",
           "lines": [
-            142,
-            144,
+            [
+              142,
+              144
+            ],
             [
               147,
               148
@@ -12308,9 +12418,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\Soundex.java",
           "lines": [
-            249,
             [
-              251,
+              249,
               252
             ]
           ]
@@ -12320,8 +12429,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\Soundex.java",
           "lines": [
-            232,
-            234,
+            [
+              232,
+              234
+            ],
             [
               237,
               238
@@ -12427,9 +12538,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\Caverphone2.java",
           "lines": [
-            42,
             [
-              44,
+              42,
               45
             ],
             127
@@ -12444,8 +12554,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            122,
-            124,
+            [
+              122,
+              124
+            ],
             [
               127,
               128
@@ -12460,8 +12572,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            177,
-            179,
+            [
+              177,
+              179
+            ],
             [
               182,
               183
@@ -12476,9 +12590,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            197,
             [
-              199,
+              197,
               200
             ]
           ]
@@ -12502,8 +12615,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            170,
-            172,
+            [
+              170,
+              172
+            ],
             [
               175,
               178
@@ -12526,8 +12641,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            170,
-            172,
+            [
+              170,
+              172
+            ],
             175,
             181
           ]
@@ -12539,8 +12656,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            170,
-            172,
+            [
+              170,
+              172
+            ],
             [
               175,
               177
@@ -12555,8 +12674,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            133,
-            135,
+            [
+              133,
+              135
+            ],
             [
               138,
               139
@@ -12571,8 +12692,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            170,
-            172,
+            [
+              170,
+              172
+            ],
             [
               175,
               178
@@ -12587,8 +12710,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            190,
-            192,
+            [
+              190,
+              192
+            ],
             [
               195,
               196
@@ -12603,8 +12728,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            101,
-            103,
+            [
+              101,
+              103
+            ],
             106,
             124
           ]
@@ -12616,8 +12743,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            170,
-            172,
+            [
+              170,
+              172
+            ],
             175,
             181
           ]
@@ -12648,8 +12777,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            170,
-            172,
+            [
+              170,
+              172
+            ],
             [
               175,
               178
@@ -12681,8 +12812,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            170,
-            172,
+            [
+              170,
+              172
+            ],
             175,
             181
           ]
@@ -12713,8 +12846,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            170,
-            172,
+            [
+              170,
+              172
+            ],
             [
               175,
               178
@@ -12746,8 +12881,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            170,
-            172,
+            [
+              170,
+              172
+            ],
             175,
             181
           ]
@@ -12761,8 +12898,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            153,
-            155,
+            [
+              153,
+              155
+            ],
             [
               158,
               159
@@ -12777,8 +12916,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            235,
-            237,
+            [
+              235,
+              237
+            ],
             [
               240,
               241
@@ -12793,9 +12934,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            255,
             [
-              257,
+              255,
               258
             ]
           ]
@@ -12809,9 +12949,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            407,
             [
-              409,
+              407,
               410
             ]
           ]
@@ -12821,8 +12960,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            183,
-            185,
+            [
+              183,
+              185
+            ],
             [
               188,
               189
@@ -12888,8 +13029,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            210,
-            212,
+            [
+              210,
+              212
+            ],
             215,
             224
           ]
@@ -12912,9 +13055,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            506,
             [
-              508,
+              506,
               509
             ]
           ]
@@ -13105,8 +13247,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            423,
-            425,
+            [
+              423,
+              425
+            ],
             [
               428,
               429
@@ -13121,8 +13265,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            423,
-            425,
+            [
+              423,
+              425
+            ],
             428,
             [
               431,
@@ -13138,9 +13284,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            448,
             [
-              450,
+              448,
               451
             ]
           ]
@@ -13182,8 +13327,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            521,
-            523,
+            [
+              521,
+              523
+            ],
             [
               526,
               527
@@ -13198,8 +13345,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            521,
-            523,
+            [
+              521,
+              523
+            ],
             526,
             [
               529,
@@ -13215,9 +13364,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            551,
             [
-              553,
+              551,
               554
             ]
           ]
@@ -13229,9 +13377,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            448,
             [
-              450,
+              448,
               451
             ]
           ]
@@ -13241,9 +13388,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            551,
             [
-              553,
+              551,
               554
             ]
           ]
@@ -13257,8 +13403,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            143,
-            146,
+            [
+              143,
+              146
+            ],
             150
           ]
         }
@@ -13267,8 +13415,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            174,
-            177,
+            [
+              174,
+              177
+            ],
             181
           ]
         }
@@ -13371,8 +13521,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            229,
-            231,
+            [
+              229,
+              231
+            ],
             235
           ]
         }
@@ -13381,8 +13533,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            287,
-            289,
+            [
+              287,
+              289
+            ],
             293
           ]
         }
@@ -13393,9 +13547,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\BCodec.java",
           "lines": [
-            197,
             [
-              199,
+              197,
               200
             ]
           ]
@@ -13405,9 +13558,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\QCodec.java",
           "lines": [
-            255,
             [
-              257,
+              255,
               258
             ]
           ]
@@ -13468,9 +13620,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            198,
             [
-              200,
+              198,
               201
             ]
           ]
@@ -13482,9 +13633,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            280,
             [
-              282,
+              280,
               283
             ]
           ]
@@ -13496,8 +13646,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            265,
-            267,
+            [
+              265,
+              267
+            ],
             [
               270,
               271
@@ -13509,8 +13661,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            214,
-            216,
+            [
+              214,
+              216
+            ],
             [
               219,
               220
@@ -13525,8 +13679,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            214,
-            216,
+            [
+              214,
+              216
+            ],
             219,
             [
               222,
@@ -13542,8 +13698,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            239,
-            245,
+            [
+              239,
+              245
+            ],
             249
           ]
         }
@@ -13569,8 +13727,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            294,
-            296,
+            [
+              294,
+              296
+            ],
             [
               299,
               300
@@ -13585,8 +13745,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            294,
-            296,
+            [
+              294,
+              296
+            ],
             299,
             [
               302,
@@ -13602,8 +13764,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            319,
-            325,
+            [
+              319,
+              325
+            ],
             329
           ]
         }
@@ -13614,8 +13778,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            239,
-            245,
+            [
+              239,
+              245
+            ],
             249
           ]
         }
@@ -13624,8 +13790,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            319,
-            325,
+            [
+              319,
+              325
+            ],
             329
           ]
         }
@@ -13638,9 +13806,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\net\\PercentCodec.java",
           "lines": [
-            101,
             [
-              111,
+              101,
               112
             ],
             124
@@ -13649,27 +13816,25 @@
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
+          "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
           "lines": [
-            123,
             [
-              136,
-              137
+              101,
+              113
             ],
-            148
+            123
           ]
         }
       ],
       [
         {
-          "file_path": "org\\apache\\commons\\codec\\net\\URLCodec.java",
+          "file_path": "org\\apache\\commons\\codec\\net\\QuotedPrintableCodec.java",
           "lines": [
-            101,
             [
-              112,
-              113
+              123,
+              137
             ],
-            123
+            148
           ]
         }
       ]
@@ -13733,8 +13898,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Lang.java",
           "lines": [
-            135,
-            137,
+            [
+              135,
+              137
+            ],
             181
           ]
         }
@@ -13743,8 +13910,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Languages.java",
           "lines": [
-            250,
-            253,
+            [
+              250,
+              253
+            ],
             270
           ]
         }
@@ -13753,9 +13922,8 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\bm\\Rule.java",
           "lines": [
-            271,
             [
-              273,
+              271,
               275
             ]
           ]
@@ -13792,8 +13960,10 @@
         {
           "file_path": "org\\apache\\commons\\codec\\language\\AbstractCaverphone.java",
           "lines": [
-            46,
-            48,
+            [
+              46,
+              48
+            ],
             [
               51,
               52

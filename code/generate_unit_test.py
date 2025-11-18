@@ -6,6 +6,7 @@ import logging
 import argparse
 
 import tools.io_utils as utils
+from tools.time_agent import TimeRecorder
 import procedure.generate_prompt as GenPrompt
 import procedure.generate_code as GenCode
 import procedure.post_process as Post
@@ -88,6 +89,7 @@ def run():
     post_end = time.time()
     logger.info(f"time for post process: {post_end - post_start:.2f} seconds")
     
+    TimeRecorder.update_records()
     end_time = time.time()
     elapsed_time = end_time - start_time
     logger.info(f"total elapsed time: {elapsed_time:.2f} seconds")

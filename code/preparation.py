@@ -4,7 +4,7 @@ import jpype
 import logging
 import argparse
 
-from settings import FileStructure as FS
+from settings import FileStructure as FS, TimeRecord as TR
 import tools.io_utils as utils
 import procedure.workspace_preparation as WSP
 import procedure.preprocess_project as PreProcess
@@ -38,6 +38,8 @@ def set_file_structure():
     response_path = FS.RESPONSE_PATH
     testclass_path = FS.TESTCLASSS_PATH
     report_path = FS.REPORT_PATH
+    time_record_path = TR.TIME_RECORD_PATH + '/'
+    utils.check_path(time_record_path)
     for pj_name, pj_info in dataset_info.items():
         project_prompt = prompt_path.replace("<project>", pj_name)
         project_fix = fix_path.replace("<project>", pj_name)
@@ -82,10 +84,10 @@ def run(args):
         logger.info("Constructing project index ...")
         ProjectPreprocessor = jpype.JClass("PreProcessor")
         ProjectPreprocessor.main([dataset_abs, f"{root_path}/{code_info_path}/json"])
-        # PreProcess.build_calling_graph(FS)
-        # PreProcess.extract_invoke_patterns(FS)
-        # IndexBuilder = jpype.JClass("IndexBuilder")
-        # IndexBuilder.main(["group", f"{code_info_path}/json", f"{code_info_path}/lucene"])
+        PreProcess.build_calling_graph(FS)
+        PreProcess.extract_invoke_patterns(FS)
+        IndexBuilder = jpype.JClass("IndexBuilder")
+        IndexBuilder.main(["group", f"{code_info_path}/json", f"{code_info_path}/lucene"])
     
     logger.info("preparation completed.")
     return

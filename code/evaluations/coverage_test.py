@@ -76,8 +76,14 @@ class ProjectTestRunner(JavaRunner):
         return self.test_result
 
     def deal_execution_feedback(self, data_id, feedback):
-        cases = int(re.findall(r"([0-9]+) tests started", feedback)[0])
-        passed = int(re.findall(r"([0-9]+) tests successful", feedback)[0])
+        cases = 0
+        passed = 0
+        try:
+            cases = int(re.findall(r"([0-9]+) tests started", feedback)[0])
+            passed = int(re.findall(r"([0-9]+) tests successful", feedback)[0])
+        except Exception as e:
+            self.test_result[data_id]["note"] = "fail to get test cases"
+            pass
         self.test_result[data_id]["test_cases"] = cases
         self.test_result[data_id]["passed_cases"] = passed
         passed_tests = re.findall(r"([$\w]+)\(\)\s+\u2714", feedback, re.MULTILINE)

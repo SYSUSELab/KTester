@@ -135,19 +135,22 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            831,
-            833,
+            [
+              831,
+              833
+            ],
             851
           ]
         }
       ],
       [
         {
-          "file_path": "com\\google\\gson\\Gson.java",
+          "file_path": "com\\google\\gson\\internal\\bind\\MapTypeAdapterFactory.java",
           "lines": [
-            1218,
-            1225,
-            1246
+            [
+              137,
+              141
+            ]
           ]
         }
       ]
@@ -172,9 +175,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
           "lines": [
-            91,
             [
-              93,
+              91,
               97
             ]
           ]
@@ -290,9 +292,11 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            808,
-            811,
-            815
+            [
+              709,
+              711
+            ],
+            713
           ]
         }
       ],
@@ -301,10 +305,10 @@
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
             [
-              709,
-              711
+              808,
+              811
             ],
-            713
+            815
           ]
         }
       ]
@@ -355,8 +359,10 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            874,
-            877,
+            [
+              874,
+              877
+            ],
             881
           ]
         }
@@ -367,8 +373,10 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            808,
-            810,
+            [
+              808,
+              810
+            ],
             815
           ]
         }
@@ -377,8 +385,10 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            874,
-            876,
+            [
+              874,
+              876
+            ],
             881
           ]
         }
@@ -415,9 +425,8 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            1011,
             [
-              1013,
+              1011,
               1014
             ]
           ]
@@ -441,9 +450,8 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            1104,
             [
-              1106,
+              1104,
               1107
             ]
           ]
@@ -470,11 +478,11 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            1183,
             [
-              1185,
-              1186
-            ]
+              1134,
+              1136
+            ],
+            1139
           ]
         }
       ],
@@ -483,10 +491,9 @@
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
             [
-              1134,
-              1136
-            ],
-            1139
+              1183,
+              1186
+            ]
           ]
         }
       ],
@@ -511,9 +518,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
           "lines": [
-            176,
             [
-              178,
+              176,
               179
             ]
           ]
@@ -537,9 +543,8 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            1297,
             [
-              1299,
+              1297,
               1300
             ]
           ]
@@ -589,8 +594,10 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            525,
-            557,
+            [
+              525,
+              557
+            ],
             583
           ]
         }
@@ -774,9 +781,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             369,
@@ -814,9 +820,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -837,9 +842,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             369,
@@ -864,9 +868,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             369,
@@ -916,8 +919,10 @@
         {
           "file_path": "com\\google\\gson\\reflect\\TypeToken.java",
           "lines": [
-            202,
-            205,
+            [
+              202,
+              205
+            ],
             209,
             214,
             249
@@ -1006,9 +1011,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -1033,9 +1037,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            340,
             [
-              342,
+              340,
               343
             ]
           ]
@@ -1045,9 +1048,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -1072,9 +1074,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -1255,8 +1256,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            321,
-            327,
+            [
+              321,
+              327
+            ],
             331,
             338
           ]
@@ -1280,8 +1283,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            321,
-            327,
+            [
+              321,
+              327
+            ],
             331,
             338
           ]
@@ -1293,8 +1298,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\CollectionTypeAdapterFactory.java",
           "lines": [
-            42,
-            44,
+            [
+              42,
+              44
+            ],
             [
               46,
               47
@@ -1344,9 +1351,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            227,
             [
-              229,
+              227,
               230
             ],
             [
@@ -1375,9 +1381,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            340,
             [
-              342,
+              340,
               343
             ]
           ]
@@ -1387,9 +1392,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -1426,9 +1430,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            340,
             [
-              342,
+              340,
               343
             ]
           ]
@@ -1438,9 +1441,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -1477,9 +1479,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -1520,9 +1521,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               353
             ],
             [
@@ -1536,9 +1536,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            340,
             [
-              342,
+              340,
               343
             ]
           ]
@@ -1548,9 +1547,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               353
             ],
             [
@@ -1564,9 +1562,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -1622,9 +1619,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               353
             ],
             [
@@ -1638,9 +1634,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            340,
             [
-              342,
+              340,
               343
             ]
           ]
@@ -1665,9 +1660,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               353
             ],
             [
@@ -1681,9 +1675,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -1734,9 +1727,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               353
             ],
             [
@@ -1750,9 +1742,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            340,
             [
-              342,
+              340,
               343
             ]
           ]
@@ -1772,9 +1763,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               353
             ],
             [
@@ -1788,9 +1778,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            345,
             [
-              348,
+              345,
               350
             ],
             [
@@ -1836,9 +1825,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\$Gson$Types.java",
           "lines": [
-            57,
             [
-              59,
+              57,
               60
             ]
           ]
@@ -1956,8 +1944,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\CollectionTypeAdapterFactory.java",
           "lines": [
-            42,
-            44,
+            [
+              42,
+              44
+            ],
             [
               46,
               47
@@ -1998,8 +1988,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\DefaultDateTypeAdapter.java",
           "lines": [
-            140,
-            142,
+            [
+              140,
+              142
+            ],
             146,
             148
           ]
@@ -2063,8 +2055,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\DefaultDateTypeAdapter.java",
           "lines": [
-            140,
-            142,
+            [
+              140,
+              142
+            ],
             [
               146,
               148
@@ -2113,9 +2107,8 @@
         {
           "file_path": "com\\google\\gson\\GsonBuilder.java",
           "lines": [
-            770,
             [
-              772,
+              770,
               775
             ],
             [
@@ -2136,9 +2129,8 @@
         {
           "file_path": "com\\google\\gson\\GsonBuilder.java",
           "lines": [
-            770,
             [
-              772,
+              770,
               775
             ],
             777,
@@ -2162,9 +2154,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonAdapterAnnotationTypeAdapterFactory.java",
           "lines": [
-            40,
             [
-              43,
+              40,
               45
             ],
             [
@@ -2178,8 +2169,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             [
               148,
               149
@@ -2517,8 +2510,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonTreeReader.java",
           "lines": [
-            182,
-            186,
+            [
+              182,
+              186
+            ],
             193
           ]
         }
@@ -2527,8 +2522,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonTreeReader.java",
           "lines": [
-            212,
-            216,
+            [
+              212,
+              216
+            ],
             227
           ]
         }
@@ -2537,24 +2534,16 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonTreeReader.java",
           "lines": [
-            229,
-            233,
+            [
+              229,
+              233
+            ],
             241
           ]
         }
       ]
     ],
     "JsonTreeReader(JsonElement)": [
-      [
-        {
-          "file_path": "com\\google\\gson\\TypeAdapter.java",
-          "lines": [
-            295,
-            297,
-            302
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\google\\gson\\Gson.java",
@@ -2569,21 +2558,23 @@
             ]
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\TypeAdapter.java",
+          "lines": [
+            [
+              295,
+              297
+            ],
+            302
+          ]
+        }
       ]
     ]
   },
   "com.google.gson.internal.bind.JsonTreeWriter": {
     "get()": [
-      [
-        {
-          "file_path": "com\\google\\gson\\TypeAdapter.java",
-          "lines": [
-            236,
-            240,
-            244
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\google\\gson\\Gson.java",
@@ -2592,6 +2583,18 @@
               709,
               713
             ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\TypeAdapter.java",
+          "lines": [
+            [
+              236,
+              240
+            ],
+            244
           ]
         }
       ]
@@ -2731,8 +2734,10 @@
         {
           "file_path": "com\\google\\gson\\TypeAdapter.java",
           "lines": [
-            236,
-            238,
+            [
+              236,
+              238
+            ],
             244
           ]
         }
@@ -2882,9 +2887,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ObjectTypeAdapter.java",
           "lines": [
-            108,
             [
-              110,
+              108,
               111
             ],
             [
@@ -2911,9 +2915,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ObjectTypeAdapter.java",
           "lines": [
-            108,
             [
-              110,
+              108,
               111
             ],
             [
@@ -2959,9 +2962,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            227,
             [
-              229,
+              227,
               230
             ],
             [
@@ -2979,8 +2981,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -3005,9 +3009,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            227,
             [
-              229,
+              227,
               230
             ],
             [
@@ -3034,8 +3037,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -3060,8 +3065,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             [
               148,
               149
@@ -3083,9 +3090,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            227,
             [
-              229,
+              227,
               230
             ],
             [
@@ -3112,8 +3118,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -3138,9 +3146,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            227,
             [
-              229,
+              227,
               230
             ],
             [
@@ -3167,8 +3174,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -3193,8 +3202,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -3221,8 +3232,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            357,
-            367,
+            [
+              357,
+              367
+            ],
             373
           ]
         }
@@ -3233,9 +3246,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            495,
             [
-              498,
+              495,
               499
             ],
             [
@@ -3251,9 +3263,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            429,
             [
-              432,
+              429,
               433
             ]
           ]
@@ -3265,8 +3276,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             [
               148,
               149
@@ -3294,8 +3307,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            375,
-            377,
+            [
+              375,
+              377
+            ],
             382,
             402
           ]
@@ -3307,8 +3322,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            375,
-            392,
+            [
+              375,
+              392
+            ],
             402
           ]
         }
@@ -3319,8 +3336,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            375,
-            377,
+            [
+              375,
+              377
+            ],
             382,
             [
               400,
@@ -3337,8 +3356,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -3361,8 +3382,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -3386,9 +3409,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TypeAdapterRuntimeTypeWrapper.java",
           "lines": [
-            77,
             [
-              79,
+              77,
               80
             ],
             89
@@ -3472,9 +3494,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
           "lines": [
-            156,
             [
-              159,
+              156,
               166
             ]
           ]
@@ -3499,9 +3520,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
           "lines": [
-            130,
             [
-              132,
+              130,
               133
             ]
           ]
@@ -3511,9 +3531,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
           "lines": [
-            119,
             [
-              122,
+              119,
               124
             ]
           ]
@@ -3528,9 +3547,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TypeAdapterRuntimeTypeWrapper.java",
           "lines": [
-            42,
             [
-              50,
+              42,
               52
             ],
             54,
@@ -3546,9 +3564,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TypeAdapterRuntimeTypeWrapper.java",
           "lines": [
-            42,
             [
-              50,
+              42,
               51
             ],
             70
@@ -3561,8 +3578,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             [
               148,
               149
@@ -3663,8 +3682,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\DateTypeAdapter.java",
           "lines": [
-            77,
-            87,
+            [
+              77,
+              87
+            ],
             91
           ]
         }
@@ -3673,8 +3694,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\DefaultDateTypeAdapter.java",
           "lines": [
-            150,
-            161,
+            [
+              150,
+              161
+            ],
             165
           ]
         }
@@ -3685,8 +3708,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\util\\ISO8601Utils.java",
           "lines": [
-            126,
-            133,
+            [
+              126,
+              133
+            ],
             139,
             152,
             166,
@@ -3702,8 +3727,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\util\\ISO8601Utils.java",
           "lines": [
-            126,
-            132,
+            [
+              126,
+              132
+            ],
             138,
             144,
             165,
@@ -3746,8 +3773,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\util\\ISO8601Utils.java",
           "lines": [
-            126,
-            183,
+            [
+              126,
+              183
+            ],
             281
           ]
         }
@@ -3807,8 +3836,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\CollectionTypeAdapterFactory.java",
           "lines": [
-            42,
-            44,
+            [
+              42,
+              44
+            ],
             [
               46,
               47
@@ -3845,8 +3876,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -4741,8 +4774,10 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            129,
-            131,
+            [
+              129,
+              131
+            ],
             [
               133,
               134
@@ -4892,9 +4927,13 @@
         {
           "file_path": "com\\google\\gson\\internal\\LinkedTreeMap.java",
           "lines": [
-            205,
-            208,
-            212
+            [
+              109,
+              110
+            ],
+            113,
+            116,
+            120
           ]
         }
       ],
@@ -4903,12 +4942,10 @@
           "file_path": "com\\google\\gson\\internal\\LinkedTreeMap.java",
           "lines": [
             [
-              109,
-              110
+              205,
+              208
             ],
-            113,
-            116,
-            120
+            212
           ]
         }
       ]
@@ -5542,9 +5579,8 @@
         {
           "file_path": "com\\google\\gson\\JsonObject.java",
           "lines": [
-            50,
             [
-              52,
+              50,
               53
             ],
             57
@@ -5586,8 +5622,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\ConstructorConstructor.java",
           "lines": [
-            285,
-            297,
+            [
+              285,
+              297
+            ],
             [
               325,
               326
@@ -5766,18 +5804,6 @@
     "construct()": [
       [
         {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            424,
-            [
-              426,
-              427
-            ]
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\internal\\bind\\CollectionTypeAdapterFactory.java",
           "lines": [
             [
@@ -5786,6 +5812,17 @@
             ],
             78,
             86
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
+          "lines": [
+            [
+              424,
+              427
+            ]
           ]
         }
       ],
@@ -5853,8 +5890,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             225
           ]
         }
@@ -5902,9 +5941,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            227,
             [
-              229,
+              227,
               230
             ],
             [
@@ -5940,8 +5978,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\reflect\\ReflectionHelper.java",
           "lines": [
-            32,
-            36,
+            [
+              32,
+              36
+            ],
             40
           ]
         }
@@ -5950,9 +5990,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            227,
             [
-              229,
+              227,
               230
             ],
             [
@@ -5983,8 +6022,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             [
               148,
               149
@@ -6008,16 +6049,6 @@
     "fieldToString(Field)": [
       [
         {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            227,
-            301,
-            308
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\internal\\reflect\\ReflectionHelper.java",
           "lines": [
             [
@@ -6031,16 +6062,36 @@
             74
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
+          "lines": [
+            [
+              227,
+              301
+            ],
+            308
+          ]
+        }
       ]
     ],
     "constructorToString(Constructor)": [
       [
         {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
+          "file_path": "com\\google\\gson\\internal\\reflect\\ReflectionHelper.java",
           "lines": [
-            495,
-            501,
-            509
+            [
+              51,
+              52
+            ],
+            54,
+            56,
+            [
+              64,
+              65
+            ],
+            74
           ]
         }
       ],
@@ -6048,8 +6099,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\reflect\\ReflectionHelper.java",
           "lines": [
-            120,
-            125,
+            [
+              120,
+              125
+            ],
             130
           ]
         }
@@ -6058,10 +6111,11 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            511,
-            522,
-            528,
-            531
+            [
+              495,
+              501
+            ],
+            509
           ]
         }
       ]
@@ -6106,8 +6160,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\ConstructorConstructor.java",
           "lines": [
-            203,
-            205,
+            [
+              203,
+              205
+            ],
             209,
             [
               216,
@@ -6128,8 +6184,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -6147,9 +6205,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            227,
             [
-              229,
+              227,
               230
             ],
             [
@@ -6177,8 +6234,22 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            357,
-            370,
+            [
+              511,
+              516
+            ],
+            531
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
+          "lines": [
+            [
+              357,
+              370
+            ],
             373
           ]
         }
@@ -6187,19 +6258,11 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            375,
-            398,
+            [
+              375,
+              398
+            ],
             402
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            511,
-            516,
-            531
           ]
         }
       ]
@@ -6209,8 +6272,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\reflect\\ReflectionHelper.java",
           "lines": [
-            197,
-            202,
+            [
+              197,
+              202
+            ],
             204
           ]
         }
@@ -6219,8 +6284,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\reflect\\ReflectionHelper.java",
           "lines": [
-            206,
-            216,
+            [
+              206,
+              216
+            ],
             218
           ]
         }
@@ -6229,8 +6296,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\reflect\\ReflectionHelper.java",
           "lines": [
-            220,
-            232,
+            [
+              220,
+              232
+            ],
             234
           ]
         }
@@ -6376,8 +6445,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             106,
             [
               110,
@@ -6391,9 +6462,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            227,
             [
-              229,
+              227,
               230
             ],
             [
@@ -6439,8 +6509,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\ConstructorConstructor.java",
           "lines": [
-            203,
-            205,
+            [
+              203,
+              205
+            ],
             209,
             [
               216,
@@ -6475,26 +6547,6 @@
     "parse(JsonReader)": [
       [
         {
-          "file_path": "com\\google\\gson\\JsonParser.java",
-          "lines": [
-            96,
-            101,
-            109
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\JsonStreamParser.java",
-          "lines": [
-            81,
-            88,
-            94
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
           "lines": [
             [
@@ -6505,29 +6557,33 @@
             76
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\JsonParser.java",
+          "lines": [
+            [
+              96,
+              101
+            ],
+            109
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\JsonStreamParser.java",
+          "lines": [
+            [
+              81,
+              88
+            ],
+            94
+          ]
+        }
       ]
     ],
     "write(JsonElement, JsonWriter)": [
-      [
-        {
-          "file_path": "com\\google\\gson\\Gson.java",
-          "lines": [
-            936,
-            944,
-            954
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\JsonElement.java",
-          "lines": [
-            316,
-            322,
-            327
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
@@ -6543,6 +6599,30 @@
             ]
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\JsonElement.java",
+          "lines": [
+            [
+              316,
+              322
+            ],
+            327
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\Gson.java",
+          "lines": [
+            [
+              936,
+              944
+            ],
+            954
+          ]
+        }
       ]
     ],
     "writerForAppendable(Appendable)": [
@@ -6550,8 +6630,10 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            808,
-            810,
+            [
+              808,
+              810
+            ],
             815
           ]
         }
@@ -6560,8 +6642,10 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            874,
-            876,
+            [
+              874,
+              876
+            ],
             881
           ]
         }
@@ -6619,19 +6703,6 @@
     "add(JsonElement)": [
       [
         {
-          "file_path": "com\\google\\gson\\JsonArray.java",
-          "lines": [
-            66,
-            [
-              68,
-              71
-            ],
-            76
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonTreeWriter.java",
           "lines": [
             [
@@ -6644,6 +6715,18 @@
               87
             ],
             92
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\JsonArray.java",
+          "lines": [
+            [
+              66,
+              71
+            ],
+            76
           ]
         }
       ]
@@ -6667,9 +6750,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            246,
             [
-              248,
+              246,
               249
             ]
           ]
@@ -6679,9 +6761,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            259,
             [
-              261,
+              259,
               262
             ]
           ]
@@ -6691,9 +6772,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            272,
             [
-              274,
+              272,
               275
             ]
           ]
@@ -6717,8 +6797,10 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            66,
-            68,
+            [
+              66,
+              68
+            ],
             [
               75,
               76
@@ -6732,9 +6814,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            66,
             [
-              68,
+              66,
               69
             ],
             76
@@ -6773,9 +6854,8 @@
         {
           "file_path": "com\\google\\gson\\JsonObject.java",
           "lines": [
-            50,
             [
-              52,
+              50,
               54
             ],
             57
@@ -6786,9 +6866,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            66,
             [
-              68,
+              66,
               71
             ],
             76
@@ -6909,16 +6988,6 @@
       ],
       [
         {
-          "file_path": "com\\google\\gson\\JsonParser.java",
-          "lines": [
-            66,
-            70,
-            81
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonTreeWriter.java",
           "lines": [
             [
@@ -6926,6 +6995,19 @@
               77
             ],
             92
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\MapTypeAdapterFactory.java",
+          "lines": [
+            [
+              243,
+              244
+            ],
+            255,
+            260
           ]
         }
       ]
@@ -6949,9 +7031,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            394,
             [
-              396,
+              394,
               397
             ]
           ]
@@ -6963,9 +7044,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            246,
             [
-              248,
+              246,
               249
             ]
           ]
@@ -6977,9 +7057,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            259,
             [
-              261,
+              259,
               262
             ]
           ]
@@ -6991,9 +7070,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            272,
             [
-              274,
+              272,
               275
             ]
           ]
@@ -7005,9 +7083,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            313,
             [
-              315,
+              313,
               316
             ]
           ]
@@ -7019,9 +7096,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            326,
             [
-              328,
+              326,
               329
             ]
           ]
@@ -7033,9 +7109,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            339,
             [
-              341,
+              339,
               342
             ]
           ]
@@ -7047,9 +7122,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            352,
             [
-              354,
+              352,
               355
             ]
           ]
@@ -7061,9 +7135,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            286,
             [
-              288,
+              286,
               289
             ]
           ]
@@ -7075,9 +7148,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            300,
             [
-              302,
+              300,
               303
             ]
           ]
@@ -7089,9 +7161,8 @@
         {
           "file_path": "com\\google\\gson\\JsonArray.java",
           "lines": [
-            381,
             [
-              383,
+              381,
               384
             ]
           ]
@@ -7101,27 +7172,6 @@
   },
   "com.google.gson.JsonIOException": {
     "JsonIOException(String)": [
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            102,
-            113,
-            130
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            227,
-            242,
-            277,
-            308
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\google\\gson\\internal\\ConstructorConstructor.java",
@@ -7137,6 +7187,31 @@
             388
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
+          "lines": [
+            [
+              102,
+              113
+            ],
+            130
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
+          "lines": [
+            [
+              227,
+              242
+            ],
+            277,
+            308
+          ]
+        }
       ]
     ],
     "JsonIOException(String, Throwable)": [
@@ -7144,8 +7219,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\reflect\\ReflectionHelper.java",
           "lines": [
-            32,
-            37,
+            [
+              32,
+              37
+            ],
             40
           ]
         }
@@ -7154,8 +7231,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             [
               148,
               149
@@ -7181,8 +7260,10 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            808,
-            813,
+            [
+              808,
+              813
+            ],
             815
           ]
         }
@@ -7191,19 +7272,23 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            831,
-            843,
-            851
+            [
+              874,
+              879
+            ],
+            881
           ]
         }
       ],
       [
         {
-          "file_path": "com\\google\\gson\\Gson.java",
+          "file_path": "com\\google\\gson\\TypeAdapter.java",
           "lines": [
-            874,
-            879,
-            881
+            [
+              218,
+              223
+            ],
+            226
           ]
         }
       ]
@@ -7276,8 +7361,10 @@
         {
           "file_path": "com\\google\\gson\\JsonObject.java",
           "lines": [
-            50,
-            52,
+            [
+              50,
+              52
+            ],
             57
           ]
         }
@@ -7290,8 +7377,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             [
               148,
               149
@@ -7317,8 +7406,10 @@
         {
           "file_path": "com\\google\\gson\\JsonParser.java",
           "lines": [
-            96,
-            103,
+            [
+              96,
+              103
+            ],
             105,
             109
           ]
@@ -7328,8 +7419,10 @@
         {
           "file_path": "com\\google\\gson\\JsonStreamParser.java",
           "lines": [
-            81,
-            90,
+            [
+              81,
+              90
+            ],
             92,
             94
           ]
@@ -7356,8 +7449,10 @@
         {
           "file_path": "com\\google\\gson\\JsonParser.java",
           "lines": [
-            66,
-            69,
+            [
+              66,
+              69
+            ],
             81
           ]
         }
@@ -7370,21 +7465,11 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            103,
-            105,
+            [
+              103,
+              105
+            ],
             110
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\JsonPrimitive.java",
-          "lines": [
-            149,
-            151,
-            153,
-            155,
-            159
           ]
         }
       ],
@@ -7398,6 +7483,20 @@
             ],
             248,
             260
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\JsonPrimitive.java",
+          "lines": [
+            [
+              149,
+              151
+            ],
+            153,
+            155,
+            159
           ]
         }
       ]
@@ -7437,9 +7536,8 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            164,
             [
-              166,
+              164,
               167
             ]
           ]
@@ -7449,9 +7547,8 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            189,
             [
-              191,
+              189,
               192
             ]
           ]
@@ -7461,9 +7558,8 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            200,
             [
-              202,
+              200,
               203
             ]
           ]
@@ -7475,9 +7571,8 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            164,
             [
-              166,
+              164,
               167
             ]
           ]
@@ -7487,9 +7582,8 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            189,
             [
-              191,
+              189,
               192
             ]
           ]
@@ -7499,9 +7593,8 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            200,
             [
-              202,
+              200,
               203
             ]
           ]
@@ -7551,9 +7644,8 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            164,
             [
-              166,
+              164,
               167
             ]
           ]
@@ -7563,9 +7655,8 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            172,
             [
-              174,
+              172,
               175
             ]
           ]
@@ -7575,9 +7666,8 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            189,
             [
-              191,
+              189,
               192
             ]
           ]
@@ -7634,8 +7724,10 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            249,
-            251,
+            [
+              249,
+              251
+            ],
             255,
             264
           ]
@@ -7645,8 +7737,10 @@
         {
           "file_path": "com\\google\\gson\\JsonPrimitive.java",
           "lines": [
-            271,
-            273,
+            [
+              271,
+              273
+            ],
             276,
             [
               279,
@@ -7817,8 +7911,10 @@
         {
           "file_path": "com\\google\\gson\\JsonStreamParser.java",
           "lines": [
-            81,
-            83,
+            [
+              81,
+              83
+            ],
             94
           ]
         }
@@ -7831,19 +7927,11 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            1141,
-            1144,
+            [
+              1141,
+              1144
+            ],
             1151
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\bind\\NumberTypeAdapter.java",
-          "lines": [
-            64,
-            74,
-            76
           ]
         }
       ],
@@ -7851,9 +7939,23 @@
         {
           "file_path": "com\\google\\gson\\JsonParser.java",
           "lines": [
-            66,
-            71,
+            [
+              66,
+              71
+            ],
             81
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\NumberTypeAdapter.java",
+          "lines": [
+            [
+              64,
+              74
+            ],
+            76
           ]
         }
       ]
@@ -7863,9 +7965,23 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\DateTypeAdapter.java",
           "lines": [
-            77,
-            89,
+            [
+              77,
+              89
+            ],
             91
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\sql\\SqlTimeTypeAdapter.java",
+          "lines": [
+            [
+              52,
+              64
+            ],
+            66
           ]
         }
       ],
@@ -7873,19 +7989,11 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\DefaultDateTypeAdapter.java",
           "lines": [
-            150,
-            163,
+            [
+              150,
+              163
+            ],
             165
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\sql\\SqlDateTypeAdapter.java",
-          "lines": [
-            52,
-            66,
-            68
           ]
         }
       ]
@@ -7895,19 +8003,11 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            1141,
-            1147,
+            [
+              1141,
+              1147
+            ],
             1151
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            375,
-            396,
-            402
           ]
         }
       ],
@@ -7915,9 +8015,24 @@
         {
           "file_path": "com\\google\\gson\\JsonStreamParser.java",
           "lines": [
-            102,
-            108,
+            [
+              102,
+              108
+            ],
             113
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\JsonParser.java",
+          "lines": [
+            [
+              66,
+              75
+            ],
+            79,
+            81
           ]
         }
       ]
@@ -7928,11 +8043,26 @@
     "getRawType()": [
       [
         {
-          "file_path": "com\\google\\gson\\internal\\bind\\JsonAdapterAnnotationTypeAdapterFactory.java",
+          "file_path": "com\\google\\gson\\internal\\Excluder.java",
           "lines": [
-            40,
-            43,
-            49
+            [
+              109,
+              110
+            ],
+            147
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\MapTypeAdapterFactory.java",
+          "lines": [
+            [
+              114,
+              115
+            ],
+            117,
+            132
           ]
         }
       ],
@@ -7940,34 +8070,16 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            102,
-            104,
+            [
+              102,
+              104
+            ],
             130
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            141,
-            146,
-            225
           ]
         }
       ]
     ],
     "getType()": [
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\bind\\CollectionTypeAdapterFactory.java",
-          "lines": [
-            42,
-            44,
-            58
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\google\\gson\\internal\\bind\\MapTypeAdapterFactory.java",
@@ -7982,11 +8094,25 @@
       ],
       [
         {
-          "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
+          "file_path": "com\\google\\gson\\internal\\ConstructorConstructor.java",
           "lines": [
-            119,
-            122,
-            124
+            [
+              82,
+              83
+            ],
+            155
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\CollectionTypeAdapterFactory.java",
+          "lines": [
+            [
+              42,
+              44
+            ],
+            58
           ]
         }
       ]
@@ -7996,8 +8122,10 @@
         {
           "file_path": "com\\google\\gson\\reflect\\TypeToken.java",
           "lines": [
-            202,
-            205,
+            [
+              202,
+              205
+            ],
             209,
             [
               214,
@@ -8017,8 +8145,10 @@
         {
           "file_path": "com\\google\\gson\\reflect\\TypeToken.java",
           "lines": [
-            202,
-            205,
+            [
+              202,
+              205
+            ],
             209,
             [
               214,
@@ -8042,8 +8172,10 @@
         {
           "file_path": "com\\google\\gson\\reflect\\TypeToken.java",
           "lines": [
-            202,
-            205,
+            [
+              202,
+              205
+            ],
             209,
             [
               214,
@@ -8060,8 +8192,10 @@
         {
           "file_path": "com\\google\\gson\\reflect\\TypeToken.java",
           "lines": [
-            202,
-            205,
+            [
+              202,
+              205
+            ],
             209,
             [
               214,
@@ -8085,9 +8219,8 @@
         {
           "file_path": "com\\google\\gson\\reflect\\TypeToken.java",
           "lines": [
-            255,
             [
-              257,
+              255,
               261
             ],
             268
@@ -8096,8 +8229,10 @@
         {
           "file_path": "com\\google\\gson\\reflect\\TypeToken.java",
           "lines": [
-            202,
-            205,
+            [
+              202,
+              205
+            ],
             209,
             [
               214,
@@ -8114,8 +8249,10 @@
         {
           "file_path": "com\\google\\gson\\reflect\\TypeToken.java",
           "lines": [
-            202,
-            205,
+            [
+              202,
+              205
+            ],
             209,
             [
               214,
@@ -8139,9 +8276,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
           "lines": [
-            156,
             [
-              159,
+              156,
               161
             ],
             166
@@ -8152,9 +8288,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\TypeAdapters.java",
           "lines": [
-            934,
             [
-              936,
+              934,
               942
             ]
           ]
@@ -8166,8 +8301,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonAdapterAnnotationTypeAdapterFactory.java",
           "lines": [
-            51,
-            76,
+            [
+              51,
+              76
+            ],
             86
           ]
         }
@@ -8178,8 +8315,10 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            831,
-            833,
+            [
+              831,
+              833
+            ],
             851
           ]
         }
@@ -8188,9 +8327,8 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            1011,
             [
-              1013,
+              1011,
               1014
             ]
           ]
@@ -8200,9 +8338,8 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            1104,
             [
-              1106,
+              1104,
               1107
             ]
           ]
@@ -8329,20 +8466,6 @@
       ],
       [
         {
-          "file_path": "com\\google\\gson\\JsonParser.java",
-          "lines": [
-            96,
-            [
-              98,
-              99
-            ],
-            107,
-            109
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
             [
@@ -8353,19 +8476,22 @@
             1246
           ]
         }
-      ]
-    ],
-    "isLenient()": [
+      ],
       [
         {
           "file_path": "com\\google\\gson\\JsonParser.java",
           "lines": [
-            96,
-            98,
+            [
+              96,
+              99
+            ],
+            107,
             109
           ]
         }
-      ],
+      ]
+    ],
+    "isLenient()": [
       [
         {
           "file_path": "com\\google\\gson\\Gson.java",
@@ -8375,6 +8501,18 @@
               1220
             ],
             1246
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\JsonParser.java",
+          "lines": [
+            [
+              96,
+              98
+            ],
+            109
           ]
         }
       ],
@@ -8499,16 +8637,6 @@
     "beginObject()": [
       [
         {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            375,
-            385,
-            402
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\internal\\bind\\ObjectTypeAdapter.java",
           "lines": [
             [
@@ -8537,6 +8665,18 @@
             194
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
+          "lines": [
+            [
+              375,
+              385
+            ],
+            402
+          ]
+        }
       ]
     ],
     "endObject()": [
@@ -8544,8 +8684,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            375,
-            377,
+            [
+              375,
+              377
+            ],
             382,
             400,
             402
@@ -8575,9 +8717,8 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ObjectTypeAdapter.java",
           "lines": [
-            108,
             [
-              110,
+              108,
               111
             ],
             [
@@ -8597,16 +8738,6 @@
       ]
     ],
     "hasNext()": [
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            375,
-            386,
-            402
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ArrayTypeAdapter.java",
@@ -8638,29 +8769,30 @@
             86
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\MapTypeAdapterFactory.java",
+          "lines": [
+            [
+              158,
+              160
+            ],
+            165,
+            [
+              167,
+              169
+            ],
+            [
+              181,
+              182
+            ],
+            194
+          ]
+        }
       ]
     ],
     "peek()": [
-      [
-        {
-          "file_path": "com\\google\\gson\\Gson.java",
-          "lines": [
-            1218,
-            1223,
-            1246
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\Gson.java",
-          "lines": [
-            1141,
-            1143,
-            1151
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ArrayTypeAdapter.java",
@@ -8670,6 +8802,30 @@
               63
             ],
             91
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\CollectionTypeAdapterFactory.java",
+          "lines": [
+            [
+              72,
+              73
+            ],
+            86
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\DateTypeAdapter.java",
+          "lines": [
+            [
+              69,
+              70
+            ],
+            75
           ]
         }
       ]
@@ -8717,9 +8873,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               472
             ],
             [
@@ -8738,9 +8893,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               472
             ],
             [
@@ -8763,9 +8917,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               473
             ],
             [
@@ -8803,9 +8956,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            605,
             [
-              607,
+              605,
               614
             ],
             [
@@ -8822,9 +8974,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               472
             ],
             [
@@ -8841,9 +8992,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            649,
             [
-              651,
+              649,
               653
             ],
             [
@@ -8869,9 +9019,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               472
             ],
             [
@@ -8892,21 +9041,10 @@
     "nextName()": [
       [
         {
-          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
-          "lines": [
-            375,
-            387,
-            402
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\internal\\bind\\ObjectTypeAdapter.java",
           "lines": [
-            108,
             [
-              110,
+              108,
               111
             ],
             [
@@ -8923,6 +9061,18 @@
               125
             ],
             166
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
+          "lines": [
+            [
+              375,
+              387
+            ],
+            402
           ]
         }
       ]
@@ -9251,8 +9401,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            375,
-            390,
+            [
+              375,
+              390
+            ],
             402
           ]
         }
@@ -9341,9 +9493,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               471
             ],
             473,
@@ -9368,9 +9519,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            605,
             [
-              607,
+              605,
               614
             ],
             [
@@ -9387,9 +9537,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               472
             ],
             [
@@ -9406,9 +9555,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            649,
             [
-              651,
+              649,
               653
             ],
             [
@@ -9427,9 +9575,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               472
             ],
             [
@@ -9452,9 +9599,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               473
             ],
             475,
@@ -9486,17 +9632,18 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            1664,
-            1666,
+            [
+              1664,
+              1666
+            ],
             1681
           ]
         },
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               471
             ],
             473,
@@ -9516,9 +9663,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               473
             ],
             [
@@ -9603,9 +9749,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            754,
             [
-              756,
+              754,
               762
             ],
             778
@@ -9614,9 +9759,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               473
             ],
             [
@@ -9654,9 +9798,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            1051,
             [
-              1053,
+              1051,
               1054
             ],
             [
@@ -9687,9 +9830,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            1373,
             [
-              1382,
+              1373,
               1386
             ],
             [
@@ -9724,9 +9866,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               473
             ],
             475,
@@ -9758,9 +9899,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            1373,
             [
-              1382,
+              1373,
               1386
             ],
             [
@@ -9795,17 +9935,18 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            1664,
-            1666,
+            [
+              1664,
+              1666
+            ],
             1681
           ]
         },
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               471
             ],
             473,
@@ -9825,9 +9966,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            1373,
             [
-              1382,
+              1373,
               1386
             ],
             [
@@ -9853,9 +9993,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               473
             ],
             475,
@@ -9887,9 +10026,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            1373,
             [
-              1382,
+              1373,
               1386
             ],
             [
@@ -9915,17 +10053,18 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            1664,
-            1666,
+            [
+              1664,
+              1666
+            ],
             1681
           ]
         },
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               471
             ],
             473,
@@ -9945,9 +10084,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            347,
-            357,
-            359
+            [
+              1508,
+              1510
+            ]
           ]
         }
       ],
@@ -9955,9 +10095,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            365,
-            375,
-            377
+            [
+              1657,
+              1659
+            ]
           ]
         }
       ],
@@ -9965,8 +10106,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            383,
-            392,
+            [
+              383,
+              392
+            ],
             394
           ]
         }
@@ -9999,16 +10142,6 @@
     "getPath()": [
       [
         {
-          "file_path": "com\\google\\gson\\internal\\bind\\NumberTypeAdapter.java",
-          "lines": [
-            64,
-            74,
-            76
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
             [
@@ -10020,10 +10153,24 @@
       ],
       [
         {
+          "file_path": "com\\google\\gson\\internal\\bind\\NumberTypeAdapter.java",
+          "lines": [
+            [
+              64,
+              74
+            ],
+            76
+          ]
+        }
+      ],
+      [
+        {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             [
               148,
               149
@@ -10049,9 +10196,23 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\DateTypeAdapter.java",
           "lines": [
-            77,
-            89,
+            [
+              77,
+              89
+            ],
             91
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\sql\\SqlTimeTypeAdapter.java",
+          "lines": [
+            [
+              52,
+              64
+            ],
+            66
           ]
         }
       ],
@@ -10059,19 +10220,11 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\DefaultDateTypeAdapter.java",
           "lines": [
-            150,
-            163,
+            [
+              150,
+              163
+            ],
             165
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\internal\\sql\\SqlDateTypeAdapter.java",
-          "lines": [
-            52,
-            66,
-            68
           ]
         }
       ]
@@ -10081,9 +10234,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            997,
             [
-              999,
+              997,
               1003
             ],
             [
@@ -10125,9 +10277,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            997,
             [
-              999,
+              997,
               1003
             ],
             [
@@ -10169,9 +10320,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            997,
             [
-              999,
+              997,
               1003
             ],
             [
@@ -10213,8 +10363,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
-            484,
+            [
+              468,
+              484
+            ],
             499,
             513,
             521,
@@ -10229,8 +10381,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            997,
-            1043,
+            [
+              997,
+              1043
+            ],
             1046
           ]
         },
@@ -10257,8 +10411,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            997,
-            1043,
+            [
+              997,
+              1043
+            ],
             1046
           ]
         },
@@ -10287,9 +10443,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            468,
             [
-              470,
+              468,
               471
             ],
             473,
@@ -10319,16 +10474,6 @@
       ],
       [
         {
-          "file_path": "com\\google\\gson\\JsonParser.java",
-          "lines": [
-            66,
-            68,
-            81
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\TypeAdapter.java",
           "lines": [
             [
@@ -10336,6 +10481,18 @@
               267
             ],
             269
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\JsonParser.java",
+          "lines": [
+            [
+              66,
+              68
+            ],
+            81
           ]
         }
       ]
@@ -10365,16 +10522,6 @@
     "setLenient(boolean)": [
       [
         {
-          "file_path": "com\\google\\gson\\JsonElement.java",
-          "lines": [
-            316,
-            321,
-            327
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
             [
@@ -10390,13 +10537,32 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            831,
             [
-              833,
+              831,
               835
             ],
             847,
             851
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\Gson.java",
+          "lines": [
+            [
+              895,
+              896
+            ],
+            [
+              899,
+              900
+            ],
+            [
+              903,
+              904
+            ],
+            907
           ]
         }
       ]
@@ -10474,9 +10640,8 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            831,
             [
-              833,
+              831,
               837
             ],
             848,
@@ -10502,9 +10667,8 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            831,
             [
-              833,
+              831,
               836
             ],
             851
@@ -10550,9 +10714,8 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            831,
             [
-              833,
+              831,
               839
             ],
             849,
@@ -10590,9 +10753,8 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            831,
             [
-              833,
+              831,
               838
             ],
             851
@@ -10724,8 +10886,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            357,
-            359,
+            [
+              357,
+              359
+            ],
             364,
             373
           ]
@@ -10779,8 +10943,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            357,
-            359,
+            [
+              357,
+              359
+            ],
             364,
             [
               372,
@@ -10934,8 +11100,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonWriter.java",
           "lines": [
-            338,
-            340,
+            [
+              338,
+              340
+            ],
             354
           ]
         },
@@ -10953,8 +11121,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonWriter.java",
           "lines": [
-            338,
-            340,
+            [
+              338,
+              340
+            ],
             354
           ]
         },
@@ -10972,8 +11142,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonWriter.java",
           "lines": [
-            677,
-            679,
+            [
+              677,
+              679
+            ],
             708
           ]
         },
@@ -10998,8 +11170,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonWriter.java",
           "lines": [
-            677,
-            679,
+            [
+              677,
+              679
+            ],
             [
               686,
               687
@@ -11034,8 +11208,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonWriter.java",
           "lines": [
-            677,
-            679,
+            [
+              677,
+              679
+            ],
             [
               686,
               687
@@ -11066,8 +11242,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonWriter.java",
           "lines": [
-            677,
-            679,
+            [
+              677,
+              679
+            ],
             [
               686,
               687
@@ -11133,8 +11311,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\ReflectiveTypeAdapterFactory.java",
           "lines": [
-            141,
-            146,
+            [
+              141,
+              146
+            ],
             [
               148,
               149
@@ -11208,20 +11388,6 @@
       ],
       [
         {
-          "file_path": "com\\google\\gson\\internal\\sql\\SqlDateTypeAdapter.java",
-          "lines": [
-            70,
-            72,
-            76,
-            [
-              80,
-              81
-            ]
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\internal\\sql\\SqlTimeTypeAdapter.java",
           "lines": [
             [
@@ -11232,6 +11398,25 @@
             [
               77,
               78
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\DateTypeAdapter.java",
+          "lines": [
+            [
+              93,
+              94
+            ],
+            [
+              99,
+              100
+            ],
+            [
+              104,
+              105
             ]
           ]
         }
@@ -11407,9 +11592,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonWriter.java",
           "lines": [
-            338,
             [
-              340,
+              338,
               341
             ],
             344,
@@ -11434,9 +11618,8 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonWriter.java",
           "lines": [
-            338,
             [
-              340,
+              338,
               341
             ],
             344,
@@ -11461,8 +11644,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonWriter.java",
           "lines": [
-            677,
-            679,
+            [
+              677,
+              679
+            ],
             [
               690,
               692
@@ -11608,16 +11793,6 @@
     "JsonWriter(Writer)": [
       [
         {
-          "file_path": "com\\google\\gson\\JsonElement.java",
-          "lines": [
-            316,
-            320,
-            327
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\google\\gson\\TypeAdapter.java",
           "lines": [
             [
@@ -11640,6 +11815,18 @@
             907
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\JsonElement.java",
+          "lines": [
+            [
+              316,
+              320
+            ],
+            327
+          ]
+        }
       ]
     ]
   },
@@ -11647,11 +11834,12 @@
     "MalformedJsonException(String)": [
       [
         {
-          "file_path": "com\\google\\gson\\internal\\bind\\JsonTreeReader.java",
+          "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            108,
-            147,
-            149
+            [
+              1657,
+              1659
+            ]
           ]
         }
       ],
@@ -11659,8 +11847,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonTreeReader.java",
           "lines": [
-            212,
-            220,
+            [
+              212,
+              220
+            ],
             227
           ]
         }
@@ -11669,8 +11859,10 @@
         {
           "file_path": "com\\google\\gson\\stream\\JsonReader.java",
           "lines": [
-            897,
-            923,
+            [
+              897,
+              923
+            ],
             930
           ]
         }
@@ -11720,16 +11912,6 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            831,
-            841,
-            851
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\Gson.java",
-          "lines": [
             [
               1369,
               1371
@@ -11739,13 +11921,24 @@
       ],
       [
         {
-          "file_path": "com\\google\\gson\\internal\\sql\\SqlTimestampTypeAdapter.java",
+          "file_path": "com\\google\\gson\\internal\\Streams.java",
           "lines": [
-            38,
             [
-              40,
-              41
+              71,
+              73
             ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
+          "lines": [
+            [
+              78,
+              80
+            ],
+            89
           ]
         }
       ]
@@ -11755,8 +11948,10 @@
         {
           "file_path": "com\\google\\gson\\TypeAdapter.java",
           "lines": [
-            218,
-            221,
+            [
+              218,
+              221
+            ],
             226
           ]
         }
@@ -11767,8 +11962,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonAdapterAnnotationTypeAdapterFactory.java",
           "lines": [
-            51,
-            53,
+            [
+              51,
+              53
+            ],
             [
               55,
               58
@@ -11832,16 +12029,6 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            1218,
-            1226,
-            1246
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\Gson.java",
-          "lines": [
             [
               1365,
               1367
@@ -11851,11 +12038,22 @@
       ],
       [
         {
+          "file_path": "com\\google\\gson\\internal\\bind\\TreeTypeAdapter.java",
+          "lines": [
+            [
+              67,
+              69
+            ],
+            76
+          ]
+        }
+      ],
+      [
+        {
           "file_path": "com\\google\\gson\\internal\\bind\\TypeAdapterRuntimeTypeWrapper.java",
           "lines": [
-            37,
             [
-              39,
+              37,
               40
             ]
           ]
@@ -11921,18 +12119,10 @@
         {
           "file_path": "com\\google\\gson\\Gson.java",
           "lines": [
-            525,
-            555,
-            583
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\google\\gson\\Gson.java",
-          "lines": [
-            635,
-            638,
+            [
+              635,
+              638
+            ],
             [
               642,
               644
@@ -11946,8 +12136,10 @@
         {
           "file_path": "com\\google\\gson\\internal\\bind\\JsonAdapterAnnotationTypeAdapterFactory.java",
           "lines": [
-            51,
-            53,
+            [
+              51,
+              53
+            ],
             [
               55,
               57
@@ -11957,6 +12149,18 @@
               60
             ],
             86
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\google\\gson\\Gson.java",
+          "lines": [
+            [
+              525,
+              555
+            ],
+            583
           ]
         }
       ]

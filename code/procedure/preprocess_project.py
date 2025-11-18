@@ -5,7 +5,7 @@ from queue import Queue
 from networkx import DiGraph
 
 import tools.io_utils as io_utils
-from tools.code_search import SnippetReader
+
 
 def process_signature(osig, return_type=None):
         if return_type:
@@ -197,7 +197,7 @@ class InvokePatternExtractor:
                 target_nodes.add(nid)
             if node["kind"] == "BEGIN":
                 start_node = nid
-        # 如果没有找到BEGIN节点，返回已访问的行
+        # If no BEGIN node is found, return the visited lines
         if start_node is None:
             return list(visited)
         for target in target_nodes:
@@ -226,7 +226,7 @@ class InvokePatternExtractor:
         method_info = None
         for method, m_infos in class_info["methods"].items():
             if method_sig.find(method) != -1:
-                for m_info in m_infos: 
+                for m_info in m_infos:
                     if process_signature(m_info["signature"]).endswith(method_sig):
                         method_info = m_info
                         break
@@ -244,13 +244,14 @@ class InvokePatternExtractor:
             if self._equal_sig(candidate, full_sig):
                 method_cfg = self.method_cfgs[candidate]
                 break
-        if method_cfg is None: 
+        if method_cfg is None:
             err_msg = f"sig {full_sig} not found in method cfg"
             print(err_msg)
-            # raise ValueError(err_msg)
             return (None, None)
         visited = self._get_lines_from_cfg(method_cfg, target_lines)
-        visited.extend([method_info["start_line"], method_info["end_line"]-1])
+        min_idx = min(visited)
+        visited.extend(range(method_info["start_line"], min_idx))
+        visited.append(method_info["end_line"]-1)
         return self._order_code_lines(visited)
 
     def extract_code_public(self, callers):
@@ -281,9 +282,9 @@ class InvokePatternExtractor:
                 if code_line is None: continue
                 file_path = self.code_info["source"][class_fqn]["file"]
                 path_line.append({"file_path": file_path, "lines": code_line})
-            # 计算总长度
-            total_length = sum(len(item.get("lines", [])) for item in path_line if isinstance(item, dict))
-            path_lines.append((path_line, total_length))
+            # total_length = sum(len(item.get("lines", [])) for item in path_line if isinstance(item, dict))
+            # path_lines.append((path_line, total_length))
+            path_lines.append(path_line)
         return path_lines
 
     '''

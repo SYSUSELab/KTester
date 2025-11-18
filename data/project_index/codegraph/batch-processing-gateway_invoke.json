@@ -5,8 +5,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            426,
-            476,
+            [
+              426,
+              476
+            ],
             482
           ]
         }
@@ -19,9 +21,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            683,
             [
-              711,
+              683,
               717
             ],
             [
@@ -86,9 +87,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            683,
             [
-              711,
+              683,
               717
             ],
             [
@@ -145,9 +145,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            848,
             [
-              868,
+              848,
               874
             ],
             876,
@@ -171,8 +170,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            622,
-            625,
+            [
+              622,
+              625
+            ],
             [
               630,
               631
@@ -193,9 +194,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\HealthcheckRest.java",
           "lines": [
-            53,
             [
-              66,
+              53,
               69
             ],
             71
@@ -210,8 +210,10 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
-            106,
+            [
+              104,
+              106
+            ],
             198
           ]
         }
@@ -220,8 +222,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            622,
-            625,
+            [
+              622,
+              625
+            ],
             [
               630,
               631
@@ -234,19 +238,6 @@
     "getCreationTime()": [
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            622,
-            [
-              655,
-              656
-            ],
-            681
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\api\\SubmissionStatus.java",
           "lines": [
             [
@@ -255,6 +246,18 @@
             ],
             118,
             122
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "lines": [
+            [
+              622,
+              656
+            ],
+            681
           ]
         }
       ]
@@ -278,9 +281,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            87,
             [
-              91,
+              87,
               93
             ],
             [
@@ -323,19 +325,6 @@
     "getTerminationTime()": [
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            622,
-            [
-              655,
-              656
-            ],
-            681
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\api\\SubmissionStatus.java",
           "lines": [
             [
@@ -370,6 +359,18 @@
               111
             ],
             146
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "lines": [
+            [
+              622,
+              656
+            ],
+            681
           ]
         }
       ]
@@ -418,9 +419,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            87,
             [
-              91,
+              87,
               93
             ],
             [
@@ -455,8 +455,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            622,
-            625,
+            [
+              622,
+              625
+            ],
             [
               630,
               631
@@ -495,8 +497,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            622,
-            625,
+            [
+              622,
+              625
+            ],
             [
               630,
               631
@@ -552,9 +556,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               107
             ],
             198
@@ -567,9 +570,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -601,9 +603,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               108
             ],
             [
@@ -620,9 +621,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               108
             ],
             [
@@ -639,8 +639,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\RestSubmissionsStreamingOutput.java",
           "lines": [
-            32,
-            38,
+            [
+              32,
+              38
+            ],
             [
               41,
               42
@@ -657,9 +659,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            848,
             [
-              868,
+              848,
               874
             ],
             876,
@@ -681,8 +682,10 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            87,
-            91,
+            [
+              87,
+              91
+            ],
             102
           ]
         }
@@ -693,9 +696,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -729,9 +731,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -764,9 +765,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -794,9 +794,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -824,9 +823,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -854,9 +852,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -884,9 +881,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -914,9 +910,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -941,9 +936,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            87,
             [
-              91,
+              87,
               100
             ],
             102
@@ -956,9 +950,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               108
             ],
             [
@@ -977,9 +970,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            89,
             [
-              93,
+              89,
               100
             ],
             104,
@@ -995,22 +987,10 @@
     "getApplicationName()": [
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            338,
-            362,
-            364,
-            424
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            147,
             [
-              153,
+              147,
               155
             ],
             157,
@@ -1025,6 +1005,19 @@
             201
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "lines": [
+            [
+              338,
+              362
+            ],
+            364,
+            424
+          ]
+        }
       ]
     ],
     "getSubmissionIdSuffix()": [
@@ -1032,9 +1025,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1060,8 +1052,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             203
           ]
@@ -1073,9 +1067,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1103,8 +1096,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             154,
             203
@@ -1117,8 +1112,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            776,
-            782,
+            [
+              776,
+              782
+            ],
             792,
             794,
             796
@@ -1129,9 +1126,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            354,
             [
-              356,
+              354,
               358
             ],
             [
@@ -1148,8 +1144,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -1187,8 +1185,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            188,
-            201,
+            [
+              188,
+              201
+            ],
             205,
             221
           ]
@@ -1196,31 +1196,10 @@
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
-          "lines": [
-            89,
-            [
-              93,
-              99
-            ],
-            104,
-            [
-              115,
-              118
-            ],
-            121,
-            139,
-            156
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1244,6 +1223,25 @@
             336
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
+          "lines": [
+            [
+              89,
+              99
+            ],
+            104,
+            [
+              115,
+              118
+            ],
+            121,
+            139,
+            156
+          ]
+        }
       ]
     ],
     "setSparkVersion(String)": [
@@ -1251,8 +1249,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -1268,9 +1268,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1309,9 +1308,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1350,8 +1348,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -1367,9 +1367,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1408,8 +1407,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -1421,19 +1422,6 @@
       ]
     ],
     "getSparkConf()": [
-      [
-        {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            338,
-            [
-              378,
-              379
-            ],
-            424
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
@@ -1454,9 +1442,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            147,
             [
-              153,
+              147,
               155
             ],
             157,
@@ -1469,6 +1456,18 @@
             201
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "lines": [
+            [
+              338,
+              379
+            ],
+            424
+          ]
+        }
       ]
     ],
     "getVolumes()": [
@@ -1476,9 +1475,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            228,
             [
-              232,
+              228,
               233
             ],
             242
@@ -1489,8 +1487,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -1504,8 +1504,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -1519,25 +1521,10 @@
     "getDriver()": [
       [
         {
-          "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
-          "lines": [
-            244,
-            248,
-            258,
-            260,
-            263,
-            266,
-            289
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\util\\CustomSerDe.java",
           "lines": [
-            36,
             [
-              38,
+              36,
               41
             ],
             [
@@ -1552,8 +1539,26 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              244,
+              248
+            ],
+            258,
+            260,
+            263,
+            266,
+            289
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
+          "lines": [
+            [
+              397,
+              402
+            ],
             [
               404,
               405
@@ -1573,8 +1578,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -1606,27 +1613,10 @@
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
-          "lines": [
-            244,
-            248,
-            258,
-            268,
-            279,
-            281,
-            284,
-            287,
-            289
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\util\\CustomSerDe.java",
           "lines": [
-            36,
             [
-              38,
+              36,
               41
             ],
             44,
@@ -1637,6 +1627,24 @@
             59
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
+          "lines": [
+            [
+              244,
+              248
+            ],
+            258,
+            268,
+            279,
+            281,
+            284,
+            287,
+            289
+          ]
+        }
       ]
     ],
     "setExecutor(ExecutorSpec)": [
@@ -1644,8 +1652,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -1672,9 +1682,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1713,9 +1722,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1754,9 +1762,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1795,9 +1802,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -1834,25 +1840,26 @@
     "getQueue()": [
       [
         {
-          "file_path": "com\\apple\\spark\\core\\LogDao.java",
+          "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            188,
-            203,
-            207,
-            221
+            [
+              44,
+              48
+            ],
+            75
           ]
         }
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
+          "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            44,
             [
-              46,
-              48
+              188,
+              203
             ],
-            75
+            207,
+            221
           ]
         }
       ]
@@ -1862,9 +1869,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            44,
             [
-              46,
+              44,
               47
             ],
             50,
@@ -1878,9 +1884,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\CustomSerDe.java",
           "lines": [
-            36,
             [
-              38,
+              36,
               41
             ],
             44,
@@ -1896,9 +1901,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\CustomSerDe.java",
           "lines": [
-            36,
             [
-              38,
+              36,
               41
             ],
             44,
@@ -1919,8 +1923,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -1960,8 +1966,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            338,
-            420,
+            [
+              338,
+              420
+            ],
             424
           ]
         }
@@ -1990,9 +1998,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\CloudStorageRest.java",
           "lines": [
-            171,
             [
-              174,
+              171,
               175
             ],
             [
@@ -2041,8 +2048,10 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
-            100,
+            [
+              98,
+              100
+            ],
             195
           ]
         }
@@ -2053,9 +2062,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            147,
             [
-              153,
+              147,
               154
             ],
             201
@@ -2068,9 +2076,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            147,
             [
-              153,
+              147,
               155
             ],
             201
@@ -2092,19 +2099,6 @@
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\BPGApplication.java",
-          "lines": [
-            222,
-            [
-              225,
-              226
-            ],
-            242
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\util\\ConfigUtil.java",
           "lines": [
             [
@@ -2112,6 +2106,18 @@
               44
             ],
             47
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\BPGApplication.java",
+          "lines": [
+            [
+              222,
+              226
+            ],
+            242
           ]
         }
       ]
@@ -2134,9 +2140,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\CloudStorageRest.java",
           "lines": [
-            89,
             [
-              124,
+              89,
               130
             ],
             132,
@@ -2150,9 +2155,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            111,
             [
-              151,
+              111,
               154
             ],
             [
@@ -2195,8 +2199,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            365,
-            374,
+            [
+              365,
+              374
+            ],
             382
           ]
         }
@@ -2205,9 +2211,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            87,
             [
-              91,
+              87,
               93
             ],
             [
@@ -2242,9 +2247,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -2292,9 +2296,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -2414,9 +2417,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            776,
             [
-              782,
+              776,
               783
             ],
             796
@@ -2446,9 +2448,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -2481,9 +2482,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -2518,8 +2518,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            89,
-            93,
+            [
+              89,
+              93
+            ],
             [
               115,
               119
@@ -2539,9 +2541,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               149
             ],
             [
@@ -2558,16 +2559,6 @@
       ]
     ],
     "getId()": [
-      [
-        {
-          "file_path": "com\\apple\\spark\\util\\ConfigUtil.java",
-          "lines": [
-            76,
-            98,
-            110
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\apple\\spark\\rest\\RestBase.java",
@@ -2588,9 +2579,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            222,
             [
-              225,
+              222,
               226
             ],
             [
@@ -2600,6 +2590,22 @@
             242
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
+          "lines": [
+            [
+              89,
+              100
+            ],
+            [
+              107,
+              110
+            ],
+            156
+          ]
+        }
       ]
     ],
     "getBatchScheduler()": [
@@ -2607,9 +2613,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -2686,9 +2691,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               149
             ],
             [
@@ -2898,31 +2902,36 @@
     "getSparkApplicationNamespace()": [
       [
         {
+          "file_path": "com\\apple\\spark\\util\\ConfigUtil.java",
+          "lines": [
+            [
+              49,
+              52
+            ]
+          ]
+        }
+      ],
+      [
+        {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
-            333,
-            434
+            [
+              186,
+              191
+            ],
+            251
           ]
         }
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
+          "file_path": "com\\apple\\spark\\rest\\RestBase.java",
           "lines": [
-            305,
-            351,
-            363
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            338,
-            354,
-            424
+            [
+              192,
+              200
+            ],
+            206
           ]
         }
       ]
@@ -2951,8 +2960,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -2983,9 +2994,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            222,
             [
-              225,
+              222,
               228
             ],
             242
@@ -3009,9 +3019,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            222,
             [
-              225,
+              222,
               229
             ],
             242
@@ -3024,9 +3033,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -3076,9 +3084,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            87,
             [
-              91,
+              87,
               93
             ],
             102
@@ -3089,8 +3096,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            622,
-            625,
+            [
+              622,
+              625
+            ],
             [
               630,
               631
@@ -3109,9 +3118,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            147,
             [
-              153,
+              147,
               155
             ],
             157,
@@ -3130,8 +3138,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            203,
-            205,
+            [
+              203,
+              205
+            ],
             [
               207,
               208
@@ -3146,8 +3156,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            228,
-            232,
+            [
+              228,
+              232
+            ],
             [
               237,
               238
@@ -3160,8 +3172,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -3179,8 +3193,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -3200,8 +3216,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            244,
-            248,
+            [
+              244,
+              248
+            ],
             250,
             253,
             256,
@@ -3213,8 +3231,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -3234,8 +3254,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            244,
-            248,
+            [
+              244,
+              248
+            ],
             258,
             268,
             270,
@@ -3252,8 +3274,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -3273,9 +3297,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            89,
             [
-              93,
+              89,
               99
             ],
             [
@@ -3292,8 +3315,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            89,
-            93,
+            [
+              89,
+              93
+            ],
             [
               115,
               119
@@ -3312,16 +3337,6 @@
     "getEksCluster()": [
       [
         {
-          "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
-          "lines": [
-            215,
-            250,
-            254
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
             [
@@ -3336,9 +3351,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            222,
             [
-              225,
+              222,
               226
             ],
             [
@@ -3346,6 +3360,18 @@
               237
             ],
             242
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
+          "lines": [
+            [
+              215,
+              250
+            ],
+            254
           ]
         }
       ]
@@ -3390,9 +3416,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            776,
             [
-              782,
+              776,
               784
             ],
             789,
@@ -3474,9 +3499,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            44,
             [
-              46,
+              44,
               47
             ],
             [
@@ -3547,9 +3571,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            611,
             [
-              613,
+              611,
               615
             ],
             [
@@ -3566,9 +3589,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            583,
             [
-              585,
+              583,
               587
             ],
             [
@@ -3743,9 +3765,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -3821,9 +3842,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -3914,8 +3934,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            365,
-            377,
+            [
+              365,
+              377
+            ],
             382
           ]
         }
@@ -3928,9 +3950,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -3997,9 +4018,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               149
             ],
             [
@@ -4024,9 +4044,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               146
             ],
             176
@@ -4039,9 +4058,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -4110,9 +4128,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               251
             ],
             336
@@ -4125,25 +4142,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            182,
             [
-              234,
-              238
-            ],
-            [
-              240,
-              246
-            ]
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            248,
-            [
-              250,
+              248,
               252
             ],
             255,
@@ -4163,6 +4163,21 @@
             336
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "lines": [
+            [
+              182,
+              238
+            ],
+            [
+              240,
+              246
+            ]
+          ]
+        }
       ]
     ],
     "looksLikeFilePath(String)": [
@@ -4170,8 +4185,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            74,
-            104,
+            [
+              74,
+              104
+            ],
             123
           ]
         }
@@ -4182,9 +4199,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -4223,9 +4239,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -4264,9 +4279,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -4305,9 +4319,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -4369,9 +4382,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -4397,8 +4409,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\RestBase.java",
           "lines": [
-            96,
-            99,
+            [
+              96,
+              99
+            ],
             115
           ]
         }
@@ -4407,9 +4421,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -4450,9 +4463,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            44,
             [
-              46,
+              44,
               47
             ],
             50,
@@ -4468,9 +4480,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            147,
             [
-              153,
+              147,
               155
             ],
             [
@@ -4500,9 +4511,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            147,
             [
-              153,
+              147,
               155
             ],
             [
@@ -4520,9 +4530,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -4565,9 +4574,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -4606,8 +4614,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -4624,8 +4634,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -4645,8 +4657,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -4686,8 +4700,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -4727,8 +4743,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -4748,8 +4766,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -4766,8 +4786,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -4808,8 +4830,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -4852,8 +4876,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -4892,8 +4918,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -4920,8 +4948,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -4950,8 +4980,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -4981,8 +5013,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -5024,8 +5058,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -5062,8 +5098,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -5100,8 +5138,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -5133,9 +5173,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -5174,9 +5213,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -5204,9 +5242,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -5247,9 +5284,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               146
             ],
             176
@@ -5262,9 +5298,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               146
             ],
             176
@@ -5277,9 +5312,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               146
             ],
             176
@@ -5292,9 +5326,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               146
             ],
             176
@@ -5310,9 +5343,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -5345,9 +5377,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\BPGStatsdConfig.java",
           "lines": [
-            56,
             [
-              58,
+              56,
               59
             ]
           ]
@@ -5359,9 +5390,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\BPGStatsdConfig.java",
           "lines": [
-            56,
             [
-              58,
+              56,
               59
             ]
           ]
@@ -5450,31 +5480,36 @@
     "getConnection()": [
       [
         {
+          "file_path": "com\\apple\\spark\\core\\DBConnection.java",
+          "lines": [
+            [
+              73,
+              76
+            ]
+          ]
+        }
+      ],
+      [
+        {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            128,
-            135,
+            [
+              656,
+              660
+            ],
+            672
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\LogDao.java",
+          "lines": [
+            [
+              128,
+              135
+            ],
             164
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\apple\\spark\\core\\LogDao.java",
-          "lines": [
-            188,
-            198,
-            221
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\apple\\spark\\core\\LogDao.java",
-          "lines": [
-            234,
-            243,
-            259
           ]
         }
       ]
@@ -5484,8 +5519,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            355,
-            362,
+            [
+              355,
+              362
+            ],
             367
           ]
         }
@@ -5494,9 +5531,11 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            440,
-            470,
-            475
+            [
+              477,
+              488
+            ],
+            492
           ]
         }
       ],
@@ -5504,9 +5543,11 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            477,
-            488,
-            492
+            [
+              440,
+              470
+            ],
+            475
           ]
         }
       ]
@@ -5533,8 +5574,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            303,
-            305,
+            [
+              303,
+              305
+            ],
             310,
             314
           ]
@@ -5606,24 +5649,16 @@
         {
           "file_path": "com\\apple\\spark\\core\\ConfigValue.java",
           "lines": [
-            78,
-            104,
+            [
+              78,
+              104
+            ],
             161
           ]
         }
       ]
     ],
     "getK8sClient(SparkCluster)": [
-      [
-        {
-          "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
-          "lines": [
-            276,
-            300,
-            434
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
@@ -5638,11 +5673,25 @@
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "file_path": "com\\apple\\spark\\rest\\RestBase.java",
           "lines": [
-            338,
-            348,
-            424
+            [
+              192,
+              195
+            ],
+            206
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\RestBase.java",
+          "lines": [
+            [
+              117,
+              121
+            ],
+            140
           ]
         }
       ]
@@ -5652,8 +5701,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            305,
-            350,
+            [
+              305,
+              350
+            ],
             363
           ]
         }
@@ -5664,8 +5715,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            253,
-            255,
+            [
+              253,
+              255
+            ],
             [
               263,
               264
@@ -5678,9 +5731,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\KubernetesHelper.java",
           "lines": [
-            132,
             [
-              134,
+              132,
               135
             ],
             [
@@ -5710,39 +5762,12 @@
     "normalizeLabelValue(String)": [
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            338,
-            364,
-            424
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
-          "lines": [
-            68,
-            [
-              85,
-              86
-            ],
-            [
-              88,
-              93
-            ],
-            95,
-            98,
-            101
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             [
               404,
               405
@@ -5756,6 +5781,48 @@
               418
             ],
             502
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
+          "lines": [
+            [
+              648,
+              653
+            ],
+            [
+              655,
+              656
+            ],
+            [
+              658,
+              664
+            ],
+            [
+              666,
+              669
+            ],
+            762
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
+          "lines": [
+            [
+              68,
+              86
+            ],
+            [
+              88,
+              93
+            ],
+            95,
+            98,
+            101
           ]
         }
       ]
@@ -5851,8 +5918,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            384,
-            387,
+            [
+              384,
+              387
+            ],
             393
           ]
         }
@@ -5863,9 +5932,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            119,
             [
-              121,
+              119,
               125
             ]
           ]
@@ -5877,9 +5945,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -5929,8 +5996,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            166,
-            168,
+            [
+              166,
+              168
+            ],
             172,
             [
               180,
@@ -5945,9 +6014,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -5989,9 +6057,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -6025,9 +6092,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -6060,8 +6126,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            297,
-            303,
+            [
+              297,
+              303
+            ],
             [
               307,
               313
@@ -6075,8 +6143,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
-            366,
+            [
+              276,
+              366
+            ],
             434
           ]
         }
@@ -6087,8 +6157,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            369,
-            378,
+            [
+              369,
+              378
+            ],
             [
               382,
               395
@@ -6132,9 +6204,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            111,
             [
-              151,
+              111,
               154
             ],
             [
@@ -6236,9 +6307,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
           "lines": [
-            144,
             [
-              146,
+              144,
               149
             ],
             [
@@ -6288,8 +6358,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\RestSubmissionsStreamingOutput.java",
           "lines": [
-            32,
-            38,
+            [
+              32,
+              38
+            ],
             [
               41,
               42
@@ -6307,9 +6379,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
           "lines": [
-            158,
             [
-              169,
+              158,
               188
             ]
           ]
@@ -6319,9 +6390,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            747,
             [
-              771,
+              747,
               776
             ],
             [
@@ -6382,9 +6452,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
           "lines": [
-            144,
             [
-              146,
+              144,
               149
             ],
             [
@@ -6414,9 +6483,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               146
             ],
             176
@@ -6429,8 +6497,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
           "lines": [
-            180,
-            195,
+            [
+              180,
+              195
+            ],
             203
           ]
         }
@@ -6475,9 +6545,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
           "lines": [
-            144,
             [
-              146,
+              144,
               149
             ],
             [
@@ -6512,8 +6581,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
           "lines": [
-            144,
-            146,
+            [
+              144,
+              146
+            ],
             177
           ]
         }
@@ -6522,9 +6593,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               282
             ],
             434
@@ -6539,8 +6609,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            89,
-            93,
+            [
+              89,
+              93
+            ],
             [
               115,
               119
@@ -6554,9 +6626,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -6588,9 +6659,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -6608,9 +6678,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            44,
             [
-              46,
+              44,
               48
             ],
             75
@@ -6623,8 +6692,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\SparkClusterHelper.java",
           "lines": [
-            89,
-            93,
+            [
+              89,
+              93
+            ],
             [
               115,
               119
@@ -6640,9 +6711,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -6679,9 +6749,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
           "lines": [
-            144,
             [
-              146,
+              144,
               149
             ],
             [
@@ -6734,9 +6803,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -6764,8 +6832,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            244,
-            248,
+            [
+              244,
+              248
+            ],
             250,
             253,
             256,
@@ -6796,9 +6866,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -6840,9 +6909,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -6899,8 +6967,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -6960,8 +7030,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -7119,8 +7191,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
           "lines": [
-            215,
-            234,
+            [
+              215,
+              234
+            ],
             254
           ]
         }
@@ -7129,8 +7203,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            305,
-            330,
+            [
+              305,
+              330
+            ],
             363
           ]
         }
@@ -7139,9 +7215,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            683,
             [
-              711,
+              683,
               717
             ],
             [
@@ -7176,8 +7251,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             [
               404,
               405
@@ -7192,8 +7269,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             502
           ]
         }
@@ -7202,8 +7281,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            244,
-            248,
+            [
+              244,
+              248
+            ],
             [
               250,
               251
@@ -7221,8 +7302,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -7263,8 +7346,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             [
               655,
               656
@@ -7275,16 +7360,6 @@
       ]
     ],
     "getInstances()": [
-      [
-        {
-          "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
-          "lines": [
-            276,
-            324,
-            434
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
@@ -7301,9 +7376,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -7322,6 +7396,18 @@
             198
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
+          "lines": [
+            [
+              276,
+              324
+            ],
+            434
+          ]
+        }
       ]
     ],
     "setInstances(Integer)": [
@@ -7329,8 +7415,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -7356,8 +7444,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             762
           ]
         }
@@ -7366,8 +7456,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            244,
-            248,
+            [
+              244,
+              248
+            ],
             258,
             268,
             [
@@ -7387,8 +7479,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -7416,8 +7510,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -7474,8 +7570,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -7530,8 +7628,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -7579,8 +7679,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -7626,8 +7728,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -7675,8 +7779,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -7722,8 +7828,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -7775,8 +7883,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -7829,8 +7939,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -7886,8 +7998,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -7943,22 +8057,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            484,
             [
-              512,
-              520
-            ],
-            522
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            747,
-            [
-              771,
+              747,
               776
             ],
             [
@@ -7971,11 +8071,22 @@
       ],
       [
         {
+          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "lines": [
+            [
+              484,
+              520
+            ],
+            522
+          ]
+        }
+      ],
+      [
+        {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -8014,24 +8125,16 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            338,
-            412,
+            [
+              338,
+              412
+            ],
             424
           ]
         }
       ]
     ],
     "getStatus()": [
-      [
-        {
-          "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
-          "lines": [
-            215,
-            229,
-            254
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\apple\\spark\\core\\SparkApplicationResourceHelper.java",
@@ -8046,14 +8149,25 @@
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
+          "file_path": "com\\apple\\spark\\api\\SubmissionStatus.java",
           "lines": [
-            305,
-            316,
-            322,
-            330,
-            333,
-            363
+            [
+              41,
+              46
+            ],
+            59
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
+          "lines": [
+            [
+              215,
+              229
+            ],
+            254
           ]
         }
       ]
@@ -8066,9 +8180,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               108
             ],
             [
@@ -8083,9 +8196,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -8119,9 +8231,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            338,
             [
-              359,
+              338,
               360
             ],
             424
@@ -8132,9 +8243,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8184,9 +8294,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               108
             ],
             [
@@ -8201,22 +8310,10 @@
     "getSparkConf()": [
       [
         {
-          "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
-          "lines": [
-            276,
-            311,
-            321,
-            434
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               108
             ],
             [
@@ -8226,26 +8323,28 @@
             198
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
+          "lines": [
+            [
+              276,
+              311
+            ],
+            321,
+            434
+          ]
+        }
       ]
     ],
     "getDriver()": [
       [
         {
-          "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
-          "lines": [
-            276,
-            309,
-            434
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            924,
             [
-              926,
+              924,
               927
             ],
             936
@@ -8256,9 +8355,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\CustomSerDe.java",
           "lines": [
-            69,
             [
-              71,
+              69,
               74
             ],
             [
@@ -8268,6 +8366,31 @@
             87
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
+          "lines": [
+            [
+              244,
+              248
+            ],
+            250,
+            [
+              253,
+              254
+            ],
+            256,
+            258,
+            260,
+            [
+              263,
+              264
+            ],
+            266,
+            289
+          ]
+        }
       ]
     ],
     "setDriver(DriverSpec)": [
@@ -8275,8 +8398,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            244,
-            248,
+            [
+              244,
+              248
+            ],
             [
               250,
               251
@@ -8294,21 +8419,10 @@
     "getExecutor()": [
       [
         {
-          "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
-          "lines": [
-            276,
-            310,
-            434
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            924,
             [
-              929,
+              924,
               930
             ],
             936
@@ -8319,9 +8433,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\CustomSerDe.java",
           "lines": [
-            69,
             [
-              71,
+              69,
               74
             ],
             77,
@@ -8332,6 +8445,36 @@
             87
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
+          "lines": [
+            [
+              244,
+              248
+            ],
+            258,
+            268,
+            270,
+            [
+              273,
+              274
+            ],
+            [
+              276,
+              277
+            ],
+            279,
+            281,
+            [
+              284,
+              285
+            ],
+            287,
+            289
+          ]
+        }
       ]
     ],
     "setExecutor(ExecutorSpec)": [
@@ -8339,8 +8482,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            244,
-            248,
+            [
+              244,
+              248
+            ],
             258,
             268,
             [
@@ -8364,9 +8509,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8405,9 +8549,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8446,9 +8589,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8487,9 +8629,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8528,9 +8669,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8569,9 +8709,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8610,9 +8749,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8651,9 +8789,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8692,9 +8829,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8733,9 +8869,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8774,9 +8909,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8815,9 +8949,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8856,9 +8989,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8901,9 +9033,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8946,9 +9077,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -8987,9 +9117,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -9028,9 +9157,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -9069,9 +9197,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -9110,9 +9237,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -9151,9 +9277,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -9192,9 +9317,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -9233,9 +9357,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -9274,9 +9397,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -9320,9 +9442,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -9375,9 +9496,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -9414,9 +9534,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            276,
             [
-              280,
+              276,
               290
             ],
             [
@@ -9485,8 +9604,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
           "lines": [
-            215,
-            229,
+            [
+              215,
+              229
+            ],
             254
           ]
         }
@@ -9495,8 +9616,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            305,
-            322,
+            [
+              305,
+              322
+            ],
             330,
             363
           ]
@@ -9506,9 +9629,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            683,
             [
-              711,
+              683,
               717
             ],
             [
@@ -9526,8 +9648,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            305,
-            333,
+            [
+              305,
+              333
+            ],
             363
           ]
         }
@@ -9566,9 +9690,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -9594,8 +9717,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -9621,8 +9746,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -9650,8 +9777,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -9675,8 +9804,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -9698,8 +9829,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -9723,8 +9856,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -9748,8 +9883,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -9775,8 +9912,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -9806,8 +9945,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -9839,9 +9980,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            104,
             [
-              106,
+              104,
               112
             ],
             115,
@@ -9865,8 +10005,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -9896,8 +10038,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -9929,8 +10073,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -9954,8 +10100,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -9985,8 +10133,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -10018,8 +10168,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            924,
-            926,
+            [
+              924,
+              926
+            ],
             929,
             936
           ]
@@ -10029,8 +10181,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            244,
-            248,
+            [
+              244,
+              248
+            ],
             250,
             253,
             256,
@@ -10059,8 +10213,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            924,
-            927,
+            [
+              924,
+              927
+            ],
             930,
             936
           ]
@@ -10070,9 +10226,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\CustomSerDe.java",
           "lines": [
-            36,
             [
-              38,
+              36,
               41
             ],
             [
@@ -10091,9 +10246,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\CustomSerDe.java",
           "lines": [
-            69,
             [
-              71,
+              69,
               74
             ],
             [
@@ -10112,20 +10266,12 @@
     "getLabels()": [
       [
         {
-          "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
-          "lines": [
-            276,
-            313,
-            434
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             [
               404,
               405
@@ -10139,14 +10285,37 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             [
               655,
               656
             ],
             658,
             762
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
+          "lines": [
+            [
+              104,
+              112
+            ],
+            115,
+            [
+              117,
+              121
+            ],
+            [
+              123,
+              134
+            ],
+            198
           ]
         }
       ]
@@ -10156,8 +10325,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             [
               404,
               405
@@ -10179,8 +10350,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             [
               655,
               656
@@ -10204,8 +10377,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -10236,8 +10411,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -10273,8 +10450,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -10308,8 +10487,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -10345,8 +10526,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -10384,8 +10567,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -10405,8 +10590,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -10426,8 +10613,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -10441,8 +10630,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -10458,8 +10649,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -10473,8 +10666,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -10490,8 +10685,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -10523,8 +10720,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -10561,8 +10760,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            648,
-            653,
+            [
+              648,
+              653
+            ],
             655,
             [
               678,
@@ -10622,8 +10823,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            397,
-            402,
+            [
+              397,
+              402
+            ],
             404,
             [
               427,
@@ -10681,8 +10884,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            203,
-            205,
+            [
+              203,
+              205
+            ],
             [
               207,
               208
@@ -10701,8 +10906,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            203,
-            205,
+            [
+              203,
+              205
+            ],
             [
               207,
               208
@@ -10722,8 +10929,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
           "lines": [
-            203,
-            205,
+            [
+              203,
+              205
+            ],
             [
               207,
               208
@@ -10742,9 +10951,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
           "lines": [
-            68,
             [
-              85,
+              68,
               86
             ],
             [
@@ -10765,9 +10973,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
           "lines": [
-            68,
             [
-              85,
+              68,
               86
             ],
             [
@@ -10789,9 +10996,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -10825,8 +11031,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            111,
-            199,
+            [
+              111,
+              199
+            ],
             286
           ]
         }
@@ -10837,9 +11045,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            111,
             [
-              151,
+              111,
               154
             ],
             [
@@ -10871,9 +11078,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            111,
             [
-              151,
+              111,
               154
             ],
             [
@@ -10901,9 +11107,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -10932,9 +11137,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            182,
             [
-              234,
+              182,
               238
             ],
             [
@@ -10950,9 +11154,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -11001,9 +11204,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            182,
             [
-              234,
+              182,
               238
             ],
             [
@@ -11019,9 +11221,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            524,
             [
-              554,
+              524,
               564
             ]
           ]
@@ -11054,9 +11255,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            524,
             [
-              554,
+              524,
               564
             ]
           ]
@@ -11068,9 +11268,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            747,
             [
-              771,
+              747,
               776
             ],
             [
@@ -11100,9 +11299,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            484,
             [
-              512,
+              484,
               520
             ],
             522
@@ -11113,9 +11311,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            747,
             [
-              771,
+              747,
               776
             ],
             [
@@ -11132,9 +11329,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            182,
             [
-              234,
+              182,
               238
             ],
             [
@@ -11148,9 +11344,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            524,
             [
-              554,
+              524,
               564
             ]
           ]
@@ -11162,17 +11357,18 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            338,
-            390,
+            [
+              338,
+              390
+            ],
             424
           ]
         },
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -11221,9 +11417,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            182,
             [
-              234,
+              182,
               238
             ],
             [
@@ -11249,9 +11444,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -11261,9 +11455,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            182,
             [
-              234,
+              182,
               238
             ],
             [
@@ -11279,9 +11472,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            248,
             [
-              250,
+              248,
               252
             ],
             255,
@@ -11291,9 +11483,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            182,
             [
-              234,
+              182,
               238
             ],
             [
@@ -11309,9 +11500,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -11337,9 +11527,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\CloudStorageRest.java",
           "lines": [
-            89,
             [
-              124,
+              89,
               130
             ],
             [
@@ -11369,9 +11558,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\CloudStorageRest.java",
           "lines": [
-            89,
             [
-              124,
+              89,
               130
             ],
             [
@@ -11399,9 +11587,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\CloudStorageRest.java",
           "lines": [
-            89,
             [
-              124,
+              89,
               130
             ],
             [
@@ -11424,9 +11611,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -11520,9 +11706,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -11571,59 +11756,6 @@
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            848,
-            [
-              868,
-              874
-            ],
-            876,
-            [
-              878,
-              879
-            ],
-            [
-              884,
-              886
-            ],
-            894
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
-          "lines": [
-            [
-              103,
-              126
-            ]
-          ]
-        }
-      ]
-    ],
-    "getSparkClusters()": [
-      [
-        {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
-          "lines": [
-            848,
-            [
-              868,
-              874
-            ],
-            876,
-            [
-              878,
-              879
-            ],
-            894
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
           "lines": [
             [
@@ -11645,6 +11777,47 @@
         }
       ]
     ],
+    "getSparkClusters()": [
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
+          "lines": [
+            [
+              103,
+              126
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
+          "lines": [
+            [
+              128,
+              156
+            ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "lines": [
+            [
+              848,
+              874
+            ],
+            876,
+            [
+              878,
+              879
+            ],
+            894
+          ]
+        }
+      ]
+    ],
     "getSparkCluster(String)": [
       [
         {
@@ -11662,8 +11835,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
           "lines": [
-            305,
-            307,
+            [
+              305,
+              307
+            ],
             [
               311,
               312
@@ -11676,13 +11851,22 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            426,
             [
-              453,
-              459
+              566,
+              568
             ],
-            461,
-            482
+            570,
+            577,
+            [
+              582,
+              584
+            ],
+            589,
+            [
+              593,
+              596
+            ],
+            620
           ]
         }
       ]
@@ -11690,11 +11874,24 @@
     "getSparkApplicationResource(String)": [
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
+          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            111,
-            198,
-            286
+            [
+              566,
+              568
+            ],
+            570,
+            579,
+            [
+              582,
+              586
+            ],
+            589,
+            [
+              593,
+              598
+            ],
+            620
           ]
         }
       ],
@@ -11702,9 +11899,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            747,
             [
-              771,
+              747,
               776
             ],
             778,
@@ -11716,9 +11912,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            484,
             [
-              512,
+              484,
               519
             ],
             522
@@ -11731,9 +11926,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            848,
             [
-              868,
+              848,
               874
             ],
             876,
@@ -11751,9 +11945,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\RestBase.java",
           "lines": [
-            142,
             [
-              144,
+              142,
               145
             ]
           ]
@@ -11789,9 +11982,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            683,
             [
-              711,
+              683,
               717
             ],
             [
@@ -11813,9 +12005,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
           "lines": [
-            68,
             [
-              85,
+              68,
               86
             ],
             88,
@@ -11827,9 +12018,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            848,
             [
-              868,
+              848,
               874
             ],
             876,
@@ -11869,9 +12059,8 @@
         {
           "file_path": "com\\apple\\spark\\rest\\HealthcheckRest.java",
           "lines": [
-            53,
             [
-              66,
+              53,
               67
             ],
             71
@@ -11884,8 +12073,10 @@
         {
           "file_path": "com\\apple\\spark\\security\\UserNameBasicAuthenticator.java",
           "lines": [
-            50,
-            52,
+            [
+              50,
+              52
+            ],
             [
               57,
               58
@@ -11902,9 +12093,8 @@
         {
           "file_path": "com\\apple\\spark\\security\\UserNameAuthFilter.java",
           "lines": [
-            37,
             [
-              39,
+              37,
               40
             ],
             45
@@ -11932,9 +12122,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -11980,9 +12169,8 @@
         {
           "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            98,
             [
-              100,
+              98,
               101
             ],
             104,
@@ -12088,8 +12276,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -12126,8 +12316,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -12167,8 +12359,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -12293,9 +12487,8 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            279,
             [
-              281,
+              279,
               299
             ]
           ]
@@ -12307,9 +12500,8 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            279,
             [
-              281,
+              279,
               299
             ]
           ]
@@ -12321,8 +12513,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -12400,9 +12594,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            87,
             [
-              91,
+              87,
               94
             ],
             102
@@ -12413,8 +12606,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            622,
-            625,
+            [
+              622,
+              625
+            ],
             [
               630,
               631
@@ -12433,9 +12628,8 @@
         {
           "file_path": "com\\apple\\spark\\api\\SubmissionSummary.java",
           "lines": [
-            87,
             [
-              91,
+              87,
               93
             ],
             [
@@ -12480,8 +12674,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
           "lines": [
-            158,
-            169,
+            [
+              158,
+              169
+            ],
             188
           ]
         }
@@ -12492,11 +12688,14 @@
     "increment(String, Tag[])": [
       [
         {
-          "file_path": "com\\apple\\spark\\core\\LogDao.java",
+          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            128,
-            158,
-            164
+            [
+              566,
+              568
+            ],
+            574,
+            620
           ]
         }
       ],
@@ -12504,19 +12703,27 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            188,
-            216,
-            221
+            [
+              656,
+              666
+            ],
+            672
           ]
         }
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\core\\LogDao.java",
+          "file_path": "com\\apple\\spark\\BPGApplication.java",
           "lines": [
-            234,
-            254,
-            259
+            [
+              222,
+              226
+            ],
+            [
+              230,
+              237
+            ],
+            242
           ]
         }
       ]
@@ -12555,8 +12762,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            166,
-            175,
+            [
+              166,
+              175
+            ],
             186
           ]
         }
@@ -12567,8 +12776,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            338,
-            406,
+            [
+              338,
+              406
+            ],
             424
           ]
         }
@@ -12581,9 +12792,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\RunningApplicationMonitor.java",
           "lines": [
-            144,
             [
-              146,
+              144,
               149
             ],
             [
@@ -12609,34 +12819,30 @@
       ],
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            683,
             [
-              711,
-              717
+              276,
+              290
             ],
             [
-              719,
-              722
+              292,
+              295
             ],
             [
-              725,
-              726
+              297,
+              299
+            ],
+            363,
+            [
+              396,
+              397
             ],
             [
-              730,
-              731
+              402,
+              406
             ],
-            [
-              734,
-              735
-            ],
-            [
-              738,
-              739
-            ],
-            745
+            434
           ]
         }
       ]
@@ -12648,8 +12854,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            35,
-            37,
+            [
+              35,
+              37
+            ],
             42
           ]
         }
@@ -12658,8 +12866,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            44,
-            46,
+            [
+              44,
+              46
+            ],
             51
           ]
         }
@@ -12668,8 +12878,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            53,
-            55,
+            [
+              53,
+              55
+            ],
             60
           ]
         }
@@ -12680,9 +12892,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            72,
             [
-              74,
+              72,
               75
             ]
           ]
@@ -12692,9 +12903,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            82,
             [
-              84,
+              82,
               85
             ]
           ]
@@ -12706,9 +12916,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            35,
             [
-              37,
+              35,
               39
             ],
             42
@@ -12719,9 +12928,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            44,
             [
-              46,
+              44,
               48
             ],
             51
@@ -12732,9 +12940,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            53,
             [
-              55,
+              53,
               57
             ],
             60
@@ -12747,9 +12954,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\KubernetesHelper.java",
           "lines": [
-            132,
             [
-              134,
+              132,
               135
             ],
             [
@@ -12783,8 +12989,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            92,
-            94,
+            [
+              92,
+              94
+            ],
             99
           ]
         }
@@ -12797,8 +13005,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\EndAwareInputStream.java",
           "lines": [
-            101,
-            103,
+            [
+              101,
+              103
+            ],
             108
           ]
         }
@@ -12809,11 +13019,13 @@
     "getExceptionNameAndMessage(Throwable)": [
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
+          "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            566,
-            610,
-            620
+            [
+              148,
+              157
+            ],
+            164
           ]
         }
       ],
@@ -12821,19 +13033,24 @@
         {
           "file_path": "com\\apple\\spark\\rest\\CloudStorageRest.java",
           "lines": [
-            171,
-            256,
-            264
-          ]
-        }
-      ],
-      [
-        {
-          "file_path": "com\\apple\\spark\\rest\\CloudStorageRest.java",
-          "lines": [
-            266,
-            277,
+            [
+              266,
+              277
+            ],
             282
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\core\\ApplicationSubmissionHelper.java",
+          "lines": [
+            [
+              74,
+              93
+            ],
+            116,
+            123
           ]
         }
       ]
@@ -12843,26 +13060,16 @@
         {
           "file_path": "com\\apple\\spark\\rest\\ApplicationSubmissionRest.java",
           "lines": [
-            747,
-            791,
+            [
+              747,
+              791
+            ],
             846
           ]
         }
       ]
     ],
     "meterException()": [
-      [
-        {
-          "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
-          "lines": [
-            158,
-            [
-              169,
-              188
-            ]
-          ]
-        }
-      ],
       [
         {
           "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
@@ -12884,6 +13091,17 @@
             ]
           ]
         }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\AdminRest.java",
+          "lines": [
+            [
+              158,
+              188
+            ]
+          ]
+        }
       ]
     ],
     "meterRuntimeException()": [
@@ -12891,8 +13109,10 @@
         {
           "file_path": "com\\apple\\spark\\rest\\CloudStorageRest.java",
           "lines": [
-            171,
-            250,
+            [
+              171,
+              250
+            ],
             264
           ]
         }
@@ -12920,8 +13140,10 @@
         {
           "file_path": "com\\apple\\spark\\tools\\LoadTest.java",
           "lines": [
-            148,
-            150,
+            [
+              148,
+              150
+            ],
             152,
             [
               154,
@@ -12954,9 +13176,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            31,
             [
-              33,
+              31,
               34
             ]
           ]
@@ -12968,9 +13189,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            36,
-            43,
-            45
+            [
+              47,
+              49
+            ]
           ]
         }
       ],
@@ -12979,9 +13201,10 @@
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
             [
-              47,
-              49
-            ]
+              36,
+              43
+            ],
+            45
           ]
         }
       ]
@@ -12991,8 +13214,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            67,
-            69,
+            [
+              67,
+              69
+            ],
             71
           ]
         }
@@ -13003,9 +13228,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            73,
-            80,
-            82
+            [
+              84,
+              86
+            ]
           ]
         }
       ],
@@ -13014,9 +13240,10 @@
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
             [
-              84,
-              86
-            ]
+              73,
+              80
+            ],
+            82
           ]
         }
       ]
@@ -13068,16 +13295,6 @@
     "get(String, String, String)": [
       [
         {
-          "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
-          "lines": [
-            365,
-            374,
-            382
-          ]
-        }
-      ],
-      [
-        {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
             [
@@ -13096,6 +13313,18 @@
               124,
               126
             ]
+          ]
+        }
+      ],
+      [
+        {
+          "file_path": "com\\apple\\spark\\rest\\ApplicationGetLogRest.java",
+          "lines": [
+            [
+              365,
+              374
+            ],
+            382
           ]
         }
       ]
@@ -13166,8 +13395,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            175,
-            190,
+            [
+              175,
+              190
+            ],
             195
           ]
         }
@@ -13176,16 +13407,20 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            197,
-            201,
+            [
+              197,
+              201
+            ],
             208
           ]
         },
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            51,
-            60,
+            [
+              51,
+              60
+            ],
             65
           ]
         }
@@ -13194,16 +13429,20 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            197,
-            201,
+            [
+              197,
+              201
+            ],
             208
           ]
         },
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            88,
-            97,
+            [
+              88,
+              97
+            ],
             102
           ]
         }
@@ -13214,9 +13453,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            36,
             [
-              43,
+              36,
               45
             ]
           ]
@@ -13226,9 +13464,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            67,
             [
-              69,
+              67,
               71
             ]
           ]
@@ -13238,9 +13475,8 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            73,
             [
-              80,
+              73,
               82
             ]
           ]
@@ -13252,8 +13488,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            51,
-            60,
+            [
+              51,
+              60
+            ],
             65
           ]
         }
@@ -13262,8 +13500,10 @@
         {
           "file_path": "com\\apple\\spark\\util\\HttpUtils.java",
           "lines": [
-            88,
-            97,
+            [
+              88,
+              97
+            ],
             102
           ]
         }
@@ -13298,8 +13538,10 @@
         {
           "file_path": "com\\apple\\spark\\core\\QueueTokenVerifier.java",
           "lines": [
-            44,
-            57,
+            [
+              44,
+              57
+            ],
             141
           ]
         }
@@ -13312,9 +13554,8 @@
         {
           "file_path": "com\\apple\\spark\\core\\ApplicationMonitor.java",
           "lines": [
-            111,
             [
-              114,
+              111,
               149
             ],
             [
@@ -13377,10 +13618,9 @@
         {
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
-            119,
             [
-              121,
-              125
+              611,
+              616
             ]
           ]
         }
@@ -13390,8 +13630,8 @@
           "file_path": "com\\apple\\spark\\core\\LogDao.java",
           "lines": [
             [
-              611,
-              616
+              119,
+              125
             ]
           ]
         }
