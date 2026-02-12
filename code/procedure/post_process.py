@@ -25,14 +25,6 @@ def check_class_name(init_class:str, tcname:str, pcname:str=""):
     return new_class
 
 
-def insert_test_case(init_class:str, insert_code:str):
-    init_class = init_class.strip()
-    insert_code = insert_code.lstrip()
-    TestClassEditor = jpype.JClass("editcode.TestClassUpdator")
-    added_class = str(TestClassEditor.main([init_class, insert_code]))
-    return added_class
-
-
 class RuleError(Enum):
     UNRESLOVE_SYMBOL = 1
     UNREPORTED_EXCEPTION = 2
@@ -193,10 +185,10 @@ class CodeRepairer(JavaRunner):
         }
         prompt = self.prompt_gen.generate_single("post", context)
         code, response = self.llm_caller.get_response_code(prompt)
-        code = str(self.class_editor.main([test_class, code, "true"]))
+        code = str(self.class_editor.main([test_class, code, "true", response_path]))
         io_utils.write_text(prompt_path, prompt)
         io_utils.write_text(response_path, response)
-        ## todo: transform to code diff
+        # todo: transform to code diff
         return code
 
     def clean_error_cases(self, error_infos:list, code:str):
@@ -229,12 +221,13 @@ class CodeRepairer(JavaRunner):
         class_path = f"{self.testclass_path}/{class_name}"
         target_path = f"{self.url}/{test_path}"
         passrates = []
-        io_utils.copy_file(class_path, target_path)
-        flag, feedback, passrate = self.compile_and_execute(test_path, test_class)
-        passrates.append(passrate)
         count = 0
         fixed_code = io_utils.load_text(class_path)
         context = io_utils.load_json(context_path)
+        io_utils.copy_file(class_path, target_path)
+
+        flag, feedback, passrate = self.compile_and_execute(test_path, test_class)
+        passrates.append(passrate)
         while flag!=VerifyResult.PASS and count<self.max_tries:
             temp = f"{self.temp_path}/{class_name}".replace(".java", f"_{count}.java")
             io_utils.write_text(temp, fixed_code)

@@ -24,6 +24,7 @@ class LLMSettings:
             "api_key":"xxx",
         }
     ]
+    TEMPERATURE = 0.5
 
 class TaskSettings:
     """
@@ -40,6 +41,7 @@ class TaskSettings:
     CASE_THEN_CODE = True
     SAVE_INTER_RESULT = True
     COMPILE_TEST = True
+    REPETITION_NUM = 5 # repetation number of baselines
     MAX_WORKERS = 8 # LLM API concurrency 
     FIX_TRIES = 3 # Maximum retries for fixing test cases
     SIM_TOP_K = "10" # top k for similarity search
@@ -50,4 +52,5 @@ class BaseLine:
     """
     BASELINES = ["ChatUniTest"] # ["HITS", "ChatUniTest"]
     BASELINE_PATH = "../evaluation/baseline"
-    HITS_RESULTS = ""
+    UTGEN_DATA = "../data/UTGen_replication"
+    CHATUNITEST_DATA = "../evaluation/ChatUniTest_replication/projects"

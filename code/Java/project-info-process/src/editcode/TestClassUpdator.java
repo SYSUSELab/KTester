@@ -27,6 +27,7 @@ import java.util.Set;
 public class TestClassUpdator {
     JavaParser parser;
     boolean force_update = false;
+    String extra_params = "";
 
     public static String main(String[] args) {
         if (args.length < 2) {
@@ -40,6 +41,9 @@ public class TestClassUpdator {
             String force = args[2];
             if (force.equals("true"))
                 editor.force_update = true;
+            for (int i = 2; i < args.length; i++) {
+                editor.extra_params += args[i] + " ";
+            }
         }
         String result = editor.mergeTestClasses(existingClass, addClass);
         return result;
@@ -60,11 +64,13 @@ public class TestClassUpdator {
             ClassOrInterfaceDeclaration existClassDecl = getClassDeclaration(existCU)[0];
             if (existClassDecl == null) {
                 System.err.println("can't find class declaration in existing class");
+                System.err.println(extra_params);
                 return add_class;
             }
             // get class declaration of add_class
             if (addCU == null || addCU.getTypes().isEmpty()) { // try to parse incomplete code
                 System.err.println("can't parse add code as class");
+                System.err.println(extra_params);
                 return exist_class;
                 // addCU = dealInCompeleteCode(add_class);
                 // addClassDecl = getClassDeclaration(addCU);
@@ -288,7 +294,6 @@ public class TestClassUpdator {
 
     /**
      * add new test methods to exist class
-     * TODO: remove unhandled methods if force update
      */
     private void updateTestMethods(ClassOrInterfaceDeclaration existClassDecl,
             ClassOrInterfaceDeclaration addClassDecl) {

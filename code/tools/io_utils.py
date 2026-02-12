@@ -1,7 +1,7 @@
 import os
 import csv
 import json
-import pickle
+# import pickle
 import shutil
 import logging
 # import xml.etree.ElementTree as ET
@@ -69,16 +69,17 @@ def write_csv(file, data, header:list|None):
 #     tree.write(xml_file, pretty_print=True, xml_declaration=True, encoding='utf-8')
 
 
-def read_pickle(file):
-    with open(file, 'rb') as f:
-        data = pickle.load(f)
-    return data
+# def read_pickle(file):
+#     with open(file, 'rb') as f:
+#         data = pickle.load(f)
+#     return data
 
 
-def write_pickle(file, data):
-    with open(file, 'wb') as f:
-        pickle.dump(data, f)
-    return
+# def write_pickle(file, data):
+#     with open(file, 'wb') as f:
+#         pickle.dump(data, f)
+#     return
+
 
 def check_path(path):
     destination_dir = os.path.dirname(path)
@@ -113,6 +114,7 @@ def copy_file(source_file, target_path, ignore_error=False):
 class StreamToLogger:
     """
     represents a file-like stream object that redirects writes to a logger instance.
+    code example:
     """
     def __init__(self, logger, log_level=logging.INFO):
         self.logger = logger

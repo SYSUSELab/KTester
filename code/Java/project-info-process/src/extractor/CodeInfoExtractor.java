@@ -207,7 +207,6 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
             String fieldType = resolveType(field.getElementType());
             int position[] = getPosition(field);
             FieldInfo field_info = new FieldInfo(fieldName, fieldType, position);
-            field_info.equals(field_info);
             field_list.add(this.gson.toJsonTree(field_info));
         }
         class_info.add("fields", field_list);
@@ -233,7 +232,7 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
         return class_info;
     }
 
-    public JsonObject extractEnumInfo(EnumDeclaration enum_decl) {
+    private JsonObject extractEnumInfo(EnumDeclaration enum_decl) {
         JsonObject enum_info = new JsonObject();
         // get enum constant
         List<EnumConstantDeclaration> enum_constants = enum_decl.getEntries();
@@ -253,7 +252,6 @@ public class CodeInfoExtractor extends JavaParserExtractor implements BaseImport
             String fieldType = resolveType(field.getElementType());
             int position[] = getPosition(field);
             FieldInfo field_info = new FieldInfo(fieldName, fieldType, position);
-            field_info.equals(field_info);
             field_list.add(this.gson.toJsonTree(field_info));
         }
         enum_info.add("fields", field_list);

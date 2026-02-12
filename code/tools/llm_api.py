@@ -1,3 +1,4 @@
+from json.decoder import JSONDecodeError
 import re
 import json
 import logging
@@ -60,8 +61,9 @@ class LLMCaller:
         java_pattern = r"```(?:[jJ]ava)?\n+([\s\S]*?)\n```"
         code = ""
         matches = re.findall(java_pattern, output, re.DOTALL)
-        if len(matches) == 0:
-            # if no code found, fix incomplete code
+        if len(matches) > 0: # if no code found, fix incomplete code
+            code = matches[0]
+        else: # select the longest one in matches
             incomplete_pattern = r"```(?:[jJ]ava)?\n+([\s\S]*?)$"
             icp_matches = re.findall(incomplete_pattern, output, re.DOTALL)
             if len(icp_matches) > 0:
@@ -74,9 +76,6 @@ class LLMCaller:
                 close_braces = code.count('}')
                 if open_braces > close_braces:
                     code = code + "}" * (open_braces - close_braces)
-        else:
-            # select the longest one in matches
-            code = max(matches, key=len)
         return code
     
     # get response surrounded by ```java````
@@ -107,10 +106,12 @@ class LLMCaller:
         response = ""
         try:
             response_format = { 'type': 'json_object' }
-            response = self._generation(prompt, response_format) 
-            json_data = self._handle_json_response(response)    
+            response = self._generation(prompt, response_format)
+            json_data = self._handle_json_response(response)
         except Exception as e:
-            self.logger.error(f"Error occured while get json object from llm api: {e}")
+            self.logger.error(f"{type(e)} occured while get json object from llm api: {e}")
+            if isinstance(e, JSONDecodeError):
+                response = f"{e}\n{response}"
         return [json_data, response]
 
 

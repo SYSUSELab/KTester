@@ -22,5 +22,3 @@ you can install requirements following these links:
 config `classes.csv`
 
 ### Config evosuite files for your projects
-
-### Update UTGen for a newer version of requirements

@@ -47,11 +47,11 @@ class JavaRunner:
                 cwd = self.cd_cmd[1],
                 encoding="utf-8", 
                 errors='ignore', 
-                timeout=15)
+                timeout=60)
         except Exception as e:
             if isinstance(e, subprocess.TimeoutExpired):
                 return f"{e.stderr}\n{e.stdout}"
-            return ""
+            raise e
         return f"{result.stderr}\n{result.stdout}"
 
     def run_singal_unit_test(self, testclass, coverage:bool=True):

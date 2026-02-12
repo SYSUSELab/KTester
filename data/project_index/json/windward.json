@@ -24453,7 +24453,7 @@
       "import static org.junit.jupiter.api.Assertions.assertNull;"
     ],
     "MethodSource": [
-      "org.junit.jupiter.params.provider.MethodSource"
+      "import org.junit.jupiter.params.provider.MethodSource;"
     ],
     "YAMLGenerator": [
       "import com.fasterxml.jackson.dataformat.yaml.YAMLGenerator;"

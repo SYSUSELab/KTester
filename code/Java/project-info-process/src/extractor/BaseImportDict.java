@@ -26,7 +26,7 @@ public interface BaseImportDict {
 
         import_dict.put("ParameterizedTest", Set.of("import org.junit.jupiter.params.ParameterizedTest;"));
         import_dict.put("Arguments", Set.of("import org.junit.jupiter.params.provider.Arguments;"));
-        import_dict.put("MethodSource", Set.of("org.junit.jupiter.params.provider.MethodSource"));
+        import_dict.put("MethodSource", Set.of("import org.junit.jupiter.params.provider.MethodSource"));
         import_dict.put("CsvSource", Set.of("import org.junit.jupiter.params.provider.CsvSource;"));
         import_dict.put("ValueSource", Set.of("import org.junit.jupiter.params.provider.ValueSource;"));
         import_dict.put("EnumSource", Set.of("import org.junit.jupiter.params.provider.EnumSource;"));
