@@ -1,5 +1,8 @@
 # KTester
-This is the offical repository for the KTester, an LLM-based automatic unit test generation pipeline.
+[![Static Badge](https://img.shields.io/badge/Preprint-%23B31B1B?style=for-the-badge&logo=arxiv&label=Arxiv&labelColor=%23B31B1B&color=%23000000)](https://arxiv.org/abs/2511.14224)
+
+
+This is the offical repository for **"Knowledge Matters: Injecting Project and Testing Knowledge into LLM-based Unit Test Generation"**
 
 ## Overview
 The file structure of the repository is as follows:
